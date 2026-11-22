@@ -1,0 +1,3710 @@
+{
+ "dungeon": {
+  "maps": [
+   {
+    "nodes": [
+     {
+      "battle_data": {
+       "possible_rewards": [
+        {
+         "item_id": "3058145459290044",
+         "count": "150"
+        },
+        {
+         "item_id": "3058145459290044",
+         "count": "75",
+         "loot_tag": "FOR_LOSS"
+        }
+       ],
+       "possible_enemies": [
+        {
+         "content_id": "2425318463423019",
+         "icon": "icons_units_yzma/portrait_yzma",
+         "range": 40.0,
+         "name_key": "YZMA_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5495262680796735",
+          "4419393874676815",
+          "3019196162921018",
+          "2136312807087658"
+         ],
+         "unit_health": "433"
+        },
+        {
+         "content_id": "990933960084047",
+         "icon": "icons_units_atlantean/portrait_atlantean",
+         "range": 4.0,
+         "name_key": "ATLANTEAN_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "5308420037568950",
+          "999985425443963"
+         ],
+         "unit_health": "142"
+        },
+        {
+         "content_id": "8218042807117239",
+         "icon": "icons_units_big_bad_wolf/portrait_big_bad_wolf",
+         "range": 1.0,
+         "name_key": "BIG_BAD_WOLF_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "2489250258015164",
+          "4623262297475655",
+          "4324500008569381"
+         ],
+         "unit_health": "371"
+        },
+        {
+         "content_id": "5710225926985727",
+         "icon": "icons_units_robin_hood/portrait_robin_hood",
+         "range": 4.0,
+         "name_key": "ROBIN_HOOD_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4419393874676815",
+          "4934108704849804",
+          "5059163436552255"
+         ],
+         "unit_health": "371"
+        },
+        {
+         "content_id": "530345094238519",
+         "icon": "icons_units_kakamora/portrait_kakamora",
+         "range": 4.0,
+         "name_key": "KAKAMORA_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5495262680796735",
+          "5308420037568950",
+          "2469462995899328"
+         ],
+         "unit_health": "122"
+        },
+        {
+         "content_id": "10",
+         "icon": "icons_units_ariel/portrait_ariel",
+         "range": 80.0,
+         "name_key": "ARIEL_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "5308420037568950",
+          "3133581935767717",
+          "5820897550663740"
+         ],
+         "unit_health": "433"
+        },
+        {
+         "content_id": "3813773339141217",
+         "icon": "icons_units_mrbig_guard/portrait_mrbig_guard",
+         "range": 1.0,
+         "name_key": "MR_BIG_BODYGUARD_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "2489250258015164",
+          "6719280532380272"
+         ],
+         "unit_health": "204"
+        },
+        {
+         "content_id": "2087072596045219",
+         "icon": "icons_units_weasel/portrait_weasel",
+         "range": 80.0,
+         "name_key": "WEASEL_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "4650364419227244",
+          "3892963693025640"
+         ],
+         "unit_health": "122"
+        }
+       ],
+       "enemy_stats": {
+        "level": "10",
+        "rarity": "1"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "3058145459290044",
+         "count_min": 150,
+         "count_max": 150,
+         "guaranteed": true
+        },
+        {
+         "item_id": "3058145459290044",
+         "count_min": 75,
+         "count_max": 75,
+         "loot_tag": "FOR_LOSS",
+         "guaranteed": true
+        }
+       ],
+       "override_boss_index": 3
+      }
+     },
+     {
+      "battle_data": {
+       "possible_rewards": [
+        {
+         "item_id": "3058145459290044",
+         "count": "200"
+        },
+        {
+         "item_id": "3058145459290044",
+         "count": "100",
+         "loot_tag": "FOR_LOSS"
+        }
+       ],
+       "possible_enemies": [
+        {
+         "content_id": "553069276713467",
+         "icon": "icons_units_dr_facilier/portrait_drfacilier",
+         "range": 3.0,
+         "name_key": "DR_FACILIER_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "2489250258015164",
+          "1750147552920622",
+          "4324500008569381"
+         ],
+         "unit_health": "453"
+        },
+        {
+         "content_id": "990933960084047",
+         "icon": "icons_units_atlantean/portrait_atlantean",
+         "range": 4.0,
+         "name_key": "ATLANTEAN_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "5308420037568950",
+          "999985425443963"
+         ],
+         "unit_health": "149"
+        },
+        {
+         "content_id": "3813773339141217",
+         "icon": "icons_units_mrbig_guard/portrait_mrbig_guard",
+         "range": 1.0,
+         "name_key": "MR_BIG_BODYGUARD_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "2489250258015164",
+          "6719280532380272"
+         ],
+         "unit_health": "214"
+        },
+        {
+         "content_id": "530345094238519",
+         "icon": "icons_units_kakamora/portrait_kakamora",
+         "range": 4.0,
+         "name_key": "KAKAMORA_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5495262680796735",
+          "5308420037568950",
+          "2469462995899328"
+         ],
+         "unit_health": "127"
+        },
+        {
+         "content_id": "8713130068551573",
+         "icon": "icons_units_scrooge/portrait_scrooge",
+         "range": 1.0,
+         "name_key": "SCROOGEMCDUCK_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "2489250258015164",
+          "6663377657461749",
+          "1102804729261314",
+          "8597917023531694"
+         ],
+         "unit_health": "388"
+        },
+        {
+         "content_id": "2087072596045219",
+         "icon": "icons_units_weasel/portrait_weasel",
+         "range": 80.0,
+         "name_key": "WEASEL_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "4650364419227244",
+          "3892963693025640"
+         ],
+         "unit_health": "127"
+        },
+        {
+         "content_id": "6801450488388220",
+         "icon": "icons_units_gaston/portrait_gaston",
+         "range": 1.0,
+         "name_key": "GASTON_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "185013331968872",
+          "4419393874676815",
+          "1497983993938491",
+          "2136312807087658"
+         ],
+         "unit_health": "648"
+        },
+        {
+         "content_id": "4979608122848331",
+         "icon": "icons_units_pete/portrait_pete",
+         "range": 1.0,
+         "name_key": "PETE_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "2489250258015164",
+          "4623262297475655",
+          "4324500008569381"
+         ],
+         "unit_health": "388"
+        }
+       ],
+       "enemy_stats": {
+        "level": "11",
+        "rarity": "1"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "3058145459290044",
+         "count_min": 200,
+         "count_max": 200,
+         "guaranteed": true
+        },
+        {
+         "item_id": "3058145459290044",
+         "count_min": 100,
+         "count_max": 100,
+         "loot_tag": "FOR_LOSS",
+         "guaranteed": true
+        }
+       ],
+       "override_boss_index": 1
+      },
+      "id": "1"
+     },
+     {
+      "battle_data": {
+       "possible_rewards": [
+        {
+         "item_id": "3058145459290044",
+         "count": "250"
+        },
+        {
+         "item_id": "3058145459290044",
+         "count": "125",
+         "loot_tag": "FOR_LOSS"
+        }
+       ],
+       "possible_enemies": [
+        {
+         "content_id": "530345094238519",
+         "icon": "icons_units_kakamora/portrait_kakamora",
+         "range": 4.0,
+         "name_key": "KAKAMORA_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5495262680796735",
+          "5308420037568950",
+          "2469462995899328"
+         ],
+         "unit_health": "133"
+        },
+        {
+         "content_id": "7266520144288097",
+         "icon": "icons_units_sheriff_of_nottingham/portrait_sheriff_of_nottingham",
+         "range": 1.0,
+         "name_key": "SHERIFF_OF_NOTTINGHAM_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "4419393874676815",
+          "4934108704849804",
+          "2136312807087658"
+         ],
+         "unit_health": "406"
+        },
+        {
+         "content_id": "3813773339141217",
+         "icon": "icons_units_mrbig_guard/portrait_mrbig_guard",
+         "range": 1.0,
+         "name_key": "MR_BIG_BODYGUARD_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "2489250258015164",
+          "6719280532380272"
+         ],
+         "unit_health": "223"
+        },
+        {
+         "content_id": "39",
+         "icon": "icons_units_mickey/portrait_sorcerers_apprentice_mickey",
+         "range": 80.0,
+         "name_key": "SORCERERSAPPRENTICEMICKEY_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4419393874676815",
+          "4623262297475655",
+          "5059163436552255"
+         ],
+         "unit_health": "406"
+        },
+        {
+         "content_id": "4505487594415447",
+         "icon": "icons_units_jafar/portrait_jafar",
+         "range": 4.0,
+         "name_key": "JAFAR_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "4419393874676815",
+          "6950932538148189",
+          "2136312807087658"
+         ],
+         "unit_health": "406"
+        },
+        {
+         "content_id": "5710225926985727",
+         "icon": "icons_units_robin_hood/portrait_robin_hood",
+         "range": 4.0,
+         "name_key": "ROBIN_HOOD_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4419393874676815",
+          "4934108704849804",
+          "5059163436552255"
+         ],
+         "unit_health": "406"
+        },
+        {
+         "content_id": "2087072596045219",
+         "icon": "icons_units_weasel/portrait_weasel",
+         "range": 80.0,
+         "name_key": "WEASEL_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "4650364419227244",
+          "3892963693025640"
+         ],
+         "unit_health": "133"
+        },
+        {
+         "content_id": "990933960084047",
+         "icon": "icons_units_atlantean/portrait_atlantean",
+         "range": 4.0,
+         "name_key": "ATLANTEAN_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "5308420037568950",
+          "999985425443963"
+         ],
+         "unit_health": "156"
+        }
+       ],
+       "enemy_stats": {
+        "level": "12",
+        "rarity": "1"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "3058145459290044",
+         "count_min": 250,
+         "count_max": 250,
+         "guaranteed": true
+        },
+        {
+         "item_id": "3058145459290044",
+         "count_min": 125,
+         "count_max": 125,
+         "loot_tag": "FOR_LOSS",
+         "guaranteed": true
+        }
+       ]
+      },
+      "id": "2"
+     },
+     {
+      "battle_data": {
+       "possible_rewards": [
+        {
+         "item_id": "3058145459290044",
+         "count": "300"
+        },
+        {
+         "item_id": "3058145459290044",
+         "count": "150",
+         "loot_tag": "FOR_LOSS"
+        }
+       ],
+       "possible_enemies": [
+        {
+         "content_id": "151",
+         "icon": "icons_units_woody/portrait_woody",
+         "range": 3.0,
+         "name_key": "WOODY_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "2489250258015164",
+          "4345897184857488",
+          "1102804729261314"
+         ],
+         "unit_health": "975"
+        },
+        {
+         "content_id": "4979608122848331",
+         "icon": "icons_units_pete/portrait_pete",
+         "range": 1.0,
+         "name_key": "PETE_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "2489250258015164",
+          "4623262297475655",
+          "4324500008569381"
+         ],
+         "unit_health": "878"
+        },
+        {
+         "content_id": "2087072596045219",
+         "icon": "icons_units_weasel/portrait_weasel",
+         "range": 80.0,
+         "name_key": "WEASEL_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "4650364419227244",
+          "3892963693025640"
+         ],
+         "unit_health": "292"
+        },
+        {
+         "content_id": "3813773339141217",
+         "icon": "icons_units_mrbig_guard/portrait_mrbig_guard",
+         "range": 1.0,
+         "name_key": "MR_BIG_BODYGUARD_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "2489250258015164",
+          "6719280532380272"
+         ],
+         "unit_health": "454"
+        },
+        {
+         "content_id": "1809998714774592",
+         "icon": "icons_units_shan_yu/portrait_shan_yu",
+         "range": 1.0,
+         "name_key": "SHAN_YU_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "4419393874676815",
+          "6268674455014635",
+          "2136312807087658"
+         ],
+         "unit_health": "878"
+        },
+        {
+         "content_id": "5710225926985727",
+         "icon": "icons_units_robin_hood/portrait_robin_hood",
+         "range": 4.0,
+         "name_key": "ROBIN_HOOD_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4419393874676815",
+          "4934108704849804",
+          "5059163436552255"
+         ],
+         "unit_health": "878"
+        },
+        {
+         "content_id": "530345094238519",
+         "icon": "icons_units_kakamora/portrait_kakamora",
+         "range": 4.0,
+         "name_key": "KAKAMORA_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5495262680796735",
+          "5308420037568950",
+          "2469462995899328"
+         ],
+         "unit_health": "292"
+        },
+        {
+         "content_id": "11",
+         "icon": "icons_units_buzz/portrait_buzz_lightyear",
+         "range": 1.0,
+         "name_key": "BUZZLIGHTYEAR_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "2489250258015164",
+          "4345897184857488",
+          "1102804729261314"
+         ],
+         "unit_health": "878"
+        },
+        {
+         "content_id": "990933960084047",
+         "icon": "icons_units_atlantean/portrait_atlantean",
+         "range": 4.0,
+         "name_key": "ATLANTEAN_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "5308420037568950",
+          "999985425443963"
+         ],
+         "unit_health": "324"
+        }
+       ],
+       "enemy_stats": {
+        "level": "13",
+        "rarity": "2",
+        "gear_tier": "2"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "3058145459290044",
+         "count_min": 300,
+         "count_max": 300,
+         "guaranteed": true
+        },
+        {
+         "item_id": "3058145459290044",
+         "count_min": 150,
+         "count_max": 150,
+         "loot_tag": "FOR_LOSS",
+         "guaranteed": true
+        }
+       ],
+       "override_boss_index": 4
+      },
+      "node_type": "1",
+      "id": "3"
+     }
+    ],
+    "map_prefab": "cmp_dungeon/dungeon_map_01"
+   },
+   {
+    "nodes": [
+     {
+      "battle_data": {
+       "possible_rewards": [
+        {
+         "item_id": "3058145459290044",
+         "count": "350"
+        },
+        {
+         "item_id": "3058145459290044",
+         "count": "175",
+         "loot_tag": "FOR_LOSS"
+        }
+       ],
+       "possible_enemies": [
+        {
+         "content_id": "8543978357888024",
+         "icon": "icons_units_jolly_roger_pirate/portrait_jollyrogerpirate2",
+         "range": 1.0,
+         "name_key": "JOLLY_ROGER_CREW_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "5308420037568950",
+          "8798989884907941"
+         ],
+         "unit_health": "314"
+        },
+        {
+         "content_id": "3564955291304970",
+         "icon": "icons_units_hero_duty_soldier/portrait_hero_duty_soldier",
+         "range": 4.0,
+         "name_key": "HEROS_DUTY_SOLDIER_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "2489250258015164",
+          "5039684465977895",
+          "5800061760299363"
+         ],
+         "unit_health": "562"
+        },
+        {
+         "content_id": "3053795370654951",
+         "icon": "icons_units_syndrome_security/portrait_syndromesecurity",
+         "range": 4.0,
+         "name_key": "SYNDROME_SECURITY_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "2489250258015164",
+          "4475336535634831"
+         ],
+         "unit_health": "332"
+        },
+        {
+         "content_id": "6718413568421239",
+         "icon": "icons_units_darkwing_duck/portrait_darkwing_duck",
+         "range": 1.0,
+         "name_key": "DARKWINGDUCK_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "2489250258015164",
+          "367812718792421",
+          "1102804729261314",
+          "5800061760299363",
+          "8597917023531694"
+         ],
+         "unit_health": "1174"
+        },
+        {
+         "content_id": "6256911275270195",
+         "icon": "icons_units_jolly_roger_pirate/portrait_jollyrogerpirate",
+         "range": 1.0,
+         "name_key": "JOLLY_ROGER_CREW_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "5308420037568950",
+          "8798989884907941"
+         ],
+         "unit_health": "332"
+        },
+        {
+         "content_id": "6975264719804706",
+         "icon": "icons_units_elastigirl/portrait_elastigirl",
+         "range": 1.0,
+         "name_key": "ELASTIGIRL_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "2489250258015164",
+          "4475336535634831",
+          "1102804729261314"
+         ],
+         "unit_health": "999"
+        },
+        {
+         "content_id": "72",
+         "icon": "icons_units_tinkerbell/portrait_tinkerbell",
+         "range": 4.0,
+         "name_key": "TINKERBELL_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "5308420037568950",
+          "8798989884907941"
+         ],
+         "unit_health": "1116"
+        },
+        {
+         "content_id": "530345094238519",
+         "icon": "icons_units_kakamora/portrait_kakamora",
+         "range": 4.0,
+         "name_key": "KAKAMORA_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5495262680796735",
+          "5308420037568950",
+          "2469462995899328"
+         ],
+         "unit_health": "332"
+        },
+        {
+         "content_id": "6637607033365366",
+         "icon": "icons_units_kakamora/portrait_kakamora",
+         "range": 4.0,
+         "name_key": "KAKAMORA_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5495262680796735",
+          "5308420037568950",
+          "2469462995899328"
+         ],
+         "unit_health": "294"
+        },
+        {
+         "content_id": "150",
+         "icon": "icons_units_jack_sparrow/portrait_jack_sparrow",
+         "range": 1.0,
+         "name_key": "JACK_SPARROW_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "5308420037568950",
+          "8576325908096714",
+          "1515770659265273"
+         ],
+         "unit_health": "999"
+        }
+       ],
+       "enemy_stats": {
+        "level": "17",
+        "rarity": "2",
+        "gear_tier": "2"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "3058145459290044",
+         "count_min": 350,
+         "count_max": 350,
+         "guaranteed": true
+        },
+        {
+         "item_id": "3058145459290044",
+         "count_min": 175,
+         "count_max": 175,
+         "loot_tag": "FOR_LOSS",
+         "guaranteed": true
+        }
+       ],
+       "override_boss_index": 8
+      },
+      "id": "4"
+     },
+     {
+      "battle_data": {
+       "possible_rewards": [
+        {
+         "item_id": "3058145459290044",
+         "count": "400"
+        },
+        {
+         "item_id": "3058145459290044",
+         "count": "200",
+         "loot_tag": "FOR_LOSS"
+        }
+       ],
+       "possible_enemies": [
+        {
+         "content_id": "1736798772274835",
+         "icon": "icons_units_aladdin/portrait_aladdin",
+         "range": 1.0,
+         "name_key": "ALADDIN_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4419393874676815",
+          "6950932538148189",
+          "5059163436552255"
+         ],
+         "unit_health": "1030"
+        },
+        {
+         "content_id": "3793696733556542",
+         "icon": "icons_units_demona/portrait_demona",
+         "range": 80.0,
+         "name_key": "DEMONA_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "2489250258015164",
+          "4193773771140306",
+          "4324500008569381",
+          "5800061760299363"
+         ],
+         "unit_health": "1030"
+        },
+        {
+         "content_id": "6256911275270195",
+         "icon": "icons_units_jolly_roger_pirate/portrait_jollyrogerpirate",
+         "range": 1.0,
+         "name_key": "JOLLY_ROGER_CREW_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "5308420037568950",
+          "8798989884907941"
+         ],
+         "unit_health": "341"
+        },
+        {
+         "content_id": "1833609470868558",
+         "icon": "icons_units_maui/portrait_maui",
+         "range": 1.0,
+         "name_key": "MAUI_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "5308420037568950",
+          "2469462995899328"
+         ],
+         "unit_health": "1616"
+        },
+        {
+         "content_id": "8543978357888024",
+         "icon": "icons_units_jolly_roger_pirate/portrait_jollyrogerpirate2",
+         "range": 1.0,
+         "name_key": "JOLLY_ROGER_CREW_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "5308420037568950",
+          "8798989884907941"
+         ],
+         "unit_health": "325"
+        },
+        {
+         "content_id": "530345094238519",
+         "icon": "icons_units_kakamora/portrait_kakamora",
+         "range": 4.0,
+         "name_key": "KAKAMORA_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5495262680796735",
+          "5308420037568950",
+          "2469462995899328"
+         ],
+         "unit_health": "341"
+        },
+        {
+         "content_id": "6637607033365366",
+         "icon": "icons_units_kakamora/portrait_kakamora",
+         "range": 4.0,
+         "name_key": "KAKAMORA_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5495262680796735",
+          "5308420037568950",
+          "2469462995899328"
+         ],
+         "unit_health": "304"
+        },
+        {
+         "content_id": "3564955291304970",
+         "icon": "icons_units_hero_duty_soldier/portrait_hero_duty_soldier",
+         "range": 4.0,
+         "name_key": "HEROS_DUTY_SOLDIER_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "2489250258015164",
+          "5039684465977895",
+          "5800061760299363"
+         ],
+         "unit_health": "581"
+        },
+        {
+         "content_id": "3053795370654951",
+         "icon": "icons_units_syndrome_security/portrait_syndromesecurity",
+         "range": 4.0,
+         "name_key": "SYNDROME_SECURITY_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "2489250258015164",
+          "4475336535634831"
+         ],
+         "unit_health": "341"
+        },
+        {
+         "content_id": "149",
+         "icon": "icons_units_hook/portrait_hook",
+         "range": 1.0,
+         "name_key": "CAPTAINHOOK_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "5308420037568950",
+          "8798989884907941"
+         ],
+         "unit_health": "1030"
+        }
+       ],
+       "enemy_stats": {
+        "level": "18",
+        "rarity": "2",
+        "gear_tier": "2"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "3058145459290044",
+         "count_min": 400,
+         "count_max": 400,
+         "guaranteed": true
+        },
+        {
+         "item_id": "3058145459290044",
+         "count_min": 200,
+         "count_max": 200,
+         "loot_tag": "FOR_LOSS",
+         "guaranteed": true
+        }
+       ],
+       "override_boss_index": 8
+      },
+      "id": "5"
+     },
+     {
+      "battle_data": {
+       "possible_rewards": [
+        {
+         "item_id": "3058145459290044",
+         "count": "450"
+        },
+        {
+         "item_id": "3058145459290044",
+         "count": "225",
+         "loot_tag": "FOR_LOSS"
+        }
+       ],
+       "possible_enemies": [
+        {
+         "content_id": "428918844529270",
+         "icon": "icons_units_anger/portrait_anger",
+         "range": 1.0,
+         "name_key": "ANGER_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "2489250258015164",
+          "7803373101595394",
+          "1102804729261314"
+         ],
+         "unit_health": "1060"
+        },
+        {
+         "content_id": "3564955291304970",
+         "icon": "icons_units_hero_duty_soldier/portrait_hero_duty_soldier",
+         "range": 4.0,
+         "name_key": "HEROS_DUTY_SOLDIER_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "2489250258015164",
+          "5039684465977895",
+          "5800061760299363"
+         ],
+         "unit_health": "601"
+        },
+        {
+         "content_id": "8543978357888024",
+         "icon": "icons_units_jolly_roger_pirate/portrait_jollyrogerpirate2",
+         "range": 1.0,
+         "name_key": "JOLLY_ROGER_CREW_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "5308420037568950",
+          "8798989884907941"
+         ],
+         "unit_health": "336"
+        },
+        {
+         "content_id": "530345094238519",
+         "icon": "icons_units_kakamora/portrait_kakamora",
+         "range": 4.0,
+         "name_key": "KAKAMORA_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5495262680796735",
+          "5308420037568950",
+          "2469462995899328"
+         ],
+         "unit_health": "351"
+        },
+        {
+         "content_id": "6637607033365366",
+         "icon": "icons_units_kakamora/portrait_kakamora",
+         "range": 4.0,
+         "name_key": "KAKAMORA_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5495262680796735",
+          "5308420037568950",
+          "2469462995899328"
+         ],
+         "unit_health": "314"
+        },
+        {
+         "content_id": "124",
+         "icon": "icons_units_oogie/portrait_oogie",
+         "range": 1.0,
+         "name_key": "OOGIEBOOGIE_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "185013331968872",
+          "8842003313865136",
+          "1465066247313418"
+         ],
+         "unit_health": "1667"
+        },
+        {
+         "content_id": "150",
+         "icon": "icons_units_jack_sparrow/portrait_jack_sparrow",
+         "range": 1.0,
+         "name_key": "JACK_SPARROW_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "5308420037568950",
+          "8576325908096714",
+          "1515770659265273"
+         ],
+         "unit_health": "1060"
+        },
+        {
+         "content_id": "3053795370654951",
+         "icon": "icons_units_syndrome_security/portrait_syndromesecurity",
+         "range": 4.0,
+         "name_key": "SYNDROME_SECURITY_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "2489250258015164",
+          "4475336535634831"
+         ],
+         "unit_health": "351"
+        },
+        {
+         "content_id": "6495565017355218",
+         "icon": "icons_units_jangles/portrait_jangles",
+         "range": 1.0,
+         "name_key": "JANGLES_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "185013331968872",
+          "2489250258015164",
+          "7803373101595394",
+          "4324500008569381"
+         ],
+         "unit_health": "1667"
+        },
+        {
+         "content_id": "6256911275270195",
+         "icon": "icons_units_jolly_roger_pirate/portrait_jollyrogerpirate",
+         "range": 1.0,
+         "name_key": "JOLLY_ROGER_CREW_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "5308420037568950",
+          "8798989884907941"
+         ],
+         "unit_health": "351"
+        }
+       ],
+       "enemy_stats": {
+        "level": "19",
+        "rarity": "2",
+        "gear_tier": "2"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "3058145459290044",
+         "count_min": 450,
+         "count_max": 450,
+         "guaranteed": true
+        },
+        {
+         "item_id": "3058145459290044",
+         "count_min": 225,
+         "count_max": 225,
+         "loot_tag": "FOR_LOSS",
+         "guaranteed": true
+        }
+       ],
+       "override_boss_index": 6
+      },
+      "id": "6"
+     },
+     {
+      "battle_data": {
+       "possible_rewards": [
+        {
+         "item_id": "3058145459290044",
+         "count": "500"
+        },
+        {
+         "item_id": "3058145459290044",
+         "count": "250",
+         "loot_tag": "FOR_LOSS"
+        }
+       ],
+       "possible_enemies": [
+        {
+         "content_id": "1833609470868558",
+         "icon": "icons_units_maui/portrait_maui",
+         "range": 1.0,
+         "name_key": "MAUI_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "5308420037568950",
+          "2469462995899328"
+         ],
+         "unit_health": "2431"
+        },
+        {
+         "content_id": "8543978357888024",
+         "icon": "icons_units_jolly_roger_pirate/portrait_jollyrogerpirate2",
+         "range": 1.0,
+         "name_key": "JOLLY_ROGER_CREW_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "5308420037568950",
+          "8798989884907941"
+         ],
+         "unit_health": "560"
+        },
+        {
+         "content_id": "150",
+         "icon": "icons_units_jack_sparrow/portrait_jack_sparrow",
+         "range": 1.0,
+         "name_key": "JACK_SPARROW_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "5308420037568950",
+          "8576325908096714",
+          "1515770659265273"
+         ],
+         "unit_health": "1584"
+        },
+        {
+         "content_id": "6637607033365366",
+         "icon": "icons_units_kakamora/portrait_kakamora",
+         "range": 4.0,
+         "name_key": "KAKAMORA_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5495262680796735",
+          "5308420037568950",
+          "2469462995899328"
+         ],
+         "unit_health": "547"
+        },
+        {
+         "content_id": "3564955291304970",
+         "icon": "icons_units_hero_duty_soldier/portrait_hero_duty_soldier",
+         "range": 4.0,
+         "name_key": "HEROS_DUTY_SOLDIER_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "2489250258015164",
+          "5039684465977895",
+          "5800061760299363"
+         ],
+         "unit_health": "834"
+        },
+        {
+         "content_id": "1225277242550499",
+         "icon": "icons_units_merlin/portrait_merlin",
+         "range": 4.0,
+         "name_key": "MERLIN_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "8842003313865136",
+          "613124871864650"
+         ],
+         "unit_health": "1823"
+        },
+        {
+         "content_id": "3053795370654951",
+         "icon": "icons_units_syndrome_security/portrait_syndromesecurity",
+         "range": 4.0,
+         "name_key": "SYNDROME_SECURITY_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "2489250258015164",
+          "4475336535634831"
+         ],
+         "unit_health": "520"
+        },
+        {
+         "content_id": "530345094238519",
+         "icon": "icons_units_kakamora/portrait_kakamora",
+         "range": 4.0,
+         "name_key": "KAKAMORA_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5495262680796735",
+          "5308420037568950",
+          "2469462995899328"
+         ],
+         "unit_health": "520"
+        },
+        {
+         "content_id": "508341540759214",
+         "icon": "icons_units_merida/portrait_merida",
+         "range": 4.0,
+         "name_key": "MERIDA_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4650364419227244",
+          "5968787601315360",
+          "5820897550663740"
+         ],
+         "unit_health": "1584"
+        },
+        {
+         "content_id": "7037884731553552",
+         "icon": "icons_units_frozone/portrait_frozone",
+         "range": 4.0,
+         "name_key": "FROZONE_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "2489250258015164",
+          "4475336535634831",
+          "1102804729261314"
+         ],
+         "unit_health": "1743"
+        },
+        {
+         "content_id": "6256911275270195",
+         "icon": "icons_units_jolly_roger_pirate/portrait_jollyrogerpirate",
+         "range": 1.0,
+         "name_key": "JOLLY_ROGER_CREW_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "5308420037568950",
+          "8798989884907941"
+         ],
+         "unit_health": "520"
+        }
+       ],
+       "enemy_stats": {
+        "level": "20",
+        "rarity": "3",
+        "gear_tier": "3"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "3058145459290044",
+         "count_min": 500,
+         "count_max": 500,
+         "guaranteed": true
+        },
+        {
+         "item_id": "3058145459290044",
+         "count_min": 250,
+         "count_max": 250,
+         "loot_tag": "FOR_LOSS",
+         "guaranteed": true
+        }
+       ]
+      },
+      "node_type": "1",
+      "id": "7"
+     }
+    ],
+    "map_prefab": "cmp_dungeon/dungeon_map_02"
+   },
+   {
+    "nodes": [
+     {
+      "battle_data": {
+       "possible_rewards": [
+        {
+         "item_id": "3058145459290044",
+         "count": "550"
+        },
+        {
+         "item_id": "3058145459290044",
+         "count": "275",
+         "loot_tag": "FOR_LOSS"
+        }
+       ],
+       "possible_enemies": [
+        {
+         "content_id": "2425318463423019",
+         "icon": "icons_units_yzma/portrait_yzma",
+         "range": 40.0,
+         "name_key": "YZMA_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5495262680796735",
+          "4419393874676815",
+          "3019196162921018",
+          "2136312807087658"
+         ],
+         "unit_health": "2061"
+        },
+        {
+         "content_id": "4775228554624780",
+         "icon": "icons_units_nymph/portrait_nymph_a",
+         "range": 1.0,
+         "name_key": "NYMPH_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "8842003313865136",
+          "1871025105244876"
+         ],
+         "unit_health": "1149"
+        },
+        {
+         "content_id": "8311998343492273",
+         "icon": "icons_units_rhino_beetle/portrait_rhino_beetle",
+         "range": 1.0,
+         "name_key": "RHINO_BEETLE_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "4650364419227244",
+          "2816781811542937"
+         ],
+         "unit_health": "951"
+        },
+        {
+         "content_id": "6296512697122726",
+         "icon": "icons_units_kuzco_guard/portrait_kuzco_guard",
+         "range": 1.0,
+         "name_key": "KUZCOS_GUARD_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "4419393874676815",
+          "3019196162921018"
+         ],
+         "unit_health": "951"
+        },
+        {
+         "content_id": "1824298448652545",
+         "icon": "icons_units_rafiki/portrait_rafiki",
+         "range": 1.0,
+         "name_key": "RAFIKI_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "4650364419227244",
+          "8302746766098706"
+         ],
+         "unit_health": "1851"
+        },
+        {
+         "content_id": "5091614101029844",
+         "icon": "icons_units_bandar_log_monkey/portrait_bandarlogmonkey",
+         "range": 80.0,
+         "name_key": "BANDAR_LOG_MONKEY_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5495262680796735",
+          "4650364419227244",
+          "3527948419375253"
+         ],
+         "unit_health": "484"
+        },
+        {
+         "content_id": "8355588830097610",
+         "icon": "icons_units_sulley/portrait_sulley",
+         "range": 1.0,
+         "name_key": "SULLEY_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "2489250258015164",
+          "4946503385482089",
+          "1102804729261314"
+         ],
+         "unit_health": "3039"
+        },
+        {
+         "content_id": "1680592376157339",
+         "icon": "icons_units_hopper/portrait_hopper",
+         "range": 1.0,
+         "name_key": "HOPPER_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "185013331968872",
+          "4650364419227244",
+          "2816781811542937"
+         ],
+         "unit_health": "2884"
+        }
+       ],
+       "enemy_stats": {
+        "level": "27",
+        "rarity": "3",
+        "gear_tier": "3"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "3058145459290044",
+         "count_min": 550,
+         "count_max": 550,
+         "guaranteed": true
+        },
+        {
+         "item_id": "3058145459290044",
+         "count_min": 275,
+         "count_max": 275,
+         "loot_tag": "FOR_LOSS",
+         "guaranteed": true
+        }
+       ],
+       "override_boss_index": 1
+      },
+      "id": "8"
+     },
+     {
+      "battle_data": {
+       "possible_rewards": [
+        {
+         "item_id": "3058145459290044",
+         "count": "600"
+        },
+        {
+         "item_id": "3058145459290044",
+         "count": "300",
+         "loot_tag": "FOR_LOSS"
+        }
+       ],
+       "possible_enemies": [
+        {
+         "content_id": "6296512697122726",
+         "icon": "icons_units_kuzco_guard/portrait_kuzco_guard",
+         "range": 1.0,
+         "name_key": "KUZCOS_GUARD_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "4419393874676815",
+          "3019196162921018"
+         ],
+         "unit_health": "973"
+        },
+        {
+         "content_id": "3368663937660261",
+         "icon": "icons_units_syndrome/portrait_syndrome",
+         "range": 3.0,
+         "name_key": "SYNDROME_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "2489250258015164",
+          "4475336535634831",
+          "4324500008569381",
+          "5800061760299363"
+         ],
+         "unit_health": "1895"
+        },
+        {
+         "content_id": "8311998343492273",
+         "icon": "icons_units_rhino_beetle/portrait_rhino_beetle",
+         "range": 1.0,
+         "name_key": "RHINO_BEETLE_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "4650364419227244",
+          "2816781811542937"
+         ],
+         "unit_health": "973"
+        },
+        {
+         "content_id": "1809998714774592",
+         "icon": "icons_units_shan_yu/portrait_shan_yu",
+         "range": 1.0,
+         "name_key": "SHAN_YU_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "4419393874676815",
+          "6268674455014635",
+          "2136312807087658"
+         ],
+         "unit_health": "1895"
+        },
+        {
+         "content_id": "1680592376157339",
+         "icon": "icons_units_hopper/portrait_hopper",
+         "range": 1.0,
+         "name_key": "HOPPER_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "185013331968872",
+          "4650364419227244",
+          "2816781811542937"
+         ],
+         "unit_health": "2949"
+        },
+        {
+         "content_id": "4655438307398817",
+         "icon": "icons_units_queenofhearts/portrait_queenofhearts",
+         "range": 3.0,
+         "name_key": "QUEEN_OF_HEARTS_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "8842003313865136",
+          "280516569512001"
+         ],
+         "unit_health": "1895"
+        },
+        {
+         "content_id": "4775228554624780",
+         "icon": "icons_units_nymph/portrait_nymph_a",
+         "range": 1.0,
+         "name_key": "NYMPH_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "8842003313865136",
+          "1871025105244876"
+         ],
+         "unit_health": "1179"
+        },
+        {
+         "content_id": "5091614101029844",
+         "icon": "icons_units_bandar_log_monkey/portrait_bandarlogmonkey",
+         "range": 80.0,
+         "name_key": "BANDAR_LOG_MONKEY_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5495262680796735",
+          "4650364419227244",
+          "3527948419375253"
+         ],
+         "unit_health": "491"
+        }
+       ],
+       "enemy_stats": {
+        "level": "28",
+        "rarity": "3",
+        "gear_tier": "3"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "3058145459290044",
+         "count_min": 600,
+         "count_max": 600,
+         "guaranteed": true
+        },
+        {
+         "item_id": "3058145459290044",
+         "count_min": 300,
+         "count_max": 300,
+         "loot_tag": "FOR_LOSS",
+         "guaranteed": true
+        }
+       ],
+       "override_boss_index": 7
+      },
+      "id": "9"
+     },
+     {
+      "battle_data": {
+       "possible_rewards": [
+        {
+         "item_id": "3058145459290044",
+         "count": "650"
+        },
+        {
+         "item_id": "3058145459290044",
+         "count": "325",
+         "loot_tag": "FOR_LOSS"
+        }
+       ],
+       "possible_enemies": [
+        {
+         "content_id": "36",
+         "icon": "icons_units_baloo/portrait_baloo",
+         "range": 3.0,
+         "name_key": "BALOO_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "4650364419227244",
+          "3527948419375253"
+         ],
+         "unit_health": "2152"
+        },
+        {
+         "content_id": "4775228554624780",
+         "icon": "icons_units_nymph/portrait_nymph_a",
+         "range": 1.0,
+         "name_key": "NYMPH_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "8842003313865136",
+          "1871025105244876"
+         ],
+         "unit_health": "1209"
+        },
+        {
+         "content_id": "151",
+         "icon": "icons_units_woody/portrait_woody",
+         "range": 3.0,
+         "name_key": "WOODY_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "2489250258015164",
+          "4345897184857488",
+          "1102804729261314"
+         ],
+         "unit_health": "2152"
+        },
+        {
+         "content_id": "5091614101029844",
+         "icon": "icons_units_bandar_log_monkey/portrait_bandarlogmonkey",
+         "range": 80.0,
+         "name_key": "BANDAR_LOG_MONKEY_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5495262680796735",
+          "4650364419227244",
+          "3527948419375253"
+         ],
+         "unit_health": "499"
+        },
+        {
+         "content_id": "6296512697122726",
+         "icon": "icons_units_kuzco_guard/portrait_kuzco_guard",
+         "range": 1.0,
+         "name_key": "KUZCOS_GUARD_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "4419393874676815",
+          "3019196162921018"
+         ],
+         "unit_health": "994"
+        },
+        {
+         "content_id": "8311998343492273",
+         "icon": "icons_units_rhino_beetle/portrait_rhino_beetle",
+         "range": 1.0,
+         "name_key": "RHINO_BEETLE_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "4650364419227244",
+          "2816781811542937"
+         ],
+         "unit_health": "994"
+        },
+        {
+         "content_id": "2425318463423019",
+         "icon": "icons_units_yzma/portrait_yzma",
+         "range": 40.0,
+         "name_key": "YZMA_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5495262680796735",
+          "4419393874676815",
+          "3019196162921018",
+          "2136312807087658"
+         ],
+         "unit_health": "2152"
+        },
+        {
+         "content_id": "5710225926985727",
+         "icon": "icons_units_robin_hood/portrait_robin_hood",
+         "range": 4.0,
+         "name_key": "ROBIN_HOOD_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4419393874676815",
+          "4934108704849804",
+          "5059163436552255"
+         ],
+         "unit_health": "1934"
+        }
+       ],
+       "enemy_stats": {
+        "level": "29",
+        "rarity": "3",
+        "gear_tier": "3"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "3058145459290044",
+         "count_min": 650,
+         "count_max": 650,
+         "guaranteed": true
+        },
+        {
+         "item_id": "3058145459290044",
+         "count_min": 325,
+         "count_max": 325,
+         "loot_tag": "FOR_LOSS",
+         "guaranteed": true
+        }
+       ],
+       "override_boss_index": 1
+      },
+      "id": "10"
+     },
+     {
+      "battle_data": {
+       "possible_rewards": [
+        {
+         "item_id": "3058145459290044",
+         "count": "700"
+        },
+        {
+         "item_id": "3058145459290044",
+         "count": "350",
+         "loot_tag": "FOR_LOSS"
+        }
+       ],
+       "possible_enemies": [
+        {
+         "content_id": "6296512697122726",
+         "icon": "icons_units_kuzco_guard/portrait_kuzco_guard",
+         "range": 1.0,
+         "name_key": "KUZCOS_GUARD_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "4419393874676815",
+          "3019196162921018"
+         ],
+         "unit_health": "1507"
+        },
+        {
+         "content_id": "8311998343492273",
+         "icon": "icons_units_rhino_beetle/portrait_rhino_beetle",
+         "range": 1.0,
+         "name_key": "RHINO_BEETLE_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "4650364419227244",
+          "2816781811542937"
+         ],
+         "unit_health": "1507"
+        },
+        {
+         "content_id": "2425318463423019",
+         "icon": "icons_units_yzma/portrait_yzma",
+         "range": 40.0,
+         "name_key": "YZMA_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5495262680796735",
+          "4419393874676815",
+          "3019196162921018",
+          "2136312807087658"
+         ],
+         "unit_health": "3265"
+        },
+        {
+         "content_id": "4775228554624780",
+         "icon": "icons_units_nymph/portrait_nymph_a",
+         "range": 1.0,
+         "name_key": "NYMPH_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "8842003313865136",
+          "1871025105244876"
+         ],
+         "unit_health": "1741"
+        },
+        {
+         "content_id": "6718413568421239",
+         "icon": "icons_units_darkwing_duck/portrait_darkwing_duck",
+         "range": 1.0,
+         "name_key": "DARKWINGDUCK_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "2489250258015164",
+          "367812718792421",
+          "1102804729261314",
+          "5800061760299363",
+          "8597917023531694"
+         ],
+         "unit_health": "3409"
+        },
+        {
+         "content_id": "1680592376157339",
+         "icon": "icons_units_hopper/portrait_hopper",
+         "range": 1.0,
+         "name_key": "HOPPER_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "185013331968872",
+          "4650364419227244",
+          "2816781811542937"
+         ],
+         "unit_health": "4545"
+        },
+        {
+         "content_id": "1736798772274835",
+         "icon": "icons_units_aladdin/portrait_aladdin",
+         "range": 1.0,
+         "name_key": "ALADDIN_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4419393874676815",
+          "6950932538148189",
+          "5059163436552255"
+         ],
+         "unit_health": "2979"
+        },
+        {
+         "content_id": "5091614101029844",
+         "icon": "icons_units_bandar_log_monkey/portrait_bandarlogmonkey",
+         "range": 80.0,
+         "name_key": "BANDAR_LOG_MONKEY_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5495262680796735",
+          "4650364419227244",
+          "3527948419375253"
+         ],
+         "unit_health": "791"
+        },
+        {
+         "content_id": "50",
+         "icon": "icons_units_shere_khan/portrait_shere_khan",
+         "name_key": "SHEREKHAN_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "4650364419227244",
+          "3527948419375253"
+         ],
+         "unit_health": "2979"
+        }
+       ],
+       "enemy_stats": {
+        "level": "30",
+        "rarity": "4",
+        "gear_tier": "4"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "3058145459290044",
+         "count_min": 700,
+         "count_max": 700,
+         "guaranteed": true
+        },
+        {
+         "item_id": "3058145459290044",
+         "count_min": 350,
+         "count_max": 350,
+         "loot_tag": "FOR_LOSS",
+         "guaranteed": true
+        }
+       ],
+       "override_boss_index": 7
+      },
+      "node_type": "1",
+      "id": "11"
+     }
+    ],
+    "map_prefab": "cmp_dungeon/dungeon_map_03"
+   },
+   {
+    "nodes": [
+     {
+      "battle_data": {
+       "possible_rewards": [
+        {
+         "item_id": "3058145459290044",
+         "count": "750"
+        },
+        {
+         "item_id": "3058145459290044",
+         "count": "375",
+         "loot_tag": "FOR_LOSS"
+        }
+       ],
+       "possible_enemies": [
+        {
+         "content_id": "4326476028885937",
+         "icon": "icons_units_pig_archer/portrait_pig_archer",
+         "range": 4.0,
+         "name_key": "PIG_ARCHER_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4419393874676815",
+          "4934108704849804"
+         ],
+         "unit_health": "1788"
+        },
+        {
+         "content_id": "1225277242550499",
+         "icon": "icons_units_merlin/portrait_merlin",
+         "range": 4.0,
+         "name_key": "MERLIN_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "8842003313865136",
+          "613124871864650"
+         ],
+         "unit_health": "3862"
+        },
+        {
+         "content_id": "1333223846534530",
+         "icon": "icons_units_silly_symphonies_skeleton/portrait_silly_symphonies_skeleton",
+         "range": 1.0,
+         "name_key": "SILLY_SYMPHONIES_SKELETON_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "8842003313865136",
+          "3683942465976047"
+         ],
+         "unit_health": "1244"
+        },
+        {
+         "content_id": "6975264719804706",
+         "icon": "icons_units_elastigirl/portrait_elastigirl",
+         "range": 1.0,
+         "name_key": "ELASTIGIRL_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "2489250258015164",
+          "4475336535634831",
+          "1102804729261314"
+         ],
+         "unit_health": "3342"
+        },
+        {
+         "content_id": "5584717432624453",
+         "icon": "icons_units_scar/portrait_scar",
+         "range": 1.0,
+         "name_key": "SCAR_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "4650364419227244",
+          "8302746766098706"
+         ],
+         "unit_health": "3342"
+        },
+        {
+         "content_id": "2690321414583935",
+         "icon": "icons_units_ram/portrait_ram",
+         "range": 1.0,
+         "name_key": "RAM_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4650364419227244",
+          "4581920962623403"
+         ],
+         "unit_health": "1104"
+        },
+        {
+         "content_id": "381651270270350",
+         "icon": "icons_units_mind_worker/portrait_mind_worker",
+         "range": 4.0,
+         "name_key": "MIND_WORKER_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "2489250258015164",
+          "7803373101595394"
+         ],
+         "unit_health": "1220"
+        }
+       ],
+       "enemy_stats": {
+        "level": "37",
+        "rarity": "4",
+        "gear_tier": "4"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "3058145459290044",
+         "count_min": 750,
+         "count_max": 750,
+         "guaranteed": true
+        },
+        {
+         "item_id": "3058145459290044",
+         "count_min": 375,
+         "count_max": 375,
+         "loot_tag": "FOR_LOSS",
+         "guaranteed": true
+        }
+       ],
+       "override_boss_index": 2
+      },
+      "id": "12"
+     },
+     {
+      "battle_data": {
+       "possible_rewards": [
+        {
+         "item_id": "3058145459290044",
+         "count": "800"
+        },
+        {
+         "item_id": "3058145459290044",
+         "count": "400",
+         "loot_tag": "FOR_LOSS"
+        }
+       ],
+       "possible_enemies": [
+        {
+         "content_id": "2690321414583935",
+         "icon": "icons_units_ram/portrait_ram",
+         "range": 1.0,
+         "name_key": "RAM_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4650364419227244",
+          "4581920962623403"
+         ],
+         "unit_health": "1121"
+        },
+        {
+         "content_id": "4326476028885937",
+         "icon": "icons_units_pig_archer/portrait_pig_archer",
+         "range": 4.0,
+         "name_key": "PIG_ARCHER_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4419393874676815",
+          "4934108704849804"
+         ],
+         "unit_health": "1822"
+        },
+        {
+         "content_id": "1333223846534530",
+         "icon": "icons_units_silly_symphonies_skeleton/portrait_silly_symphonies_skeleton",
+         "range": 1.0,
+         "name_key": "SILLY_SYMPHONIES_SKELETON_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "8842003313865136",
+          "3683942465976047"
+         ],
+         "unit_health": "1261"
+        },
+        {
+         "content_id": "1809998714774592",
+         "icon": "icons_units_shan_yu/portrait_shan_yu",
+         "range": 1.0,
+         "name_key": "SHAN_YU_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "4419393874676815",
+          "6268674455014635",
+          "2136312807087658"
+         ],
+         "unit_health": "3394"
+        },
+        {
+         "content_id": "10",
+         "icon": "icons_units_ariel/portrait_ariel",
+         "range": 80.0,
+         "name_key": "ARIEL_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "5308420037568950",
+          "3133581935767717",
+          "5820897550663740"
+         ],
+         "unit_health": "3749"
+        },
+        {
+         "content_id": "381651270270350",
+         "icon": "icons_units_mind_worker/portrait_mind_worker",
+         "range": 4.0,
+         "name_key": "MIND_WORKER_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "2489250258015164",
+          "7803373101595394"
+         ],
+         "unit_health": "1240"
+        },
+        {
+         "content_id": "6495565017355218",
+         "icon": "icons_units_jangles/portrait_jangles",
+         "range": 1.0,
+         "name_key": "JANGLES_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "185013331968872",
+          "2489250258015164",
+          "7803373101595394",
+          "4324500008569381"
+         ],
+         "unit_health": "5236"
+        },
+        {
+         "content_id": "3368663937660261",
+         "icon": "icons_units_syndrome/portrait_syndrome",
+         "range": 3.0,
+         "name_key": "SYNDROME_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "2489250258015164",
+          "4475336535634831",
+          "4324500008569381",
+          "5800061760299363"
+         ],
+         "unit_health": "3394"
+        }
+       ],
+       "enemy_stats": {
+        "level": "38",
+        "rarity": "4",
+        "gear_tier": "4"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "3058145459290044",
+         "count_min": 800,
+         "count_max": 800,
+         "guaranteed": true
+        },
+        {
+         "item_id": "3058145459290044",
+         "count_min": 400,
+         "count_max": 400,
+         "loot_tag": "FOR_LOSS",
+         "guaranteed": true
+        }
+       ]
+      },
+      "id": "13"
+     },
+     {
+      "battle_data": {
+       "possible_rewards": [
+        {
+         "item_id": "3058145459290044",
+         "count": "850"
+        },
+        {
+         "item_id": "3058145459290044",
+         "count": "425",
+         "loot_tag": "FOR_LOSS"
+        }
+       ],
+       "possible_enemies": [
+        {
+         "content_id": "1333223846534530",
+         "icon": "icons_units_silly_symphonies_skeleton/portrait_silly_symphonies_skeleton",
+         "range": 1.0,
+         "name_key": "SILLY_SYMPHONIES_SKELETON_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "8842003313865136",
+          "3683942465976047"
+         ],
+         "unit_health": "1278"
+        },
+        {
+         "content_id": "508341540759214",
+         "icon": "icons_units_merida/portrait_merida",
+         "range": 4.0,
+         "name_key": "MERIDA_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4650364419227244",
+          "5968787601315360",
+          "5820897550663740"
+         ],
+         "unit_health": "3445"
+        },
+        {
+         "content_id": "381651270270350",
+         "icon": "icons_units_mind_worker/portrait_mind_worker",
+         "range": 4.0,
+         "name_key": "MIND_WORKER_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "2489250258015164",
+          "7803373101595394"
+         ],
+         "unit_health": "1259"
+        },
+        {
+         "content_id": "11",
+         "icon": "icons_units_buzz/portrait_buzz_lightyear",
+         "range": 1.0,
+         "name_key": "BUZZLIGHTYEAR_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "2489250258015164",
+          "4345897184857488",
+          "1102804729261314"
+         ],
+         "unit_health": "3445"
+        },
+        {
+         "content_id": "4505487594415447",
+         "icon": "icons_units_jafar/portrait_jafar",
+         "range": 4.0,
+         "name_key": "JAFAR_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "4419393874676815",
+          "6950932538148189",
+          "2136312807087658"
+         ],
+         "unit_health": "3685"
+        },
+        {
+         "content_id": "5584717432624453",
+         "icon": "icons_units_scar/portrait_scar",
+         "range": 1.0,
+         "name_key": "SCAR_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "4650364419227244",
+          "8302746766098706"
+         ],
+         "unit_health": "3445"
+        },
+        {
+         "content_id": "2690321414583935",
+         "icon": "icons_units_ram/portrait_ram",
+         "range": 1.0,
+         "name_key": "RAM_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4650364419227244",
+          "4581920962623403"
+         ],
+         "unit_health": "1138"
+        },
+        {
+         "content_id": "4326476028885937",
+         "icon": "icons_units_pig_archer/portrait_pig_archer",
+         "range": 4.0,
+         "name_key": "PIG_ARCHER_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4419393874676815",
+          "4934108704849804"
+         ],
+         "unit_health": "1857"
+        }
+       ],
+       "enemy_stats": {
+        "level": "39",
+        "rarity": "4",
+        "gear_tier": "4"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "3058145459290044",
+         "count_min": 850,
+         "count_max": 850,
+         "guaranteed": true
+        },
+        {
+         "item_id": "3058145459290044",
+         "count_min": 425,
+         "count_max": 425,
+         "loot_tag": "FOR_LOSS",
+         "guaranteed": true
+        }
+       ],
+       "override_boss_index": 4
+      },
+      "id": "14"
+     },
+     {
+      "battle_data": {
+       "possible_rewards": [
+        {
+         "item_id": "3058145459290044",
+         "count": "900"
+        },
+        {
+         "item_id": "3058145459290044",
+         "count": "450",
+         "loot_tag": "FOR_LOSS"
+        }
+       ],
+       "possible_enemies": [
+        {
+         "content_id": "381651270270350",
+         "icon": "icons_units_mind_worker/portrait_mind_worker",
+         "range": 4.0,
+         "name_key": "MIND_WORKER_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "2489250258015164",
+          "7803373101595394"
+         ],
+         "unit_health": "2087"
+        },
+        {
+         "content_id": "5584717432624453",
+         "icon": "icons_units_scar/portrait_scar",
+         "range": 1.0,
+         "name_key": "SCAR_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "4650364419227244",
+          "8302746766098706"
+         ],
+         "unit_health": "5704"
+        },
+        {
+         "content_id": "1333223846534530",
+         "icon": "icons_units_silly_symphonies_skeleton/portrait_silly_symphonies_skeleton",
+         "range": 1.0,
+         "name_key": "SILLY_SYMPHONIES_SKELETON_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "8842003313865136",
+          "3683942465976047"
+         ],
+         "unit_health": "2093"
+        },
+        {
+         "content_id": "2425318463423019",
+         "icon": "icons_units_yzma/portrait_yzma",
+         "range": 40.0,
+         "name_key": "YZMA_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5495262680796735",
+          "4419393874676815",
+          "3019196162921018",
+          "2136312807087658"
+         ],
+         "unit_health": "6329"
+        },
+        {
+         "content_id": "1833609470868558",
+         "icon": "icons_units_maui/portrait_maui",
+         "range": 1.0,
+         "name_key": "MAUI_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "5308420037568950",
+          "2469462995899328"
+         ],
+         "unit_health": "8856"
+        },
+        {
+         "content_id": "6495565017355218",
+         "icon": "icons_units_jangles/portrait_jangles",
+         "range": 1.0,
+         "name_key": "JANGLES_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "185013331968872",
+          "2489250258015164",
+          "7803373101595394",
+          "4324500008569381"
+         ],
+         "unit_health": "8856"
+        },
+        {
+         "content_id": "4326476028885937",
+         "icon": "icons_units_pig_archer/portrait_pig_archer",
+         "range": 4.0,
+         "name_key": "PIG_ARCHER_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4419393874676815",
+          "4934108704849804"
+         ],
+         "unit_health": "3112"
+        },
+        {
+         "content_id": "4979608122848331",
+         "icon": "icons_units_pete/portrait_pete",
+         "range": 1.0,
+         "name_key": "PETE_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "2489250258015164",
+          "4623262297475655",
+          "4324500008569381"
+         ],
+         "unit_health": "5704"
+        },
+        {
+         "content_id": "2690321414583935",
+         "icon": "icons_units_ram/portrait_ram",
+         "range": 1.0,
+         "name_key": "RAM_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4650364419227244",
+          "4581920962623403"
+         ],
+         "unit_health": "1878"
+        }
+       ],
+       "enemy_stats": {
+        "level": "40",
+        "rarity": "5",
+        "gear_tier": "5"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "3058145459290044",
+         "count_min": 900,
+         "count_max": 900,
+         "guaranteed": true
+        },
+        {
+         "item_id": "3058145459290044",
+         "count_min": 450,
+         "count_max": 450,
+         "loot_tag": "FOR_LOSS",
+         "guaranteed": true
+        }
+       ]
+      },
+      "node_type": "1",
+      "id": "15"
+     }
+    ],
+    "map_prefab": "cmp_dungeon/dungeon_map_04"
+   },
+   {
+    "nodes": [
+     {
+      "battle_data": {
+       "possible_rewards": [
+        {
+         "item_id": "3058145459290044",
+         "count": "950"
+        },
+        {
+         "item_id": "3058145459290044",
+         "count": "475",
+         "loot_tag": "FOR_LOSS"
+        }
+       ],
+       "possible_enemies": [
+        {
+         "content_id": "5584717432624453",
+         "icon": "icons_units_scar/portrait_scar",
+         "range": 1.0,
+         "name_key": "SCAR_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "4650364419227244",
+          "8302746766098706"
+         ],
+         "unit_health": "6339"
+        },
+        {
+         "content_id": "6392733132534201",
+         "icon": "icons_units_royal_guard/portrait_royal_guard",
+         "range": 1.0,
+         "name_key": "ROYAL_GUARD_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4419393874676815",
+          "3545371783249927"
+         ],
+         "unit_health": "3530"
+        },
+        {
+         "content_id": "1570366594174479",
+         "icon": "icons_units_card_soldier/portrait_cardsoldier",
+         "range": 1.0,
+         "name_key": "CARD_SOLDIER_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "8842003313865136",
+          "280516569512001"
+         ],
+         "unit_health": "3530"
+        },
+        {
+         "content_id": "8355588830097610",
+         "icon": "icons_units_sulley/portrait_sulley",
+         "range": 1.0,
+         "name_key": "SULLEY_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "2489250258015164",
+          "4946503385482089",
+          "1102804729261314"
+         ],
+         "unit_health": "10596"
+        },
+        {
+         "content_id": "5410579083337168",
+         "icon": "icons_units_madam_mim/portrait_madam_mim",
+         "range": 4.0,
+         "name_key": "MADAM_MIM_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "8842003313865136",
+          "613124871864650"
+         ],
+         "unit_health": "6339"
+        },
+        {
+         "content_id": "8739420697837426",
+         "icon": "icons_units_feisty_furniture/portrait_feisty_furniture",
+         "range": 4.0,
+         "name_key": "FEISTY_FURNITURE_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "4419393874676815",
+          "1497983993938491"
+         ],
+         "unit_health": "2087"
+        },
+        {
+         "content_id": "8079429168333959",
+         "icon": "icons_units_zurg/portrait_zurg",
+         "range": 4.0,
+         "name_key": "EMPEROR_ZURG_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "2489250258015164",
+          "4345897184857488",
+          "4324500008569381"
+         ],
+         "unit_health": "6339"
+        }
+       ],
+       "enemy_stats": {
+        "level": "47",
+        "rarity": "5",
+        "gear_tier": "5"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "3058145459290044",
+         "count_min": 950,
+         "count_max": 950,
+         "guaranteed": true
+        },
+        {
+         "item_id": "3058145459290044",
+         "count_min": 475,
+         "count_max": 475,
+         "loot_tag": "FOR_LOSS",
+         "guaranteed": true
+        }
+       ],
+       "override_boss_index": 6
+      },
+      "id": "16"
+     },
+     {
+      "battle_data": {
+       "possible_rewards": [
+        {
+         "item_id": "3058145459290044",
+         "count": "1000"
+        },
+        {
+         "item_id": "3058145459290044",
+         "count": "500",
+         "loot_tag": "FOR_LOSS"
+        }
+       ],
+       "possible_enemies": [
+        {
+         "content_id": "6392733132534201",
+         "icon": "icons_units_royal_guard/portrait_royal_guard",
+         "range": 1.0,
+         "name_key": "ROYAL_GUARD_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4419393874676815",
+          "3545371783249927"
+         ],
+         "unit_health": "3590"
+        },
+        {
+         "content_id": "1570366594174479",
+         "icon": "icons_units_card_soldier/portrait_cardsoldier",
+         "range": 1.0,
+         "name_key": "CARD_SOLDIER_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "8842003313865136",
+          "280516569512001"
+         ],
+         "unit_health": "3590"
+        },
+        {
+         "content_id": "5710225926985727",
+         "icon": "icons_units_robin_hood/portrait_robin_hood",
+         "range": 4.0,
+         "name_key": "ROBIN_HOOD_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4419393874676815",
+          "4934108704849804",
+          "5059163436552255"
+         ],
+         "unit_health": "6429"
+        },
+        {
+         "content_id": "50",
+         "icon": "icons_units_shere_khan/portrait_shere_khan",
+         "name_key": "SHEREKHAN_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "4650364419227244",
+          "3527948419375253"
+         ],
+         "unit_health": "6429"
+        },
+        {
+         "content_id": "5410579083337168",
+         "icon": "icons_units_madam_mim/portrait_madam_mim",
+         "range": 4.0,
+         "name_key": "MADAM_MIM_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "8842003313865136",
+          "613124871864650"
+         ],
+         "unit_health": "6429"
+        },
+        {
+         "content_id": "8739420697837426",
+         "icon": "icons_units_feisty_furniture/portrait_feisty_furniture",
+         "range": 4.0,
+         "name_key": "FEISTY_FURNITURE_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "4419393874676815",
+          "1497983993938491"
+         ],
+         "unit_health": "2117"
+        }
+       ],
+       "enemy_stats": {
+        "level": "48",
+        "rarity": "5",
+        "gear_tier": "5"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "3058145459290044",
+         "count_min": 1000,
+         "count_max": 1000,
+         "guaranteed": true
+        },
+        {
+         "item_id": "3058145459290044",
+         "count_min": 500,
+         "count_max": 500,
+         "loot_tag": "FOR_LOSS",
+         "guaranteed": true
+        }
+       ]
+      },
+      "id": "17"
+     },
+     {
+      "battle_data": {
+       "possible_rewards": [
+        {
+         "item_id": "3058145459290044",
+         "count": "1050"
+        },
+        {
+         "item_id": "3058145459290044",
+         "count": "525",
+         "loot_tag": "FOR_LOSS"
+        }
+       ],
+       "possible_enemies": [
+        {
+         "content_id": "150",
+         "icon": "icons_units_jack_sparrow/portrait_jack_sparrow",
+         "range": 1.0,
+         "name_key": "JACK_SPARROW_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "5308420037568950",
+          "8576325908096714",
+          "1515770659265273"
+         ],
+         "unit_health": "6520"
+        },
+        {
+         "content_id": "8739420697837426",
+         "icon": "icons_units_feisty_furniture/portrait_feisty_furniture",
+         "range": 4.0,
+         "name_key": "FEISTY_FURNITURE_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "4419393874676815",
+          "1497983993938491"
+         ],
+         "unit_health": "2147"
+        },
+        {
+         "content_id": "1570366594174479",
+         "icon": "icons_units_card_soldier/portrait_cardsoldier",
+         "range": 1.0,
+         "name_key": "CARD_SOLDIER_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "8842003313865136",
+          "280516569512001"
+         ],
+         "unit_health": "3649"
+        },
+        {
+         "content_id": "1736798772274835",
+         "icon": "icons_units_aladdin/portrait_aladdin",
+         "range": 1.0,
+         "name_key": "ALADDIN_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4419393874676815",
+          "6950932538148189",
+          "5059163436552255"
+         ],
+         "unit_health": "6520"
+        },
+        {
+         "content_id": "8079429168333959",
+         "icon": "icons_units_zurg/portrait_zurg",
+         "range": 4.0,
+         "name_key": "EMPEROR_ZURG_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "2489250258015164",
+          "4345897184857488",
+          "4324500008569381"
+         ],
+         "unit_health": "6520"
+        },
+        {
+         "content_id": "7214551069584365",
+         "icon": "icons_units_yokai/portrait_yokai",
+         "range": 3.0,
+         "name_key": "YOKAI_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "2489250258015164",
+          "4742156979219619",
+          "5800061760299363",
+          "4324500008569381"
+         ],
+         "unit_health": "6520"
+        },
+        {
+         "content_id": "6392733132534201",
+         "icon": "icons_units_royal_guard/portrait_royal_guard",
+         "range": 1.0,
+         "name_key": "ROYAL_GUARD_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4419393874676815",
+          "3545371783249927"
+         ],
+         "unit_health": "3649"
+        }
+       ],
+       "enemy_stats": {
+        "level": "49",
+        "rarity": "5",
+        "gear_tier": "5"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "3058145459290044",
+         "count_min": 1050,
+         "count_max": 1050,
+         "guaranteed": true
+        },
+        {
+         "item_id": "3058145459290044",
+         "count_min": 525,
+         "count_max": 525,
+         "loot_tag": "FOR_LOSS",
+         "guaranteed": true
+        }
+       ],
+       "override_boss_index": 3
+      },
+      "id": "18"
+     },
+     {
+      "battle_data": {
+       "possible_rewards": [
+        {
+         "item_id": "3058145459290044",
+         "count": "1100"
+        },
+        {
+         "item_id": "3058145459290044",
+         "count": "550",
+         "loot_tag": "FOR_LOSS"
+        }
+       ],
+       "possible_enemies": [
+        {
+         "content_id": "6392733132534201",
+         "icon": "icons_units_royal_guard/portrait_royal_guard",
+         "range": 1.0,
+         "name_key": "ROYAL_GUARD_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4419393874676815",
+          "3545371783249927"
+         ],
+         "unit_health": "5570"
+        },
+        {
+         "content_id": "124",
+         "icon": "icons_units_oogie/portrait_oogie",
+         "range": 1.0,
+         "name_key": "OOGIEBOOGIE_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "185013331968872",
+          "8842003313865136",
+          "1465066247313418"
+         ],
+         "unit_health": "15969"
+        },
+        {
+         "content_id": "4505487594415447",
+         "icon": "icons_units_jafar/portrait_jafar",
+         "range": 4.0,
+         "name_key": "JAFAR_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "4419393874676815",
+          "6950932538148189",
+          "2136312807087658"
+         ],
+         "unit_health": "10169"
+        },
+        {
+         "content_id": "5410579083337168",
+         "icon": "icons_units_madam_mim/portrait_madam_mim",
+         "range": 4.0,
+         "name_key": "MADAM_MIM_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "8842003313865136",
+          "613124871864650"
+         ],
+         "unit_health": "9929"
+        },
+        {
+         "content_id": "8739420697837426",
+         "icon": "icons_units_feisty_furniture/portrait_feisty_furniture",
+         "range": 4.0,
+         "name_key": "FEISTY_FURNITURE_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "4419393874676815",
+          "1497983993938491"
+         ],
+         "unit_health": "3272"
+        },
+        {
+         "content_id": "8079429168333959",
+         "icon": "icons_units_zurg/portrait_zurg",
+         "range": 4.0,
+         "name_key": "EMPEROR_ZURG_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "2489250258015164",
+          "4345897184857488",
+          "4324500008569381"
+         ],
+         "unit_health": "9929"
+        },
+        {
+         "content_id": "1570366594174479",
+         "icon": "icons_units_card_soldier/portrait_cardsoldier",
+         "range": 1.0,
+         "name_key": "CARD_SOLDIER_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "8842003313865136",
+          "280516569512001"
+         ],
+         "unit_health": "5570"
+        },
+        {
+         "content_id": "508341540759214",
+         "icon": "icons_units_merida/portrait_merida",
+         "range": 4.0,
+         "name_key": "MERIDA_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4650364419227244",
+          "5968787601315360",
+          "5820897550663740"
+         ],
+         "unit_health": "9929"
+        }
+       ],
+       "enemy_stats": {
+        "level": "50",
+        "rarity": "6",
+        "gear_tier": "6"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "3058145459290044",
+         "count_min": 1100,
+         "count_max": 1100,
+         "guaranteed": true
+        },
+        {
+         "item_id": "3058145459290044",
+         "count_min": 550,
+         "count_max": 550,
+         "loot_tag": "FOR_LOSS",
+         "guaranteed": true
+        }
+       ],
+       "override_boss_index": 3
+      },
+      "node_type": "2",
+      "id": "19"
+     }
+    ],
+    "map_prefab": "cmp_dungeon/dungeon_map_05"
+   }
+  ],
+  "expire_timestamp": "1631264400",
+  "end_timestamp": "1631271600",
+  "reward_groups": [
+   {
+    "rewards": [
+     {
+      "item_id": "3058145459290044",
+      "count": "100"
+     }
+    ],
+    "reward_ranges": [
+     {
+      "item_id": "3058145459290044",
+      "count_min": 100,
+      "count_max": 100,
+      "guaranteed": true
+     }
+    ]
+   },
+   {
+    "start_node_id": "1",
+    "end_node_id": "1",
+    "rewards": [
+     {
+      "item_id": "3058145459290044",
+      "count": "200"
+     }
+    ],
+    "reward_ranges": [
+     {
+      "item_id": "3058145459290044",
+      "count_min": 200,
+      "count_max": 200,
+      "guaranteed": true
+     }
+    ]
+   },
+   {
+    "start_node_id": "2",
+    "end_node_id": "2",
+    "rewards": [
+     {
+      "item_id": "3058145459290044",
+      "count": "300"
+     }
+    ],
+    "reward_ranges": [
+     {
+      "item_id": "3058145459290044",
+      "count_min": 300,
+      "count_max": 300,
+      "guaranteed": true
+     }
+    ]
+   },
+   {
+    "start_node_id": "3",
+    "end_node_id": "3",
+    "rewards": [
+     {
+      "item_id": "3058145459290044",
+      "count": "400"
+     },
+     {
+      "item_id": "8577946658178907",
+      "count": "2"
+     }
+    ],
+    "reward_ranges": [
+     {
+      "item_id": "3058145459290044",
+      "count_min": 400,
+      "count_max": 400,
+      "guaranteed": true
+     },
+     {
+      "item_id": "8577946658178907",
+      "count_min": 2,
+      "count_max": 2,
+      "guaranteed": true
+     }
+    ]
+   },
+   {
+    "start_node_id": "4",
+    "end_node_id": "4",
+    "rewards": [
+     {
+      "item_id": "3058145459290044",
+      "count": "500"
+     },
+     {
+      "item_id": "8577946658178907",
+      "count": "2"
+     }
+    ],
+    "reward_ranges": [
+     {
+      "item_id": "3058145459290044",
+      "count_min": 500,
+      "count_max": 500,
+      "guaranteed": true
+     },
+     {
+      "item_id": "8577946658178907",
+      "count_min": 2,
+      "count_max": 2,
+      "guaranteed": true
+     }
+    ]
+   },
+   {
+    "start_node_id": "5",
+    "end_node_id": "5",
+    "rewards": [
+     {
+      "item_id": "3058145459290044",
+      "count": "600"
+     },
+     {
+      "item_id": "8577946658178907",
+      "count": "2"
+     }
+    ],
+    "reward_ranges": [
+     {
+      "item_id": "3058145459290044",
+      "count_min": 600,
+      "count_max": 600,
+      "guaranteed": true
+     },
+     {
+      "item_id": "8577946658178907",
+      "count_min": 2,
+      "count_max": 2,
+      "guaranteed": true
+     }
+    ]
+   },
+   {
+    "start_node_id": "6",
+    "end_node_id": "6",
+    "rewards": [
+     {
+      "item_id": "3058145459290044",
+      "count": "700"
+     },
+     {
+      "item_id": "8577946658178907",
+      "count": "2"
+     }
+    ],
+    "reward_ranges": [
+     {
+      "item_id": "3058145459290044",
+      "count_min": 700,
+      "count_max": 700,
+      "guaranteed": true
+     },
+     {
+      "item_id": "8577946658178907",
+      "count_min": 2,
+      "count_max": 2,
+      "guaranteed": true
+     }
+    ]
+   },
+   {
+    "start_node_id": "7",
+    "end_node_id": "7",
+    "rewards": [
+     {
+      "item_id": "3058145459290044",
+      "count": "800"
+     },
+     {
+      "item_id": "8577946658178907",
+      "count": "2"
+     },
+     {
+      "item_id": "8301139718387521",
+      "count": "2"
+     }
+    ],
+    "reward_ranges": [
+     {
+      "item_id": "3058145459290044",
+      "count_min": 800,
+      "count_max": 800,
+      "guaranteed": true
+     },
+     {
+      "item_id": "8577946658178907",
+      "count_min": 2,
+      "count_max": 2,
+      "guaranteed": true
+     },
+     {
+      "item_id": "8301139718387521",
+      "count_min": 2,
+      "count_max": 2,
+      "guaranteed": true
+     }
+    ]
+   },
+   {
+    "start_node_id": "8",
+    "end_node_id": "8",
+    "rewards": [
+     {
+      "item_id": "3058145459290044",
+      "count": "900"
+     },
+     {
+      "item_id": "8577946658178907",
+      "count": "2"
+     },
+     {
+      "item_id": "8301139718387521",
+      "count": "2"
+     }
+    ],
+    "reward_ranges": [
+     {
+      "item_id": "3058145459290044",
+      "count_min": 900,
+      "count_max": 900,
+      "guaranteed": true
+     },
+     {
+      "item_id": "8577946658178907",
+      "count_min": 2,
+      "count_max": 2,
+      "guaranteed": true
+     },
+     {
+      "item_id": "8301139718387521",
+      "count_min": 2,
+      "count_max": 2,
+      "guaranteed": true
+     }
+    ]
+   },
+   {
+    "start_node_id": "9",
+    "end_node_id": "9",
+    "rewards": [
+     {
+      "item_id": "3058145459290044",
+      "count": "1000"
+     },
+     {
+      "item_id": "8577946658178907",
+      "count": "2"
+     },
+     {
+      "item_id": "8301139718387521",
+      "count": "2"
+     }
+    ],
+    "reward_ranges": [
+     {
+      "item_id": "3058145459290044",
+      "count_min": 1000,
+      "count_max": 1000,
+      "guaranteed": true
+     },
+     {
+      "item_id": "8577946658178907",
+      "count_min": 2,
+      "count_max": 2,
+      "guaranteed": true
+     },
+     {
+      "item_id": "8301139718387521",
+      "count_min": 2,
+      "count_max": 2,
+      "guaranteed": true
+     }
+    ]
+   },
+   {
+    "start_node_id": "10",
+    "end_node_id": "10",
+    "rewards": [
+     {
+      "item_id": "3058145459290044",
+      "count": "1100"
+     },
+     {
+      "item_id": "8577946658178907",
+      "count": "2"
+     },
+     {
+      "item_id": "8301139718387521",
+      "count": "2"
+     }
+    ],
+    "reward_ranges": [
+     {
+      "item_id": "3058145459290044",
+      "count_min": 1100,
+      "count_max": 1100,
+      "guaranteed": true
+     },
+     {
+      "item_id": "8577946658178907",
+      "count_min": 2,
+      "count_max": 2,
+      "guaranteed": true
+     },
+     {
+      "item_id": "8301139718387521",
+      "count_min": 2,
+      "count_max": 2,
+      "guaranteed": true
+     }
+    ]
+   },
+   {
+    "start_node_id": "11",
+    "end_node_id": "11",
+    "rewards": [
+     {
+      "item_id": "3058145459290044",
+      "count": "1200"
+     },
+     {
+      "item_id": "8577946658178907",
+      "count": "5"
+     },
+     {
+      "item_id": "8301139718387521",
+      "count": "2"
+     }
+    ],
+    "reward_ranges": [
+     {
+      "item_id": "3058145459290044",
+      "count_min": 1200,
+      "count_max": 1200,
+      "guaranteed": true
+     },
+     {
+      "item_id": "8577946658178907",
+      "count_min": 5,
+      "count_max": 5,
+      "guaranteed": true
+     },
+     {
+      "item_id": "8301139718387521",
+      "count_min": 2,
+      "count_max": 2,
+      "guaranteed": true
+     }
+    ]
+   },
+   {
+    "start_node_id": "12",
+    "end_node_id": "12",
+    "rewards": [
+     {
+      "item_id": "3058145459290044",
+      "count": "1300"
+     },
+     {
+      "item_id": "8577946658178907",
+      "count": "5"
+     },
+     {
+      "item_id": "8301139718387521",
+      "count": "2"
+     }
+    ],
+    "reward_ranges": [
+     {
+      "item_id": "3058145459290044",
+      "count_min": 1300,
+      "count_max": 1300,
+      "guaranteed": true
+     },
+     {
+      "item_id": "8577946658178907",
+      "count_min": 5,
+      "count_max": 5,
+      "guaranteed": true
+     },
+     {
+      "item_id": "8301139718387521",
+      "count_min": 2,
+      "count_max": 2,
+      "guaranteed": true
+     }
+    ]
+   },
+   {
+    "start_node_id": "13",
+    "end_node_id": "13",
+    "rewards": [
+     {
+      "item_id": "3058145459290044",
+      "count": "1400"
+     },
+     {
+      "item_id": "8577946658178907",
+      "count": "5"
+     },
+     {
+      "item_id": "8301139718387521",
+      "count": "2"
+     }
+    ],
+    "reward_ranges": [
+     {
+      "item_id": "3058145459290044",
+      "count_min": 1400,
+      "count_max": 1400,
+      "guaranteed": true
+     },
+     {
+      "item_id": "8577946658178907",
+      "count_min": 5,
+      "count_max": 5,
+      "guaranteed": true
+     },
+     {
+      "item_id": "8301139718387521",
+      "count_min": 2,
+      "count_max": 2,
+      "guaranteed": true
+     }
+    ]
+   },
+   {
+    "start_node_id": "14",
+    "end_node_id": "14",
+    "rewards": [
+     {
+      "item_id": "3058145459290044",
+      "count": "1500"
+     },
+     {
+      "item_id": "8577946658178907",
+      "count": "5"
+     },
+     {
+      "item_id": "8301139718387521",
+      "count": "2"
+     }
+    ],
+    "reward_ranges": [
+     {
+      "item_id": "3058145459290044",
+      "count_min": 1500,
+      "count_max": 1500,
+      "guaranteed": true
+     },
+     {
+      "item_id": "8577946658178907",
+      "count_min": 5,
+      "count_max": 5,
+      "guaranteed": true
+     },
+     {
+      "item_id": "8301139718387521",
+      "count_min": 2,
+      "count_max": 2,
+      "guaranteed": true
+     }
+    ]
+   },
+   {
+    "start_node_id": "15",
+    "end_node_id": "15",
+    "rewards": [
+     {
+      "item_id": "3058145459290044",
+      "count": "1600"
+     },
+     {
+      "item_id": "8577946658178907",
+      "count": "5"
+     },
+     {
+      "item_id": "8301139718387521",
+      "count": "5"
+     }
+    ],
+    "reward_ranges": [
+     {
+      "item_id": "3058145459290044",
+      "count_min": 1600,
+      "count_max": 1600,
+      "guaranteed": true
+     },
+     {
+      "item_id": "8577946658178907",
+      "count_min": 5,
+      "count_max": 5,
+      "guaranteed": true
+     },
+     {
+      "item_id": "8301139718387521",
+      "count_min": 5,
+      "count_max": 5,
+      "guaranteed": true
+     }
+    ]
+   },
+   {
+    "start_node_id": "16",
+    "end_node_id": "16",
+    "rewards": [
+     {
+      "item_id": "3058145459290044",
+      "count": "1700"
+     },
+     {
+      "item_id": "8577946658178907",
+      "count": "5"
+     },
+     {
+      "item_id": "8301139718387521",
+      "count": "5"
+     }
+    ],
+    "reward_ranges": [
+     {
+      "item_id": "3058145459290044",
+      "count_min": 1700,
+      "count_max": 1700,
+      "guaranteed": true
+     },
+     {
+      "item_id": "8577946658178907",
+      "count_min": 5,
+      "count_max": 5,
+      "guaranteed": true
+     },
+     {
+      "item_id": "8301139718387521",
+      "count_min": 5,
+      "count_max": 5,
+      "guaranteed": true
+     }
+    ]
+   },
+   {
+    "start_node_id": "17",
+    "end_node_id": "17",
+    "rewards": [
+     {
+      "item_id": "3058145459290044",
+      "count": "1800"
+     },
+     {
+      "item_id": "8577946658178907",
+      "count": "5"
+     },
+     {
+      "item_id": "8301139718387521",
+      "count": "5"
+     }
+    ],
+    "reward_ranges": [
+     {
+      "item_id": "3058145459290044",
+      "count_min": 1800,
+      "count_max": 1800,
+      "guaranteed": true
+     },
+     {
+      "item_id": "8577946658178907",
+      "count_min": 5,
+      "count_max": 5,
+      "guaranteed": true
+     },
+     {
+      "item_id": "8301139718387521",
+      "count_min": 5,
+      "count_max": 5,
+      "guaranteed": true
+     }
+    ]
+   },
+   {
+    "start_node_id": "18",
+    "end_node_id": "18",
+    "rewards": [
+     {
+      "item_id": "3058145459290044",
+      "count": "1900"
+     },
+     {
+      "item_id": "8577946658178907",
+      "count": "5"
+     },
+     {
+      "item_id": "8301139718387521",
+      "count": "5"
+     }
+    ],
+    "reward_ranges": [
+     {
+      "item_id": "3058145459290044",
+      "count_min": 1900,
+      "count_max": 1900,
+      "guaranteed": true
+     },
+     {
+      "item_id": "8577946658178907",
+      "count_min": 5,
+      "count_max": 5,
+      "guaranteed": true
+     },
+     {
+      "item_id": "8301139718387521",
+      "count_min": 5,
+      "count_max": 5,
+      "guaranteed": true
+     }
+    ]
+   },
+   {
+    "start_node_id": "19",
+    "end_node_id": "19",
+    "rewards": [
+     {
+      "item_id": "3058145459290044",
+      "count": "2000"
+     },
+     {
+      "item_id": "8577946658178907",
+      "count": "10"
+     },
+     {
+      "item_id": "8301139718387521",
+      "count": "10"
+     }
+    ],
+    "reward_ranges": [
+     {
+      "item_id": "3058145459290044",
+      "count_min": 2000,
+      "count_max": 2000,
+      "guaranteed": true
+     },
+     {
+      "item_id": "8577946658178907",
+      "count_min": 10,
+      "count_max": 10,
+      "guaranteed": true
+     },
+     {
+      "item_id": "8301139718387521",
+      "count_min": 10,
+      "count_max": 10,
+      "guaranteed": true
+     }
+    ]
+   }
+  ]
+ }
+}

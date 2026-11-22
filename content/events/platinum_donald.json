@@ -1,0 +1,760 @@
+{
+ "event_group": {
+  "contentId": "5612093870412230",
+  "name": "EVENT_202401_PLATINUM_EVENT_META_NAME",
+  "description": "EVENT_202402_PLATINUM_EVENT_META_DESC",
+  "image": "icons_scheduled_events_event_platinum/platinum_donald_event_meta2",
+  "sortOrder": "35",
+  "showcaseItems": [
+   "3757523732488835",
+   "3928145984903330",
+   "1969242275666598"
+  ],
+  "marqueeImage": "icons_scheduled_events_event_platinum/Event_portal_platinum_donald2",
+  "hasPlayerActivated": true,
+  "frameColor": {
+   "a": 1.0
+  },
+  "panelColor": {
+   "a": 1.0
+  },
+  "portalName": "EVENT_202401_PLATINUM_EVENT_PORTAL_NAME",
+  "portalDesc": "EVENT_202402_PLATINUM_EVENT_PORTAL_DESC"
+ },
+ "rotation": {
+  "lane": "story",
+  "after": 5612093870412220
+ },
+ "mail": {
+  "preview": [
+   "INBOX_EVENT_202402_PLATINUM_EVENT_PREVIEW_SUBJECT",
+   "INBOX_EVENT_202402_PLATINUM_EVENT_PREVIEW_BODY"
+  ],
+  "start": [
+   "INBOX_EVENT_202402_PLATINUM_EVENT_ACTIVE_SUBJECT",
+   "INBOX_EVENT_202402_PLATINUM_EVENT_ACTIVE_BODY"
+  ],
+  "last_chance": [
+   "INBOX_EVENT_202402_PLATINUM_EVENT_LASTCHANCE_SUBJECT",
+   "INBOX_EVENT_202402_PLATINUM_EVENT_LASTCHANCE_BODY"
+  ]
+ },
+ "events": [
+  {
+   "key_prefix": "EVENT_202401_PLATINUM_EVENT_A",
+   "tier_keys": {
+    "name": "{prefix}_L{i}_NAME",
+    "description": "{prefix}_AURA_DESC",
+    "recommended": "{prefix}_L{i}_RECOMMENDED"
+   },
+   "event": {
+    "contentId": "5612093870412231",
+    "name": "EVENT_202401_PLATINUM_EVENT_A_NAME",
+    "description": "EVENT_202401_PLATINUM_EVENT_PORTAL_DESC",
+    "image": "icons_scheduled_events_event_platinum_donald/platinum_donald_cover",
+    "sortOrder": "100",
+    "battleLimit": "3",
+    "battleLimitRefreshCost": [
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     }
+    ],
+    "marqueeImage": "icons_scheduled_events_event_platinum_donald/Event_portal_platinum_donald",
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "allowInstantBattle": true,
+    "showcaseItems": [
+     "1969242275666598",
+     "13",
+     "31"
+    ],
+    "eventGroupId": "5612093870412230"
+   },
+   "roster": {
+    "bosses": [
+     4979608122848331
+    ],
+    "companions": [
+     8218042807117239
+    ],
+    "minions": [
+     3026417329322044,
+     5411986143930567
+    ]
+   },
+   "mutators": [
+    6976551028950197
+   ],
+   "battle_environment": "env_disneyland/env_disneyland",
+   "tiers": [
+    {
+     "restriction": 4939744720616867,
+     "enemy_stats": {
+      "rarity": 3,
+      "gear_tier": 3
+     },
+     "persistent": {
+      "id": 1969242275666598,
+      "min": 1,
+      "max": 2,
+      "goal": 20
+     },
+     "rewards": [
+      {
+       "id": 1969242275666598,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 25,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 20000,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 10000
+      }
+     ]
+    },
+    {
+     "restriction": 3431326013432723,
+     "enemy_stats": {
+      "rarity": 4,
+      "gear_tier": 3
+     },
+     "persistent": {
+      "id": 1969242275666598,
+      "min": 1,
+      "max": 2,
+      "goal": 20
+     },
+     "rewards": [
+      {
+       "id": 1969242275666598,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 25,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 30000,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 10000
+      }
+     ]
+    },
+    {
+     "restriction": 5099590333561607,
+     "enemy_stats": {
+      "rarity": 4,
+      "gear_tier": 4
+     },
+     "persistent": {
+      "id": 1969242275666598,
+      "min": 1,
+      "max": 2,
+      "goal": 20
+     },
+     "rewards": [
+      {
+       "id": 1969242275666598,
+       "count": 10,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 25,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 40000,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 12000
+      }
+     ]
+    },
+    {
+     "restriction": 1327908223098810,
+     "enemy_stats": {
+      "rarity": 5,
+      "gear_tier": 5
+     },
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 0,
+      "without": [
+       13
+      ]
+     },
+     "persistent": {
+      "id": 1969242275666598,
+      "min": 1,
+      "max": 2,
+      "goal": 30
+     },
+     "rewards": [
+      {
+       "id": 1969242275666598,
+       "count": 10,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 50,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 50000,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 14000
+      }
+     ]
+    },
+    {
+     "restriction": 6992591398810922,
+     "enemy_stats": {
+      "rarity": 6,
+      "gear_tier": 6
+     },
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 1,
+      "without": [
+       13
+      ]
+     },
+     "persistent": {
+      "id": 1969242275666598,
+      "min": 1,
+      "max": 2,
+      "goal": 30
+     },
+     "rewards": [
+      {
+       "id": 1969242275666598,
+       "count": 10,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 50,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 60000,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 16000
+      }
+     ]
+    },
+    {
+     "restriction": 2724731018695645,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 7
+     },
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 3,
+      "without": [
+       13
+      ]
+     },
+     "persistent": {
+      "id": 1969242275666598,
+      "min": 1,
+      "max": 2,
+      "goal": 35
+     },
+     "rewards": [
+      {
+       "id": 1969242275666598,
+       "count": 15,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 75,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 70000,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 18000
+      }
+     ]
+    },
+    {
+     "restriction": 1091214982095892,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 8
+     },
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 4,
+      "without": [
+       13
+      ]
+     },
+     "persistent": {
+      "id": 1969242275666598,
+      "min": 1,
+      "max": 2,
+      "goal": 35
+     },
+     "rewards": [
+      {
+       "id": 1969242275666598,
+       "count": 15,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 75,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 80000,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 20000
+      }
+     ]
+    },
+    {
+     "restriction": 6249165874458953,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 8
+     },
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 4,
+      "without": [
+       13
+      ]
+     },
+     "persistent": {
+      "id": 1969242275666598,
+      "min": 1,
+      "max": 2,
+      "goal": 60
+     },
+     "battle_environment": "env_the_pirate_ship/env_the_pirate_ship",
+     "rewards": [
+      {
+       "id": 1969242275666598,
+       "count": 15,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 100,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 90000,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 20000
+      }
+     ]
+    },
+    {
+     "restriction": 5320473501289563,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 9
+     },
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 4,
+      "without": [
+       13
+      ]
+     },
+     "persistent": {
+      "id": 1969242275666598,
+      "min": 1,
+      "max": 2,
+      "goal": 70
+     },
+     "rewards": [
+      {
+       "id": 8328540194463684,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 1969242275666598,
+       "count": 15,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 100,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 100000,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 20000
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "waves": [
+  {
+   "event": 5612093870412231,
+   "tier": 0,
+   "name_key": "EVENT_202401_PLATINUM_EVENT_A_L0_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 4979608122848331,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 3026417329322044,
+       "count": 2
+      },
+      {
+       "id": 5411986143930567,
+       "count": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412231,
+   "tier": 1,
+   "name_key": "EVENT_202401_PLATINUM_EVENT_A_L1_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 4979608122848331,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 3026417329322044,
+       "count": 2
+      },
+      {
+       "id": 5411986143930567,
+       "count": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412231,
+   "tier": 2,
+   "name_key": "EVENT_202401_PLATINUM_EVENT_A_L2_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 4979608122848331,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 3026417329322044,
+       "count": 2
+      },
+      {
+       "id": 5411986143930567,
+       "count": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412231,
+   "tier": 3,
+   "name_key": "EVENT_202401_PLATINUM_EVENT_A_L3_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 4979608122848331,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 3026417329322044,
+       "count": 3
+      },
+      {
+       "id": 8218042807117239,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412231,
+   "tier": 4,
+   "name_key": "EVENT_202401_PLATINUM_EVENT_A_L4_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 4979608122848331,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 3026417329322044,
+       "count": 3
+      },
+      {
+       "id": 8218042807117239,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412231,
+   "tier": 5,
+   "name_key": "EVENT_202401_PLATINUM_EVENT_A_L5_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 8348586603157706,
+       "count": 3
+      },
+      {
+       "id": 108161813674962,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 4979608122848331,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 3026417329322044,
+       "count": 3
+      },
+      {
+       "id": 8218042807117239,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412231,
+   "tier": 6,
+   "name_key": "EVENT_202401_PLATINUM_EVENT_A_L6_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 3026417329322044,
+       "count": 3
+      },
+      {
+       "id": 5411986143930567,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 4979608122848331,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 3026417329322044,
+       "count": 2
+      },
+      {
+       "id": 5411986143930567,
+       "count": 2
+      },
+      {
+       "id": 8218042807117239,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412231,
+   "tier": 7,
+   "name_key": "EVENT_202401_PLATINUM_EVENT_A_L7_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 3026417329322044,
+       "count": 3
+      },
+      {
+       "id": 5411986143930567,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 4979608122848331,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 3026417329322044,
+       "count": 2
+      },
+      {
+       "id": 5411986143930567,
+       "count": 2
+      },
+      {
+       "id": 8218042807117239,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412231,
+   "tier": 8,
+   "name_key": "EVENT_202401_PLATINUM_EVENT_A_L8_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 3026417329322044,
+       "count": 3
+      },
+      {
+       "id": 5411986143930567,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 4979608122848331,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 3026417329322044,
+       "count": 2
+      },
+      {
+       "id": 5411986143930567,
+       "count": 2
+      },
+      {
+       "id": 8218042807117239,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

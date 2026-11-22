@@ -1,0 +1,391 @@
+{
+ "layout": {
+  "floor_num": 2,
+  "rooms": [
+   {
+    "x": -4,
+    "y": 1,
+    "type": "BATTLE",
+    "visibility": "LOCKED"
+   },
+   {
+    "x": -4,
+    "y": 2,
+    "type": "DEPLOY",
+    "visibility": "LOCKED",
+    "index": 1
+   },
+   {
+    "x": -3,
+    "y": -3,
+    "type": "EMPTY",
+    "visibility": "LOCKED",
+    "index": 2
+   },
+   {
+    "x": -3,
+    "y": -2,
+    "type": "BATTLE",
+    "visibility": "LOCKED",
+    "index": 3
+   },
+   {
+    "x": -3,
+    "y": -1,
+    "type": "BATTLE",
+    "visibility": "LOCKED",
+    "index": 4
+   },
+   {
+    "x": -3,
+    "type": "BATTLE",
+    "visibility": "LOCKED",
+    "index": 5
+   },
+   {
+    "x": -3,
+    "y": 1,
+    "type": "BATTLE",
+    "visibility": "UNLOCKED",
+    "index": 6
+   },
+   {
+    "x": -3,
+    "y": 2,
+    "type": "BATTLE",
+    "visibility": "LOCKED",
+    "index": 7
+   },
+   {
+    "x": -3,
+    "y": 3,
+    "type": "EMPTY",
+    "visibility": "LOCKED",
+    "index": 8
+   },
+   {
+    "x": -3,
+    "y": 4,
+    "type": "DEPLOY",
+    "visibility": "LOCKED",
+    "index": 9
+   },
+   {
+    "x": -3,
+    "y": 5,
+    "type": "BATTLE",
+    "visibility": "LOCKED",
+    "index": 10
+   },
+   {
+    "x": -2,
+    "y": -3,
+    "type": "DEPLOY",
+    "visibility": "LOCKED",
+    "index": 11
+   },
+   {
+    "x": -2,
+    "y": 1,
+    "type": "BATTLE",
+    "visibility": "COMPLETED",
+    "index": 12
+   },
+   {
+    "x": -2,
+    "y": 5,
+    "type": "EMPTY",
+    "visibility": "LOCKED",
+    "index": 13
+   },
+   {
+    "x": -1,
+    "y": 1,
+    "type": "BATTLE",
+    "visibility": "COMPLETED",
+    "index": 14
+   },
+   {
+    "x": -1,
+    "y": 5,
+    "type": "BATTLE",
+    "visibility": "LOCKED",
+    "index": 15
+   },
+   {
+    "type": "EMPTY",
+    "visibility": "COMPLETED",
+    "index": 16
+   },
+   {
+    "y": 1,
+    "type": "BATTLE",
+    "visibility": "COMPLETED",
+    "index": 17
+   },
+   {
+    "y": 5,
+    "type": "EMPTY",
+    "visibility": "LOCKED",
+    "index": 18
+   },
+   {
+    "x": 1,
+    "type": "BATTLE",
+    "visibility": "COMPLETED",
+    "index": 19
+   },
+   {
+    "x": 1,
+    "y": 1,
+    "type": "EMPTY",
+    "visibility": "COMPLETED",
+    "index": 20
+   },
+   {
+    "x": 1,
+    "y": 5,
+    "type": "BATTLE",
+    "visibility": "UNLOCKED",
+    "index": 21
+   },
+   {
+    "x": 2,
+    "type": "EMPTY",
+    "visibility": "COMPLETED",
+    "index": 22
+   },
+   {
+    "x": 2,
+    "y": 1,
+    "type": "EMPTY",
+    "visibility": "COMPLETED",
+    "index": 23
+   },
+   {
+    "x": 2,
+    "y": 5,
+    "type": "BATTLE",
+    "visibility": "COMPLETED",
+    "index": 24
+   },
+   {
+    "x": 3,
+    "type": "DEPLOY",
+    "visibility": "COMPLETED",
+    "index": 25
+   },
+   {
+    "x": 3,
+    "y": 1,
+    "type": "BATTLE",
+    "visibility": "COMPLETED",
+    "index": 26
+   },
+   {
+    "x": 3,
+    "y": 5,
+    "type": "EMPTY",
+    "visibility": "COMPLETED",
+    "index": 27
+   },
+   {
+    "x": 4,
+    "type": "BATTLE",
+    "visibility": "UNLOCKED",
+    "index": 28
+   },
+   {
+    "x": 4,
+    "y": 1,
+    "type": "BATTLE",
+    "visibility": "COMPLETED",
+    "index": 29
+   },
+   {
+    "x": 4,
+    "y": 2,
+    "type": "EMPTY",
+    "visibility": "COMPLETED",
+    "index": 30
+   },
+   {
+    "x": 4,
+    "y": 3,
+    "type": "BATTLE",
+    "visibility": "COMPLETED",
+    "index": 31
+   },
+   {
+    "x": 4,
+    "y": 4,
+    "type": "BATTLE",
+    "visibility": "COMPLETED",
+    "index": 32
+   },
+   {
+    "x": 4,
+    "y": 5,
+    "type": "CHEST",
+    "visibility": "COMPLETED",
+    "index": 33
+   },
+   {
+    "x": 5,
+    "type": "BOSS",
+    "visibility": "COMPLETED",
+    "index": 34
+   },
+   {
+    "x": 5,
+    "y": 1,
+    "type": "EMPTY",
+    "visibility": "COMPLETED",
+    "index": 35
+   },
+   {
+    "x": 5,
+    "y": 2,
+    "type": "BATTLE",
+    "visibility": "COMPLETED",
+    "index": 36
+   },
+   {
+    "x": 5,
+    "y": 3,
+    "type": "BATTLE",
+    "visibility": "UNLOCKED",
+    "index": 37
+   },
+   {
+    "x": 5,
+    "y": 4,
+    "type": "BATTLE",
+    "visibility": "UNLOCKED",
+    "index": 38
+   },
+   {
+    "x": 5,
+    "y": 5,
+    "type": "BATTLE",
+    "visibility": "COMPLETED",
+    "index": 39
+   },
+   {
+    "x": 5,
+    "y": 6,
+    "type": "BATTLE",
+    "visibility": "UNLOCKED",
+    "index": 40
+   }
+  ],
+  "props": [
+   {
+    "x": -2,
+    "prefab": "expeditions_board/node_rock_F",
+    "size_x": 1,
+    "size_y": 1
+   },
+   {
+    "x": -1,
+    "y": 2,
+    "prefab": "expeditions_board/node_ruins_C",
+    "size_x": 2,
+    "size_y": 2
+   },
+   {
+    "y": -3,
+    "prefab": "expeditions_board/node_ruins_G",
+    "size_x": 2,
+    "size_y": 2
+   },
+   {
+    "x": -1,
+    "y": 6,
+    "prefab": "expeditions_board/node_ruins_B",
+    "size_x": 1,
+    "size_y": 1
+   },
+   {
+    "x": 4,
+    "y": -1,
+    "prefab": "expeditions_board/node_rock_A",
+    "size_x": 1,
+    "size_y": 1
+   },
+   {
+    "x": -3,
+    "y": 6,
+    "prefab": "expeditions_board/node_ruins_B",
+    "size_x": 1,
+    "size_y": 1
+   },
+   {
+    "x": -4,
+    "y": -1,
+    "prefab": "expeditions_board/node_rock_C",
+    "size_x": 1,
+    "size_y": 1
+   },
+   {
+    "x": 2,
+    "y": 3,
+    "prefab": "expeditions_board/node_rock_C",
+    "size_x": 1,
+    "size_y": 1
+   },
+   {
+    "x": -4,
+    "y": 3,
+    "prefab": "expeditions_board/node_rock_D",
+    "size_x": 1,
+    "size_y": 1
+   },
+   {
+    "x": 1,
+    "y": 6,
+    "prefab": "expeditions_board/node_ruins_B",
+    "size_x": 1,
+    "size_y": 1
+   },
+   {
+    "x": 3,
+    "y": 6,
+    "prefab": "expeditions_board/node_ruins_B",
+    "size_x": 1,
+    "size_y": 1
+   },
+   {
+    "x": -2,
+    "y": -2,
+    "prefab": "expeditions_board/node_ruins_A",
+    "size_x": 1,
+    "size_y": 1
+   },
+   {
+    "x": 3,
+    "y": -3,
+    "prefab": "expeditions_board/node_rock_B",
+    "size_x": 1,
+    "size_y": 1
+   },
+   {
+    "x": -4,
+    "y": -3,
+    "prefab": "expeditions_board/node_rock_C",
+    "size_x": 1,
+    "size_y": 1
+   },
+   {
+    "x": 5,
+    "y": -3,
+    "prefab": "expeditions_board/node_ruins_E",
+    "size_x": 1,
+    "size_y": 1
+   }
+  ],
+  "chest_rooms_with_pending_rewards": [
+   33
+  ]
+ }
+}

@@ -1,0 +1,507 @@
+{
+ "enemy_health": [
+  {
+   "unit": 1405115575805540,
+   "level": 70,
+   "rarity": 7,
+   "gear_tier": 8,
+   "health": 16000
+  }
+ ],
+ "event_group": {
+  "contentId": "5612093870412290",
+  "name": "EVENT_202008_BIGHERO6_LEGENDARY_META_NAME",
+  "description": "EVENT_202008_BIGHERO6_LEGENDARY_META_DESC",
+  "image": "icons_scheduled_events_event_big_hero_6/baymax_event_meta",
+  "sortOrder": "31",
+  "showcaseItems": [
+   "3083135936984905",
+   "31",
+   "959954392628588"
+  ],
+  "marqueeImage": "icons_scheduled_events_event_big_hero_6/baymax_event_portal",
+  "hasPlayerActivated": true,
+  "frameColor": {
+   "a": 1.0
+  },
+  "panelColor": {
+   "a": 1.0
+  },
+  "portalName": "EVENT_202008_BIGHERO6_LEGENDARY_PORTAL_NAME",
+  "portalDesc": "EVENT_202008_BIGHERO6_LEGENDARY_PORTAL_DESC"
+ },
+ "hero_variants": [
+  {
+   "id": 1405115575805540,
+   "hero": 7214551069584365
+  }
+ ],
+ "events": [
+  {
+   "key_prefix": "EVENT_202008_BIGHERO6_LEGENDARY_A",
+   "tier_keys": {
+    "name": "{prefix}_L{i}_NAME",
+    "description": "{prefix}_L{i}_DESC",
+    "recommended": "{prefix}_L{i}_RECOMMENDED"
+   },
+   "event": {
+    "contentId": "5612093870412291",
+    "name": "EVENT_202008_BIGHERO6_LEGENDARY_A_NAME",
+    "description": "EVENT_202008_BIGHERO6_LEGENDARY_A_DESC",
+    "image": "icons_scheduled_events_event_big_hero_6/baymax_cover",
+    "sortOrder": "100",
+    "battleLimit": "999",
+    "marqueeImage": "icons_scheduled_events_event_big_hero_6/baymax_event_portal",
+    "lifetimeProgressEvent": true,
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "showcaseItems": [
+     "3083135936984905",
+     "31",
+     "959954392628588"
+    ],
+    "eventGroupId": "5612093870412290",
+    "isPermanent": true
+   },
+   "roster": {
+    "bosses": [
+     1405115575805540
+    ],
+    "minions": [
+     6413708042522666
+    ]
+   },
+   "mutators": [
+    1674830856765345
+   ],
+   "battle_environment": "env_destroyed_laboratory/env_destroyed_laboratory",
+   "boss_cinematic": "cin_boss_yokai_destroyed_laboratory/boss_yokai_destroyed_laboratory",
+   "tiers": [
+    {
+     "restriction": 4579355381480985,
+     "rewards": [
+      {
+       "id": 15228657500371,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 3083135936984905,
+       "count": 10,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 25,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 25000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 2696518846138034,
+     "rewards": [
+      {
+       "id": 3083135936984905,
+       "count": 15,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 25,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 25000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 7089526932139751,
+     "rewards": [
+      {
+       "id": 3083135936984905,
+       "count": 25,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 25,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 25000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 1666498520422067,
+     "rewards": [
+      {
+       "id": 3083135936984905,
+       "count": 30,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 50,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 50000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 5380221928115120,
+     "rewards": [
+      {
+       "id": 4622455739426155,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 3083135936984905,
+       "count": 65,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 50,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 50000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 6647893092231970,
+     "rewards": [
+      {
+       "id": 3083135936984905,
+       "count": 85,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 75,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 75000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 5523468524080144,
+     "rewards": [
+      {
+       "id": 3083135936984905,
+       "count": 50,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 100,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 100000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 182924255482410,
+     "rewards": [
+      {
+       "id": 959954392628588,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 8998566902879705,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 3083135936984905,
+       "count": 50,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 100,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 100000,
+       "first_time": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key_prefix": "EVENT_202104_BH6_PRESTIGE_A",
+   "tier_keys": {
+    "name": "{prefix}_L{i}_NAME",
+    "description": "EVENT_202008_BIGHERO6_LEGENDARY_PRESTIGE_AURA_DESC",
+    "recommended": "EVENT_202012_SENSATIONALSIX_2_B_L{i}_RECOMMENDED"
+   },
+   "event": {
+    "contentId": "5612093870412292",
+    "name": "EVENT_202104_BH6_PRESTIGE_A_NAME",
+    "description": "EVENT_202008_BIGHERO6_LEGENDARY_A_DESC",
+    "image": "icons_scheduled_events_event_big_hero_6/bh6_legendary_cover_gear",
+    "sortOrder": "400",
+    "battleLimit": "999",
+    "marqueeImage": "icons_scheduled_events_event_big_hero_6/baymax_event_portal",
+    "lifetimeProgressEvent": true,
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "showcaseItems": [
+     "31"
+    ],
+    "eventGroupId": "5612093870412290",
+    "isPermanent": true
+   },
+   "roster": {
+    "bosses": [
+     1405115575805540
+    ],
+    "minions": [
+     6413708042522666
+    ]
+   },
+   "mutators": [
+    7637343622714866
+   ],
+   "battle_environment": "env_destroyed_laboratory/env_destroyed_laboratory",
+   "boss_cinematic": "cin_boss_yokai_destroyed_laboratory/boss_yokai_destroyed_laboratory",
+   "tiers": [
+    {
+     "restriction": 7848873942941108,
+     "rewards": [
+      {
+       "id": 31,
+       "count": 100,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 3656332889443741,
+     "rewards": [
+      {
+       "id": 31,
+       "count": 150,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 3213809198227853,
+     "rewards": [
+      {
+       "id": 31,
+       "count": 200,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 903731523394546,
+     "rewards": [
+      {
+       "id": 31,
+       "count": 250,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 6302947055114829,
+     "rewards": [
+      {
+       "id": 31,
+       "count": 300,
+       "first_time": true
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "waves": [
+  {
+   "event": 5612093870412291,
+   "tier": 1,
+   "name_key": "EVENT_202008_BIGHERO6_LEGENDARY_A_L1_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 1405115575805540,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 6413708042522666,
+       "count": 5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412291,
+   "tier": 3,
+   "name_key": "EVENT_202008_BIGHERO6_LEGENDARY_A_L3_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 1405115575805540,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 6413708042522666,
+       "count": 5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412291,
+   "tier": 4,
+   "name_key": "EVENT_202008_BIGHERO6_LEGENDARY_A_L4_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 1405115575805540,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 6413708042522666,
+       "count": 5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412291,
+   "tier": 6,
+   "name_key": "EVENT_202008_BIGHERO6_LEGENDARY_A_L6_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 1405115575805540,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 6413708042522666,
+       "count": 6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412291,
+   "tier": 7,
+   "name_key": "EVENT_202008_BIGHERO6_LEGENDARY_A_L7_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 1405115575805540,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 6413708042522666,
+       "count": 6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412292,
+   "tier": 3,
+   "name_key": "EVENT_202104_BH6_PRESTIGE_A_L3_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 1405115575805540,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 6413708042522666,
+       "count": 3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412292,
+   "tier": 4,
+   "name_key": "EVENT_202104_BH6_PRESTIGE_A_L4_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 1405115575805540,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 6413708042522666,
+       "count": 3
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

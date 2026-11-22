@@ -1,0 +1,121 @@
+{
+ "client_version": "711ab6b7-72d4-4e7a-b3af-259131c3cdd3",
+ "client_build": "1587910",
+ "unity_version": "2020.3.41f1",
+ "app_package": "com.glu.disneygame",
+ "deep_link_scheme": "gluprojectcastle",
+ "metadata_sha256": "d1a30168e1d54edd99c5ff871ea326d44562dfb972694224fad83a161b7f237a",
+ "gamedata_sha256": "ee24ab32bfb21b42f24720b56edabaf12ae2f4183025326774b6d3bb8559b550",
+ "gamedata_json_sha256": "3f41ecfe1d0be3b7556855d522a0a20aa9b53232d93a32e8d1e772d568a4d179",
+ "localization_sha256": {
+  "ChineseSimplified": "d6bf4f5cf8b1f457b6055373c0eded9d58f3f33353539f19b4ec7a9d5824dbcb",
+  "ChineseTraditional": "639568388ffbff30eb4ddfadc0baef8a45788e7a06898bd9f4ece0370198d3ae",
+  "English": "7654f3398f7ad7f31052d530a8f19f45e328f6cdc0666d06b9ba74c335870945",
+  "French": "31a04e3830fccd9c15e84b3e43993941a557b51843da1b8992240f9d4afad28d",
+  "German": "5d708d3fbd10cfdad64956ab116410fe0c7a4da574554b0f426377d45c511964",
+  "Italian": "7e076d2cef4b54639aa42be5a16113c7811c4d13363354ed66e9845329eb49dd",
+  "Japanese": "5bdc35251d5493adcc67f9f81edcf4fbb303cc818d70d5d4bcbd34ef47d00aff",
+  "Korean": "16149eb0a25248cd56253ae24e3ce8f35e14846fef5fdd25f79792516301a695",
+  "PortugueseBrazilian": "2ba85094369207baf762db6cdacd7b789439f55e1d2977f74b29f7ede128cc50",
+  "Russian": "dbf04d14be1922bb6a9ab4a453b70fc06be55321949ab1492c0658af61b4b477",
+  "Spanish": "37abe9ffad973f126e19719875830e9944ef409847370359e0ed88e0229f81f7"
+ },
+ "crc_errata": {
+  "bundle_collections_vfx_hero": {
+   "official_crc": 956815032,
+   "file_crc": 1007906917
+  },
+  "cin_exit_cinematic_jafar_genie": {
+   "official_crc": 1248238589,
+   "file_crc": 1072069207
+  },
+  "env_downtown_area_02": {
+   "official_crc": 2936210165,
+   "file_crc": 2514315602
+  },
+  "env_limited_time_arena": {
+   "official_crc": 1762502580,
+   "file_crc": 3849687747
+  },
+  "icons_scheduled_events_event_villaintines": {
+   "official_crc": 1156417349,
+   "file_crc": 1122168053
+  },
+  "shared_16633bd84038a3cf5d4b5b9bd5e7daee": {
+   "official_crc": 1067372591,
+   "file_crc": 2308835252
+  },
+  "shared_4263dc2c753037bc5fd35aea913e08b6": {
+   "official_crc": 385488099,
+   "file_crc": 4004676013
+  },
+  "shared_468d7e222c435bbce718ae7b20d6f434": {
+   "official_crc": 128364671,
+   "file_crc": 1809706459
+  },
+  "shared_58644cdce9a3180dfaefa20f356349d5": {
+   "official_crc": 88332346,
+   "file_crc": 2101518911
+  },
+  "shared_67e688fcdb8e953325a3e8f012eacf95": {
+   "official_crc": 2669608351,
+   "file_crc": 1344582781
+  },
+  "shared_6c56d622d73be13677acd39fa6150b8d": {
+   "official_crc": 106454548,
+   "file_crc": 3280803912
+  },
+  "shared_846aa6c399e9dde23087e6786b80c6ea": {
+   "official_crc": 2278481122,
+   "file_crc": 2602002873
+  },
+  "shared_a206f9fe09dd0f2a72eb222f08496deb": {
+   "official_crc": 1372941376,
+   "file_crc": 2232721437
+  },
+  "shared_a60a81d5ee0a5fec1ee4da36c7ea91ec": {
+   "official_crc": 4138235657,
+   "file_crc": 1681483451
+  },
+  "shared_acf0e2ebac9f5dcc82797e032dfe68af": {
+   "official_crc": 1266112571,
+   "file_crc": 1173839962
+  },
+  "shared_c2969dfd8c780589b323907d1b31febb": {
+   "official_crc": 1921125693,
+   "file_crc": 3136320807
+  },
+  "shared_cd8e6e3df86baa0ad3ff64335ad7933e": {
+   "official_crc": 645723705,
+   "file_crc": 2617530783
+  },
+  "shared_d2e1defcb350bc4c87531b2234424ba2": {
+   "official_crc": 330227571,
+   "file_crc": 694899417
+  },
+  "store_special_offer_alice_welcome": {
+   "official_crc": 1406362958,
+   "file_crc": 2788313379
+  },
+  "store_special_offer_explosives": {
+   "official_crc": 992121067,
+   "file_crc": 3299761298
+  },
+  "ui_view_dailyrewardview": {
+   "official_crc": 3520503346,
+   "file_crc": 1823851959
+  },
+  "ui_view_profiletrophycelebrationview": {
+   "official_crc": 169948676,
+   "file_crc": 1335136241
+  },
+  "ui_view_raiddetailsaurapopupview": {
+   "official_crc": 3315239416,
+   "file_crc": 2191274434
+  },
+  "ui_view_unitdetailsviewv2_god_rays": {
+   "official_crc": 1134023095,
+   "file_crc": 4006592136
+  }
+ }
+}

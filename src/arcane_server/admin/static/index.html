@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arcane 管理介面</title>
+<link rel="stylesheet" href="/admin/static/admin.css">
+<script src="/admin/static/admin.js" defer></script>
+</head>
+<body>
+<header class="top">
+  <h1>Arcane 管理介面</h1>
+  <nav id="tabs" hidden>
+    <button data-tab="players">玩家</button>
+    <button data-tab="clubs">公會</button>
+    <button data-tab="inbox">信箱</button>
+    <button data-tab="import">匯入帳號</button>
+    <button data-tab="server">伺服器</button>
+    <button data-tab="logs">紀錄</button>
+  </nav>
+  <span id="who"></span>
+</header>
+<main id="main">
+  <section id="login" hidden>
+    <form id="login-form" class="card narrow">
+      <h2>登入</h2>
+      <label>密碼 <input type="password" name="password" autocomplete="current-password" required></label>
+      <label>你的名字（寫入操作紀錄）<input type="text" name="name" maxlength="40" placeholder="admin"></label>
+      <button type="submit">登入</button>
+      <p class="error" id="login-error"></p>
+    </form>
+  </section>
+  <section id="view"></section>
+</main>
+<div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

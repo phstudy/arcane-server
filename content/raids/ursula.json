@@ -1,0 +1,5330 @@
+{
+ "tiers": [
+  {
+   "rewards": [
+    {
+     "id": 31,
+     "count": 15,
+     "guaranteed": true
+    },
+    {
+     "id": 4731870789007287,
+     "count": 8000,
+     "guaranteed": true
+    },
+    {
+     "id": 13,
+     "count": 30000,
+     "guaranteed": true
+    },
+    {
+     "id": 1171951539086697,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 381128010781287,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 1982171667398936,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 1309933315662882,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 6800123140996211,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 1953976074197953,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 709706751642707,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 2568938000304629,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 2123928786263283,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 614246367194545,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 8899817382276452,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 2231922868182045,
+     "count": 5,
+     "guaranteed": true,
+     "tier": "T4"
+    },
+    {
+     "id": 5461757687019266,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 2836539702967744,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 3098169505142870,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 7102597852819715,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 8561757942901548,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 2813778536018136,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 1949330146132045,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 8331552497003191,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 5274591237803763,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 469225667476888,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 7399647469567563,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 7141741077665182,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 2432626788775549,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    }
+   ]
+  },
+  {
+   "rewards": [
+    {
+     "id": 31,
+     "count": 20,
+     "guaranteed": true
+    },
+    {
+     "id": 4731870789007287,
+     "count": 10000,
+     "guaranteed": true
+    },
+    {
+     "id": 13,
+     "count": 40000,
+     "guaranteed": true
+    },
+    {
+     "id": 7531001555655815,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 5699237400778713,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 5482566426068031,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 2945137569183386,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 7348799202535797,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 5162107487910141,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 1592982407478990,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 1171951539086697,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 381128010781287,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 1982171667398936,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 1309933315662882,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 6800123140996211,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 1953976074197953,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 709706751642707,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 2568938000304629,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 2123928786263283,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 614246367194545,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 8899817382276452,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 2231922868182045,
+     "count": 5,
+     "guaranteed": true,
+     "tier": "T4"
+    },
+    {
+     "id": 5461757687019266,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 2836539702967744,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 3098169505142870,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 7102597852819715,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 8561757942901548,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 2813778536018136,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 1949330146132045,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 8331552497003191,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 5274591237803763,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 469225667476888,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 7399647469567563,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 7141741077665182,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 2432626788775549,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    }
+   ]
+  },
+  {
+   "rewards": [
+    {
+     "id": 31,
+     "count": 25,
+     "guaranteed": true
+    },
+    {
+     "id": 4731870789007287,
+     "count": 13000,
+     "guaranteed": true
+    },
+    {
+     "id": 13,
+     "count": 50000,
+     "guaranteed": true
+    },
+    {
+     "id": 2847867582043978,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 3218172284382800,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 6951631747773325,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 946211064381860,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 5769964381242354,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 5291641157276905,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 1912819287917109,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 7531001555655815,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 5699237400778713,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 5482566426068031,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 2945137569183386,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 7348799202535797,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 5162107487910141,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 1592982407478990,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 1171951539086697,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 381128010781287,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 1982171667398936,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 1309933315662882,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 6800123140996211,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 1953976074197953,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 709706751642707,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 2568938000304629,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 2123928786263283,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 614246367194545,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 8899817382276452,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 2231922868182045,
+     "count": 10,
+     "guaranteed": true,
+     "tier": "T4"
+    },
+    {
+     "id": 5461757687019266,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 2836539702967744,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 3098169505142870,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 7102597852819715,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 8561757942901548,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 2813778536018136,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 1949330146132045,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 8331552497003191,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 5274591237803763,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 469225667476888,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 7399647469567563,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 7141741077665182,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 2432626788775549,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    }
+   ]
+  },
+  {
+   "rewards": [
+    {
+     "id": 31,
+     "count": 50,
+     "guaranteed": true
+    },
+    {
+     "id": 4731870789007287,
+     "count": 15000,
+     "guaranteed": true
+    },
+    {
+     "id": 13,
+     "count": 60000,
+     "guaranteed": true
+    },
+    {
+     "id": 6647337862512221,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Kingdom"
+    },
+    {
+     "id": 7887545258168546,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 2542586877382406,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 8962330036148078,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Oceanic"
+    },
+    {
+     "id": 5784856723423288,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Wilds"
+    },
+    {
+     "id": 3395201684496752,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Mythical"
+    },
+    {
+     "id": 2837430640993882,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Kingdom"
+    },
+    {
+     "id": 6293042867967939,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 5007297434955457,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 5013026604767424,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Oceanic"
+    },
+    {
+     "id": 2858171621115265,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Wilds"
+    },
+    {
+     "id": 8331674240806556,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Mythical"
+    },
+    {
+     "id": 7349058565226736,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Kingdom"
+    },
+    {
+     "id": 4359736493162385,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 588268337288021,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 3776051996157214,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Oceanic"
+    },
+    {
+     "id": 3814210565101861,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Wilds"
+    },
+    {
+     "id": 41029234094493,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Mythical"
+    },
+    {
+     "id": 2289339325233397,
+     "count": 50,
+     "guaranteed": false,
+     "kind": "FRAGMENT"
+    },
+    {
+     "id": 3931251970451828,
+     "count": 35,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 3472383282447130,
+     "count": 35,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 2250334176732565,
+     "count": 35,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 1069215306988145,
+     "count": 35,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 3599205445649723,
+     "count": 35,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 1065552266535671,
+     "count": 35,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 3502828265659883,
+     "count": 35,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 8357825478883744,
+     "count": 35,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 5554127934867117,
+     "count": 35,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 1267377765834148,
+     "count": 35,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 2697375100403211,
+     "count": 35,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 2847867582043978,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 3218172284382800,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 6951631747773325,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 946211064381860,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 5769964381242354,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 5291641157276905,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 1912819287917109,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 7531001555655815,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 5699237400778713,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 5482566426068031,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 2945137569183386,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 7348799202535797,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 5162107487910141,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 1592982407478990,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 1171951539086697,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 381128010781287,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 1982171667398936,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 1309933315662882,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 6800123140996211,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 1953976074197953,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 709706751642707,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 2568938000304629,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 2123928786263283,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 614246367194545,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 8899817382276452,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 2231922868182045,
+     "count": 20,
+     "guaranteed": true,
+     "tier": "T4"
+    },
+    {
+     "id": 5461757687019266,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 2836539702967744,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 3098169505142870,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 7102597852819715,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 8561757942901548,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 2813778536018136,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 1949330146132045,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 8331552497003191,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 5274591237803763,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 469225667476888,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 7399647469567563,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 7141741077665182,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 2432626788775549,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    }
+   ]
+  },
+  {
+   "rewards": [
+    {
+     "id": 31,
+     "count": 75,
+     "guaranteed": true
+    },
+    {
+     "id": 4731870789007287,
+     "count": 20000,
+     "guaranteed": true
+    },
+    {
+     "id": 13,
+     "count": 80000,
+     "guaranteed": true
+    },
+    {
+     "id": 2122121946440807,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Kingdom"
+    },
+    {
+     "id": 8764338821882577,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 5287067318077213,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 5189671556625558,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Oceanic",
+     "kind": "FRAGMENT"
+    },
+    {
+     "id": 3918057127669278,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Wilds"
+    },
+    {
+     "id": 2285639978116622,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Mythical"
+    },
+    {
+     "id": 6647337862512221,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Kingdom"
+    },
+    {
+     "id": 7887545258168546,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 2542586877382406,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 8962330036148078,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Oceanic"
+    },
+    {
+     "id": 5784856723423288,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Wilds"
+    },
+    {
+     "id": 3395201684496752,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Mythical"
+    },
+    {
+     "id": 2837430640993882,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Kingdom"
+    },
+    {
+     "id": 6293042867967939,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 5007297434955457,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 5013026604767424,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Oceanic"
+    },
+    {
+     "id": 2858171621115265,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Wilds"
+    },
+    {
+     "id": 8331674240806556,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Mythical"
+    },
+    {
+     "id": 7349058565226736,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Kingdom"
+    },
+    {
+     "id": 4359736493162385,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 588268337288021,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 3776051996157214,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Oceanic"
+    },
+    {
+     "id": 3814210565101861,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Wilds"
+    },
+    {
+     "id": 41029234094493,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Mythical"
+    },
+    {
+     "id": 2289339325233397,
+     "count": 120,
+     "guaranteed": false,
+     "kind": "FRAGMENT"
+    },
+    {
+     "id": 3931251970451828,
+     "count": 90,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 3472383282447130,
+     "count": 90,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 2250334176732565,
+     "count": 90,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 1069215306988145,
+     "count": 90,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 3599205445649723,
+     "count": 90,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 1065552266535671,
+     "count": 90,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 3502828265659883,
+     "count": 90,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 8357825478883744,
+     "count": 90,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 5554127934867117,
+     "count": 90,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 1267377765834148,
+     "count": 90,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 2697375100403211,
+     "count": 90,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 2847867582043978,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 3218172284382800,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 6951631747773325,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 946211064381860,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 5769964381242354,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 5291641157276905,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 1912819287917109,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 7531001555655815,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 5699237400778713,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 5482566426068031,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 2945137569183386,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 7348799202535797,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 5162107487910141,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 1592982407478990,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 1171951539086697,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 381128010781287,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 1982171667398936,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 1309933315662882,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 6800123140996211,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 1953976074197953,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 709706751642707,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 2568938000304629,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 2123928786263283,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 614246367194545,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 8899817382276452,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 2231922868182045,
+     "count": 20,
+     "guaranteed": true,
+     "tier": "T4"
+    },
+    {
+     "id": 5461757687019266,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 2836539702967744,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 3098169505142870,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 7102597852819715,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 8561757942901548,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 2813778536018136,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 1949330146132045,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 8331552497003191,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 5274591237803763,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 469225667476888,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 7399647469567563,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 7141741077665182,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 2432626788775549,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    }
+   ]
+  },
+  {
+   "rewards": [
+    {
+     "id": 2319162149542668,
+     "count": 5,
+     "guaranteed": true
+    },
+    {
+     "id": 31,
+     "count": 100,
+     "guaranteed": true
+    },
+    {
+     "id": 4731870789007287,
+     "count": 25000,
+     "guaranteed": true
+    },
+    {
+     "id": 13,
+     "count": 100000,
+     "guaranteed": true
+    },
+    {
+     "id": 2122121946440807,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Kingdom"
+    },
+    {
+     "id": 8764338821882577,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 5287067318077213,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 5189671556625558,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Oceanic",
+     "kind": "FRAGMENT"
+    },
+    {
+     "id": 3918057127669278,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Wilds"
+    },
+    {
+     "id": 2285639978116622,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Mythical"
+    },
+    {
+     "id": 6647337862512221,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Kingdom"
+    },
+    {
+     "id": 7887545258168546,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 2542586877382406,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 8962330036148078,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Oceanic"
+    },
+    {
+     "id": 5784856723423288,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Wilds"
+    },
+    {
+     "id": 3395201684496752,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Mythical"
+    },
+    {
+     "id": 2837430640993882,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Kingdom"
+    },
+    {
+     "id": 6293042867967939,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 5007297434955457,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 5013026604767424,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Oceanic"
+    },
+    {
+     "id": 2858171621115265,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Wilds"
+    },
+    {
+     "id": 8331674240806556,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Mythical"
+    },
+    {
+     "id": 7349058565226736,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Kingdom"
+    },
+    {
+     "id": 4359736493162385,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 588268337288021,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 3776051996157214,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Oceanic"
+    },
+    {
+     "id": 3814210565101861,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Wilds"
+    },
+    {
+     "id": 41029234094493,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Mythical"
+    },
+    {
+     "id": 2289339325233397,
+     "count": 150,
+     "guaranteed": false,
+     "kind": "FRAGMENT"
+    },
+    {
+     "id": 3931251970451828,
+     "count": 120,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 3472383282447130,
+     "count": 120,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 2250334176732565,
+     "count": 120,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 1069215306988145,
+     "count": 120,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 3599205445649723,
+     "count": 120,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 1065552266535671,
+     "count": 120,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 3502828265659883,
+     "count": 120,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 8357825478883744,
+     "count": 120,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 5554127934867117,
+     "count": 120,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 1267377765834148,
+     "count": 120,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 2697375100403211,
+     "count": 120,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 2847867582043978,
+     "count": 50,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 3218172284382800,
+     "count": 50,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 6951631747773325,
+     "count": 50,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 946211064381860,
+     "count": 50,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 5769964381242354,
+     "count": 50,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 5291641157276905,
+     "count": 50,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 1912819287917109,
+     "count": 50,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 7531001555655815,
+     "count": 35,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 5699237400778713,
+     "count": 35,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 5482566426068031,
+     "count": 35,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 2945137569183386,
+     "count": 35,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 7348799202535797,
+     "count": 35,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 5162107487910141,
+     "count": 35,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 1592982407478990,
+     "count": 35,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 1171951539086697,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 381128010781287,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 1982171667398936,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 1309933315662882,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 6800123140996211,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 1953976074197953,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 709706751642707,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 2568938000304629,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 2123928786263283,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 614246367194545,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 8899817382276452,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 2231922868182045,
+     "count": 20,
+     "guaranteed": true,
+     "tier": "T4"
+    },
+    {
+     "id": 5461757687019266,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 2836539702967744,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 3098169505142870,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 7102597852819715,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 8561757942901548,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 2813778536018136,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T3"
+    },
+    {
+     "id": 1949330146132045,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 8331552497003191,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 5274591237803763,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 469225667476888,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 7399647469567563,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 7141741077665182,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    },
+    {
+     "id": 2432626788775549,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T2"
+    }
+   ]
+  }
+ ],
+ "battles": [
+  {
+   "raid_id": 2353722913773109,
+   "tier": 5,
+   "battle_index": 0,
+   "response": {
+    "persistent_units_per_encounter": [
+     1,
+     2,
+     1,
+     1
+    ],
+    "boss_units": [
+     "8195325454732208"
+    ]
+   },
+   "bootstrap": {
+    "environment": {
+     "prefabs": [
+      "env_ursula_lair_entrance/env_ursula_lair_entrance"
+     ],
+     "map": {
+      "encounters": [
+       {
+        "id": "0",
+        "cinematic": "cin_boss_glut_ursula_lair_entrance/boss_glut_ursula_lair_entrance"
+       },
+       {
+        "id": "1",
+        "cinematic": "cin_boss_flotsam_jetsam_ursula_lair_entrance/boss_flotsam_jetsam_ursula_lair_entrance"
+       },
+       {
+        "id": "2",
+        "cinematic": "cin_boss_ursula_raid_ursula_lair/boss_ursula_raid_ursula_lair",
+        "battle_choices": [
+         {
+          "id": "2699982077071996",
+          "offer_description": "RAID_BATTLE_CHOICE_GRANT_HELPFUL_OFFER_DESC",
+          "offer_image": "raids_ursula/contract_large",
+          "offer_accepted_info_icon": "raids_ursula/contract_with_bg",
+          "offer_accepted_info_name": "RAID_BATTLE_CHOICE_URSULA_OFFER_ACCEPTED_INFO_NAME",
+          "offer_accepted_info_description": "RAID_BATTLE_CHOICE_GRANT_HELPFUL_OFFER_ACCEPTED_INFO_DESC",
+          "progress_description": "RAID_BATTLE_CHOICE_PROGRESS_DESC_FRACTION",
+          "offer_description_accept": "RAID_BATTLE_CHOICE_URSULA_GENERIC_OFFER_DESC_ACCEPT",
+          "offer_description_decline": "RAID_BATTLE_CHOICE_URSULA_GENERIC_OFFER_DESC_DECLINE"
+         },
+         {
+          "id": "2363963802716685",
+          "offer_description": "RAID_BATTLE_CHOICE_CRITICAL_STRIKES_OFFER_DESC",
+          "offer_image": "raids_ursula/contract_large",
+          "offer_accepted_info_icon": "raids_ursula/contract_with_bg",
+          "offer_accepted_info_name": "RAID_BATTLE_CHOICE_URSULA_OFFER_ACCEPTED_INFO_NAME",
+          "offer_accepted_info_description": "RAID_BATTLE_CHOICE_CRITICAL_STRIKES_OFFER_ACCEPTED_INFO_DESC",
+          "progress_description": "RAID_BATTLE_CHOICE_PROGRESS_DESC_FRACTION",
+          "offer_description_accept": "RAID_BATTLE_CHOICE_URSULA_GENERIC_OFFER_DESC_ACCEPT",
+          "offer_description_decline": "RAID_BATTLE_CHOICE_URSULA_GENERIC_OFFER_DESC_DECLINE"
+         },
+         {
+          "id": "7343052633890897",
+          "offer_description": "RAID_BATTLE_CHOICE_INFLICT_HARMFUL_OFFER_DESC",
+          "offer_image": "raids_ursula/contract_large",
+          "offer_accepted_info_icon": "raids_ursula/contract_with_bg",
+          "offer_accepted_info_name": "RAID_BATTLE_CHOICE_URSULA_OFFER_ACCEPTED_INFO_NAME",
+          "offer_accepted_info_description": "RAID_BATTLE_CHOICE_INFLICT_HARMFUL_OFFER_ACCEPTED_INFO_DESC",
+          "progress_description": "RAID_BATTLE_CHOICE_PROGRESS_DESC_FRACTION",
+          "offer_description_accept": "RAID_BATTLE_CHOICE_URSULA_GENERIC_OFFER_DESC_ACCEPT",
+          "offer_description_decline": "RAID_BATTLE_CHOICE_URSULA_GENERIC_OFFER_DESC_DECLINE"
+         },
+         {
+          "id": "664722095646077",
+          "offer_description": "RAID_BATTLE_CHOICE_PARTY_HEALTH_LIMIT_OFFER_DESC",
+          "offer_image": "raids_ursula/contract_large",
+          "offer_accepted_info_icon": "raids_ursula/contract_with_bg",
+          "offer_accepted_info_name": "RAID_BATTLE_CHOICE_URSULA_OFFER_ACCEPTED_INFO_NAME",
+          "offer_accepted_info_description": "RAID_BATTLE_CHOICE_PARTY_HEALTH_LIMIT_OFFER_ACCEPTED_INFO_DESC",
+          "progress_description": "RAID_BATTLE_CHOICE_PROGRESS_DESC_TEAMMATES",
+          "offer_description_accept": "RAID_BATTLE_CHOICE_URSULA_GENERIC_OFFER_DESC_ACCEPT",
+          "offer_description_decline": "RAID_BATTLE_CHOICE_URSULA_GENERIC_OFFER_DESC_DECLINE"
+         },
+         {
+          "id": "41944481186137",
+          "offer_description": "RAID_BATTLE_CHOICE_RESTORE_HEALTH_OFFER_DESC",
+          "offer_image": "raids_ursula/contract_large",
+          "offer_accepted_info_icon": "raids_ursula/contract_with_bg",
+          "offer_accepted_info_name": "RAID_BATTLE_CHOICE_URSULA_OFFER_ACCEPTED_INFO_NAME",
+          "offer_accepted_info_description": "RAID_BATTLE_CHOICE_RESTORE_HEALTH_OFFER_ACCEPTED_INFO_DESC",
+          "progress_description": "RAID_BATTLE_CHOICE_PROGRESS_DESC_FRACTION",
+          "offer_description_accept": "RAID_BATTLE_CHOICE_URSULA_GENERIC_OFFER_DESC_ACCEPT",
+          "offer_description_decline": "RAID_BATTLE_CHOICE_URSULA_GENERIC_OFFER_DESC_DECLINE"
+         }
+        ],
+        "exit_cinematic": "cin_exit_cinematic_ursula_raid_ursula_lair/exit_cinematic_ursula_raid_ursula_lair"
+       },
+       {
+        "id": "3",
+        "cinematic": "cin_boss_ursula_big_ursula_battle/boss_ursula_big_ursula_battle"
+       }
+      ]
+     },
+     "spawn_points": [
+      {
+       "unit_type": 1,
+       "x": -7.49,
+       "y": 2.71
+      },
+      {
+       "x": -3.012942,
+       "y": 3.017646
+      },
+      {
+       "x": -6.35,
+       "y": 0.46
+      },
+      {
+       "unit_type": 1,
+       "x": -3.33,
+       "y": 1.13
+      },
+      {
+       "unit_type": 1,
+       "x": -6.31,
+       "y": -1.47
+      },
+      {
+       "x": -2.518095,
+       "y": -0.7434636
+      },
+      {
+       "x": -5.214,
+       "y": -2.83
+      },
+      {
+       "unit_type": 1,
+       "x": -2.66,
+       "y": -2.35
+      },
+      {
+       "unit_type": 1,
+       "x": -5.2,
+       "y": -5.23
+      },
+      {
+       "x": -2.317058,
+       "y": -3.997642
+      },
+      {
+       "team_id": 1,
+       "unit_type": 1,
+       "x": 6.55,
+       "y": 6.5
+      },
+      {
+       "team_id": 1,
+       "x": 3.14,
+       "y": 6.69
+      },
+      {
+       "team_id": 1,
+       "x": 7.24,
+       "y": 6.26
+      },
+      {
+       "team_id": 1,
+       "unit_type": 1,
+       "x": 2.51,
+       "y": 2.52
+      },
+      {
+       "team_id": 1,
+       "unit_type": 1,
+       "x": 8.81,
+       "y": 2.79
+      },
+      {
+       "team_id": 1,
+       "x": 3.225735,
+       "y": 0.2
+      },
+      {
+       "team_id": 1,
+       "x": 7.85,
+       "y": 0.43
+      },
+      {
+       "team_id": 1,
+       "unit_type": 1,
+       "x": 3.48,
+       "y": -1.99
+      },
+      {
+       "team_id": 1,
+       "unit_type": 1,
+       "x": 8.18,
+       "y": -1.5
+      },
+      {
+       "team_id": 1,
+       "x": 3.4,
+       "y": -4.25
+      }
+     ]
+    },
+    "players": [
+     {
+      "ai_content_id": "5046914655393013",
+      "squads": [
+       {
+        "units": [
+         {
+          "definition_id": "8195325454732208",
+          "persistent_id": 1,
+          "rarity": 7,
+          "level": 70,
+          "gear_tier": 7,
+          "offense": 5610,
+          "defense": 820,
+          "health": 7392073,
+          "crit_chance": 0.05,
+          "crit_power": 1.5,
+          "attack_speed": 0.15,
+          "walk_speed": 1.4,
+          "attack_range": 1.0,
+          "radius": 1.0,
+          "name_key": "GLUT_UNIT_NAME",
+          "asset_id": "unit_glut/u_glut",
+          "icon": "icons_units_glut/portrait_glut",
+          "effect_def_ids": [
+           "8081870374907776",
+           "7158342096585470",
+           "7418109230464148",
+           "5364032506298255",
+           "1503007449195550",
+           "596040124411483",
+           "2434565407270916",
+           "939245639231986",
+           "1565312819588235",
+           "2995720398333551",
+           "6960279588130474",
+           "5911620782364054",
+           "8425252949501593",
+           "4909310566028153",
+           "8300587724874930",
+           "1301086998683661",
+           "2613726459159352",
+           "4537061632168086",
+           "1192368659057086"
+          ],
+          "abilities": [
+           {
+            "name_key": "GLUT_ABILBASIC_NAME",
+            "icon": "icons_units_glut/glut_basic",
+            "activated": true,
+            "level": 4,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "desc_key": "GLUT_BASIC_DESC_01",
+            "ability_type": 1,
+            "balance_vars": [
+             1519.188,
+             3.0,
+             0.45,
+             2356.2,
+             2.0,
+             0.45,
+             1.0,
+             1.0,
+             5.0
+            ]
+           },
+           {
+            "name_key": "GLUT_ABILSPECIALA_NAME",
+            "icon": "icons_units_glut/glut_special_a",
+            "mana_cost": 4,
+            "activated": true,
+            "level": 4,
+            "shape": 1,
+            "geo_id": "44",
+            "id": 1,
+            "desc_key": "GLUT_SPECIALA_DESC_03",
+            "initial_mana": 4,
+            "ability_type": 3,
+            "balance_vars": [
+             0.05,
+             1.0,
+             1.0,
+             3.0,
+             3.0,
+             2.0
+            ],
+            "sort_order": 1
+           },
+           {
+            "name_key": "GLUT_ABILSPECIALB_NAME",
+            "icon": "icons_units_glut/glut_special_b",
+            "mana_cost": 4,
+            "activated": true,
+            "level": 4,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 2,
+            "desc_key": "GLUT_SPECIALB_DESC_01",
+            "initial_mana": 3,
+            "ability_type": 3,
+            "balance_vars": [
+             6248.4185,
+             1.0,
+             5329.5,
+             3.0,
+             1.0
+            ],
+            "sort_order": 2
+           },
+           {
+            "name_key": "GLUT_ABILSPECIALC_NAME",
+            "icon": "icons_units_glut/glut_special_c",
+            "mana_cost": 4,
+            "activated": true,
+            "level": 4,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 3,
+            "desc_key": "GLUT_SPECIALC_DESC_02",
+            "ability_type": 3,
+            "balance_vars": [
+             0.6,
+             2.0
+            ],
+            "sort_order": 3,
+            "special_icon_path": "icons_inventory_pin/death_skull"
+           },
+           {
+            "name_key": "GLUT_ABILPASSIVEA_NAME",
+            "icon": "icons_units_glut/glut_passive_a",
+            "level": 4,
+            "shape": 1,
+            "target_self": true,
+            "target_ally": true,
+            "geo_id": "44",
+            "id": 4,
+            "desc_key": "GLUT_PASSIVEA_DESC_01",
+            "ability_type": 4,
+            "balance_vars": [
+             0.55
+            ],
+            "sort_order": 4
+           },
+           {
+            "name_key": "RAID_ABILPASSIVE_NAME",
+            "icon": "icons_units_shared/raid_passive",
+            "level": 4,
+            "shape": 1,
+            "target_self": true,
+            "target_ally": true,
+            "geo_id": "44",
+            "id": 5,
+            "desc_key": "RAID_PASSIVE_DESC_01",
+            "ability_type": 4,
+            "balance_vars": [
+             1.0,
+             0.2
+            ],
+            "sort_order": 5
+           }
+          ],
+          "health_percent": 0.436789,
+          "power_rating": 859,
+          "unit_slot_type": 1,
+          "category_ids": [
+           "614606076824576",
+           "5960529125021754",
+           "5308420037568950",
+           "3133581935767717"
+          ],
+          "speed": 108,
+          "potency": 0.17,
+          "tenacity": 0.4405,
+          "accuracy": 0.05,
+          "evasion": 0.05,
+          "affects_star_rating": true,
+          "bootstrap_unique_id": 9
+         }
+        ],
+        "encounter": "0"
+       },
+       {
+        "units": [
+         {
+          "definition_id": "7823006848581372",
+          "persistent_id": 2,
+          "rarity": 7,
+          "level": 70,
+          "gear_tier": 7,
+          "offense": 2105,
+          "defense": 814,
+          "health": 4928475,
+          "crit_chance": 0.05,
+          "crit_power": 1.5,
+          "attack_speed": 0.15,
+          "walk_speed": 1.4,
+          "attack_range": 1.0,
+          "radius": 1.0,
+          "name_key": "FLOTSAM_UNIT_NAME",
+          "asset_id": "unit_flotsam/u_flotsam",
+          "icon": "icons_units_flotsam/portrait_flotsam",
+          "effect_def_ids": [
+           "7489299671206500",
+           "2502943453139437",
+           "25823552547749",
+           "7739353367322094",
+           "7914604502795012",
+           "6909977807262190",
+           "4137691668694717",
+           "5480986767854264",
+           "939245639231986",
+           "320153550958467",
+           "5868060904077137",
+           "4299609376299604",
+           "8322928945740116",
+           "6960279588130474",
+           "3258500435625696",
+           "5911620782364054",
+           "1565312819588235",
+           "7387288592675358",
+           "722639727902689",
+           "156368919473182",
+           "1174790765737303",
+           "3801687454704071",
+           "4441606032705850",
+           "4537061632168086",
+           "4933734155334878"
+          ],
+          "abilities": [
+           {
+            "name_key": "FLOTSAM_ABILBASIC_NAME",
+            "icon": "icons_units_flotsam/flotsam_basic",
+            "activated": true,
+            "level": 4,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "desc_key": "FLOTSAM_BASIC_DESC_01",
+            "ability_type": 1,
+            "balance_vars": [
+             3157.5,
+             0.1,
+             2.0,
+             0.6,
+             0.3
+            ]
+           },
+           {
+            "name_key": "FLOTSAM_ABILSPECIALA_NAME",
+            "icon": "icons_units_flotsam/flotsam_special_a",
+            "mana_cost": 3,
+            "activated": true,
+            "level": 4,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 1,
+            "desc_key": "FLOTSAM_SPECIALA_DESC_03",
+            "initial_mana": 3,
+            "ability_type": 3,
+            "balance_vars": [
+             2.0,
+             0.5,
+             1.0,
+             3.0,
+             0.45,
+             1.0
+            ],
+            "sort_order": 1
+           },
+           {
+            "name_key": "FLOTSAM_ABILSPECIALB_NAME",
+            "icon": "icons_units_flotsam/flotsam_special_b",
+            "mana_cost": 4,
+            "activated": true,
+            "level": 4,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 2,
+            "desc_key": "FLOTSAM_SPECIALB_DESC_01",
+            "initial_mana": 4,
+            "ability_type": 3,
+            "balance_vars": [
+             3157.5,
+             3.0,
+             0.45,
+             0.1,
+             4.0
+            ],
+            "sort_order": 2
+           },
+           {
+            "name_key": "FLOTSAM_ABILSPECIALC_NAME",
+            "icon": "icons_units_flotsam/flotsam_special_c",
+            "mana_cost": 4,
+            "activated": true,
+            "level": 4,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 3,
+            "desc_key": "FLOTSAM_SPECIALC_DESC_02",
+            "ability_type": 3,
+            "balance_vars": [
+             0.45,
+             2.0
+            ],
+            "sort_order": 3,
+            "special_icon_path": "icons_inventory_pin/death_skull"
+           },
+           {
+            "name_key": "FLOTSAM_ABILPASSIVEA_NAME",
+            "icon": "icons_units_flotsam/flotsam_passive_a",
+            "level": 4,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 4,
+            "desc_key": "FLOTSAM_PASSIVEA_DESC_01",
+            "ability_type": 4,
+            "balance_vars": [
+             0.05,
+             3157.5,
+             1.0,
+             0.6,
+             1.0,
+             2.0
+            ],
+            "sort_order": 4
+           },
+           {
+            "name_key": "RAID_ABILPASSIVE_NAME",
+            "icon": "icons_units_shared/raid_passive",
+            "level": 4,
+            "shape": 1,
+            "target_self": true,
+            "geo_id": "44",
+            "id": 5,
+            "desc_key": "RAID_PASSIVE_DESC_01",
+            "ability_type": 4,
+            "balance_vars": [
+             1.0,
+             0.2
+            ],
+            "sort_order": 5
+           },
+           {
+            "name_key": "FLOTSAM_ABILPASSIVEC_NAME",
+            "icon": "icons_units_flotsam/flotsam_passive_c",
+            "level": 4,
+            "shape": 1,
+            "target_self": true,
+            "geo_id": "44",
+            "id": 6,
+            "desc_key": "FLOTSAM_PASSIVEC_DESC_02",
+            "ability_type": 4,
+            "balance_vars": [
+             1.0,
+             0.45,
+             2.0
+            ],
+            "sort_order": 6
+           }
+          ],
+          "health_percent": 1.0,
+          "power_rating": 889,
+          "unit_slot_type": 1,
+          "category_ids": [
+           "614606076824576",
+           "5960529125021754",
+           "5308420037568950",
+           "3133581935767717"
+          ],
+          "speed": 90,
+          "potency": 0.17,
+          "tenacity": 0.37,
+          "accuracy": 0.05,
+          "evasion": 0.05,
+          "affects_star_rating": true,
+          "bootstrap_unique_id": 10
+         },
+         {
+          "definition_id": "7349976913605680",
+          "persistent_id": 3,
+          "rarity": 7,
+          "level": 70,
+          "gear_tier": 7,
+          "offense": 2105,
+          "defense": 814,
+          "health": 4928475,
+          "crit_chance": 0.05,
+          "crit_power": 1.5,
+          "attack_speed": 0.15,
+          "walk_speed": 1.4,
+          "attack_range": 1.0,
+          "radius": 1.0,
+          "name_key": "JETSAM_UNIT_NAME",
+          "asset_id": "unit_jetsam/u_jetsam",
+          "icon": "icons_units_jetsam/portrait_jetsam",
+          "effect_def_ids": [
+           "1831456967805728",
+           "6202241231620506",
+           "2816908749585500",
+           "4361007858030324",
+           "3555824958151639",
+           "3878557544320698",
+           "2587059069616446",
+           "4764683989402550",
+           "2630479352503640",
+           "2352698116417167",
+           "320153550958467",
+           "939245639231986",
+           "6960279588130474",
+           "1614721865262346",
+           "5911620782364054",
+           "1565312819588235",
+           "2052824274932921",
+           "3233983674704069",
+           "6711094949058541",
+           "6220286410367350",
+           "3801687454704071",
+           "4181499647498278",
+           "5254538326663592",
+           "4537061632168086",
+           "6059949149456541"
+          ],
+          "abilities": [
+           {
+            "name_key": "JETSAM_ABILBASIC_NAME",
+            "icon": "icons_units_jetsam/jetsam_basic",
+            "activated": true,
+            "level": 4,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "desc_key": "JETSAM_BASIC_DESC_01",
+            "ability_type": 1,
+            "balance_vars": [
+             3157.5,
+             0.1,
+             2.0,
+             0.6,
+             0.3
+            ]
+           },
+           {
+            "name_key": "JETSAM_ABILSPECIALA_NAME",
+            "icon": "icons_units_jetsam/jetsam_special_a",
+            "mana_cost": 3,
+            "activated": true,
+            "level": 4,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "range": 4.0,
+            "id": 1,
+            "desc_key": "JETSAM_SPECIALA_DESC_03",
+            "initial_mana": 3,
+            "ability_type": 3,
+            "balance_vars": [
+             5262.5,
+             2.0,
+             2.0,
+             2.0,
+             0.45,
+             1.0
+            ],
+            "sort_order": 1
+           },
+           {
+            "name_key": "JETSAM_ABILSPECIALB_NAME",
+            "icon": "icons_units_jetsam/jetsam_special_b",
+            "mana_cost": 4,
+            "activated": true,
+            "level": 4,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "range": 11.0,
+            "id": 2,
+            "desc_key": "JETSAM_SPECIALB_DESC_01",
+            "initial_mana": 4,
+            "ability_type": 3,
+            "balance_vars": [
+             3157.5,
+             3.0,
+             0.45,
+             0.1,
+             4.0
+            ],
+            "sort_order": 2
+           },
+           {
+            "name_key": "JETSAM_ABILSPECIALC_NAME",
+            "icon": "icons_units_jetsam/jetsam_special_c",
+            "mana_cost": 4,
+            "activated": true,
+            "level": 4,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "range": 18.0,
+            "id": 3,
+            "desc_key": "JETSAM_SPECIALC_DESC_02",
+            "ability_type": 3,
+            "balance_vars": [
+             0.45,
+             2.0
+            ],
+            "sort_order": 3,
+            "special_icon_path": "icons_inventory_pin/death_skull"
+           },
+           {
+            "name_key": "JETSAM_ABILPASSIVEA_NAME",
+            "icon": "icons_units_jetsam/jetsam_passive_a",
+            "level": 4,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "range": 25.0,
+            "id": 4,
+            "desc_key": "JETSAM_PASSIVEA_DESC_01",
+            "ability_type": 4,
+            "balance_vars": [
+             0.05,
+             3157.5,
+             1.0,
+             0.6,
+             1.0,
+             2.0
+            ],
+            "sort_order": 4
+           },
+           {
+            "name_key": "RAID_ABILPASSIVE_NAME",
+            "icon": "icons_units_shared/raid_passive",
+            "level": 4,
+            "shape": 1,
+            "target_self": true,
+            "geo_id": "44",
+            "range": 32.0,
+            "id": 5,
+            "desc_key": "RAID_PASSIVE_DESC_01",
+            "ability_type": 4,
+            "balance_vars": [
+             1.0,
+             0.2
+            ],
+            "sort_order": 5
+           },
+           {
+            "name_key": "JETSAM_ABILPASSIVEC_NAME",
+            "icon": "icons_units_jetsam/jetsam_passive_c",
+            "level": 4,
+            "shape": 1,
+            "target_self": true,
+            "geo_id": "44",
+            "range": 39.0,
+            "id": 6,
+            "desc_key": "JETSAM_PASSIVEC_DESC_02",
+            "ability_type": 4,
+            "balance_vars": [
+             1.0,
+             0.45,
+             2.0
+            ],
+            "sort_order": 6
+           }
+          ],
+          "health_percent": 1.0,
+          "power_rating": 889,
+          "unit_slot_type": 1,
+          "subtitle_key": "JETSAM_SUBTITLE",
+          "category_ids": [
+           "614606076824576",
+           "5960529125021754",
+           "5308420037568950",
+           "3133581935767717"
+          ],
+          "speed": 90,
+          "potency": 0.17,
+          "tenacity": 0.37,
+          "accuracy": 0.05,
+          "evasion": 0.05,
+          "affects_star_rating": true,
+          "bootstrap_unique_id": 11
+         }
+        ],
+        "encounter": "1",
+        "spawn_order": [
+         0,
+         8
+        ]
+       },
+       {
+        "units": [
+         {
+          "definition_id": "6977923474609331",
+          "persistent_id": 4,
+          "rarity": 7,
+          "level": 70,
+          "gear_tier": 7,
+          "offense": 2657,
+          "defense": 923,
+          "health": 5071608,
+          "crit_chance": 0.2,
+          "crit_power": 1.5,
+          "attack_speed": 5.06,
+          "walk_speed": 1.9,
+          "attack_range": 3.0,
+          "radius": 1.0,
+          "name_key": "URSULA_UNIT_NAME",
+          "asset_id": "unit_ursula_raid/u_ursula_raid",
+          "icon": "icons_units_ursula/portrait_ursula",
+          "effect_def_ids": [
+           "4910876323306200",
+           "8314821558072523",
+           "7385079030860829",
+           "2022215972053034",
+           "1070486956066899",
+           "1438414068608051",
+           "340479178811863",
+           "27249351918001",
+           "5556247134505969",
+           "6810790946639342",
+           "2549128277777708",
+           "3571740263072020",
+           "3130769185289375",
+           "2458971145706636",
+           "156462377373911",
+           "5459110091541557",
+           "7193320696020403",
+           "7058028754313863",
+           "7782419607000704",
+           "1283255970681971",
+           "4799208546656509",
+           "4312130677724752",
+           "8974374638301953",
+           "3426549909332052",
+           "4648752940349574",
+           "8064091988144087",
+           "8986257322836947",
+           "3055695824129701",
+           "5799887457889336",
+           "8061638486625239",
+           "4165811114338906",
+           "6841164620822006",
+           "3282478291284323",
+           "5367808674294061",
+           "583314103543612",
+           "8918372227592197",
+           "4908070274199540",
+           "6002568506836347",
+           "3662492039082430",
+           "6960279588130474",
+           "2802316068598742",
+           "3764782319958154",
+           "7193320696020403",
+           "2906790473240528",
+           "7292060836226852",
+           "2220820373102363",
+           "4921677190155806",
+           "5628473224883058",
+           "4696812330523866",
+           "4537061632168086"
+          ],
+          "abilities": [
+           {
+            "name_key": "URSULA_ABILBASIC_NAME",
+            "icon": "icons_units_ursula/ursula_basic",
+            "activated": true,
+            "level": 6,
+            "shape": 1,
+            "target_enemy": true,
+            "add_unit_max_count": 5,
+            "add_unit": {
+             "definition_id": "1916645823438552",
+             "offense": 1,
+             "health": 1,
+             "crit_power": 1.5,
+             "walk_speed": 2.0,
+             "attack_range": 1.0,
+             "radius": 0.5,
+             "name_key": "JETSAM_UNIT_NAME",
+             "asset_id": "unit_jetsam_small/u_jetsam_small",
+             "icon": "icons_units_jetsam/portrait_jetsam",
+             "effect_def_ids": [
+              "6202241231620506",
+              "2630479352503640",
+              "2352698116417167",
+              "4361007858030324",
+              "939245639231986",
+              "320153550958467",
+              "2052824274932921",
+              "6220286410367350"
+             ],
+             "abilities": [
+              {
+               "name_key": "JETSAM_ABILBASIC_NAME",
+               "icon": "icons_units_jetsam/jetsam_basic",
+               "activated": true,
+               "level": 1,
+               "shape": 1,
+               "target_enemy": true,
+               "geo_id": "44",
+               "desc_key": "JETSAM_SUMMON_BASIC_DESC_01",
+               "ability_type": 1
+              }
+             ],
+             "unit_type": 1,
+             "health_percent": 1.0,
+             "category_ids": [
+              "614606076824576",
+              "5308420037568950",
+              "5960529125021754"
+             ],
+             "speed": 50,
+             "accuracy": 100.0,
+             "affects_star_rating": true,
+             "bootstrap_unique_id": 12
+            },
+            "geo_id": "44",
+            "desc_key": "URSULA_BASIC_DESC_03",
+            "ability_type": 1,
+            "balance_vars": [
+             6642.5,
+             0.3,
+             0.1,
+             0.0,
+             1.0
+            ]
+           },
+           {
+            "name_key": "URSULA_ABILSPECIALA_NAME",
+            "icon": "icons_units_ursula/ursula_special_a",
+            "mana_cost": 4,
+            "activated": true,
+            "level": 6,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 1,
+            "desc_key": "URSULARAID_SPECIALA_DESC_02",
+            "initial_mana": 2,
+            "ability_type": 3,
+            "balance_vars": [
+             12620.75,
+             1.0,
+             0.1,
+             2.0,
+             0.3,
+             1.0
+            ],
+            "sort_order": 1
+           },
+           {
+            "name_key": "URSULA_ABILSPECIALB_NAME",
+            "icon": "icons_units_ursula/ursula_special_b",
+            "mana_cost": 4,
+            "activated": true,
+            "level": 6,
+            "shape": 1,
+            "target_enemy": true,
+            "add_unit_max_count": 5,
+            "add_unit": {
+             "definition_id": "2689594733284691",
+             "offense": 1,
+             "health": 1,
+             "crit_power": 1.5,
+             "walk_speed": 2.0,
+             "attack_range": 1.0,
+             "radius": 1.0,
+             "name_key": "SEA_POLYP_UNIT_NAME",
+             "asset_id": "unit_sea_polyp/u_sea_polyp",
+             "icon": "icons_units_ursula/portrait_sea_polyp",
+             "abilities": [
+              {
+               "name_key": "SEA_POLYP_ABILBASIC_NAME",
+               "icon": "icons_units_ursula/ursula_special_b_minion_basic",
+               "level": 1,
+               "shape": 1,
+               "target_enemy": true,
+               "geo_id": "44",
+               "ability_type": 1
+              }
+             ],
+             "unit_type": 1,
+             "health_percent": 1.0,
+             "speed": 50,
+             "accuracy": 100.0,
+             "affects_star_rating": true,
+             "bootstrap_unique_id": 13
+            },
+            "geo_id": "44",
+            "range": 1.0,
+            "id": 2,
+            "desc_key": "URSULARAID_SPECIALB_DESC_02",
+            "ability_type": 3,
+            "balance_vars": [
+             0.435,
+             3.0
+            ],
+            "sort_order": 2,
+            "special_icon_path": "icons_inventory_pin/death_skull"
+           },
+           {
+            "name_key": "URSULA_ABILPASSIVEB_NAME",
+            "icon": "icons_units_ursula/ursula_passive_b",
+            "level": 6,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 4,
+            "desc_key": "URSULARAID_PASSIVEB_DESC_03",
+            "ability_type": 4,
+            "balance_vars": [
+             0.6,
+             1.0,
+             0.3,
+             1.0,
+             1.0
+            ],
+            "sort_order": 4
+           },
+           {
+            "name_key": "URSULA_ABILPASSIVEC_NAME",
+            "icon": "icons_units_ursula/ursula_passive_c",
+            "level": 6,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 5,
+            "desc_key": "URSULARAID_PASSIVEC_DESC_03",
+            "ability_type": 4,
+            "balance_vars": [
+             1.0,
+             0.15,
+             0.1,
+             0.01
+            ],
+            "sort_order": 5
+           },
+           {
+            "name_key": "RAID_ABILPASSIVE_NAME",
+            "icon": "icons_units_shared/raid_passive",
+            "level": 6,
+            "shape": 1,
+            "target_ally": true,
+            "geo_id": "44",
+            "id": 6,
+            "desc_key": "RAID_PASSIVE_DESC_01",
+            "ability_type": 4,
+            "balance_vars": [
+             1.0,
+             0.2
+            ],
+            "sort_order": 6
+           }
+          ],
+          "health_percent": 1.0,
+          "power_rating": 919,
+          "unit_slot_type": 1,
+          "category_ids": [
+           "614606076824576",
+           "5960529125021754",
+           "5308420037568950",
+           "3133581935767717",
+           "5800061760299363",
+           "1102804729261314"
+          ],
+          "speed": 107,
+          "potency": 0.26,
+          "tenacity": 0.53,
+          "affects_star_rating": true,
+          "bootstrap_unique_id": 14
+         }
+        ],
+        "encounter": "2"
+       },
+       {
+        "units": [
+         {
+          "definition_id": "6407705065387919",
+          "persistent_id": 5,
+          "rarity": 7,
+          "level": 70,
+          "gear_tier": 7,
+          "offense": 5588,
+          "defense": 814,
+          "health": 14781675,
+          "crit_chance": 0.05,
+          "crit_power": 1.5,
+          "attack_speed": 0.15,
+          "walk_speed": 1.4,
+          "attack_range": 1.0,
+          "radius": 1.0,
+          "name_key": "URSULABIG_UNIT_NAME",
+          "asset_id": "unit_ursula_big/u_ursula_big",
+          "icon": "icons_units_ursula_big/portrait_ursula_big",
+          "effect_def_ids": [
+           "8898997599745238",
+           "2989616046746783",
+           "902983923559011",
+           "2995720398333551",
+           "5009959932808915",
+           "3563153450729279",
+           "2495981064650603",
+           "198189692948016",
+           "5613241437410597",
+           "6068003525189127",
+           "3633643233940461",
+           "7652347960265342",
+           "8540351703894170",
+           "4456353957661942",
+           "6362198732629170",
+           "6512232668815366",
+           "4001590680742806",
+           "5367808674294061",
+           "4131669411142468",
+           "5607093412473936",
+           "8374562359097273",
+           "7351608455020224",
+           "4537061632168086"
+          ],
+          "abilities": [
+           {
+            "name_key": "URSULABIG_ABILBASIC_NAME",
+            "icon": "icons_units_ursula_big/ursula_big_basic",
+            "activated": true,
+            "level": 6,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "desc_key": "URSULABIG_BASIC_DESC_01",
+            "ability_type": 1,
+            "balance_vars": [
+             6985.0,
+             1.0,
+             2.0,
+             2.0
+            ]
+           },
+           {
+            "name_key": "URSULABIG_ABILSPECIALA_NAME",
+            "icon": "icons_units_ursula_big/ursula_big_special_a",
+            "mana_cost": 3,
+            "activated": true,
+            "level": 6,
+            "shape": 1,
+            "target_enemy": true,
+            "add_unit_max_count": 4,
+            "add_unit": {
+             "definition_id": "7996119222527463",
+             "offense": 1,
+             "health": 1,
+             "crit_power": 1.5,
+             "walk_speed": 1.4,
+             "attack_range": 80.0,
+             "radius": 0.8,
+             "name_key": "URSULA_TENTACLE_UNIT_NAME",
+             "asset_id": "unit_ursula_big/u_ursula_big_tentacle_1",
+             "icon": "icons_units_ursula_tentacle/portrait_tentacle",
+             "effect_def_ids": [
+              "7153200370794134",
+              "1617742639936279",
+              "3238490943135390"
+             ],
+             "abilities": [
+              {
+               "name_key": "MICROBOT_SPIRE_ABILBASIC_NAME",
+               "icon": "icons_units_ursula_tentacle/ursula_tentacle_basic",
+               "activated": true,
+               "level": 1,
+               "shape": 1,
+               "target_enemy": true,
+               "geo_id": "44",
+               "desc_key": "MICROBOT_SPIRE_ABILBASIC_DESC",
+               "ability_type": 1,
+               "balance_vars": [
+                1.0
+               ]
+              }
+             ],
+             "unit_type": 1,
+             "health_percent": 1.0,
+             "category_ids": [
+              "614606076824576",
+              "5960529125021754",
+              "2489250258015164",
+              "4742156979219619",
+              "5800061760299363"
+             ],
+             "speed": 50,
+             "accuracy": 100.0,
+             "affects_star_rating": true,
+             "bootstrap_unique_id": 15
+            },
+            "geo_id": "44",
+            "id": 1,
+            "desc_key": "URSULABIG_SPECIALA_DESC_02",
+            "initial_mana": 2,
+            "ability_type": 3,
+            "balance_vars": [
+             1.0,
+             4.0,
+             2.0,
+             1.0,
+             1.0,
+             0.6,
+             1.0
+            ],
+            "sort_order": 1
+           },
+           {
+            "name_key": "URSULABIG_ABILSPECIALB_NAME",
+            "icon": "icons_units_ursula_big/ursula_big_special_b",
+            "mana_cost": 4,
+            "activated": true,
+            "level": 6,
+            "shape": 1,
+            "target_enemy": true,
+            "add_unit_max_count": 4,
+            "add_unit": {
+             "definition_id": "2838935983911691",
+             "offense": 1,
+             "health": 1,
+             "crit_power": 1.5,
+             "walk_speed": 1.4,
+             "attack_range": 80.0,
+             "radius": 0.8,
+             "name_key": "URSULA_TENTACLE_UNIT_NAME",
+             "asset_id": "unit_ursula_big/u_ursula_big_tentacle_2",
+             "icon": "icons_units_ursula_tentacle/portrait_tentacle",
+             "effect_def_ids": [
+              "7153200370794134",
+              "1617742639936279",
+              "3238490943135390"
+             ],
+             "abilities": [
+              {
+               "name_key": "MICROBOT_SPIRE_ABILBASIC_NAME",
+               "icon": "icons_units_ursula_tentacle/ursula_tentacle_basic",
+               "activated": true,
+               "level": 1,
+               "shape": 1,
+               "target_enemy": true,
+               "geo_id": "44",
+               "desc_key": "MICROBOT_SPIRE_ABILBASIC_DESC",
+               "ability_type": 1,
+               "balance_vars": [
+                1.0
+               ]
+              }
+             ],
+             "unit_type": 1,
+             "health_percent": 1.0,
+             "category_ids": [
+              "614606076824576",
+              "5960529125021754",
+              "2489250258015164",
+              "4742156979219619",
+              "5800061760299363"
+             ],
+             "speed": 50,
+             "accuracy": 100.0,
+             "affects_star_rating": true,
+             "bootstrap_unique_id": 16
+            },
+            "geo_id": "44",
+            "id": 2,
+            "desc_key": "URSULABIG_SPECIALB_DESC_03",
+            "initial_mana": 2,
+            "ability_type": 3,
+            "balance_vars": [
+             14668.5,
+             1.0,
+             2.0
+            ],
+            "sort_order": 2
+           },
+           {
+            "name_key": "URSULABIG_ABILSPECIALC_NAME",
+            "icon": "icons_units_ursula_big/ursula_big_special_c",
+            "mana_cost": 4,
+            "activated": true,
+            "level": 6,
+            "shape": 1,
+            "target_enemy": true,
+            "add_unit_max_count": 4,
+            "add_unit": {
+             "definition_id": "2375138367247944",
+             "offense": 1,
+             "health": 1,
+             "crit_power": 1.5,
+             "walk_speed": 1.4,
+             "attack_range": 80.0,
+             "radius": 0.8,
+             "name_key": "URSULA_TENTACLE_UNIT_NAME",
+             "asset_id": "unit_ursula_big/u_ursula_big_tentacle_3",
+             "icon": "icons_units_ursula_tentacle/portrait_tentacle",
+             "effect_def_ids": [
+              "7153200370794134",
+              "1617742639936279",
+              "3238490943135390"
+             ],
+             "abilities": [
+              {
+               "name_key": "MICROBOT_SPIRE_ABILBASIC_NAME",
+               "icon": "icons_units_ursula_tentacle/ursula_tentacle_basic",
+               "activated": true,
+               "level": 1,
+               "shape": 1,
+               "target_enemy": true,
+               "geo_id": "44",
+               "desc_key": "MICROBOT_SPIRE_ABILBASIC_DESC",
+               "ability_type": 1,
+               "balance_vars": [
+                1.0
+               ]
+              }
+             ],
+             "unit_type": 1,
+             "health_percent": 1.0,
+             "category_ids": [
+              "614606076824576",
+              "5960529125021754",
+              "2489250258015164",
+              "4742156979219619",
+              "5800061760299363"
+             ],
+             "speed": 50,
+             "accuracy": 100.0,
+             "affects_star_rating": true,
+             "bootstrap_unique_id": 17
+            },
+            "geo_id": "44",
+            "id": 3,
+            "desc_key": "URSULABIG_SPECIALC_DESC_03",
+            "ability_type": 3,
+            "balance_vars": [
+             14668.5,
+             1.0,
+             2.0
+            ],
+            "sort_order": 3,
+            "special_icon_path": "icons_inventory_pin/death_skull"
+           },
+           {
+            "name_key": "URSULABIG_ABILPASSIVEA_NAME",
+            "icon": "icons_units_ursula_big/ursula_big_passive_a",
+            "level": 6,
+            "shape": 1,
+            "target_self": true,
+            "add_unit_max_count": 4,
+            "add_unit": {
+             "definition_id": "6629814664962890",
+             "offense": 1,
+             "health": 1,
+             "crit_power": 1.5,
+             "walk_speed": 1.4,
+             "attack_range": 80.0,
+             "radius": 0.8,
+             "name_key": "URSULA_TENTACLE_UNIT_NAME",
+             "asset_id": "unit_ursula_big/u_ursula_big_tentacle_4",
+             "icon": "icons_units_ursula_tentacle/portrait_tentacle",
+             "effect_def_ids": [
+              "7153200370794134",
+              "1617742639936279",
+              "3238490943135390"
+             ],
+             "abilities": [
+              {
+               "name_key": "MICROBOT_SPIRE_ABILBASIC_NAME",
+               "icon": "icons_units_ursula_tentacle/ursula_tentacle_basic",
+               "activated": true,
+               "level": 1,
+               "shape": 1,
+               "target_enemy": true,
+               "geo_id": "44",
+               "desc_key": "MICROBOT_SPIRE_ABILBASIC_DESC",
+               "ability_type": 1,
+               "balance_vars": [
+                1.0
+               ]
+              }
+             ],
+             "unit_type": 1,
+             "health_percent": 1.0,
+             "category_ids": [
+              "614606076824576",
+              "5960529125021754",
+              "2489250258015164",
+              "4742156979219619",
+              "5800061760299363"
+             ],
+             "speed": 50,
+             "accuracy": 100.0,
+             "affects_star_rating": true,
+             "bootstrap_unique_id": 18
+            },
+            "geo_id": "44",
+            "id": 4,
+            "desc_key": "URSULABIG_PASSIVEA_DESC_01",
+            "ability_type": 4,
+            "balance_vars": [
+             0.19,
+             2.0,
+             0.3,
+             2.0,
+             12000.0,
+             407.0,
+             0.15,
+             1606.5499,
+             3.0,
+             1.0,
+             0.1,
+             3.0,
+             1.0,
+             2.0,
+             2.0,
+             4.0
+            ],
+            "sort_order": 4
+           },
+           {
+            "name_key": "RAID_ABILPASSIVE_NAME",
+            "icon": "icons_units_shared/raid_passive",
+            "level": 6,
+            "shape": 1,
+            "target_self": true,
+            "geo_id": "44",
+            "id": 5,
+            "desc_key": "RAID_PASSIVE_DESC_01",
+            "ability_type": 4,
+            "balance_vars": [
+             1.0,
+             0.1,
+             5.0,
+             0.5,
+             1.0
+            ],
+            "sort_order": 5
+           }
+          ],
+          "health_percent": 1.0,
+          "power_rating": 919,
+          "unit_slot_type": 1,
+          "category_ids": [
+           "614606076824576",
+           "5960529125021754",
+           "5308420037568950",
+           "3133581935767717"
+          ],
+          "speed": 81,
+          "potency": 0.12,
+          "tenacity": 0.37,
+          "affects_star_rating": true,
+          "bootstrap_unique_id": 19
+         }
+        ],
+        "encounter": "3"
+       }
+      ],
+      "team_id": 1,
+      "player_level": 70,
+      "client_version": "24.2"
+     },
+     {
+      "ai_content_id": "1661400315776363",
+      "squads": [
+       {
+        "units": [
+         {
+          "definition_id": "6967976029580759",
+          "persistent_id": 11,
+          "rarity": 7,
+          "level": 82,
+          "gear_slot_equipped": [
+           false,
+           false,
+           true,
+           false,
+           false,
+           false
+          ],
+          "gear_tier": 9,
+          "offense": 2775,
+          "defense": 1217,
+          "health": 27236,
+          "recovery": 1447,
+          "crit_chance": 0.09,
+          "crit_power": 1.5,
+          "attack_speed": 0.18,
+          "walk_speed": 1.9,
+          "attack_range": 1.0,
+          "radius": 1.0,
+          "name_key": "ALICE_UNIT_NAME",
+          "asset_id": "unit_alice/u_alice",
+          "icon": "icons_units_alice/portrait_alice",
+          "effect_def_ids": [
+           "4758480580667308",
+           "6460996662633130",
+           "7073919061679401",
+           "6021683131742148",
+           "1681432103717781",
+           "7127345536103969",
+           "1315614681994336",
+           "3596854335968283",
+           "8924309015763531",
+           "5431605093074612",
+           "6433874531677487",
+           "2906165459300686",
+           "3057125395012659",
+           "5944329490969858",
+           "8833556913442189",
+           "4762552818719965",
+           "8773082782959534",
+           "7583111315964744",
+           "8788860950429208",
+           "5853777658327959",
+           "5607093412473936",
+           "3303493622502125",
+           "8374562359097273",
+           "4015411404136870",
+           "7153200370794134",
+           "5139847630529863"
+          ],
+          "abilities": [
+           {
+            "name_key": "ALICE_ABILBASIC_NAME",
+            "icon": "icons_units_alice/alice_basic",
+            "activated": true,
+            "level": 5,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "desc_key": "ALICE_BASIC_DESC_04",
+            "ability_type": 1,
+            "balance_vars": [
+             2081.25,
+             1.0,
+             0.3,
+             1.0,
+             1.0,
+             1.0,
+             0.3,
+             1.0,
+             1.0,
+             1.0,
+             1.0,
+             0.3
+            ]
+           },
+           {
+            "name_key": "ALICE_ABILSPECIALA_NAME",
+            "icon": "icons_units_alice/alice_special_a",
+            "mana_cost": 4,
+            "activated": true,
+            "level": 5,
+            "shape": 1,
+            "target_self": true,
+            "target_ally": true,
+            "geo_id": "44",
+            "id": 1,
+            "desc_key": "ALICE_SPECIALA_DESC_03",
+            "initial_mana": 4,
+            "ability_type": 3,
+            "balance_vars": [
+             4.0,
+             0.05,
+             2.0,
+             0.05,
+             0.05,
+             0.6,
+             3.0,
+             1.0,
+             4.0,
+             2.0
+            ],
+            "sort_order": 1
+           },
+           {
+            "name_key": "ALICE_ABILSPECIALB_NAME",
+            "icon": "icons_units_alice/alice_special_b",
+            "mana_cost": 6,
+            "activated": true,
+            "level": 4,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 2,
+            "desc_key": "ALICE_SPECIALB_DESC_02",
+            "initial_mana": 3,
+            "ability_type": 3,
+            "balance_vars": [
+             9365.625,
+             2.0,
+             2.0,
+             0.75,
+             0.3,
+             2.0,
+             1.0,
+             0.3,
+             2.0,
+             1.0
+            ],
+            "sort_order": 2
+           },
+           {
+            "name_key": "ALICE_ABILPASSIVEA_NAME",
+            "icon": "icons_units_alice/alice_passive_a",
+            "level": 4,
+            "shape": 1,
+            "geo_id": "44",
+            "id": 3,
+            "desc_key": "ALICE_PASSIVEA_DESC_03",
+            "ability_type": 4,
+            "balance_vars": [
+             2.0,
+             0.15,
+             1.0,
+             1.0,
+             0.5,
+             1.0
+            ],
+            "sort_order": 3
+           },
+           {
+            "name_key": "ALICE_ABILPASSIVEB_NAME",
+            "icon": "icons_units_alice/alice_passive_b",
+            "level": 4,
+            "shape": 1,
+            "geo_id": "44",
+            "id": 4,
+            "desc_key": "ALICE_PASSIVEB_DESC_03",
+            "ability_type": 4,
+            "balance_vars": [
+             1.0,
+             0.25,
+             1.0,
+             0.1,
+             0.6,
+             2.0,
+             1.0,
+             1.0,
+             0.4,
+             2.0,
+             1.0,
+             1.0
+            ],
+            "sort_order": 4
+           },
+           {
+            "name_key": "ALICE_LEADER_NAME",
+            "icon": "icons_units_alice/alice_leader",
+            "level": 4,
+            "shape": 1,
+            "geo_id": "44",
+            "id": 5,
+            "desc_key": "ALICE_LEADER_DESC_01",
+            "ability_type": 5,
+            "balance_vars": [
+             5.0
+            ],
+            "sort_order": 5
+           }
+          ],
+          "health_percent": 1.0,
+          "power_rating": 1354,
+          "unit_slot_type": 2,
+          "category_ids": [
+           "5785710300459637",
+           "5495262680796735",
+           "8842003313865136",
+           "280516569512001"
+          ],
+          "sorcerer_stone_id": "7441933598335231",
+          "speed": 169,
+          "potency": 0.27,
+          "tenacity": 0.49,
+          "evasion": 0.27,
+          "affects_star_rating": true,
+          "bootstrap_unique_id": 1
+         },
+         {
+          "definition_id": "6404465037911908",
+          "persistent_id": 12,
+          "rarity": 7,
+          "level": 82,
+          "gear_slot_equipped": [
+           true,
+           true,
+           true,
+           true,
+           false,
+           false
+          ],
+          "gear_tier": 8,
+          "offense": 2252,
+          "defense": 914,
+          "health": 29753,
+          "recovery": 2402,
+          "crit_chance": 0.14,
+          "crit_power": 1.5,
+          "attack_speed": 0.18,
+          "walk_speed": 1.9,
+          "attack_range": 1.0,
+          "radius": 1.0,
+          "name_key": "KIDA_UNIT_NAME",
+          "asset_id": "unit_kida/u_kida",
+          "icon": "icons_units_kida/portrait_kida",
+          "effect_def_ids": [
+           "8969171021150947",
+           "3937193881164624",
+           "4635800218622683",
+           "5911620782364054",
+           "2957071111003473",
+           "8611002313432467",
+           "4658717178166720",
+           "7543998935187811",
+           "5659265426321167",
+           "1087887121892524",
+           "2514865677466158",
+           "4341440319193791",
+           "1307265919356680",
+           "3916431535367135",
+           "5097346769486712",
+           "4404790654539736",
+           "2229498675021902",
+           "990762286474357",
+           "8185569195681239",
+           "2868028927100928",
+           "3637225711666174",
+           "5954019487607889",
+           "6157321218432530",
+           "2464331258059941",
+           "3510881186329170",
+           "2721671562938280",
+           "2933288484524407",
+           "5197696429077457",
+           "3032783244529132",
+           "2936337103668251",
+           "147410979163527",
+           "3842424892784097",
+           "1512735469926921",
+           "1493063280045236",
+           "368295476424960",
+           "1530102086733555",
+           "7491550198796396",
+           "8076474255390013",
+           "5379977079801917",
+           "5607093412473936",
+           "5139847630529863"
+          ],
+          "abilities": [
+           {
+            "name_key": "KIDA_ABILBASIC_NAME",
+            "icon": "icons_units_kida/kida_basic",
+            "activated": true,
+            "level": 4,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "desc_key": "KIDA_BASIC_DESC_02",
+            "ability_type": 1,
+            "balance_vars": [
+             1689.0,
+             3.0,
+             0.25,
+             0.2,
+             1.0,
+             2.0,
+             0.2,
+             3.0,
+             4.0,
+             5067.0
+            ]
+           },
+           {
+            "name_key": "KIDA_ABILSPECIALA_NAME",
+            "icon": "icons_units_kida/kida_special_a",
+            "mana_cost": 4,
+            "activated": true,
+            "level": 4,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 1,
+            "desc_key": "KIDA_SPECIALA_DESC_03",
+            "initial_mana": 4,
+            "ability_type": 3,
+            "balance_vars": [
+             4433.7373,
+             2.0,
+             1.0,
+             3.0,
+             0.2,
+             0.25,
+             1.0,
+             1.0,
+             4.0
+            ],
+            "sort_order": 1
+           },
+           {
+            "name_key": "KIDA_ABILSPECIALB_NAME",
+            "icon": "icons_units_kida/kida_special_b",
+            "mana_cost": 4,
+            "activated": true,
+            "level": 4,
+            "shape": 1,
+            "target_self": true,
+            "target_ally": true,
+            "add_unit_max_count": 1,
+            "add_unit": {
+             "definition_id": "1199575132629105",
+             "offense": 1,
+             "defense": 1,
+             "health": 1,
+             "recovery": 1,
+             "crit_power": 1.5,
+             "attack_range": 1.0,
+             "radius": 0.75,
+             "asset_id": "unit_stone_king/u_stone_king",
+             "icon": "icons_units_kida/portrait_stone_king",
+             "effect_def_ids": [
+              "7153200370794134"
+             ],
+             "abilities": [
+              {
+               "name_key": "STONEKINGS_ABILBASIC_NAME",
+               "icon": "icons_units_randall/randall_special_b",
+               "level": 1,
+               "shape": 1,
+               "target_self": true,
+               "target_ally": true,
+               "geo_id": "44",
+               "ability_type": 1
+              }
+             ],
+             "unit_type": 1,
+             "health_percent": 1.0,
+             "speed": 1,
+             "affects_star_rating": true,
+             "bootstrap_unique_id": 2
+            },
+            "geo_id": "44",
+            "id": 2,
+            "desc_key": "KIDA_SPECIALB_DESC_02",
+            "initial_mana": 4,
+            "ability_type": 3,
+            "balance_vars": [
+             3723.0999,
+             2882.4001,
+             1.0,
+             2.0,
+             3753.125,
+             2.0,
+             1.0,
+             2.0,
+             1.0,
+             2.0,
+             29753.0,
+             914.0,
+             2402.0,
+             145.8,
+             2882.4001,
+             1.0,
+             0.25,
+             1.0,
+             1.0,
+             2.0
+            ],
+            "sort_order": 2
+           },
+           {
+            "name_key": "KIDA_ABILPASSIVEA_NAME",
+            "icon": "icons_units_kida/kida_passive_a",
+            "mana_cost": 4,
+            "level": 3,
+            "shape": 1,
+            "geo_id": "44",
+            "id": 3,
+            "desc_key": "KIDA_PASSIVEA_DESC_02",
+            "initial_mana": 4,
+            "ability_type": 4,
+            "balance_vars": [
+             2627.4084,
+             0.4,
+             3723.0999,
+             1.0,
+             2.0,
+             1.0,
+             3.0,
+             4.0
+            ],
+            "sort_order": 3
+           },
+           {
+            "name_key": "KIDA_ABILPASSIVEB_NAME",
+            "icon": "icons_units_kida/kida_passive_b",
+            "level": 3,
+            "shape": 1,
+            "geo_id": "44",
+            "id": 4,
+            "desc_key": "KIDA_PASSIVEB_DESC_02",
+            "ability_type": 4,
+            "balance_vars": [
+             1.0,
+             4.0,
+             0.4,
+             0.4,
+             0.15
+            ],
+            "sort_order": 4
+           }
+          ],
+          "health_percent": 1.0,
+          "power_rating": 1213,
+          "category_ids": [
+           "5785710300459637",
+           "185013331968872",
+           "5308420037568950",
+           "999985425443963"
+          ],
+          "sorcerer_stone_id": "7441933598335231",
+          "speed": 162,
+          "potency": 0.1,
+          "tenacity": 0.15,
+          "accuracy": 0.1,
+          "evasion": 0.15,
+          "affects_star_rating": true,
+          "bootstrap_unique_id": 3
+         },
+         {
+          "definition_id": "2516666220254955",
+          "persistent_id": 13,
+          "rarity": 7,
+          "level": 82,
+          "gear_slot_equipped": [
+           true,
+           true,
+           true,
+           true,
+           false,
+           false
+          ],
+          "gear_tier": 8,
+          "offense": 3429,
+          "defense": 639,
+          "health": 21082,
+          "crit_chance": 0.18,
+          "crit_power": 1.5,
+          "attack_speed": 0.18,
+          "walk_speed": 1.9,
+          "attack_range": 1.0,
+          "radius": 1.0,
+          "name_key": "MOANA_UNIT_NAME",
+          "asset_id": "unit_moana/u_moana",
+          "icon": "icons_units_moana/portrait_moana",
+          "effect_def_ids": [
+           "5738597699120047",
+           "202860495964311",
+           "7156808451385893",
+           "2665358424866321",
+           "2653127943207760",
+           "3487936336210444",
+           "6797541432203493",
+           "4024486400336597",
+           "3215078672994820",
+           "4385565880513657",
+           "2214557055781497",
+           "1913611073285741",
+           "3748816597744374",
+           "7153200370794134",
+           "8569445903722054",
+           "855121246818165",
+           "5139847630529863",
+           "3057073737079720"
+          ],
+          "abilities": [
+           {
+            "name_key": "MOANA_ABILBASIC_NAME",
+            "icon": "icons_units_moana/moana_basic",
+            "activated": true,
+            "level": 4,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "desc_key": "MOANA_BASIC_DESC_01",
+            "ability_type": 1,
+            "balance_vars": [
+             10287.0,
+             10287.0
+            ]
+           },
+           {
+            "name_key": "MOANA_ABILSPECIALA_NAME",
+            "icon": "icons_units_moana/moana_special_a",
+            "mana_cost": 3,
+            "activated": true,
+            "level": 4,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 1,
+            "desc_key": "MOANA_SPECIALA_DESC_01",
+            "preview_strength": true,
+            "initial_mana": 3,
+            "ability_type": 3,
+            "balance_vars": [
+             4286.25,
+             4.0,
+             6.0,
+             2.0
+            ],
+            "sort_order": 1
+           },
+           {
+            "name_key": "MOANA_ABILSPECIALB_NAME",
+            "icon": "icons_units_moana/moana_special_b",
+            "mana_cost": 4,
+            "activated": true,
+            "level": 4,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 2,
+            "desc_key": "MOANA_SPECIALB_DESC_01",
+            "preview_strength": true,
+            "initial_mana": 2,
+            "ability_type": 3,
+            "balance_vars": [
+             5143.5,
+             1.0,
+             0.15
+            ],
+            "sort_order": 2
+           },
+           {
+            "name_key": "MOANA_ABILPASSIVEA_NAME",
+            "icon": "icons_units_moana/moana_passive_a",
+            "level": 3,
+            "shape": 1,
+            "target_self": true,
+            "geo_id": "44",
+            "id": 3,
+            "desc_key": "MOANA_PASSIVEA_DESC_01",
+            "ability_type": 4,
+            "balance_vars": [
+             0.2
+            ],
+            "sort_order": 3
+           },
+           {
+            "name_key": "MOANA_ABILPASSIVEB_NAME",
+            "icon": "icons_units_moana/moana_passive_b",
+            "mana_cost": 4,
+            "level": 3,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 4,
+            "desc_key": "MOANA_PASSIVEB_DESC_02",
+            "initial_mana": 4,
+            "ability_type": 4,
+            "balance_vars": [
+             2.0,
+             0.4,
+             1.0
+            ],
+            "sort_order": 4
+           }
+          ],
+          "health_percent": 1.0,
+          "power_rating": 1213,
+          "category_ids": [
+           "5785710300459637",
+           "5960529125021754",
+           "5308420037568950",
+           "2469462995899328",
+           "5820897550663740",
+           "1515770659265273"
+          ],
+          "sorcerer_stone_id": "5937770926925881",
+          "speed": 132,
+          "potency": 0.25,
+          "tenacity": 0.2,
+          "accuracy": 0.1,
+          "evasion": 0.1,
+          "affects_star_rating": true,
+          "bootstrap_unique_id": 4
+         },
+         {
+          "definition_id": "792577974612189",
+          "persistent_id": 14,
+          "rarity": 7,
+          "level": 82,
+          "gear_slot_equipped": [
+           true,
+           true,
+           true,
+           true,
+           false,
+           false
+          ],
+          "gear_tier": 8,
+          "offense": 2566,
+          "defense": 1092,
+          "health": 24451,
+          "crit_chance": 0.16,
+          "crit_power": 1.5,
+          "attack_speed": 0.18,
+          "walk_speed": 1.9,
+          "attack_range": 1.0,
+          "radius": 1.0,
+          "name_key": "SNOWWHITE_UNIT_NAME",
+          "asset_id": "unit_snow_white/u_snow_white",
+          "icon": "icons_units_snow_white/portrait_snow_white",
+          "effect_def_ids": [
+           "5243812447915989",
+           "799730956437113",
+           "1567548778152645",
+           "3317246841058254",
+           "334210182703264",
+           "7551687232641358",
+           "3630619332009625",
+           "1206234267905348",
+           "4765515575421422",
+           "980874033163284",
+           "5695624480001513",
+           "4348487201824352",
+           "3083684339586090",
+           "3303493622502125",
+           "5674633745253640",
+           "5911620782364054",
+           "8788860950429208",
+           "445368767766098",
+           "8453718530432755",
+           "6002568506836347",
+           "4751847035583641",
+           "4916166886181278",
+           "8698344091933037",
+           "4635800218622683"
+          ],
+          "abilities": [
+           {
+            "name_key": "SNOWWHITE_ABILBASIC_NAME",
+            "icon": "icons_units_snow_white/snow_white_basic",
+            "activated": true,
+            "level": 4,
+            "shape": 1,
+            "target_enemy": true,
+            "add_unit_max_count": 1,
+            "add_unit": {
+             "definition_id": "2113348898322158",
+             "offense": 1,
+             "health": 1,
+             "crit_power": 1.5,
+             "walk_speed": 1.4,
+             "attack_range": 1.0,
+             "radius": 0.8,
+             "name_key": "THE_LITTLE_BIRDS_UNIT_NAME",
+             "asset_id": "unit_birds/u_birds",
+             "icon": "icons_units_snow_white/portrait_snow_white_minion",
+             "effect_def_ids": [
+              "2223716905350042",
+              "8672296667647928",
+              "2839381298042761",
+              "8743190415189633",
+              "2981166475472962",
+              "5911620782364054",
+              "4635800218622683",
+              "6800498565604099"
+             ],
+             "abilities": [
+              {
+               "name_key": "LITTLEBIRD_ABILBASIC_NAME",
+               "icon": "icons_units_snow_white/snow_white_minion_basic",
+               "activated": true,
+               "level": 1,
+               "shape": 1,
+               "target_enemy": true,
+               "geo_id": "44",
+               "desc_key": "LITTLEBIRD_BASIC_DESC_01",
+               "ability_type": 1
+              },
+              {
+               "name_key": "LITTLEBIRD_ABILSPECIALA_NAME",
+               "icon": "icons_units_snow_white/snow_white_minion_passive",
+               "mana_cost": 2,
+               "activated": true,
+               "level": 1,
+               "shape": 1,
+               "target_self": true,
+               "geo_id": "44",
+               "id": 1,
+               "desc_key": "LITTLEBIRD_PASSIVE_DESC_01",
+               "initial_mana": 2,
+               "ability_type": 4,
+               "sort_order": 1
+              }
+             ],
+             "unit_type": 1,
+             "health_percent": 1.0,
+             "category_ids": [
+              "5785710300459637",
+              "5960529125021754",
+              "4419393874676815",
+              "7289903988380590"
+             ],
+             "speed": 50,
+             "accuracy": 100.0,
+             "affects_star_rating": true,
+             "bootstrap_unique_id": 5
+            },
+            "geo_id": "44",
+            "desc_key": "SNOWWHITE_BASIC_DESC_03",
+            "ability_type": 1,
+            "balance_vars": [
+             6235.005,
+             115.200005,
+             349.44,
+             1635.825,
+             3.0,
+             0.3,
+             0.3,
+             0.3,
+             0.3,
+             1.0,
+             1.0,
+             2.0,
+             2.0,
+             1.0,
+             3.0
+            ]
+           },
+           {
+            "name_key": "SNOWWHITE_ABILSPECIALA_NAME",
+            "icon": "icons_units_snow_white/snow_white_special_a",
+            "mana_cost": 6,
+            "activated": true,
+            "level": 4,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 1,
+            "desc_key": "SNOWWHITE_SPECIALA_DESC_03",
+            "initial_mana": 6,
+            "ability_type": 3,
+            "balance_vars": [
+             2.0,
+             0.4,
+             0.4,
+             0.3,
+             1.0,
+             1.0
+            ],
+            "sort_order": 1
+           },
+           {
+            "name_key": "SNOWWHITE_ABILSPECIALB_NAME",
+            "icon": "icons_units_snow_white/snow_white_special_b",
+            "mana_cost": 6,
+            "activated": true,
+            "level": 4,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 2,
+            "desc_key": "SNOWWHITE_SPECIALB_DESC_03",
+            "initial_mana": 4,
+            "ability_type": 3,
+            "balance_vars": [
+             2737.152,
+             3.0,
+             0.15,
+             2.0,
+             1.0,
+             0.3,
+             1.0,
+             3.0,
+             0.3,
+             1.0,
+             0.3,
+             1.0,
+             0.4,
+             0.4,
+             2.0,
+             1.0,
+             1.0
+            ],
+            "sort_order": 2
+           },
+           {
+            "name_key": "SNOWWHITE_ABILPASSIVEA_NAME",
+            "icon": "icons_units_snow_white/snow_white_passive_a",
+            "mana_cost": 3,
+            "level": 3,
+            "shape": 1,
+            "target_self": true,
+            "target_ally": true,
+            "geo_id": "44",
+            "id": 3,
+            "desc_key": "SNOWWHITE_PASSIVEA_DESC_02",
+            "initial_mana": 3,
+            "ability_type": 4,
+            "balance_vars": [
+             0.45,
+             2.0,
+             1.0
+            ],
+            "sort_order": 3
+           },
+           {
+            "name_key": "SNOWWHITE_ABILPASSIVEB_NAME",
+            "icon": "icons_units_snow_white/snow_white_passive_b",
+            "mana_cost": 4,
+            "level": 3,
+            "shape": 1,
+            "target_self": true,
+            "target_ally": true,
+            "geo_id": "44",
+            "id": 4,
+            "desc_key": "SNOWWHITE_PASSIVEB_DESC_02",
+            "initial_mana": 4,
+            "ability_type": 4,
+            "balance_vars": [
+             0.6,
+             1.0,
+             0.15,
+             1.0,
+             0.15,
+             1.0,
+             0.15,
+             0.15,
+             0.5,
+             0.0
+            ],
+            "sort_order": 4
+           }
+          ],
+          "health_percent": 1.0,
+          "power_rating": 1213,
+          "category_ids": [
+           "5785710300459637",
+           "5495262680796735",
+           "4419393874676815",
+           "7289903988380590",
+           "5820897550663740",
+           "5059163436552255"
+          ],
+          "sorcerer_stone_id": "7441933598335231",
+          "speed": 144,
+          "potency": 0.31,
+          "tenacity": 0.21,
+          "accuracy": 0.1,
+          "evasion": 0.1,
+          "affects_star_rating": true,
+          "bootstrap_unique_id": 6
+         },
+         {
+          "definition_id": "1224792624962111",
+          "persistent_id": 15,
+          "rarity": 7,
+          "level": 82,
+          "gear_slot_equipped": [
+           true,
+           true,
+           true,
+           true,
+           false,
+           false
+          ],
+          "gear_tier": 8,
+          "offense": 2280,
+          "defense": 812,
+          "health": 26364,
+          "recovery": 2722,
+          "crit_chance": 0.09,
+          "crit_power": 1.5,
+          "attack_speed": 0.2,
+          "walk_speed": 1.9,
+          "attack_range": 1.0,
+          "radius": 1.0,
+          "name_key": "TIANA_UNIT_NAME",
+          "asset_id": "unit_tiana/u_tiana",
+          "icon": "icons_units_tiana/portrait_tiana",
+          "effect_def_ids": [
+           "8935060372105260",
+           "4084557861109274",
+           "3875632069254525",
+           "1128826995028068",
+           "3775936435904835",
+           "5071744502581120",
+           "6761784831181623",
+           "2072682887826146",
+           "4765515955456192",
+           "3689441204339399",
+           "2860560128169758",
+           "5372580026717903",
+           "4043375476611000",
+           "2156579786427077",
+           "39496671355120",
+           "4024367250964618",
+           "3938439209462923",
+           "713645901083407",
+           "4717236801962055",
+           "7620033519032020",
+           "5911620782364054",
+           "5444326312663696"
+          ],
+          "abilities": [
+           {
+            "name_key": "TIANA_BASIC_NAME",
+            "icon": "icons_units_tiana/tiana_basic",
+            "activated": true,
+            "level": 4,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "desc_key": "TIANA_BASIC_DESC_02",
+            "ability_type": 1,
+            "balance_vars": [
+             1282.5,
+             1.0,
+             4.0,
+             0.1,
+             1.0
+            ]
+           },
+           {
+            "name_key": "TIANA_SPECIALA_NAME",
+            "icon": "icons_units_tiana/tiana_minion_basic",
+            "mana_cost": 4,
+            "activated": true,
+            "level": 4,
+            "shape": 1,
+            "target_self": true,
+            "add_unit_max_count": 1,
+            "add_unit": {
+             "definition_id": "704813043472924",
+             "radius": 1.0,
+             "asset_id": "unit_tiana/u_gumbopot",
+             "icon": "icons_units_tiana/portrait_tiana_gumbo",
+             "effect_def_ids": [
+              "2860560128169758"
+             ],
+             "abilities": [
+              {
+               "name_key": "EMPTY_ABILITY_NAME",
+               "icon": "icons_units_horned_king/horned_king_passive",
+               "activated": true,
+               "level": 1,
+               "shape": 1,
+               "target_enemy": true,
+               "geo_id": "44",
+               "desc_key": "BLACK_CAULDRON_BASIC_DESC_01",
+               "ability_type": 1
+              }
+             ],
+             "unit_type": 1,
+             "health_percent": 1.0,
+             "category_ids": [
+              "185013331968872"
+             ],
+             "affects_star_rating": true,
+             "bootstrap_unique_id": 7
+            },
+            "geo_id": "44",
+            "id": 1,
+            "desc_key": "TIANA_SPECIALA_DESC_03",
+            "initial_mana": 4,
+            "ability_type": 3,
+            "balance_vars": [
+             1.0,
+             1.0,
+             1.0,
+             1.0,
+             1.0,
+             3.0,
+             1.0,
+             15159.3,
+             913.5,
+             2722.0,
+             2.0,
+             2.0,
+             1361.0,
+             5.0,
+             1.0,
+             0.2,
+             1.0,
+             0.5,
+             4.0
+            ],
+            "sort_order": 1
+           },
+           {
+            "name_key": "TIANA_SPECIALB_NAME",
+            "icon": "icons_units_tiana/tiana_special_b",
+            "mana_cost": 4,
+            "activated": true,
+            "level": 4,
+            "shape": 1,
+            "geo_id": "44",
+            "id": 2,
+            "desc_key": "TIANA_SPECIALB_DESC_03",
+            "initial_mana": 4,
+            "ability_type": 3,
+            "balance_vars": [
+             3266.4001,
+             2.0,
+             2.0,
+             1.0
+            ],
+            "sort_order": 2
+           },
+           {
+            "name_key": "TIANA_PASSIVEA_NAME",
+            "icon": "icons_units_tiana/tiana_passive_a",
+            "mana_cost": 1,
+            "level": 3,
+            "shape": 1,
+            "geo_id": "44",
+            "id": 3,
+            "desc_key": "TIANA_PASSIVEA_DESC_02",
+            "initial_mana": 1,
+            "ability_type": 4,
+            "balance_vars": [
+             0.1,
+             0.3,
+             1.0,
+             1.0,
+             0.4,
+             1.0
+            ],
+            "sort_order": 3
+           },
+           {
+            "name_key": "TIANA_PASSIVEB_NAME",
+            "icon": "icons_units_tiana/tiana_passive_b",
+            "level": 3,
+            "shape": 1,
+            "geo_id": "44",
+            "id": 4,
+            "desc_key": "TIANA_PASSIVEB_DESC_01",
+            "ability_type": 4,
+            "balance_vars": [
+             0.3,
+             1.0,
+             0.15,
+             0.15,
+             0.05,
+             0.1,
+             10.0,
+             1.0,
+             0.4,
+             1.0,
+             0.0
+            ],
+            "sort_order": 4
+           }
+          ],
+          "health_percent": 1.0,
+          "power_rating": 1213,
+          "category_ids": [
+           "5785710300459637",
+           "5495262680796735",
+           "2489250258015164",
+           "1750147552920622",
+           "5820897550663740",
+           "1102804729261314"
+          ],
+          "sorcerer_stone_id": "7441933598335231",
+          "speed": 152,
+          "tenacity": 0.15,
+          "accuracy": 0.1,
+          "evasion": 0.1,
+          "affects_star_rating": true,
+          "bootstrap_unique_id": 8
+         }
+        ],
+        "encounter": "0"
+       }
+      ],
+      "is_human": true,
+      "player_id": 1,
+      "spells": [
+       {
+        "definition_id": "3563169681531629",
+        "effect_def_ids": [
+         "2175694710602002",
+         "5683499431149144",
+         "5523890166706704",
+         "1118784542431795",
+         "4979538735772250"
+        ],
+        "ability": {
+         "name_key": "CLOCK_TOWER_SPELL_NAME",
+         "icon": "icons_spells_cinderellas_carriage/spell_cinderellas_carriage",
+         "mana_cost": 4,
+         "activated": true,
+         "level": 4,
+         "shape": 1,
+         "target_enemy": true,
+         "add_unit_max_count": 1,
+         "add_unit": {
+          "definition_id": "4973278280981692",
+          "health": 120,
+          "radius": 1.0,
+          "name_key": "PUMPKIN_UNIT_NAME",
+          "asset_id": "spell_clock_tower/u_pumpkin",
+          "icon": "icons_spells_cinderellas_carriage/spell_cinderellas_carriage_lg",
+          "abilities": [
+           {
+            "name_key": "ABILITY_BASIC_GENERIC",
+            "level": 1,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "desc_key": "ABILITY_BASIC_GENERIC_DESC",
+            "ability_type": 1
+           }
+          ],
+          "unit_type": 1,
+          "health_percent": 1.0,
+          "affects_star_rating": true,
+          "bootstrap_unique_id": 20
+         },
+         "geo_id": "44",
+         "cast_area": 3,
+         "desc_key": "SPELL_CLOCKTOWER_DESC_03",
+         "balance_vars": [
+          2.0,
+          1.0,
+          0.3,
+          0.5,
+          1.0
+         ]
+        },
+        "power_rating": 30
+       },
+       {
+        "definition_id": "365488605016316",
+        "effect_def_ids": [
+         "8532020111459274",
+         "2685936273074190",
+         "310322564000047",
+         "6960279588130474"
+        ],
+        "ability": {
+         "name_key": "GOLDEN_HAMMER_SPELL_NAME",
+         "icon": "icons_spells_golden_hammer/spell_golden_hammer",
+         "mana_cost": 6,
+         "activated": true,
+         "level": 4,
+         "shape": 1,
+         "target_enemy": true,
+         "add_unit_max_count": 1,
+         "add_unit": {
+          "definition_id": "8398376374448397",
+          "attack_speed": 0.5,
+          "asset_id": "spell_golden_hammer/u_golden_hammer",
+          "icon": "icons_spells_golden_hammer/spell_golden_hammer_lg",
+          "unit_type": 1,
+          "health_percent": 1.0,
+          "affects_star_rating": true,
+          "bootstrap_unique_id": 21
+         },
+         "geo_id": "44",
+         "id": 1,
+         "cast_area": 1,
+         "desc_key": "SPELL_GOLDENHAMMER_DESC_02",
+         "balance_vars": [
+          0.25,
+          1.0,
+          0.3,
+          1.0,
+          1.0,
+          0.5
+         ]
+        },
+        "power_rating": 30
+       }
+      ],
+      "activity_trackers": [
+       {
+        "activity_id": "7302084992106933",
+        "tracker_id": "150720363151010",
+        "value": "1"
+       },
+       {
+        "activity_id": "502021085323252",
+        "tracker_id": "3724590359083860",
+        "value": "1"
+       },
+       {
+        "activity_id": "4515310606825679",
+        "tracker_id": "354625640707613"
+       },
+       {
+        "tracker_id": "2544107232433018"
+       }
+      ],
+      "player_level": 84,
+      "client_version": "24.2"
+     }
+    ],
+    "ruleset": 6,
+    "mutators": [
+     "3743078311862059",
+     "4424554285226317",
+     "520110136822529",
+     "4437725675583164"
+    ],
+    "exit_cinematic_override": "cin_raid_ursula_big_defeat/raid_ursula_big_defeat",
+    "event_cinematics": [
+     "cin_raid_ursula_big_special_defeat/raid_ursula_big_special_defeat"
+    ],
+    "view_cinematics_once": true,
+    "environments": [
+     {
+      "prefabs": [
+       "env_ursula_lair_entrance/env_ursula_lair_entrance"
+      ],
+      "map": {
+       "encounters": [
+        {
+         "id": "0",
+         "cinematic": "cin_boss_glut_ursula_lair_entrance/boss_glut_ursula_lair_entrance"
+        },
+        {
+         "id": "1",
+         "cinematic": "cin_boss_flotsam_jetsam_ursula_lair_entrance/boss_flotsam_jetsam_ursula_lair_entrance"
+        },
+        {
+         "id": "2",
+         "cinematic": "cin_boss_ursula_raid_ursula_lair/boss_ursula_raid_ursula_lair",
+         "battle_choices": [
+          {
+           "id": "2699982077071996",
+           "offer_description": "RAID_BATTLE_CHOICE_GRANT_HELPFUL_OFFER_DESC",
+           "offer_image": "raids_ursula/contract_large",
+           "offer_accepted_info_icon": "raids_ursula/contract_with_bg",
+           "offer_accepted_info_name": "RAID_BATTLE_CHOICE_URSULA_OFFER_ACCEPTED_INFO_NAME",
+           "offer_accepted_info_description": "RAID_BATTLE_CHOICE_GRANT_HELPFUL_OFFER_ACCEPTED_INFO_DESC",
+           "progress_description": "RAID_BATTLE_CHOICE_PROGRESS_DESC_FRACTION",
+           "offer_description_accept": "RAID_BATTLE_CHOICE_URSULA_GENERIC_OFFER_DESC_ACCEPT",
+           "offer_description_decline": "RAID_BATTLE_CHOICE_URSULA_GENERIC_OFFER_DESC_DECLINE"
+          },
+          {
+           "id": "2363963802716685",
+           "offer_description": "RAID_BATTLE_CHOICE_CRITICAL_STRIKES_OFFER_DESC",
+           "offer_image": "raids_ursula/contract_large",
+           "offer_accepted_info_icon": "raids_ursula/contract_with_bg",
+           "offer_accepted_info_name": "RAID_BATTLE_CHOICE_URSULA_OFFER_ACCEPTED_INFO_NAME",
+           "offer_accepted_info_description": "RAID_BATTLE_CHOICE_CRITICAL_STRIKES_OFFER_ACCEPTED_INFO_DESC",
+           "progress_description": "RAID_BATTLE_CHOICE_PROGRESS_DESC_FRACTION",
+           "offer_description_accept": "RAID_BATTLE_CHOICE_URSULA_GENERIC_OFFER_DESC_ACCEPT",
+           "offer_description_decline": "RAID_BATTLE_CHOICE_URSULA_GENERIC_OFFER_DESC_DECLINE"
+          },
+          {
+           "id": "7343052633890897",
+           "offer_description": "RAID_BATTLE_CHOICE_INFLICT_HARMFUL_OFFER_DESC",
+           "offer_image": "raids_ursula/contract_large",
+           "offer_accepted_info_icon": "raids_ursula/contract_with_bg",
+           "offer_accepted_info_name": "RAID_BATTLE_CHOICE_URSULA_OFFER_ACCEPTED_INFO_NAME",
+           "offer_accepted_info_description": "RAID_BATTLE_CHOICE_INFLICT_HARMFUL_OFFER_ACCEPTED_INFO_DESC",
+           "progress_description": "RAID_BATTLE_CHOICE_PROGRESS_DESC_FRACTION",
+           "offer_description_accept": "RAID_BATTLE_CHOICE_URSULA_GENERIC_OFFER_DESC_ACCEPT",
+           "offer_description_decline": "RAID_BATTLE_CHOICE_URSULA_GENERIC_OFFER_DESC_DECLINE"
+          },
+          {
+           "id": "664722095646077",
+           "offer_description": "RAID_BATTLE_CHOICE_PARTY_HEALTH_LIMIT_OFFER_DESC",
+           "offer_image": "raids_ursula/contract_large",
+           "offer_accepted_info_icon": "raids_ursula/contract_with_bg",
+           "offer_accepted_info_name": "RAID_BATTLE_CHOICE_URSULA_OFFER_ACCEPTED_INFO_NAME",
+           "offer_accepted_info_description": "RAID_BATTLE_CHOICE_PARTY_HEALTH_LIMIT_OFFER_ACCEPTED_INFO_DESC",
+           "progress_description": "RAID_BATTLE_CHOICE_PROGRESS_DESC_TEAMMATES",
+           "offer_description_accept": "RAID_BATTLE_CHOICE_URSULA_GENERIC_OFFER_DESC_ACCEPT",
+           "offer_description_decline": "RAID_BATTLE_CHOICE_URSULA_GENERIC_OFFER_DESC_DECLINE"
+          },
+          {
+           "id": "41944481186137",
+           "offer_description": "RAID_BATTLE_CHOICE_RESTORE_HEALTH_OFFER_DESC",
+           "offer_image": "raids_ursula/contract_large",
+           "offer_accepted_info_icon": "raids_ursula/contract_with_bg",
+           "offer_accepted_info_name": "RAID_BATTLE_CHOICE_URSULA_OFFER_ACCEPTED_INFO_NAME",
+           "offer_accepted_info_description": "RAID_BATTLE_CHOICE_RESTORE_HEALTH_OFFER_ACCEPTED_INFO_DESC",
+           "progress_description": "RAID_BATTLE_CHOICE_PROGRESS_DESC_FRACTION",
+           "offer_description_accept": "RAID_BATTLE_CHOICE_URSULA_GENERIC_OFFER_DESC_ACCEPT",
+           "offer_description_decline": "RAID_BATTLE_CHOICE_URSULA_GENERIC_OFFER_DESC_DECLINE"
+          }
+         ],
+         "exit_cinematic": "cin_exit_cinematic_ursula_raid_ursula_lair/exit_cinematic_ursula_raid_ursula_lair"
+        },
+        {
+         "id": "3",
+         "cinematic": "cin_boss_ursula_big_ursula_battle/boss_ursula_big_ursula_battle"
+        }
+       ]
+      },
+      "spawn_points": [
+       {
+        "unit_type": 1,
+        "x": -7.49,
+        "y": 2.71
+       },
+       {
+        "x": -3.012942,
+        "y": 3.017646
+       },
+       {
+        "x": -6.35,
+        "y": 0.46
+       },
+       {
+        "unit_type": 1,
+        "x": -3.33,
+        "y": 1.13
+       },
+       {
+        "unit_type": 1,
+        "x": -6.31,
+        "y": -1.47
+       },
+       {
+        "x": -2.518095,
+        "y": -0.7434636
+       },
+       {
+        "x": -5.214,
+        "y": -2.83
+       },
+       {
+        "unit_type": 1,
+        "x": -2.66,
+        "y": -2.35
+       },
+       {
+        "unit_type": 1,
+        "x": -5.2,
+        "y": -5.23
+       },
+       {
+        "x": -2.317058,
+        "y": -3.997642
+       },
+       {
+        "team_id": 1,
+        "unit_type": 1,
+        "x": 6.55,
+        "y": 6.5
+       },
+       {
+        "team_id": 1,
+        "x": 3.14,
+        "y": 6.69
+       },
+       {
+        "team_id": 1,
+        "x": 7.24,
+        "y": 6.26
+       },
+       {
+        "team_id": 1,
+        "unit_type": 1,
+        "x": 2.51,
+        "y": 2.52
+       },
+       {
+        "team_id": 1,
+        "unit_type": 1,
+        "x": 8.81,
+        "y": 2.79
+       },
+       {
+        "team_id": 1,
+        "x": 3.225735,
+        "y": 0.2
+       },
+       {
+        "team_id": 1,
+        "x": 7.85,
+        "y": 0.43
+       },
+       {
+        "team_id": 1,
+        "unit_type": 1,
+        "x": 3.48,
+        "y": -1.99
+       },
+       {
+        "team_id": 1,
+        "unit_type": 1,
+        "x": 8.18,
+        "y": -1.5
+       },
+       {
+        "team_id": 1,
+        "x": 3.4,
+        "y": -4.25
+       }
+      ]
+     },
+     {},
+     {
+      "prefabs": [
+       "env_ursula_lair/env_ursula_lair"
+      ],
+      "map": {},
+      "spawn_points": [
+       {
+        "unit_type": 1,
+        "x": -7.49,
+        "y": 2.71
+       },
+       {
+        "x": -3.012942,
+        "y": 3.017646
+       },
+       {
+        "x": -6.35,
+        "y": 0.46
+       },
+       {
+        "unit_type": 1,
+        "x": -3.33,
+        "y": 1.13
+       },
+       {
+        "unit_type": 1,
+        "x": -6.31,
+        "y": -1.47
+       },
+       {
+        "x": -2.518095,
+        "y": -0.7434636
+       },
+       {
+        "x": -5.214,
+        "y": -2.83
+       },
+       {
+        "unit_type": 1,
+        "x": -2.66,
+        "y": -2.35
+       },
+       {
+        "unit_type": 1,
+        "x": -5.2,
+        "y": -5.23
+       },
+       {
+        "x": -2.317058,
+        "y": -3.997642
+       },
+       {
+        "team_id": 1,
+        "unit_type": 1,
+        "x": 6.55,
+        "y": 8.54
+       },
+       {
+        "team_id": 1,
+        "x": 3.14,
+        "y": 6.69
+       },
+       {
+        "team_id": 1,
+        "x": 7.24,
+        "y": 6.26
+       },
+       {
+        "team_id": 1,
+        "unit_type": 1,
+        "x": 2.51,
+        "y": 2.52
+       },
+       {
+        "team_id": 1,
+        "unit_type": 1,
+        "x": 8.81,
+        "y": 2.79
+       },
+       {
+        "team_id": 1,
+        "x": 3.225735,
+        "y": 0.2
+       },
+       {
+        "team_id": 1,
+        "x": 7.85,
+        "y": 0.43
+       },
+       {
+        "team_id": 1,
+        "unit_type": 1,
+        "x": 3.48,
+        "y": -1.99
+       },
+       {
+        "team_id": 1,
+        "unit_type": 1,
+        "x": 8.18,
+        "y": -3.54
+       },
+       {
+        "team_id": 1,
+        "x": 3.4,
+        "y": -4.25
+       }
+      ]
+     },
+     {
+      "prefabs": [
+       "env_ursula_battle/env_ursula_battle"
+      ],
+      "map": {},
+      "spawn_points": [
+       {
+        "unit_type": 1,
+        "x": -5.89,
+        "y": 4.24
+       },
+       {
+        "x": -3.01,
+        "y": 5.48
+       },
+       {
+        "x": -5.77,
+        "y": 1.05
+       },
+       {
+        "unit_type": 1,
+        "x": -0.24,
+        "y": 2.3
+       },
+       {
+        "unit_type": 1,
+        "x": -6.0,
+        "y": -1.43
+       },
+       {
+        "x": -2.518,
+        "y": -1.7
+       },
+       {
+        "x": -5.067,
+        "y": -3.61
+       },
+       {
+        "unit_type": 1,
+        "x": 0.33,
+        "y": -4.76
+       },
+       {
+        "unit_type": 1,
+        "x": -4.98,
+        "y": -7.18
+       },
+       {
+        "x": -2.32,
+        "y": -6.26
+       },
+       {
+        "team_id": 1,
+        "unit_type": 1,
+        "x": 11.83,
+        "y": 10.26
+       },
+       {
+        "team_id": 1,
+        "x": 7.84,
+        "y": 10.94
+       },
+       {
+        "team_id": 1,
+        "x": 11.98,
+        "y": 5.6
+       },
+       {
+        "team_id": 1,
+        "unit_type": 1,
+        "x": 7.83,
+        "y": 6.32
+       },
+       {
+        "team_id": 1,
+        "unit_type": 1,
+        "x": 12.03,
+        "y": -0.98
+       },
+       {
+        "team_id": 1,
+        "x": 7.255734,
+        "y": -1.55
+       },
+       {
+        "team_id": 1,
+        "x": 12.94,
+        "y": -9.16
+       },
+       {
+        "team_id": 1,
+        "unit_type": 1,
+        "x": 9.58,
+        "y": -9.22
+       },
+       {
+        "team_id": 1,
+        "unit_type": 1,
+        "x": 13.68,
+        "y": -13.23
+       },
+       {
+        "team_id": 1,
+        "x": 10.46,
+        "y": -12.02
+       }
+      ]
+     }
+    ],
+    "mutator_data_list": [
+     {
+      "mutator": "3743078311862059"
+     },
+     {
+      "mutator": "4424554285226317"
+     },
+     {
+      "mutator": "520110136822529"
+     },
+     {
+      "mutator": "4437725675583164"
+     }
+    ],
+    "default_speed": 2.0,
+    "game_mode": 13
+   }
+  }
+ ]
+}

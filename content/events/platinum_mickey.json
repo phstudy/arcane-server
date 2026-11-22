@@ -1,0 +1,676 @@
+{
+ "enemy_health": [
+  {
+   "unit": 2985813494016716,
+   "level": 65,
+   "rarity": 6,
+   "gear_tier": 6,
+   "health": 49000
+  },
+  {
+   "unit": 6001881699133543,
+   "level": 70,
+   "rarity": 7,
+   "gear_tier": 7,
+   "health": 5200
+  },
+  {
+   "unit": 8478790837286655,
+   "level": 70,
+   "rarity": 7,
+   "gear_tier": 7,
+   "health": 5200
+  }
+ ],
+ "group": 5612093870412200,
+ "events": [
+  {
+   "key_prefix": "EVENT_202305_SENSATIONALSIX_2_C",
+   "tier_keys": {
+    "name": "{prefix}_L{i}_NAME",
+    "description": "{prefix}_AURA_DESC",
+    "recommended": "{prefix}_L{i}_RECOMMENDED"
+   },
+   "event": {
+    "contentId": "5612093870412203",
+    "name": "EVENT_202305_SENSATIONALSIX_2_C_NAME",
+    "description": "",
+    "image": "icons_scheduled_events_event_mickey_mouse_anniversary/event_platinum_mickey_bookcover",
+    "sortOrder": "500",
+    "battleLimit": "2",
+    "battleLimitRefreshCost": [
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     }
+    ],
+    "marqueeImage": "icons_scheduled_events_event_mickey_mouse_anniversary/event_platinum_mickey_home_portal",
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "allowInstantBattle": true,
+    "showcaseItems": [
+     "4754287633354664",
+     "13",
+     "31"
+    ],
+    "eventGroupId": "5612093870412200"
+   },
+   "roster": {
+    "bosses": [
+     2985813494016716
+    ],
+    "companions": [
+     553069276713467,
+     8079429168333959,
+     3793696733556542,
+     3959670576127254
+    ],
+    "minions": [
+     6001881699133543,
+     8348586603157706,
+     8478790837286655,
+     3460959051686191
+    ]
+   },
+   "mutators": [
+    7004812947970086
+   ],
+   "battle_environment": "env_disneyland/env_disneyland",
+   "tiers": [
+    {
+     "restriction": 6973079725864377,
+     "enemy_stats": {
+      "rarity": 5,
+      "gear_tier": 5
+     },
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 0
+     },
+     "persistent": {
+      "id": 4754287633354664,
+      "min": 1,
+      "max": 3,
+      "goal": 35
+     },
+     "rewards": [
+      {
+       "id": 4754287633354664,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 25,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 75000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 1590669936229313,
+     "enemy_stats": {
+      "rarity": 5,
+      "gear_tier": 5
+     },
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 1
+     },
+     "persistent": {
+      "id": 4754287633354664,
+      "min": 1,
+      "max": 3,
+      "goal": 50
+     },
+     "rewards": [
+      {
+       "id": 4754287633354664,
+       "count": 10,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 25,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 100000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 4872433320153411,
+     "enemy_stats": {
+      "rarity": 6,
+      "gear_tier": 6
+     },
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 2
+     },
+     "persistent": {
+      "id": 4754287633354664,
+      "min": 1,
+      "max": 3,
+      "goal": 65
+     },
+     "rewards": [
+      {
+       "id": 4754287633354664,
+       "count": 10,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 50,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 125000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 4470541028112840,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 7
+     },
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 3
+     },
+     "persistent": {
+      "id": 4754287633354664,
+      "min": 1,
+      "max": 3,
+      "goal": 40
+     },
+     "rewards": [
+      {
+       "id": 4754287633354664,
+       "count": 15,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 50,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 150000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 6897690549831592,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 8
+     },
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 4
+     },
+     "persistent": {
+      "id": 4754287633354664,
+      "min": 1,
+      "max": 3,
+      "goal": 45
+     },
+     "rewards": [
+      {
+       "id": 4754287633354664,
+       "count": 15,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 75,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 175000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 8025851319432931,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 8
+     },
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 4
+     },
+     "persistent": {
+      "id": 4754287633354664,
+      "min": 1,
+      "max": 3,
+      "goal": 45
+     },
+     "rewards": [
+      {
+       "id": 4754287633354664,
+       "count": 20,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 100,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 200000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 1405219953099186,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 8
+     },
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 4
+     },
+     "persistent": {
+      "id": 4754287633354664,
+      "min": 1,
+      "max": 3,
+      "goal": 45
+     },
+     "rewards": [
+      {
+       "id": 8967654172352926,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 4754287633354664,
+       "count": 25,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 100,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 250000,
+       "first_time": true
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "waves": [
+  {
+   "event": 5612093870412203,
+   "tier": 0,
+   "name_key": "EVENT_202305_SENSATIONALSIX_2_C_L0_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 2985813494016716,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 553069276713467,
+       "count": 1
+      },
+      {
+       "id": 8079429168333959,
+       "count": 1
+      },
+      {
+       "id": 3793696733556542,
+       "count": 1
+      },
+      {
+       "id": 3959670576127254,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412203,
+   "tier": 1,
+   "name_key": "EVENT_202305_SENSATIONALSIX_2_C_L1_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 2985813494016716,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 553069276713467,
+       "count": 1
+      },
+      {
+       "id": 8079429168333959,
+       "count": 1
+      },
+      {
+       "id": 3793696733556542,
+       "count": 1
+      },
+      {
+       "id": 3959670576127254,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412203,
+   "tier": 2,
+   "name_key": "EVENT_202305_SENSATIONALSIX_2_C_L2_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 2985813494016716,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 553069276713467,
+       "count": 1
+      },
+      {
+       "id": 8079429168333959,
+       "count": 1
+      },
+      {
+       "id": 3793696733556542,
+       "count": 1
+      },
+      {
+       "id": 3959670576127254,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412203,
+   "tier": 3,
+   "name_key": "EVENT_202305_SENSATIONALSIX_2_C_L3_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 6001881699133543,
+       "count": 4
+      },
+      {
+       "id": 8348586603157706,
+       "count": 2
+      },
+      {
+       "id": 8478790837286655,
+       "count": 2
+      },
+      {
+       "id": 3460959051686191,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 2985813494016716,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 553069276713467,
+       "count": 1
+      },
+      {
+       "id": 8079429168333959,
+       "count": 1
+      },
+      {
+       "id": 3793696733556542,
+       "count": 1
+      },
+      {
+       "id": 3959670576127254,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412203,
+   "tier": 4,
+   "name_key": "EVENT_202305_SENSATIONALSIX_2_C_L4_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 6001881699133543,
+       "count": 4
+      },
+      {
+       "id": 8348586603157706,
+       "count": 2
+      },
+      {
+       "id": 8478790837286655,
+       "count": 2
+      },
+      {
+       "id": 3460959051686191,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 2985813494016716,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 553069276713467,
+       "count": 1
+      },
+      {
+       "id": 8079429168333959,
+       "count": 1
+      },
+      {
+       "id": 3793696733556542,
+       "count": 1
+      },
+      {
+       "id": 3959670576127254,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412203,
+   "tier": 5,
+   "name_key": "EVENT_202305_SENSATIONALSIX_2_C_L5_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 3368663937660261,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 8397384975680519,
+       "count": 1
+      },
+      {
+       "id": 6495565017355218,
+       "count": 1
+      },
+      {
+       "id": 5702473871132078,
+       "count": 1
+      },
+      {
+       "id": 8218042807117239,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 2985813494016716,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 553069276713467,
+       "count": 1
+      },
+      {
+       "id": 8079429168333959,
+       "count": 1
+      },
+      {
+       "id": 3793696733556542,
+       "count": 1
+      },
+      {
+       "id": 3959670576127254,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412203,
+   "tier": 6,
+   "name_key": "EVENT_202305_SENSATIONALSIX_2_C_L6_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 3368663937660261,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 8397384975680519,
+       "count": 1
+      },
+      {
+       "id": 6495565017355218,
+       "count": 1
+      },
+      {
+       "id": 5702473871132078,
+       "count": 1
+      },
+      {
+       "id": 8218042807117239,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 2985813494016716,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 553069276713467,
+       "count": 1
+      },
+      {
+       "id": 8079429168333959,
+       "count": 1
+      },
+      {
+       "id": 3793696733556542,
+       "count": 1
+      },
+      {
+       "id": 3959670576127254,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,5945 @@
+{
+ "tiers": [
+  {
+   "rewards": [
+    {
+     "id": 6007669198623430,
+     "count": 5,
+     "guaranteed": true
+    },
+    {
+     "id": 31,
+     "count": 20,
+     "guaranteed": true
+    },
+    {
+     "id": 6550451848721449,
+     "count": 8000,
+     "guaranteed": true
+    },
+    {
+     "id": 13,
+     "count": 40000,
+     "guaranteed": true
+    },
+    {
+     "id": 2847867582043978,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 3218172284382800,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 6951631747773325,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 946211064381860,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 5769964381242354,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 5291641157276905,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 1912819287917109,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T6"
+    },
+    {
+     "id": 7531001555655815,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 5699237400778713,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 5482566426068031,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 2945137569183386,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 7348799202535797,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 5162107487910141,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 1592982407478990,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T5"
+    },
+    {
+     "id": 1171951539086697,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 381128010781287,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 1982171667398936,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 1309933315662882,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 6800123140996211,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 1953976074197953,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 709706751642707,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 2568938000304629,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 2123928786263283,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 614246367194545,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 8899817382276452,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T4",
+     "kind": "EXTRACT"
+    },
+    {
+     "id": 2231922868182045,
+     "count": 20,
+     "guaranteed": true,
+     "tier": "T4"
+    }
+   ]
+  },
+  {
+   "rewards": [
+    {
+     "id": 6007669198623430,
+     "count": 10,
+     "guaranteed": true
+    },
+    {
+     "id": 31,
+     "count": 25,
+     "guaranteed": true
+    },
+    {
+     "id": 6550451848721449,
+     "count": 10000,
+     "guaranteed": true
+    },
+    {
+     "id": 13,
+     "count": 50000,
+     "guaranteed": true
+    },
+    {
+     "id": 5244517875827521,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Kingdom"
+    },
+    {
+     "id": 5007928754488376,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 8869673823359433,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 5846564639122529,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Oceanic",
+     "kind": "FRAGMENT"
+    },
+    {
+     "id": 7805279466589735,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Wilds"
+    },
+    {
+     "id": 4777799326225302,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Mythical"
+    },
+    {
+     "id": 1888778738265051,
+     "count": 4,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Kingdom"
+    },
+    {
+     "id": 850208742744554,
+     "count": 4,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 1470570542306690,
+     "count": 4,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 4418899181502134,
+     "count": 4,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Oceanic"
+    },
+    {
+     "id": 4039906260161852,
+     "count": 4,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Wilds"
+    },
+    {
+     "id": 61420127502096,
+     "count": 4,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Mythical"
+    },
+    {
+     "id": 688058347776208,
+     "count": 6,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Kingdom"
+    },
+    {
+     "id": 2315083388706788,
+     "count": 6,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 4358575851543797,
+     "count": 6,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 3273522970652656,
+     "count": 6,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Oceanic"
+    },
+    {
+     "id": 1243822768094124,
+     "count": 6,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Wilds"
+    },
+    {
+     "id": 445000062595958,
+     "count": 6,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Mythical"
+    },
+    {
+     "id": 6150067015294539,
+     "count": 6,
+     "guaranteed": false,
+     "tier": "T8"
+    },
+    {
+     "id": 6647048309780056,
+     "count": 6,
+     "guaranteed": false,
+     "tier": "T8"
+    },
+    {
+     "id": 852411359203467,
+     "count": 6,
+     "guaranteed": false,
+     "tier": "T8"
+    },
+    {
+     "id": 6875764007480445,
+     "count": 6,
+     "guaranteed": false,
+     "tier": "T8"
+    },
+    {
+     "id": 4369788399977460,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T8",
+     "kind": "FRAGMENT"
+    },
+    {
+     "id": 2837430640993882,
+     "count": 6,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Kingdom"
+    },
+    {
+     "id": 6293042867967939,
+     "count": 6,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 5007297434955457,
+     "count": 6,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 5013026604767424,
+     "count": 6,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Oceanic"
+    },
+    {
+     "id": 2858171621115265,
+     "count": 6,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Wilds"
+    },
+    {
+     "id": 8331674240806556,
+     "count": 6,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Mythical"
+    },
+    {
+     "id": 7349058565226736,
+     "count": 8,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Kingdom"
+    },
+    {
+     "id": 4359736493162385,
+     "count": 8,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 588268337288021,
+     "count": 8,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 3776051996157214,
+     "count": 8,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Oceanic"
+    },
+    {
+     "id": 3814210565101861,
+     "count": 8,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Wilds"
+    },
+    {
+     "id": 41029234094493,
+     "count": 8,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Mythical"
+    },
+    {
+     "id": 3931251970451828,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 3472383282447130,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 2250334176732565,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 1069215306988145,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 3599205445649723,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 1065552266535671,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 3502828265659883,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 8357825478883744,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 5554127934867117,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 1267377765834148,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 2697375100403211,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 2289339325233397,
+     "count": 20,
+     "guaranteed": false,
+     "kind": "FRAGMENT"
+    }
+   ]
+  },
+  {
+   "rewards": [
+    {
+     "id": 6007669198623430,
+     "count": 15,
+     "guaranteed": true
+    },
+    {
+     "id": 31,
+     "count": 30,
+     "guaranteed": true
+    },
+    {
+     "id": 6550451848721449,
+     "count": 13000,
+     "guaranteed": true
+    },
+    {
+     "id": 13,
+     "count": 60000,
+     "guaranteed": true
+    },
+    {
+     "id": 8604977032062054,
+     "count": 8,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Kingdom"
+    },
+    {
+     "id": 8913171428406633,
+     "count": 8,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 1904748650123661,
+     "count": 8,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 4712479035600090,
+     "count": 8,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Oceanic"
+    },
+    {
+     "id": 7615146959201564,
+     "count": 8,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Wilds"
+    },
+    {
+     "id": 3092806621678282,
+     "count": 8,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Mythical"
+    },
+    {
+     "id": 4862258822291922,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Kingdom"
+    },
+    {
+     "id": 5951993912477667,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 2062145710309085,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 619729525454767,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Oceanic"
+    },
+    {
+     "id": 875449444174533,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Wilds"
+    },
+    {
+     "id": 7383683372387905,
+     "count": 5,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Mythical"
+    },
+    {
+     "id": 427747406257828,
+     "count": 6,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Kingdom"
+    },
+    {
+     "id": 8765117133843739,
+     "count": 6,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 2889674857777363,
+     "count": 6,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 5683818111839929,
+     "count": 6,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Oceanic"
+    },
+    {
+     "id": 4237909406454967,
+     "count": 6,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Wilds"
+    },
+    {
+     "id": 8280541071260774,
+     "count": 6,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Mythical"
+    },
+    {
+     "id": 1557138466985463,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T9"
+    },
+    {
+     "id": 226264687141207,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T9"
+    },
+    {
+     "id": 1807108998037522,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T9"
+    },
+    {
+     "id": 1239872369227317,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T9"
+    },
+    {
+     "id": 2818598818592570,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T9",
+     "kind": "FRAGMENT"
+    },
+    {
+     "id": 5244517875827521,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Kingdom"
+    },
+    {
+     "id": 5007928754488376,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 8869673823359433,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 5846564639122529,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Oceanic",
+     "kind": "FRAGMENT"
+    },
+    {
+     "id": 7805279466589735,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Wilds"
+    },
+    {
+     "id": 4777799326225302,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Mythical"
+    },
+    {
+     "id": 1888778738265051,
+     "count": 8,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Kingdom"
+    },
+    {
+     "id": 850208742744554,
+     "count": 8,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 1470570542306690,
+     "count": 8,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 4418899181502134,
+     "count": 8,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Oceanic"
+    },
+    {
+     "id": 4039906260161852,
+     "count": 8,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Wilds"
+    },
+    {
+     "id": 61420127502096,
+     "count": 8,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Mythical"
+    },
+    {
+     "id": 688058347776208,
+     "count": 12,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Kingdom"
+    },
+    {
+     "id": 2315083388706788,
+     "count": 12,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 4358575851543797,
+     "count": 12,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 3273522970652656,
+     "count": 12,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Oceanic"
+    },
+    {
+     "id": 1243822768094124,
+     "count": 12,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Wilds"
+    },
+    {
+     "id": 445000062595958,
+     "count": 12,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Mythical"
+    },
+    {
+     "id": 6150067015294539,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T8"
+    },
+    {
+     "id": 6647048309780056,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T8"
+    },
+    {
+     "id": 852411359203467,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T8"
+    },
+    {
+     "id": 6875764007480445,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T8"
+    },
+    {
+     "id": 4369788399977460,
+     "count": 50,
+     "guaranteed": false,
+     "tier": "T8",
+     "kind": "FRAGMENT"
+    },
+    {
+     "id": 2837430640993882,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Kingdom"
+    },
+    {
+     "id": 6293042867967939,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 5007297434955457,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 5013026604767424,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Oceanic"
+    },
+    {
+     "id": 2858171621115265,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Wilds"
+    },
+    {
+     "id": 8331674240806556,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Mythical"
+    },
+    {
+     "id": 7349058565226736,
+     "count": 12,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Kingdom"
+    },
+    {
+     "id": 4359736493162385,
+     "count": 12,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 588268337288021,
+     "count": 12,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 3776051996157214,
+     "count": 12,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Oceanic"
+    },
+    {
+     "id": 3814210565101861,
+     "count": 12,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Wilds"
+    },
+    {
+     "id": 41029234094493,
+     "count": 12,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Mythical"
+    },
+    {
+     "id": 3931251970451828,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 3472383282447130,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 2250334176732565,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 1069215306988145,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 3599205445649723,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 1065552266535671,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 3502828265659883,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 8357825478883744,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 5554127934867117,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 1267377765834148,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 2697375100403211,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 2289339325233397,
+     "count": 20,
+     "guaranteed": false,
+     "kind": "FRAGMENT"
+    }
+   ]
+  },
+  {
+   "rewards": [
+    {
+     "id": 6007669198623430,
+     "count": 20,
+     "guaranteed": true
+    },
+    {
+     "id": 31,
+     "count": 60,
+     "guaranteed": true
+    },
+    {
+     "id": 6550451848721449,
+     "count": 15000,
+     "guaranteed": true
+    },
+    {
+     "id": 13,
+     "count": 80000,
+     "guaranteed": true
+    },
+    {
+     "id": 8604977032062054,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Kingdom"
+    },
+    {
+     "id": 8913171428406633,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 1904748650123661,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 4712479035600090,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Oceanic"
+    },
+    {
+     "id": 7615146959201564,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Wilds"
+    },
+    {
+     "id": 3092806621678282,
+     "count": 10,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Mythical"
+    },
+    {
+     "id": 4862258822291922,
+     "count": 8,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Kingdom"
+    },
+    {
+     "id": 5951993912477667,
+     "count": 8,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 2062145710309085,
+     "count": 8,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 619729525454767,
+     "count": 8,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Oceanic"
+    },
+    {
+     "id": 875449444174533,
+     "count": 8,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Wilds"
+    },
+    {
+     "id": 7383683372387905,
+     "count": 8,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Mythical"
+    },
+    {
+     "id": 427747406257828,
+     "count": 12,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Kingdom"
+    },
+    {
+     "id": 8765117133843739,
+     "count": 12,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 2889674857777363,
+     "count": 12,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 5683818111839929,
+     "count": 12,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Oceanic"
+    },
+    {
+     "id": 4237909406454967,
+     "count": 12,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Wilds"
+    },
+    {
+     "id": 8280541071260774,
+     "count": 12,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Mythical"
+    },
+    {
+     "id": 1557138466985463,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T9"
+    },
+    {
+     "id": 226264687141207,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T9"
+    },
+    {
+     "id": 1807108998037522,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T9"
+    },
+    {
+     "id": 1239872369227317,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T9"
+    },
+    {
+     "id": 2818598818592570,
+     "count": 35,
+     "guaranteed": false,
+     "tier": "T9",
+     "kind": "FRAGMENT"
+    },
+    {
+     "id": 5244517875827521,
+     "count": 18,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Kingdom"
+    },
+    {
+     "id": 5007928754488376,
+     "count": 18,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 8869673823359433,
+     "count": 18,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 5846564639122529,
+     "count": 18,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Oceanic",
+     "kind": "FRAGMENT"
+    },
+    {
+     "id": 7805279466589735,
+     "count": 18,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Wilds"
+    },
+    {
+     "id": 4777799326225302,
+     "count": 18,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Mythical"
+    },
+    {
+     "id": 1888778738265051,
+     "count": 12,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Kingdom"
+    },
+    {
+     "id": 850208742744554,
+     "count": 12,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 1470570542306690,
+     "count": 12,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 4418899181502134,
+     "count": 12,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Oceanic"
+    },
+    {
+     "id": 4039906260161852,
+     "count": 12,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Wilds"
+    },
+    {
+     "id": 61420127502096,
+     "count": 12,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Mythical"
+    },
+    {
+     "id": 688058347776208,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Kingdom"
+    },
+    {
+     "id": 2315083388706788,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 4358575851543797,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 3273522970652656,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Oceanic"
+    },
+    {
+     "id": 1243822768094124,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Wilds"
+    },
+    {
+     "id": 445000062595958,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Mythical"
+    },
+    {
+     "id": 6150067015294539,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T8"
+    },
+    {
+     "id": 6647048309780056,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T8"
+    },
+    {
+     "id": 852411359203467,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T8"
+    },
+    {
+     "id": 6875764007480445,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T8"
+    },
+    {
+     "id": 4369788399977460,
+     "count": 50,
+     "guaranteed": false,
+     "tier": "T8",
+     "kind": "FRAGMENT"
+    },
+    {
+     "id": 2837430640993882,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Kingdom"
+    },
+    {
+     "id": 6293042867967939,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 5007297434955457,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 5013026604767424,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Oceanic"
+    },
+    {
+     "id": 2858171621115265,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Wilds"
+    },
+    {
+     "id": 8331674240806556,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Mythical"
+    },
+    {
+     "id": 7349058565226736,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Kingdom"
+    },
+    {
+     "id": 4359736493162385,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 588268337288021,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 3776051996157214,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Oceanic"
+    },
+    {
+     "id": 3814210565101861,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Wilds"
+    },
+    {
+     "id": 41029234094493,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T7",
+     "region": "Mythical"
+    },
+    {
+     "id": 3931251970451828,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 3472383282447130,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 2250334176732565,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 1069215306988145,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 3599205445649723,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 1065552266535671,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 3502828265659883,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 8357825478883744,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 5554127934867117,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 1267377765834148,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 2697375100403211,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T7",
+     "kind": "ESSENCE"
+    },
+    {
+     "id": 2289339325233397,
+     "count": 25,
+     "guaranteed": false,
+     "kind": "FRAGMENT"
+    }
+   ]
+  },
+  {
+   "rewards": [
+    {
+     "id": 6007669198623430,
+     "count": 25,
+     "guaranteed": true
+    },
+    {
+     "id": 31,
+     "count": 85,
+     "guaranteed": true
+    },
+    {
+     "id": 6550451848721449,
+     "count": 20000,
+     "guaranteed": true
+    },
+    {
+     "id": 13,
+     "count": 100000,
+     "guaranteed": true
+    },
+    {
+     "id": 8604977032062054,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Kingdom"
+    },
+    {
+     "id": 8913171428406633,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 1904748650123661,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 4712479035600090,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Oceanic"
+    },
+    {
+     "id": 7615146959201564,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Wilds"
+    },
+    {
+     "id": 3092806621678282,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Mythical"
+    },
+    {
+     "id": 4862258822291922,
+     "count": 12,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Kingdom"
+    },
+    {
+     "id": 5951993912477667,
+     "count": 12,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 2062145710309085,
+     "count": 12,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 619729525454767,
+     "count": 12,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Oceanic"
+    },
+    {
+     "id": 875449444174533,
+     "count": 12,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Wilds"
+    },
+    {
+     "id": 7383683372387905,
+     "count": 12,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Mythical"
+    },
+    {
+     "id": 427747406257828,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Kingdom"
+    },
+    {
+     "id": 8765117133843739,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 2889674857777363,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 5683818111839929,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Oceanic"
+    },
+    {
+     "id": 4237909406454967,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Wilds"
+    },
+    {
+     "id": 8280541071260774,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Mythical"
+    },
+    {
+     "id": 1557138466985463,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T9"
+    },
+    {
+     "id": 226264687141207,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T9"
+    },
+    {
+     "id": 1807108998037522,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T9"
+    },
+    {
+     "id": 1239872369227317,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T9"
+    },
+    {
+     "id": 2818598818592570,
+     "count": 50,
+     "guaranteed": false,
+     "tier": "T9",
+     "kind": "FRAGMENT"
+    },
+    {
+     "id": 5244517875827521,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Kingdom"
+    },
+    {
+     "id": 5007928754488376,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 8869673823359433,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 5846564639122529,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Oceanic",
+     "kind": "FRAGMENT"
+    },
+    {
+     "id": 7805279466589735,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Wilds"
+    },
+    {
+     "id": 4777799326225302,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Mythical"
+    },
+    {
+     "id": 1888778738265051,
+     "count": 16,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Kingdom"
+    },
+    {
+     "id": 850208742744554,
+     "count": 16,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 1470570542306690,
+     "count": 16,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 4418899181502134,
+     "count": 16,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Oceanic"
+    },
+    {
+     "id": 4039906260161852,
+     "count": 16,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Wilds"
+    },
+    {
+     "id": 61420127502096,
+     "count": 16,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Mythical"
+    },
+    {
+     "id": 688058347776208,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Kingdom"
+    },
+    {
+     "id": 2315083388706788,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 4358575851543797,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 3273522970652656,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Oceanic"
+    },
+    {
+     "id": 1243822768094124,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Wilds"
+    },
+    {
+     "id": 445000062595958,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Mythical"
+    },
+    {
+     "id": 6150067015294539,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T8"
+    },
+    {
+     "id": 6647048309780056,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T8"
+    },
+    {
+     "id": 852411359203467,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T8"
+    },
+    {
+     "id": 6875764007480445,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T8"
+    },
+    {
+     "id": 4369788399977460,
+     "count": 75,
+     "guaranteed": false,
+     "tier": "T8",
+     "kind": "FRAGMENT"
+    }
+   ]
+  },
+  {
+   "rewards": [
+    {
+     "id": 8059117853946758,
+     "count": 5,
+     "guaranteed": true
+    },
+    {
+     "id": 6007669198623430,
+     "count": 30,
+     "guaranteed": true
+    },
+    {
+     "id": 31,
+     "count": 150,
+     "guaranteed": true
+    },
+    {
+     "id": 6550451848721449,
+     "count": 25000,
+     "guaranteed": true
+    },
+    {
+     "id": 13,
+     "count": 150000,
+     "guaranteed": true
+    },
+    {
+     "id": 8604977032062054,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Kingdom"
+    },
+    {
+     "id": 8913171428406633,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 1904748650123661,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 4712479035600090,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Oceanic"
+    },
+    {
+     "id": 7615146959201564,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Wilds"
+    },
+    {
+     "id": 3092806621678282,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Mythical"
+    },
+    {
+     "id": 4862258822291922,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Kingdom"
+    },
+    {
+     "id": 5951993912477667,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 2062145710309085,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 619729525454767,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Oceanic"
+    },
+    {
+     "id": 875449444174533,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Wilds"
+    },
+    {
+     "id": 7383683372387905,
+     "count": 15,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Mythical"
+    },
+    {
+     "id": 427747406257828,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Kingdom"
+    },
+    {
+     "id": 8765117133843739,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 2889674857777363,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 5683818111839929,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Oceanic"
+    },
+    {
+     "id": 4237909406454967,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Wilds"
+    },
+    {
+     "id": 8280541071260774,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T9",
+     "region": "Mythical"
+    },
+    {
+     "id": 1557138466985463,
+     "count": 35,
+     "guaranteed": false,
+     "tier": "T9"
+    },
+    {
+     "id": 226264687141207,
+     "count": 35,
+     "guaranteed": false,
+     "tier": "T9"
+    },
+    {
+     "id": 1807108998037522,
+     "count": 35,
+     "guaranteed": false,
+     "tier": "T9"
+    },
+    {
+     "id": 1239872369227317,
+     "count": 35,
+     "guaranteed": false,
+     "tier": "T9"
+    },
+    {
+     "id": 2818598818592570,
+     "count": 100,
+     "guaranteed": false,
+     "tier": "T9",
+     "kind": "FRAGMENT"
+    },
+    {
+     "id": 5244517875827521,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Kingdom"
+    },
+    {
+     "id": 5007928754488376,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 8869673823359433,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 5846564639122529,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Oceanic",
+     "kind": "FRAGMENT"
+    },
+    {
+     "id": 7805279466589735,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Wilds"
+    },
+    {
+     "id": 4777799326225302,
+     "count": 25,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Mythical"
+    },
+    {
+     "id": 1888778738265051,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Kingdom"
+    },
+    {
+     "id": 850208742744554,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 1470570542306690,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 4418899181502134,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Oceanic"
+    },
+    {
+     "id": 4039906260161852,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Wilds"
+    },
+    {
+     "id": 61420127502096,
+     "count": 20,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Mythical"
+    },
+    {
+     "id": 688058347776208,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Kingdom"
+    },
+    {
+     "id": 2315083388706788,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Downtown Hero"
+    },
+    {
+     "id": 4358575851543797,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Downtown Villain"
+    },
+    {
+     "id": 3273522970652656,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Oceanic"
+    },
+    {
+     "id": 1243822768094124,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Wilds"
+    },
+    {
+     "id": 445000062595958,
+     "count": 30,
+     "guaranteed": false,
+     "tier": "T8",
+     "region": "Mythical"
+    },
+    {
+     "id": 6150067015294539,
+     "count": 35,
+     "guaranteed": false,
+     "tier": "T8"
+    },
+    {
+     "id": 6647048309780056,
+     "count": 35,
+     "guaranteed": false,
+     "tier": "T8"
+    },
+    {
+     "id": 852411359203467,
+     "count": 35,
+     "guaranteed": false,
+     "tier": "T8"
+    },
+    {
+     "id": 6875764007480445,
+     "count": 35,
+     "guaranteed": false,
+     "tier": "T8"
+    },
+    {
+     "id": 4369788399977460,
+     "count": 100,
+     "guaranteed": false,
+     "tier": "T8",
+     "kind": "FRAGMENT"
+    }
+   ]
+  }
+ ],
+ "exchange": [
+  {
+   "id": 8913171428406633,
+   "count": 5,
+   "cost": 10500
+  },
+  {
+   "id": 1904748650123661,
+   "count": 5,
+   "cost": 10500
+  },
+  {
+   "id": 8604977032062054,
+   "count": 5,
+   "cost": 10500
+  },
+  {
+   "id": 3092806621678282,
+   "count": 5,
+   "cost": 10500
+  },
+  {
+   "id": 4712479035600090,
+   "count": 5,
+   "cost": 10500
+  },
+  {
+   "id": 7615146959201564,
+   "count": 5,
+   "cost": 10500
+  },
+  {
+   "id": 2889674857777363,
+   "count": 5,
+   "cost": 7700
+  },
+  {
+   "id": 427747406257828,
+   "count": 5,
+   "cost": 7700
+  },
+  {
+   "id": 5683818111839929,
+   "count": 5,
+   "cost": 7700
+  },
+  {
+   "id": 2062145710309085,
+   "count": 5,
+   "cost": 7700
+  },
+  {
+   "id": 7383683372387905,
+   "count": 5,
+   "cost": 7700
+  },
+  {
+   "id": 619729525454767,
+   "count": 5,
+   "cost": 7700
+  },
+  {
+   "id": 1807108998037522,
+   "count": 5,
+   "cost": 7700
+  },
+  {
+   "id": 1557138466985463,
+   "count": 5,
+   "cost": 7700
+  },
+  {
+   "id": 226264687141207,
+   "count": 5,
+   "cost": 7700
+  },
+  {
+   "id": 1239872369227317,
+   "count": 5,
+   "cost": 7700
+  },
+  {
+   "id": 2818598818592570,
+   "count": 5,
+   "cost": 5250
+  },
+  {
+   "id": 2847867582043978,
+   "count": 5,
+   "cost": 5050
+  },
+  {
+   "id": 3218172284382800,
+   "count": 5,
+   "cost": 5050
+  },
+  {
+   "id": 6951631747773325,
+   "count": 5,
+   "cost": 5050
+  },
+  {
+   "id": 5291641157276905,
+   "count": 5,
+   "cost": 5050
+  },
+  {
+   "id": 946211064381860,
+   "count": 5,
+   "cost": 5050
+  },
+  {
+   "id": 5699237400778713,
+   "count": 5,
+   "cost": 4200
+  },
+  {
+   "id": 5482566426068031,
+   "count": 5,
+   "cost": 4200
+  },
+  {
+   "id": 2945137569183386,
+   "count": 5,
+   "cost": 4200
+  },
+  {
+   "id": 2945137569183386,
+   "count": 5,
+   "cost": 4200
+  },
+  {
+   "id": 7348799202535797,
+   "count": 5,
+   "cost": 4200
+  },
+  {
+   "id": 7531001555655815,
+   "count": 5,
+   "cost": 4200
+  },
+  {
+   "id": 2568938000304629,
+   "count": 5,
+   "cost": 2800
+  },
+  {
+   "id": 1171951539086697,
+   "count": 5,
+   "cost": 2800
+  },
+  {
+   "id": 381128010781287,
+   "count": 5,
+   "cost": 2800
+  },
+  {
+   "id": 1982171667398936,
+   "count": 5,
+   "cost": 2800
+  },
+  {
+   "id": 6800123140996211,
+   "count": 5,
+   "cost": 2800
+  },
+  {
+   "id": 4010306196179359,
+   "count": 2,
+   "cost": 21000
+  },
+  {
+   "id": 6221535176831871,
+   "count": 5,
+   "cost": 26250
+  },
+  {
+   "id": 3883066061505188,
+   "count": 5,
+   "cost": 12250
+  },
+  {
+   "id": 133,
+   "count": 10,
+   "cost": 7000
+  },
+  {
+   "id": 1221031952295618,
+   "count": 10,
+   "cost": 5600
+  },
+  {
+   "id": 1548088886590623,
+   "count": 10,
+   "cost": 2800
+  },
+  {
+   "id": 248562853627691,
+   "count": 15,
+   "cost": 2100
+  }
+ ],
+ "battles": [
+  {
+   "raid_id": 4541597850103889,
+   "tier": 5,
+   "battle_index": 0,
+   "response": {
+    "persistent_units_per_encounter": [
+     2,
+     3,
+     1
+    ],
+    "boss_units": [
+     "3177706750873368",
+     "8567270607763598"
+    ]
+   },
+   "bootstrap": {
+    "environment": {
+     "prefabs": [
+      "env_jafar_phase_1/env_jafar_phase_1"
+     ],
+     "map": {
+      "encounters": [
+       {
+        "id": "0",
+        "cinematic": "cin_boss_jafar_raid_phase_01/boss_jafar_raid_phase_01"
+       },
+       {
+        "id": "1",
+        "cinematic": "cin_boss_jafar_raid_phase_02_cut/boss_jafar_raid_phase_02_cut"
+       },
+       {
+        "id": "2",
+        "cinematic": "cin_boss_jafar_raid_phase_03/boss_jafar_raid_phase_03",
+        "battle_choices": [
+         {
+          "id": "7947964671341921",
+          "offer_description": "RAID_BATTLE_CHOICE_JAFAR_CRITICAL_STRIKES_OFFER_DESC",
+          "offer_image": "raids_geniejafar/contract_large_jafar",
+          "offer_accepted_info_icon": "raids_geniejafar/contract_jafar_with_bg",
+          "offer_accepted_info_name": "RAID_BATTLE_CHOICE_JAFAR_OFFER_ACCEPTED_INFO_NAME",
+          "offer_accepted_info_description": "RAID_BATTLE_CHOICE_JAFAR_CRITICAL_STRIKES_OFFER_ACCEPTED_INFO_DESC",
+          "progress_description": "RAID_BATTLE_CHOICE_JAFAR_PROGRESS_DESC_FRACTION",
+          "offer_description_accept": "RAID_BATTLE_CHOICE_JAFAR_GENERIC_OFFER_DESC_ACCEPT",
+          "offer_description_decline": "RAID_BATTLE_CHOICE_JAFAR_GENERIC_OFFER_DESC_DECLINE"
+         },
+         {
+          "id": "5845980127659063",
+          "offer_description": "RAID_BATTLE_CHOICE_JAFAR_GRANT_HELPFUL_OFFER_DESC",
+          "offer_image": "raids_geniejafar/contract_large_jafar",
+          "offer_accepted_info_icon": "raids_geniejafar/contract_jafar_with_bg",
+          "offer_accepted_info_name": "RAID_BATTLE_CHOICE_JAFAR_OFFER_ACCEPTED_INFO_NAME",
+          "offer_accepted_info_description": "RAID_BATTLE_CHOICE_JAFAR_GRANT_HELPFUL_OFFER_ACCEPTED_INFO_DESC",
+          "progress_description": "RAID_BATTLE_CHOICE_JAFAR_PROGRESS_DESC_FRACTION",
+          "offer_description_accept": "RAID_BATTLE_CHOICE_JAFAR_GENERIC_OFFER_DESC_ACCEPT",
+          "offer_description_decline": "RAID_BATTLE_CHOICE_JAFAR_GENERIC_OFFER_DESC_DECLINE"
+         },
+         {
+          "id": "2391547984531068",
+          "offer_description": "RAID_BATTLE_CHOICE_JAFAR_INFLICT_HARMFUL_OFFER_DESC",
+          "offer_image": "raids_geniejafar/contract_large_jafar",
+          "offer_accepted_info_icon": "raids_geniejafar/contract_jafar_with_bg",
+          "offer_accepted_info_name": "RAID_BATTLE_CHOICE_JAFAR_OFFER_ACCEPTED_INFO_NAME",
+          "offer_accepted_info_description": "RAID_BATTLE_CHOICE_JAFAR_INFLICT_HARMFUL_OFFER_ACCEPTED_INFO_DESC",
+          "progress_description": "RAID_BATTLE_CHOICE_JAFAR_PROGRESS_DESC_FRACTION",
+          "offer_description_accept": "RAID_BATTLE_CHOICE_JAFAR_GENERIC_OFFER_DESC_ACCEPT",
+          "offer_description_decline": "RAID_BATTLE_CHOICE_JAFAR_GENERIC_OFFER_DESC_DECLINE"
+         },
+         {
+          "id": "304933229048900",
+          "offer_description": "RAID_BATTLE_CHOICE_JAFAR_PARTY_HEALTH_LIMIT_OFFER_DESC",
+          "offer_image": "raids_geniejafar/contract_large_jafar",
+          "offer_accepted_info_icon": "raids_geniejafar/contract_jafar_with_bg",
+          "offer_accepted_info_name": "RAID_BATTLE_CHOICE_JAFAR_OFFER_ACCEPTED_INFO_NAME",
+          "offer_accepted_info_description": "RAID_BATTLE_CHOICE_JAFAR_PARTY_HEALTH_LIMIT_OFFER_ACCEPTED_INFO_DESC",
+          "progress_description": "RAID_BATTLE_CHOICE_JAFAR_PROGRESS_DESC_TEAMMATES",
+          "offer_description_accept": "RAID_BATTLE_CHOICE_JAFAR_GENERIC_OFFER_DESC_ACCEPT",
+          "offer_description_decline": "RAID_BATTLE_CHOICE_JAFAR_GENERIC_OFFER_DESC_DECLINE"
+         },
+         {
+          "id": "977146704138999",
+          "offer_description": "RAID_BATTLE_CHOICE_JAFAR_RESTORE_HEALTH_OFFER_DESC",
+          "offer_image": "raids_geniejafar/contract_large_jafar",
+          "offer_accepted_info_icon": "raids_geniejafar/contract_jafar_with_bg",
+          "offer_accepted_info_name": "RAID_BATTLE_CHOICE_JAFAR_OFFER_ACCEPTED_INFO_NAME",
+          "offer_accepted_info_description": "RAID_BATTLE_CHOICE_JAFAR_RESTORE_HEALTH_OFFER_ACCEPTED_INFO_DESC",
+          "progress_description": "RAID_BATTLE_CHOICE_JAFAR_PROGRESS_DESC_FRACTION",
+          "offer_description_accept": "RAID_BATTLE_CHOICE_JAFAR_GENERIC_OFFER_DESC_ACCEPT",
+          "offer_description_decline": "RAID_BATTLE_CHOICE_JAFAR_GENERIC_OFFER_DESC_DECLINE"
+         }
+        ]
+       }
+      ]
+     },
+     "spawn_points": [
+      {
+       "unit_type": 1,
+       "x": -5.79,
+       "y": 2.71
+      },
+      {
+       "x": -1.312942,
+       "y": 3.017646
+      },
+      {
+       "x": -4.65,
+       "y": 0.46
+      },
+      {
+       "unit_type": 1,
+       "x": -1.63,
+       "y": 1.13
+      },
+      {
+       "unit_type": 1,
+       "x": -4.61,
+       "y": -1.47
+      },
+      {
+       "x": -0.818095,
+       "y": -0.7434636
+      },
+      {
+       "x": -3.514,
+       "y": -2.83
+      },
+      {
+       "unit_type": 1,
+       "x": -0.96,
+       "y": -2.35
+      },
+      {
+       "unit_type": 1,
+       "x": -3.5,
+       "y": -5.23
+      },
+      {
+       "x": -0.617058,
+       "y": -3.997642
+      },
+      {
+       "team_id": 1,
+       "unit_type": 1,
+       "x": 8.25,
+       "y": 6.5
+      },
+      {
+       "team_id": 1,
+       "x": 4.84,
+       "y": 6.69
+      },
+      {
+       "team_id": 1,
+       "x": 8.94,
+       "y": 6.26
+      },
+      {
+       "team_id": 1,
+       "unit_type": 1,
+       "x": 4.21,
+       "y": 2.52
+      },
+      {
+       "team_id": 1,
+       "unit_type": 1,
+       "x": 10.51,
+       "y": 2.79
+      },
+      {
+       "team_id": 1,
+       "x": 4.925735,
+       "y": 0.2
+      },
+      {
+       "team_id": 1,
+       "x": 9.55,
+       "y": 0.43
+      },
+      {
+       "team_id": 1,
+       "unit_type": 1,
+       "x": 5.18,
+       "y": -1.99
+      },
+      {
+       "team_id": 1,
+       "unit_type": 1,
+       "x": 9.88,
+       "y": -1.5
+      },
+      {
+       "team_id": 1,
+       "x": 5.1,
+       "y": -4.25
+      }
+     ]
+    },
+    "players": [
+     {
+      "ai_content_id": "5046914655393013",
+      "squads": [
+       {
+        "units": [
+         {
+          "definition_id": "3177706750873368",
+          "persistent_id": 1,
+          "rarity": 7,
+          "level": 90,
+          "gear_tier": 10,
+          "offense": 7170,
+          "defense": 1143,
+          "health": 120684509,
+          "crit_chance": 0.05,
+          "crit_power": 1.5,
+          "attack_speed": 0.15,
+          "walk_speed": 1.4,
+          "attack_range": 1.0,
+          "radius": 1.0,
+          "name_key": "SORCERERJAFAR_UNIT_NAME",
+          "asset_id": "unit_jafar_sorcerer/u_jafar_sorcerer",
+          "icon": "icons_units_jaffar_sorcerer/portrait_jafar_sorcerer",
+          "effect_def_ids": [
+           "4970493767026840",
+           "6590624603607355",
+           "6511557215159411",
+           "89236042574670",
+           "3062358805407303",
+           "6519758347582352",
+           "1066264112866252",
+           "5678880638329528",
+           "1853807275714544",
+           "1545883202520885",
+           "5216879364034302",
+           "3728128076112583",
+           "2116925829533251",
+           "1943883175438621",
+           "2129864794861695",
+           "5548673502116422",
+           "1639470269877795",
+           "2442930119782334",
+           "6762630588527536",
+           "7316767242750667",
+           "158583686115714",
+           "1141922972480657",
+           "6357544456482728",
+           "5619379986940562",
+           "7153200370794134",
+           "1586699809979698",
+           "3510881186329170",
+           "8569445903722054",
+           "6708832534852021",
+           "8393518397742498",
+           "750197601937813",
+           "1387965507013471"
+          ],
+          "abilities": [
+           {
+            "name_key": "SORCERERJAFAR_BASIC_NAME",
+            "icon": "icons_units_jaffar_sorcerer/Jafar_sorcerer_basic",
+            "activated": true,
+            "level": 5,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "desc_key": "SORCERERJAFAR_BASIC_DESC",
+            "ability_type": 1,
+            "balance_vars": [
+             3585.0
+            ]
+           },
+           {
+            "name_key": "SORCERERJAFAR_SPECIALA_NAME",
+            "icon": "icons_units_jaffar_sorcerer/Jafar_sorcerer_special_a",
+            "mana_cost": 4,
+            "activated": true,
+            "level": 5,
+            "shape": 1,
+            "target_enemy": true,
+            "add_unit_max_count": 12,
+            "add_unit": {
+             "definition_id": "4935182549087472",
+             "walk_speed": 2.0,
+             "attack_range": 1.0,
+             "radius": 1.0,
+             "name_key": "BOXTRAP_UNIT_NAME",
+             "asset_id": "unit_box_trap/u_box_trap",
+             "icon": "icons_units_jaffar_sorcerer/jafar_orb_attack",
+             "effect_def_ids": [
+              "132184257096654",
+              "4825467927124083"
+             ],
+             "abilities": [
+              {
+               "name_key": "BOXTRAP_ABILBASIC_NAME",
+               "icon": "icons_units_jaffar_sorcerer/jafar_orb_attack",
+               "level": 1,
+               "shape": 1,
+               "target_enemy": true,
+               "geo_id": "44",
+               "ability_type": 1
+              }
+             ],
+             "unit_type": 1,
+             "health_percent": 1.0,
+             "affects_star_rating": true,
+             "bootstrap_unique_id": 15
+            },
+            "geo_id": "44",
+            "id": 1,
+            "desc_key": "SORCERERJAFAR_SPECIALA_DESC",
+            "initial_mana": 4,
+            "ability_type": 3,
+            "balance_vars": [
+             6273.75,
+             2.0,
+             0.3,
+             0.5,
+             1.0,
+             1.0
+            ],
+            "sort_order": 1
+           },
+           {
+            "name_key": "SORCERERJAFAR_SPECIALB_NAME",
+            "icon": "icons_units_jaffar_sorcerer/Jafar_sorcerer_special_b",
+            "mana_cost": 3,
+            "activated": true,
+            "level": 5,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 2,
+            "desc_key": "SORCERERJAFAR_SPECIALB_DESC",
+            "initial_mana": 3,
+            "ability_type": 3,
+            "balance_vars": [
+             8514.375,
+             1.0,
+             2.0,
+             1.0,
+             2.0,
+             0.5,
+             1.0
+            ],
+            "sort_order": 2
+           },
+           {
+            "name_key": "SORCERERJAFAR_PASSIVEA_NAME",
+            "icon": "icons_units_jaffar_sorcerer/Jafar_sorcerer_passive_a",
+            "mana_cost": 5,
+            "level": 5,
+            "shape": 1,
+            "geo_id": "44",
+            "id": 3,
+            "desc_key": "SORCERERJAFAR_PASSIVEA_DESC",
+            "initial_mana": 2,
+            "ability_type": 4,
+            "balance_vars": [
+             1.0,
+             3.0
+            ],
+            "sort_order": 3,
+            "special_icon_path": "icons_inventory_pin/death_skull"
+           },
+           {
+            "name_key": "SORCERERJAFAR_PASSIVEB_NAME",
+            "icon": "icons_units_jaffar_sorcerer/Jafar_sorcerer_passive_b",
+            "mana_cost": 3,
+            "level": 5,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 4,
+            "desc_key": "SORCERERJAFAR_PASSIVEB_DESC",
+            "initial_mana": 1,
+            "ability_type": 4,
+            "balance_vars": [
+             5078.5107,
+             0.1,
+             1.0,
+             2.0,
+             10.0,
+             0.05,
+             0.05
+            ],
+            "sort_order": 4
+           },
+           {
+            "name_key": "SORCERERJAFAR_PASSIVEC_NAME",
+            "icon": "icons_units_jaffar_sorcerer/Jafar_sorcerer_passive_c",
+            "level": 5,
+            "shape": 1,
+            "target_enemy": true,
+            "add_unit_max_count": 12,
+            "add_unit": {
+             "definition_id": "4935182549087472",
+             "walk_speed": 2.0,
+             "attack_range": 1.0,
+             "radius": 1.0,
+             "name_key": "BOXTRAP_UNIT_NAME",
+             "asset_id": "unit_box_trap/u_box_trap",
+             "icon": "icons_units_jaffar_sorcerer/jafar_orb_attack",
+             "effect_def_ids": [
+              "132184257096654",
+              "4825467927124083"
+             ],
+             "abilities": [
+              {
+               "name_key": "BOXTRAP_ABILBASIC_NAME",
+               "icon": "icons_units_jaffar_sorcerer/jafar_orb_attack",
+               "level": 1,
+               "shape": 1,
+               "target_enemy": true,
+               "geo_id": "44",
+               "ability_type": 1
+              }
+             ],
+             "unit_type": 1,
+             "health_percent": 1.0,
+             "affects_star_rating": true,
+             "bootstrap_unique_id": 16
+            },
+            "geo_id": "44",
+            "id": 5,
+            "desc_key": "SORCERERJAFAR_PASSIVEC_DESC",
+            "ability_type": 4,
+            "balance_vars": [
+             0.1,
+             0.1,
+             0.1,
+             0.1,
+             1.0
+            ],
+            "sort_order": 5
+           },
+           {
+            "name_key": "RAID_ABILPASSIVE_NAME",
+            "icon": "icons_units_shared/raid_passive",
+            "level": 5,
+            "shape": 1,
+            "geo_id": "44",
+            "id": 6,
+            "desc_key": "RAID_PASSIVE_DESC_01",
+            "ability_type": 4,
+            "sort_order": 6
+           }
+          ],
+          "health_percent": 1.0,
+          "power_rating": 1412,
+          "unit_slot_type": 1,
+          "category_ids": [
+           "614606076824576",
+           "5960529125021754",
+           "4419393874676815",
+           "6950932538148189"
+          ],
+          "speed": 160,
+          "potency": 0.5,
+          "tenacity": 0.35,
+          "accuracy": 0.5,
+          "affects_star_rating": true,
+          "bootstrap_unique_id": 17
+         },
+         {
+          "definition_id": "8567270607763598",
+          "persistent_id": 2,
+          "rarity": 7,
+          "level": 90,
+          "gear_tier": 10,
+          "offense": 5501,
+          "defense": 750,
+          "health": 66661503,
+          "crit_chance": 0.05,
+          "crit_power": 1.5,
+          "attack_speed": 0.15,
+          "walk_speed": 1.4,
+          "attack_range": 1.0,
+          "radius": 1.0,
+          "name_key": "IAGO_UNIT_NAME",
+          "asset_id": "unit_iago_jafar/u_iago_jafar",
+          "icon": "icons_units_iago/portrait_iago",
+          "effect_def_ids": [
+           "259085275438956",
+           "4106934499698430",
+           "8322890948715382",
+           "1855670479512836",
+           "89236042574670",
+           "990161411824972",
+           "5636303348551044",
+           "6102231565740470",
+           "8054778496867419",
+           "750197601937813",
+           "2148377102444629",
+           "3629201476447613",
+           "3062358805407303",
+           "2129864794861695",
+           "8393518397742498",
+           "8617750339659251",
+           "1628615166823336",
+           "158583686115714",
+           "1141922972480657",
+           "5400169403002250",
+           "5619379986940562",
+           "2136121938757738",
+           "4635800218622683",
+           "910880794105618",
+           "6708832534852021",
+           "3510881186329170",
+           "5444326312663696",
+           "8569445903722054",
+           "5678880638329528",
+           "1853807275714544",
+           "1387965507013471"
+          ],
+          "abilities": [
+           {
+            "name_key": "IAGO_BASIC_NAME",
+            "icon": "icons_units_iago/iago_basic",
+            "activated": true,
+            "level": 5,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "desc_key": "IAGO_BASIC_DESC",
+            "ability_type": 1,
+            "balance_vars": [
+             2750.5,
+             3300.6,
+             2.0,
+             1.0
+            ]
+           },
+           {
+            "name_key": "IAGO_SPECIALA_NAME",
+            "icon": "icons_units_iago/iago_special_a",
+            "mana_cost": 3,
+            "activated": true,
+            "level": 5,
+            "shape": 1,
+            "target_enemy": true,
+            "add_unit_max_count": 12,
+            "add_unit": {
+             "definition_id": "4935182549087472",
+             "walk_speed": 2.0,
+             "attack_range": 1.0,
+             "radius": 1.0,
+             "name_key": "BOXTRAP_UNIT_NAME",
+             "asset_id": "unit_box_trap/u_box_trap",
+             "icon": "icons_units_jaffar_sorcerer/jafar_orb_attack",
+             "effect_def_ids": [
+              "132184257096654",
+              "4825467927124083"
+             ],
+             "abilities": [
+              {
+               "name_key": "BOXTRAP_ABILBASIC_NAME",
+               "icon": "icons_units_jaffar_sorcerer/jafar_orb_attack",
+               "level": 1,
+               "shape": 1,
+               "target_enemy": true,
+               "geo_id": "44",
+               "ability_type": 1
+              }
+             ],
+             "unit_type": 1,
+             "health_percent": 1.0,
+             "affects_star_rating": true,
+             "bootstrap_unique_id": 18
+            },
+            "geo_id": "44",
+            "id": 1,
+            "desc_key": "IAGO_SPECIALA_DESC",
+            "initial_mana": 3,
+            "ability_type": 3,
+            "balance_vars": [
+             1.0,
+             3.0,
+             2.0,
+             1.0,
+             1.0,
+             1.0
+            ],
+            "sort_order": 1
+           },
+           {
+            "name_key": "IAGO_SPECIALB_NAME",
+            "icon": "icons_units_iago/iago_special_b",
+            "mana_cost": 4,
+            "activated": true,
+            "level": 5,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 2,
+            "desc_key": "IAGO_SPECIALB_DESC",
+            "initial_mana": 3,
+            "ability_type": 3,
+            "balance_vars": [
+             5930.628,
+             4.0
+            ],
+            "sort_order": 2
+           },
+           {
+            "name_key": "IAGO_PASSIVEA_NAME",
+            "icon": "icons_units_iago/iago_passive_a",
+            "mana_cost": 2,
+            "activated": true,
+            "level": 5,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 3,
+            "desc_key": "IAGO_PASSIVEA_DESC",
+            "initial_mana": 2,
+            "ability_type": 4,
+            "balance_vars": [
+             1.0,
+             1.0
+            ],
+            "sort_order": 3
+           },
+           {
+            "name_key": "IAGO_PASSIVEB_NAME",
+            "icon": "icons_units_iago/iago_passive_b",
+            "level": 5,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 4,
+            "desc_key": "IAGO_PASSIVEB_DESC",
+            "ability_type": 4,
+            "balance_vars": [
+             2200.4001,
+             4.0,
+             0.4,
+             1.0
+            ],
+            "sort_order": 5
+           },
+           {
+            "name_key": "RAID_ABILPASSIVE_NAME",
+            "icon": "icons_units_shared/raid_passive",
+            "level": 5,
+            "shape": 1,
+            "geo_id": "44",
+            "id": 5,
+            "desc_key": "RAID_PASSIVE_DESC_01",
+            "ability_type": 4,
+            "sort_order": 6
+           }
+          ],
+          "health_percent": 1.0,
+          "power_rating": 1377,
+          "unit_slot_type": 1,
+          "subtitle_key": "SORCERERJAFAR_SUBTITLE",
+          "category_ids": [
+           "614606076824576",
+           "5495262680796735",
+           "4419393874676815",
+           "6950932538148189"
+          ],
+          "speed": 156,
+          "potency": 0.5,
+          "tenacity": 0.35,
+          "accuracy": 0.45,
+          "evasion": 0.05,
+          "affects_star_rating": true,
+          "bootstrap_unique_id": 19
+         }
+        ],
+        "encounter": "0",
+        "spawn_order": [
+         5,
+         7
+        ]
+       },
+       {
+        "units": [
+         {
+          "definition_id": "2037503257915521",
+          "persistent_id": 3,
+          "rarity": 7,
+          "level": 90,
+          "gear_tier": 10,
+          "offense": 7837,
+          "defense": 1299,
+          "health": 129740265,
+          "recovery": 10,
+          "crit_chance": 0.05,
+          "crit_power": 1.5,
+          "attack_speed": 0.15,
+          "walk_speed": 1.4,
+          "attack_range": 1.0,
+          "radius": 1.0,
+          "name_key": "COBRAJAFAR_UNIT_NAME",
+          "asset_id": "unit_jafar_snake/u_jafar_snake",
+          "icon": "icons_units_jaffar_cobra_raid/portrait_jafar_cobra",
+          "effect_def_ids": [
+           "4002663730710555",
+           "2419719315541553",
+           "8223934445905178",
+           "3770970109729374",
+           "4369612963526123",
+           "8927228107202191",
+           "6922060588664433",
+           "5814535469201367",
+           "6444104950179088",
+           "705771857900324",
+           "114717708110362",
+           "2580619852984311",
+           "7912971455094611",
+           "1252722414437793",
+           "2553374769973832",
+           "782780395784979",
+           "4607438489769159",
+           "3625607702678362",
+           "2627808045428810",
+           "1559186275137043",
+           "3219176022130698",
+           "3254113086575181",
+           "3510881186329170",
+           "7678751071731469",
+           "5375945778136139",
+           "1810438002653217",
+           "1751205359840539",
+           "5607093412473936",
+           "8374562359097273",
+           "8707327795364456",
+           "8356536131707130",
+           "5367808674294061"
+          ],
+          "abilities": [
+           {
+            "name_key": "COBRAJAFAR_BASIC_NAME",
+            "icon": "icons_units_jaffar_cobra_raid/jafar_cobra_basic",
+            "activated": true,
+            "level": 5,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "desc_key": "COBRAJAFAR_BASIC_DESC",
+            "ability_type": 1,
+            "balance_vars": [
+             6857.375,
+             1.0,
+             0.05,
+             0.05
+            ]
+           },
+           {
+            "name_key": "COBRAJAFAR_SPECIALA_NAME",
+            "icon": "icons_units_jaffar_cobra_raid/jafar_cobra_special_a",
+            "mana_cost": 4,
+            "activated": true,
+            "level": 5,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 1,
+            "desc_key": "COBRAJAFAR_SPECIALA_DESC",
+            "initial_mana": 3,
+            "ability_type": 3,
+            "balance_vars": [
+             9306.4375,
+             2.0,
+             1.0,
+             0.3
+            ],
+            "sort_order": 1
+           },
+           {
+            "name_key": "COBRAJAFAR_SPECIALB_NAME",
+            "icon": "icons_units_jaffar_cobra_raid/jafar_cobra_special_b",
+            "mana_cost": 5,
+            "activated": true,
+            "level": 5,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 2,
+            "desc_key": "COBRAJAFAR_SPECIALB_DESC",
+            "initial_mana": 2,
+            "ability_type": 3,
+            "balance_vars": [
+             2.0,
+             0.4,
+             1.0,
+             2.0,
+             0.4
+            ],
+            "sort_order": 2
+           },
+           {
+            "name_key": "COBRAJAFAR_PASSIVEA_NAME",
+            "icon": "icons_units_jaffar_cobra_raid/jafar_cobra_passive_a",
+            "mana_cost": 4,
+            "level": 5,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 3,
+            "desc_key": "COBRAJAFAR_PASSIVEA_DESC",
+            "initial_mana": 4,
+            "ability_type": 4,
+            "balance_vars": [
+             84435.0,
+             0.3,
+             6857.375
+            ],
+            "sort_order": 3
+           },
+           {
+            "name_key": "COBRAJAFAR_PASSIVEB_NAME",
+            "icon": "icons_units_jaffar_cobra_raid/jafar_cobra_passive_b",
+            "mana_cost": 5,
+            "level": 5,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 4,
+            "desc_key": "COBRAJAFAR_PASSIVEB_DESC",
+            "ability_type": 4,
+            "balance_vars": [
+             2.0,
+             0.099999994
+            ],
+            "sort_order": 4,
+            "special_icon_path": "icons_inventory_pin/death_skull"
+           },
+           {
+            "name_key": "COBRAJAFAR_PASSIVEC_NAME",
+            "icon": "icons_units_jaffar_cobra_raid/jafar_cobra_passive_c",
+            "level": 5,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 5,
+            "desc_key": "COBRAJAFAR_PASSIVEC_DESC",
+            "ability_type": 4,
+            "balance_vars": [
+             5.0,
+             1.0,
+             0.5,
+             0.05,
+             0.05
+            ],
+            "sort_order": 5
+           },
+           {
+            "name_key": "COBRAJAFAR_PILLARSTATE_NAME",
+            "icon": "icons_units_jaffar_cobra_raid/jafar_cobra_pillar_state",
+            "level": 5,
+            "shape": 1,
+            "target_self": true,
+            "geo_id": "44",
+            "id": 6,
+            "desc_key": "COBRAJAFAR_PILLARSTATE_DESC",
+            "ability_type": 4,
+            "balance_vars": [
+             0.2,
+             0.1,
+             0.5,
+             0.6,
+             5.0
+            ],
+            "sort_order": 6
+           },
+           {
+            "name_key": "RAID_ABILPASSIVE_NAME",
+            "icon": "icons_units_shared/raid_passive",
+            "level": 5,
+            "shape": 1,
+            "geo_id": "44",
+            "id": 7,
+            "desc_key": "RAID_PASSIVE_DESC_01",
+            "ability_type": 4,
+            "sort_order": 7
+           }
+          ],
+          "health_percent": 1.0,
+          "power_rating": 1447,
+          "unit_slot_type": 1,
+          "category_ids": [
+           "614606076824576",
+           "5960529125021754",
+           "4419393874676815",
+           "6950932538148189"
+          ],
+          "speed": 160,
+          "potency": 0.5,
+          "tenacity": 0.383,
+          "accuracy": 0.45,
+          "affects_star_rating": true,
+          "bootstrap_unique_id": 20
+         },
+         {
+          "definition_id": "2488980299181578",
+          "persistent_id": 4,
+          "rarity": 7,
+          "level": 90,
+          "gear_tier": 10,
+          "defense": 750,
+          "health": 37069015,
+          "recovery": 12,
+          "crit_chance": 0.05,
+          "crit_power": 1.5,
+          "attack_speed": 0.15,
+          "walk_speed": 1.4,
+          "attack_range": 1.0,
+          "radius": 1.0,
+          "name_key": "COBRAJAFAR_RAID_PILLAR_LEFT",
+          "asset_id": "unit_jafar_pillar/u_jafar_pillar",
+          "icon": "icons_units_lythos/portrait_lythos",
+          "effect_def_ids": [
+           "900761295545123",
+           "5906939066898818",
+           "4352223627796688",
+           "5607093412473936",
+           "8374562359097273"
+          ],
+          "abilities": [
+           {
+            "name_key": "COBRAJAFAR_PILLARLEFT_PASSIVEA_NAME",
+            "icon": "icons_units_jaffar_cobra_raid/jafar_cobra_passive_a",
+            "level": 5,
+            "shape": 1,
+            "target_ally": true,
+            "geo_id": "44",
+            "desc_key": "COBRAJAFAR_PILLAR_PASSIVEA_DESC",
+            "ability_type": 4,
+            "balance_vars": [
+             0.6,
+             0.2,
+             0.5
+            ]
+           }
+          ],
+          "health_percent": 1.0,
+          "power_rating": 1202,
+          "category_ids": [
+           "614606076824576",
+           "185013331968872",
+           "4419393874676815",
+           "6950932538148189"
+          ],
+          "tenacity": 0.05,
+          "affects_star_rating": true,
+          "bootstrap_unique_id": 21,
+          "no_turns": true,
+          "override_spawn_index": 1
+         },
+         {
+          "definition_id": "6228024800933888",
+          "persistent_id": 5,
+          "rarity": 7,
+          "level": 90,
+          "gear_tier": 10,
+          "defense": 750,
+          "health": 37069015,
+          "recovery": 12,
+          "crit_chance": 0.05,
+          "crit_power": 1.5,
+          "attack_speed": 0.15,
+          "walk_speed": 1.4,
+          "attack_range": 1.0,
+          "radius": 1.0,
+          "name_key": "COBRAJAFAR_RAID_PILLAR_RIGHT",
+          "asset_id": "unit_jafar_pillar/u_jafar_pillar_02",
+          "icon": "icons_units_lythos/portrait_lythos",
+          "effect_def_ids": [
+           "900761295545123",
+           "5906939066898818",
+           "4352223627796688",
+           "5607093412473936",
+           "8374562359097273"
+          ],
+          "abilities": [
+           {
+            "name_key": "COBRAJAFAR_PILLARRIGHT_PASSIVEA_NAME",
+            "icon": "icons_units_jaffar_cobra_raid/jafar_cobra_passive_a",
+            "level": 5,
+            "shape": 1,
+            "target_ally": true,
+            "geo_id": "44",
+            "desc_key": "COBRAJAFAR_PILLAR_PASSIVEA_DESC",
+            "ability_type": 4,
+            "balance_vars": [
+             0.6,
+             0.2,
+             0.5
+            ]
+           }
+          ],
+          "health_percent": 1.0,
+          "power_rating": 1202,
+          "category_ids": [
+           "614606076824576",
+           "185013331968872",
+           "4419393874676815",
+           "6950932538148189"
+          ],
+          "speed": 26,
+          "potency": 0.173,
+          "tenacity": 0.223,
+          "affects_star_rating": true,
+          "bootstrap_unique_id": 22,
+          "no_turns": true,
+          "override_spawn_index": 9
+         }
+        ],
+        "encounter": "1",
+        "spawn_order": [
+         5,
+         1,
+         9
+        ]
+       },
+       {
+        "units": [
+         {
+          "definition_id": "4605732967335868",
+          "persistent_id": 6,
+          "rarity": 7,
+          "level": 90,
+          "gear_tier": 10,
+          "offense": 6279,
+          "defense": 1000,
+          "health": 185343015,
+          "crit_chance": 0.05,
+          "crit_power": 1.5,
+          "attack_speed": 0.15,
+          "walk_speed": 1.4,
+          "attack_range": 1.0,
+          "radius": 1.0,
+          "name_key": "GENIEJAFAR_RAID_UNIT_NAME",
+          "asset_id": "unit_jafar_genie_raid/u_jafar_genie_raid",
+          "icon": "icons_units_jaffar_genie_raid/portrait_jaffar_genie_raid",
+          "effect_def_ids": [
+           "1585176286593318",
+           "893627527724347",
+           "5211610561369837",
+           "5460555287019133",
+           "942966902732239",
+           "4832439155114407",
+           "2992777891608707",
+           "8697513190500252",
+           "6815951007635705",
+           "2847590466913805",
+           "2206318919987386",
+           "5000088339348876",
+           "4212754230403823",
+           "4216948622371466",
+           "7328926995669128",
+           "1968331304995692",
+           "1247927904277052",
+           "1727022623238349",
+           "6116405086197479",
+           "1046326780280056",
+           "6599534637071561",
+           "3303493622502125",
+           "5853777658327959",
+           "5648767465306492",
+           "7405287671930759",
+           "3155167383685377"
+          ],
+          "abilities": [
+           {
+            "name_key": "GENIEJAFAR_RAID_BASIC_NAME",
+            "icon": "icons_units_jaffar_genie_raid/jaffar_genie_raid_basic",
+            "activated": true,
+            "level": 5,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "desc_key": "GENIEJAFAR_RAID_BASIC_DESC",
+            "ability_type": 1,
+            "balance_vars": [
+             2943.5952,
+             1.0,
+             10.0,
+             0.05,
+             0.05,
+             0.4,
+             3.0,
+             0.4,
+             0.25,
+             90.0
+            ]
+           },
+           {
+            "name_key": "GENIEJAFAR_RAID_SPECIALA_NAME",
+            "icon": "icons_units_jaffar_genie_raid/jaffar_genie_raid_special_a",
+            "mana_cost": 4,
+            "activated": true,
+            "level": 5,
+            "shape": 1,
+            "target_enemy": true,
+            "add_unit_max_count": 5,
+            "add_unit": {
+             "definition_id": "6345579464586391",
+             "walk_speed": 2.0,
+             "attack_range": 1.0,
+             "radius": 0.5,
+             "name_key": "GENIE_JAFAR_RAID_FIRST_ILLUSION_UNIT_NAME",
+             "asset_id": "unit_jafar_genie_raid/u_jafar_genie_clone",
+             "icon": "icons_units_jafar_genie/portrait_jafar_genie",
+             "effect_def_ids": [
+              "8282279003103932",
+              "1767955140313841",
+              "4964523350399475"
+             ],
+             "abilities": [
+              {
+               "name_key": "GENIE_JAFAR_RAID_FIRST_ILLUSION_BASIC_NAME",
+               "icon": "icons_units_jaffar_genie_raid/jaffar_genie_raid_basic",
+               "activated": true,
+               "level": 1,
+               "shape": 1,
+               "target_enemy": true,
+               "geo_id": "44",
+               "desc_key": "GENIE_JAFAR_RAID_FIRST_ILLUSION_BASIC_DESC_01",
+               "ability_type": 1
+              }
+             ],
+             "unit_type": 1,
+             "health_percent": 1.0,
+             "category_ids": [
+              "614606076824576",
+              "4419393874676815",
+              "5960529125021754"
+             ],
+             "affects_star_rating": true,
+             "bootstrap_unique_id": 23,
+             "override_spawn_index": 1
+            },
+            "geo_id": "44",
+            "id": 1,
+            "desc_key": "GENIEJAFAR_RAID_SPECIALA_DESC",
+            "initial_mana": 4,
+            "ability_type": 3,
+            "balance_vars": [
+             2.0,
+             2.0,
+             3139.5,
+             0.5,
+             1.0,
+             0.5,
+             2.0,
+             0.25,
+             0.25,
+             3139.5,
+             500.0,
+             15000.0,
+             90.0,
+             1.0
+            ],
+            "sort_order": 1
+           },
+           {
+            "name_key": "GENIEJAFAR_RAID_SPECIALB_NAME",
+            "icon": "icons_units_jaffar_genie_raid/jaffar_genie_raid_special_b",
+            "mana_cost": 7,
+            "activated": true,
+            "level": 5,
+            "shape": 1,
+            "target_enemy": true,
+            "add_unit_max_count": 5,
+            "add_unit": {
+             "definition_id": "8783185599985888",
+             "walk_speed": 2.0,
+             "attack_range": 1.0,
+             "radius": 0.5,
+             "name_key": "GENIE_JAFAR_RAID_SECOND_ILLUSION_UNIT_NAME",
+             "asset_id": "unit_jafar_genie_raid/u_jafar_genie_clone",
+             "icon": "icons_units_jafar_genie/portrait_jafar_genie",
+             "effect_def_ids": [
+              "8282279003103932",
+              "1767955140313841",
+              "4964523350399475"
+             ],
+             "abilities": [
+              {
+               "name_key": "GENIE_JAFAR_RAID_SECOND_ILLUSION_BASIC_NAME",
+               "icon": "icons_units_jaffar_genie_raid/jaffar_genie_raid_basic",
+               "activated": true,
+               "level": 1,
+               "shape": 1,
+               "target_enemy": true,
+               "geo_id": "44",
+               "desc_key": "GENIE_JAFAR_RAID_SECOND_ILLUSION_BASIC_DESC_01",
+               "ability_type": 1
+              }
+             ],
+             "unit_type": 1,
+             "health_percent": 1.0,
+             "category_ids": [
+              "614606076824576",
+              "4419393874676815",
+              "5960529125021754"
+             ],
+             "affects_star_rating": true,
+             "bootstrap_unique_id": 24,
+             "override_spawn_index": 9
+            },
+            "geo_id": "44",
+            "id": 2,
+            "desc_key": "GENIEJAFAR_RAID_SPECIALB_DESC",
+            "initial_mana": 5,
+            "ability_type": 3,
+            "balance_vars": [
+             2.0,
+             0.5,
+             2.0,
+             2.0,
+             3531.9375,
+             0.5,
+             3139.5,
+             0.05,
+             0.05,
+             7.0
+            ],
+            "sort_order": 2
+           },
+           {
+            "name_key": "GENIEJAFAR_RAID_PASSIVEA_NAME",
+            "icon": "icons_units_jaffar_genie_raid/jaffar_genie_raid_passive_a",
+            "level": 5,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 3,
+            "desc_key": "GENIEJAFAR_RAID_PASSIVEA_DESC",
+            "ability_type": 4,
+            "balance_vars": [
+             0.3,
+             0.25,
+             0.5
+            ],
+            "sort_order": 3
+           },
+           {
+            "name_key": "GENIEJAFAR_RAID_PASSIVEB_NAME",
+            "icon": "icons_units_jaffar_genie_raid/jaffar_genie_raid_passive_b",
+            "mana_cost": 5,
+            "level": 5,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 4,
+            "desc_key": "GENIEJAFAR_RAID_PASSIVEB_DESC",
+            "ability_type": 4,
+            "balance_vars": [
+             0.5
+            ],
+            "sort_order": 4,
+            "special_icon_path": "icons_inventory_pin/death_skull"
+           },
+           {
+            "name_key": "GENIEJAFAR_RAID_PASSIVEC_NAME",
+            "icon": "icons_units_jaffar_genie_raid/genie_Jafar_raid_passive_c",
+            "level": 5,
+            "shape": 1,
+            "target_self": true,
+            "geo_id": "44",
+            "id": 5,
+            "desc_key": "GENIEJAFAR_RAID_PASSIVEC_DESC",
+            "ability_type": 4,
+            "balance_vars": [
+             0.1,
+             1.0,
+             1.0,
+             7.0
+            ],
+            "sort_order": 5
+           },
+           {
+            "name_key": "GENIEJAFAR_RAID_FINALSTAND_NAME",
+            "icon": "icons_units_jaffar_genie_raid/jaffar_genie_raid_finalstand",
+            "level": 5,
+            "shape": 1,
+            "geo_id": "44",
+            "id": 6,
+            "desc_key": "GENIEJAFAR_RAID_FINALSTAND_DESC",
+            "ability_type": 4,
+            "balance_vars": [
+             10.0,
+             620000.0,
+             10000.0
+            ],
+            "sort_order": 6
+           },
+           {
+            "name_key": "RAID_ABILPASSIVE_NAME",
+            "icon": "icons_units_shared/raid_passive",
+            "level": 5,
+            "shape": 1,
+            "geo_id": "44",
+            "id": 7,
+            "desc_key": "RAID_PASSIVE_DESC_01",
+            "ability_type": 4,
+            "sort_order": 7
+           }
+          ],
+          "health_percent": 1.0,
+          "power_rating": 1447,
+          "unit_slot_type": 1,
+          "category_ids": [
+           "614606076824576",
+           "5960529125021754",
+           "4419393874676815",
+           "6950932538148189"
+          ],
+          "speed": 90,
+          "potency": 0.5,
+          "tenacity": 0.35,
+          "accuracy": 0.45,
+          "affects_star_rating": true,
+          "bootstrap_unique_id": 25
+         }
+        ],
+        "encounter": "2"
+       }
+      ],
+      "team_id": 1,
+      "player_level": 90,
+      "client_version": "28.0"
+     },
+     {
+      "ai_content_id": "1661400315776363",
+      "squads": [
+       {
+        "units": [
+         {
+          "definition_id": "4648841199862661",
+          "persistent_id": 7,
+          "rarity": 7,
+          "level": 90,
+          "gear_slot_equipped": [
+           false,
+           true,
+           false,
+           false,
+           false,
+           false
+          ],
+          "gear_tier": 9,
+          "offense": 3600,
+          "defense": 1138,
+          "health": 33937,
+          "crit_chance": 0.2,
+          "crit_power": 1.5,
+          "attack_speed": 0.18,
+          "walk_speed": 1.9,
+          "attack_range": 1.0,
+          "radius": 1.0,
+          "name_key": "EVIL_QUEEN_UNIT_NAME",
+          "asset_id": "unit_evil_queen/u_evil_queen",
+          "icon": "icons_units_evil_queen/portrait_evil_queen",
+          "effect_def_ids": [
+           "1718739542689744",
+           "165916902773156",
+           "151105262108480",
+           "2866393381940614",
+           "4491235117630072",
+           "7344770874556379",
+           "3265396334266421",
+           "2257141136246919",
+           "1169897643574762",
+           "7038049403477860",
+           "8517351819156411",
+           "6276225444170176",
+           "4547256784676539",
+           "1402093479280951",
+           "5083647132310354",
+           "7427884554355986",
+           "4619546668921169",
+           "3284051014484419",
+           "5707803033575694",
+           "4985587070588897",
+           "8550053386609206",
+           "4189147630498326",
+           "6223536079718446",
+           "275363088231558",
+           "1373205908971579",
+           "6387210448350798",
+           "3372463679486105",
+           "2706821629783055",
+           "4592581962713181",
+           "2662568260979641",
+           "2181318803221848",
+           "7140810215676956",
+           "8184686594704966",
+           "3219176022130698",
+           "3854495961765378",
+           "6457078998785775",
+           "3928226759652647",
+           "5025380086883490",
+           "5607093412473936",
+           "8374562359097273",
+           "5853777658327959",
+           "3303493622502125",
+           "4828772268494161",
+           "7179055731917573",
+           "8142959071929582",
+           "382224965489975",
+           "7410329444807583",
+           "5839843831804440",
+           "8714302626523130",
+           "7007133606896876",
+           "392006360351280"
+          ],
+          "abilities": [
+           {
+            "name_key": "EVILQUEEN_ABILBASIC_NAME",
+            "icon": "icons_units_evil_queen/evil_queen_basic",
+            "activated": true,
+            "level": 5,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "desc_key": "EVILQUEEN_BASIC_DESC_03",
+            "ability_type": 1,
+            "balance_vars": [
+             3960.0,
+             5400.0,
+             2.0,
+             3870.0002
+            ]
+           },
+           {
+            "name_key": "EVILQUEEN_ABILSPECIALA_NAME",
+            "icon": "icons_units_evil_queen/evil_queen_special_a",
+            "mana_cost": 4,
+            "activated": true,
+            "level": 5,
+            "shape": 1,
+            "target_enemy": true,
+            "add_unit_max_count": 1,
+            "add_unit": {
+             "definition_id": "1915421306557554",
+             "walk_speed": 1.9,
+             "attack_range": 1.0,
+             "radius": 1.0,
+             "name_key": "EVIL_QUEEN_WITCHES_BREW_UNIT_NAME",
+             "asset_id": "unit_evil_queen/u_evil_queen_cauldron",
+             "icon": "icons_units_evil_queen/portrait_evil_queen_cauldron",
+             "abilities": [
+              {
+               "name_key": "EVILQUEEN_ABILSPECIALA_NAME",
+               "icon": "icons_units_evil_queen/evil_queen_special_a",
+               "activated": true,
+               "level": 1,
+               "shape": 1,
+               "target_enemy": true,
+               "geo_id": "44",
+               "desc_key": "EVIL_QUEEN_WITCHES_BREW_UNIT_BASIC_DESC",
+               "ability_type": 1,
+               "balance_vars": [
+                0.0
+               ]
+              }
+             ],
+             "unit_type": 1,
+             "health_percent": 1.0,
+             "category_ids": [
+              "614606076824576",
+              "5960529125021754",
+              "4419393874676815",
+              "7289903988380590",
+              "2136312807087658"
+             ],
+             "affects_star_rating": true,
+             "bootstrap_unique_id": 1
+            },
+            "geo_id": "44",
+            "id": 1,
+            "desc_key": "EVILQUEEN_SPECIALA_DESC_03",
+            "initial_mana": 4,
+            "ability_type": 3,
+            "balance_vars": [
+             2.0,
+             6300.0,
+             2.0,
+             3.0,
+             10080.0,
+             650.16003,
+             1512.0,
+             2.0,
+             0.005,
+             2.0,
+             0.3
+            ],
+            "sort_order": 1
+           },
+           {
+            "name_key": "EVILQUEEN_ABILSPECIALB_NAME",
+            "icon": "icons_units_evil_queen/evil_queen_special_b",
+            "mana_cost": 4,
+            "activated": true,
+            "level": 4,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 2,
+            "desc_key": "EVILQUEEN_SPECIALB_DESC_02",
+            "initial_mana": 4,
+            "ability_type": 3,
+            "balance_vars": [
+             8424.0,
+             0.1,
+             2.0,
+             0.5,
+             0.75,
+             1.0,
+             2.0,
+             3.0
+            ],
+            "sort_order": 2
+           },
+           {
+            "name_key": "EVILQUEEN_ABILPASSIVEA_NAME",
+            "icon": "icons_units_evil_queen/evil_queen_passive_a",
+            "mana_cost": 1,
+            "level": 4,
+            "shape": 1,
+            "target_self": true,
+            "geo_id": "44",
+            "id": 3,
+            "desc_key": "EVILQUEEN_PASSIVEA_DESC_03",
+            "initial_mana": 1,
+            "ability_type": 4,
+            "balance_vars": [
+             1.0,
+             1.0,
+             1.0,
+             0.3,
+             0.05,
+             0.05,
+             0.05,
+             1.0,
+             0.0
+            ],
+            "sort_order": 3
+           },
+           {
+            "name_key": "EVILQUEEN_ABILPASSIVEB_NAME",
+            "icon": "icons_units_evil_queen/evil_queen_passive_b",
+            "mana_cost": 2,
+            "level": 4,
+            "shape": 1,
+            "target_self": true,
+            "target_ally": true,
+            "add_unit_max_count": 1,
+            "add_unit": {
+             "definition_id": "4070145546525889",
+             "walk_speed": 1.9,
+             "attack_range": 1.0,
+             "radius": 1.0,
+             "name_key": "EVIL_QUEEN_MAGIC_MIRROR_UNIT_NAME",
+             "asset_id": "unit_evil_queen/u_evil_queen_mirror",
+             "icon": "icons_units_evil_queen/portrait_evil_queen_mirror",
+             "abilities": [
+              {
+               "level": 1,
+               "shape": 1,
+               "geo_id": "44",
+               "ability_type": 4
+              }
+             ],
+             "unit_type": 1,
+             "health_percent": 1.0,
+             "category_ids": [
+              "614606076824576",
+              "5960529125021754",
+              "4419393874676815",
+              "7289903988380590",
+              "2136312807087658"
+             ],
+             "affects_star_rating": true,
+             "bootstrap_unique_id": 2
+            },
+            "geo_id": "44",
+            "id": 4,
+            "desc_key": "EVILQUEEN_PASSIVEB_DESC_02",
+            "initial_mana": 2,
+            "ability_type": 4,
+            "balance_vars": [
+             7257.6,
+             483.84,
+             1.0,
+             1.0,
+             1.0,
+             1.0,
+             0.3
+            ],
+            "sort_order": 4
+           },
+           {
+            "name_key": "EVILQUEEN_ABILPASSIVEC_NAME",
+            "icon": "icons_units_evil_queen/evil_queen_passive_c",
+            "mana_cost": 1,
+            "level": 4,
+            "shape": 1,
+            "target_self": true,
+            "geo_id": "44",
+            "id": 5,
+            "desc_key": "EVILQUEEN_PASSIVEC_DESC_02",
+            "initial_mana": 1,
+            "ability_type": 4,
+            "balance_vars": [
+             0.3,
+             0.2,
+             2.0,
+             0.5,
+             0.25,
+             0.55,
+             0.3,
+             1.0,
+             1.0,
+             1.0,
+             2.0
+            ],
+            "sort_order": 5
+           },
+           {
+            "name_key": "EVILQUEEN_ABILPASSIVED_NAME",
+            "icon": "icons_units_evil_queen/evil_queen_passive_d",
+            "level": 4,
+            "shape": 1,
+            "target_self": true,
+            "add_unit_max_count": 1,
+            "add_unit": {
+             "definition_id": "8400433758611485",
+             "walk_speed": 1.9,
+             "attack_range": 1.0,
+             "radius": 1.0,
+             "name_key": "EVIL_QUEEN_UNIT_NAME",
+             "asset_id": "unit_evil_queen/u_hr_evil_queen",
+             "icon": "icons_units_evil_queen/portrait_evil_queen",
+             "effect_def_ids": [
+              "1718739542689744",
+              "165916902773156",
+              "151105262108480",
+              "2866393381940614",
+              "4491235117630072",
+              "7344770874556379",
+              "3265396334266421",
+              "2257141136246919",
+              "1169897643574762",
+              "7038049403477860",
+              "8517351819156411",
+              "6276225444170176",
+              "4547256784676539",
+              "1402093479280951",
+              "5083647132310354",
+              "7427884554355986",
+              "4619546668921169",
+              "3284051014484419",
+              "5707803033575694",
+              "4985587070588897",
+              "8550053386609206",
+              "4189147630498326",
+              "6223536079718446",
+              "275363088231558",
+              "1373205908971579",
+              "6387210448350798",
+              "3372463679486105",
+              "2706821629783055",
+              "4592581962713181",
+              "2662568260979641",
+              "2181318803221848",
+              "7140810215676956",
+              "8184686594704966",
+              "3219176022130698",
+              "3854495961765378"
+             ],
+             "abilities": [
+              {
+               "name_key": "EVILQUEEN_ABILBASIC_NAME",
+               "icon": "icons_units_evil_queen/evil_queen_basic",
+               "activated": true,
+               "level": 1,
+               "shape": 1,
+               "target_enemy": true,
+               "geo_id": "44",
+               "desc_key": "EVILQUEEN_BASIC_DESC_01",
+               "ability_type": 1,
+               "balance_vars": [
+                0.0,
+                0.0,
+                2.0,
+                0.0
+               ]
+              },
+              {
+               "name_key": "EVILQUEEN_ABILSPECIALA_NAME",
+               "icon": "icons_units_evil_queen/evil_queen_special_a",
+               "mana_cost": 4,
+               "activated": true,
+               "level": 1,
+               "shape": 1,
+               "target_enemy": true,
+               "add_unit_max_count": 1,
+               "add_unit": {
+                "definition_id": "1915421306557554",
+                "walk_speed": 1.9,
+                "attack_range": 1.0,
+                "radius": 1.0,
+                "name_key": "EVIL_QUEEN_WITCHES_BREW_UNIT_NAME",
+                "asset_id": "unit_evil_queen/u_evil_queen_cauldron",
+                "icon": "icons_units_evil_queen/portrait_evil_queen_cauldron",
+                "abilities": [
+                 {
+                  "name_key": "EVILQUEEN_ABILSPECIALA_NAME",
+                  "icon": "icons_units_evil_queen/evil_queen_special_a",
+                  "activated": true,
+                  "level": 1,
+                  "shape": 1,
+                  "target_enemy": true,
+                  "geo_id": "44",
+                  "desc_key": "EVIL_QUEEN_WITCHES_BREW_UNIT_BASIC_DESC",
+                  "ability_type": 1,
+                  "balance_vars": [
+                   0.0
+                  ]
+                 }
+                ],
+                "unit_type": 1,
+                "health_percent": 1.0,
+                "category_ids": [
+                 "614606076824576",
+                 "5960529125021754",
+                 "4419393874676815",
+                 "7289903988380590",
+                 "2136312807087658"
+                ],
+                "affects_star_rating": true,
+                "bootstrap_unique_id": 3
+               },
+               "geo_id": "44",
+               "id": 1,
+               "desc_key": "EVILQUEEN_SPECIALA_DESC_01",
+               "initial_mana": 4,
+               "ability_type": 3,
+               "balance_vars": [
+                2.0,
+                0.0,
+                2.0,
+                3.0,
+                3.0,
+                3.0,
+                0.0,
+                2.0,
+                0.0,
+                0.0,
+                0.3
+               ],
+               "sort_order": 1
+              },
+              {
+               "name_key": "EVILQUEEN_ABILSPECIALB_NAME",
+               "icon": "icons_units_evil_queen/evil_queen_special_b",
+               "mana_cost": 4,
+               "activated": true,
+               "level": 1,
+               "shape": 1,
+               "target_enemy": true,
+               "geo_id": "44",
+               "id": 2,
+               "desc_key": "EVILQUEEN_SPECIALB_DESC_01",
+               "initial_mana": 4,
+               "ability_type": 3,
+               "balance_vars": [
+                0.0,
+                0.1,
+                2.0,
+                0.5,
+                0.75,
+                1.0,
+                0.0
+               ],
+               "sort_order": 2
+              },
+              {
+               "name_key": "EVILQUEEN_ABILPASSIVEA_NAME",
+               "icon": "icons_units_evil_queen/evil_queen_passive_a",
+               "mana_cost": 2,
+               "level": 1,
+               "shape": 1,
+               "target_self": true,
+               "geo_id": "44",
+               "id": 3,
+               "desc_key": "EVILQUEEN_PASSIVEA_DESC_01",
+               "initial_mana": 2,
+               "ability_type": 4,
+               "balance_vars": [
+                1.0,
+                1.0,
+                1.0,
+                0.2,
+                0.05,
+                0.05,
+                0.05,
+                0.0,
+                0.0
+               ],
+               "sort_order": 3
+              },
+              {
+               "name_key": "EVILQUEEN_ABILPASSIVEB_NAME",
+               "icon": "icons_units_evil_queen/evil_queen_passive_b",
+               "mana_cost": 2,
+               "level": 1,
+               "shape": 1,
+               "target_self": true,
+               "target_ally": true,
+               "add_unit_max_count": 1,
+               "add_unit": {
+                "definition_id": "4070145546525889",
+                "walk_speed": 1.9,
+                "attack_range": 1.0,
+                "radius": 1.0,
+                "name_key": "EVIL_QUEEN_MAGIC_MIRROR_UNIT_NAME",
+                "asset_id": "unit_evil_queen/u_evil_queen_mirror",
+                "icon": "icons_units_evil_queen/portrait_evil_queen_mirror",
+                "abilities": [
+                 {
+                  "level": 1,
+                  "shape": 1,
+                  "geo_id": "44",
+                  "ability_type": 4
+                 }
+                ],
+                "unit_type": 1,
+                "health_percent": 1.0,
+                "category_ids": [
+                 "614606076824576",
+                 "5960529125021754",
+                 "4419393874676815",
+                 "7289903988380590",
+                 "2136312807087658"
+                ],
+                "affects_star_rating": true,
+                "bootstrap_unique_id": 4
+               },
+               "geo_id": "44",
+               "id": 4,
+               "desc_key": "EVILQUEEN_PASSIVEB_DESC_01",
+               "initial_mana": 2,
+               "ability_type": 4,
+               "balance_vars": [
+                2.0,
+                2.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                0.0
+               ],
+               "sort_order": 4
+              },
+              {
+               "name_key": "EVILQUEEN_ABILPASSIVEC_NAME",
+               "icon": "icons_units_evil_queen/evil_queen_passive_c",
+               "mana_cost": 1,
+               "level": 1,
+               "shape": 1,
+               "target_self": true,
+               "geo_id": "44",
+               "id": 5,
+               "desc_key": "EVILQUEEN_PASSIVEC_DESC_01",
+               "initial_mana": 1,
+               "ability_type": 4,
+               "balance_vars": [
+                0.3,
+                0.2,
+                2.0,
+                0.5,
+                0.25,
+                0.3,
+                0.0,
+                0.0,
+                0.0
+               ],
+               "sort_order": 5
+              },
+              {
+               "name_key": "EVILQUEEN_ABILPASSIVED_NAME",
+               "icon": "icons_units_shared/npc_attack",
+               "level": 1,
+               "shape": 1,
+               "target_self": true,
+               "geo_id": "44",
+               "id": 6,
+               "desc_key": "EVILQUEEN_PASSIVED_DESC_01",
+               "ability_type": 4,
+               "balance_vars": [
+                1.0,
+                10.0,
+                0.05,
+                0.05,
+                0.05,
+                0.0,
+                0.0
+               ],
+               "sort_order": 6
+              }
+             ],
+             "unit_type": 1,
+             "health_percent": 1.0,
+             "category_ids": [
+              "614606076824576",
+              "5960529125021754",
+              "4419393874676815",
+              "7289903988380590",
+              "2136312807087658"
+             ],
+             "affects_star_rating": true,
+             "bootstrap_unique_id": 5
+            },
+            "geo_id": "44",
+            "id": 6,
+            "desc_key": "EVILQUEEN_PASSIVED_DESC_02",
+            "ability_type": 4,
+            "balance_vars": [
+             1.0,
+             3.0,
+             0.05,
+             0.1,
+             0.1,
+             1.0,
+             1.0
+            ],
+            "sort_order": 6
+           },
+           {
+            "name_key": "EVILQUEEN_ABILLEADER_NAME",
+            "icon": "icons_units_evil_queen/evil_queen_leader",
+            "level": 4,
+            "shape": 1,
+            "target_self": true,
+            "target_ally": true,
+            "geo_id": "44",
+            "id": 7,
+            "desc_key": "EVILQUEEN_LEADER_DESC_03",
+            "ability_type": 5,
+            "balance_vars": [
+             0.15,
+             0.05,
+             0.05,
+             0.2,
+             3.0
+            ],
+            "sort_order": 7
+           }
+          ],
+          "health_percent": 1.0,
+          "power_rating": 1422,
+          "unit_slot_type": 2,
+          "category_ids": [
+           "614606076824576",
+           "5960529125021754",
+           "4419393874676815",
+           "7289903988380590",
+           "2136312807087658"
+          ],
+          "sorcerer_stone_id": "7441933598335231",
+          "speed": 185,
+          "potency": 0.42,
+          "tenacity": 0.37,
+          "accuracy": 0.12,
+          "evasion": 0.1,
+          "affects_star_rating": true,
+          "bootstrap_unique_id": 6
+         },
+         {
+          "definition_id": "792577974612189",
+          "persistent_id": 8,
+          "rarity": 7,
+          "level": 90,
+          "gear_slot_equipped": [
+           true,
+           true,
+           true,
+           true,
+           false,
+           false
+          ],
+          "gear_tier": 9,
+          "offense": 3681,
+          "defense": 1598,
+          "health": 29319,
+          "crit_chance": 0.16,
+          "crit_power": 1.5,
+          "attack_speed": 0.18,
+          "walk_speed": 1.9,
+          "attack_range": 1.0,
+          "radius": 1.0,
+          "name_key": "SNOWWHITE_UNIT_NAME",
+          "asset_id": "unit_snow_white/u_snow_white",
+          "icon": "icons_units_snow_white/portrait_snow_white",
+          "effect_def_ids": [
+           "5243812447915989",
+           "799730956437113",
+           "1567548778152645",
+           "3317246841058254",
+           "334210182703264",
+           "7551687232641358",
+           "3630619332009625",
+           "1206234267905348",
+           "4765515575421422",
+           "980874033163284",
+           "5695624480001513",
+           "4348487201824352",
+           "3083684339586090",
+           "3303493622502125",
+           "5674633745253640",
+           "5911620782364054",
+           "8788860950429208",
+           "445368767766098",
+           "8453718530432755",
+           "6002568506836347",
+           "4751847035583641",
+           "4916166886181278",
+           "8698344091933037",
+           "4635800218622683"
+          ],
+          "abilities": [
+           {
+            "name_key": "SNOWWHITE_ABILBASIC_NAME",
+            "icon": "icons_units_snow_white/snow_white_basic",
+            "activated": true,
+            "level": 5,
+            "shape": 1,
+            "target_enemy": true,
+            "add_unit_max_count": 1,
+            "add_unit": {
+             "definition_id": "2113348898322158",
+             "offense": 1,
+             "health": 1,
+             "crit_power": 1.5,
+             "walk_speed": 1.4,
+             "attack_range": 1.0,
+             "radius": 0.8,
+             "name_key": "THE_LITTLE_BIRDS_UNIT_NAME",
+             "asset_id": "unit_birds/u_birds",
+             "icon": "icons_units_snow_white/portrait_snow_white_minion",
+             "effect_def_ids": [
+              "2223716905350042",
+              "8672296667647928",
+              "2839381298042761",
+              "8743190415189633",
+              "2981166475472962",
+              "5911620782364054",
+              "4635800218622683",
+              "6800498565604099"
+             ],
+             "abilities": [
+              {
+               "name_key": "LITTLEBIRD_ABILBASIC_NAME",
+               "icon": "icons_units_snow_white/snow_white_minion_basic",
+               "activated": true,
+               "level": 1,
+               "shape": 1,
+               "target_enemy": true,
+               "geo_id": "44",
+               "desc_key": "LITTLEBIRD_BASIC_DESC_01",
+               "ability_type": 1
+              },
+              {
+               "name_key": "LITTLEBIRD_ABILSPECIALA_NAME",
+               "icon": "icons_units_snow_white/snow_white_minion_passive",
+               "mana_cost": 2,
+               "activated": true,
+               "level": 1,
+               "shape": 1,
+               "target_self": true,
+               "geo_id": "44",
+               "id": 1,
+               "desc_key": "LITTLEBIRD_PASSIVE_DESC_01",
+               "initial_mana": 2,
+               "ability_type": 4,
+               "sort_order": 1
+              }
+             ],
+             "unit_type": 1,
+             "health_percent": 1.0,
+             "category_ids": [
+              "5785710300459637",
+              "5960529125021754",
+              "4419393874676815",
+              "7289903988380590"
+             ],
+             "speed": 50,
+             "accuracy": 100.0,
+             "affects_star_rating": true,
+             "bootstrap_unique_id": 7
+            },
+            "geo_id": "44",
+            "desc_key": "SNOWWHITE_BASIC_DESC_03",
+            "ability_type": 1,
+            "balance_vars": [
+             7476.3447,
+             127.200005,
+             511.36,
+             3128.85,
+             3.0,
+             0.3,
+             0.3,
+             0.3,
+             0.3,
+             1.0,
+             1.0,
+             2.0,
+             2.0,
+             1.0,
+             3.0
+            ]
+           },
+           {
+            "name_key": "SNOWWHITE_ABILSPECIALA_NAME",
+            "icon": "icons_units_snow_white/snow_white_special_a",
+            "mana_cost": 6,
+            "activated": true,
+            "level": 5,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 1,
+            "desc_key": "SNOWWHITE_SPECIALA_DESC_03",
+            "initial_mana": 6,
+            "ability_type": 3,
+            "balance_vars": [
+             2.0,
+             0.5,
+             0.5,
+             0.3,
+             1.0,
+             1.0
+            ],
+            "sort_order": 1
+           },
+           {
+            "name_key": "SNOWWHITE_ABILSPECIALB_NAME",
+            "icon": "icons_units_snow_white/snow_white_special_b",
+            "mana_cost": 6,
+            "activated": true,
+            "level": 4,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 2,
+            "desc_key": "SNOWWHITE_SPECIALB_DESC_03",
+            "initial_mana": 4,
+            "ability_type": 3,
+            "balance_vars": [
+             3926.5227,
+             3.0,
+             0.15,
+             2.0,
+             1.0,
+             0.3,
+             1.0,
+             3.0,
+             0.3,
+             1.0,
+             0.3,
+             1.0,
+             0.4,
+             0.4,
+             2.0,
+             1.0,
+             1.0
+            ],
+            "sort_order": 2
+           },
+           {
+            "name_key": "SNOWWHITE_ABILPASSIVEA_NAME",
+            "icon": "icons_units_snow_white/snow_white_passive_a",
+            "mana_cost": 2,
+            "level": 4,
+            "shape": 1,
+            "target_self": true,
+            "target_ally": true,
+            "geo_id": "44",
+            "id": 3,
+            "desc_key": "SNOWWHITE_PASSIVEA_DESC_02",
+            "initial_mana": 2,
+            "ability_type": 4,
+            "balance_vars": [
+             0.45,
+             2.0,
+             1.0
+            ],
+            "sort_order": 3
+           },
+           {
+            "name_key": "SNOWWHITE_ABILPASSIVEB_NAME",
+            "icon": "icons_units_snow_white/snow_white_passive_b",
+            "mana_cost": 4,
+            "level": 4,
+            "shape": 1,
+            "target_self": true,
+            "target_ally": true,
+            "geo_id": "44",
+            "id": 4,
+            "desc_key": "SNOWWHITE_PASSIVEB_DESC_03",
+            "initial_mana": 4,
+            "ability_type": 4,
+            "balance_vars": [
+             0.6,
+             1.0,
+             0.15,
+             1.0,
+             0.15,
+             1.0,
+             0.15,
+             0.15,
+             0.5,
+             1.0
+            ],
+            "sort_order": 4
+           }
+          ],
+          "health_percent": 1.0,
+          "power_rating": 1419,
+          "category_ids": [
+           "5785710300459637",
+           "5495262680796735",
+           "4419393874676815",
+           "7289903988380590",
+           "5820897550663740",
+           "5059163436552255"
+          ],
+          "sorcerer_stone_id": "5937770926925881",
+          "speed": 159,
+          "potency": 0.43,
+          "tenacity": 0.33,
+          "accuracy": 0.22,
+          "evasion": 0.1,
+          "affects_star_rating": true,
+          "bootstrap_unique_id": 8
+         },
+         {
+          "definition_id": "508341540759214",
+          "persistent_id": 9,
+          "rarity": 7,
+          "level": 90,
+          "gear_slot_equipped": [
+           true,
+           true,
+           true,
+           true,
+           false,
+           false
+          ],
+          "gear_tier": 9,
+          "offense": 4107,
+          "defense": 1103,
+          "health": 23975,
+          "crit_chance": 0.17,
+          "crit_power": 1.5,
+          "attack_speed": 0.23,
+          "walk_speed": 1.9,
+          "attack_range": 4.0,
+          "radius": 1.0,
+          "name_key": "MERIDA_UNIT_NAME",
+          "asset_id": "unit_merida/u_merida",
+          "icon": "icons_units_merida/portrait_merida",
+          "effect_def_ids": [
+           "3087133776824342",
+           "1509742996098045",
+           "6606177416477723",
+           "8652462392464983",
+           "8098531142272842",
+           "1113508513035193",
+           "8215497184107128",
+           "8479511184849792",
+           "8177751929462223",
+           "5461668520708950",
+           "488518860086900",
+           "5541859464991871",
+           "1694840347504096",
+           "7846546902378667",
+           "808977242677222",
+           "101",
+           "79",
+           "8556251970469526",
+           "873920236166561",
+           "8936738100835421"
+          ],
+          "abilities": [
+           {
+            "name_key": "MERIDA_ABILBASIC_NAME",
+            "icon": "icons_units_merida/merida_basic",
+            "activated": true,
+            "level": 5,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "desc_key": "MERIDA_BASIC_DESC_02",
+            "ability_type": 1,
+            "balance_vars": [
+             8214.0,
+             5749.8,
+             0.2,
+             0.15,
+             2.0,
+             4.0,
+             1.0
+            ]
+           },
+           {
+            "name_key": "MERIDA_ABILSPECIALA_NAME",
+            "icon": "icons_units_merida/merida_special_a",
+            "mana_cost": 4,
+            "activated": true,
+            "level": 5,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 2,
+            "desc_key": "MERIDA_SPECIALA_DESC_03",
+            "preview_strength": true,
+            "initial_mana": 3,
+            "ability_type": 3,
+            "balance_vars": [
+             2.0,
+             8214.0,
+             0.2,
+             2053.5,
+             1.0,
+             1.0,
+             3.0,
+             2.0
+            ],
+            "sort_order": 1
+           },
+           {
+            "name_key": "MERIDA_ABILSPECIALB_NAME",
+            "icon": "icons_units_merida/merida_special_b",
+            "mana_cost": 5,
+            "activated": true,
+            "level": 4,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "range": 1.0,
+            "id": 3,
+            "desc_key": "MERIDA_SPECIALB_DESC_03",
+            "preview_strength": true,
+            "ability_type": 3,
+            "balance_vars": [
+             20021.625,
+             1.0,
+             1.0,
+             1.0,
+             0.25
+            ],
+            "sort_order": 2
+           },
+           {
+            "name_key": "MERIDA_ABILPROC_NAME",
+            "icon": "icons_units_merida/merida_proc",
+            "level": 5,
+            "shape": 1,
+            "target_self": true,
+            "geo_id": "44",
+            "id": 1,
+            "desc_key": "MERIDA_PASSIVE_DESC_02",
+            "ability_type": 4,
+            "balance_vars": [
+             0.06,
+             0.15,
+             4.0,
+             1.0,
+             1.0
+            ],
+            "sort_order": 3
+           }
+          ],
+          "health_percent": 1.0,
+          "power_rating": 1394,
+          "category_ids": [
+           "5785710300459637",
+           "5960529125021754",
+           "4650364419227244",
+           "5968787601315360",
+           "5820897550663740"
+          ],
+          "sorcerer_stone_id": "5937770926925881",
+          "speed": 157,
+          "potency": 0.34,
+          "tenacity": 0.32,
+          "accuracy": 0.22,
+          "evasion": 0.32,
+          "affects_star_rating": true,
+          "bootstrap_unique_id": 9
+         },
+         {
+          "definition_id": "5595621495782876",
+          "persistent_id": 10,
+          "rarity": 7,
+          "level": 90,
+          "gear_slot_equipped": [
+           false,
+           true,
+           false,
+           false,
+           false,
+           false
+          ],
+          "gear_tier": 9,
+          "offense": 3377,
+          "defense": 1190,
+          "health": 31338,
+          "crit_chance": 0.2,
+          "crit_power": 1.5,
+          "attack_speed": 0.18,
+          "walk_speed": 1.9,
+          "attack_range": 4.0,
+          "radius": 1.0,
+          "name_key": "MALEFICENT_UNIT_NAME",
+          "asset_id": "unit_maleficent/u_maleficent",
+          "icon": "icons_units_maleficent/portrait_maleficent",
+          "effect_def_ids": [
+           "3456262068530318",
+           "2580698515808598",
+           "2189077678264983",
+           "6965647972075935",
+           "7946755960857631",
+           "6105290230957649",
+           "7153200370794134",
+           "8402947878800989",
+           "3299257370859095",
+           "3468460406575854",
+           "3584297352424544",
+           "863991115606918",
+           "3303493622502125",
+           "5853777658327959",
+           "1159745758190024",
+           "2074330246646866",
+           "5312937685228797",
+           "1017622273260146",
+           "2451881460589264",
+           "6909759294246534",
+           "349864609022992",
+           "7785802685149452",
+           "7490751984434226",
+           "3604771616324786",
+           "5139847630529863"
+          ],
+          "abilities": [
+           {
+            "name_key": "MALEFICENT_ABILBASIC_NAME",
+            "icon": "icons_units_maleficent/maleficent_basic",
+            "activated": true,
+            "level": 5,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "desc_key": "MALEFICENT_BASIC_DESC_03",
+            "ability_type": 1,
+            "balance_vars": [
+             3250.3623,
+             0.3,
+             1.0,
+             1722.27,
+             2.0,
+             1.0,
+             0.1,
+             1.0,
+             8.0,
+             1.0,
+             8.0
+            ]
+           },
+           {
+            "name_key": "MALEFICENT_ABILSPECIALA_NAME",
+            "icon": "icons_units_maleficent/maleficent_special_a",
+            "mana_cost": 5,
+            "activated": true,
+            "level": 5,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 1,
+            "desc_key": "MALEFICENT_SPECIALA_DESC_02",
+            "initial_mana": 5,
+            "ability_type": 3,
+            "balance_vars": [
+             4390.0996,
+             2.0,
+             0.3,
+             1.0,
+             0.3,
+             0.3,
+             0.3,
+             2.0,
+             1266.375,
+             1.0
+            ],
+            "sort_order": 1
+           },
+           {
+            "name_key": "MALEFICENT_ABILSPECIALB_NAME",
+            "icon": "icons_units_maleficent/maleficent_special_b",
+            "mana_cost": 7,
+            "activated": true,
+            "level": 4,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 2,
+            "desc_key": "MALEFICENT_SPECIALB_DESC_03",
+            "initial_mana": 7,
+            "ability_type": 3,
+            "balance_vars": [
+             3.0,
+             13676.851,
+             0.2,
+             0.1,
+             0.1,
+             15196.5,
+             1.0,
+             1.0,
+             1.0
+            ],
+            "sort_order": 2
+           },
+           {
+            "name_key": "MALEFICENT_ABILSPECIALC_NAME",
+            "icon": "icons_units_maleficent/maleficent_special_c",
+            "mana_cost": 9,
+            "activated": true,
+            "level": 4,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 3,
+            "desc_key": "MALEFICENT_SPECIALC_DESC_01",
+            "ability_type": 3,
+            "balance_vars": [
+             6838.4253,
+             0.25,
+             1.0,
+             1.0,
+             0.3,
+             1.0,
+             0.5,
+             3377.0
+            ],
+            "sort_order": 3
+           },
+           {
+            "name_key": "MALEFICENT_ABILPASSIVEA_NAME",
+            "icon": "icons_units_maleficent/maleficent_passive_a",
+            "mana_cost": 3,
+            "level": 4,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 4,
+            "desc_key": "MALEFICENT_PASSIVEA_DESC_03",
+            "ability_type": 4,
+            "balance_vars": [
+             2.0,
+             0.2,
+             1.0,
+             1.0,
+             0.1
+            ],
+            "sort_order": 4
+           },
+           {
+            "name_key": "MALEFICENT_ABILPASSIVEB_NAME",
+            "icon": "icons_units_maleficent/maleficent_passive_b",
+            "level": 4,
+            "shape": 1,
+            "target_self": true,
+            "geo_id": "44",
+            "id": 5,
+            "desc_key": "MALEFICENT_PASSIVEB_DESC_01",
+            "ability_type": 4,
+            "balance_vars": [
+             1.0,
+             0.05,
+             25.0,
+             0.15,
+             0.2,
+             0.1
+            ],
+            "sort_order": 5
+           }
+          ],
+          "health_percent": 1.0,
+          "power_rating": 1392,
+          "category_ids": [
+           "614606076824576",
+           "5960529125021754",
+           "4419393874676815",
+           "5765229020369181",
+           "2136312807087658"
+          ],
+          "sorcerer_stone_id": "7441933598335231",
+          "speed": 180,
+          "potency": 0.38,
+          "tenacity": 0.37,
+          "accuracy": 0.12,
+          "evasion": 0.1,
+          "affects_star_rating": true,
+          "bootstrap_unique_id": 10
+         },
+         {
+          "definition_id": "1421376032119017",
+          "persistent_id": 11,
+          "rarity": 7,
+          "level": 90,
+          "gear_slot_equipped": [
+           false,
+           true,
+           false,
+           false,
+           false,
+           false
+          ],
+          "gear_tier": 9,
+          "offense": 3772,
+          "defense": 871,
+          "health": 24585,
+          "crit_chance": 0.12,
+          "crit_power": 1.925,
+          "attack_speed": 5.06,
+          "walk_speed": 1.9,
+          "attack_range": 3.0,
+          "radius": 1.0,
+          "name_key": "URSULA_UNIT_NAME",
+          "asset_id": "unit_ursula/u_ursula",
+          "icon": "icons_units_ursula/portrait_ursula",
+          "effect_def_ids": [
+           "4910876323306200",
+           "8314821558072523",
+           "7385079030860829",
+           "2022215972053034",
+           "1070486956066899",
+           "1438414068608051",
+           "340479178811863",
+           "27249351918001",
+           "5556247134505969",
+           "6810790946639342",
+           "2549128277777708",
+           "3571740263072020",
+           "3130769185289375",
+           "2458971145706636",
+           "156462377373911",
+           "5459110091541557",
+           "7193320696020403",
+           "7058028754313863",
+           "7782419607000704",
+           "1283255970681971",
+           "4799208546656509",
+           "4312130677724752",
+           "8974374638301953",
+           "3426549909332052",
+           "4648752940349574",
+           "8064091988144087",
+           "8986257322836947",
+           "3055695824129701",
+           "5799887457889336",
+           "8061638486625239",
+           "4165811114338906",
+           "6841164620822006",
+           "3282478291284323",
+           "5367808674294061",
+           "583314103543612",
+           "8918372227592197",
+           "4908070274199540",
+           "6002568506836347",
+           "3662492039082430",
+           "4696812330523866",
+           "4705081833582152",
+           "8267687264167677"
+          ],
+          "abilities": [
+           {
+            "name_key": "URSULA_ABILBASIC_NAME",
+            "icon": "icons_units_ursula/ursula_basic",
+            "activated": true,
+            "level": 5,
+            "shape": 1,
+            "target_enemy": true,
+            "add_unit_max_count": 5,
+            "add_unit": {
+             "definition_id": "1916645823438552",
+             "offense": 1,
+             "health": 1,
+             "crit_power": 1.5,
+             "walk_speed": 2.0,
+             "attack_range": 1.0,
+             "radius": 0.5,
+             "name_key": "JETSAM_UNIT_NAME",
+             "asset_id": "unit_jetsam_small/u_jetsam_small",
+             "icon": "icons_units_jetsam/portrait_jetsam",
+             "effect_def_ids": [
+              "6202241231620506",
+              "2630479352503640",
+              "2352698116417167",
+              "4361007858030324",
+              "939245639231986",
+              "320153550958467",
+              "2052824274932921",
+              "6220286410367350"
+             ],
+             "abilities": [
+              {
+               "name_key": "JETSAM_ABILBASIC_NAME",
+               "icon": "icons_units_jetsam/jetsam_basic",
+               "activated": true,
+               "level": 1,
+               "shape": 1,
+               "target_enemy": true,
+               "geo_id": "44",
+               "desc_key": "JETSAM_SUMMON_BASIC_DESC_01",
+               "ability_type": 1
+              }
+             ],
+             "unit_type": 1,
+             "health_percent": 1.0,
+             "category_ids": [
+              "614606076824576",
+              "5308420037568950",
+              "5960529125021754"
+             ],
+             "speed": 50,
+             "accuracy": 100.0,
+             "affects_star_rating": true,
+             "bootstrap_unique_id": 11
+            },
+            "geo_id": "44",
+            "desc_key": "URSULA_BASIC_DESC_03",
+            "ability_type": 1,
+            "balance_vars": [
+             7544.0,
+             0.3,
+             0.1,
+             0.0,
+             1.0
+            ]
+           },
+           {
+            "name_key": "URSULA_ABILSPECIALA_NAME",
+            "icon": "icons_units_ursula/ursula_special_a",
+            "mana_cost": 4,
+            "activated": true,
+            "level": 5,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 1,
+            "desc_key": "URSULA_SPECIALA_DESC_03",
+            "initial_mana": 4,
+            "ability_type": 3,
+            "balance_vars": [
+             14852.25,
+             2.0,
+             1584.24,
+             2.0,
+             0.3,
+             1.0
+            ],
+            "sort_order": 1
+           },
+           {
+            "name_key": "URSULA_ABILSPECIALB_NAME",
+            "icon": "icons_units_ursula/ursula_special_b",
+            "mana_cost": 4,
+            "activated": true,
+            "level": 4,
+            "shape": 1,
+            "target_enemy": true,
+            "add_unit_max_count": 5,
+            "add_unit": {
+             "definition_id": "2689594733284691",
+             "offense": 1,
+             "health": 1,
+             "crit_power": 1.5,
+             "walk_speed": 2.0,
+             "attack_range": 1.0,
+             "radius": 1.0,
+             "name_key": "SEA_POLYP_UNIT_NAME",
+             "asset_id": "unit_sea_polyp/u_sea_polyp",
+             "icon": "icons_units_ursula/portrait_sea_polyp",
+             "abilities": [
+              {
+               "name_key": "SEA_POLYP_ABILBASIC_NAME",
+               "icon": "icons_units_ursula/ursula_special_b_minion_basic",
+               "level": 1,
+               "shape": 1,
+               "target_enemy": true,
+               "geo_id": "44",
+               "ability_type": 1
+              }
+             ],
+             "unit_type": 1,
+             "health_percent": 1.0,
+             "speed": 50,
+             "accuracy": 100.0,
+             "affects_star_rating": true,
+             "bootstrap_unique_id": 12
+            },
+            "geo_id": "44",
+            "range": 1.0,
+            "id": 2,
+            "desc_key": "URSULA_SPECIALB_DESC_03",
+            "initial_mana": 4,
+            "ability_type": 3,
+            "balance_vars": [
+             1.0,
+             0.3,
+             2.0,
+             0.0,
+             1.0,
+             0.3
+            ],
+            "sort_order": 2
+           },
+           {
+            "name_key": "URSULA_ABILPASSIVEA_NAME",
+            "icon": "icons_units_ursula/ursula_passive_a",
+            "level": 4,
+            "shape": 1,
+            "target_self": true,
+            "add_unit_max_count": 5,
+            "add_unit": {
+             "definition_id": "1231593235902628",
+             "offense": 1,
+             "health": 1,
+             "crit_power": 1.5,
+             "walk_speed": 2.0,
+             "attack_range": 1.0,
+             "radius": 0.5,
+             "name_key": "FLOTSAM_UNIT_NAME",
+             "asset_id": "unit_flotsam_small/u_flotsam_small",
+             "icon": "icons_units_flotsam/portrait_flotsam",
+             "effect_def_ids": [
+              "7489299671206500",
+              "6909977807262190",
+              "5480986767854264",
+              "4137691668694717",
+              "25823552547749",
+              "939245639231986",
+              "320153550958467",
+              "7387288592675358",
+              "1174790765737303"
+             ],
+             "abilities": [
+              {
+               "name_key": "FLOTSAM_ABILBASIC_NAME",
+               "icon": "icons_units_flotsam/flotsam_basic",
+               "activated": true,
+               "level": 1,
+               "shape": 1,
+               "target_enemy": true,
+               "geo_id": "44",
+               "desc_key": "FLOTSAM_SUMMON_BASIC_DESC_01",
+               "ability_type": 1
+              }
+             ],
+             "unit_type": 1,
+             "health_percent": 1.0,
+             "category_ids": [
+              "614606076824576",
+              "5308420037568950",
+              "5960529125021754"
+             ],
+             "speed": 50,
+             "accuracy": 100.0,
+             "affects_star_rating": true,
+             "bootstrap_unique_id": 13
+            },
+            "geo_id": "44",
+            "id": 3,
+            "desc_key": "URSULA_PASSIVEA_DESC_03",
+            "ability_type": 4,
+            "balance_vars": [
+             2489.52,
+             435.5,
+             12292.5,
+             175.0,
+             0.1,
+             0.05,
+             0.2,
+             0.2,
+             1.0
+            ],
+            "sort_order": 3
+           },
+           {
+            "name_key": "URSULA_ABILPASSIVEB_NAME",
+            "icon": "icons_units_ursula/ursula_passive_b",
+            "mana_cost": 3,
+            "level": 4,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 4,
+            "desc_key": "URSULA_PASSIVEB_DESC_02",
+            "initial_mana": 3,
+            "ability_type": 4,
+            "balance_vars": [
+             1.0,
+             0.5,
+             1.0,
+             0.0,
+             1.0
+            ],
+            "sort_order": 4
+           },
+           {
+            "name_key": "URSULA_ABILPASSIVEC_NAME",
+            "icon": "icons_units_ursula/ursula_passive_c",
+            "level": 4,
+            "shape": 1,
+            "target_enemy": true,
+            "geo_id": "44",
+            "id": 5,
+            "desc_key": "URSULA_PASSIVEC_DESC_03",
+            "ability_type": 4,
+            "balance_vars": [
+             1.0,
+             0.05,
+             0.1,
+             0.5
+            ],
+            "sort_order": 5
+           }
+          ],
+          "health_percent": 1.0,
+          "power_rating": 1392,
+          "category_ids": [
+           "614606076824576",
+           "5960529125021754",
+           "5308420037568950",
+           "3133581935767717"
+          ],
+          "sorcerer_stone_id": "7441933598335231",
+          "speed": 175,
+          "potency": 0.3,
+          "tenacity": 0.27,
+          "accuracy": 0.22,
+          "evasion": 0.22,
+          "affects_star_rating": true,
+          "bootstrap_unique_id": 14
+         }
+        ],
+        "encounter": "0"
+       }
+      ],
+      "is_human": true,
+      "player_id": 1,
+      "spells": [
+       {
+        "definition_id": "7118259597861864",
+        "effect_def_ids": [
+         "4651475404818020",
+         "6960279588130474"
+        ],
+        "ability": {
+         "name_key": "SPELL_PIXIE_DUST_NAME",
+         "icon": "icons_spells_pixie_dust/spell_pixie_dust",
+         "mana_cost": 3,
+         "activated": true,
+         "level": 4,
+         "shape": 1,
+         "target_ally": true,
+         "geo_id": "44",
+         "desc_key": "SPELL_BLUEFAIRYMAGIC_DESC_04",
+         "balance_vars": [
+          2.0,
+          0.3,
+          1.0,
+          2.0
+         ]
+        },
+        "power_rating": 30
+       },
+       {
+        "definition_id": "5287909278479974",
+        "ability": {
+         "name_key": "BUCKET_O_SOLDIERS_SPELL_NAME",
+         "icon": "icons_spells_bucket_o_soldiers/spell_bucket_o_soldiers",
+         "mana_cost": 3,
+         "activated": true,
+         "level": 4,
+         "shape": 1,
+         "add_unit_max_count": 1,
+         "add_unit": {
+          "definition_id": "5891625251652415",
+          "health": 1,
+          "crit_power": 1.5,
+          "asset_id": "spell_bucket_o_soldiers/u_bucket_o_soldiers",
+          "icon": "icons_units_bucket_o_soldiers_building/portrait_bucket_o_soldiers_building",
+          "effect_def_ids": [
+           "2761704368111928",
+           "8076466285730117",
+           "8611293433784973",
+           "4635800218622683",
+           "4620383182338767"
+          ],
+          "abilities": [
+           {
+            "name_key": "ABILITY_BASIC_GENERIC",
+            "icon": "icons_units_bucket_o_soldiers_building/bucket_o_soldiers_building_basic",
+            "activated": true,
+            "level": 1,
+            "shape": 2,
+            "shape_length": 1.0,
+            "target_enemy": true,
+            "geo_id": "2640639091644873",
+            "desc_key": "ABILITY_BASIC_GENERIC_DESC",
+            "ability_type": 1
+           }
+          ],
+          "unit_type": 1,
+          "health_percent": 1.0,
+          "category_ids": [
+           "5960529125021754"
+          ],
+          "affects_star_rating": true,
+          "bootstrap_unique_id": 26
+         },
+         "geo_id": "44",
+         "id": 1,
+         "cast_area": 1,
+         "desc_key": "SPELL_BUCKETOFSOLDIERS_DESC_01",
+         "balance_vars": [
+          60.0,
+          24.0,
+          150.0,
+          100.0,
+          4.0
+         ]
+        },
+        "power_rating": 30
+       }
+      ],
+      "activity_trackers": [
+       {
+        "activity_id": "7232089473019890",
+        "tracker_id": "8308148360900744"
+       },
+       {
+        "activity_id": "7302084992106933",
+        "tracker_id": "150720363151010"
+       },
+       {
+        "activity_id": "3975619712751594",
+        "tracker_id": "8762266718083384"
+       },
+       {
+        "activity_id": "1536742290282907",
+        "tracker_id": "1315328241247962"
+       },
+       {
+        "activity_id": "4515310606825679",
+        "tracker_id": "354625640707613"
+       },
+       {
+        "activity_id": "502021085323252",
+        "tracker_id": "3724590359083860"
+       },
+       {
+        "tracker_id": "2544107232433018"
+       }
+      ],
+      "player_level": 90,
+      "client_version": "28.0"
+     }
+    ],
+    "ruleset": 6,
+    "mutators": [
+     "3743078311862059",
+     "4424554285226317",
+     "520110136822529"
+    ],
+    "exit_cinematic_override": "cin_exit_cinematic_jafar_genie/exit_cinematic_jafar_genie",
+    "event_cinematics": [
+     "cin_raid_genie_jafar_special_defeat/raid_genie_jafar_special_defeat"
+    ],
+    "view_cinematics_once": true,
+    "environments": [
+     {
+      "prefabs": [
+       "env_jafar_phase_1/env_jafar_phase_1"
+      ],
+      "map": {
+       "encounters": [
+        {
+         "id": "0",
+         "cinematic": "cin_boss_jafar_raid_phase_01/boss_jafar_raid_phase_01"
+        },
+        {
+         "id": "1",
+         "cinematic": "cin_boss_jafar_raid_phase_02_cut/boss_jafar_raid_phase_02_cut"
+        },
+        {
+         "id": "2",
+         "cinematic": "cin_boss_jafar_raid_phase_03/boss_jafar_raid_phase_03",
+         "battle_choices": [
+          {
+           "id": "7947964671341921",
+           "offer_description": "RAID_BATTLE_CHOICE_JAFAR_CRITICAL_STRIKES_OFFER_DESC",
+           "offer_image": "raids_geniejafar/contract_large_jafar",
+           "offer_accepted_info_icon": "raids_geniejafar/contract_jafar_with_bg",
+           "offer_accepted_info_name": "RAID_BATTLE_CHOICE_JAFAR_OFFER_ACCEPTED_INFO_NAME",
+           "offer_accepted_info_description": "RAID_BATTLE_CHOICE_JAFAR_CRITICAL_STRIKES_OFFER_ACCEPTED_INFO_DESC",
+           "progress_description": "RAID_BATTLE_CHOICE_JAFAR_PROGRESS_DESC_FRACTION",
+           "offer_description_accept": "RAID_BATTLE_CHOICE_JAFAR_GENERIC_OFFER_DESC_ACCEPT",
+           "offer_description_decline": "RAID_BATTLE_CHOICE_JAFAR_GENERIC_OFFER_DESC_DECLINE"
+          },
+          {
+           "id": "5845980127659063",
+           "offer_description": "RAID_BATTLE_CHOICE_JAFAR_GRANT_HELPFUL_OFFER_DESC",
+           "offer_image": "raids_geniejafar/contract_large_jafar",
+           "offer_accepted_info_icon": "raids_geniejafar/contract_jafar_with_bg",
+           "offer_accepted_info_name": "RAID_BATTLE_CHOICE_JAFAR_OFFER_ACCEPTED_INFO_NAME",
+           "offer_accepted_info_description": "RAID_BATTLE_CHOICE_JAFAR_GRANT_HELPFUL_OFFER_ACCEPTED_INFO_DESC",
+           "progress_description": "RAID_BATTLE_CHOICE_JAFAR_PROGRESS_DESC_FRACTION",
+           "offer_description_accept": "RAID_BATTLE_CHOICE_JAFAR_GENERIC_OFFER_DESC_ACCEPT",
+           "offer_description_decline": "RAID_BATTLE_CHOICE_JAFAR_GENERIC_OFFER_DESC_DECLINE"
+          },
+          {
+           "id": "2391547984531068",
+           "offer_description": "RAID_BATTLE_CHOICE_JAFAR_INFLICT_HARMFUL_OFFER_DESC",
+           "offer_image": "raids_geniejafar/contract_large_jafar",
+           "offer_accepted_info_icon": "raids_geniejafar/contract_jafar_with_bg",
+           "offer_accepted_info_name": "RAID_BATTLE_CHOICE_JAFAR_OFFER_ACCEPTED_INFO_NAME",
+           "offer_accepted_info_description": "RAID_BATTLE_CHOICE_JAFAR_INFLICT_HARMFUL_OFFER_ACCEPTED_INFO_DESC",
+           "progress_description": "RAID_BATTLE_CHOICE_JAFAR_PROGRESS_DESC_FRACTION",
+           "offer_description_accept": "RAID_BATTLE_CHOICE_JAFAR_GENERIC_OFFER_DESC_ACCEPT",
+           "offer_description_decline": "RAID_BATTLE_CHOICE_JAFAR_GENERIC_OFFER_DESC_DECLINE"
+          },
+          {
+           "id": "304933229048900",
+           "offer_description": "RAID_BATTLE_CHOICE_JAFAR_PARTY_HEALTH_LIMIT_OFFER_DESC",
+           "offer_image": "raids_geniejafar/contract_large_jafar",
+           "offer_accepted_info_icon": "raids_geniejafar/contract_jafar_with_bg",
+           "offer_accepted_info_name": "RAID_BATTLE_CHOICE_JAFAR_OFFER_ACCEPTED_INFO_NAME",
+           "offer_accepted_info_description": "RAID_BATTLE_CHOICE_JAFAR_PARTY_HEALTH_LIMIT_OFFER_ACCEPTED_INFO_DESC",
+           "progress_description": "RAID_BATTLE_CHOICE_JAFAR_PROGRESS_DESC_TEAMMATES",
+           "offer_description_accept": "RAID_BATTLE_CHOICE_JAFAR_GENERIC_OFFER_DESC_ACCEPT",
+           "offer_description_decline": "RAID_BATTLE_CHOICE_JAFAR_GENERIC_OFFER_DESC_DECLINE"
+          },
+          {
+           "id": "977146704138999",
+           "offer_description": "RAID_BATTLE_CHOICE_JAFAR_RESTORE_HEALTH_OFFER_DESC",
+           "offer_image": "raids_geniejafar/contract_large_jafar",
+           "offer_accepted_info_icon": "raids_geniejafar/contract_jafar_with_bg",
+           "offer_accepted_info_name": "RAID_BATTLE_CHOICE_JAFAR_OFFER_ACCEPTED_INFO_NAME",
+           "offer_accepted_info_description": "RAID_BATTLE_CHOICE_JAFAR_RESTORE_HEALTH_OFFER_ACCEPTED_INFO_DESC",
+           "progress_description": "RAID_BATTLE_CHOICE_JAFAR_PROGRESS_DESC_FRACTION",
+           "offer_description_accept": "RAID_BATTLE_CHOICE_JAFAR_GENERIC_OFFER_DESC_ACCEPT",
+           "offer_description_decline": "RAID_BATTLE_CHOICE_JAFAR_GENERIC_OFFER_DESC_DECLINE"
+          }
+         ]
+        }
+       ]
+      },
+      "spawn_points": [
+       {
+        "unit_type": 1,
+        "x": -5.79,
+        "y": 2.71
+       },
+       {
+        "x": -1.312942,
+        "y": 3.017646
+       },
+       {
+        "x": -4.65,
+        "y": 0.46
+       },
+       {
+        "unit_type": 1,
+        "x": -1.63,
+        "y": 1.13
+       },
+       {
+        "unit_type": 1,
+        "x": -4.61,
+        "y": -1.47
+       },
+       {
+        "x": -0.818095,
+        "y": -0.7434636
+       },
+       {
+        "x": -3.514,
+        "y": -2.83
+       },
+       {
+        "unit_type": 1,
+        "x": -0.96,
+        "y": -2.35
+       },
+       {
+        "unit_type": 1,
+        "x": -3.5,
+        "y": -5.23
+       },
+       {
+        "x": -0.617058,
+        "y": -3.997642
+       },
+       {
+        "team_id": 1,
+        "unit_type": 1,
+        "x": 8.25,
+        "y": 6.5
+       },
+       {
+        "team_id": 1,
+        "x": 4.84,
+        "y": 6.69
+       },
+       {
+        "team_id": 1,
+        "x": 8.94,
+        "y": 6.26
+       },
+       {
+        "team_id": 1,
+        "unit_type": 1,
+        "x": 4.21,
+        "y": 2.52
+       },
+       {
+        "team_id": 1,
+        "unit_type": 1,
+        "x": 10.51,
+        "y": 2.79
+       },
+       {
+        "team_id": 1,
+        "x": 4.925735,
+        "y": 0.2
+       },
+       {
+        "team_id": 1,
+        "x": 9.55,
+        "y": 0.43
+       },
+       {
+        "team_id": 1,
+        "unit_type": 1,
+        "x": 5.18,
+        "y": -1.99
+       },
+       {
+        "team_id": 1,
+        "unit_type": 1,
+        "x": 9.88,
+        "y": -1.5
+       },
+       {
+        "team_id": 1,
+        "x": 5.1,
+        "y": -4.25
+       }
+      ]
+     },
+     {
+      "prefabs": [
+       "env_jafar_phase_2/env_jafar_phase_2"
+      ],
+      "map": {},
+      "spawn_points": [
+       {
+        "unit_type": 1,
+        "x": -6.77,
+        "y": 4.38
+       },
+       {
+        "x": -3.44,
+        "y": 5.76
+       },
+       {
+        "x": -7.39,
+        "y": 2.32
+       },
+       {
+        "unit_type": 1,
+        "x": -2.77,
+        "y": 2.83
+       },
+       {
+        "unit_type": 1,
+        "x": -6.77,
+        "y": -1.07
+       },
+       {
+        "x": -3.33,
+        "y": 0.23
+       },
+       {
+        "x": -7.35,
+        "y": -3.08
+       },
+       {
+        "unit_type": 1,
+        "x": -2.77,
+        "y": -2.86
+       },
+       {
+        "unit_type": 1,
+        "x": -6.77,
+        "y": -5.72
+       },
+       {
+        "x": -3.32,
+        "y": -5.47
+       },
+       {
+        "team_id": 1,
+        "unit_type": 1,
+        "x": 11.83,
+        "y": 10.26
+       },
+       {
+        "team_id": 1,
+        "x": 3.22,
+        "y": 12.29
+       },
+       {
+        "team_id": 1,
+        "x": 11.98,
+        "y": 5.6
+       },
+       {
+        "team_id": 1,
+        "unit_type": 1,
+        "x": 7.999955,
+        "y": 7.500048
+       },
+       {
+        "team_id": 1,
+        "unit_type": 1,
+        "x": 12.03,
+        "y": -0.98
+       },
+       {
+        "team_id": 1,
+        "x": 10.0
+       },
+       {
+        "team_id": 1,
+        "x": 12.94,
+        "y": -9.16
+       },
+       {
+        "team_id": 1,
+        "unit_type": 1,
+        "x": 9.750036,
+        "y": -5.999941
+       },
+       {
+        "team_id": 1,
+        "unit_type": 1,
+        "x": 13.68,
+        "y": -13.23
+       },
+       {
+        "team_id": 1,
+        "x": 2.46,
+        "y": -11.71
+       }
+      ]
+     },
+     {
+      "prefabs": [
+       "env_jafar_phase_3/env_jafar_phase_3"
+      ],
+      "map": {},
+      "spawn_points": [
+       {
+        "unit_type": 1,
+        "x": -4.22,
+        "y": 4.7
+       },
+       {
+        "x": -1.66,
+        "y": 3.77
+       },
+       {
+        "x": -5.515,
+        "y": 1.76
+       },
+       {
+        "unit_type": 1,
+        "x": -2.18,
+        "y": 0.67
+       },
+       {
+        "unit_type": 1,
+        "x": -4.11,
+        "y": -0.86
+       },
+       {
+        "x": -2.28,
+        "y": -3.27
+       },
+       {
+        "x": -5.45,
+        "y": -6.18
+       },
+       {
+        "unit_type": 1,
+        "x": -2.43,
+        "y": -5.19
+       },
+       {
+        "unit_type": 1,
+        "x": -5.57,
+        "y": -9.44
+       },
+       {
+        "x": -3.58,
+        "y": -8.9
+       },
+       {
+        "team_id": 1,
+        "unit_type": 1,
+        "x": 4.34,
+        "y": 7.86
+       },
+       {
+        "team_id": 1,
+        "x": 4.34,
+        "y": 7.86
+       },
+       {
+        "team_id": 1,
+        "x": 4.34,
+        "y": 7.86
+       },
+       {
+        "team_id": 1,
+        "unit_type": 1,
+        "x": 4.34,
+        "y": 7.86
+       },
+       {
+        "team_id": 1,
+        "unit_type": 1,
+        "x": 4.34,
+        "y": 7.86
+       },
+       {
+        "team_id": 1,
+        "x": 7.0,
+        "y": -2.23
+       },
+       {
+        "team_id": 1,
+        "x": 7.0,
+        "y": -2.23
+       },
+       {
+        "team_id": 1,
+        "unit_type": 1,
+        "x": 3.23,
+        "y": -12.91
+       },
+       {
+        "team_id": 1,
+        "unit_type": 1,
+        "x": 3.23,
+        "y": -12.91
+       },
+       {
+        "team_id": 1,
+        "x": 3.23,
+        "y": -12.91
+       }
+      ]
+     }
+    ],
+    "mutator_data_list": [
+     {
+      "mutator": "3743078311862059"
+     },
+     {
+      "mutator": "4424554285226317"
+     },
+     {
+      "mutator": "520110136822529"
+     }
+    ],
+    "default_speed": 2.0,
+    "game_mode": 13
+   }
+  }
+ ]
+}

@@ -1,0 +1,4137 @@
+{
+ "rapunzel_a": {
+  "environment": {
+   "prefabs": [
+    "env_medieval_area_02/env_medieval_area_02"
+   ],
+   "map": {
+    "encounters": [
+     {
+      "id": "0"
+     }
+    ]
+   },
+   "spawn_points": [
+    {
+     "unit_type": 1,
+     "x": -7.49,
+     "y": 2.71
+    },
+    {
+     "x": -3.012942,
+     "y": 3.017646
+    },
+    {
+     "x": -6.35,
+     "y": 0.46
+    },
+    {
+     "unit_type": 1,
+     "x": -3.33,
+     "y": 1.13
+    },
+    {
+     "unit_type": 1,
+     "x": -6.31,
+     "y": -1.47
+    },
+    {
+     "x": -2.518095,
+     "y": -0.7434636
+    },
+    {
+     "x": -5.214,
+     "y": -2.83
+    },
+    {
+     "unit_type": 1,
+     "x": -2.66,
+     "y": -2.35
+    },
+    {
+     "unit_type": 1,
+     "x": -5.2,
+     "y": -5.23
+    },
+    {
+     "x": -2.317058,
+     "y": -3.997642
+    },
+    {
+     "team_id": 1,
+     "unit_type": 1,
+     "x": 6.55,
+     "y": 8.54
+    },
+    {
+     "team_id": 1,
+     "x": 3.14,
+     "y": 6.69
+    },
+    {
+     "team_id": 1,
+     "x": 7.24,
+     "y": 6.26
+    },
+    {
+     "team_id": 1,
+     "unit_type": 1,
+     "x": 2.51,
+     "y": 2.52
+    },
+    {
+     "team_id": 1,
+     "unit_type": 1,
+     "x": 8.81,
+     "y": 2.79
+    },
+    {
+     "team_id": 1,
+     "x": 3.225735,
+     "y": 0.2
+    },
+    {
+     "team_id": 1,
+     "x": 7.85,
+     "y": 0.43
+    },
+    {
+     "team_id": 1,
+     "unit_type": 1,
+     "x": 3.48,
+     "y": -1.99
+    },
+    {
+     "team_id": 1,
+     "unit_type": 1,
+     "x": 8.18,
+     "y": -3.54
+    },
+    {
+     "team_id": 1,
+     "x": 3.4,
+     "y": -4.25
+    }
+   ]
+  },
+  "players": [
+   {
+    "ai_content_id": "4356768517700546",
+    "squads": [
+     {
+      "units": [
+       {
+        "definition_id": "7484496426816642",
+        "persistent_id": 1,
+        "rarity": 1,
+        "level": 35,
+        "gear_tier": 3,
+        "offense": 127,
+        "defense": 63,
+        "health": 2179,
+        "recovery": 72,
+        "crit_chance": 0.05,
+        "crit_power": 1.5,
+        "attack_speed": 0.28,
+        "walk_speed": 1.9,
+        "attack_range": 1.0,
+        "radius": 1.0,
+        "name_key": "MONTEREY_JACK_UNIT_NAME",
+        "asset_id": "unit_monterey_jack/u_monterey_jack",
+        "icon": "icons_units_monterey_jack/portrait_monterey_jack",
+        "effect_def_ids": [
+         "3093888031703415",
+         "5730686760824538",
+         "3031651678116957",
+         "7932198521203178",
+         "8135110630552995",
+         "8175514642294896",
+         "5055683061545039",
+         "2286241507391071",
+         "1520966094884838",
+         "123549490707336",
+         "4864525713407298",
+         "101",
+         "7153200370794134",
+         "2151049503090606",
+         "3282478291284323",
+         "128",
+         "5750884503252293",
+         "873920236166561",
+         "7344228813727601",
+         "4677100331793968"
+        ],
+        "abilities": [
+         {
+          "name_key": "MONTEREY_JACK_ABILBASIC_NAME",
+          "icon": "icons_units_monterey_jack/monterey_jack_basic",
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "desc_key": "MONTEREYJACK_ABILBASIC_DESC_02",
+          "ability_type": 1,
+          "balance_vars": [
+           127.0,
+           1.0,
+           90.0,
+           0.0,
+           0.0,
+           1.0,
+           0.0
+          ]
+         },
+         {
+          "name_key": "MONTEREY_JACK_ABILSPECIALA_NAME",
+          "icon": "icons_units_monterey_jack/monterey_jack_special_a",
+          "mana_cost": 4,
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "id": 2,
+          "desc_key": "MONTEREYJACK_ABILSPECIALA_DESC_01",
+          "preview_strength": true,
+          "initial_mana": 4,
+          "ability_type": 3,
+          "balance_vars": [
+           182.5625,
+           0.75,
+           72.0,
+           0.15,
+           0.0
+          ],
+          "sort_order": 1
+         },
+         {
+          "name_key": "MONTEREY_JACK_ABILSPECIALB_NAME",
+          "icon": "icons_units_monterey_jack/monterey_jack_proc",
+          "mana_cost": 3,
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "range": 1.0,
+          "id": 3,
+          "desc_key": "MONTEREYJACK_ABILSPECIALB_DESC_02",
+          "preview_strength": true,
+          "initial_mana": 3,
+          "ability_type": 3,
+          "balance_vars": [
+           238.125,
+           1.0,
+           0.15,
+           1.0
+          ],
+          "sort_order": 2
+         },
+         {
+          "name_key": "MONTEREY_JACK_ABILPROC_NAME",
+          "icon": "icons_units_monterey_jack/monterey_jack_special_b",
+          "level": 2,
+          "shape": 1,
+          "target_self": true,
+          "geo_id": "44",
+          "id": 1,
+          "desc_key": "MONTEREYJACK_ABILPASSIVE_DESC_01",
+          "ability_type": 4,
+          "balance_vars": [
+           112.5,
+           2.0,
+           0.6,
+           1.0,
+           0.3,
+           1.0,
+           0.0,
+           0.0
+          ],
+          "sort_order": 3
+         }
+        ],
+        "health_percent": 1.0,
+        "power_rating": 187,
+        "unit_slot_type": 1,
+        "category_ids": [
+         "5785710300459637",
+         "185013331968872",
+         "2489250258015164",
+         "3414121522116146",
+         "1102804729261314",
+         "1515770659265273"
+        ],
+        "speed": 90,
+        "tenacity": 0.05,
+        "affects_star_rating": true,
+        "bootstrap_unique_id": 8
+       },
+       {
+        "definition_id": "6677378796004658",
+        "persistent_id": 2,
+        "rarity": 1,
+        "level": 35,
+        "gear_tier": 3,
+        "offense": 152,
+        "defense": 32,
+        "health": 1193,
+        "crit_chance": 0.05,
+        "crit_power": 1.5,
+        "attack_speed": 0.21,
+        "walk_speed": 1.9,
+        "attack_range": 4.0,
+        "radius": 1.0,
+        "name_key": "SERGEANT_CALHOUN_UNIT_NAME",
+        "asset_id": "unit_sgt_calhoun/u_sgt_calhoun",
+        "icon": "icons_units_sgt_calhoun/portrait_sgt_calhoun",
+        "effect_def_ids": [
+         "5454411685504638",
+         "4914582186050607",
+         "7258973328794236",
+         "7410220072814850",
+         "4531989043487302",
+         "3785668693555473",
+         "1647951360741939",
+         "8418232490496606",
+         "7179837041314788",
+         "3466890387579149",
+         "7428499516214120",
+         "822684737134002",
+         "1153401824615471",
+         "3978686123305014",
+         "2653821598372767",
+         "7307300236022524",
+         "8762723041958448",
+         "4864525713407298",
+         "2995720398333551",
+         "7153200370794134",
+         "873920236166561",
+         "5750884503252293",
+         "5747245062043798"
+        ],
+        "abilities": [
+         {
+          "name_key": "SERGEANT_CALHOUN_ABILBASIC_NAME",
+          "icon": "icons_units_sgt_calhoun/sgt_calhoun_basic",
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "desc_key": "SERGEANTCALHOUN_BASIC_DESC_02",
+          "ability_type": 1,
+          "balance_vars": [
+           152.0,
+           0.5,
+           1.0,
+           3.0,
+           0.3,
+           142.5,
+           0.1
+          ]
+         },
+         {
+          "name_key": "SERGEANT_CALHOUN_ABILSPECIALA_NAME",
+          "icon": "icons_units_sgt_calhoun/sgt_calhoun_special_a",
+          "mana_cost": 3,
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "id": 2,
+          "desc_key": "SERGEANTCALHOUN_SPECIALA_DESC_02",
+          "preview_strength": true,
+          "initial_mana": 3,
+          "ability_type": 3,
+          "balance_vars": [
+           40.1128,
+           9.0,
+           0.1,
+           1.0,
+           1.0,
+           3.0,
+           0.0
+          ],
+          "sort_order": 1
+         },
+         {
+          "name_key": "SERGEANT_CALHOUN_ABILSPECIALB_NAME",
+          "icon": "icons_units_sgt_calhoun/sgt_calhoun_special_b",
+          "mana_cost": 5,
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "add_unit_max_count": 5,
+          "add_unit": {
+           "definition_id": "6087194900959693",
+           "health": 1,
+           "attack_range": 1.2,
+           "radius": 1.0,
+           "asset_id": "unit_beacon/u_beacon",
+           "icon": "icons_units_sgt_calhoun/portrait_sgt_calhoun_beacon",
+           "effect_def_ids": [
+            "7440843964627360",
+            "128",
+            "2995720398333551"
+           ],
+           "abilities": [
+            {
+             "icon": "icons_units_sgt_calhoun/sgt_calhoun_special_b",
+             "activated": true,
+             "level": 1,
+             "shape": 1,
+             "geo_id": "44",
+             "ability_type": 1
+            }
+           ],
+           "unit_type": 1,
+           "health_percent": 1.0,
+           "category_ids": [
+            "185013331968872",
+            "5800061760299363",
+            "5039684465977895"
+           ],
+           "affects_star_rating": true,
+           "bootstrap_unique_id": 9
+          },
+          "geo_id": "44",
+          "range": 1.0,
+          "id": 3,
+          "desc_key": "SERGEANTCALHOUN_SPECIALB_DESC_01",
+          "initial_mana": 5,
+          "ability_type": 3,
+          "balance_vars": [
+           1.0,
+           1193.0,
+           161.5,
+           0.5,
+           1.0,
+           3.0,
+           0.1,
+           0.0,
+           0.0
+          ],
+          "sort_order": 2
+         },
+         {
+          "name_key": "SERGEANT_CALHOUN_ABILPASSIVEA_NAME",
+          "icon": "icons_units_sgt_calhoun/sgt_calhoun_passive",
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "id": 1,
+          "desc_key": "SERGEANTCALHOUN_PASSIVE_DESC_02",
+          "ability_type": 4,
+          "balance_vars": [
+           0.3,
+           0.2,
+           91.200005,
+           0.5,
+           1.0,
+           0.0
+          ],
+          "sort_order": 3
+         }
+        ],
+        "health_percent": 1.0,
+        "power_rating": 187,
+        "category_ids": [
+         "5785710300459637",
+         "5960529125021754",
+         "2489250258015164",
+         "5039684465977895",
+         "1102804729261314",
+         "5800061760299363",
+         "6896032918037657"
+        ],
+        "speed": 100,
+        "tenacity": 0.05,
+        "affects_star_rating": true,
+        "bootstrap_unique_id": 10
+       },
+       {
+        "definition_id": "8713130068551573",
+        "persistent_id": 3,
+        "rarity": 1,
+        "level": 35,
+        "gear_tier": 3,
+        "offense": 192,
+        "defense": 39,
+        "health": 1433,
+        "crit_chance": 0.05,
+        "crit_power": 1.5,
+        "attack_speed": 0.23,
+        "walk_speed": 1.9,
+        "attack_range": 1.0,
+        "radius": 1.0,
+        "name_key": "SCROOGEMCDUCK_UNIT_NAME",
+        "asset_id": "unit_scrooge/u_scrooge",
+        "icon": "icons_units_scrooge/portrait_scrooge",
+        "effect_def_ids": [
+         "2912671853173558",
+         "5452112479352267",
+         "1028046995552106",
+         "4738438419762460",
+         "8476864515096042",
+         "3833209304661422",
+         "6736563865434245",
+         "527840886280134",
+         "2985214280009000",
+         "7449041783457096",
+         "8685988479430554",
+         "4093267975321970",
+         "4635800218622683",
+         "487216978338323",
+         "5607093412473936",
+         "8374562359097273",
+         "7153200370794134",
+         "5750884503252293",
+         "2234622711537216",
+         "1503812892333580"
+        ],
+        "abilities": [
+         {
+          "name_key": "SCROOGEMCDUCK_ABILBASIC_NAME",
+          "icon": "icons_units_scrooge/scrooge_basic",
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "desc_key": "SCROOGEMCDUCK_BASIC_DESC_02",
+          "ability_type": 1,
+          "balance_vars": [
+           192.0,
+           0.3
+          ]
+         },
+         {
+          "name_key": "SCROOGEMCDUCK_ABILSPECIALA_NAME",
+          "icon": "icons_units_scrooge/scrooge_special_a",
+          "mana_cost": 4,
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "id": 2,
+          "desc_key": "SCROOGEMCDUCK_SPECIALA_DESC_02",
+          "preview_strength": true,
+          "initial_mana": 4,
+          "ability_type": 3,
+          "balance_vars": [
+           288.0,
+           0.15,
+           1.0,
+           3.0,
+           1.0,
+           2.0,
+           10.0
+          ],
+          "sort_order": 1
+         },
+         {
+          "name_key": "SCROOGEMCDUCK_ABILSPECIALB_NAME",
+          "icon": "icons_units_scrooge/scrooge_special_b",
+          "mana_cost": 3,
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "geo_id": "44",
+          "range": 1.0,
+          "id": 3,
+          "desc_key": "SCROOGEMCDUCK_SPECIALB_DESC_02",
+          "initial_mana": 3,
+          "ability_type": 3,
+          "balance_vars": [
+           2.0,
+           0.5,
+           2.0,
+           2.0,
+           0.0,
+           0.0
+          ],
+          "sort_order": 2
+         },
+         {
+          "name_key": "SCROOGEMCDUCK_ABILPROC_NAME",
+          "icon": "icons_units_scrooge/scrooge_proc",
+          "mana_cost": 1,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "id": 1,
+          "desc_key": "SCROOGEMCDUCK_PASSIVE_DESC_01",
+          "initial_mana": 1,
+          "ability_type": 4,
+          "balance_vars": [
+           0.15,
+           192.0
+          ],
+          "sort_order": 3
+         }
+        ],
+        "health_percent": 1.0,
+        "power_rating": 187,
+        "category_ids": [
+         "5785710300459637",
+         "5960529125021754",
+         "2489250258015164",
+         "6663377657461749",
+         "1102804729261314",
+         "8597917023531694"
+        ],
+        "speed": 100,
+        "tenacity": 0.05,
+        "affects_star_rating": true,
+        "bootstrap_unique_id": 11
+       },
+       {
+        "definition_id": "1319488816909964",
+        "persistent_id": 4,
+        "rarity": 1,
+        "level": 35,
+        "gear_tier": 3,
+        "offense": 127,
+        "defense": 63,
+        "health": 2179,
+        "crit_chance": 0.05,
+        "crit_power": 1.5,
+        "attack_speed": 0.23,
+        "walk_speed": 1.9,
+        "attack_range": 1.0,
+        "radius": 0.8,
+        "name_key": "DONALDDUCK_UNIT_NAME",
+        "asset_id": "unit_donald_duck/u_donald_duck",
+        "icon": "icons_units_donald_duck/portrait_donald_duck",
+        "effect_def_ids": [
+         "7323697628010157",
+         "5662392732563660",
+         "3255304649187854",
+         "7133028582383351",
+         "6391789500498959",
+         "5022537268580541",
+         "760313582687605",
+         "1398110714186483",
+         "5495841196026486",
+         "6355580632871997",
+         "1430693084689728",
+         "5367808674294061",
+         "101"
+        ],
+        "abilities": [
+         {
+          "name_key": "DONALDDUCK_BASIC_NAME",
+          "icon": "icons_units_donald_duck/donald_basic",
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "range": 1.0,
+          "desc_key": "DONALDDUCK_BASIC_DESC_01",
+          "ability_type": 1,
+          "balance_vars": [
+           190.5,
+           190.5,
+           0.2
+          ]
+         },
+         {
+          "name_key": "DONALDDUCK_SPECIALA_NAME",
+          "icon": "icons_units_donald_duck/donald_special_a",
+          "mana_cost": 3,
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_self": true,
+          "geo_id": "44",
+          "range": 8.0,
+          "id": 1,
+          "desc_key": "DONALDDUCK_SPECIALA_DESC_02",
+          "initial_mana": 3,
+          "ability_type": 3,
+          "balance_vars": [
+           1.0,
+           1.0,
+           1.0,
+           1.0,
+           0.0
+          ],
+          "sort_order": 1
+         },
+         {
+          "name_key": "DONALDDUCK_SPECIALB_NAME",
+          "icon": "icons_units_donald_duck/donald_special_b",
+          "mana_cost": 4,
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "range": 15.0,
+          "id": 2,
+          "desc_key": "DONALDDUCK_SPECIALB_DESC_01",
+          "initial_mana": 3,
+          "ability_type": 3,
+          "balance_vars": [
+           222.25,
+           190.5,
+           0.05,
+           10.0,
+           0.3
+          ],
+          "sort_order": 2
+         },
+         {
+          "name_key": "DONALDDUCK_PASSIVEA_NAME",
+          "icon": "icons_units_donald_duck/donald_passive_a",
+          "level": 2,
+          "shape": 1,
+          "target_self": true,
+          "target_ally": true,
+          "geo_id": "44",
+          "range": 22.0,
+          "id": 3,
+          "desc_key": "DONALDDUCK_PASSIVEA_DESC_01",
+          "ability_type": 4,
+          "balance_vars": [
+           1.0,
+           1.0,
+           3.0,
+           0.4,
+           0.4,
+           0.1,
+           0.2,
+           0.2,
+           0.05,
+           0.1
+          ],
+          "sort_order": 3
+         }
+        ],
+        "health_percent": 1.0,
+        "power_rating": 202,
+        "category_ids": [
+         "5785710300459637",
+         "185013331968872",
+         "2489250258015164",
+         "1735573666711246",
+         "1102804729261314",
+         "4623262297475655",
+         "8597917023531694"
+        ],
+        "speed": 90,
+        "tenacity": 0.05,
+        "affects_star_rating": true,
+        "bootstrap_unique_id": 12
+       },
+       {
+        "definition_id": "3331593180574271",
+        "persistent_id": 5,
+        "rarity": 1,
+        "level": 35,
+        "gear_tier": 3,
+        "offense": 192,
+        "defense": 39,
+        "health": 1634,
+        "crit_chance": 0.05,
+        "crit_power": 1.5,
+        "attack_speed": 0.23,
+        "walk_speed": 1.9,
+        "attack_range": 1.0,
+        "radius": 0.8,
+        "name_key": "DAISYDUCK_UNIT_NAME",
+        "asset_id": "unit_daisy_duck/u_daisy_duck",
+        "icon": "icons_units_daisy/portrait_daisy_duck",
+        "effect_def_ids": [
+         "1110558722615200",
+         "6682913572729623",
+         "3899000754925121",
+         "609510473318287",
+         "2576928066539329",
+         "2857063530891220",
+         "7153200370794134",
+         "101",
+         "4972246443679316",
+         "6002568506836347"
+        ],
+        "abilities": [
+         {
+          "name_key": "DAISYDUCK_BASIC_NAME",
+          "icon": "icons_units_daisy/daisy_basic_v4",
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "desc_key": "DAISYDUCK_BASIC_DESC_01",
+          "ability_type": 1,
+          "balance_vars": [
+           192.0,
+           0.1,
+           192.0,
+           0.15
+          ]
+         },
+         {
+          "name_key": "DAISYDUCK_SPECIALA_NAME",
+          "icon": "icons_units_daisy/daisy_special_a",
+          "mana_cost": 4,
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "geo_id": "44",
+          "id": 1,
+          "desc_key": "DAISYDUCK_SPECIALA_DESC_02",
+          "initial_mana": 4,
+          "ability_type": 3,
+          "balance_vars": [
+           1.0,
+           0.1,
+           1.0,
+           1.0,
+           2.0,
+           0.0
+          ],
+          "sort_order": 1
+         },
+         {
+          "name_key": "DAISYDUCK_SPECIALB_NAME",
+          "icon": "icons_units_daisy/daisy_special_b_v2",
+          "mana_cost": 4,
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "range": 1.0,
+          "id": 2,
+          "desc_key": "DAISYDUCK_SPECIALB_DESC_02",
+          "initial_mana": 3,
+          "ability_type": 3,
+          "balance_vars": [
+           252.0,
+           1.0,
+           0.3
+          ],
+          "sort_order": 2
+         },
+         {
+          "name_key": "DAISYDUCK_PASSIVEA_NAME",
+          "icon": "icons_units_daisy/daisy_passive_a",
+          "level": 2,
+          "shape": 1,
+          "target_self": true,
+          "target_ally": true,
+          "geo_id": "44",
+          "id": 3,
+          "desc_key": "DAISYDUCK_PASSIVEA_DESC_02",
+          "ability_type": 4,
+          "balance_vars": [
+           0.05,
+           0.02,
+           0.0
+          ],
+          "sort_order": 3
+         }
+        ],
+        "health_percent": 1.0,
+        "power_rating": 187,
+        "category_ids": [
+         "5785710300459637",
+         "5495262680796735",
+         "2489250258015164",
+         "1735573666711246",
+         "1102804729261314",
+         "4623262297475655",
+         "8597917023531694"
+        ],
+        "speed": 100,
+        "tenacity": 0.05,
+        "affects_star_rating": true,
+        "bootstrap_unique_id": 13
+       }
+      ],
+      "encounter": "0"
+     }
+    ],
+    "team_id": 1,
+    "player_level": 35,
+    "client_version": "24.2"
+   },
+   {
+    "ai_content_id": "1661400315776363",
+    "squads": [
+     {
+      "units": [
+       {
+        "definition_id": "508341540759214",
+        "persistent_id": 6,
+        "rarity": 7,
+        "level": 81,
+        "gear_slot_equipped": [
+         true,
+         false,
+         true,
+         false,
+         true,
+         false
+        ],
+        "gear_tier": 7,
+        "offense": 1985,
+        "defense": 408,
+        "health": 18590,
+        "crit_chance": 0.17,
+        "crit_power": 1.5,
+        "attack_speed": 0.23,
+        "walk_speed": 1.9,
+        "attack_range": 4.0,
+        "radius": 1.0,
+        "name_key": "MERIDA_UNIT_NAME",
+        "asset_id": "unit_merida/u_merida",
+        "icon": "icons_units_merida/portrait_merida",
+        "effect_def_ids": [
+         "3087133776824342",
+         "1509742996098045",
+         "6606177416477723",
+         "8652462392464983",
+         "8098531142272842",
+         "1113508513035193",
+         "8215497184107128",
+         "8479511184849792",
+         "8177751929462223",
+         "5461668520708950",
+         "488518860086900",
+         "5541859464991871",
+         "1694840347504096",
+         "7846546902378667",
+         "808977242677222",
+         "101",
+         "79",
+         "8556251970469526",
+         "873920236166561",
+         "8936738100835421"
+        ],
+        "abilities": [
+         {
+          "name_key": "MERIDA_ABILBASIC_NAME",
+          "icon": "icons_units_merida/merida_basic",
+          "activated": true,
+          "level": 4,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "desc_key": "MERIDA_BASIC_DESC_02",
+          "ability_type": 1,
+          "balance_vars": [
+           2977.5,
+           2084.25,
+           0.2,
+           0.15,
+           2.0,
+           4.0,
+           1.0
+          ]
+         },
+         {
+          "name_key": "MERIDA_ABILSPECIALA_NAME",
+          "icon": "icons_units_merida/merida_special_a",
+          "mana_cost": 4,
+          "activated": true,
+          "level": 4,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "id": 2,
+          "desc_key": "MERIDA_SPECIALA_DESC_03",
+          "preview_strength": true,
+          "initial_mana": 3,
+          "ability_type": 3,
+          "balance_vars": [
+           2.0,
+           2977.5,
+           0.2,
+           744.375,
+           1.0,
+           1.0,
+           3.0,
+           2.0
+          ],
+          "sort_order": 1
+         },
+         {
+          "name_key": "MERIDA_ABILSPECIALB_NAME",
+          "icon": "icons_units_merida/merida_special_b",
+          "mana_cost": 5,
+          "activated": true,
+          "level": 3,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "range": 1.0,
+          "id": 3,
+          "desc_key": "MERIDA_SPECIALB_DESC_02",
+          "preview_strength": true,
+          "ability_type": 3,
+          "balance_vars": [
+           9676.875,
+           1.0,
+           1.0,
+           0.0,
+           0.25
+          ],
+          "sort_order": 2
+         },
+         {
+          "name_key": "MERIDA_ABILPROC_NAME",
+          "icon": "icons_units_merida/merida_proc",
+          "level": 4,
+          "shape": 1,
+          "target_self": true,
+          "geo_id": "44",
+          "id": 1,
+          "desc_key": "MERIDA_PASSIVE_DESC_02",
+          "ability_type": 4,
+          "balance_vars": [
+           0.04,
+           0.15,
+           4.0,
+           1.0,
+           1.0
+          ],
+          "sort_order": 3
+         }
+        ],
+        "health_percent": 1.0,
+        "power_rating": 919,
+        "category_ids": [
+         "5785710300459637",
+         "5960529125021754",
+         "4650364419227244",
+         "5968787601315360",
+         "5820897550663740"
+        ],
+        "sorcerer_stone_id": "6548409204418918",
+        "speed": 134,
+        "potency": 0.22,
+        "tenacity": 0.1,
+        "accuracy": 0.1,
+        "evasion": 0.1,
+        "affects_star_rating": true,
+        "bootstrap_unique_id": 1
+       },
+       {
+        "definition_id": "1120886486277251",
+        "persistent_id": 7,
+        "rarity": 7,
+        "level": 67,
+        "gear_slot_equipped": [
+         false,
+         false,
+         false,
+         false,
+         false,
+         false
+        ],
+        "gear_tier": 7,
+        "offense": 1065,
+        "defense": 547,
+        "health": 24687,
+        "recovery": 972,
+        "crit_chance": 0.09,
+        "crit_power": 1.5,
+        "attack_speed": 0.16,
+        "walk_speed": 1.9,
+        "attack_range": 1.0,
+        "radius": 1.0,
+        "name_key": "KRISTOFF_UNIT_NAME",
+        "asset_id": "unit_kristoff/u_kristoff",
+        "icon": "icons_units_kristoff/portrait_kristoff",
+        "effect_def_ids": [
+         "8518280522978830",
+         "2987740237730376",
+         "202688659854942",
+         "7714303835655709",
+         "7209192234050857",
+         "6747877825859171",
+         "502645002204406",
+         "6368887227454293",
+         "8916136081366778",
+         "101",
+         "202589860335914"
+        ],
+        "abilities": [
+         {
+          "name_key": "KRISTOFF_ABILBASIC_NAME",
+          "icon": "icons_units_kristoff/kristoff_basic",
+          "activated": true,
+          "level": 4,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "desc_key": "KRISTOFF_ABILBASIC_DESC_02",
+          "ability_type": 1,
+          "balance_vars": [
+           1278.0,
+           0.65,
+           2.0
+          ]
+         },
+         {
+          "name_key": "KRISTOFF_ABILSPECIALA_NAME",
+          "icon": "icons_units_kristoff/kristoff_special_a",
+          "mana_cost": 2,
+          "activated": true,
+          "level": 4,
+          "shape": 1,
+          "add_unit_max_count": 10,
+          "add_unit": {
+           "definition_id": "977212693736596",
+           "offense": 1,
+           "health": 1,
+           "recovery": 1,
+           "crit_power": 1.5,
+           "walk_speed": 1.4,
+           "attack_range": 80.0,
+           "radius": 0.8,
+           "name_key": "STONE_TROLL_UNIT_NAME",
+           "asset_id": "unit_stone_troll/u_stone_troll",
+           "icon": "icons_units_stone_troll/portrait_stone_troll",
+           "effect_def_ids": [
+            "3136614066967898",
+            "8136594923027405",
+            "7645079585475924",
+            "8473029349147821",
+            "8292869497107649",
+            "7546777177685379",
+            "5277249949279636",
+            "5647662264620933",
+            "3313275090392027",
+            "607072457587639",
+            "8300737702024263",
+            "2235884698955078",
+            "3698727829900091",
+            "79",
+            "7153200370794134",
+            "5911620782364054",
+            "101"
+           ],
+           "abilities": [
+            {
+             "name_key": "STONETROLL_ABILBASIC_NAME",
+             "icon": "icons_units_kristoff/troll_basic",
+             "activated": true,
+             "level": 1,
+             "shape": 1,
+             "target_enemy": true,
+             "geo_id": "44",
+             "desc_key": "SUMMONED_UNIT_BASIC_GEN_DESC",
+             "ability_type": 1,
+             "balance_vars": [
+              1.0
+             ]
+            },
+            {
+             "name_key": "STONETROLL_ABILSPECIALA_NAME",
+             "icon": "icons_units_kristoff/troll_special_a",
+             "mana_cost": 3,
+             "activated": true,
+             "level": 1,
+             "shape": 1,
+             "target_self": true,
+             "target_ally": true,
+             "geo_id": "44",
+             "id": 1,
+             "desc_key": "SUMMONED_UNIT_SPECIAL_HEAL_GEN_DESC",
+             "initial_mana": 3,
+             "ability_type": 3,
+             "balance_vars": [
+              1.0,
+              1.0
+             ],
+             "sort_order": 1
+            }
+           ],
+           "unit_type": 1,
+           "health_percent": 1.0,
+           "category_ids": [
+            "5785710300459637",
+            "5495262680796735",
+            "4650364419227244",
+            "1417430934200025"
+           ],
+           "speed": 50,
+           "accuracy": 100.0,
+           "affects_star_rating": true,
+           "bootstrap_unique_id": 2
+          },
+          "geo_id": "44",
+          "id": 1,
+          "desc_key": "KRISTOFF_ABILSPECIALA_DESC_01",
+          "preview_strength": true,
+          "initial_mana": 2,
+          "ability_type": 3,
+          "balance_vars": [
+           14812.2,
+           328.2,
+           766.80005,
+           1701.0
+          ],
+          "sort_order": 1
+         },
+         {
+          "name_key": "KRISTOFF_ABILSPECIALB_NAME",
+          "icon": "icons_units_kristoff/kristoff_special_b",
+          "mana_cost": 3,
+          "activated": true,
+          "level": 3,
+          "shape": 1,
+          "target_self": true,
+          "target_ally": true,
+          "geo_id": "44",
+          "range": 1.0,
+          "id": 2,
+          "desc_key": "KRISTOFF_ABILSPECIALB_DESC_03",
+          "preview_strength": true,
+          "initial_mana": 3,
+          "ability_type": 3,
+          "balance_vars": [
+           2.0,
+           2.0,
+           1.0,
+           1.0,
+           972.0,
+           2.0
+          ],
+          "sort_order": 2
+         },
+         {
+          "name_key": "KRISTOFF_ABILPASSIVEA_NAME",
+          "icon": "icons_units_kristoff/kristoff_passive",
+          "level": 3,
+          "shape": 1,
+          "target_self": true,
+          "geo_id": "44",
+          "id": 3,
+          "desc_key": "KRISTOFF_ABILPASSIVEA_DESC_01",
+          "ability_type": 4,
+          "balance_vars": [
+           1.0,
+           2.0,
+           1579.5
+          ],
+          "sort_order": 3
+         }
+        ],
+        "health_percent": 1.0,
+        "power_rating": 776,
+        "category_ids": [
+         "5785710300459637",
+         "185013331968872",
+         "4650364419227244",
+         "1417430934200025"
+        ],
+        "speed": 100,
+        "potency": 0.18,
+        "tenacity": 0.23,
+        "affects_star_rating": true,
+        "bootstrap_unique_id": 3
+       },
+       {
+        "definition_id": "8440699935170726",
+        "persistent_id": 8,
+        "rarity": 7,
+        "level": 67,
+        "gear_slot_equipped": [
+         false,
+         false,
+         false,
+         false,
+         false,
+         false
+        ],
+        "gear_tier": 3,
+        "offense": 785,
+        "defense": 454,
+        "health": 20207,
+        "crit_chance": 0.05,
+        "crit_power": 1.5,
+        "attack_speed": 0.16,
+        "walk_speed": 1.9,
+        "attack_range": 1.0,
+        "radius": 1.0,
+        "name_key": "CAPTAINFRANK_UNIT_NAME",
+        "asset_id": "unit_frank/u_frank",
+        "icon": "icons_units_frank/portrait_frank",
+        "effect_def_ids": [
+         "5269184768084224",
+         "4725246467010165",
+         "1808555741941771",
+         "3399294495840078",
+         "3803978129729042",
+         "8919391207010314",
+         "7663493655432229",
+         "4873082513887322",
+         "6039775411021576",
+         "6774138553538447",
+         "413061054221352",
+         "5260423492103420",
+         "229368979734946",
+         "7153200370794134",
+         "5607093412473936",
+         "8374562359097273",
+         "5853777658327959",
+         "3303493622502125",
+         "3510881186329170",
+         "5444326312663696"
+        ],
+        "abilities": [
+         {
+          "name_key": "CAPTAINFRANK_ABILBASIC_NAME",
+          "icon": "icons_units_frank/frank_basic",
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "range": 1.0,
+          "desc_key": "CAPTAINFRANK_BASIC_DESC_02",
+          "ability_type": 1,
+          "balance_vars": [
+           726.125,
+           0.3,
+           0.1,
+           1.0,
+           1.0
+          ]
+         },
+         {
+          "name_key": "CAPTAINFRANK_ABILSPECIALA_NAME",
+          "icon": "icons_units_frank/frank_special_a",
+          "mana_cost": 4,
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "range": 8.0,
+          "id": 1,
+          "desc_key": "CAPTAINFRANK_SPECIALA_DESC_02",
+          "initial_mana": 4,
+          "ability_type": 3,
+          "balance_vars": [
+           703.203,
+           0.5,
+           1.0,
+           1.0,
+           1.0,
+           5.0,
+           1.0,
+           5.0,
+           0.3,
+           0.1
+          ],
+          "sort_order": 1
+         },
+         {
+          "name_key": "CAPTAINFRANK_ABILSPECIALB_NAME",
+          "icon": "icons_units_frank/frank_special_b",
+          "mana_cost": 4,
+          "activated": true,
+          "level": 1,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "range": 14.0,
+          "id": 2,
+          "desc_key": "CAPTAINFRANK_SPECIALB_DESC_01",
+          "initial_mana": 4,
+          "ability_type": 3,
+          "balance_vars": [
+           1030.3125,
+           1.0,
+           1.0,
+           1.0,
+           0.0
+          ],
+          "sort_order": 2
+         },
+         {
+          "name_key": "CAPTAINFRANK_ABILPASSIVEA_NAME",
+          "icon": "icons_units_frank/frank_passive_a",
+          "level": 1,
+          "shape": 1,
+          "add_unit_max_count": 9,
+          "add_unit": {
+           "definition_id": "5547203838796210",
+           "walk_speed": 2.0,
+           "attack_range": 1.0,
+           "radius": 0.8,
+           "asset_id": "unit_proxima/u_proxima",
+           "icon": "icons_units_frank/portrait_frank_proxima",
+           "effect_def_ids": [
+            "822593908817944",
+            "6109299409710426",
+            "6863195529325077",
+            "2260636917838423",
+            "7153200370794134",
+            "5657118626295873",
+            "5097346769486712",
+            "5607093412473936",
+            "8374562359097273",
+            "5444326312663696"
+           ],
+           "abilities": [
+            {
+             "name_key": "PROXIMA_BASIC_NAME",
+             "icon": "icons_units_frank/frank_minion_basic",
+             "activated": true,
+             "level": 1,
+             "shape": 1,
+             "target_enemy": true,
+             "geo_id": "44",
+             "desc_key": "PROXIMA_BASIC_DESC_01",
+             "ability_type": 1
+            },
+            {
+             "name_key": "PROXIMA_SPECIALA_NAME",
+             "icon": "icons_units_frank/frank_minion_special_a",
+             "mana_cost": 3,
+             "activated": true,
+             "level": 1,
+             "shape": 1,
+             "target_enemy": true,
+             "geo_id": "44",
+             "id": 1,
+             "desc_key": "PROXIMA_SPECIALA_DESC_01",
+             "initial_mana": 3,
+             "ability_type": 3
+            },
+            {
+             "name_key": "PROXIMA_PASSIVEA_NAME",
+             "icon": "icons_units_frank/frank_minion_passive_a",
+             "level": 1,
+             "shape": 1,
+             "geo_id": "44",
+             "id": 2,
+             "desc_key": "PROXIMA_PASSIVEA_DESC_01",
+             "ability_type": 4
+            }
+           ],
+           "unit_type": 1,
+           "health_percent": 1.0,
+           "category_ids": [
+            "5960529125021754",
+            "4650364419227244",
+            "5785710300459637",
+            "8951569574997208"
+           ],
+           "affects_star_rating": true,
+           "bootstrap_unique_id": 4
+          },
+          "geo_id": "44",
+          "range": 21.0,
+          "id": 3,
+          "desc_key": "CAPTAINFRANK_PASSIVEA_DESC_01",
+          "ability_type": 4,
+          "balance_vars": [
+           0.3,
+           1.0,
+           0.05,
+           0.05,
+           10.0,
+           10103.5,
+           227.0,
+           785.0,
+           2.0,
+           1570.0,
+           1.0,
+           0.0,
+           0.0,
+           1.1,
+           0.6
+          ],
+          "sort_order": 3
+         }
+        ],
+        "health_percent": 1.0,
+        "power_rating": 344,
+        "category_ids": [
+         "5785710300459637",
+         "185013331968872",
+         "4650364419227244",
+         "8951569574997208",
+         "1515770659265273"
+        ],
+        "speed": 95,
+        "potency": 0.05,
+        "tenacity": 0.05,
+        "affects_star_rating": true,
+        "bootstrap_unique_id": 5
+       },
+       {
+        "definition_id": "5038787354506461",
+        "persistent_id": 9,
+        "rarity": 7,
+        "level": 67,
+        "gear_slot_equipped": [
+         false,
+         true,
+         false,
+         false,
+         false,
+         false
+        ],
+        "gear_tier": 3,
+        "offense": 837,
+        "defense": 359,
+        "health": 15155,
+        "crit_chance": 0.05,
+        "crit_power": 1.5,
+        "attack_speed": 0.16,
+        "walk_speed": 1.9,
+        "attack_range": 1.0,
+        "radius": 1.0,
+        "name_key": "LILYHOUGHTON_UNIT_NAME",
+        "asset_id": "unit_lily_houghton/u_lily_houghton",
+        "icon": "icons_units_lily_houghton/portrait_lily_houghton",
+        "effect_def_ids": [
+         "7524507278601521",
+         "7116574778554486",
+         "4930478549384368",
+         "418247668478063",
+         "8929446239993208",
+         "5765613592005454",
+         "974173734065771",
+         "7917595740302394",
+         "7784878623520071",
+         "4635800218622683",
+         "7153200370794134",
+         "5607093412473936",
+         "8374562359097273",
+         "5853777658327959",
+         "3303493622502125",
+         "3510881186329170",
+         "5444326312663696"
+        ],
+        "abilities": [
+         {
+          "name_key": "LILYHOUGHTON_ABILBASIC_NAME",
+          "icon": "icons_units_lily_houghton/lily_houghton_basic",
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "desc_key": "LILYHOUGHTON_BASIC_DESC_02",
+          "ability_type": 1,
+          "balance_vars": [
+           700.9875,
+           1.0,
+           0.3,
+           0.1,
+           1.0
+          ]
+         },
+         {
+          "name_key": "LILYHOUGHTON_ABILSPECIALA_NAME",
+          "icon": "icons_units_lily_houghton/lily_houghton_special_a",
+          "mana_cost": 4,
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "id": 1,
+          "desc_key": "LILYHOUGHTON_SPECIALA_DESC_02",
+          "initial_mana": 4,
+          "ability_type": 3,
+          "balance_vars": [
+           2.0,
+           2.0,
+           0.1,
+           0.05,
+           1.0,
+           0.3,
+           1.0,
+           0.0
+          ],
+          "sort_order": 1
+         },
+         {
+          "name_key": "LILYHOUGHTON_ABILSPECIALB_NAME",
+          "icon": "icons_units_lily_houghton/lily_houghton_special_b",
+          "mana_cost": 4,
+          "activated": true,
+          "level": 1,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "id": 2,
+          "desc_key": "LILYHOUGHTON_SPECIALB_DESC_01",
+          "initial_mana": 4,
+          "ability_type": 3,
+          "balance_vars": [
+           1098.5625,
+           1.0,
+           0.1,
+           0.1,
+           0.0
+          ],
+          "sort_order": 2
+         },
+         {
+          "name_key": "LILYHOUGHTON_ABILPASSIVEA_NAME",
+          "icon": "icons_units_lily_houghton/lily_houghton_special_c",
+          "mana_cost": 1,
+          "level": 1,
+          "shape": 1,
+          "geo_id": "44",
+          "id": 3,
+          "desc_key": "LILYHOUGHTON_PASSIVEA_DESC_01",
+          "initial_mana": 1,
+          "ability_type": 4,
+          "balance_vars": [
+           0.5,
+           1.0,
+           3.0,
+           0.2,
+           0.3,
+           2.0,
+           0.1,
+           1.0,
+           0.0
+          ],
+          "sort_order": 3
+         }
+        ],
+        "health_percent": 1.0,
+        "power_rating": 355,
+        "category_ids": [
+         "5785710300459637",
+         "5495262680796735",
+         "4650364419227244",
+         "8951569574997208",
+         "1515770659265273"
+        ],
+        "speed": 90,
+        "potency": 0.05,
+        "tenacity": 0.05,
+        "affects_star_rating": true,
+        "bootstrap_unique_id": 6
+       },
+       {
+        "definition_id": "2116902913444099",
+        "persistent_id": 10,
+        "rarity": 7,
+        "level": 81,
+        "gear_slot_equipped": [
+         true,
+         false,
+         true,
+         true,
+         false,
+         false
+        ],
+        "gear_tier": 3,
+        "offense": 920,
+        "defense": 395,
+        "health": 17130,
+        "recovery": 237,
+        "crit_chance": 0.05,
+        "crit_power": 1.5,
+        "attack_speed": 0.35,
+        "walk_speed": 1.9,
+        "attack_range": 4.0,
+        "radius": 1.0,
+        "name_key": "POCAHONTAS_UNIT_NAME",
+        "asset_id": "unit_pocahontas/u_pocahontas",
+        "icon": "icons_units_pocahontas/portrait_pocahontas",
+        "effect_def_ids": [
+         "7195955212473682",
+         "3283644002706783",
+         "3288535163750954",
+         "1135481016164381",
+         "4453361282258241",
+         "3857550407588760",
+         "2893733217546580",
+         "7835726358828379",
+         "4555865845825427",
+         "8927814860681849",
+         "796340398316597",
+         "2368126753488815",
+         "7184402604870639",
+         "5915813889998566",
+         "4355603982871307",
+         "4147828240977908",
+         "7153200370794134",
+         "6960279588130474",
+         "5750884503252293",
+         "873920236166561",
+         "7344228813727601",
+         "2234622711537216",
+         "101"
+        ],
+        "abilities": [
+         {
+          "name_key": "POCAHONTAS_ABILBASIC_NAME",
+          "icon": "icons_units_pocahontas/pocahontas_basic",
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "desc_key": "POCAHONTAS_BASIC_DESC_02",
+          "ability_type": 1,
+          "balance_vars": [
+           782.0,
+           0.3,
+           2.0,
+           0.1,
+           0.3,
+           230.0,
+           2.0
+          ]
+         },
+         {
+          "name_key": "POCAHONTAS_ABILSPECIALA_NAME",
+          "icon": "icons_units_pocahontas/pocahontas_special_a",
+          "mana_cost": 4,
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_ally": true,
+          "geo_id": "44",
+          "id": 2,
+          "desc_key": "POCAHONTAS_SPECIALA_DESC_02",
+          "initial_mana": 4,
+          "ability_type": 3,
+          "balance_vars": [
+           2.0,
+           1.0,
+           0.1,
+           1.0,
+           1.0,
+           0.1,
+           0.0,
+           0.0
+          ],
+          "sort_order": 1
+         },
+         {
+          "name_key": "POCAHONTAS_ABILSPECIALB_NAME",
+          "icon": "icons_units_pocahontas/pocahontas_special_b",
+          "mana_cost": 5,
+          "activated": true,
+          "level": 1,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "range": 1.0,
+          "id": 3,
+          "desc_key": "POCAHONTAS_SPECIALB_DESC_01",
+          "preview_strength": true,
+          "initial_mana": 5,
+          "ability_type": 3,
+          "balance_vars": [
+           920.0,
+           2.0,
+           2.0,
+           237.0,
+           0.2,
+           0.0,
+           10.0,
+           0.0
+          ],
+          "sort_order": 2
+         },
+         {
+          "name_key": "POCAHONTAS_ABILPROC_NAME",
+          "icon": "icons_units_pocahontas/pocahontas_proc",
+          "mana_cost": 2,
+          "level": 1,
+          "shape": 1,
+          "target_self": true,
+          "target_ally": true,
+          "geo_id": "44",
+          "id": 1,
+          "desc_key": "POCAHONTAS_PASSIVE_DESC_01",
+          "initial_mana": 2,
+          "ability_type": 4,
+          "balance_vars": [
+           0.1,
+           296.25,
+           2.0,
+           0.0
+          ],
+          "sort_order": 3
+         }
+        ],
+        "health_percent": 1.0,
+        "power_rating": 391,
+        "category_ids": [
+         "5785710300459637",
+         "5495262680796735",
+         "4650364419227244",
+         "4120166060123730",
+         "5820897550663740"
+        ],
+        "speed": 83,
+        "potency": 0.03,
+        "tenacity": 0.05,
+        "affects_star_rating": true,
+        "bootstrap_unique_id": 7
+       }
+      ],
+      "encounter": "0"
+     }
+    ],
+    "is_human": true,
+    "player_id": 1,
+    "spells": [
+     {
+      "definition_id": "2707539869757510",
+      "ability": {
+       "name_key": "CAULDRON_SPELL_NAME",
+       "icon": "icons_spells_cauldron/spell_cauldron",
+       "mana_cost": 2,
+       "activated": true,
+       "level": 2,
+       "shape": 1,
+       "add_unit_max_count": 2,
+       "add_unit": {
+        "definition_id": "8398376374448396",
+        "health": 120,
+        "asset_id": "spell_cauldron/u_cauldron",
+        "icon": "icons_spells_cauldron/spell_cauldron_lg",
+        "effect_def_ids": [
+         "8888236536844066",
+         "2692601947134876",
+         "4972246443679316"
+        ],
+        "abilities": [
+         {
+          "name_key": "ABILITY_BASIC_GENERIC",
+          "activated": true,
+          "level": 1,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "desc_key": "ABILITY_BASIC_GENERIC_DESC",
+          "ability_type": 1
+         }
+        ],
+        "unit_type": 1,
+        "health_percent": 1.0,
+        "category_ids": [
+         "5495262680796735"
+        ],
+        "affects_star_rating": true,
+        "bootstrap_unique_id": 14
+       },
+       "geo_id": "44",
+       "cast_area": 1,
+       "desc_key": "SPELL_CAULDRON_DESC_02",
+       "balance_vars": [
+        150.0,
+        50.0,
+        2.0,
+        0.1
+       ]
+      },
+      "power_rating": 15
+     },
+     {
+      "definition_id": "6798873058711461",
+      "effect_def_ids": [
+       "1368361838579745"
+      ],
+      "ability": {
+       "name_key": "SPIRIT_MUFASA_SPELL_NAME",
+       "icon": "icons_spells_spirit_mufasa/spell_spirit_mufasa",
+       "mana_cost": 4,
+       "activated": true,
+       "level": 1,
+       "shape": 1,
+       "target_ally": true,
+       "geo_id": "44",
+       "id": 1,
+       "desc_key": "SPELL_SPIRITMUFASA_DESC_01",
+       "balance_vars": [
+        2.0,
+        2.0,
+        0.0
+       ]
+      },
+      "power_rating": 5
+     }
+    ],
+    "activity_trackers": [
+     {
+      "activity_id": "7232089473019890",
+      "tracker_id": "8308148360900744"
+     },
+     {
+      "activity_id": "7302084992106933",
+      "tracker_id": "150720363151010"
+     },
+     {
+      "activity_id": "1536742290282907",
+      "tracker_id": "1315328241247962"
+     },
+     {
+      "activity_id": "3975619712751594",
+      "tracker_id": "8762266718083384"
+     },
+     {
+      "activity_id": "4606222743125935",
+      "tracker_id": "1486904043995146",
+      "value": "36"
+     },
+     {
+      "activity_id": "8905662171149275",
+      "tracker_id": "1486904043995146"
+     },
+     {
+      "activity_id": "1152326981820961",
+      "tracker_id": "1486904043995146"
+     }
+    ],
+    "player_level": 84,
+    "client_version": "24.2"
+   }
+  ],
+  "ruleset": 5,
+  "mutators": [
+   "4424554285226317"
+  ],
+  "environments": [
+   {
+    "prefabs": [
+     "env_medieval_area_02/env_medieval_area_02"
+    ],
+    "map": {
+     "encounters": [
+      {
+       "id": "0"
+      }
+     ]
+    },
+    "spawn_points": [
+     {
+      "unit_type": 1,
+      "x": -7.49,
+      "y": 2.71
+     },
+     {
+      "x": -3.012942,
+      "y": 3.017646
+     },
+     {
+      "x": -6.35,
+      "y": 0.46
+     },
+     {
+      "unit_type": 1,
+      "x": -3.33,
+      "y": 1.13
+     },
+     {
+      "unit_type": 1,
+      "x": -6.31,
+      "y": -1.47
+     },
+     {
+      "x": -2.518095,
+      "y": -0.7434636
+     },
+     {
+      "x": -5.214,
+      "y": -2.83
+     },
+     {
+      "unit_type": 1,
+      "x": -2.66,
+      "y": -2.35
+     },
+     {
+      "unit_type": 1,
+      "x": -5.2,
+      "y": -5.23
+     },
+     {
+      "x": -2.317058,
+      "y": -3.997642
+     },
+     {
+      "team_id": 1,
+      "unit_type": 1,
+      "x": 6.55,
+      "y": 8.54
+     },
+     {
+      "team_id": 1,
+      "x": 3.14,
+      "y": 6.69
+     },
+     {
+      "team_id": 1,
+      "x": 7.24,
+      "y": 6.26
+     },
+     {
+      "team_id": 1,
+      "unit_type": 1,
+      "x": 2.51,
+      "y": 2.52
+     },
+     {
+      "team_id": 1,
+      "unit_type": 1,
+      "x": 8.81,
+      "y": 2.79
+     },
+     {
+      "team_id": 1,
+      "x": 3.225735,
+      "y": 0.2
+     },
+     {
+      "team_id": 1,
+      "x": 7.85,
+      "y": 0.43
+     },
+     {
+      "team_id": 1,
+      "unit_type": 1,
+      "x": 3.48,
+      "y": -1.99
+     },
+     {
+      "team_id": 1,
+      "unit_type": 1,
+      "x": 8.18,
+      "y": -3.54
+     },
+     {
+      "team_id": 1,
+      "x": 3.4,
+      "y": -4.25
+     }
+    ]
+   }
+  ],
+  "mutator_data_list": [
+   {
+    "mutator": "4424554285226317"
+   }
+  ],
+  "default_speed": 2.0,
+  "game_mode": 6
+ },
+ "rapunzel_b": {
+  "environment": {
+   "prefabs": [
+    "env_medieval_area_02/env_medieval_area_02"
+   ],
+   "map": {
+    "encounters": [
+     {
+      "id": "0"
+     }
+    ]
+   },
+   "spawn_points": [
+    {
+     "unit_type": 1,
+     "x": -7.49,
+     "y": 2.71
+    },
+    {
+     "x": -3.012942,
+     "y": 3.017646
+    },
+    {
+     "x": -6.35,
+     "y": 0.46
+    },
+    {
+     "unit_type": 1,
+     "x": -3.33,
+     "y": 1.13
+    },
+    {
+     "unit_type": 1,
+     "x": -6.31,
+     "y": -1.47
+    },
+    {
+     "x": -2.518095,
+     "y": -0.7434636
+    },
+    {
+     "x": -5.214,
+     "y": -2.83
+    },
+    {
+     "unit_type": 1,
+     "x": -2.66,
+     "y": -2.35
+    },
+    {
+     "unit_type": 1,
+     "x": -5.2,
+     "y": -5.23
+    },
+    {
+     "x": -2.317058,
+     "y": -3.997642
+    },
+    {
+     "team_id": 1,
+     "unit_type": 1,
+     "x": 6.55,
+     "y": 8.54
+    },
+    {
+     "team_id": 1,
+     "x": 3.14,
+     "y": 6.69
+    },
+    {
+     "team_id": 1,
+     "x": 7.24,
+     "y": 6.26
+    },
+    {
+     "team_id": 1,
+     "unit_type": 1,
+     "x": 2.51,
+     "y": 2.52
+    },
+    {
+     "team_id": 1,
+     "unit_type": 1,
+     "x": 8.81,
+     "y": 2.79
+    },
+    {
+     "team_id": 1,
+     "x": 3.225735,
+     "y": 0.2
+    },
+    {
+     "team_id": 1,
+     "x": 7.85,
+     "y": 0.43
+    },
+    {
+     "team_id": 1,
+     "unit_type": 1,
+     "x": 3.48,
+     "y": -1.99
+    },
+    {
+     "team_id": 1,
+     "unit_type": 1,
+     "x": 8.18,
+     "y": -3.54
+    },
+    {
+     "team_id": 1,
+     "x": 3.4,
+     "y": -4.25
+    }
+   ]
+  },
+  "players": [
+   {
+    "ai_content_id": "4356768517700546",
+    "squads": [
+     {
+      "units": [
+       {
+        "definition_id": "6495565017355218",
+        "persistent_id": 11,
+        "rarity": 2,
+        "level": 36,
+        "gear_tier": 3,
+        "offense": 181,
+        "defense": 90,
+        "health": 3241,
+        "crit_chance": 0.05,
+        "crit_power": 1.5,
+        "attack_speed": 0.18,
+        "walk_speed": 1.9,
+        "attack_range": 1.0,
+        "radius": 1.0,
+        "name_key": "JANGLES_UNIT_NAME",
+        "asset_id": "unit_jangles/u_jangles",
+        "icon": "icons_units_jangles/portrait_jangles",
+        "effect_def_ids": [
+         "3471888212405910",
+         "4795726455149880",
+         "7648917692059104",
+         "5211026087653948",
+         "8283253860098253",
+         "2536050617466338",
+         "7457411632724723",
+         "7862705614038777",
+         "8240186244828143",
+         "4311339499194705",
+         "2286073307435255",
+         "8296781279565583",
+         "2211863584847077",
+         "588327537896903",
+         "6566338428458790",
+         "2411249928427737",
+         "4635800218622683",
+         "3986591338763811",
+         "7153200370794134",
+         "2995720398333551",
+         "5903819584013134",
+         "320153550958467",
+         "5750884503252293",
+         "873920236166561",
+         "7344228813727601",
+         "1333993555027959",
+         "4423102484559680",
+         "4259088826998534",
+         "2816369129906832"
+        ],
+        "abilities": [
+         {
+          "name_key": "JANGLES_ABILBASIC_NAME",
+          "icon": "icons_units_jangles/jangles_basic",
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "desc_key": "JANGLES_BASIC_DESC_02",
+          "ability_type": 1,
+          "balance_vars": [
+           162.9,
+           0.2,
+           1.0
+          ]
+         },
+         {
+          "name_key": "JANGLES_ABILSPECIALA_NAME",
+          "icon": "icons_units_jangles/jangles_special_a",
+          "mana_cost": 5,
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "id": 2,
+          "desc_key": "JANGLES_SPECIALA_DESC_01",
+          "preview_strength": true,
+          "initial_mana": 5,
+          "ability_type": 3,
+          "balance_vars": [
+           3.0,
+           79.1875,
+           45.25,
+           2.0,
+           1.0,
+           1.0,
+           0.0,
+           0.0,
+           0.0,
+           0.0
+          ],
+          "sort_order": 2
+         },
+         {
+          "name_key": "JANGLES_ABILSPECIALB_NAME",
+          "icon": "icons_units_jangles/jangles_special_b",
+          "mana_cost": 4,
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "range": 1.0,
+          "id": 3,
+          "desc_key": "JANGLES_SPECIALB_DESC_02",
+          "preview_strength": true,
+          "initial_mana": 4,
+          "ability_type": 3,
+          "balance_vars": [
+           429.875,
+           0.1,
+           0.0,
+           1.0,
+           0.05,
+           0.01
+          ],
+          "sort_order": 1
+         },
+         {
+          "name_key": "JANGLES_ABILPASSIVEA_NAME",
+          "icon": "icons_units_jangles/jangles_proc",
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "id": 1,
+          "desc_key": "JANGLES_PASSIVE_DESC_01",
+          "ability_type": 4,
+          "balance_vars": [
+           39.6028,
+           3.0,
+           0.05,
+           0.0,
+           0.15
+          ],
+          "sort_order": 3
+         }
+        ],
+        "health_percent": 1.0,
+        "power_rating": 203,
+        "unit_slot_type": 1,
+        "category_ids": [
+         "614606076824576",
+         "185013331968872",
+         "2489250258015164",
+         "7803373101595394",
+         "4324500008569381"
+        ],
+        "speed": 90,
+        "tenacity": 0.0599,
+        "affects_star_rating": true,
+        "bootstrap_unique_id": 8
+       },
+       {
+        "definition_id": "4979608122848331",
+        "persistent_id": 12,
+        "rarity": 2,
+        "level": 36,
+        "gear_tier": 3,
+        "offense": 270,
+        "defense": 55,
+        "health": 2111,
+        "crit_chance": 0.05,
+        "crit_power": 1.5,
+        "attack_speed": 0.18,
+        "walk_speed": 1.9,
+        "attack_range": 1.0,
+        "radius": 1.0,
+        "name_key": "PETE_UNIT_NAME",
+        "asset_id": "unit_pete/u_pete",
+        "icon": "icons_units_pete/portrait_pete",
+        "effect_def_ids": [
+         "8729080987117701",
+         "7018735999884650",
+         "6045646374794889",
+         "3709828478291843",
+         "6133157744812619",
+         "3015009429001937",
+         "2234335702013605",
+         "8818706292472726",
+         "2871382291778143",
+         "487216978338323",
+         "3110619813836807",
+         "7272765643936794",
+         "487216978338323",
+         "5750884503252293",
+         "873920236166561",
+         "7493598989353749"
+        ],
+        "abilities": [
+         {
+          "name_key": "PETE_ABILBASIC_NAME",
+          "icon": "icons_units_pete/pete_basic",
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "desc_key": "PETE_BASIC_DESC_02",
+          "ability_type": 1,
+          "balance_vars": [
+           270.0,
+           0.5
+          ]
+         },
+         {
+          "name_key": "PETE_ABILSPECIALA_NAME",
+          "icon": "icons_units_pete/pete_special_a",
+          "mana_cost": 4,
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "id": 2,
+          "desc_key": "PETE_SPECIALA_DESC_02",
+          "initial_mana": 4,
+          "ability_type": 3,
+          "balance_vars": [
+           0.2,
+           0.3,
+           2.0,
+           1.0
+          ],
+          "sort_order": 1
+         },
+         {
+          "name_key": "PETE_ABILSPECIALB_NAME",
+          "icon": "icons_units_pete/pete_special_b",
+          "mana_cost": 6,
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "range": 1.0,
+          "id": 3,
+          "desc_key": "PETE_SPECIALB_DESC_02",
+          "preview_strength": true,
+          "initial_mana": 6,
+          "ability_type": 3,
+          "balance_vars": [
+           877.5,
+           135.0,
+           2.0,
+           0.0
+          ],
+          "sort_order": 2
+         },
+         {
+          "name_key": "PETE_ABILPASSIVE_NAME",
+          "icon": "icons_units_pete/pete_passive",
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "id": 4,
+          "desc_key": "PETE_PASSIVE_DESC_02",
+          "ability_type": 4,
+          "balance_vars": [
+           0.05,
+           202.5,
+           0.5,
+           1.0
+          ],
+          "sort_order": 3
+         }
+        ],
+        "health_percent": 1.0,
+        "power_rating": 203,
+        "category_ids": [
+         "614606076824576",
+         "5960529125021754",
+         "2489250258015164",
+         "4623262297475655",
+         "4324500008569381"
+        ],
+        "speed": 100,
+        "potency": 0.0099,
+        "tenacity": 0.05,
+        "affects_star_rating": true,
+        "bootstrap_unique_id": 9
+       },
+       {
+        "definition_id": "8218042807117239",
+        "persistent_id": 13,
+        "rarity": 2,
+        "level": 36,
+        "gear_tier": 3,
+        "offense": 270,
+        "defense": 55,
+        "health": 2111,
+        "crit_chance": 0.05,
+        "crit_power": 1.5,
+        "attack_speed": 0.23,
+        "walk_speed": 1.9,
+        "attack_range": 1.0,
+        "radius": 1.0,
+        "name_key": "BIG_BAD_WOLF_UNIT_NAME",
+        "asset_id": "unit_big_bad_wolf/u_big_bad_wolf",
+        "icon": "icons_units_big_bad_wolf/portrait_big_bad_wolf",
+        "effect_def_ids": [
+         "6506077233419673",
+         "3932322487162189",
+         "5503862261041446",
+         "5209791230263235",
+         "5378220410986853",
+         "6685359750163050",
+         "7823112565932272",
+         "3139414077025175",
+         "2673966830172850",
+         "8382433343742186",
+         "8136669926670548",
+         "7153200370794134",
+         "4635800218622683",
+         "101",
+         "8569445903722054",
+         "3282478291284323",
+         "1631742731307578",
+         "5750884503252293",
+         "873920236166561",
+         "8802485102341307",
+         "5139847630529863",
+         "4696812330523866"
+        ],
+        "abilities": [
+         {
+          "name_key": "BIG_BAD_WOLF_ABILBASIC_NAME",
+          "icon": "icons_units_big_bad_wolf/big_bad_wolf_basic",
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "desc_key": "BIGBADWOLF_BASIC_DESC_02",
+          "ability_type": 1,
+          "balance_vars": [
+           270.0,
+           0.5,
+           0.7,
+           0.5,
+           0.0,
+           0.0
+          ]
+         },
+         {
+          "name_key": "BIG_BAD_WOLF_ABILSPECIALA_NAME",
+          "icon": "icons_units_big_bad_wolf/big_bad_wolf_special_a",
+          "mana_cost": 5,
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "id": 2,
+          "desc_key": "BIGBADWOLF_SPECIALA_DESC_01",
+          "preview_strength": true,
+          "initial_mana": 5,
+          "ability_type": 3,
+          "balance_vars": [
+           281.259,
+           0.4,
+           2.0,
+           0.0
+          ],
+          "sort_order": 1
+         },
+         {
+          "name_key": "BIG_BAD_WOLF_ABILSPECIALB_NAME",
+          "icon": "icons_units_big_bad_wolf/big_bad_wolf_special_b",
+          "mana_cost": 4,
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "range": 1.0,
+          "id": 3,
+          "desc_key": "BIGBADWOLF_SPECIALB_DESC_01",
+          "preview_strength": true,
+          "initial_mana": 4,
+          "ability_type": 3,
+          "balance_vars": [
+           810.0,
+           0.4,
+           0.0
+          ],
+          "sort_order": 2
+         },
+         {
+          "name_key": "BIG_BAD_WOLF_ABILPASSIVE_NAME",
+          "icon": "icons_units_big_bad_wolf/big_bad_wolf_passive",
+          "level": 2,
+          "shape": 1,
+          "target_self": true,
+          "geo_id": "44",
+          "id": 4,
+          "desc_key": "BIGBADWOLF_PASSIVE_DESC_02",
+          "ability_type": 4,
+          "balance_vars": [
+           0.25,
+           1.0
+          ],
+          "sort_order": 3
+         }
+        ],
+        "health_percent": 1.0,
+        "power_rating": 203,
+        "category_ids": [
+         "614606076824576",
+         "5960529125021754",
+         "2489250258015164",
+         "4623262297475655",
+         "4324500008569381"
+        ],
+        "speed": 100,
+        "potency": 0.0099,
+        "tenacity": 0.05,
+        "affects_star_rating": true,
+        "bootstrap_unique_id": 10
+       },
+       {
+        "definition_id": "2425318463423019",
+        "persistent_id": 14,
+        "rarity": 2,
+        "level": 36,
+        "gear_tier": 3,
+        "offense": 176,
+        "defense": 71,
+        "health": 2323,
+        "recovery": 211,
+        "crit_chance": 0.05,
+        "crit_power": 1.5,
+        "attack_speed": 0.23,
+        "walk_speed": 1.9,
+        "attack_range": 40.0,
+        "radius": 1.0,
+        "name_key": "YZMA_UNIT_NAME",
+        "asset_id": "unit_yzma/u_yzma",
+        "icon": "icons_units_yzma/portrait_yzma",
+        "effect_def_ids": [
+         "2297041111586451",
+         "432132521808330",
+         "1615537217187631",
+         "7989191201373411",
+         "3506157077289710",
+         "6154376501113224",
+         "1466688156981111",
+         "7880881949578542",
+         "6221205988953987",
+         "4835859325191285",
+         "1758215150347070",
+         "1810252123922943",
+         "5190450505028768",
+         "7042111904194717",
+         "2041148132943318",
+         "2422402519805211",
+         "4146859445246663",
+         "2631334604197468",
+         "79",
+         "2407757327053818",
+         "1663988092482017",
+         "3755486200803278",
+         "6811025412263035",
+         "7344228813727601",
+         "873920236166561",
+         "5518244590774521",
+         "6960279588130474",
+         "1407835306523086"
+        ],
+        "abilities": [
+         {
+          "name_key": "YZMA_ABILBASIC_NAME",
+          "icon": "icons_units_yzma/yzma_basic",
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "desc_key": "YZMA_BASIC_DESC_02",
+          "ability_type": 1,
+          "balance_vars": [
+           176.0,
+           0.5,
+           1.0,
+           0.0,
+           1.0
+          ]
+         },
+         {
+          "name_key": "YZMA_ABILSPECIALA_NAME",
+          "icon": "icons_units_yzma/yzma_special_a",
+          "mana_cost": 3,
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_self": true,
+          "target_ally": true,
+          "geo_id": "44",
+          "id": 2,
+          "desc_key": "YZMA_SPECIALA_DESC_02",
+          "preview_strength": true,
+          "initial_mana": 3,
+          "ability_type": 3,
+          "balance_vars": [
+           422.0,
+           2.0,
+           211.0,
+           2.0,
+           2.0,
+           0.3,
+           0.6,
+           1.0,
+           0.0
+          ],
+          "sort_order": 1
+         },
+         {
+          "name_key": "YZMA_ABILSPECIALB_NAME",
+          "icon": "icons_units_yzma/yzma_special_b",
+          "mana_cost": 4,
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "range": 1.0,
+          "id": 3,
+          "desc_key": "YZMA_SPECIALB_DESC_02",
+          "preview_strength": true,
+          "initial_mana": 4,
+          "ability_type": 3,
+          "balance_vars": [
+           253.0,
+           0.5,
+           1.0,
+           0.5
+          ],
+          "sort_order": 2
+         },
+         {
+          "name_key": "YZMA_ABILPASSIVE_NAME",
+          "icon": "icons_units_yzma/yzma_proc",
+          "level": 2,
+          "shape": 1,
+          "target_self": true,
+          "target_ally": true,
+          "target_enemy": true,
+          "geo_id": "44",
+          "id": 1,
+          "desc_key": "YZMA_PASSIVE_DESC_02",
+          "ability_type": 4,
+          "balance_vars": [
+           0.3,
+           0.05,
+           132.0,
+           2.0,
+           0.3,
+           0.05,
+           158.25,
+           2.0,
+           2.0,
+           2.0
+          ],
+          "sort_order": 3
+         },
+         {
+          "name_key": "YZMA_ABILPASSIVEB_NAME",
+          "icon": "icons_units_yzma/yzma_passive",
+          "mana_cost": 3,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "add_unit_max_count": 12,
+          "add_unit": {
+           "definition_id": "940716692905922",
+           "offense": 1,
+           "defense": 1,
+           "health": 1,
+           "walk_speed": 2.0,
+           "attack_range": 1.0,
+           "radius": 1.0,
+           "name_key": "FROG_UNIT_NAME",
+           "asset_id": "unit_frog/u_frog",
+           "icon": "icons_units_dr_facilier/portrait_drfacilier_frog",
+           "effect_def_ids": [
+            "4559975454448096",
+            "7153200370794134",
+            "81734394041167"
+           ],
+           "abilities": [
+            {
+             "name_key": "FROG_ABILBASIC_NAME",
+             "icon": "icons_units_dr_facilier/drfacilier_special_a_minion_basic",
+             "level": 1,
+             "shape": 1,
+             "target_enemy": true,
+             "geo_id": "44",
+             "ability_type": 1
+            }
+           ],
+           "unit_type": 1,
+           "health_percent": 1.0,
+           "affects_star_rating": true,
+           "bootstrap_unique_id": 11
+          },
+          "geo_id": "44",
+          "range": 2.0,
+          "id": 4,
+          "desc_key": "YZMA_PASSIVEB_DESC_02",
+          "initial_mana": 3,
+          "ability_type": 4,
+          "balance_vars": [
+           0.15,
+           3.0,
+           396.0,
+           1.0,
+           1.0,
+           0.0
+          ],
+          "sort_order": 4
+         }
+        ],
+        "health_percent": 1.0,
+        "power_rating": 218,
+        "category_ids": [
+         "614606076824576",
+         "5495262680796735",
+         "4419393874676815",
+         "3019196162921018",
+         "2136312807087658"
+        ],
+        "speed": 80,
+        "tenacity": 0.0599,
+        "affects_star_rating": true,
+        "bootstrap_unique_id": 12
+       },
+       {
+        "definition_id": "3793696733556542",
+        "persistent_id": 15,
+        "rarity": 2,
+        "level": 36,
+        "gear_tier": 3,
+        "offense": 270,
+        "defense": 55,
+        "health": 2111,
+        "crit_chance": 0.05,
+        "crit_power": 1.5,
+        "attack_speed": 0.23,
+        "walk_speed": 1.9,
+        "attack_range": 80.0,
+        "radius": 1.0,
+        "name_key": "DEMONA_UNIT_NAME",
+        "asset_id": "unit_demona/u_demona",
+        "icon": "icons_units_demona/portrait_demona",
+        "effect_def_ids": [
+         "7040956993934201",
+         "6299180408120181",
+         "330249414491551",
+         "1460050344297982",
+         "642517070458681",
+         "4887803750765742",
+         "6823123621454514",
+         "1490955906965607",
+         "3387241405672965",
+         "2253749121467511",
+         "2393650128420976",
+         "5536818330479610",
+         "4126955858265171",
+         "8815955882147084",
+         "2689911737767336",
+         "7424757368752232",
+         "7138651013384609",
+         "8619698487439974",
+         "2228127995497085",
+         "7960078406623209",
+         "6769217342193779",
+         "6365675663395108",
+         "4883965989315003",
+         "8207589669018272",
+         "8187983175342946",
+         "6800945492346835",
+         "871322740980006",
+         "1398974465754679",
+         "7700845167528855",
+         "5367808674294061",
+         "7344228813727601",
+         "873920236166561"
+        ],
+        "abilities": [
+         {
+          "name_key": "DEMONA_ABILBASIC_NAME",
+          "icon": "icons_units_demona/demona_basic",
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "desc_key": "DEMONA_ABILBASIC_DESC_02",
+          "ability_type": 1,
+          "balance_vars": [
+           135.0,
+           2.0,
+           0.2,
+           67.5,
+           2.0,
+           0.05,
+           0.0,
+           0.0
+          ]
+         },
+         {
+          "name_key": "DEMONA_ABILSPECIALA_NAME",
+          "icon": "icons_units_demona/demona_special_a",
+          "mana_cost": 4,
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "range": 1.0,
+          "id": 2,
+          "desc_key": "DEMONA_ABILSPECIALA_DESC_02",
+          "preview_strength": true,
+          "initial_mana": 4,
+          "ability_type": 3,
+          "balance_vars": [
+           135.0,
+           0.05,
+           1.0
+          ],
+          "sort_order": 1
+         },
+         {
+          "name_key": "DEMONA_ABILSPECIALB_NAME",
+          "icon": "icons_units_demona/demona_special_b",
+          "mana_cost": 5,
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "id": 3,
+          "desc_key": "DEMONA_ABILSPECIALB_DESC_02",
+          "preview_strength": true,
+          "initial_mana": 5,
+          "ability_type": 3,
+          "balance_vars": [
+           438.75,
+           438.75,
+           2.0,
+           0.5,
+           1.0,
+           0.0
+          ],
+          "sort_order": 2
+         },
+         {
+          "name_key": "DEMONA_ABILPASSIVE_NAME",
+          "icon": "icons_units_demona/demona_proc",
+          "mana_cost": 2,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "id": 1,
+          "desc_key": "DEMONA_ABILPASSIVE_DESC_02",
+          "initial_mana": 2,
+          "ability_type": 4,
+          "balance_vars": [
+           0.15,
+           72.009,
+           3.0,
+           0.1,
+           67.5,
+           2.0,
+           0.1,
+           0.2,
+           0.1
+          ],
+          "sort_order": 3
+         }
+        ],
+        "health_percent": 1.0,
+        "power_rating": 203,
+        "category_ids": [
+         "614606076824576",
+         "5960529125021754",
+         "2489250258015164",
+         "4193773771140306",
+         "4324500008569381",
+         "5800061760299363"
+        ],
+        "speed": 100,
+        "potency": 0.0099,
+        "tenacity": 0.05,
+        "affects_star_rating": true,
+        "bootstrap_unique_id": 13
+       }
+      ],
+      "encounter": "0"
+     }
+    ],
+    "team_id": 1,
+    "player_level": 36,
+    "client_version": "24.2"
+   },
+   {
+    "ai_content_id": "1661400315776363",
+    "squads": [
+     {
+      "units": [
+       {
+        "definition_id": "508341540759214",
+        "persistent_id": 6,
+        "rarity": 7,
+        "level": 81,
+        "gear_slot_equipped": [
+         true,
+         false,
+         true,
+         false,
+         true,
+         false
+        ],
+        "gear_tier": 7,
+        "offense": 1985,
+        "defense": 408,
+        "health": 18590,
+        "crit_chance": 0.17,
+        "crit_power": 1.5,
+        "attack_speed": 0.23,
+        "walk_speed": 1.9,
+        "attack_range": 4.0,
+        "radius": 1.0,
+        "name_key": "MERIDA_UNIT_NAME",
+        "asset_id": "unit_merida/u_merida",
+        "icon": "icons_units_merida/portrait_merida",
+        "effect_def_ids": [
+         "3087133776824342",
+         "1509742996098045",
+         "6606177416477723",
+         "8652462392464983",
+         "8098531142272842",
+         "1113508513035193",
+         "8215497184107128",
+         "8479511184849792",
+         "8177751929462223",
+         "5461668520708950",
+         "488518860086900",
+         "5541859464991871",
+         "1694840347504096",
+         "7846546902378667",
+         "808977242677222",
+         "101",
+         "79",
+         "8556251970469526",
+         "873920236166561",
+         "8936738100835421"
+        ],
+        "abilities": [
+         {
+          "name_key": "MERIDA_ABILBASIC_NAME",
+          "icon": "icons_units_merida/merida_basic",
+          "activated": true,
+          "level": 4,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "desc_key": "MERIDA_BASIC_DESC_02",
+          "ability_type": 1,
+          "balance_vars": [
+           2977.5,
+           2084.25,
+           0.2,
+           0.15,
+           2.0,
+           4.0,
+           1.0
+          ]
+         },
+         {
+          "name_key": "MERIDA_ABILSPECIALA_NAME",
+          "icon": "icons_units_merida/merida_special_a",
+          "mana_cost": 4,
+          "activated": true,
+          "level": 4,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "id": 2,
+          "desc_key": "MERIDA_SPECIALA_DESC_03",
+          "preview_strength": true,
+          "initial_mana": 3,
+          "ability_type": 3,
+          "balance_vars": [
+           2.0,
+           2977.5,
+           0.2,
+           744.375,
+           1.0,
+           1.0,
+           3.0,
+           2.0
+          ],
+          "sort_order": 1
+         },
+         {
+          "name_key": "MERIDA_ABILSPECIALB_NAME",
+          "icon": "icons_units_merida/merida_special_b",
+          "mana_cost": 5,
+          "activated": true,
+          "level": 3,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "range": 1.0,
+          "id": 3,
+          "desc_key": "MERIDA_SPECIALB_DESC_02",
+          "preview_strength": true,
+          "ability_type": 3,
+          "balance_vars": [
+           9676.875,
+           1.0,
+           1.0,
+           0.0,
+           0.25
+          ],
+          "sort_order": 2
+         },
+         {
+          "name_key": "MERIDA_ABILPROC_NAME",
+          "icon": "icons_units_merida/merida_proc",
+          "level": 4,
+          "shape": 1,
+          "target_self": true,
+          "geo_id": "44",
+          "id": 1,
+          "desc_key": "MERIDA_PASSIVE_DESC_02",
+          "ability_type": 4,
+          "balance_vars": [
+           0.04,
+           0.15,
+           4.0,
+           1.0,
+           1.0
+          ],
+          "sort_order": 3
+         }
+        ],
+        "health_percent": 1.0,
+        "power_rating": 919,
+        "category_ids": [
+         "5785710300459637",
+         "5960529125021754",
+         "4650364419227244",
+         "5968787601315360",
+         "5820897550663740"
+        ],
+        "sorcerer_stone_id": "6548409204418918",
+        "speed": 134,
+        "potency": 0.22,
+        "tenacity": 0.1,
+        "accuracy": 0.1,
+        "evasion": 0.1,
+        "affects_star_rating": true,
+        "bootstrap_unique_id": 1
+       },
+       {
+        "definition_id": "1120886486277251",
+        "persistent_id": 7,
+        "rarity": 7,
+        "level": 67,
+        "gear_slot_equipped": [
+         false,
+         false,
+         false,
+         false,
+         false,
+         false
+        ],
+        "gear_tier": 7,
+        "offense": 1065,
+        "defense": 547,
+        "health": 24687,
+        "recovery": 972,
+        "crit_chance": 0.09,
+        "crit_power": 1.5,
+        "attack_speed": 0.16,
+        "walk_speed": 1.9,
+        "attack_range": 1.0,
+        "radius": 1.0,
+        "name_key": "KRISTOFF_UNIT_NAME",
+        "asset_id": "unit_kristoff/u_kristoff",
+        "icon": "icons_units_kristoff/portrait_kristoff",
+        "effect_def_ids": [
+         "8518280522978830",
+         "2987740237730376",
+         "202688659854942",
+         "7714303835655709",
+         "7209192234050857",
+         "6747877825859171",
+         "502645002204406",
+         "6368887227454293",
+         "8916136081366778",
+         "101",
+         "202589860335914"
+        ],
+        "abilities": [
+         {
+          "name_key": "KRISTOFF_ABILBASIC_NAME",
+          "icon": "icons_units_kristoff/kristoff_basic",
+          "activated": true,
+          "level": 4,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "desc_key": "KRISTOFF_ABILBASIC_DESC_02",
+          "ability_type": 1,
+          "balance_vars": [
+           1278.0,
+           0.65,
+           2.0
+          ]
+         },
+         {
+          "name_key": "KRISTOFF_ABILSPECIALA_NAME",
+          "icon": "icons_units_kristoff/kristoff_special_a",
+          "mana_cost": 2,
+          "activated": true,
+          "level": 4,
+          "shape": 1,
+          "add_unit_max_count": 10,
+          "add_unit": {
+           "definition_id": "977212693736596",
+           "offense": 1,
+           "health": 1,
+           "recovery": 1,
+           "crit_power": 1.5,
+           "walk_speed": 1.4,
+           "attack_range": 80.0,
+           "radius": 0.8,
+           "name_key": "STONE_TROLL_UNIT_NAME",
+           "asset_id": "unit_stone_troll/u_stone_troll",
+           "icon": "icons_units_stone_troll/portrait_stone_troll",
+           "effect_def_ids": [
+            "3136614066967898",
+            "8136594923027405",
+            "7645079585475924",
+            "8473029349147821",
+            "8292869497107649",
+            "7546777177685379",
+            "5277249949279636",
+            "5647662264620933",
+            "3313275090392027",
+            "607072457587639",
+            "8300737702024263",
+            "2235884698955078",
+            "3698727829900091",
+            "79",
+            "7153200370794134",
+            "5911620782364054",
+            "101"
+           ],
+           "abilities": [
+            {
+             "name_key": "STONETROLL_ABILBASIC_NAME",
+             "icon": "icons_units_kristoff/troll_basic",
+             "activated": true,
+             "level": 1,
+             "shape": 1,
+             "target_enemy": true,
+             "geo_id": "44",
+             "desc_key": "SUMMONED_UNIT_BASIC_GEN_DESC",
+             "ability_type": 1,
+             "balance_vars": [
+              1.0
+             ]
+            },
+            {
+             "name_key": "STONETROLL_ABILSPECIALA_NAME",
+             "icon": "icons_units_kristoff/troll_special_a",
+             "mana_cost": 3,
+             "activated": true,
+             "level": 1,
+             "shape": 1,
+             "target_self": true,
+             "target_ally": true,
+             "geo_id": "44",
+             "id": 1,
+             "desc_key": "SUMMONED_UNIT_SPECIAL_HEAL_GEN_DESC",
+             "initial_mana": 3,
+             "ability_type": 3,
+             "balance_vars": [
+              1.0,
+              1.0
+             ],
+             "sort_order": 1
+            }
+           ],
+           "unit_type": 1,
+           "health_percent": 1.0,
+           "category_ids": [
+            "5785710300459637",
+            "5495262680796735",
+            "4650364419227244",
+            "1417430934200025"
+           ],
+           "speed": 50,
+           "accuracy": 100.0,
+           "affects_star_rating": true,
+           "bootstrap_unique_id": 2
+          },
+          "geo_id": "44",
+          "id": 1,
+          "desc_key": "KRISTOFF_ABILSPECIALA_DESC_01",
+          "preview_strength": true,
+          "initial_mana": 2,
+          "ability_type": 3,
+          "balance_vars": [
+           14812.2,
+           328.2,
+           766.80005,
+           1701.0
+          ],
+          "sort_order": 1
+         },
+         {
+          "name_key": "KRISTOFF_ABILSPECIALB_NAME",
+          "icon": "icons_units_kristoff/kristoff_special_b",
+          "mana_cost": 3,
+          "activated": true,
+          "level": 3,
+          "shape": 1,
+          "target_self": true,
+          "target_ally": true,
+          "geo_id": "44",
+          "range": 1.0,
+          "id": 2,
+          "desc_key": "KRISTOFF_ABILSPECIALB_DESC_03",
+          "preview_strength": true,
+          "initial_mana": 3,
+          "ability_type": 3,
+          "balance_vars": [
+           2.0,
+           2.0,
+           1.0,
+           1.0,
+           972.0,
+           2.0
+          ],
+          "sort_order": 2
+         },
+         {
+          "name_key": "KRISTOFF_ABILPASSIVEA_NAME",
+          "icon": "icons_units_kristoff/kristoff_passive",
+          "level": 3,
+          "shape": 1,
+          "target_self": true,
+          "geo_id": "44",
+          "id": 3,
+          "desc_key": "KRISTOFF_ABILPASSIVEA_DESC_01",
+          "ability_type": 4,
+          "balance_vars": [
+           1.0,
+           2.0,
+           1579.5
+          ],
+          "sort_order": 3
+         }
+        ],
+        "health_percent": 1.0,
+        "power_rating": 776,
+        "category_ids": [
+         "5785710300459637",
+         "185013331968872",
+         "4650364419227244",
+         "1417430934200025"
+        ],
+        "speed": 100,
+        "potency": 0.18,
+        "tenacity": 0.23,
+        "affects_star_rating": true,
+        "bootstrap_unique_id": 3
+       },
+       {
+        "definition_id": "8440699935170726",
+        "persistent_id": 8,
+        "rarity": 7,
+        "level": 67,
+        "gear_slot_equipped": [
+         false,
+         false,
+         false,
+         false,
+         false,
+         false
+        ],
+        "gear_tier": 3,
+        "offense": 785,
+        "defense": 454,
+        "health": 20207,
+        "crit_chance": 0.05,
+        "crit_power": 1.5,
+        "attack_speed": 0.16,
+        "walk_speed": 1.9,
+        "attack_range": 1.0,
+        "radius": 1.0,
+        "name_key": "CAPTAINFRANK_UNIT_NAME",
+        "asset_id": "unit_frank/u_frank",
+        "icon": "icons_units_frank/portrait_frank",
+        "effect_def_ids": [
+         "5269184768084224",
+         "4725246467010165",
+         "1808555741941771",
+         "3399294495840078",
+         "3803978129729042",
+         "8919391207010314",
+         "7663493655432229",
+         "4873082513887322",
+         "6039775411021576",
+         "6774138553538447",
+         "413061054221352",
+         "5260423492103420",
+         "229368979734946",
+         "7153200370794134",
+         "5607093412473936",
+         "8374562359097273",
+         "5853777658327959",
+         "3303493622502125",
+         "3510881186329170",
+         "5444326312663696"
+        ],
+        "abilities": [
+         {
+          "name_key": "CAPTAINFRANK_ABILBASIC_NAME",
+          "icon": "icons_units_frank/frank_basic",
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "range": 1.0,
+          "desc_key": "CAPTAINFRANK_BASIC_DESC_02",
+          "ability_type": 1,
+          "balance_vars": [
+           726.125,
+           0.3,
+           0.1,
+           1.0,
+           1.0
+          ]
+         },
+         {
+          "name_key": "CAPTAINFRANK_ABILSPECIALA_NAME",
+          "icon": "icons_units_frank/frank_special_a",
+          "mana_cost": 4,
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "range": 8.0,
+          "id": 1,
+          "desc_key": "CAPTAINFRANK_SPECIALA_DESC_02",
+          "initial_mana": 4,
+          "ability_type": 3,
+          "balance_vars": [
+           703.203,
+           0.5,
+           1.0,
+           1.0,
+           1.0,
+           5.0,
+           1.0,
+           5.0,
+           0.3,
+           0.1
+          ],
+          "sort_order": 1
+         },
+         {
+          "name_key": "CAPTAINFRANK_ABILSPECIALB_NAME",
+          "icon": "icons_units_frank/frank_special_b",
+          "mana_cost": 4,
+          "activated": true,
+          "level": 1,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "range": 14.0,
+          "id": 2,
+          "desc_key": "CAPTAINFRANK_SPECIALB_DESC_01",
+          "initial_mana": 4,
+          "ability_type": 3,
+          "balance_vars": [
+           1030.3125,
+           1.0,
+           1.0,
+           1.0,
+           0.0
+          ],
+          "sort_order": 2
+         },
+         {
+          "name_key": "CAPTAINFRANK_ABILPASSIVEA_NAME",
+          "icon": "icons_units_frank/frank_passive_a",
+          "level": 1,
+          "shape": 1,
+          "add_unit_max_count": 9,
+          "add_unit": {
+           "definition_id": "5547203838796210",
+           "walk_speed": 2.0,
+           "attack_range": 1.0,
+           "radius": 0.8,
+           "asset_id": "unit_proxima/u_proxima",
+           "icon": "icons_units_frank/portrait_frank_proxima",
+           "effect_def_ids": [
+            "822593908817944",
+            "6109299409710426",
+            "6863195529325077",
+            "2260636917838423",
+            "7153200370794134",
+            "5657118626295873",
+            "5097346769486712",
+            "5607093412473936",
+            "8374562359097273",
+            "5444326312663696"
+           ],
+           "abilities": [
+            {
+             "name_key": "PROXIMA_BASIC_NAME",
+             "icon": "icons_units_frank/frank_minion_basic",
+             "activated": true,
+             "level": 1,
+             "shape": 1,
+             "target_enemy": true,
+             "geo_id": "44",
+             "desc_key": "PROXIMA_BASIC_DESC_01",
+             "ability_type": 1
+            },
+            {
+             "name_key": "PROXIMA_SPECIALA_NAME",
+             "icon": "icons_units_frank/frank_minion_special_a",
+             "mana_cost": 3,
+             "activated": true,
+             "level": 1,
+             "shape": 1,
+             "target_enemy": true,
+             "geo_id": "44",
+             "id": 1,
+             "desc_key": "PROXIMA_SPECIALA_DESC_01",
+             "initial_mana": 3,
+             "ability_type": 3
+            },
+            {
+             "name_key": "PROXIMA_PASSIVEA_NAME",
+             "icon": "icons_units_frank/frank_minion_passive_a",
+             "level": 1,
+             "shape": 1,
+             "geo_id": "44",
+             "id": 2,
+             "desc_key": "PROXIMA_PASSIVEA_DESC_01",
+             "ability_type": 4
+            }
+           ],
+           "unit_type": 1,
+           "health_percent": 1.0,
+           "category_ids": [
+            "5960529125021754",
+            "4650364419227244",
+            "5785710300459637",
+            "8951569574997208"
+           ],
+           "affects_star_rating": true,
+           "bootstrap_unique_id": 4
+          },
+          "geo_id": "44",
+          "range": 21.0,
+          "id": 3,
+          "desc_key": "CAPTAINFRANK_PASSIVEA_DESC_01",
+          "ability_type": 4,
+          "balance_vars": [
+           0.3,
+           1.0,
+           0.05,
+           0.05,
+           10.0,
+           10103.5,
+           227.0,
+           785.0,
+           2.0,
+           1570.0,
+           1.0,
+           0.0,
+           0.0,
+           1.1,
+           0.6
+          ],
+          "sort_order": 3
+         }
+        ],
+        "health_percent": 1.0,
+        "power_rating": 344,
+        "category_ids": [
+         "5785710300459637",
+         "185013331968872",
+         "4650364419227244",
+         "8951569574997208",
+         "1515770659265273"
+        ],
+        "speed": 95,
+        "potency": 0.05,
+        "tenacity": 0.05,
+        "affects_star_rating": true,
+        "bootstrap_unique_id": 5
+       },
+       {
+        "definition_id": "5038787354506461",
+        "persistent_id": 9,
+        "rarity": 7,
+        "level": 67,
+        "gear_slot_equipped": [
+         false,
+         true,
+         false,
+         false,
+         false,
+         false
+        ],
+        "gear_tier": 3,
+        "offense": 837,
+        "defense": 359,
+        "health": 15155,
+        "crit_chance": 0.05,
+        "crit_power": 1.5,
+        "attack_speed": 0.16,
+        "walk_speed": 1.9,
+        "attack_range": 1.0,
+        "radius": 1.0,
+        "name_key": "LILYHOUGHTON_UNIT_NAME",
+        "asset_id": "unit_lily_houghton/u_lily_houghton",
+        "icon": "icons_units_lily_houghton/portrait_lily_houghton",
+        "effect_def_ids": [
+         "7524507278601521",
+         "7116574778554486",
+         "4930478549384368",
+         "418247668478063",
+         "8929446239993208",
+         "5765613592005454",
+         "974173734065771",
+         "7917595740302394",
+         "7784878623520071",
+         "4635800218622683",
+         "7153200370794134",
+         "5607093412473936",
+         "8374562359097273",
+         "5853777658327959",
+         "3303493622502125",
+         "3510881186329170",
+         "5444326312663696"
+        ],
+        "abilities": [
+         {
+          "name_key": "LILYHOUGHTON_ABILBASIC_NAME",
+          "icon": "icons_units_lily_houghton/lily_houghton_basic",
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "desc_key": "LILYHOUGHTON_BASIC_DESC_02",
+          "ability_type": 1,
+          "balance_vars": [
+           700.9875,
+           1.0,
+           0.3,
+           0.1,
+           1.0
+          ]
+         },
+         {
+          "name_key": "LILYHOUGHTON_ABILSPECIALA_NAME",
+          "icon": "icons_units_lily_houghton/lily_houghton_special_a",
+          "mana_cost": 4,
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "id": 1,
+          "desc_key": "LILYHOUGHTON_SPECIALA_DESC_02",
+          "initial_mana": 4,
+          "ability_type": 3,
+          "balance_vars": [
+           2.0,
+           2.0,
+           0.1,
+           0.05,
+           1.0,
+           0.3,
+           1.0,
+           0.0
+          ],
+          "sort_order": 1
+         },
+         {
+          "name_key": "LILYHOUGHTON_ABILSPECIALB_NAME",
+          "icon": "icons_units_lily_houghton/lily_houghton_special_b",
+          "mana_cost": 4,
+          "activated": true,
+          "level": 1,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "id": 2,
+          "desc_key": "LILYHOUGHTON_SPECIALB_DESC_01",
+          "initial_mana": 4,
+          "ability_type": 3,
+          "balance_vars": [
+           1098.5625,
+           1.0,
+           0.1,
+           0.1,
+           0.0
+          ],
+          "sort_order": 2
+         },
+         {
+          "name_key": "LILYHOUGHTON_ABILPASSIVEA_NAME",
+          "icon": "icons_units_lily_houghton/lily_houghton_special_c",
+          "mana_cost": 1,
+          "level": 1,
+          "shape": 1,
+          "geo_id": "44",
+          "id": 3,
+          "desc_key": "LILYHOUGHTON_PASSIVEA_DESC_01",
+          "initial_mana": 1,
+          "ability_type": 4,
+          "balance_vars": [
+           0.5,
+           1.0,
+           3.0,
+           0.2,
+           0.3,
+           2.0,
+           0.1,
+           1.0,
+           0.0
+          ],
+          "sort_order": 3
+         }
+        ],
+        "health_percent": 1.0,
+        "power_rating": 355,
+        "category_ids": [
+         "5785710300459637",
+         "5495262680796735",
+         "4650364419227244",
+         "8951569574997208",
+         "1515770659265273"
+        ],
+        "speed": 90,
+        "potency": 0.05,
+        "tenacity": 0.05,
+        "affects_star_rating": true,
+        "bootstrap_unique_id": 6
+       },
+       {
+        "definition_id": "2116902913444099",
+        "persistent_id": 10,
+        "rarity": 7,
+        "level": 81,
+        "gear_slot_equipped": [
+         true,
+         false,
+         true,
+         true,
+         false,
+         false
+        ],
+        "gear_tier": 3,
+        "offense": 920,
+        "defense": 395,
+        "health": 17130,
+        "recovery": 237,
+        "crit_chance": 0.05,
+        "crit_power": 1.5,
+        "attack_speed": 0.35,
+        "walk_speed": 1.9,
+        "attack_range": 4.0,
+        "radius": 1.0,
+        "name_key": "POCAHONTAS_UNIT_NAME",
+        "asset_id": "unit_pocahontas/u_pocahontas",
+        "icon": "icons_units_pocahontas/portrait_pocahontas",
+        "effect_def_ids": [
+         "7195955212473682",
+         "3283644002706783",
+         "3288535163750954",
+         "1135481016164381",
+         "4453361282258241",
+         "3857550407588760",
+         "2893733217546580",
+         "7835726358828379",
+         "4555865845825427",
+         "8927814860681849",
+         "796340398316597",
+         "2368126753488815",
+         "7184402604870639",
+         "5915813889998566",
+         "4355603982871307",
+         "4147828240977908",
+         "7153200370794134",
+         "6960279588130474",
+         "5750884503252293",
+         "873920236166561",
+         "7344228813727601",
+         "2234622711537216",
+         "101"
+        ],
+        "abilities": [
+         {
+          "name_key": "POCAHONTAS_ABILBASIC_NAME",
+          "icon": "icons_units_pocahontas/pocahontas_basic",
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "desc_key": "POCAHONTAS_BASIC_DESC_02",
+          "ability_type": 1,
+          "balance_vars": [
+           782.0,
+           0.3,
+           2.0,
+           0.1,
+           0.3,
+           230.0,
+           2.0
+          ]
+         },
+         {
+          "name_key": "POCAHONTAS_ABILSPECIALA_NAME",
+          "icon": "icons_units_pocahontas/pocahontas_special_a",
+          "mana_cost": 4,
+          "activated": true,
+          "level": 2,
+          "shape": 1,
+          "target_ally": true,
+          "geo_id": "44",
+          "id": 2,
+          "desc_key": "POCAHONTAS_SPECIALA_DESC_02",
+          "initial_mana": 4,
+          "ability_type": 3,
+          "balance_vars": [
+           2.0,
+           1.0,
+           0.1,
+           1.0,
+           1.0,
+           0.1,
+           0.0,
+           0.0
+          ],
+          "sort_order": 1
+         },
+         {
+          "name_key": "POCAHONTAS_ABILSPECIALB_NAME",
+          "icon": "icons_units_pocahontas/pocahontas_special_b",
+          "mana_cost": 5,
+          "activated": true,
+          "level": 1,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "range": 1.0,
+          "id": 3,
+          "desc_key": "POCAHONTAS_SPECIALB_DESC_01",
+          "preview_strength": true,
+          "initial_mana": 5,
+          "ability_type": 3,
+          "balance_vars": [
+           920.0,
+           2.0,
+           2.0,
+           237.0,
+           0.2,
+           0.0,
+           10.0,
+           0.0
+          ],
+          "sort_order": 2
+         },
+         {
+          "name_key": "POCAHONTAS_ABILPROC_NAME",
+          "icon": "icons_units_pocahontas/pocahontas_proc",
+          "mana_cost": 2,
+          "level": 1,
+          "shape": 1,
+          "target_self": true,
+          "target_ally": true,
+          "geo_id": "44",
+          "id": 1,
+          "desc_key": "POCAHONTAS_PASSIVE_DESC_01",
+          "initial_mana": 2,
+          "ability_type": 4,
+          "balance_vars": [
+           0.1,
+           296.25,
+           2.0,
+           0.0
+          ],
+          "sort_order": 3
+         }
+        ],
+        "health_percent": 1.0,
+        "power_rating": 391,
+        "category_ids": [
+         "5785710300459637",
+         "5495262680796735",
+         "4650364419227244",
+         "4120166060123730",
+         "5820897550663740"
+        ],
+        "speed": 83,
+        "potency": 0.03,
+        "tenacity": 0.05,
+        "affects_star_rating": true,
+        "bootstrap_unique_id": 7
+       }
+      ],
+      "encounter": "0"
+     }
+    ],
+    "is_human": true,
+    "player_id": 1,
+    "spells": [
+     {
+      "definition_id": "2707539869757510",
+      "ability": {
+       "name_key": "CAULDRON_SPELL_NAME",
+       "icon": "icons_spells_cauldron/spell_cauldron",
+       "mana_cost": 2,
+       "activated": true,
+       "level": 2,
+       "shape": 1,
+       "add_unit_max_count": 2,
+       "add_unit": {
+        "definition_id": "8398376374448396",
+        "health": 120,
+        "asset_id": "spell_cauldron/u_cauldron",
+        "icon": "icons_spells_cauldron/spell_cauldron_lg",
+        "effect_def_ids": [
+         "8888236536844066",
+         "2692601947134876",
+         "4972246443679316"
+        ],
+        "abilities": [
+         {
+          "name_key": "ABILITY_BASIC_GENERIC",
+          "activated": true,
+          "level": 1,
+          "shape": 1,
+          "target_enemy": true,
+          "geo_id": "44",
+          "desc_key": "ABILITY_BASIC_GENERIC_DESC",
+          "ability_type": 1
+         }
+        ],
+        "unit_type": 1,
+        "health_percent": 1.0,
+        "category_ids": [
+         "5495262680796735"
+        ],
+        "affects_star_rating": true,
+        "bootstrap_unique_id": 14
+       },
+       "geo_id": "44",
+       "cast_area": 1,
+       "desc_key": "SPELL_CAULDRON_DESC_02",
+       "balance_vars": [
+        150.0,
+        50.0,
+        2.0,
+        0.1
+       ]
+      },
+      "power_rating": 15
+     },
+     {
+      "definition_id": "6798873058711461",
+      "effect_def_ids": [
+       "1368361838579745"
+      ],
+      "ability": {
+       "name_key": "SPIRIT_MUFASA_SPELL_NAME",
+       "icon": "icons_spells_spirit_mufasa/spell_spirit_mufasa",
+       "mana_cost": 4,
+       "activated": true,
+       "level": 1,
+       "shape": 1,
+       "target_ally": true,
+       "geo_id": "44",
+       "id": 1,
+       "desc_key": "SPELL_SPIRITMUFASA_DESC_01",
+       "balance_vars": [
+        2.0,
+        2.0,
+        0.0
+       ]
+      },
+      "power_rating": 5
+     }
+    ],
+    "activity_trackers": [
+     {
+      "activity_id": "7232089473019890",
+      "tracker_id": "8308148360900744"
+     },
+     {
+      "activity_id": "7302084992106933",
+      "tracker_id": "150720363151010"
+     },
+     {
+      "activity_id": "1536742290282907",
+      "tracker_id": "1315328241247962"
+     },
+     {
+      "activity_id": "3975619712751594",
+      "tracker_id": "8762266718083384"
+     },
+     {
+      "activity_id": "4606222743125935",
+      "tracker_id": "1486904043995146",
+      "value": "41"
+     },
+     {
+      "activity_id": "8905662171149275",
+      "tracker_id": "1486904043995146",
+      "value": "5"
+     },
+     {
+      "activity_id": "1152326981820961",
+      "tracker_id": "1486904043995146"
+     }
+    ],
+    "player_level": 84,
+    "client_version": "24.2"
+   }
+  ],
+  "ruleset": 5,
+  "mutators": [
+   "4424554285226317"
+  ],
+  "environments": [
+   {
+    "prefabs": [
+     "env_medieval_area_02/env_medieval_area_02"
+    ],
+    "map": {
+     "encounters": [
+      {
+       "id": "0"
+      }
+     ]
+    },
+    "spawn_points": [
+     {
+      "unit_type": 1,
+      "x": -7.49,
+      "y": 2.71
+     },
+     {
+      "x": -3.012942,
+      "y": 3.017646
+     },
+     {
+      "x": -6.35,
+      "y": 0.46
+     },
+     {
+      "unit_type": 1,
+      "x": -3.33,
+      "y": 1.13
+     },
+     {
+      "unit_type": 1,
+      "x": -6.31,
+      "y": -1.47
+     },
+     {
+      "x": -2.518095,
+      "y": -0.7434636
+     },
+     {
+      "x": -5.214,
+      "y": -2.83
+     },
+     {
+      "unit_type": 1,
+      "x": -2.66,
+      "y": -2.35
+     },
+     {
+      "unit_type": 1,
+      "x": -5.2,
+      "y": -5.23
+     },
+     {
+      "x": -2.317058,
+      "y": -3.997642
+     },
+     {
+      "team_id": 1,
+      "unit_type": 1,
+      "x": 6.55,
+      "y": 8.54
+     },
+     {
+      "team_id": 1,
+      "x": 3.14,
+      "y": 6.69
+     },
+     {
+      "team_id": 1,
+      "x": 7.24,
+      "y": 6.26
+     },
+     {
+      "team_id": 1,
+      "unit_type": 1,
+      "x": 2.51,
+      "y": 2.52
+     },
+     {
+      "team_id": 1,
+      "unit_type": 1,
+      "x": 8.81,
+      "y": 2.79
+     },
+     {
+      "team_id": 1,
+      "x": 3.225735,
+      "y": 0.2
+     },
+     {
+      "team_id": 1,
+      "x": 7.85,
+      "y": 0.43
+     },
+     {
+      "team_id": 1,
+      "unit_type": 1,
+      "x": 3.48,
+      "y": -1.99
+     },
+     {
+      "team_id": 1,
+      "unit_type": 1,
+      "x": 8.18,
+      "y": -3.54
+     },
+     {
+      "team_id": 1,
+      "x": 3.4,
+      "y": -4.25
+     }
+    ]
+   }
+  ],
+  "mutator_data_list": [
+   {
+    "mutator": "4424554285226317"
+   }
+  ],
+  "default_speed": 2.0,
+  "game_mode": 6
+ }
+}

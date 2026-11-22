@@ -1,0 +1,289 @@
+{
+ "event_group": {
+  "contentId": "5612093870412270",
+  "name": "ST_202006_Stones01_A_META_NAME",
+  "description": "ST_202006_Stones01_META_DESC",
+  "image": "icons_scheduled_events_sorcerers_trials/ss_wilds_meta",
+  "sortOrder": "80",
+  "showcaseItems": [
+   "182118989500189",
+   "3258030059994393",
+   "4956782645485204"
+  ],
+  "marqueeImage": "icons_scheduled_events_sorcerers_trials/Event_portal_ss_wilds",
+  "hasPlayerActivated": true,
+  "frameColor": {
+   "a": 1.0
+  },
+  "panelColor": {
+   "a": 1.0
+  },
+  "portalName": "ST_202006_Stones01_PORTAL_NAME",
+  "portalDesc": "ST_202006_Stones01_PORTAL_DESC"
+ },
+ "mail": {
+  "start": [
+   "ST_SS_WILDS_INBOX_SUBJECT",
+   "ST_SS_WILDS_INBOX_BODY"
+  ]
+ },
+ "rotation": {
+  "lane": "trials",
+  "after": 690426003785334
+ },
+ "events": [
+  {
+   "key_prefix": "ST_202006_Stones01_A",
+   "event": {
+    "contentId": "5612093870412271",
+    "name": "ST_202006_Stones01_A_NAME",
+    "description": "ST_202006_Stones01_A_DESC",
+    "image": "icons_scheduled_events_sorcerers_trials/ss_wilds_cover",
+    "sortOrder": "100",
+    "battleLimit": "2",
+    "marqueeImage": "icons_scheduled_events_sorcerers_trials/Event_portal_ss_wilds",
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "allowInstantBattle": true,
+    "showcaseItems": [
+     "182118989500189",
+     "3258030059994393",
+     "4956782645485204"
+    ],
+    "eventGroupId": "5612093870412270"
+   },
+   "roster": {
+    "bosses": [
+     2294812731867727
+    ],
+    "minions": [
+     135,
+     2690321414583935,
+     3524431964886272
+    ]
+   },
+   "tiers": [
+    {
+     "restriction": 3158891525152199,
+     "rewards": [
+      {
+       "id": 1880054509524447,
+       "min": 150,
+       "max": 180
+      }
+     ]
+    },
+    {
+     "restriction": 3624755195596940,
+     "rewards": [
+      {
+       "id": 1880054509524447,
+       "min": 630,
+       "max": 680
+      },
+      {
+       "id": 182118989500189,
+       "min": 10,
+       "max": 12,
+       "chance": true
+      },
+      {
+       "id": 3258030059994393,
+       "min": 10,
+       "max": 12,
+       "chance": true
+      },
+      {
+       "id": 4956782645485204,
+       "min": 10,
+       "max": 12,
+       "chance": true
+      }
+     ]
+    },
+    {
+     "restriction": 547920237295492,
+     "rewards": [
+      {
+       "id": 1880054509524447,
+       "min": 900,
+       "max": 1100
+      },
+      {
+       "id": 182118989500189,
+       "min": 30,
+       "max": 36,
+       "chance": true
+      },
+      {
+       "id": 3258030059994393,
+       "min": 30,
+       "max": 36,
+       "chance": true
+      },
+      {
+       "id": 4956782645485204,
+       "min": 30,
+       "max": 36,
+       "chance": true
+      },
+      {
+       "id": 3155383931868145,
+       "min": 12,
+       "max": 15,
+       "chance": true
+      },
+      {
+       "id": 6328280166322948,
+       "min": 12,
+       "max": 15,
+       "chance": true
+      },
+      {
+       "id": 6005063202236819,
+       "min": 12,
+       "max": 15,
+       "chance": true
+      }
+     ]
+    },
+    {
+     "restriction": 6987289946772034,
+     "rewards": [
+      {
+       "id": 1880054509524447,
+       "min": 1200,
+       "max": 1400
+      },
+      {
+       "id": 182118989500189,
+       "min": 40,
+       "max": 48,
+       "chance": true
+      },
+      {
+       "id": 3258030059994393,
+       "min": 40,
+       "max": 48,
+       "chance": true
+      },
+      {
+       "id": 4956782645485204,
+       "min": 40,
+       "max": 48,
+       "chance": true
+      },
+      {
+       "id": 3155383931868145,
+       "min": 18,
+       "max": 22,
+       "chance": true
+      },
+      {
+       "id": 6328280166322948,
+       "min": 18,
+       "max": 22,
+       "chance": true
+      },
+      {
+       "id": 6005063202236819,
+       "min": 18,
+       "max": 22,
+       "chance": true
+      }
+     ]
+    },
+    {
+     "restriction": 5401727147846222,
+     "rewards": [
+      {
+       "id": 1880054509524447,
+       "min": 1500,
+       "max": 1800
+      },
+      {
+       "id": 182118989500189,
+       "min": 50,
+       "max": 65,
+       "chance": true
+      },
+      {
+       "id": 3258030059994393,
+       "min": 50,
+       "max": 65,
+       "chance": true
+      },
+      {
+       "id": 4956782645485204,
+       "min": 50,
+       "max": 65,
+       "chance": true
+      },
+      {
+       "id": 3155383931868145,
+       "min": 26,
+       "max": 30,
+       "chance": true
+      },
+      {
+       "id": 6328280166322948,
+       "min": 26,
+       "max": 30,
+       "chance": true
+      },
+      {
+       "id": 6005063202236819,
+       "min": 26,
+       "max": 30,
+       "chance": true
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "waves": [
+  {
+   "event": 5612093870412271,
+   "tier": 0,
+   "name_key": "ST_202006_Stones01_A_0_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 2690321414583935,
+       "count": 2
+      },
+      {
+       "id": 135,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 2294812731867727,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 135,
+       "count": 2
+      },
+      {
+       "id": 3524431964886272,
+       "count": 2
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

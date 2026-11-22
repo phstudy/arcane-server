@@ -1,0 +1,1415 @@
+{
+ "event_group": {
+  "contentId": "2022052000000001",
+  "name": "EVENT_202205_OH_BOTHER_META_NAME",
+  "description": "EVENT_202205_OH_BOTHER_META_DESC",
+  "image": "icons_scheduled_events_event_pooh/pooh_event_meta",
+  "sortOrder": "39",
+  "showcaseItems": [
+   "473667553641516",
+   "2728572436468813",
+   "2124755575455435"
+  ],
+  "marqueeImage": "icons_scheduled_events_event_pooh/event_portal_pooh",
+  "hasPlayerActivated": true,
+  "frameColor": {
+   "a": 1.0
+  },
+  "panelColor": {
+   "a": 1.0
+  },
+  "portalName": "EVENT_202205_OH_BOTHER_PORTAL_NAME",
+  "portalDesc": "EVENT_202205_OH_BOTHER_PORTAL_DESC"
+ },
+ "rotation": {
+  "lane": "story",
+  "after": 5612093870412280
+ },
+ "mail": {
+  "preview": [
+   "INBOX_EVENT_202205_OH_BOTHER_PREVIEW_SUBJECT",
+   "INBOX_EVENT_202205_OH_BOTHER_PREVIEW_BODY"
+  ],
+  "start": [
+   "INBOX_EVENT_202205_OH_BOTHER_ACTIVE_SUBJECT",
+   "INBOX_EVENT_202205_OH_BOTHER_ACTIVE_BODY"
+  ],
+  "last_chance": [
+   "INBOX_EVENT_202205_OH_BOTHER_LAST_CHANCE_SUBJECT",
+   "INBOX_EVENT_202205_OH_BOTHER_LAST_CHANCE_BODY"
+  ]
+ },
+ "events": [
+  {
+   "key_prefix": "EVENT_202205_OH_BOTHER_A",
+   "tier_keys": {
+    "name": "{prefix}_L{i}_NAME",
+    "description": "EVENT_202205_OH_BOTHER_A_L0_DESC",
+    "recommended": "{prefix}_L{i}_RECOMMENDED"
+   },
+   "event": {
+    "contentId": "2022052000000002",
+    "name": "EVENT_202205_OH_BOTHER_A_NAME",
+    "image": "icons_scheduled_events_event_pooh/event_cover_hunny_pot",
+    "sortOrder": "100",
+    "battleLimit": "3",
+    "battleLimitRefreshCost": [
+     {
+      "itemId": "31",
+      "count": "100"
+     },
+     {
+      "itemId": "31",
+      "count": "200"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "400"
+     },
+     {
+      "itemId": "31",
+      "count": "500"
+     },
+     {
+      "itemId": "31",
+      "count": "600"
+     },
+     {
+      "itemId": "31",
+      "count": "700"
+     },
+     {
+      "itemId": "31",
+      "count": "800"
+     }
+    ],
+    "marqueeImage": "icons_scheduled_events_event_pooh/event_portal_pooh",
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "allowInstantBattle": true,
+    "showcaseItems": [
+     "473667553641516",
+     "248562853627691",
+     "13"
+    ],
+    "eventGroupId": "2022052000000001"
+   },
+   "roster": {
+    "minions": [
+     50,
+     5584717432624453,
+     1680592376157339,
+     6651802205495402,
+     2294812731867727
+    ]
+   },
+   "battle_environment": "env_pooh_house/env_pooh_house",
+   "tiers": [
+    {
+     "restriction": 2939331586818371,
+     "persistent": {
+      "id": 473667553641516,
+      "min": 1,
+      "max": 1,
+      "goal": 10
+     },
+     "rewards": [
+      {
+       "id": 473667553641516,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 248562853627691,
+       "count": 25,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 2500
+      },
+      {
+       "id": 5461757687019266,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "restriction": 4874124608138704,
+     "persistent": {
+      "id": 473667553641516,
+      "min": 1,
+      "max": 2,
+      "goal": 20
+     },
+     "rewards": [
+      {
+       "id": 473667553641516,
+       "count": 2,
+       "first_time": true
+      },
+      {
+       "id": 248562853627691,
+       "count": 25,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 5000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "restriction": 1269347521348938,
+     "persistent": {
+      "id": 473667553641516,
+      "min": 1,
+      "max": 3,
+      "goal": 20
+     },
+     "rewards": [
+      {
+       "id": 473667553641516,
+       "count": 3,
+       "first_time": true
+      },
+      {
+       "id": 248562853627691,
+       "count": 50,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 7500
+      },
+      {
+       "id": 5461757687019266,
+       "count": 3
+      },
+      {
+       "id": 1171951539086697,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "restriction": 316054371371007,
+     "persistent": {
+      "id": 473667553641516,
+      "min": 1,
+      "max": 4,
+      "goal": 40
+     },
+     "rewards": [
+      {
+       "id": 473667553641516,
+       "count": 4,
+       "first_time": true
+      },
+      {
+       "id": 248562853627691,
+       "count": 100,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 15000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 2
+      },
+      {
+       "id": 1171951539086697,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "restriction": 4616056048423055,
+     "persistent": {
+      "id": 473667553641516,
+      "min": 1,
+      "max": 5,
+      "goal": 55
+     },
+     "rewards": [
+      {
+       "id": 473667553641516,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 248562853627691,
+       "count": 200,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 20000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 3
+      },
+      {
+       "id": 1171951539086697,
+       "count": 3
+      },
+      {
+       "id": 7531001555655815,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "restriction": 7990720986527242,
+     "persistent": {
+      "id": 473667553641516,
+      "min": 1,
+      "max": 6,
+      "goal": 35
+     },
+     "rewards": [
+      {
+       "id": 473667553641516,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 25000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 4
+      },
+      {
+       "id": 1171951539086697,
+       "count": 4
+      },
+      {
+       "id": 7531001555655815,
+       "count": 3
+      },
+      {
+       "id": 2847867582043978,
+       "count": 5
+      },
+      {
+       "id": 2250334176732565,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "restriction": 8080956980433209,
+     "persistent": {
+      "id": 473667553641516,
+      "min": 1,
+      "max": 7,
+      "goal": 50
+     },
+     "rewards": [
+      {
+       "id": 473667553641516,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 30000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 5
+      },
+      {
+       "id": 1171951539086697,
+       "count": 5
+      },
+      {
+       "id": 7531001555655815,
+       "count": 5
+      },
+      {
+       "id": 2847867582043978,
+       "count": 5
+      },
+      {
+       "id": 2250334176732565,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "restriction": 8299566485051314,
+     "persistent": {
+      "id": 473667553641516,
+      "min": 1,
+      "max": 8,
+      "goal": 70
+     },
+     "rewards": [
+      {
+       "id": 473667553641516,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 35000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 5
+      },
+      {
+       "id": 1171951539086697,
+       "count": 5
+      },
+      {
+       "id": 7531001555655815,
+       "count": 5
+      },
+      {
+       "id": 2847867582043978,
+       "count": 5
+      },
+      {
+       "id": 2250334176732565,
+       "count": 5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key_prefix": "EVENT_202205_OH_BOTHER_B",
+   "tier_keys": {
+    "name": "{prefix}_L{i}_NAME",
+    "description": "EVENT_202205_OH_BOTHER_A_L0_DESC",
+    "recommended": "{prefix}_L{i}_RECOMMENDED"
+   },
+   "event": {
+    "contentId": "2022052000000003",
+    "name": "EVENT_202205_OH_BOTHER_B_NAME",
+    "image": "icons_scheduled_events_event_pooh/event_cover_tigger",
+    "sortOrder": "200",
+    "battleLimit": "3",
+    "battleLimitRefreshCost": [
+     {
+      "itemId": "31",
+      "count": "100"
+     },
+     {
+      "itemId": "31",
+      "count": "200"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "400"
+     },
+     {
+      "itemId": "31",
+      "count": "500"
+     },
+     {
+      "itemId": "31",
+      "count": "600"
+     },
+     {
+      "itemId": "31",
+      "count": "700"
+     },
+     {
+      "itemId": "31",
+      "count": "800"
+     }
+    ],
+    "marqueeImage": "icons_scheduled_events_event_pooh/event_portal_pooh",
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "allowInstantBattle": true,
+    "showcaseItems": [
+     "2728572436468813",
+     "13"
+    ],
+    "eventGroupId": "2022052000000001"
+   },
+   "roster": {
+    "minions": [
+     50,
+     5584717432624453,
+     1680592376157339,
+     6651802205495402,
+     2294812731867727
+    ]
+   },
+   "battle_environment": "env_pooh_house/env_pooh_house",
+   "tiers": [
+    {
+     "restriction": 5223210602651454,
+     "persistent": {
+      "id": 2728572436468813,
+      "min": 1,
+      "max": 1,
+      "goal": 10
+     },
+     "rewards": [
+      {
+       "id": 2728572436468813,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 5000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 3
+      },
+      {
+       "id": 2231922868182045,
+       "count": 1
+      },
+      {
+       "id": 1171951539086697,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "restriction": 1591025076918005,
+     "persistent": {
+      "id": 2728572436468813,
+      "min": 1,
+      "max": 2,
+      "goal": 20
+     },
+     "rewards": [
+      {
+       "id": 2728572436468813,
+       "count": 2,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 7500
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 2
+      },
+      {
+       "id": 1171951539086697,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "restriction": 524580657057935,
+     "persistent": {
+      "id": 2728572436468813,
+      "min": 1,
+      "max": 3,
+      "goal": 30
+     },
+     "rewards": [
+      {
+       "id": 2728572436468813,
+       "count": 3,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 15000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 3
+      },
+      {
+       "id": 1171951539086697,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "restriction": 4903291943497148,
+     "persistent": {
+      "id": 2728572436468813,
+      "min": 1,
+      "max": 4,
+      "goal": 40
+     },
+     "rewards": [
+      {
+       "id": 2728572436468813,
+       "count": 4,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 25000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 4
+      },
+      {
+       "id": 1171951539086697,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "restriction": 3385848958651958,
+     "persistent": {
+      "id": 2728572436468813,
+      "min": 1,
+      "max": 5,
+      "goal": 70
+     },
+     "rewards": [
+      {
+       "id": 2728572436468813,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 30000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 5
+      },
+      {
+       "id": 1171951539086697,
+       "count": 5
+      },
+      {
+       "id": 7531001555655815,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "restriction": 6560252048027024,
+     "persistent": {
+      "id": 2728572436468813,
+      "min": 1,
+      "max": 6,
+      "goal": 60
+     },
+     "rewards": [
+      {
+       "id": 2728572436468813,
+       "count": 6,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 40000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 5
+      },
+      {
+       "id": 1171951539086697,
+       "count": 5
+      },
+      {
+       "id": 7531001555655815,
+       "count": 5
+      },
+      {
+       "id": 2847867582043978,
+       "count": 5
+      },
+      {
+       "id": 2250334176732565,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "restriction": 6167367291380889,
+     "persistent": {
+      "id": 2728572436468813,
+      "min": 1,
+      "max": 7,
+      "goal": 100
+     },
+     "rewards": [
+      {
+       "id": 2728572436468813,
+       "count": 7,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 40000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 5
+      },
+      {
+       "id": 1171951539086697,
+       "count": 5
+      },
+      {
+       "id": 7531001555655815,
+       "count": 5
+      },
+      {
+       "id": 2847867582043978,
+       "count": 5
+      },
+      {
+       "id": 2250334176732565,
+       "count": 5
+      },
+      {
+       "id": 4369788399977460,
+       "count": 3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key_prefix": "EVENT_202205_OH_BOTHER_C",
+   "tier_keys": {
+    "name": "{prefix}_L{i}_NAME",
+    "description": "EVENT_202205_OH_BOTHER_A_L0_DESC",
+    "recommended": "{prefix}_L{i}_RECOMMENDED"
+   },
+   "event": {
+    "contentId": "2022052000000004",
+    "name": "EVENT_202205_OH_BOTHER_C_NAME",
+    "image": "icons_scheduled_events_event_pooh/event_cover_pooh",
+    "sortOrder": "300",
+    "battleLimit": "3",
+    "battleLimitRefreshCost": [
+     {
+      "itemId": "31",
+      "count": "100"
+     },
+     {
+      "itemId": "31",
+      "count": "200"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "400"
+     },
+     {
+      "itemId": "31",
+      "count": "500"
+     },
+     {
+      "itemId": "31",
+      "count": "600"
+     },
+     {
+      "itemId": "31",
+      "count": "700"
+     },
+     {
+      "itemId": "31",
+      "count": "800"
+     }
+    ],
+    "marqueeImage": "icons_scheduled_events_event_pooh/event_portal_pooh",
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "allowInstantBattle": true,
+    "showcaseItems": [
+     "2124755575455435",
+     "8699649927603530",
+     "13"
+    ],
+    "eventGroupId": "2022052000000001"
+   },
+   "roster": {
+    "minions": [
+     50,
+     5584717432624453,
+     1680592376157339,
+     6651802205495402,
+     2294812731867727
+    ]
+   },
+   "battle_environment": "env_pooh_house/env_pooh_house",
+   "tiers": [
+    {
+     "restriction": 3986961911905288,
+     "persistent": {
+      "id": 2124755575455435,
+      "min": 1,
+      "max": 1,
+      "goal": 30
+     },
+     "rewards": [
+      {
+       "id": 2124755575455435,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 7500
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 2
+      },
+      {
+       "id": 1171951539086697,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "restriction": 7399695901609761,
+     "persistent": {
+      "id": 2124755575455435,
+      "min": 1,
+      "max": 2,
+      "goal": 50
+     },
+     "rewards": [
+      {
+       "id": 2124755575455435,
+       "count": 2,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 15000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 3
+      },
+      {
+       "id": 1171951539086697,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "restriction": 7120872884003715,
+     "persistent": {
+      "id": 2124755575455435,
+      "min": 1,
+      "max": 3,
+      "goal": 65
+     },
+     "rewards": [
+      {
+       "id": 2124755575455435,
+       "count": 3,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 25000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 4
+      },
+      {
+       "id": 1171951539086697,
+       "count": 4
+      },
+      {
+       "id": 7531001555655815,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "restriction": 5917507753864277,
+     "persistent": {
+      "id": 2124755575455435,
+      "min": 1,
+      "max": 4,
+      "goal": 40
+     },
+     "rewards": [
+      {
+       "id": 2124755575455435,
+       "count": 4,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 30000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 4
+      },
+      {
+       "id": 1171951539086697,
+       "count": 4
+      },
+      {
+       "id": 2173501501491649,
+       "count": 5
+      },
+      {
+       "id": 7531001555655815,
+       "count": 3
+      },
+      {
+       "id": 2847867582043978,
+       "count": 3
+      },
+      {
+       "id": 2250334176732565,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "restriction": 219113829383884,
+     "persistent": {
+      "id": 2124755575455435,
+      "min": 1,
+      "max": 5,
+      "goal": 45
+     },
+     "rewards": [
+      {
+       "id": 2124755575455435,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 40000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 5
+      },
+      {
+       "id": 1171951539086697,
+       "count": 5
+      },
+      {
+       "id": 7531001555655815,
+       "count": 5
+      },
+      {
+       "id": 2847867582043978,
+       "count": 5
+      },
+      {
+       "id": 2250334176732565,
+       "count": 5
+      },
+      {
+       "id": 4369788399977460,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "restriction": 4567708212242741,
+     "persistent": {
+      "id": 2124755575455435,
+      "min": 1,
+      "max": 6,
+      "goal": 50
+     },
+     "rewards": [
+      {
+       "id": 2124755575455435,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 55000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 5
+      },
+      {
+       "id": 1171951539086697,
+       "count": 5
+      },
+      {
+       "id": 7531001555655815,
+       "count": 5
+      },
+      {
+       "id": 2847867582043978,
+       "count": 5
+      },
+      {
+       "id": 2250334176732565,
+       "count": 5
+      },
+      {
+       "id": 4369788399977460,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "restriction": 7895380856604920,
+     "persistent": {
+      "id": 2124755575455435,
+      "min": 1,
+      "max": 7,
+      "goal": 50
+     },
+     "rewards": [
+      {
+       "id": 8699649927603530,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 2124755575455435,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 65000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 5
+      },
+      {
+       "id": 1171951539086697,
+       "count": 5
+      },
+      {
+       "id": 7531001555655815,
+       "count": 5
+      },
+      {
+       "id": 2847867582043978,
+       "count": 5
+      },
+      {
+       "id": 2250334176732565,
+       "count": 5
+      },
+      {
+       "id": 4369788399977460,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key_prefix": "EVENT_202208_OH_BOTHER_D",
+   "tier_keys": {
+    "name": "{prefix}_L{i}_NAME",
+    "description": "EVENT_202205_OH_BOTHER_A_L0_DESC",
+    "recommended": "{prefix}_L{i}_RECOMMENDED"
+   },
+   "event": {
+    "contentId": "2022052000000005",
+    "name": "EVENT_202208_OH_BOTHER_D_NAME",
+    "image": "icons_scheduled_events_event_pooh/pooh_cover_prestige",
+    "sortOrder": "400",
+    "battleLimit": "2",
+    "battleLimitRefreshCost": [
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "400"
+     },
+     {
+      "itemId": "31",
+      "count": "500"
+     },
+     {
+      "itemId": "31",
+      "count": "600"
+     },
+     {
+      "itemId": "31",
+      "count": "700"
+     },
+     {
+      "itemId": "31",
+      "count": "800"
+     },
+     {
+      "itemId": "31",
+      "count": "900"
+     },
+     {
+      "itemId": "31",
+      "count": "1000"
+     }
+    ],
+    "marqueeImage": "icons_scheduled_events_event_pooh/event_portal_pooh",
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "allowInstantBattle": true,
+    "showcaseItems": [
+     "2289339325233397",
+     "3883066061505188",
+     "6221535176831871"
+    ],
+    "eventGroupId": "2022052000000001"
+   },
+   "roster": {
+    "minions": [
+     3762801785086881,
+     50,
+     5584717432624453,
+     1025082370313933,
+     2294812731867727,
+     177174499492432
+    ]
+   },
+   "battle_environment": "env_pooh_house/env_pooh_house",
+   "tiers": [
+    {
+     "restriction": 4906385727173761,
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 0
+     }
+    },
+    {
+     "restriction": 2667464181260160,
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 1
+     }
+    },
+    {
+     "restriction": 4731877726001372,
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 2
+     }
+    },
+    {
+     "restriction": 6508270932200283,
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 3
+     }
+    },
+    {
+     "restriction": 8409259523407896,
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 4
+     }
+    }
+   ]
+  }
+ ],
+ "enemy_health": [
+  {
+   "unit": 2294812731867727,
+   "level": 80,
+   "rarity": 7,
+   "gear_tier": 8,
+   "health": 30000
+  }
+ ],
+ "waves": [
+  {
+   "event": 2022052000000002,
+   "tier": 0,
+   "name_key": "EVENT_202205_OH_BOTHER_A_L0_NAME",
+   "no_boss": true,
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 50,
+       "count": 1
+      },
+      {
+       "id": 5584717432624453,
+       "count": 1
+      },
+      {
+       "id": 1680592376157339,
+       "count": 1
+      },
+      {
+       "id": 6651802205495402,
+       "count": 1
+      },
+      {
+       "id": 2294812731867727,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 2022052000000002,
+   "tier": 3,
+   "name_key": "EVENT_202205_OH_BOTHER_A_L3_NAME",
+   "no_boss": true,
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 50,
+       "count": 1
+      },
+      {
+       "id": 5584717432624453,
+       "count": 1
+      },
+      {
+       "id": 1680592376157339,
+       "count": 1
+      },
+      {
+       "id": 6651802205495402,
+       "count": 1
+      },
+      {
+       "id": 2294812731867727,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 2022052000000003,
+   "tier": 6,
+   "name_key": "EVENT_202205_OH_BOTHER_B_L6_NAME",
+   "no_boss": true,
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 50,
+       "count": 1
+      },
+      {
+       "id": 5584717432624453,
+       "count": 1
+      },
+      {
+       "id": 1680592376157339,
+       "count": 1
+      },
+      {
+       "id": 6651802205495402,
+       "count": 1
+      },
+      {
+       "id": 2294812731867727,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 2022052000000004,
+   "tier": 6,
+   "name_key": "EVENT_202205_OH_BOTHER_C_L6_NAME",
+   "no_boss": true,
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 50,
+       "count": 1
+      },
+      {
+       "id": 5584717432624453,
+       "count": 1
+      },
+      {
+       "id": 1680592376157339,
+       "count": 1
+      },
+      {
+       "id": 6651802205495402,
+       "count": 1
+      },
+      {
+       "id": 2294812731867727,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 2022052000000005,
+   "tier": 4,
+   "name_key": "EVENT_202208_OH_BOTHER_D_L4_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 3762801785086881,
+       "count": 1
+      },
+      {
+       "id": 50,
+       "count": 1
+      },
+      {
+       "id": 5584717432624453,
+       "count": 1
+      },
+      {
+       "id": 1025082370313933,
+       "count": 1
+      },
+      {
+       "id": 2294812731867727,
+       "count": 1
+      },
+      {
+       "id": 177174499492432,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

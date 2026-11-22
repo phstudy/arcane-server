@@ -1,0 +1,527 @@
+{
+ "event_group": {
+  "contentId": "2022082500000001",
+  "name": "EVENT_202208_ALICEINWONDERLAND_EVENT_META_NAME",
+  "description": "EVENT_202208_ALICEINWONDERLAND_EVENT_META_DESC",
+  "image": "icons_scheduled_events_event_alice/alice_event_meta",
+  "sortOrder": "42",
+  "showcaseItems": [
+   "4463240762526257",
+   "31",
+   "13"
+  ],
+  "marqueeImage": "icons_scheduled_events_event_alice/Event_portal_alice",
+  "hasPlayerActivated": true,
+  "frameColor": {
+   "a": 1.0
+  },
+  "panelColor": {
+   "a": 1.0
+  },
+  "portalName": "EVENT_202208_ALICEINWONDERLAND_EVENT_PORTAL_NAME",
+  "portalDesc": "EVENT_202208_ALICEINWONDERLAND_EVENT_PORTAL_DESC"
+ },
+ "rotation": {
+  "lane": "story",
+  "after": 5612093870412210
+ },
+ "mail": {
+  "preview": [
+   "EVENT_202302_EVILQUEEN_EVENT_PREVIEW_SUBJECT",
+   "EVENT_202302_EVILQUEEN_EVENT_PREVIEW_BODY"
+  ],
+  "start": [
+   "EVENT_202302_EVILQUEEN_EVENT_ACTIVE_SUBJECT",
+   "EVENT_202302_EVILQUEEN_EVENT_ACTIVE_BODY"
+  ],
+  "last_chance": [
+   "EVENT_202302_EVILQUEEN_EVENT_LAST_CHANCE_SUBJECT",
+   "EVENT_202302_EVILQUEEN_EVENT_LAST_CHANCE_BODY"
+  ]
+ },
+ "hero_variants": [
+  {
+   "id": 8292970663749366,
+   "hero": 4655438307398817
+  },
+  {
+   "id": 1401897725679952,
+   "hero": 124
+  },
+  {
+   "id": 3229238807732032,
+   "hero": 4264839534548679
+  }
+ ],
+ "events": [
+  {
+   "key_prefix": "EVENT_202208_ALICEINWONDERLAND_EVENT_A",
+   "tier_keys": {
+    "name": "{prefix}_L{i}_NAME",
+    "description": "EVENT_202208_ALICEINWONDERLAND_EVENT_A_AURA_DESC",
+    "recommended": "{prefix}_L{i}_RECOMMENDED"
+   },
+   "event": {
+    "contentId": "2022082500000002",
+    "name": "EVENT_202208_ALICEINWONDERLAND_EVENT_A_NAME",
+    "description": "EVENT_202208_ALICEINWONDERLAND_EVENT_PORTAL_DESC",
+    "image": "icons_scheduled_events_event_alice/event_cover_alice",
+    "sortOrder": "100",
+    "battleLimit": "999",
+    "marqueeImage": "icons_scheduled_events_event_alice/Event_portal_alice",
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "allowInstantBattle": true,
+    "lifetimeProgressEvent": true,
+    "showcaseItems": [
+     "4463240762526257",
+     "31",
+     "13",
+     "3487351247871748"
+    ],
+    "eventGroupId": "2022082500000001"
+   },
+   "roster": {
+    "bosses": [
+     8292970663749366
+    ],
+    "companions": [
+     3229238807732032,
+     1401897725679952
+    ],
+    "minions": [
+     3065395847079534,
+     2725404754575561,
+     7803746740370685,
+     7571174340397587
+    ]
+   },
+   "mutators": [
+    6057536139660728
+   ],
+   "battle_environment": "env_cheshire_cat_forest/env_cheshire_cat_forest",
+   "tiers": [
+    {
+     "restriction": 4754630159566107,
+     "rewards": [
+      {
+       "id": 4463240762526257,
+       "count": 10,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 25,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 30000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 7560690362328635,
+     "rewards": [
+      {
+       "id": 4463240762526257,
+       "count": 15,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 25,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 40000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 985856238119503,
+     "rewards": [
+      {
+       "id": 4463240762526257,
+       "count": 25,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 50,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 50000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 8614846421839755,
+     "rewards": [
+      {
+       "id": 4463240762526257,
+       "count": 30,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 50,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 60000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 1841507380963916,
+     "rewards": [
+      {
+       "id": 4463240762526257,
+       "count": 65,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 75,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 70000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 4237750554347675,
+     "rewards": [
+      {
+       "id": 4463240762526257,
+       "count": 85,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 75,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 80000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 5979914694306919,
+     "rewards": [
+      {
+       "id": 4463240762526257,
+       "count": 50,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 100,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 90000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 36327622094568,
+     "rewards": [
+      {
+       "id": 3487351247871748,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 4463240762526257,
+       "count": 50,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 100,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 100000,
+       "first_time": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key_prefix": "EVENT_202211_ALICE_PRESITIGE",
+   "tier_keys": {
+    "name": "{prefix}_L{i}_NAME",
+    "description": "EVENT_202211_ALICEINWONDERLAND_EVENT_PRESTIGE_L0_DESC",
+    "recommended": "{prefix}_L{i}_RECOMMENDED"
+   },
+   "event": {
+    "contentId": "2022082500000003",
+    "name": "EVENT_202211_ALICE_PRESTIGE_NAME",
+    "image": "icons_scheduled_events_event_alice/Alice_cover_prestige",
+    "sortOrder": "400",
+    "battleLimit": "2",
+    "battleLimitRefreshCost": [
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "400"
+     },
+     {
+      "itemId": "31",
+      "count": "500"
+     },
+     {
+      "itemId": "31",
+      "count": "600"
+     },
+     {
+      "itemId": "31",
+      "count": "700"
+     },
+     {
+      "itemId": "31",
+      "count": "800"
+     },
+     {
+      "itemId": "31",
+      "count": "900"
+     },
+     {
+      "itemId": "31",
+      "count": "1000"
+     }
+    ],
+    "marqueeImage": "icons_scheduled_events_event_alice/Event_portal_alice",
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "allowInstantBattle": true,
+    "lifetimeProgressEvent": true,
+    "showcaseItems": [
+     "2289339325233397",
+     "3883066061505188",
+     "6221535176831871"
+    ],
+    "eventGroupId": "2022082500000001"
+   },
+   "roster": {
+    "bosses": [
+     8292970663749366
+    ],
+    "companions": [
+     3229238807732032,
+     1401897725679952
+    ],
+    "minions": [
+     3065395847079534,
+     2725404754575561,
+     7803746740370685,
+     7571174340397587
+    ]
+   },
+   "battle_environment": "env_cheshire_cat_forest/env_cheshire_cat_forest",
+   "tiers": [
+    {
+     "restriction": 1632753261407810,
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 0
+     }
+    },
+    {
+     "restriction": 1818680094699724,
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 1
+     }
+    },
+    {
+     "restriction": 6984683130751670,
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 2
+     }
+    },
+    {
+     "restriction": 3927614936896658,
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 3
+     }
+    },
+    {
+     "restriction": 2458179635152582,
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 4
+     }
+    }
+   ]
+  }
+ ],
+ "waves": [
+  {
+   "event": 2022082500000002,
+   "tier": 0,
+   "name_key": "EVENT_202208_ALICEINWONDERLAND_EVENT_A_L0_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 3065395847079534,
+       "count": 2
+      },
+      {
+       "id": 2725404754575561,
+       "count": 1
+      },
+      {
+       "id": 7803746740370685,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 8292970663749366,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 3229238807732032,
+       "count": 1
+      },
+      {
+       "id": 1401897725679952,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 2022082500000002,
+   "tier": 1,
+   "name_key": "EVENT_202208_ALICEINWONDERLAND_EVENT_A_L1_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 2725404754575561,
+       "count": 2
+      },
+      {
+       "id": 7571174340397587,
+       "count": 2
+      },
+      {
+       "id": 7803746740370685,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 8292970663749366,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 1401897725679952,
+       "count": 1
+      },
+      {
+       "id": 4866281271708086,
+       "count": 1
+      },
+      {
+       "id": 3238992834900346,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 2022082500000003,
+   "tier": 4,
+   "name_key": "EVENT_202211_ALICE_PRESITIGE_L4_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 3065395847079534,
+       "count": 3
+      },
+      {
+       "id": 7803746740370685,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 8292970663749366,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 3229238807732032,
+       "count": 1
+      },
+      {
+       "id": 1401897725679952,
+       "count": 1
+      },
+      {
+       "id": 4866281271708086,
+       "count": 1
+      },
+      {
+       "id": 3238992834900346,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

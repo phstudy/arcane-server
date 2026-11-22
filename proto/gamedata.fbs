@@ -1,0 +1,2174 @@
+namespace gamedata;
+
+enum BattleRuleset:ubyte {
+    INVALID,
+    STANDARD_PVE,
+    STANDARD_PVP,
+    COOP_PVE,
+    TUTORIAL,
+    TOWER,
+    RAID
+}
+
+enum RectTransformAlignmentVertical:byte {
+    CENTER,
+    TOP,
+    BOTTOM
+}
+
+enum RectTransformAlignmentHorizontal:byte {
+    CENTER,
+    LEFT,
+    RIGHT
+}
+
+enum StampType:byte {
+    INVALID,
+    SILVER,
+    GOLD,
+    BRONZE
+}
+
+enum ClubWarNodeType:byte {
+    INVALID,
+    HOME_BASE,
+    NORMAL
+}
+
+enum ClubWarTeam:byte {
+    INVALID,
+    TEAM_A,
+    TEAM_B,
+    TEAM_C
+}
+
+enum ClubWarPhaseType:byte {
+    INVALID,
+    REGISTRATION,
+    MATCHMAKING,
+    BATTLE,
+    DOWNTIME,
+    TALLY,
+    PLANNING
+}
+
+enum ContextualMessageType:byte {
+    POINT_AT,
+    SIMPLE_MESSAGE,
+    DIALOG_ONE_BUTTON,
+    DIALOG_TWO_BUTTON
+}
+
+enum PinPageLayout:byte {
+    GRID
+}
+
+enum GameMode:byte {
+    GAME_MODE_INVALID,
+    GAME_MODE_CAMPAIGN,
+    GAME_MODE_BATTLE,
+    GAME_MODE_COOP,
+    GAME_MODE_PVP,
+    GAME_MODE_EVENT,
+    GAME_MODE_TOWER,
+    GAME_MODE_CLUB_DUNGEON,
+    GAME_MODE_KOTH,
+    GAME_MODE_KOTH_DEFENSE,
+    GAME_MODE_CLUB_WAR,
+    GAME_MODE_SAVED_SQUADS,
+    GAME_MODE_CLUB_WAR_DEFENSE,
+    GAME_MODE_RAID,
+    GAME_MODE_LIMITED_TIME_ARENA,
+    GAME_MODE_EXPEDITION,
+    GAME_MODE_SOCIAL_PVP
+}
+
+enum UnitAbilityType:byte {
+    INVALID,
+    BASIC,
+    PROC,
+    SPECIAL,
+    PASSIVE,
+    LEADER
+}
+
+enum StreakRewardType:byte {
+    INVALID,
+    REGULAR,
+    SPECIAL
+}
+
+enum SetExpiryType:byte {
+    ON_SET_COMPLETION,
+    ON_TIMER_EXPIRY
+}
+
+enum StampSetRepeatState:byte {
+    NON_REPEATABLE,
+    REPEATABLE
+}
+
+enum StampSetState:byte {
+    DISABLED,
+    ENABLED
+}
+
+enum BattleMessagePause:byte {
+    NONE,
+    INSTANT,
+    SMOOTH
+}
+
+enum BattleMessageType:byte {
+    POINT_AT,
+    SIMPLE_MESSAGE
+}
+
+enum DailyRewardType:byte {
+    INVALID,
+    OCCASIONAL,
+    PURCHASABLE
+}
+
+enum MilestoneCategory:byte {
+    INVALID,
+    PLAYER_MAX_LEVEL,
+    SUMMONER_SCORE,
+    UNIT_MAX_RARITY,
+    UNIT_MAX_GEAR_TIER,
+    CRAFT_MAX_SORCERER_STONE,
+    PVP_TOP_RANK,
+    KOTH_TOP_RANK,
+    CLUB_WAR_EPIC_CHEST
+}
+
+enum CardProgressTrackerStrategy:byte {
+    INVALID,
+    CLOSEST,
+    AVAILABLE,
+    ANY
+}
+
+enum CardProgressTrackerCategory:byte {
+    INVALID,
+    UNIT_UNLOCK,
+    UNIT_PROMOTION,
+    UNIT_GEAR_UPGRADE,
+    UNIT_ABILITY_UPGRADE,
+    SPELL_UNLOCK,
+    SPELL_PROMOTION
+}
+
+enum ContextualMessageDisplayConditionType:byte {
+    NONE,
+    UNIT_CAN_BE_TRAINED,
+    UNIT_CAN_BE_UNLOCKED,
+    SPELL_CAN_BE_UNLOCKED,
+    UNIT_CAN_EQUIP_GEAR,
+    PLAYER_ACTIVITY_CAN_BE_CLAIMED,
+    UNIT_ABILITY_CAN_BE_UPGRADED,
+    UNIT_CAN_BE_PROMOTED,
+    PLAYER_IS_IN_CLUB,
+    PASSPORT_SEASON_ACTIVE,
+    CAMPAIGN_HAS_INSTANT_BATTLE_AVAILABLE,
+    HERO_CAN_EQUIP_GEAR,
+    VILLAIN_CAN_EQUIP_GEAR,
+    HERO_CAN_BE_TRAINED,
+    VILLAIN_CAN_BE_TRAINED,
+    CAN_EQUIP_AND_DOESNT_OWN_GEAR_ITEM,
+    ANY_UNIT_CAN_CRAFT_ANY_UNOWNED_GEAR_AT_GEAR_TIER,
+    PLAYER_IN_ACTIVE_EXPEDITION,
+    PLAYER_NOT_IN_ACTIVE_EXPEDITION,
+    STAMPS_AVAILABLE,
+    SOCIAL_PVP_AVAILABLE,
+    MAGIC_LEAP_AVAILABLE,
+    QUEST_REWARD_MULTIPLIER_AVAILABLE,
+    HYPER_DRIVE_BUNDLE_AVAILABLE
+}
+
+enum SpellCategoryType:byte {
+    STANDARD,
+    ORIGIN
+}
+
+enum AbilityCastArea:byte {
+    DEFAULT,
+    ALLY_SIDE,
+    ENEMY_SIDE,
+    ALLY_SIDE_WITH_PUSH,
+    ENEMY_SIDE_WITH_PUSH,
+    UNIT_MOVE_DIST
+}
+
+enum ClubSupportRequestType:byte {
+    INVALID,
+    PVE_ENERGY,
+    GRAND_ENERGY,
+    CAMPAIGN_ATTEMPT_LIMIT,
+    SCHEDULED_EVENT_ATTEMPT,
+    SHIPMENT_REFRESH,
+    KOTH_ATTEMPT,
+    ASCENTION_ENERGY,
+    INFERNO_ENERGY
+}
+
+enum RevSdkRewardType:int {
+    INVALID_REWARD_TYPE,
+    PVE_ENERGY_BONUS,
+    GRAND_CAMPAIGN_ENERGY_BONUS,
+    CLUB_DUNGEON_ATTEMPTS_BONUS,
+    PVE_ENERGY_GENERATE_BONUS,
+    GRAND_CAMPAIGN_ENERGY_GENERATE_BONUS,
+    DAILY_ACTIVITY_BONUS,
+    RVFREE_PACK,
+    RESET_KOTH_COOLDOWN,
+    ASCENTION_ENERGY_BONUS,
+    ASCENTION_ENERGY_GENERATE_BONUS,
+    EXPEDITION_ENERGY_BONUS,
+    EXPEDITION_ENERGY_GENERATE_BONUS,
+    INFERNO_ENERGY_BONUS,
+    INFERNO_ENERGY_GENERATE_BONUS
+}
+
+enum UnitCategoryType:byte {
+    STANDARD,
+    PRIMARY,
+    ROLE,
+    AFFINITY,
+    ORIGIN
+}
+
+enum AbilityShape:byte {
+    INVALID,
+    SINGLE,
+    CIRCLE,
+    LINE,
+    LINE_CIRCLE,
+    CUSTOM_PREVIEW,
+    FIXED_LENGTH_LINE,
+    SINGLE_PLUS_COLUMN,
+    SINGLE_PLUS_ROW,
+    COLUMN,
+    ROW,
+    CROSS,
+    GRID_SQUARE,
+    ROW_IN_FRONT_OF_CASTER,
+    PLUS
+}
+
+enum PlayerStat:short {
+    INVALID,
+    CAMPAIGN_COMPLETIONS,
+    CAMPAIGN_FAILS,
+    UNIT_LEVEL_UPS,
+    UNIT_GEAR_EQUIPS,
+    UNIT_TIER_UPS,
+    UNIT_RARITY_PROMOTIONS,
+    UNIT_ABILITY_UPGRADES,
+    DAILY_LOGINS,
+    DAILY_LOGIN_CLAIMS,
+    DAILY_ACTIVITIES_COMPLETED,
+    DAILY_ACTIVITIES_CLAIMED,
+    PASSPORT_LEVEL,
+    SPELL_UPGRADES,
+    DAILY_EVENTS_COMPLETED,
+    SCHEDULED_EVENTS_COMPLETED,
+    HERO_CAMPAIGN_COMPLETIONS,
+    VILLAIN_CAMPAIGN_COMPLETIONS,
+    GRAND_CAMPAIGN_COMPLETIONS,
+    SHIPMENTS_PURCHASED,
+    STORE_PACKS_PURCHASED,
+    PVP_ATTEMPTS,
+    PVP_COMPLETIONS,
+    TOWER_ATTEMPTS,
+    TOWER_COMPLETIONS,
+    DAILY_EVENTS_ATTEMPTED,
+    SCHEDULED_EVENTS_ATTEMPTED,
+    PLAYER_LEVEL_UPS,
+    HEROES_COLLECTED,
+    VILLAINS_COLLECTED,
+    BATTLE_ACTIVITY_SENTINEL,
+    LUA_ACTIVITY_SENTINEL,
+    CAMPAIGN_HARD_COMPLETIONS,
+    CAMPAIGN_HARD_FAILS,
+    HERO_CAMPAIGN_HARD_COMPLETIONS,
+    VILLAIN_CAMPAIGN_HARD_COMPLETIONS,
+    PVP_HIGHEST_SEASON_POINTS,
+    LIFETIME_CLUB_DONATIONS,
+    SPELLS_COLLECTED,
+    CLUBS_JOINED,
+    FRIENDS_ADDED,
+    PVP_STARS,
+    GRIND_CURRENCY_EARNED,
+    PINS_COLLECTED,
+    KOTH_ATTEMPTS,
+    KOTH_COMPLETIONS,
+    PVP_OR_KOTH_ATTEMPTS,
+    SORCERER_STONE_EQUIPPED,
+    CLUB_SUPPORT_FULFILLED,
+    TOWER_FINISHES,
+    DAILY_ACTIVITY_ADS_WATCHED,
+    CLUB_DUNGEON_ATTEMPTS,
+    CLUB_DUNGEON_COMPLETIONS,
+    ASCENSION_SPEND,
+    GEM_SPEND,
+    GOLD_SPEND,
+    GRAND_ENERGY_SPEND,
+    PVE_SPEND,
+    CLUB_EXPEDITION_ATTEMPTS,
+    CLUB_EXPEDITION_COMPLETIONS,
+    INFERNO_SPEND,
+    PIRATES_AZTEC_GOLD_COLLECTION,
+    SOCIAL_PVP_BATTLES,
+    SOCIAL_PVP_BATTLE_WINS,
+    SOCIAL_PVP_STARS,
+    SPECIAL_STORE_PACK_PURCHASES,
+    SOCIAL_PVP_BOLSTERS_USED
+}
+
+enum LockableFeature:byte {
+    INVALID,
+    VILLAIN_CAMPAIGN,
+    PVP,
+    CLUBS,
+    FRIENDS,
+    NEWSLETTER,
+    DAILY_LOGIN,
+    PLAYER_COLLECTION_POWER,
+    PASSPORT_SEASON,
+    PINS,
+    GRAND_CAMPAIGN,
+    AUTO_BATTLE,
+    DAILY_EVENTS,
+    SCHEDULED_EVENTS,
+    TOWER,
+    TUTORIAL_BATTLE,
+    SHIPMENTS,
+    STORE,
+    INSTANT_BATTLE,
+    INBOX,
+    DAILY_ENERGY_GIFT,
+    CLUB_DUNGEON,
+    BATTLE_VICTORY_NAV_BUTTONS,
+    DAILY_LOGIN_BONUS,
+    AD_REWARDED_ENERGY,
+    STORE_AD_REWARD,
+    PVE_RETREAT,
+    DISABLE_MANA_HELPING_HAND,
+    ITEM_FIND,
+    CLUB_DUNGEON_BONUS_ATTEMPTS,
+    BONUS_GENERATE_ENERGY,
+    DAILY_ACTIVITY_AD_REWARD,
+    CHAT,
+    KOTH,
+    SORCERER_STONE,
+    CLUB_WAR,
+    DAILY_REWARD,
+    HERO_CAMPAIGN,
+    VIP,
+    VIP_TOWER_INSTANT_BATTLE,
+    UNIT_DETAILS_EQUIP_ALL,
+    BONUS_LOOT_UI,
+    SAVED_SQUADS,
+    ACCOUNT_LINKING,
+    SKIP_TUTORIAL,
+    TIME_SETTINGS,
+    PVP_RETREAT,
+    KOTH_RETREAT,
+    UNIT_FAVORITE,
+    TRANSACTION_LOG_ARCHIVER,
+    EMAIL_CONNECT,
+    RAIDS,
+    QUESTS,
+    LEADERBOARD_CHALLENGE,
+    LIMITED_TIME_ARENA,
+    ASCENSION_CAMPAIGN,
+    SIDE_CAMPAIGNS,
+    HEALTH_BAR_PIPS,
+    LION_KING_CAMPAIGN,
+    LTA_RETREAT,
+    SPECIAL_OFFER_DYNAMIC_MESSAGES,
+    EXPEDITIONS,
+    GLOBAL_CHAT_MESSAGE_SEND,
+    REAL_MONEY_PURCHASING,
+    PUSH_NOTIFICATIONS,
+    FRIEND_GIFTING_IAP,
+    SOCIAL_PVP,
+    SOCIAL_PVP_RETREAT,
+    MAGIC_LEAP
+}
+
+enum CampaignType:ubyte {
+    NORMAL,
+    HARD
+}
+
+enum CampaignAttemptLimit:ubyte {
+    NONE,
+    DAILY
+}
+
+enum ItemTag:byte {
+    PASSPORT_GOLD,
+    PASSPORT_XP,
+    PASSPORT_PLATINUM
+}
+
+enum DeepLinkLocation:short {
+    INVALID,
+    UNIT_INVENTORY,
+    UNIT_DETAILS,
+    CAMPAIGN,
+    DAILY_ACTIVITIES,
+    FRIENDS,
+    ACHIEVEMENTS,
+    DAILY_EVENTS,
+    SCHEDULED_EVENTS,
+    SHIPMENTS,
+    STORE,
+    PVP,
+    TOWER,
+    HOME,
+    DAILY_LOGIN,
+    CLUB_LIST,
+    CLUB_HUB,
+    CLUB_DONATIONS,
+    SPELL_INVENTORY,
+    UNIT_ABILITY_UPGRADE,
+    SPELL_UPGRADE,
+    CLUB_DUNGEON,
+    INBOX,
+    PASSPORT_SEASON,
+    KOTH_LOBBY,
+    SORCERER_STONE,
+    CLUB_WAR,
+    STORE_TAB,
+    EMAIL_CONNECT,
+    RAIDS,
+    SORCERER_TOME,
+    EXPEDITIONS,
+    SOCIAL_PVP
+}
+
+// InventoryItem.subData union members (client: Gamedata.EmoteSubData etc.; field order = accessor order).
+table EmoteSubData {
+    prefab:string;
+    showInInventory:bool;
+}
+
+table ProfileFrameSubData {
+    frameIcon:string;
+    effectPrefab:string;
+}
+
+enum BoostRewardCategory:byte {
+    None,
+    Campaign,
+    Tower,
+    Events,
+    Pvp,
+    ClubDungeon,
+    Raid,
+    Expedition
+}
+
+table ResourceBoostSubData {
+    boostItems:[ulong];
+    boostAmount:float;
+    gameMode:BoostRewardCategory;
+}
+
+table SorcererStoneSubData {
+    offense:float;
+    defense:float;
+    health:float;
+    recovery:float;
+    critChance:float;
+    critPower:float;
+    attackSpeed:float;
+    unitPowerValue:uint;
+    unequipCost:ItemCount;
+    requiredUnitLevel:uint;
+    requiredUnitRarity:uint;
+    requiredUnitGearTier:uint;
+    speed:float;
+    potency:float;
+    tenacity:float;
+    accuracy:float;
+    evasion:float;
+}
+
+// Union type values match the client enum Gamedata.InventoryItemSubData (1..4).
+union InventoryItemSubData {
+    EmoteSubData,
+    SorcererStoneSubData,
+    ProfileFrameSubData,
+    ResourceBoostSubData
+}
+
+enum InventoryItemType:byte {
+    CURRENCY,
+    UNIT_PROMOTION_MATERIAL,
+    UNIT_TRAINING_MATERIAL,
+    PLAYER_XP_MATERIAL,
+    UNIT_GEAR,
+    ABILITY_MATERIAL,
+    ENERGY,
+    ACHIEVEMENT_PIN,
+    LIMITED_PIN,
+    SEASONAL_PASSPORT,
+    SEASONAL_PASSPORT_PIN,
+    SPELL_MATERIAL,
+    EMOTE,
+    UNIT_SKIN,
+    BATTLE_TICKET,
+    SORCERER_STONE,
+    MILESTONE_POINT,
+    PROFILE_TROPHY,
+    RAID_TICKET,
+    PROFILE_FRAME,
+    RESOURCE_BOOST,
+    LEADERBOARD_CHALLENGE_POINT_ITEM,
+    LIMITED_TIME_ARENA_STAMINA
+}
+
+enum UnitType:byte {
+    STANDARD,
+    SPAWNED_ADD,
+    BOSS,
+    BUILDING,
+    CLONE
+}
+
+table PersistentReward {
+    itemId:ulong;
+    goal:uint;
+}
+
+table UnitStatOverride {
+    level:ubyte;
+    rarity:ubyte;
+    gearTier:ubyte;
+    abilityLevel:ubyte;
+    gearTierProgress:float;
+}
+
+table UnitAbilityRecipeIngredient {
+    itemId:ulong;
+    count:uint;
+}
+
+table SpellLevelRecipeIngredient {
+    itemId:ulong;
+    count:uint;
+}
+
+table GemToCurrency {
+    currencyRangeMin:uint;
+    currencyRangeMax:uint;
+    gemToCurrencyScale:float;
+}
+
+table TutorialSkipCompleteActivity {
+    activity:ulong;
+    rewardIndex:byte;
+}
+
+table TutorialSkipEquipGear {
+    unit:ulong;
+    slot1:bool;
+    slot2:bool;
+    slot3:bool;
+    slot4:bool;
+    slot5:bool;
+    slot6:bool;
+    tryTierUp:bool;
+}
+
+table TutorialSkipLevelUp {
+    unit:ulong;
+    newLevel:byte;
+}
+
+table TutorialSkipEventBattle {
+    eventId:ulong;
+    tier:byte;
+}
+
+table TutorialSkipBattle {
+    campaign:ulong;
+    map:byte;
+    node:byte;
+    battle:byte;
+}
+
+table BattleNode {
+    nameKey:string;
+    requirement:string;
+    battle:ulong;
+    loot:ulong;
+    enemyStats:UnitStatOverride;
+    enemyAi:ulong;
+    ruleset:BattleRuleset;
+    entryCostId:ulong;
+    entryCostCount:uint;
+    battleRestriction:ulong;
+    descriptionKey:string;
+    lockedKey:string;
+    firstTimeLoot:ulong;
+    mapIcon:string;
+    monteCarloItem:ulong;
+    monteCarloLimit:uint;
+    unitBonusRestriction:ulong;
+    recommendedDescription:string;
+    persistentRewards:[PersistentReward];
+    lootForLoss:ulong;
+    showcaseLoot:ulong;
+    shouldOverrideAttempts:bool;
+    overrideAttempts:uint;
+    finalBoss:bool;
+}
+
+table GearSlotTableStatTier {
+    value:[float];
+}
+
+table UnitRequirements {
+    level:ubyte;
+    gearTier:ubyte;
+}
+
+table UnitAbilityRecipe {
+    ingredients:[UnitAbilityRecipeIngredient];
+}
+
+table UnitAbilityAdd {
+    addUnitDef:ulong;
+    maxCount:byte;
+    stats:UnitStats;
+}
+
+table RaidImportantEffect {
+    effectType:int;
+    iconPath:string;
+    description:string;
+    title:string;
+}
+
+table RequiredSpellFilters {
+    spellFilter:SpellFilter;
+    minSpellCount:uint;
+}
+
+table RequiredUnitFilters {
+    unitFilter:UnitFilter;
+    minUnitCount:uint;
+}
+
+table PassportSeasonCallToActionOffer {
+    imageAssets:[string];
+    locKey:string;
+}
+
+table PinPageItem {
+    pin:ulong;
+    playerActivity:ulong;
+    mystery:bool;
+    obscureIcon:bool;
+}
+
+table SpellLevelRecipe {
+    ingredients:[SpellLevelRecipeIngredient];
+}
+
+table SpellSpawnableAdd {
+    addUnitDef:ulong;
+    maxCount:byte;
+    stats:UnitStats;
+}
+
+table RectTransformOffset {
+    x:float;
+    y:float;
+}
+
+table RectTransformAlignment {
+    x:RectTransformAlignmentHorizontal;
+    y:RectTransformAlignmentVertical;
+}
+
+table BattleModeProfile {
+    nameKey:string;
+    frameImage:string;
+    showcaseItems:[ulong];
+}
+
+table CurrencyConversion {
+    item:ulong;
+    rates:[GemToCurrency];
+}
+
+table SkippableMessage {
+    message:ulong;
+    skipBattles:[TutorialSkipBattle];
+    skipEventBattles:[TutorialSkipEventBattle];
+    giveStorePacks:[ulong];
+    deprecatedField:[ulong] (deprecated);
+    unlockUnits:[ulong];
+    unlockSpells:[ulong];
+    levelUnits:[TutorialSkipLevelUp];
+    setUnitGear:[TutorialSkipEquipGear];
+    skipActivities:[TutorialSkipCompleteActivity];
+}
+
+table StoreAdRewardEntry {
+    maxClaims:uint;
+    loot:ulong;
+}
+
+table AchievementCollectionScore {
+    achievement:ulong;
+    value:uint;
+}
+
+table PinCollectionScore {
+    pin:ulong;
+    value:uint;
+}
+
+table SpellUnlockCollectionScore {
+    spell:ulong;
+    value:uint;
+}
+
+table UnitCollectionScoreRarityModifier {
+    unit:ulong;
+    value:float;
+}
+
+table EnergyIdMapping {
+    itemId:ulong;
+    energyConstants:ulong;
+}
+
+table ClubCurrencyInfo {
+    itemId:ulong;
+    maxPersonalDailyLimit:uint;
+    maxClubTotal:uint;
+}
+
+table PlayerLevelTableEntry {
+    xpRequired:uint;
+    rewards:ulong;
+    clubItemRequestCapacity:uint;
+    clubItemDonationDailyLimit:uint;
+    clubItemDonationRewards:[ItemCount];
+}
+
+table CampaignIdentifier {
+    campaignId:ulong;
+    mapIndex:ulong;
+    nodeIndex:ulong;
+    battleIndex:ulong;
+}
+
+table CampaignInfoItem {
+    iconPath:string;
+    label:string;
+}
+
+table RequiredStarInfo {
+    starType:ulong;
+    count:ulong;
+}
+
+table CampaignNode {
+    battles:[BattleNode];
+    rewardActivityId:ulong;
+    rewardAsset:string;
+}
+
+table InventoryItemRecipeIngredient {
+    itemId:ulong;
+    count:uint;
+}
+
+table GearSlotTableStat {
+    tier:[GearSlotTableStatTier];
+}
+
+table UnitSkinAbilityOverride {
+    id:int;
+    icon:string;
+}
+
+table UnitAbilityLevelBalanceVar {
+    values:[float];
+    offense:bool;
+    defense:bool;
+    health:bool;
+    recovery:bool;
+    critChance:bool;
+    critPower:bool;
+    attackSpeed:bool;
+    speed:bool;
+    potency:bool;
+    tenacity:bool;
+    accuracy:bool;
+    evasion:bool;
+}
+
+table UnitAbilityLevel {
+    manaCost:ubyte;
+    geometry:ulong;
+    targetSelf:bool;
+    targetAlly:bool;
+    targetEnemy:bool;
+    addUnit:UnitAbilityAdd;
+    recipe:UnitAbilityRecipe;
+    requirements:UnitRequirements;
+    description:string;
+    previewUpgradeDescription:string;
+    range:float;
+    upgradeIcon:string;
+    ignoreBuildings:bool;
+    previewUpgradeVars:[float];
+    initialMana:ubyte;
+}
+
+table UnitGearSlot {
+    offense:bool;
+    defense:bool;
+    health:bool;
+    recovery:bool;
+    critChance:bool;
+    critPower:bool;
+    attackSpeed:bool;
+    gearItem:ulong;
+    requiredUnitLevel:uint;
+    speed:bool;
+    potency:bool;
+    tenacity:bool;
+    accuracy:bool;
+    evasion:bool;
+}
+
+table StampSetReward {
+    deprecatedField:ulong (deprecated);
+    asset:string;
+    stampReward:ulong;
+}
+
+table StampSlot {
+    cumulativeRewardTokens:uint;
+    slotReward:ulong;
+}
+
+table StampConfig {
+    type:StampType;
+    itemCount:uint;
+    iapUsdMin:float;
+    iapUsdMax:float;
+    stampAsset:string;
+    stampStoreBadgeAsset:string;
+}
+
+table RaidImportantEffects {
+    raid:ulong;
+    effects:[RaidImportantEffect];
+}
+
+table BossPortrait {
+    boss:ulong;
+    battleEndProgressIcon:string;
+    battleEndProgressUnitName:string;
+}
+
+table RaidInfo {
+    aura:ulong;
+    boss:ulong;
+    recommendedUnitList:[ulong];
+    iconPath:string;
+    description:string;
+    title:string;
+}
+
+table PvpRankRewards {
+    rankId:ulong;
+    weeklyRewards:[ItemCount];
+    sesasonalRewards:[ItemCount];
+}
+
+table VipEnergyPerk {
+    energyItem:ulong;
+    perRefreshBonus:uint;
+}
+
+table DailyRewardTier {
+    rewards:[ItemCount];
+    image:string;
+    nameKey:string;
+    subtitleNameKey:string;
+}
+
+table ClubSupportRequest {
+    requestType:ClubSupportRequestType;
+    amountGranted:uint;
+    maxRequestPerDay:uint;
+    requestFulfilledInboxMessage:ulong;
+}
+
+table ClubWarEdge {
+    a:string;
+    b:string;
+}
+
+table ClubWarNode {
+    id:string;
+    pointsPerTick:int;
+    maxDefenders:int;
+    battle:ulong;
+    restrictions:ulong;
+    initialOwner:ClubWarTeam;
+    nodeType:ClubWarNodeType;
+    nodeLabel:string;
+}
+
+table ClubWarPhase {
+    phaseType:ClubWarPhaseType;
+    durationS:uint;
+}
+
+table BattleAbilityCode {
+    code:byte;
+    locKey:string;
+}
+
+table ShipmentName {
+    shipmentDef:ulong;
+    nameKey:string;
+}
+
+table UnitPromotionRecipe {
+    promotionMaterialCount:uint;
+    currencyCost:uint;
+}
+
+table UnitTrainingRecipe {
+    xpAmount:uint;
+    currencyCost:uint;
+}
+
+table ContextualMessage {
+    type:ContextualMessageType;
+    viewTriggers:[string];
+    titleText:string;
+    bodyText:string;
+    pointAtId:string;
+    deepLinkLocation:DeepLinkLocation;
+    deepLinkSublocation:string;
+    pointAtTapAnywhere:bool;
+    viewHiddenTriggers:[string];
+    seekerData:SeekerPointAt;
+}
+
+table SpellFilter {
+    level:uint;
+    categories:[ulong];
+}
+
+table UnitFilter {
+    level:uint;
+    gearTier:uint;
+    rarity:uint;
+    deprecatedField1:uint (deprecated);
+    deprecatedField2:uint (deprecated);
+    categories:[ulong];
+}
+
+table SquadRequirement {
+    units:[ulong];
+    spells:[ulong];
+    requiredUnitFilter:UnitFilter;
+    requiredUnitFilterCount:uint;
+    requiredSpellFilter:SpellFilter (deprecated);
+    requiredSpellFilterCount:uint (deprecated);
+    requiredUnitFilters:[RequiredUnitFilters];
+    requiredSpellFilters:[RequiredSpellFilters];
+}
+
+table PassportSeasonLevelRewards {
+    free:[ItemCount];
+    premium:[ItemCount];
+    platinum:[ItemCount];
+}
+
+table OccasionRef {
+    occasionId:ulong;
+    segmentId:byte;
+}
+
+table PassportSeasonCallToAction {
+    bgImageAsset:string;
+    offers:[PassportSeasonCallToActionOffer];
+    descriptionOverrideKey:string;
+}
+
+table PassportSeasonWeek {
+    activities:[ulong];
+}
+
+table PinPage {
+    layout:PinPageLayout;
+    pinItems:[PinPageItem];
+}
+
+table SpellLevelBalanceVar {
+    values:[float];
+}
+
+table SpellLevel {
+    manaCost:ubyte;
+    geometry:ulong;
+    targetAlly:bool;
+    targetEnemy:bool;
+    addUnit:SpellSpawnableAdd;
+    recipe:SpellLevelRecipe;
+    description:string;
+    previewUpgradeDescription:string;
+    upgradeIcon:string;
+    ignoreBuildings:bool;
+    initialMana:ubyte;
+    previewUpgradeVars:[float];
+}
+
+table PlayerLevelEnergyConstants {
+    generatedCap:uint;
+    refreshGrantAmount:uint;
+    dailyGiftAmount:uint;
+    adRewardedAmount:uint;
+}
+
+table InviteUrls {
+    inviteUrlDev:string;
+    inviteUrlProd:string;
+    baseLink:string;
+    shareImgUrl:string;
+}
+
+table ItemCap {
+    item:ulong;
+    cap:uint;
+}
+
+table PlayerLevelUpPlaCard {
+    maxPlayerLevel:int;
+    placardAsset:string;
+}
+
+table HealthPipInfo {
+    pcHealthThresholds:[int];
+    npcHealthThresholds:[int];
+}
+
+table SeekerPointAt {
+    enabled:bool;
+    animation:string;
+    pointAtView:string;
+    pointAtId:string;
+    anchor:RectTransformAlignment;
+    pivot:RectTransformAlignment;
+    positionOffset:RectTransformOffset;
+}
+
+table BattleModes {
+    pvpMode:BattleModeProfile;
+    campaignMode:BattleModeProfile;
+    socialPvpMode:BattleModeProfile;
+}
+
+table InstantBattleConstants {
+    minAttemptCount:uint;
+    increasedAttemptCount:uint;
+}
+
+table ProfileFrameIds {
+    passholder:ulong;
+    vip:ulong;
+    platinumPassholder:ulong;
+}
+
+table GemToCurrencyConversions {
+    currencyItems:[CurrencyConversion];
+    gemInventoryItem:ulong;
+}
+
+table TutorialSkipInfo {
+    allowSkippingUntilLevel:byte;
+    toSkip:[SkippableMessage];
+    messagesToShow:[ulong];
+}
+
+table NewsletterUrls {
+    english:string;
+    french:string;
+    german:string;
+    italian:string;
+    japanese:string;
+    korean:string;
+    russian:string;
+    spanish:string;
+    chineseSimplified:string;
+    chineseTraditional:string;
+    portugueseBrazilian:string;
+}
+
+table OfferWallSpecial {
+    specialTextKey:string;
+    startTimestampS:ulong;
+    endTimestampS:ulong;
+}
+
+table ShipmentIds {
+    club:ulong;
+    pvp:ulong;
+    tower:ulong;
+    raid:ulong;
+    koth:ulong;
+    titans:ulong;
+}
+
+table ColorId {
+    id:uint;
+    color:Color;
+}
+
+table XpIds {
+    player:ulong;
+    passportGeneric:ulong;
+}
+
+table SortableItem {
+    itemId:ulong;
+    itemType:InventoryItemType;
+}
+
+table StoreAdRewards {
+    entries:[StoreAdRewardEntry];
+}
+
+table AppRatingData {
+    campaign:ulong;
+    map:byte;
+    node:byte;
+    battle:byte;
+    googlePlayUrl:string;
+    samsungUrl:string;
+}
+
+table PlayerActivityIds {
+    dailyPvp:ulong;
+    socialDailyPvp:ulong;
+}
+
+table StoreTabIds {
+    passportTab:ulong;
+    premiumCurrencyTab:ulong;
+    dailyPvpRewardTab:ulong;
+    grindCurrencyDeepLinkStoreItem:ulong;
+    friendGiftItemId:ulong;
+    deepLinkSublocationId:ulong (deprecated);
+    limitedTimeArenaTab:ulong;
+    shipmentsTab:ulong;
+    vipTab:ulong;
+    socialDailyPvpRewardTab:ulong;
+}
+
+table GlobalInboxMessages {
+    clubDungeonRewardsMsg:ulong;
+    clubActivityRewardsFallbackMsg:ulong;
+    clubActivityRewardsMsgs:[ulong];
+    deferredStorePurchaseMsg:ulong;
+    adOfferWallRewardsMsg:ulong;
+    clubGiftInboxMessage:ulong;
+    clubGiftAnonInboxMessage:ulong;
+    vipSubscriptionReupMessage:ulong;
+    vipSubscriptionLapsedMessage:ulong;
+    clubPromotionInboxMsg:ulong;
+    weeklyPvpPayoutInboxMsg:ulong;
+    seasonPvpPayoutInboxMsg:ulong;
+}
+
+table UnitVisualSequencerAssetIds {
+    spawn:string;
+    death:string;
+    victory:string;
+    storeIdle:string;
+    upgradeCelebration:string;
+    skinEquipped:string;
+    storeIdleImmediate:string;
+    squadSelect:string;
+    fleeBattle:string;
+}
+
+table CollectionScoreTable {
+    playerLevel:[uint];
+    unitRarity:[uint];
+    unitRarityModifier:[UnitCollectionScoreRarityModifier];
+    unitLevel:[uint];
+    abilityLevel:[uint];
+    gearTier:[uint];
+    spellUnlock:[SpellUnlockCollectionScore];
+    spellLevel:[uint];
+    pins:[PinCollectionScore];
+    achievements:[AchievementCollectionScore];
+    completionStars:[uint];
+}
+
+table TutorialBattle {
+    campaign:ulong;
+    map:byte;
+    node:byte;
+    battle:byte;
+    deprecatedField:byte (deprecated);
+    playerUnits:[ulong];
+}
+
+table LockableFeatureEntry {
+    feature:LockableFeature;
+    unlockRequirement:string;
+    nameKey:string;
+    lockedDescriptionKey:string;
+    lockedShortDescriptionKey:string;
+}
+
+table UnitRangeName {
+    rangeValue:float;
+    nameKey:string;
+}
+
+table PassportSeasonLevelTable {
+    xpRequired:[uint];
+    levelPurchaseCostItem:ulong;
+    levelPurchaseCost:[uint];
+}
+
+table PlayerPowerRating {
+    byLevel:[uint];
+    byRarity:[uint];
+    byEquipmentAtTier:[uint];
+    byAbilityLevel:[uint];
+    bySpellLevel:[uint];
+}
+
+table Color {
+    r:int;
+    g:int;
+    b:int;
+    a:float;
+}
+
+table EnergyIds {
+    pve:EnergyIdMapping;
+    grandCampaign:EnergyIdMapping;
+    towerEvent:EnergyIdMapping;
+    ascension:EnergyIdMapping;
+    expedition:EnergyIdMapping;
+    inferno:EnergyIdMapping;
+}
+
+table CurrencyIds {
+    grind:ulong;
+    premium:ulong;
+    shardShop:ulong;
+    tower:ulong;
+    club:ulong;
+    clubDungeon:ulong;
+    pvp:ulong;
+    social:ulong;
+    grandCampaign:ulong;
+    dailyPvpReward:ulong;
+    clubCurrencies:[ClubCurrencyInfo];
+    raidShipmentCoins:ulong;
+    ltaStamina:ulong;
+    raidTitanShipmentCoins:ulong;
+    ursulaRaidTickets:ulong;
+    titansRaidTickets:ulong;
+    friendHearts:ulong;
+    dailySocialPvpReward:ulong;
+}
+
+table PlayerLevelTable {
+    xpInventoryItem:ulong;
+    levels:[PlayerLevelTableEntry];
+}
+
+table CampaignStageIds {
+    normal:CampaignIdentifier;
+    hard:CampaignIdentifier;
+}
+
+table BackgroundModifier {
+    time:OccasionRef;
+    backgroundPath:string;
+}
+
+table CampaignInfo {
+    icons:[CampaignInfoItem];
+    infoString:[string];
+}
+
+table LockingInfo {
+    requiredLevel:ushort;
+    completedCampaigns:[ulong];
+    alwaysPreview:bool;
+    alwaysHidden:bool;
+    requiredStars:[RequiredStarInfo];
+    previewTimes:[OccasionRef];
+    lockedTimes:[OccasionRef];
+    unitRestrictions:ulong;
+}
+
+table CampaignMap {
+    nameKey:string;
+    requirement:string;
+    nodes:[CampaignNode];
+    rewardPlayerActivityId:ulong;
+    lockedTextKey:string;
+    rewardAsset:string;
+}
+
+table ItemCount {
+    itemId:ulong;
+    count:uint;
+}
+
+table InventoryItemRecipe {
+    ingredients:[InventoryItemRecipeIngredient];
+}
+
+table StatProgressionTableData {
+    baseMultiplier:float;
+    offense:float;
+    defense:float;
+    health:float;
+}
+
+table GearSlotTableData {
+    offense:GearSlotTableStat;
+    defense:GearSlotTableStat;
+    health:GearSlotTableStat;
+    recovery:GearSlotTableStat;
+    critChance:GearSlotTableStat;
+    critPower:GearSlotTableStat;
+    attackSpeed:GearSlotTableStat;
+    speed:GearSlotTableStat;
+    potency:GearSlotTableStat;
+    tenacity:GearSlotTableStat;
+    accuracy:GearSlotTableStat;
+    evasion:GearSlotTableStat;
+}
+
+table BattleAltPrefab {
+    id:uint;
+    battlePrefab:string;
+}
+
+table UnitSkin {
+    skinItemId:ulong;
+    skinItemRequiredCount:uint;
+    prefab:string;
+    battlePrefab:string;
+    unitIcon:string;
+    nameKey:string;
+    abilityOverrides:[UnitSkinAbilityOverride];
+}
+
+table UnitGearTierMeritItem {
+    tierGrantedAt:uint;
+    icon:string;
+    nameKey:string;
+    stats:UnitStats;
+}
+
+table UnitAbility {
+    nameKey:string;
+    icon:string;
+    activated:bool;
+    castArea:AbilityCastArea;
+    abilityType:UnitAbilityType;
+    levels:[UnitAbilityLevel];
+    balanceVars:[UnitAbilityLevelBalanceVar];
+    previewStrength:bool;
+    exclusionGameMode:[GameMode];
+    id:int;
+    detailsSortOrder:int;
+    specialIcon:string;
+}
+
+table UnitGearTier {
+    slot:[UnitGearSlot];
+}
+
+table UnitStats {
+    offense:int;
+    defense:int;
+    health:int;
+    recovery:int;
+    critChance:float;
+    critPower:float;
+    attackSpeed:float;
+    speed:int;
+    potency:float;
+    tenacity:float;
+    accuracy:float;
+    evasion:float;
+}
+
+table StreakReward {
+    id:ulong;
+    rewards:[ItemCount];
+    priority:int;
+    requirement:string;
+    occasions:[OccasionRef];
+    type:StreakRewardType;
+    icon:string;
+    iconLabel:string;
+    title:string;
+    vfx:string;
+    firstSetCount:int;
+    sortOrder:int;
+}
+
+table StampSet {
+    id:ulong;
+    name:string;
+    progressedSlots:uint;
+    slots:[StampSlot];
+    reward:StampSetReward;
+    cumulativeReward:ulong;
+    state:StampSetState;
+    repeateState:StampSetRepeatState;
+    durationInMinutes:float;
+    occasion:OccasionRef;
+    setExpiryType:SetExpiryType;
+}
+
+table Stamps {
+    id:ulong;
+    stampFtueSet:ulong;
+    stampSets:[ulong];
+    stampConfig:[StampConfig];
+    killSwitch:bool;
+    isFeatureAgeGated:bool;
+    waitBeforeAutoslide:uint;
+    excludedIap:[ulong];
+}
+
+table HudElement {
+    id:ulong;
+    assetId:string;
+}
+
+table PushNotifications {
+    id:ulong;
+    occasions:[OccasionRef];
+    campaignId:string;
+    forProduction:bool;
+}
+
+table UnitRecommendation {
+    id:ulong;
+    unitRestriction:ulong;
+    nameKey:string;
+    icon:string;
+    grantMutator:ulong;
+}
+
+table LimitedTimeArenaConstants {
+    staminaItemCap:uint;
+}
+
+table UnitTierVisualDef {
+    id:ulong;
+    tierName:string;
+    vfxPrefabName:string;
+    unitNameFontColor:Color;
+    fontGlowColor:Color;
+    fontUnderlayColor:Color;
+    characterShardFrameMaterial:string;
+    unlockVfxPrefabName:string;
+}
+
+table CampaignGroup {
+    id:ulong;
+    nameKey:string;
+    sortOrder:int;
+    icon:string;
+    lockableFeature:LockableFeature;
+}
+
+table IdfaExp {
+    id:ulong;
+    playerLevelTrigger:uint;
+}
+
+table RaidConstants {
+    raidRewardDurationDays:uint;
+    raidDamageBattleActivityTrackerId:ulong;
+    clubDungeonPreviewImagePath:string;
+    raidRewardInactivityCutoffDays:uint;
+    deprecatedField:uint (deprecated);
+    raidLeaderboard:[OccasionRef];
+    id:ulong;
+    finalBossMinHealthPercent:float;
+    clubExpeditionDefaultPreviewImagePath:string;
+    raidInfo:[RaidInfo];
+    bossPortrait:[BossPortrait];
+    importantEffects:[RaidImportantEffects];
+}
+
+table PvpSeason {
+    id:ulong;
+    occasion:OccasionRef;
+    rankRewards:[PvpRankRewards];
+    overriddenDailyPvpPack:ulong;
+}
+
+table VipPerks {
+    id:ulong;
+    pveEnergyRefreshBonus:uint;
+    grandEnergyRefreshBonus:uint;
+    eliteBonusAttempts:uint;
+    cavernCrawlBonusAttempts:uint;
+    upgradePreviewDeepLinkStoreDefId:ulong;
+    towerEventEnergyRefreshBonus:uint;
+    energyPerks:[VipEnergyPerk];
+    expeditionEnergyRefreshBonus:uint;
+}
+
+table Aura {
+    id:ulong;
+    assetId:string;
+    auraNameLocKey:string;
+    auraDescriptionLocKey:string;
+}
+
+table BattleMessage {
+    id:ulong;
+    type:BattleMessageType;
+    bodyText:string;
+    pointAtView:string;
+    pointAtId:string;
+    pointAtTapAnywhere:bool;
+    pause:BattleMessagePause;
+    seekerData:SeekerPointAt;
+}
+
+table DailyReward {
+    id:ulong;
+    tiers:[DailyRewardTier];
+    priority:int;
+    requirement:string;
+    occasions:[OccasionRef];
+    type:DailyRewardType;
+    icon:string;
+    iconLabel:string;
+    sortOrder:int;
+}
+
+table ClubSupport {
+    id:ulong;
+    requests:[ClubSupportRequest];
+    requestFulfillCooldownS:uint;
+}
+
+table Milestones {
+    id:ulong;
+    category:MilestoneCategory;
+    minValue:uint;
+}
+
+table ClubWar {
+    id:ulong;
+    phases:[ClubWarPhase];
+    finalPhaseDurationM:int;
+    nodes:[ClubWarNode];
+    edges:[ClubWarEdge];
+    pointTickFrequencyS:int;
+    minClubMembers:int;
+    occasionRefs:[OccasionRef];
+    mapScene:string;
+    maxDefensesCommitted:int;
+    rewardsFirstPlace:ulong;
+    rewardsSecondPlace:ulong;
+    rewardsThirdPlace:ulong;
+    inBattleTimeoutSeconds:uint;
+    nodeRebuildDurationS:int;
+    maxAttackUnits:int;
+    pointsPerBasePerTimeUnit:int;
+    basesControlledThresholdForAdditionalPoints:int;
+    additionalPointsForBasesControlled:int;
+    pointsForSuccessfulAttack:int;
+    pointsForSuccessfulDefense:int;
+    winConditionPointThreshold:int;
+    rewardsInboxMessageFirstPlace:ulong;
+    rewardsInboxMessageSecondPlace:ulong;
+    rewardsInboxMessageThirdPlace:ulong;
+}
+
+table SorcererStoneCollection {
+    id:ulong;
+    nameKey:string;
+    icon:string;
+    stones:[ulong];
+}
+
+table BattleAbilityCodes {
+    id:ulong;
+    failureCodes:[BattleAbilityCode];
+}
+
+table CardProgressTracker {
+    id:ulong;
+    weight:int;
+    category:CardProgressTrackerCategory;
+    strategy:CardProgressTrackerStrategy;
+    specificUnits:[ulong];
+    specificSpells:[ulong];
+}
+
+table ShipmentNameMap {
+    id:ulong;
+    names:[ShipmentName];
+}
+
+table KothRank {
+    id:ulong;
+    kothRankMin:uint;
+    kothRankMax:uint;
+    dailyPayoutInboxMsg:ulong;
+}
+
+table LockableFeatures {
+    id:ulong;
+    lockableFeaturesList:[LockableFeatureEntry];
+}
+
+table UnitPromotionTable {
+    id:ulong;
+    rarityLevelRecipe:[UnitPromotionRecipe];
+    unlockIgnoresCurrencyCost:bool;
+    promotionCurrencyItem:ulong;
+}
+
+table UnitTrainingTable {
+    id:ulong;
+    levelRecipe:[UnitTrainingRecipe];
+    trainingMaterial:ulong;
+    trainingCurrencyItem:ulong;
+}
+
+table VariantStatic {
+    id:ulong;
+    data:StaticGamedata;
+}
+
+table ContextualMessageGroup {
+    id:ulong;
+    unlockRequirement:string;
+    autoCompleteRequirement:string;
+    displayConditionType:ContextualMessageDisplayConditionType;
+    displayConditionContentId:ulong;
+    priority:int;
+    messages:[ContextualMessage];
+    resetsUntilAutoCompleted:bool;
+}
+
+table PvpRank {
+    id:ulong;
+    rankNameKey:string;
+    minScore:ulong;
+    pointsForWin:int;
+    pointsForLoss:int;
+    scoreAfterSeasonReset:ulong;
+    lootForWin:ulong;
+    lootForLoss:ulong;
+    weeklyPayoutInboxMsg:ulong;
+    icon:string;
+    fallbackLoseStreak:int;
+    seasonPayoutInboxMsg:ulong;
+    levelMatchingRangeUp:int;
+}
+
+table SpellCategory {
+    id:ulong;
+    nameKey:string;
+    sortOrder:int;
+    icon:string;
+    type:SpellCategoryType;
+}
+
+table BattleRestriction {
+    id:ulong;
+    squadRequirement:SquadRequirement;
+    unitFilter:UnitFilter;
+    spellFilter:SpellFilter;
+    onlyRequiredUnitsAllowed:bool;
+    onlyRequiredSpellsAllowed:bool;
+    descriptionKey:string;
+    requiresFullSquad:bool;
+    excludedUnits:[ulong];
+}
+
+table PassportSeason {
+    id:ulong;
+    nameKey:string;
+    descriptionKey:string;
+    passportItem:ulong;
+    xpItem:ulong;
+    beginTimestamp:uint;
+    previewImage:string;
+    deprecatedField:ulong (deprecated);
+    weeks:[PassportSeasonWeek];
+    callToAction:PassportSeasonCallToAction;
+    inactiveSeasonBg:string;
+    inactiveSeasonHeading:string;
+    inactiveSeasonDesc:string;
+    endTimestamp:uint;
+    occasionRef:OccasionRef;
+    activityBannerImage:string;
+    levelRewards:[PassportSeasonLevelRewards];
+    homeShowcaseImage:string;
+    platinumPassportItem:ulong;
+    platinumLevelRequirement:uint;
+    platinumCallToAction:PassportSeasonCallToAction;
+}
+
+table PinPageCollection {
+    id:ulong;
+    icon:string;
+    title:string;
+    sortOrder:int;
+    pages:[PinPage];
+}
+
+table Spell {
+    id:ulong;
+    nameKey:string;
+    prefab:string;
+    icon:string;
+    inventoryIcon:string;
+    obtainable:bool;
+    castArea:AbilityCastArea;
+    levels:[SpellLevel];
+    visualEffects:[ulong];
+    categories:[ulong];
+    balanceVars:[SpellLevelBalanceVar];
+    detailsPrefab:string;
+    isHidden:bool;
+}
+
+table EnergyConstants {
+    id:ulong;
+    globalCap:uint;
+    generatedFrequencySeconds:uint;
+    generatedAmount:uint;
+    refreshCostItemId:ulong;
+    refreshCostAmount:[uint];
+    dailyGiftSecondsFromDayStart:[uint];
+    dailyGiftExpireSeconds:uint;
+    levelConstants:[PlayerLevelEnergyConstants];
+    dailyGiftTitleKey:string;
+    dailyGiftDescKey:string;
+    adRewardedCap:int;
+    bonusGeneratedAmount:uint;
+    timesToApplyGeneratedBonus:uint;
+    maxDailyBonusGenerateCap:int;
+    inventoryItem:ulong;
+    bonusRevsdkItem:RevSdkRewardType;
+    bonusGenerationRevsdkItem:RevSdkRewardType;
+    clubSupportEnergyType:ClubSupportRequestType;
+}
+
+table UnitCategory {
+    id:ulong;
+    nameKey:string;
+    sortOrder:int;
+    icon:string;
+    type:UnitCategoryType;
+    strongAgainst:[ulong];
+    weakAgainst:[ulong];
+}
+
+table AbilityEffect {
+    id:ulong;
+    assetId:string;
+}
+
+table AbilityGeometry {
+    id:ulong;
+    shape:AbilityShape;
+    asset:string;
+    length:float;
+    width:float;
+    angle:float;
+    sequenceAsset:string;
+}
+
+table Constants {
+    id:ulong;
+    unitPromotionTable:UnitPromotionTable;
+    unitTrainingTable:UnitTrainingTable;
+    newAccountLoot:ulong;
+    heroCampaign:ulong;
+    playerLevelTable:PlayerLevelTable;
+    currencyIds:CurrencyIds;
+    energyIds:EnergyIds;
+    gearTierColors:[Color];
+    commonAbilityEffects:[ulong];
+    battleAbilityCastTimeScale:float;
+    battleStatusEffectTextPriority:[string];
+    playerPowerRating:PlayerPowerRating;
+    autobattleDefaultAiPlayer:ulong;
+    playerProfileStats:[PlayerStat];
+    newsletterUrl:string;
+    newAccountInboxMessages:[ulong];
+    coopCampaign:ulong;
+    limitedPinPageCollection:ulong;
+    villainCampaign:ulong;
+    createClubCost:[ItemCount];
+    clubMaxRosterSize:uint;
+    dailyLoginExpiredBuybackCost:ItemCount;
+    dailyLoginBonusEligibilitySeconds:uint;
+    passportSeasonPinPageCollection:ulong;
+    passportSeasonLevelTable:PassportSeasonLevelTable;
+    unitRangeNames:[UnitRangeName];
+    supportUrl:string;
+    legalUserAgreementUrl:string;
+    creditsUrl:string;
+    deprecatedUrl:string (deprecated);
+    lockableFeaturesLegacy:[LockableFeatureEntry];
+    clubItemRequestLifespanHours:uint;
+    clubItemRequestClaimedInboxMessage:ulong;
+    grandCampaign:ulong;
+    tutorialBattle:TutorialBattle;
+    collectionScore:CollectionScoreTable;
+    heroUnitCategory:ulong;
+    villainUnitCategory:ulong;
+    enchantedMirrorSpell:ulong;
+    heroCampaignHard:ulong;
+    villainCampaignHard:ulong;
+    grandCampaignHard:ulong;
+    hardRefreshCostItem:ulong;
+    hardRefreshCosts:[uint];
+    unitVisuals:UnitVisualSequencerAssetIds;
+    inboxMessages:GlobalInboxMessages;
+    maxSeasonAffectingPvpBattlesPerDay:uint;
+    ageGateUnderage:uint;
+    ageGatePlayerActivityClaimedPrompt:ulong;
+    privacyPolicyUrl:string;
+    clubAutoDemoteInactivityPeriodHours:uint;
+    clubAutoPromoteActivityPeriodHours:uint;
+    randomizedSpellDef:ulong;
+    randomizedSpellOptions:[ulong];
+    randomizedSpellMaxCount:uint;
+    heroCampaignRestriction:ulong;
+    villainCampaignRestriction:ulong;
+    storeTabs:StoreTabIds;
+    playerActivities:PlayerActivityIds;
+    appRatingData:AppRatingData;
+    storeAdRewards:StoreAdRewards;
+    itemSortOrder:[SortableItem];
+    profanityBlackListFuzzy:[string];
+    profanityBlackListExact:[string];
+    profanityWhiteList:[string];
+    clubMinPlayerLevel:uint;
+    joinClubLockTimeS:[uint];
+    joinClubLockResetTimeS:uint;
+    adRewardValidationTimeoutS:uint;
+    tower:ulong;
+    clubDungeon:ulong;
+    unitPromotionTableRef:ulong;
+    unitTrainingTableRef:ulong;
+    clubDungeonStartTimestamp:uint;
+    clubDungeonDurationS:uint;
+    attributionUrl:string;
+    pvpMatchBucketRange:uint;
+    shipmentRefreshTime:uint;
+    pvpLobbyScene:string;
+    shardShopUnitPromoMatRate:uint;
+    shardShopSpellPromoMatRate:uint;
+    lockableFeaturesRef:ulong;
+    kothNumBotsInNewShards:uint;
+    kothNumPlayersPerShard:uint;
+    kothShieldsCooldownSeconds:uint;
+    kothNumAggregatePayouts:uint;
+    kothLocalDayEndTimeSeconds:uint;
+    kothPayoutInboxMessage:ulong;
+    kothNumDailyAttacks:uint;
+    kothAttackCooldownSeconds:uint;
+    kothAttackCooldownResetCost:ItemCount;
+    kothAutoRefreshFrequencySeconds:uint;
+    kothTable:ulong;
+    kothShieldMaxRank:uint;
+    kothInBattleTimeoutSeconds:uint;
+    shipmentNameMapRef:ulong;
+    xpIds:XpIds;
+    battleBadConnectionMaxClockDriftS:float;
+    battleBadConnectionUpdateWaitS:float;
+    battleBadConnectionMinDurationS:float;
+    abilityCodesRef:ulong;
+    sorcererStoneCollections:[ulong];
+    clubInviteExpireTime:uint;
+    defaultScheduledEventGroup:ulong;
+    clubFindPageSize:uint;
+    clubAutoDemoteInactiveLeaderPeriodHours:uint;
+    friendListSize:uint;
+    battleDefaultFormation:ulong;
+    seekerPrefab:string;
+    seekerRenderTexture:string;
+    colorIds:[ColorId];
+    deathSlowMoPreDurationS:float;
+    deathSlowMoPostDurationS:float;
+    deathSlowMoTimeScale:float;
+    ageGateReq:string;
+    newsletterLastModifiedUrl:string;
+    defaultStoreShowcaseItem:ulong;
+    maxOptionalDailyActivityCount:uint;
+    shardShopUnitSkinRate:uint;
+    specialOfferPopupLimit:uint;
+    specialOfferPopupLimitCooldownS:uint;
+    shipmentIds:ShipmentIds;
+    ccpaUrl:string;
+    pvpBattle:ulong;
+    offerWallSpecials:[OfferWallSpecial];
+    savedSquadsFreeCount:uint;
+    savedSquadsVipCount:uint;
+    newsletterUrls:NewsletterUrls;
+    platformAuthTimeoutS:uint;
+    battleCatchupSpeed:float;
+    battleCatchupDurationS:float;
+    battleCatchupTimeoutDurationS:float;
+    tutorialSkipInfo:TutorialSkipInfo;
+    telemetrySnapshotItems:[ulong];
+    shardShopEmoteRate:uint;
+    shardShopPinRate:uint;
+    cardUnlockTrackerDisallowedUnits:[ulong];
+    cardUnlockTrackerDisallowedSpells:[ulong];
+    timeSettingsChangesAllowed:uint;
+    timeSettingsChangesPeriodDurationDays:uint;
+    createClubCooldownTimeHours:uint;
+    passportSeasonUpsellVgpPlacementTriggers:[string];
+    passportSeasonUpsellPassportLevelRequirement:uint;
+    passportSeasonUpsellShowDaysFromEnd:uint;
+    passportSeasonUpsellShowFrequencySeconds:uint;
+    gemToCurrencyConversions:GemToCurrencyConversions;
+    overheadIconMaxCount:uint;
+    grandCampaignStageIds:[CampaignStageIds];
+    heroCampaignStageIds:[CampaignStageIds];
+    villainCampaignStageIds:[CampaignStageIds];
+    emailConnectLifetimeReward:ulong;
+    profileFrameIds:ProfileFrameIds;
+    instantBattleConstants:InstantBattleConstants;
+    idfaExpRef:ulong;
+    npcAttackIcon:string;
+    battleModes:BattleModes;
+    campaignInfoSeekerData:SeekerPointAt;
+    deprecatedField1:ulong (deprecated);
+    deprecatedField2:ulong (deprecated);
+    deprecatedField3:ulong (deprecated);
+    deprecatedField4:ulong (deprecated);
+    unitHealthColorHigh:Color;
+    unitHealthColorMedium:Color;
+    unitHealthColorLow:Color;
+    unitHealthHigh:float;
+    unitHealthMedium:float;
+    pipInfo:HealthPipInfo;
+    levelupPlacardAssets:[PlayerLevelUpPlaCard];
+    expeditionEnergy:ulong;
+    carouselChangeTime:float;
+    carouselChangeItemOnEntry:bool;
+    itemCaps:[ItemCap];
+    expeditionDefaultBattleTimeout:int;
+    shardShopProfileFrameRate:uint;
+    expeditionStartEnergyCount:int;
+    expeditionDamageBattleActivityTrackerId:ulong;
+    expeditionPointsPerDeployPower:double;
+    socialFriendFreeGift:ulong;
+    playerFindPageSize:uint;
+    inviteUrls:InviteUrls;
+    ageGateClubAutoJoin:bool;
+    socialPvpBattle:ulong;
+    socialPvpKillSwitch:bool;
+    socialPvpMatchRpcTimeout:uint;
+    hyperdriveTowerProgressCm:ulong;
+    hyperdriveCampaignProgressCm:ulong;
+    hyperdriveEventProgressCm:ulong;
+    hyperdriveExcludeCmsFromAutocomplete:[ulong];
+}
+
+table Campaign {
+    id:ulong;
+    requirement:string;
+    nameKey:string;
+    maps:[CampaignMap];
+    worldAsset:string;
+    attemptLimitType:CampaignAttemptLimit;
+    attemptLimitNum:uint;
+    campaignType:CampaignType;
+    campaignGroup:ulong;
+    lockingInfo:LockingInfo;
+    showcaseItems:[ulong];
+    showcaseImage:string;
+    sortOrder:int;
+    starType:ulong;
+    info:CampaignInfo;
+    storeTabs:[ulong];
+    defaultBackgroundPath:string;
+    backgrounds:[BackgroundModifier];
+    hardCampaign:ulong;
+    analyticsName:string;
+    lockableFeature:LockableFeature;
+    stageIds:[CampaignStageIds];
+    hudItems:[ulong];
+    penguinName:string;
+    trackParticipationTime:bool;
+    itemFindSortOrder:int;
+    showFirstTimeTutorial:bool;
+    normalCampaign:ulong;
+    requirementExplanationString:string;
+    defaultBackgroundScenePath:string;
+    backgroundScenes:[BackgroundModifier];
+}
+
+table InventoryItem {
+    id:ulong;
+    type:InventoryItemType;
+    nameKey:string;
+    descriptionKey:string;
+    icon:string;
+    largeIcon:string;
+    recipe:InventoryItemRecipe;
+    costs:[ItemCount];
+    canBeDonated:bool;
+    subData:InventoryItemSubData;
+    isExclusive:bool;
+    wideIcon:string;
+    insufficientCountKey:string;
+    buyAndEquipCost:ItemCount;
+    unavailableKey:string;
+    colorId:uint;
+    shipmentSort:int;
+    deepLinkLocation:DeepLinkLocation;
+    deepLinkSublocation:string;
+    getMoreDeepLinkLocation:DeepLinkLocation;
+    getMoreDeepLinkSublocation:string;
+    profileTrophySort:int;
+    gemConvertCost:float;
+    isClubInventoryExclusive:bool;
+    leaderboardChallengeTags:[ItemTag];
+    profileTrophy3DIcon:string;
+    categoryOverlays:[ulong];
+    shardsMaterial:string;
+}
+
+table StatProgressionTable {
+    id:ulong;
+    growthAtRarity:[StatProgressionTableData];
+}
+
+table GearSlotTable {
+    id:ulong;
+    data:GearSlotTableData;
+}
+
+table Unit {
+    id:ulong;
+    nameKey:string;
+    baseStats:UnitStats;
+    statProgressionTable:ulong;
+    gearSlotTable:ulong;
+    gearTiers:[UnitGearTier];
+    prefab:string;
+    battlePrefab:string;
+    icon:string;
+    obtainable:bool;
+    abilities:[UnitAbility];
+    promotionMaterial:ulong;
+    unlockRarity:int;
+    walkSpeed:float;
+    attackRange:float;
+    radius:float;
+    abilityEffects:[ulong];
+    unitType:UnitType;
+    categories:[ulong];
+    gearTierMeritItems:[UnitGearTierMeritItem];
+    subtitleKey:string;
+    mysteryDetails:bool;
+    skins:[UnitSkin];
+    isHidden:bool;
+    useAbilityIds:bool;
+    battleAltPrefabs:[BattleAltPrefab];
+    rarityProgression:[UnitStats];
+    visualTierCategory:ulong;
+    vfxPrefabOverride:string;
+    characterShardMaterial:string;
+    battleNotTargetable:bool;
+    battleNoHealthBar:bool;
+    battleNoTurns:bool;
+    isPrimaryCinematicsUnit:bool;
+    battleOverrideSpawnIndex:byte;
+}
+
+table StaticGamedata {
+    unit:[Unit];
+    gearSlotTable:[GearSlotTable];
+    statProgressionTable:[StatProgressionTable];
+    battleScript:[ubyte];
+    inventoryItem:[InventoryItem];
+    campaign:[Campaign];
+    constants:[Constants];
+    abilityGeometry:[AbilityGeometry];
+    abilityEffect:[AbilityEffect];
+    unitCategory:[UnitCategory];
+    energyConstants:[EnergyConstants];
+    spell:[Spell];
+    pinPageCollection:[PinPageCollection];
+    deprecatedField:[ulong] (deprecated);
+    passportSeason:[PassportSeason];
+    battleRestriction:[BattleRestriction];
+    spellCategory:[SpellCategory];
+    pvpRank:[PvpRank];
+    contextualMessageGroup:[ContextualMessageGroup];
+    variantStatic:[VariantStatic];
+    unitTrainingTable:[UnitTrainingTable];
+    unitPromotionTable:[UnitPromotionTable];
+    lockableFeatures:[LockableFeatures];
+    kothRank:[KothRank];
+    shipmentNameMap:[ShipmentNameMap];
+    cardProgressTracker:[CardProgressTracker];
+    battleAbilityCodes:[BattleAbilityCodes];
+    sorcererStoneCollection:[SorcererStoneCollection];
+    clubWar:[ClubWar];
+    milestones:[Milestones];
+    clubSupport:[ClubSupport];
+    dailyReward:[DailyReward];
+    battleMessage:[BattleMessage];
+    aura:[Aura];
+    vipPerks:[VipPerks];
+    pvpSeason:[PvpSeason];
+    raidConstants:[RaidConstants];
+    idfaExp:[IdfaExp];
+    campaignGroup:[CampaignGroup];
+    unitTierVisualDef:[UnitTierVisualDef];
+    limitedTimeArenaConstants:[LimitedTimeArenaConstants];
+    unitRecommendation:[UnitRecommendation];
+    pushNotifications:[PushNotifications];
+    hudElement:[HudElement];
+    stamps:[Stamps];
+    stampSet:[StampSet];
+    streakReward:[StreakReward];
+}
+
+root_type StaticGamedata;

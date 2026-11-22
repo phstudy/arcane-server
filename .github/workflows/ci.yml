@@ -1,0 +1,21 @@
+# Tests and checks on every push and pull request. The client content set is not here, so the tests that need it
+# skip; tools/public_text.py runs its public rules (the private name list exists only on the maintainer's machine).
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --locked
+      - name: "Tests (without the content set: those tests skip)"
+        run: uv run pytest -q
+      - name: Public text check
+        run: uv run python tools/public_text.py
+      - name: Lint
+        run: uvx ruff check src tests tools --select F,E9

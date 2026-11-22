@@ -1,0 +1,531 @@
+{
+ "event_group": {
+  "contentId": "7245410380316363",
+  "name": "EVENT_202007_TECH_META_NAME",
+  "description": "EVENT_202007_TECH_META_DESC",
+  "image": "icons_scheduled_events_event_202007_tech/gizmoduck_event_meta",
+  "sortOrder": "19",
+  "showcaseItems": [
+   "5721890487063550",
+   "4981819270825109"
+  ],
+  "marqueeImage": "icons_scheduled_events_event_202007_tech/event_portal_gizmoduck",
+  "hasPlayerActivated": true,
+  "frameColor": {
+   "a": 1.0
+  },
+  "panelColor": {
+   "a": 1.0
+  },
+  "portalName": "EVENT_202007_TECH_PORTAL_NAME",
+  "portalDesc": "EVENT_202007_TECH_PORTAL_DESC"
+ },
+ "rotation": {
+  "lane": "story",
+  "after": 6725109604398782
+ },
+ "mail": {
+  "start": [
+   "EVENT_202007_GIZMODUCK_INBOX_EVENT_START_SUBJECT",
+   "EVENT_202007_GIZMODUCK_INBOX_EVENT_START_BODY"
+  ],
+  "reminder": [
+   "EVENT_202007_GIZMODUCK_INBOX_DAILY_SUBJECT",
+   "EVENT_202007_GIZMODUCK_INBOX_DAILY_BODY"
+  ],
+  "last_chance": [
+   "EVENT_202007_GIZMODUCK_INBOX_LAST_CHANCE_SUBJECT",
+   "EVENT_202007_GIZMODUCK_INBOX_LAST_CHANCE_BODY"
+  ]
+ },
+ "events": [
+  {
+   "key_prefix": "EVENT_202007_TECH_A",
+   "tier_keys": {
+    "name": "{prefix}_L{i}_NAME",
+    "description": "EVENT_202007_TECH_TIERS_DESC",
+    "recommended": "{prefix}_L{i}_RECOMMENDED"
+   },
+   "event": {
+    "contentId": "4688457517263730",
+    "name": "EVENT_202007_TECH_A_NAME",
+    "description": "EVENT_202007_TECH_A_DESC",
+    "image": "icons_scheduled_events_event_202007_tech/event_cover_tech_npcs",
+    "sortOrder": "100",
+    "battleLimit": "3",
+    "battleLimitRefreshCost": [
+     {
+      "itemId": "31",
+      "count": "100"
+     },
+     {
+      "itemId": "31",
+      "count": "200"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "400"
+     },
+     {
+      "itemId": "31",
+      "count": "500"
+     },
+     {
+      "itemId": "31",
+      "count": "600"
+     },
+     {
+      "itemId": "31",
+      "count": "700"
+     },
+     {
+      "itemId": "31",
+      "count": "800"
+     }
+    ],
+    "marqueeImage": "icons_scheduled_events_event_202007_tech/event_portal_gizmoduck",
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "allowInstantBattle": true,
+    "hudCurrency": "4981819270825109",
+    "showcaseItems": [
+     "5721890487063550",
+     "4981819270825109"
+    ],
+    "eventGroupId": "7245410380316363"
+   },
+   "roster": {
+    "minions": [
+     3667354290875560,
+     8348586603157706,
+     5411986143930567
+    ]
+   },
+   "mutators": [
+    2752317665827534
+   ],
+   "tiers": [
+    {
+     "restriction": 5447195853294448,
+     "persistent": {
+      "id": 4981819270825109,
+      "min": 1000,
+      "max": 1000,
+      "goal": 10000
+     },
+     "rewards": [
+      {
+       "id": 5721890487063550,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 2836539702967744,
+       "count": 2
+      },
+      {
+       "id": 13,
+       "count": 1000
+      }
+     ]
+    },
+    {
+     "restriction": 381352681769493,
+     "persistent": {
+      "id": 4981819270825109,
+      "min": 2000,
+      "max": 2000,
+      "goal": 25000
+     },
+     "rewards": [
+      {
+       "id": 5721890487063550,
+       "count": 2,
+       "first_time": true
+      },
+      {
+       "id": 2836539702967744,
+       "count": 2
+      },
+      {
+       "id": 3098169505142870,
+       "count": 2
+      },
+      {
+       "id": 13,
+       "count": 2000
+      }
+     ]
+    },
+    {
+     "restriction": 1487802448995953,
+     "persistent": {
+      "id": 4981819270825109,
+      "min": 3000,
+      "max": 3000,
+      "goal": 40000
+     },
+     "rewards": [
+      {
+       "id": 5721890487063550,
+       "count": 3,
+       "first_time": true
+      },
+      {
+       "id": 2836539702967744,
+       "count": 3
+      },
+      {
+       "id": 3098169505142870,
+       "count": 2
+      },
+      {
+       "id": 2231922868182045,
+       "count": 2
+      },
+      {
+       "id": 381128010781287,
+       "count": 2
+      },
+      {
+       "id": 13,
+       "count": 3000
+      }
+     ]
+    },
+    {
+     "restriction": 5448448821505282,
+     "persistent": {
+      "id": 4981819270825109,
+      "min": 5000,
+      "max": 5000,
+      "goal": 60000
+     },
+     "rewards": [
+      {
+       "id": 5721890487063550,
+       "count": 4,
+       "first_time": true
+      },
+      {
+       "id": 2836539702967744,
+       "count": 3
+      },
+      {
+       "id": 3098169505142870,
+       "count": 2
+      },
+      {
+       "id": 2231922868182045,
+       "count": 3
+      },
+      {
+       "id": 381128010781287,
+       "count": 2
+      },
+      {
+       "id": 1982171667398936,
+       "count": 2
+      },
+      {
+       "id": 13,
+       "count": 4000
+      }
+     ]
+    },
+    {
+     "restriction": 5693348106079959,
+     "persistent": {
+      "id": 4981819270825109,
+      "min": 5000,
+      "max": 5000,
+      "goal": 150000
+     },
+     "rewards": [
+      {
+       "id": 5721890487063550,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 2836539702967744,
+       "count": 3
+      },
+      {
+       "id": 3098169505142870,
+       "count": 2
+      },
+      {
+       "id": 2231922868182045,
+       "count": 3
+      },
+      {
+       "id": 381128010781287,
+       "count": 2
+      },
+      {
+       "id": 1982171667398936,
+       "count": 2
+      },
+      {
+       "id": 5699237400778713,
+       "count": 2
+      },
+      {
+       "id": 3218172284382800,
+       "count": 2
+      },
+      {
+       "id": 13,
+       "count": 5000
+      }
+     ]
+    },
+    {
+     "restriction": 1377633909719068,
+     "persistent": {
+      "id": 4981819270825109,
+      "min": 5000,
+      "max": 5000,
+      "goal": 150000
+     },
+     "rewards": [
+      {
+       "id": 5721890487063550,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 2836539702967744,
+       "count": 3
+      },
+      {
+       "id": 3098169505142870,
+       "count": 3
+      },
+      {
+       "id": 2231922868182045,
+       "count": 3
+      },
+      {
+       "id": 381128010781287,
+       "count": 3
+      },
+      {
+       "id": 1982171667398936,
+       "count": 2
+      },
+      {
+       "id": 5699237400778713,
+       "count": 2
+      },
+      {
+       "id": 5482566426068031,
+       "count": 2
+      },
+      {
+       "id": 3218172284382800,
+       "count": 2
+      },
+      {
+       "id": 6951631747773325,
+       "count": 2
+      },
+      {
+       "id": 13,
+       "count": 6000
+      }
+     ]
+    },
+    {
+     "restriction": 2238564607054141,
+     "persistent": {
+      "id": 4981819270825109,
+      "min": 5000,
+      "max": 5000,
+      "goal": 175000
+     },
+     "rewards": [
+      {
+       "id": 2373438750801981,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 5721890487063550,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 2836539702967744,
+       "count": 3
+      },
+      {
+       "id": 3098169505142870,
+       "count": 3
+      },
+      {
+       "id": 2231922868182045,
+       "count": 4
+      },
+      {
+       "id": 381128010781287,
+       "count": 3
+      },
+      {
+       "id": 1982171667398936,
+       "count": 2
+      },
+      {
+       "id": 5699237400778713,
+       "count": 2
+      },
+      {
+       "id": 5482566426068031,
+       "count": 2
+      },
+      {
+       "id": 3218172284382800,
+       "count": 2
+      },
+      {
+       "id": 6951631747773325,
+       "count": 2
+      },
+      {
+       "id": 13,
+       "count": 7000
+      }
+     ]
+    },
+    {
+     "restriction": 2605520177075612,
+     "persistent": {
+      "id": 4981819270825109,
+      "min": 5000,
+      "max": 5000,
+      "goal": 200000
+     },
+     "rewards": [
+      {
+       "id": 5721890487063550,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 2836539702967744,
+       "count": 3
+      },
+      {
+       "id": 3098169505142870,
+       "count": 3
+      },
+      {
+       "id": 2231922868182045,
+       "count": 5
+      },
+      {
+       "id": 381128010781287,
+       "count": 3
+      },
+      {
+       "id": 1982171667398936,
+       "count": 3
+      },
+      {
+       "id": 5699237400778713,
+       "count": 3
+      },
+      {
+       "id": 5482566426068031,
+       "count": 3
+      },
+      {
+       "id": 3218172284382800,
+       "count": 2
+      },
+      {
+       "id": 6951631747773325,
+       "count": 2
+      },
+      {
+       "id": 13,
+       "count": 8000
+      }
+     ]
+    },
+    {
+     "restriction": 687101874802958,
+     "persistent": {
+      "id": 4981819270825109,
+      "min": 10000,
+      "max": 10000,
+      "goal": 400000
+     },
+     "rewards": [
+      {
+       "id": 3150214048428251,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 5721890487063550,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 2836539702967744,
+       "count": 3
+      },
+      {
+       "id": 3098169505142870,
+       "count": 3
+      },
+      {
+       "id": 2231922868182045,
+       "count": 5
+      },
+      {
+       "id": 381128010781287,
+       "count": 3
+      },
+      {
+       "id": 1982171667398936,
+       "count": 3
+      },
+      {
+       "id": 5699237400778713,
+       "count": 3
+      },
+      {
+       "id": 5482566426068031,
+       "count": 3
+      },
+      {
+       "id": 3218172284382800,
+       "count": 3
+      },
+      {
+       "id": 6951631747773325,
+       "count": 3
+      },
+      {
+       "id": 13,
+       "count": 10000
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

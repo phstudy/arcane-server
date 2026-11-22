@@ -1,0 +1,716 @@
+{
+ "event_group": {
+  "contentId": "2021042000000001",
+  "name": "EVENT_202104_RAYA_META_NAME",
+  "description": "EVENT_202104_RAYA_META_DESC",
+  "image": "icons_scheduled_events_event_raya/adventure_event_meta_raya_namaari",
+  "sortOrder": "20",
+  "showcaseItems": [
+   "6060808516526379",
+   "2893110270377989",
+   "391536129644826"
+  ],
+  "marqueeImage": "icons_scheduled_events_event_raya/event_portal_raya",
+  "hasPlayerActivated": true,
+  "frameColor": {
+   "a": 1.0
+  },
+  "panelColor": {
+   "a": 1.0
+  },
+  "portalName": "EVENT_202104_RAYA_PORTAL_NAME",
+  "portalDesc": "EVENT_202104_RAYA_PORTAL_DESC"
+ },
+ "rotation": {
+  "lane": "story",
+  "after": 6725109604398782
+ },
+ "mail": {
+  "preview": [
+   "EVENT_202107_RAYA_INBOX_PREVIEW_SUBJECT",
+   "EVENT_202107_RAYA_INBOX_PREVIEW_BODY"
+  ],
+  "start": [
+   "EVENT_202107_RAYA_INBOX_EVENT_START_SUBJECT",
+   "EVENT_202107_RAYA_INBOX_EVENT_START_BODY"
+  ],
+  "reminder": [
+   "EVENT_202107_RAYA_INBOX_DAILY_SUBJECT",
+   "EVENT_202107_RAYA_INBOX_DAILY_BODY"
+  ],
+  "last_chance": [
+   "EVENT_202107_RAYA_INBOX_LAST_CHANCE_SUBJECT",
+   "EVENT_202107_RAYA_INBOX_LAST_CHANCE_BODY"
+  ]
+ },
+ "hero_variants": [
+  {
+   "id": 2515558577757343,
+   "hero": 8699539162769006
+  },
+  {
+   "id": 4199674936015620,
+   "hero": 4015503207888910
+  }
+ ],
+ "events": [
+  {
+   "key_prefix": "EVENT_202104_RAYA_A",
+   "tier_keys": {
+    "name": "{prefix}_L{i}_NAME",
+    "description": "EVENT_202104_RAYA_AURA_DESC",
+    "recommended": "{prefix}_L{i}_RECOMMENDED"
+   },
+   "event": {
+    "contentId": "2021042000000002",
+    "name": "EVENT_202104_RAYA_A_NAME",
+    "description": "EVENT_202104_RAYA_A_DESC",
+    "image": "icons_scheduled_events_event_raya/adventure_cover_namari",
+    "sortOrder": "100",
+    "battleLimit": "3",
+    "battleLimitRefreshCost": [
+     {
+      "itemId": "31",
+      "count": "100"
+     },
+     {
+      "itemId": "31",
+      "count": "200"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "400"
+     },
+     {
+      "itemId": "31",
+      "count": "500"
+     },
+     {
+      "itemId": "31",
+      "count": "600"
+     },
+     {
+      "itemId": "31",
+      "count": "700"
+     },
+     {
+      "itemId": "31",
+      "count": "800"
+     }
+    ],
+    "marqueeImage": "icons_scheduled_events_event_raya/event_portal_raya",
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "allowInstantBattle": true,
+    "hudCurrency": "391536129644826",
+    "showcaseItems": [
+     "6060808516526379",
+     "391536129644826"
+    ],
+    "eventGroupId": "2021042000000001"
+   },
+   "roster": {
+    "bosses": [
+     2515558577757343
+    ],
+    "companions": [
+     50,
+     3544131010430743
+    ]
+   },
+   "mutators": [
+    175298502682863
+   ],
+   "tiers": [
+    {
+     "restriction": 5126103014474359,
+     "persistent": {
+      "id": 391536129644826,
+      "min": 2000,
+      "max": 2000,
+      "goal": 40000
+     },
+     "rewards": [
+      {
+       "id": 6060808516526379,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 8561757942901548,
+       "count": 1
+      },
+      {
+       "id": 13,
+       "count": 2000
+      }
+     ]
+    },
+    {
+     "restriction": 1527280271885735,
+     "persistent": {
+      "id": 391536129644826,
+      "min": 2500,
+      "max": 2500,
+      "goal": 60000
+     },
+     "rewards": [
+      {
+       "id": 6060808516526379,
+       "count": 2,
+       "first_time": true
+      },
+      {
+       "id": 8561757942901548,
+       "count": 2
+      },
+      {
+       "id": 13,
+       "count": 3000
+      }
+     ]
+    },
+    {
+     "restriction": 6615022498123866,
+     "persistent": {
+      "id": 391536129644826,
+      "min": 2500,
+      "max": 2500,
+      "goal": 80000
+     },
+     "rewards": [
+      {
+       "id": 6060808516526379,
+       "count": 3,
+       "first_time": true
+      },
+      {
+       "id": 8561757942901548,
+       "count": 2
+      },
+      {
+       "id": 2231922868182045,
+       "count": 1
+      },
+      {
+       "id": 709706751642707,
+       "count": 1
+      },
+      {
+       "id": 13,
+       "count": 4000
+      }
+     ]
+    },
+    {
+     "restriction": 953219463631638,
+     "persistent": {
+      "id": 391536129644826,
+      "min": 2500,
+      "max": 2500,
+      "goal": 100000
+     },
+     "rewards": [
+      {
+       "id": 6060808516526379,
+       "count": 4,
+       "first_time": true
+      },
+      {
+       "id": 8561757942901548,
+       "count": 2
+      },
+      {
+       "id": 2231922868182045,
+       "count": 1
+      },
+      {
+       "id": 709706751642707,
+       "count": 1
+      },
+      {
+       "id": 13,
+       "count": 5000
+      }
+     ]
+    },
+    {
+     "restriction": 1587844363329503,
+     "persistent": {
+      "id": 391536129644826,
+      "min": 3500,
+      "max": 3500,
+      "goal": 140000
+     },
+     "rewards": [
+      {
+       "id": 6060808516526379,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 8561757942901548,
+       "count": 2
+      },
+      {
+       "id": 2231922868182045,
+       "count": 1
+      },
+      {
+       "id": 709706751642707,
+       "count": 1
+      },
+      {
+       "id": 5162107487910141,
+       "count": 1
+      },
+      {
+       "id": 13,
+       "count": 6000
+      }
+     ]
+    },
+    {
+     "restriction": 6881907320260054,
+     "persistent": {
+      "id": 391536129644826,
+      "min": 4000,
+      "max": 4000,
+      "goal": 140000
+     },
+     "rewards": [
+      {
+       "id": 6060808516526379,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 8561757942901548,
+       "count": 2
+      },
+      {
+       "id": 2231922868182045,
+       "count": 2
+      },
+      {
+       "id": 709706751642707,
+       "count": 2
+      },
+      {
+       "id": 5162107487910141,
+       "count": 1
+      },
+      {
+       "id": 5291641157276905,
+       "count": 1
+      },
+      {
+       "id": 5554127934867117,
+       "count": 1
+      },
+      {
+       "id": 13,
+       "count": 7000
+      }
+     ]
+    },
+    {
+     "restriction": 1507986275744764,
+     "persistent": {
+      "id": 391536129644826,
+      "min": 4000,
+      "max": 4000,
+      "goal": 140000
+     },
+     "rewards": [
+      {
+       "id": 6060808516526379,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 8561757942901548,
+       "count": 2
+      },
+      {
+       "id": 2231922868182045,
+       "count": 2
+      },
+      {
+       "id": 709706751642707,
+       "count": 2
+      },
+      {
+       "id": 5162107487910141,
+       "count": 2
+      },
+      {
+       "id": 5291641157276905,
+       "count": 2
+      },
+      {
+       "id": 5554127934867117,
+       "count": 2
+      },
+      {
+       "id": 13,
+       "count": 8000
+      }
+     ]
+    },
+    {
+     "restriction": 6958380419629079,
+     "persistent": {
+      "id": 391536129644826,
+      "min": 5000,
+      "max": 5000,
+      "goal": 300000
+     },
+     "rewards": [
+      {
+       "id": 6060808516526379,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 8561757942901548,
+       "count": 3
+      },
+      {
+       "id": 2231922868182045,
+       "count": 3
+      },
+      {
+       "id": 709706751642707,
+       "count": 3
+      },
+      {
+       "id": 5162107487910141,
+       "count": 3
+      },
+      {
+       "id": 5291641157276905,
+       "count": 3
+      },
+      {
+       "id": 5554127934867117,
+       "count": 2
+      },
+      {
+       "id": 13,
+       "count": 10000
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key_prefix": "EVENT_202104_RAYA_B",
+   "tier_keys": {
+    "name": "{prefix}_L{i}_NAME",
+    "description": "EVENT_202104_RAYA_B_L0_DESC",
+    "recommended": "{prefix}_L{i}_RECOMMENDED"
+   },
+   "event": {
+    "contentId": "2021042000000003",
+    "name": "EVENT_202104_RAYA_B_NAME",
+    "description": "EVENT_202104_RAYA_B_DESC",
+    "image": "icons_scheduled_events_event_raya/adventure_cover_raya",
+    "sortOrder": "200",
+    "battleLimit": "3",
+    "battleLimitRefreshCost": [
+     {
+      "itemId": "31",
+      "count": "100"
+     },
+     {
+      "itemId": "31",
+      "count": "200"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "400"
+     },
+     {
+      "itemId": "31",
+      "count": "500"
+     },
+     {
+      "itemId": "31",
+      "count": "600"
+     },
+     {
+      "itemId": "31",
+      "count": "700"
+     },
+     {
+      "itemId": "31",
+      "count": "800"
+     }
+    ],
+    "marqueeImage": "icons_scheduled_events_event_raya/event_portal_raya",
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "allowInstantBattle": true,
+    "showcaseItems": [
+     "2893110270377989"
+    ],
+    "eventGroupId": "2021042000000001"
+   },
+   "roster": {
+    "bosses": [
+     2515558577757343
+    ],
+    "companions": [
+     4199674936015620
+    ]
+   },
+   "mutators": [
+    344201878343974
+   ],
+   "tiers": [
+    {
+     "restriction": 7709426933924976,
+     "persistent": {
+      "id": 2893110270377989,
+      "min": 1,
+      "max": 2,
+      "goal": 20
+     },
+     "rewards": [
+      {
+       "id": 2893110270377989,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 2836539702967744,
+       "count": 3
+      },
+      {
+       "id": 13,
+       "count": 7500
+      }
+     ]
+    },
+    {
+     "restriction": 6323639883992083,
+     "persistent": {
+      "id": 2893110270377989,
+      "min": 1,
+      "max": 3,
+      "goal": 30
+     },
+     "rewards": [
+      {
+       "id": 2893110270377989,
+       "count": 2,
+       "first_time": true
+      },
+      {
+       "id": 2836539702967744,
+       "count": 3
+      },
+      {
+       "id": 381128010781287,
+       "count": 1
+      },
+      {
+       "id": 2231922868182045,
+       "count": 1
+      },
+      {
+       "id": 13,
+       "count": 10000
+      }
+     ]
+    },
+    {
+     "restriction": 7088208194466954,
+     "persistent": {
+      "id": 2893110270377989,
+      "min": 1,
+      "max": 4,
+      "goal": 30
+     },
+     "rewards": [
+      {
+       "id": 2893110270377989,
+       "count": 3,
+       "first_time": true
+      },
+      {
+       "id": 2836539702967744,
+       "count": 5
+      },
+      {
+       "id": 381128010781287,
+       "count": 2
+      },
+      {
+       "id": 2231922868182045,
+       "count": 2
+      },
+      {
+       "id": 13,
+       "count": 15000
+      }
+     ]
+    },
+    {
+     "restriction": 3504133161143,
+     "persistent": {
+      "id": 2893110270377989,
+      "min": 1,
+      "max": 5,
+      "goal": 65
+     },
+     "rewards": [
+      {
+       "id": 2893110270377989,
+       "count": 4,
+       "first_time": true
+      },
+      {
+       "id": 2836539702967744,
+       "count": 5
+      },
+      {
+       "id": 381128010781287,
+       "count": 3
+      },
+      {
+       "id": 2231922868182045,
+       "count": 3
+      },
+      {
+       "id": 5699237400778713,
+       "count": 2
+      },
+      {
+       "id": 3472383282447130,
+       "count": 1
+      },
+      {
+       "id": 13,
+       "count": 20000
+      }
+     ]
+    },
+    {
+     "restriction": 4595368816278189,
+     "persistent": {
+      "id": 2893110270377989,
+      "min": 1,
+      "max": 6,
+      "goal": 85
+     },
+     "rewards": [
+      {
+       "id": 2893110270377989,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 2836539702967744,
+       "count": 5
+      },
+      {
+       "id": 381128010781287,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 4
+      },
+      {
+       "id": 5699237400778713,
+       "count": 3
+      },
+      {
+       "id": 3218172284382800,
+       "count": 2
+      },
+      {
+       "id": 3472383282447130,
+       "count": 2
+      },
+      {
+       "id": 13,
+       "count": 25000
+      }
+     ]
+    },
+    {
+     "restriction": 2196871273246530,
+     "persistent": {
+      "id": 2893110270377989,
+      "min": 1,
+      "max": 7,
+      "goal": 100
+     },
+     "rewards": [
+      {
+       "id": 8136015410176038,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 2893110270377989,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 2836539702967744,
+       "count": 5
+      },
+      {
+       "id": 381128010781287,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 5
+      },
+      {
+       "id": 5699237400778713,
+       "count": 5
+      },
+      {
+       "id": 3218172284382800,
+       "count": 3
+      },
+      {
+       "id": 3472383282447130,
+       "count": 3
+      },
+      {
+       "id": 13,
+       "count": 30000
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

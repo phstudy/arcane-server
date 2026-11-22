@@ -1,0 +1,719 @@
+{
+ "enemy_health": [
+  {
+   "unit": 1654482397986609,
+   "level": 45,
+   "rarity": 5,
+   "gear_tier": 4,
+   "health": 4200
+  }
+ ],
+ "event_group": {
+  "contentId": "2020022000000001",
+  "name": "EVENT_202002_LIONKING_META_NAME",
+  "description": "EVENT_202002_LIONKING_META_DESC",
+  "image": "icons_scheduled_events_event_lionking/lion_king_event_meta",
+  "sortOrder": "24",
+  "showcaseItems": [
+   "8386605835156191",
+   "2377697932661433",
+   "2745372405287393",
+   "8961556275913879"
+  ],
+  "marqueeImage": "icons_scheduled_events_event_lionking/event_portal_lionking_scar",
+  "hasPlayerActivated": true,
+  "frameColor": {
+   "a": 1.0
+  },
+  "panelColor": {
+   "a": 1.0
+  },
+  "portalName": "EVENT_202002_Lionking_PORTAL_NAME",
+  "portalDesc": "EVENT_202002_Lionking_PORTAL_DESC"
+ },
+ "rotation": {
+  "lane": "story",
+  "after": 6725109604398782
+ },
+ "mail": {
+  "preview": [
+   "EVENT_202002_LIONKING_INBOX_PREVIEW_SUBJECT",
+   "EVENT_202002_LIONKING_INBOX_PREVIEW_BODY"
+  ],
+  "start": [
+   "EVENT_202002_LIONKING_INBOX_A_SUBJECT",
+   "EVENT_202002_LIONKING_INBOX_A_BODY"
+  ],
+  "last_chance": [
+   "EVENT_202002_LIONKING_INBOX_C_SUBJECT",
+   "EVENT_202002_LIONKING_INBOX_C_BODY"
+  ]
+ },
+ "script_minions": [
+  {
+   "id": 1654482397986609,
+   "asset": "unit_hyena_bone_skull/u_hyena_bone_skull",
+   "name_key": "HYENA_BONE_SKULL_UNIT_NAME",
+   "icon": "icons_units_hyena_bone_skull/portrait_hyena_bone_skull",
+   "range": 1.0
+  }
+ ],
+ "events": [
+  {
+   "key_prefix": "EVENT_202002_LIONKING_A",
+   "tier_keys": {
+    "name": "{prefix}_TIER_{i}_NAME",
+    "description": "{prefix}_AURA_DESC",
+    "recommended": "{prefix}_RECOMMENDED_TIER_{i}"
+   },
+   "event": {
+    "contentId": "7183181787773297",
+    "name": "EVENT_202002_LIONKING_A_NAME",
+    "description": "EVENT_202002_LIONKING_A_DESC",
+    "image": "icons_scheduled_events_event_lionking/lionking_event_cover_1",
+    "sortOrder": "100",
+    "battleLimit": "3",
+    "battleLimitRefreshCost": [
+     {
+      "itemId": "31",
+      "count": "150"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "600"
+     },
+     {
+      "itemId": "31",
+      "count": "900"
+     }
+    ],
+    "marqueeImage": "icons_scheduled_events_event_lionking/event_portal_lionking_scar",
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "allowInstantBattle": true,
+    "showcaseItems": [
+     "8386605835156191"
+    ],
+    "eventGroupId": "2020022000000001"
+   },
+   "roster": {
+    "minions": [
+     8992628868600459,
+     8504390825460539
+    ]
+   },
+   "mutators": [
+    8463367197359625
+   ],
+   "tiers": [
+    {
+     "restriction": 1924597047035865,
+     "rewards": [
+      {
+       "id": 8386605835156191,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 8386605835156191,
+       "min": 1,
+       "max": 1
+      },
+      {
+       "id": 13,
+       "count": 2500
+      },
+      {
+       "id": 26,
+       "count": 100
+      }
+     ]
+    },
+    {
+     "restriction": 2520538165465132,
+     "rewards": [
+      {
+       "id": 8386605835156191,
+       "count": 2,
+       "first_time": true
+      },
+      {
+       "id": 8386605835156191,
+       "min": 1,
+       "max": 2
+      },
+      {
+       "id": 13,
+       "count": 5000
+      },
+      {
+       "id": 26,
+       "count": 200
+      }
+     ]
+    },
+    {
+     "restriction": 564269364860730,
+     "rewards": [
+      {
+       "id": 8386605835156191,
+       "count": 3,
+       "first_time": true
+      },
+      {
+       "id": 8386605835156191,
+       "min": 1,
+       "max": 3
+      },
+      {
+       "id": 13,
+       "count": 7500
+      },
+      {
+       "id": 26,
+       "count": 300
+      }
+     ]
+    },
+    {
+     "restriction": 5152019385848349,
+     "rewards": [
+      {
+       "id": 8386605835156191,
+       "count": 4,
+       "first_time": true
+      },
+      {
+       "id": 8386605835156191,
+       "min": 1,
+       "max": 4
+      },
+      {
+       "id": 13,
+       "count": 10000
+      },
+      {
+       "id": 26,
+       "count": 400
+      }
+     ]
+    },
+    {
+     "restriction": 300798546196903,
+     "rewards": [
+      {
+       "id": 8386605835156191,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 8386605835156191,
+       "min": 1,
+       "max": 5
+      },
+      {
+       "id": 13,
+       "count": 15000
+      },
+      {
+       "id": 26,
+       "count": 500
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key_prefix": "EVENT_202002_LIONKING_B",
+   "tier_keys": {
+    "name": "{prefix}_TIER_{i}_NAME",
+    "description": "{prefix}_AURA_DESC",
+    "recommended": "{prefix}_RECOMMENDED_TIER_{i}"
+   },
+   "event": {
+    "contentId": "2941832011120001",
+    "name": "EVENT_202002_LIONKING_B_NAME",
+    "description": "EVENT_202002_LIONKING_B_DESC",
+    "image": "icons_scheduled_events_event_lionking/lionking_event_cover_2",
+    "sortOrder": "200",
+    "battleLimit": "3",
+    "battleLimitRefreshCost": [
+     {
+      "itemId": "31",
+      "count": "150"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "600"
+     },
+     {
+      "itemId": "31",
+      "count": "900"
+     }
+    ],
+    "marqueeImage": "icons_scheduled_events_event_lionking/event_portal_lionking_scar",
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "allowInstantBattle": true,
+    "hudCurrency": "6880267225955015",
+    "showcaseItems": [
+     "2377697932661433",
+     "6880267225955015"
+    ],
+    "eventGroupId": "2020022000000001"
+   },
+   "roster": {
+    "bosses": [
+     1654482397986609
+    ],
+    "minions": [
+     8992628868600459,
+     8504390825460539
+    ]
+   },
+   "mutators": [
+    8655131533489664
+   ],
+   "tiers": [
+    {
+     "restriction": 246372474885118,
+     "persistent": {
+      "id": 2377697932661433,
+      "min": 1,
+      "max": 1,
+      "goal": 25
+     },
+     "rewards": [
+      {
+       "id": 2377697932661433,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 6880267225955015,
+       "count": 1000
+      },
+      {
+       "id": 13,
+       "count": 2500
+      },
+      {
+       "id": 26,
+       "count": 100
+      }
+     ]
+    },
+    {
+     "restriction": 7909108957302104,
+     "persistent": {
+      "id": 2377697932661433,
+      "min": 1,
+      "max": 2,
+      "goal": 35
+     },
+     "rewards": [
+      {
+       "id": 2377697932661433,
+       "count": 2,
+       "first_time": true
+      },
+      {
+       "id": 6880267225955015,
+       "count": 1000
+      },
+      {
+       "id": 13,
+       "count": 5000
+      },
+      {
+       "id": 26,
+       "count": 200
+      }
+     ]
+    },
+    {
+     "restriction": 5553098400788618,
+     "persistent": {
+      "id": 2377697932661433,
+      "min": 1,
+      "max": 3,
+      "goal": 55
+     },
+     "rewards": [
+      {
+       "id": 2377697932661433,
+       "count": 3,
+       "first_time": true
+      },
+      {
+       "id": 6880267225955015,
+       "count": 1000
+      },
+      {
+       "id": 13,
+       "count": 7500
+      },
+      {
+       "id": 26,
+       "count": 300
+      }
+     ]
+    },
+    {
+     "restriction": 6816647687626848,
+     "persistent": {
+      "id": 2377697932661433,
+      "min": 1,
+      "max": 4,
+      "goal": 75
+     },
+     "rewards": [
+      {
+       "id": 2377697932661433,
+       "count": 4,
+       "first_time": true
+      },
+      {
+       "id": 6880267225955015,
+       "count": 2000
+      },
+      {
+       "id": 13,
+       "count": 10000
+      },
+      {
+       "id": 26,
+       "count": 400
+      }
+     ]
+    },
+    {
+     "restriction": 6653578295473476,
+     "persistent": {
+      "id": 2377697932661433,
+      "min": 1,
+      "max": 5,
+      "goal": 140
+     },
+     "rewards": [
+      {
+       "id": 2377697932661433,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 6880267225955015,
+       "count": 2000
+      },
+      {
+       "id": 13,
+       "count": 15000
+      },
+      {
+       "id": 26,
+       "count": 500
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key_prefix": "EVENT_202002_LIONKING_C",
+   "tier_keys": {
+    "name": "{prefix}_TIER_{i}_NAME",
+    "description": "{prefix}_AURA_DESC",
+    "recommended": "{prefix}_RECOMMENDED_TIER_{i}"
+   },
+   "event": {
+    "contentId": "4114142567709716",
+    "name": "EVENT_202002_LIONKING_C_NAME",
+    "description": "EVENT_202002_LIONKING_C_DESC",
+    "image": "icons_scheduled_events_event_lionking/lionking_event_cover_3",
+    "sortOrder": "300",
+    "battleLimit": "3",
+    "battleLimitRefreshCost": [
+     {
+      "itemId": "31",
+      "count": "150"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "600"
+     },
+     {
+      "itemId": "31",
+      "count": "900"
+     }
+    ],
+    "marqueeImage": "icons_scheduled_events_event_lionking/event_portal_lionking_scar",
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "allowInstantBattle": true,
+    "hudCurrency": "6880267225955015",
+    "showcaseItems": [
+     "2745372405287393",
+     "8961556275913879",
+     "6880267225955015"
+    ],
+    "eventGroupId": "2020022000000001"
+   },
+   "roster": {
+    "bosses": [
+     3043900226130490
+    ],
+    "minions": [
+     8992628868600459,
+     8504390825460539
+    ]
+   },
+   "mutators": [
+    8489846710719105
+   ],
+   "tiers": [
+    {
+     "restriction": 3708770736169657,
+     "persistent": {
+      "id": 6880267225955015,
+      "min": 5000,
+      "max": 5000,
+      "goal": 40000
+     },
+     "rewards": [
+      {
+       "id": 2745372405287393,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 8961556275913879,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 5000
+      },
+      {
+       "id": 26,
+       "count": 500
+      }
+     ]
+    },
+    {
+     "restriction": 5998683443061232,
+     "persistent": {
+      "id": 6880267225955015,
+      "min": 5000,
+      "max": 5000,
+      "goal": 40000
+     },
+     "rewards": [
+      {
+       "id": 2745372405287393,
+       "count": 2,
+       "first_time": true
+      },
+      {
+       "id": 8961556275913879,
+       "count": 10,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 10000
+      },
+      {
+       "id": 26,
+       "count": 1000
+      }
+     ]
+    },
+    {
+     "restriction": 5104918747193683,
+     "persistent": {
+      "id": 6880267225955015,
+      "min": 5000,
+      "max": 5000,
+      "goal": 60000
+     },
+     "rewards": [
+      {
+       "id": 2745372405287393,
+       "count": 3,
+       "first_time": true
+      },
+      {
+       "id": 8961556275913879,
+       "count": 15,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 15000
+      },
+      {
+       "id": 26,
+       "count": 1500
+      }
+     ]
+    },
+    {
+     "restriction": 5711859547148670,
+     "persistent": {
+      "id": 6880267225955015,
+      "min": 5000,
+      "max": 5000,
+      "goal": 60000
+     },
+     "rewards": [
+      {
+       "id": 2745372405287393,
+       "count": 4,
+       "first_time": true
+      },
+      {
+       "id": 8961556275913879,
+       "count": 20,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 20000
+      },
+      {
+       "id": 26,
+       "count": 2000
+      }
+     ]
+    },
+    {
+     "restriction": 8667943391858307,
+     "persistent": {
+      "id": 6880267225955015,
+      "min": 5000,
+      "max": 5000,
+      "goal": 160000
+     },
+     "rewards": [
+      {
+       "id": 5201041874232757,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 2745372405287393,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 8961556275913879,
+       "count": 25,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 25000
+      },
+      {
+       "id": 26,
+       "count": 2500
+      }
+     ]
+    },
+    {
+     "restriction": 5623493436679120,
+     "persistent": {
+      "id": 6880267225955015,
+      "min": 5000,
+      "max": 5000,
+      "goal": 100000
+     },
+     "rewards": [
+      {
+       "id": 2745372405287393,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 8961556275913879,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 30000
+      },
+      {
+       "id": 26,
+       "count": 2500
+      }
+     ]
+    },
+    {
+     "restriction": 7666098186858187,
+     "persistent": {
+      "id": 6880267225955015,
+      "min": 5000,
+      "max": 5000,
+      "goal": 100000
+     },
+     "rewards": [
+      {
+       "id": 6348096150476614,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 2745372405287393,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 8961556275913879,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 35000
+      },
+      {
+       "id": 26,
+       "count": 2500
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

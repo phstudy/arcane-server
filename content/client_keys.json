@@ -1,0 +1,18 @@
+{
+ "club_war_princess_category": "UNIT_CATEGORY_DISNEY_PRINCESS",
+ "anniversary_expedition_name": "BONUS_LOOT_CLUBEXPEDITION_DSA_ANNIVERSARY_NAME",
+ "anniversary_expedition_desc": "BONUS_LOOT_CLUBEXPEDITION_DSA_ANNIVERSARY_DESC",
+ "anniversary_character_pack_name": "STORE_ITEM_DSAANNIVERSARY_CHARACTERPACK_NAME",
+ "anniversary_character_pack_subtitle": "STORE_ITEM_DSAANNIVERSARY_CHARACTERPACK_SUBTITLE",
+ "anniversary_character_pack_art": "store_chest_2x_dsa_anniversary_third/chest_2x_dsa_anniversary_third",
+ "anniversary_vanity_pack_name": "STORE_ITEM_DSAANNIVERSARY_VANITYPACK_NAME",
+ "anniversary_vanity_pack_subtitle": "STORE_ITEM_DSAANNIVERSARY_VANITYPACK_SUBTITLE",
+ "anniversary_vanity_pack_art": "store_chest_1x_dsa_anniversary_third/chest_1x_dsa_anniversary_third",
+ "pvp_park_inbox": "PVP_DISNEYWORLD_INBOX",
+ "anniversary_calendar_art": "store_char_2x_aladdin_dsa/char_2x_aladdin_dsa",
+ "anniversary_flash_gift_subject": "INBOX_EVENT_202403_DSA_ANNIVERSARY_FLASHGIFT_SUBJECT",
+ "anniversary_flash_gift_body": "INBOX_EVENT_202403_DSA_ANNIVERSARY_FLASHGIFT_BODY",
+ "arena_hades_name": "OUTFIT_HADES_DSA_UNIT_NAME",
+ "arena_mickey_name": "SORCERERSARENAMICKEY_UNIT_NAME",
+ "arena_hades_asset": "unit_hades_dsa/u_hades_dsa"
+}

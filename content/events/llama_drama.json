@@ -1,0 +1,1240 @@
+{
+ "event_group": {
+  "contentId": "2022021700000001",
+  "name": "EVENT_202201_EMPERORS_NEW_GROOVE_META_NAME",
+  "description": "EVENT_202201_EMPERORS_NEW_GROOVE_META_DESC",
+  "image": "icons_scheduled_events_event_emperors_new_groove/emperors_new_groove_event_meta",
+  "sortOrder": "34",
+  "showcaseItems": [
+   "1134106994859930",
+   "4039763538979813",
+   "1965262457585022"
+  ],
+  "marqueeImage": "icons_scheduled_events_event_emperors_new_groove/event_portal_kuzco",
+  "hasPlayerActivated": true,
+  "frameColor": {
+   "a": 1.0
+  },
+  "panelColor": {
+   "a": 1.0
+  },
+  "portalName": "EVENT_202201_EMPERORS_NEW_GROOVE_PORTAL_NAME",
+  "portalDesc": "EVENT_202201_EMPERORS_NEW_GROOVE_PORTAL_DESC"
+ },
+ "rotation": {
+  "lane": "story",
+  "after": 2021021100000001
+ },
+ "mail": {
+  "preview": [
+   "INBOX_EVENT_2022_EMPERORS_NEW_GROOVE_PREVIEW_SUBJECT",
+   "INBOX_EVENT_2022_EMPERORS_NEW_GROOVE_PREVIEW_BODY"
+  ],
+  "start": [
+   "INBOX_EVENT_2022_EMPERORS_NEW_GROOVE_ACTIVE_SUBJECT",
+   "INBOX_EVENT_2022_EMPERORS_NEW_GROOVE_ACTIVE_BODY"
+  ],
+  "last_chance": [
+   "INBOX_EVENT_2022_EMPERORS_NEW_GROOVE_LAST_CHANCE_SUBJECT",
+   "INBOX_EVENT_2022_EMPERORS_NEW_GROOVE_LAST_CHANCE_BODY"
+  ]
+ },
+ "events": [
+  {
+   "key_prefix": "EVENT_202201_EMPERORS_NEW_GROOVE_A",
+   "tier_keys": {
+    "name": "{prefix}_L{i}_NAME",
+    "description": "EVENT_202201_EMPERORS_NEW_GROOVE_A_L0_DESC",
+    "recommended": "{prefix}_L{i}_RECOMMENDED"
+   },
+   "event": {
+    "contentId": "2022021700000002",
+    "name": "EVENT_202201_EMPERORS_NEW_GROOVE_A_NAME",
+    "description": "EVENT_202201_EMPERORS_NEW_GROOVE_META_DESC",
+    "image": "icons_scheduled_events_event_emperors_new_groove/event_cover_yzma_kronk",
+    "sortOrder": "100",
+    "battleLimit": "3",
+    "battleLimitRefreshCost": [
+     {
+      "itemId": "31",
+      "count": "150"
+     },
+     {
+      "itemId": "31",
+      "count": "250"
+     },
+     {
+      "itemId": "31",
+      "count": "350"
+     },
+     {
+      "itemId": "31",
+      "count": "450"
+     },
+     {
+      "itemId": "31",
+      "count": "550"
+     },
+     {
+      "itemId": "31",
+      "count": "650"
+     },
+     {
+      "itemId": "31",
+      "count": "750"
+     },
+     {
+      "itemId": "31",
+      "count": "850"
+     }
+    ],
+    "marqueeImage": "icons_scheduled_events_event_emperors_new_groove/event_portal_kuzco",
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "allowInstantBattle": true,
+    "hudCurrency": "502077971328857",
+    "showcaseItems": [
+     "502077971328857",
+     "5461757687019266"
+    ],
+    "eventGroupId": "2022021700000001"
+   },
+   "roster": {
+    "minions": [
+     6296512697122726,
+     8449478245108925
+    ]
+   },
+   "battle_environment": "env_emperors_new_groove/env_emperors_groove",
+   "intro_cinematic": "cin_intro_cinematic_emperors_new_groove_cut/intro_cinematic_emperors_new_groove_cut",
+   "tiers": [
+    {
+     "restriction": 3977982800649487,
+     "rewards": [
+      {
+       "id": 502077971328857,
+       "count": 1000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 3
+      },
+      {
+       "id": 2231922868182045,
+       "count": 3
+      },
+      {
+       "id": 1171951539086697,
+       "count": 3
+      },
+      {
+       "id": 13,
+       "count": 2000
+      }
+     ]
+    },
+    {
+     "restriction": 4915513113810573,
+     "rewards": [
+      {
+       "id": 502077971328857,
+       "count": 1500
+      },
+      {
+       "id": 5461757687019266,
+       "count": 4
+      },
+      {
+       "id": 2231922868182045,
+       "count": 4
+      },
+      {
+       "id": 1171951539086697,
+       "count": 4
+      },
+      {
+       "id": 13,
+       "count": 2500
+      }
+     ]
+    },
+    {
+     "restriction": 1410282200583110,
+     "rewards": [
+      {
+       "id": 502077971328857,
+       "count": 2000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 5
+      },
+      {
+       "id": 1171951539086697,
+       "count": 5
+      },
+      {
+       "id": 13,
+       "count": 3000
+      }
+     ]
+    },
+    {
+     "restriction": 1690920081330059,
+     "rewards": [
+      {
+       "id": 502077971328857,
+       "count": 2500
+      },
+      {
+       "id": 5461757687019266,
+       "count": 6
+      },
+      {
+       "id": 2231922868182045,
+       "count": 6
+      },
+      {
+       "id": 1171951539086697,
+       "count": 6
+      },
+      {
+       "id": 13,
+       "count": 3000
+      }
+     ]
+    },
+    {
+     "restriction": 1697494461938290,
+     "rewards": [
+      {
+       "id": 502077971328857,
+       "count": 3000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 7
+      },
+      {
+       "id": 2231922868182045,
+       "count": 7
+      },
+      {
+       "id": 1171951539086697,
+       "count": 7
+      },
+      {
+       "id": 13,
+       "count": 4000
+      }
+     ]
+    },
+    {
+     "restriction": 5816808701299058,
+     "rewards": [
+      {
+       "id": 502077971328857,
+       "count": 3500
+      },
+      {
+       "id": 5461757687019266,
+       "count": 8
+      },
+      {
+       "id": 2231922868182045,
+       "count": 8
+      },
+      {
+       "id": 1171951539086697,
+       "count": 8
+      },
+      {
+       "id": 13,
+       "count": 4500
+      }
+     ]
+    },
+    {
+     "restriction": 2212275142466009,
+     "rewards": [
+      {
+       "id": 502077971328857,
+       "count": 4000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 9
+      },
+      {
+       "id": 2231922868182045,
+       "count": 9
+      },
+      {
+       "id": 1171951539086697,
+       "count": 9
+      },
+      {
+       "id": 13,
+       "count": 5000
+      }
+     ]
+    },
+    {
+     "restriction": 2789111153402814,
+     "rewards": [
+      {
+       "id": 502077971328857,
+       "count": 4500
+      },
+      {
+       "id": 5461757687019266,
+       "count": 10
+      },
+      {
+       "id": 2231922868182045,
+       "count": 10
+      },
+      {
+       "id": 1171951539086697,
+       "count": 10
+      },
+      {
+       "id": 13,
+       "count": 6000
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key_prefix": "EVENT_202201_EMPERORS_NEW_GROOVE_B",
+   "tier_keys": {
+    "name": "{prefix}_L{i}_NAME",
+    "description": "EVENT_202201_EMPERORS_NEW_GROOVE_A_L0_DESC",
+    "recommended": "{prefix}_L{i}_RECOMMENDED"
+   },
+   "event": {
+    "contentId": "2022021700000003",
+    "name": "EVENT_202201_EMPERORS_NEW_GROOVE_B_NAME",
+    "description": "EVENT_202201_EMPERORS_NEW_GROOVE_META_DESC",
+    "image": "icons_scheduled_events_event_emperors_new_groove/event_cover_pacha",
+    "sortOrder": "200",
+    "battleLimit": "3",
+    "battleLimitRefreshCost": [
+     {
+      "itemId": "31",
+      "count": "150"
+     },
+     {
+      "itemId": "31",
+      "count": "250"
+     },
+     {
+      "itemId": "31",
+      "count": "350"
+     },
+     {
+      "itemId": "31",
+      "count": "450"
+     },
+     {
+      "itemId": "31",
+      "count": "550"
+     },
+     {
+      "itemId": "31",
+      "count": "650"
+     },
+     {
+      "itemId": "31",
+      "count": "750"
+     },
+     {
+      "itemId": "31",
+      "count": "850"
+     }
+    ],
+    "marqueeImage": "icons_scheduled_events_event_emperors_new_groove/event_portal_kuzco",
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "allowInstantBattle": true,
+    "hudCurrency": "502077971328857",
+    "showcaseItems": [
+     "1134106994859930",
+     "2289339325233397",
+     "4369788399977460"
+    ],
+    "eventGroupId": "2022021700000001"
+   },
+   "roster": {
+    "bosses": [
+     3701688237111193
+    ],
+    "minions": [
+     6296512697122726,
+     8449478245108925
+    ]
+   },
+   "battle_environment": "env_emperors_new_groove/env_emperors_groove",
+   "intro_cinematic": "cin_intro_cinematic_emperors_new_groove_cut/intro_cinematic_emperors_new_groove_cut",
+   "tiers": [
+    {
+     "restriction": 8636132536840264,
+     "entry_cost": {
+      "id": 502077971328857,
+      "count": 5625
+     },
+     "rewards": [
+      {
+       "id": 1134106994859930,
+       "count": 1
+      },
+      {
+       "id": 5461757687019266,
+       "count": 4
+      },
+      {
+       "id": 2231922868182045,
+       "count": 4
+      },
+      {
+       "id": 1171951539086697,
+       "count": 4
+      },
+      {
+       "id": 13,
+       "count": 2500
+      }
+     ]
+    },
+    {
+     "restriction": 2127338137390181,
+     "entry_cost": {
+      "id": 502077971328857,
+      "count": 7500
+     },
+     "rewards": [
+      {
+       "id": 1134106994859930,
+       "count": 2
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 5
+      },
+      {
+       "id": 1171951539086697,
+       "count": 5
+      },
+      {
+       "id": 7531001555655815,
+       "count": 1
+      },
+      {
+       "id": 1912819287917109,
+       "count": 1
+      },
+      {
+       "id": 13,
+       "count": 3000
+      }
+     ]
+    },
+    {
+     "restriction": 4479478485438677,
+     "entry_cost": {
+      "id": 502077971328857,
+      "count": 9375
+     },
+     "rewards": [
+      {
+       "id": 1134106994859930,
+       "count": 3
+      },
+      {
+       "id": 5461757687019266,
+       "count": 6
+      },
+      {
+       "id": 2231922868182045,
+       "count": 6
+      },
+      {
+       "id": 1171951539086697,
+       "count": 6
+      },
+      {
+       "id": 7531001555655815,
+       "count": 2
+      },
+      {
+       "id": 1912819287917109,
+       "count": 2
+      },
+      {
+       "id": 13,
+       "count": 3000
+      }
+     ]
+    },
+    {
+     "restriction": 2998929952101496,
+     "entry_cost": {
+      "id": 502077971328857,
+      "count": 11250
+     },
+     "rewards": [
+      {
+       "id": 1134106994859930,
+       "count": 4
+      },
+      {
+       "id": 5461757687019266,
+       "count": 7
+      },
+      {
+       "id": 2231922868182045,
+       "count": 7
+      },
+      {
+       "id": 1171951539086697,
+       "count": 7
+      },
+      {
+       "id": 7531001555655815,
+       "count": 3
+      },
+      {
+       "id": 1912819287917109,
+       "count": 3
+      },
+      {
+       "id": 13,
+       "count": 4000
+      }
+     ]
+    },
+    {
+     "restriction": 616558855337690,
+     "entry_cost": {
+      "id": 502077971328857,
+      "count": 13125
+     },
+     "rewards": [
+      {
+       "id": 1134106994859930,
+       "count": 5
+      },
+      {
+       "id": 2289339325233397,
+       "count": 2
+      },
+      {
+       "id": 5461757687019266,
+       "count": 8
+      },
+      {
+       "id": 2231922868182045,
+       "count": 8
+      },
+      {
+       "id": 1171951539086697,
+       "count": 8
+      },
+      {
+       "id": 7531001555655815,
+       "count": 3
+      },
+      {
+       "id": 1912819287917109,
+       "count": 3
+      },
+      {
+       "id": 4369788399977460,
+       "count": 1
+      },
+      {
+       "id": 13,
+       "count": 4500
+      }
+     ]
+    },
+    {
+     "restriction": 6528321450591766,
+     "entry_cost": {
+      "id": 502077971328857,
+      "count": 15000
+     },
+     "rewards": [
+      {
+       "id": 1134106994859930,
+       "count": 6
+      },
+      {
+       "id": 2289339325233397,
+       "count": 3
+      },
+      {
+       "id": 5461757687019266,
+       "count": 9
+      },
+      {
+       "id": 2231922868182045,
+       "count": 9
+      },
+      {
+       "id": 1171951539086697,
+       "count": 9
+      },
+      {
+       "id": 7531001555655815,
+       "count": 4
+      },
+      {
+       "id": 1912819287917109,
+       "count": 4
+      },
+      {
+       "id": 4369788399977460,
+       "count": 2
+      },
+      {
+       "id": 13,
+       "count": 5000
+      }
+     ]
+    },
+    {
+     "restriction": 8959549756665438,
+     "entry_cost": {
+      "id": 502077971328857,
+      "count": 16875
+     },
+     "rewards": [
+      {
+       "id": 1134106994859930,
+       "count": 7
+      },
+      {
+       "id": 2289339325233397,
+       "count": 4
+      },
+      {
+       "id": 5461757687019266,
+       "count": 10
+      },
+      {
+       "id": 2231922868182045,
+       "count": 10
+      },
+      {
+       "id": 1171951539086697,
+       "count": 10
+      },
+      {
+       "id": 7531001555655815,
+       "count": 5
+      },
+      {
+       "id": 1912819287917109,
+       "count": 5
+      },
+      {
+       "id": 4369788399977460,
+       "count": 3
+      },
+      {
+       "id": 13,
+       "count": 6000
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key_prefix": "EVENT_202201_EMPERORS_NEW_GROOVE_C",
+   "tier_keys": {
+    "name": "{prefix}_L{i}_NAME",
+    "description": "EVENT_202201_EMPERORS_NEW_GROOVE_A_L0_DESC",
+    "recommended": "{prefix}_L{i}_RECOMMENDED"
+   },
+   "event": {
+    "contentId": "2022021700000004",
+    "name": "EVENT_202201_EMPERORS_NEW_GROOVE_C_NAME",
+    "description": "EVENT_202201_EMPERORS_NEW_GROOVE_META_DESC",
+    "image": "icons_scheduled_events_event_emperors_new_groove/event_cover_kuzco",
+    "sortOrder": "300",
+    "battleLimit": "3",
+    "battleLimitRefreshCost": [
+     {
+      "itemId": "31",
+      "count": "150"
+     },
+     {
+      "itemId": "31",
+      "count": "250"
+     },
+     {
+      "itemId": "31",
+      "count": "350"
+     },
+     {
+      "itemId": "31",
+      "count": "450"
+     },
+     {
+      "itemId": "31",
+      "count": "550"
+     },
+     {
+      "itemId": "31",
+      "count": "650"
+     },
+     {
+      "itemId": "31",
+      "count": "750"
+     },
+     {
+      "itemId": "31",
+      "count": "850"
+     }
+    ],
+    "marqueeImage": "icons_scheduled_events_event_emperors_new_groove/event_portal_kuzco",
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "allowInstantBattle": true,
+    "hudCurrency": "502077971328857",
+    "showcaseItems": [
+     "4039763538979813",
+     "1965262457585022",
+     "2289339325233397",
+     "4369788399977460"
+    ],
+    "eventGroupId": "2022021700000001"
+   },
+   "roster": {
+    "bosses": [
+     1444933650315085
+    ],
+    "minions": [
+     6296512697122726,
+     8449478245108925
+    ]
+   },
+   "battle_environment": "env_emperors_new_groove/env_emperors_groove",
+   "intro_cinematic": "cin_intro_cinematic_emperors_new_groove_cut/intro_cinematic_emperors_new_groove_cut",
+   "tiers": [
+    {
+     "restriction": 8457868343326076,
+     "entry_cost": {
+      "id": 502077971328857,
+      "count": 6750
+     },
+     "rewards": [
+      {
+       "id": 4039763538979813,
+       "count": 1
+      },
+      {
+       "id": 5461757687019266,
+       "count": 4
+      },
+      {
+       "id": 2231922868182045,
+       "count": 4
+      },
+      {
+       "id": 1171951539086697,
+       "count": 4
+      },
+      {
+       "id": 13,
+       "count": 5000
+      }
+     ]
+    },
+    {
+     "restriction": 6471809132907680,
+     "entry_cost": {
+      "id": 502077971328857,
+      "count": 9000
+     },
+     "rewards": [
+      {
+       "id": 4039763538979813,
+       "count": 2
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 5
+      },
+      {
+       "id": 1171951539086697,
+       "count": 5
+      },
+      {
+       "id": 7531001555655815,
+       "count": 1
+      },
+      {
+       "id": 1912819287917109,
+       "count": 1
+      },
+      {
+       "id": 13,
+       "count": 5000
+      }
+     ]
+    },
+    {
+     "restriction": 3694246059878667,
+     "entry_cost": {
+      "id": 502077971328857,
+      "count": 11250
+     },
+     "rewards": [
+      {
+       "id": 4039763538979813,
+       "count": 3
+      },
+      {
+       "id": 5461757687019266,
+       "count": 6
+      },
+      {
+       "id": 2231922868182045,
+       "count": 6
+      },
+      {
+       "id": 1171951539086697,
+       "count": 6
+      },
+      {
+       "id": 7531001555655815,
+       "count": 2
+      },
+      {
+       "id": 1912819287917109,
+       "count": 2
+      },
+      {
+       "id": 13,
+       "count": 6000
+      }
+     ]
+    },
+    {
+     "restriction": 4670619972870300,
+     "entry_cost": {
+      "id": 502077971328857,
+      "count": 13500
+     },
+     "rewards": [
+      {
+       "id": 4039763538979813,
+       "count": 4
+      },
+      {
+       "id": 5461757687019266,
+       "count": 7
+      },
+      {
+       "id": 2231922868182045,
+       "count": 7
+      },
+      {
+       "id": 1171951539086697,
+       "count": 7
+      },
+      {
+       "id": 7531001555655815,
+       "count": 3
+      },
+      {
+       "id": 1912819287917109,
+       "count": 3
+      },
+      {
+       "id": 13,
+       "count": 6500
+      }
+     ]
+    },
+    {
+     "restriction": 7977853654894793,
+     "entry_cost": {
+      "id": 502077971328857,
+      "count": 15750
+     },
+     "rewards": [
+      {
+       "id": 4039763538979813,
+       "count": 5
+      },
+      {
+       "id": 2289339325233397,
+       "count": 2
+      },
+      {
+       "id": 5461757687019266,
+       "count": 8
+      },
+      {
+       "id": 2231922868182045,
+       "count": 8
+      },
+      {
+       "id": 1171951539086697,
+       "count": 8
+      },
+      {
+       "id": 7531001555655815,
+       "count": 3
+      },
+      {
+       "id": 1912819287917109,
+       "count": 3
+      },
+      {
+       "id": 4369788399977460,
+       "count": 1
+      },
+      {
+       "id": 13,
+       "count": 7000
+      }
+     ]
+    },
+    {
+     "restriction": 918741272819815,
+     "entry_cost": {
+      "id": 502077971328857,
+      "count": 18000
+     },
+     "rewards": [
+      {
+       "id": 4039763538979813,
+       "count": 6
+      },
+      {
+       "id": 2289339325233397,
+       "count": 3
+      },
+      {
+       "id": 5461757687019266,
+       "count": 9
+      },
+      {
+       "id": 2231922868182045,
+       "count": 9
+      },
+      {
+       "id": 1171951539086697,
+       "count": 9
+      },
+      {
+       "id": 7531001555655815,
+       "count": 4
+      },
+      {
+       "id": 1912819287917109,
+       "count": 4
+      },
+      {
+       "id": 4369788399977460,
+       "count": 2
+      },
+      {
+       "id": 13,
+       "count": 7500
+      }
+     ]
+    },
+    {
+     "restriction": 2020866115363172,
+     "entry_cost": {
+      "id": 502077971328857,
+      "count": 20250
+     },
+     "rewards": [
+      {
+       "id": 1965262457585022,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 4039763538979813,
+       "count": 7
+      },
+      {
+       "id": 2289339325233397,
+       "count": 4
+      },
+      {
+       "id": 5461757687019266,
+       "count": 10
+      },
+      {
+       "id": 2231922868182045,
+       "count": 10
+      },
+      {
+       "id": 1171951539086697,
+       "count": 10
+      },
+      {
+       "id": 7531001555655815,
+       "count": 5
+      },
+      {
+       "id": 1912819287917109,
+       "count": 5
+      },
+      {
+       "id": 4369788399977460,
+       "count": 3
+      },
+      {
+       "id": 13,
+       "count": 10000
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key_prefix": "EVENT_202201_EMPERORS_NEW_GROOVE_D",
+   "tier_keys": {
+    "name": "{prefix}_L{i}_NAME",
+    "description": "EVENT_202201_EMPERORS_NEW_GROOVE_A_L0_DESC",
+    "recommended": "EVENT_202012_SENSATIONALSIX_2_B_L{i}_RECOMMENDED"
+   },
+   "event": {
+    "contentId": "2022021700000005",
+    "name": "EVENT_202201_EMPERORS_NEW_GROOVE_D_NAME",
+    "description": "EVENT_202201_EMPERORS_NEW_GROOVE_META_DESC",
+    "image": "icons_scheduled_events_event_emperors_new_groove/emperor_cover_prestige",
+    "sortOrder": "400",
+    "battleLimit": "2",
+    "battleLimitRefreshCost": [
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "400"
+     },
+     {
+      "itemId": "31",
+      "count": "500"
+     },
+     {
+      "itemId": "31",
+      "count": "600"
+     },
+     {
+      "itemId": "31",
+      "count": "700"
+     },
+     {
+      "itemId": "31",
+      "count": "800"
+     },
+     {
+      "itemId": "31",
+      "count": "900"
+     },
+     {
+      "itemId": "31",
+      "count": "1000"
+     }
+    ],
+    "marqueeImage": "icons_scheduled_events_event_emperors_new_groove/event_portal_kuzco",
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "allowInstantBattle": true,
+    "lifetimeProgressEvent": true,
+    "showcaseItems": [
+     "5554127934867117",
+     "3814210565101861",
+     "3883066061505188",
+     "6221535176831871"
+    ],
+    "eventGroupId": "2022021700000001"
+   },
+   "roster": {
+    "bosses": [
+     1444933650315085
+    ],
+    "minions": [
+     6296512697122726,
+     8449478245108925
+    ]
+   },
+   "battle_environment": "env_emperors_new_groove/env_emperors_groove",
+   "intro_cinematic": "cin_intro_cinematic_emperors_new_groove_cut/intro_cinematic_emperors_new_groove_cut",
+   "tiers": [
+    {
+     "restriction": 7631269198944231,
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 0
+     }
+    },
+    {
+     "restriction": 2909742991263173,
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 1
+     }
+    },
+    {
+     "restriction": 7389263911686558,
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 2
+     }
+    },
+    {
+     "restriction": 3707846699180597,
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 3
+     }
+    },
+    {
+     "restriction": 7827825501402391,
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 4
+     }
+    }
+   ]
+  }
+ ],
+ "waves": [
+  {
+   "event": 2022021700000002,
+   "tier": 0,
+   "name_key": "EVENT_202201_EMPERORS_NEW_GROOVE_A_L0_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 6296512697122726,
+       "count": 3
+      },
+      {
+       "id": 8449478245108925,
+       "count": 3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 2022021700000002,
+   "tier": 3,
+   "name_key": "EVENT_202201_EMPERORS_NEW_GROOVE_A_L3_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 6296512697122726,
+       "count": 3
+      },
+      {
+       "id": 8449478245108925,
+       "count": 3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 2022021700000003,
+   "tier": 0,
+   "name_key": "EVENT_202201_EMPERORS_NEW_GROOVE_B_L0_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 3701688237111193,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 6296512697122726,
+       "count": 3
+      },
+      {
+       "id": 8449478245108925,
+       "count": 3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 2022021700000004,
+   "tier": 4,
+   "name_key": "EVENT_202201_EMPERORS_NEW_GROOVE_C_L4_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 1444933650315085,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 6296512697122726,
+       "count": 3
+      },
+      {
+       "id": 8449478245108925,
+       "count": 3
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

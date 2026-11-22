@@ -1,0 +1,6396 @@
+{
+ "store": {
+  "tabs": [
+   {
+    "id": "5177587151438301",
+    "sort_order": "70",
+    "name_key": "STORE_TAB_NAME_PACKS",
+    "icon": "icons_store/store_tab_packs",
+    "item_size": "MEDIUM_STORE_ITEM_SIZE",
+    "items": [
+     {
+      "id": "514889844585508",
+      "name_key": "STORE_ITEM_TS2_CHEST_NAME",
+      "sticker_key": "Event_202002_ToyStory_META_NAME",
+      "main_image": "store_chest_2x_toystory/chest_2x_toystory",
+      "cost": {
+       "item_id": "8942600746390784",
+       "count": "10000"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "1604239164"
+      },
+      "box_back_asset": "store_chest_2x_toystory/chest_2x_toystory",
+      "item_counts": [
+       {
+        "item_id": "13",
+        "count_min": 500,
+        "count_max": 10000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "15",
+        "count_min": 1,
+        "count_max": 3,
+        "guaranteed": true
+       },
+       {
+        "item_id": "26",
+        "count_min": 150,
+        "count_max": 3000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "1534600534653696",
+        "count_min": 1,
+        "count_max": 3,
+        "guaranteed": true
+       },
+       {
+        "item_id": "1949330146132045",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "2836539702967744",
+        "count_min": 2,
+        "count_max": 2
+       },
+       {
+        "item_id": "3098169505142870",
+        "count_min": 2,
+        "count_max": 2
+       },
+       {
+        "item_id": "3179470540328821",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "5274591237803763",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "5461757687019266",
+        "count_min": 2,
+        "count_max": 2
+       },
+       {
+        "item_id": "5800404643593210",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "6291390382388483",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "6697522305622874",
+        "count_min": 1,
+        "count_max": 10,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6857113807824868",
+        "count_min": 2,
+        "count_max": 2
+       },
+       {
+        "item_id": "8331552497003191",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "8978118799990747",
+        "count_min": 1,
+        "count_max": 3,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604613599",
+      "highlighted_items": [
+       "8978118799990747",
+       "1534600534653696",
+       "6697522305622874"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      }
+     },
+     {
+      "id": "1079153480345678",
+      "name_key": "TS2_THE_CLAW_NAME",
+      "sticker_key": "STICKER_EVENT_EXCLUSIVE",
+      "main_image": "store_spell_2x_claw/spell_2x_claw",
+      "cost": {
+       "item_id": "31",
+       "count": "800"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_spell_2x_claw/spell_2x_claw",
+      "item_counts": [
+       {
+        "item_id": "248562853627691",
+        "count_min": 50,
+        "count_max": 50,
+        "guaranteed": true
+       },
+       {
+        "item_id": "5145963959784111",
+        "count_min": 10,
+        "count_max": 120,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604613599",
+      "highlighted_items": [
+       "5145963959784111",
+       "248562853627691"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      }
+     },
+     {
+      "id": "4016617742247675",
+      "name_key": "TS2_BUCKET_O_SOLDIERS_NAME",
+      "sticker_key": "STICKER_EVENT_EXCLUSIVE",
+      "main_image": "store_spell_2x_bucket_of_soldiers/spell_2x_bucket_of_soldiers",
+      "cost": {
+       "item_id": "31",
+       "count": "800"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_spell_2x_bucket_of_soldiers/spell_2x_bucket_of_soldiers",
+      "item_counts": [
+       {
+        "item_id": "248562853627691",
+        "count_min": 50,
+        "count_max": 50,
+        "guaranteed": true
+       },
+       {
+        "item_id": "7765921330468482",
+        "count_min": 10,
+        "count_max": 120,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604613599",
+      "highlighted_items": [
+       "7765921330468482",
+       "248562853627691"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      }
+     },
+     {
+      "id": "8262640416043762",
+      "name_key": "TS2_WILD_IMAGINATION_NAME",
+      "sticker_key": "STICKER_EVENT_EXCLUSIVE",
+      "main_image": "store_spell_2x_ducky_bunny/spell_2x_ducky_bunny",
+      "cost": {
+       "item_id": "31",
+       "count": "800"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_spell_2x_ducky_bunny/spell_2x_ducky_bunny",
+      "item_counts": [
+       {
+        "item_id": "248562853627691",
+        "count_min": 50,
+        "count_max": 50,
+        "guaranteed": true
+       },
+       {
+        "item_id": "1954928886370092",
+        "count_min": 10,
+        "count_max": 120,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604613599",
+      "highlighted_items": [
+       "1954928886370092",
+       "248562853627691"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      }
+     },
+     {
+      "id": "4657495418447063",
+      "name_key": "TS2_DUKE_CABOOM_NAME",
+      "sticker_key": "STICKER_EVENT_EXCLUSIVE",
+      "main_image": "store_spell_2x_duke_kaboom/spell_2x_duke_kaboom",
+      "cost": {
+       "item_id": "31",
+       "count": "800"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_spell_2x_duke_kaboom/spell_2x_duke_kaboom",
+      "item_counts": [
+       {
+        "item_id": "248562853627691",
+        "count_min": 50,
+        "count_max": 50,
+        "guaranteed": true
+       },
+       {
+        "item_id": "1950236319355823",
+        "count_min": 10,
+        "count_max": 120,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604613599",
+      "highlighted_items": [
+       "1950236319355823",
+       "248562853627691"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      }
+     },
+     {
+      "id": "8232976650250119",
+      "name_key": "BO_PEEP_UNIT_NAME",
+      "sticker_key": "STICKER_EVENT_EXCLUSIVE",
+      "main_image": "store_char_2x_bobeep/char_2x_bobeep",
+      "cost": {
+       "item_id": "31",
+       "count": "1200"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_char_2x_bobeep/char_2x_bobeep",
+      "item_counts": [
+       {
+        "item_id": "6697522305622874",
+        "count_min": 12,
+        "count_max": 330,
+        "guaranteed": true
+       },
+       {
+        "item_id": "8942600746390784",
+        "count_min": 2500,
+        "count_max": 2500,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604613599",
+      "highlighted_items": [
+       "6697522305622874",
+       "8942600746390784"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      }
+     },
+     {
+      "id": "3574673676349971",
+      "name_key": "BUZZLIGHTYEAR_UNIT_NAME",
+      "sticker_key": "Event_202002_ToyStory_META_NAME",
+      "main_image": "store_char_2x_buzz/char_2x_buzz",
+      "cost": {
+       "item_id": "31",
+       "count": "800"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_char_2x_buzz/char_2x_buzz",
+      "item_counts": [
+       {
+        "item_id": "15",
+        "count_min": 15,
+        "count_max": 330,
+        "guaranteed": true
+       },
+       {
+        "item_id": "8942600746390784",
+        "count_min": 2500,
+        "count_max": 2500,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604613599",
+      "highlighted_items": [
+       "15",
+       "8942600746390784"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      }
+     },
+     {
+      "id": "2136950262402037",
+      "name_key": "WOODY_UNIT_NAME",
+      "sticker_key": "Event_202002_ToyStory_META_NAME",
+      "main_image": "store_char_2x_woody/char_2x_woody",
+      "cost": {
+       "item_id": "31",
+       "count": "800"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_char_2x_woody/char_2x_woody",
+      "item_counts": [
+       {
+        "item_id": "8942600746390784",
+        "count_min": 2500,
+        "count_max": 2500,
+        "guaranteed": true
+       },
+       {
+        "item_id": "8978118799990747",
+        "count_min": 15,
+        "count_max": 330,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604613599",
+      "highlighted_items": [
+       "8978118799990747",
+       "8942600746390784"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      }
+     },
+     {
+      "id": "8018879544386081",
+      "name_key": "JESSIE_UNIT_NAME",
+      "sticker_key": "Event_202002_ToyStory_META_NAME",
+      "main_image": "store_char_2x_jessie/char_2x_jessie",
+      "cost": {
+       "item_id": "31",
+       "count": "800"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_char_2x_jessie/char_2x_jessie",
+      "item_counts": [
+       {
+        "item_id": "1534600534653696",
+        "count_min": 15,
+        "count_max": 330,
+        "guaranteed": true
+       },
+       {
+        "item_id": "8942600746390784",
+        "count_min": 2500,
+        "count_max": 2500,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604613599",
+      "highlighted_items": [
+       "1534600534653696",
+       "8942600746390784"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      }
+     },
+     {
+      "id": "5561133288055874",
+      "name_key": "CURRENCY_TOY_STORY_COIN_NAME",
+      "sticker_key": "Event_202002_ToyStory_META_NAME",
+      "main_image": "store_coins_2x_toystory/coins_2x_toystory",
+      "cost": {
+       "item_id": "31",
+       "count": "500"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816",
+       "purchase_data": [
+        {
+         "granularity": "DAY_PURCHASE_LIMIT_GRANULARITY",
+         "remaining_purchases": 1
+        }
+       ]
+      },
+      "subtitle_key": "STORE_ITEM_DAILY_DEAL_NAME",
+      "box_back_asset": "store_coins_2x_toystory/coins_2x_toystory",
+      "iap_product_id_ios": "com.glu.disneygame.special_offer_033_5",
+      "iap_product_id_android": "com.glu.disneygame.special_offer_033_5",
+      "item_counts": [
+       {
+        "item_id": "8942600746390784",
+        "count_min": 15000,
+        "count_max": 15000,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604613599",
+      "highlighted_items": [
+       "8942600746390784"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      }
+     },
+     {
+      "id": "8984053005318512",
+      "name_key": "CURRENCY_TOY_STORY_COIN_NAME",
+      "sticker_key": "Event_202002_ToyStory_META_NAME",
+      "main_image": "store_coins_2x_toystory/coins_2x_toystory",
+      "cost": {
+       "item_id": "31",
+       "count": "1000"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_coins_2x_toystory/coins_2x_toystory",
+      "iap_product_id_ios": "com.glu.disneygame.special_offer_043_10",
+      "iap_product_id_android": "com.glu.disneygame.special_offer_043_10",
+      "item_counts": [
+       {
+        "item_id": "8942600746390784",
+        "count_min": 20000,
+        "count_max": 20000,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604613599",
+      "highlighted_items": [
+       "8942600746390784"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      }
+     },
+     {
+      "id": "2833779762360370",
+      "name_key": "CURRENCY_TOY_STORY_COIN_NAME",
+      "sticker_key": "Event_202002_ToyStory_META_NAME",
+      "main_image": "store_coins_2x_toystory/coins_2x_toystory",
+      "cost": {
+       "item_id": "31",
+       "count": "2000"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_coins_2x_toystory/coins_2x_toystory",
+      "iap_product_id_ios": "com.glu.disneygame.special_offer_060_20",
+      "iap_product_id_android": "com.glu.disneygame.special_offer_060_20",
+      "item_counts": [
+       {
+        "item_id": "8942600746390784",
+        "count_min": 45000,
+        "count_max": 45000,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604613599",
+      "highlighted_items": [
+       "8942600746390784"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      }
+     },
+     {
+      "id": "7972703685929065",
+      "name_key": "CURRENCY_TOY_STORY_COIN_NAME",
+      "sticker_key": "Event_202002_ToyStory_META_NAME",
+      "main_image": "store_coins_2x_toystory/coins_2x_toystory",
+      "cost": {
+       "item_id": "31",
+       "count": "5000"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_coins_2x_toystory/coins_2x_toystory",
+      "iap_product_id_ios": "com.glu.disneygame.special_offer_066_50",
+      "iap_product_id_android": "com.glu.disneygame.special_offer_066_50",
+      "item_counts": [
+       {
+        "item_id": "8942600746390784",
+        "count_min": 120000,
+        "count_max": 120000,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604613599",
+      "highlighted_items": [
+       "8942600746390784"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      }
+     },
+     {
+      "id": "5044947192187728",
+      "name_key": "STORE_ITEM_F2_ANNA_PACK_NAME",
+      "sticker_key": "STORE_FROZEN_EVENT_STICKER",
+      "main_image": "store_char_2x_anna/char_2x_anna",
+      "cost": {
+       "item_id": "31",
+       "count": "800"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_char_2x_anna/char_2x_anna",
+      "item_counts": [
+       {
+        "item_id": "748231379358511",
+        "count_min": 8,
+        "count_max": 330,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604354399",
+      "highlighted_items": [
+       "748231379358511"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "vfx_asset": "store_po_store_medium_snowflakes_no_frame/PO_store_medium_snowflakes_no_frame"
+     },
+     {
+      "id": "2857976199848746",
+      "name_key": "STORE_ITEM_F2_OLAF_PACK_NAME",
+      "sticker_key": "STORE_FROZEN_EVENT_STICKER",
+      "main_image": "store_char_2x_olaf/char_2x_olaf",
+      "cost": {
+       "item_id": "31",
+       "count": "800"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_char_2x_olaf/char_2x_olaf",
+      "item_counts": [
+       {
+        "item_id": "6123716423516406",
+        "count_min": 8,
+        "count_max": 330,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604354399",
+      "highlighted_items": [
+       "6123716423516406"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "vfx_asset": "store_po_store_medium_snowflakes_no_frame/PO_store_medium_snowflakes_no_frame"
+     },
+     {
+      "id": "2217521114504680",
+      "name_key": "STORE_ITEM_F2_KRISTOFF_PACK_NAME",
+      "sticker_key": "STORE_FROZEN_EVENT_STICKER",
+      "main_image": "store_char_2x_kristoff/char_2x_kristoff",
+      "cost": {
+       "item_id": "31",
+       "count": "800"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_char_2x_kristoff/char_2x_kristoff",
+      "item_counts": [
+       {
+        "item_id": "4738307322796518",
+        "count_min": 8,
+        "count_max": 330,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604354399",
+      "highlighted_items": [
+       "4738307322796518"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "vfx_asset": "store_po_store_medium_snowflakes_no_frame/PO_store_medium_snowflakes_no_frame"
+     },
+     {
+      "id": "6478008309116051",
+      "name_key": "STORE_ITEM_F2_SVEN_PACK_NAME",
+      "sticker_key": "STORE_FROZEN_EVENT_STICKER",
+      "main_image": "store_char_2x_sven/char_2x_sven",
+      "cost": {
+       "item_id": "31",
+       "count": "800"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_char_2x_sven/char_2x_sven",
+      "item_counts": [
+       {
+        "item_id": "8290709933838005",
+        "count_min": 8,
+        "count_max": 330,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604354399",
+      "highlighted_items": [
+       "8290709933838005"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "vfx_asset": "store_po_store_medium_snowflakes_no_frame/PO_store_medium_snowflakes_no_frame"
+     }
+    ],
+    "showcase_items": [
+     {
+      "id": "5154415858917195",
+      "name_key": "STORE_ITEM_ULTIMATE_CHEST_10X_NAME",
+      "sticker_key": "STORE_ITEM_ULTIMATE_CHEST_10X_STICKER",
+      "main_image": "store_chest_1x_ultimate_10x/chest_1x_ultimate_10x",
+      "showcase_override_prefab": "store_ultra_pack_gacha_d/ultra_pack_gacha_d",
+      "cost": {
+       "item_id": "31",
+       "count": "3600"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "subtitle_key": "STORE_ITEM_ULTIMATE_CHEST_10X_SUBTITLE",
+      "box_back_asset": "store_chest_2x_ultimate_10x/chest_2x_ultimate_10x",
+      "item_counts": [
+       {
+        "item_id": "14",
+        "count_min": 8,
+        "count_max": 100
+       },
+       {
+        "item_id": "15",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "37",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "41",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "51",
+        "count_min": 8,
+        "count_max": 800
+       },
+       {
+        "item_id": "69",
+        "count_min": 8,
+        "count_max": 100
+       },
+       {
+        "item_id": "122",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "125717942094543",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "545645511357190",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "629555636552897",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "748231379358511",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "775972187148480",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "956333145208243",
+        "count_min": 8,
+        "count_max": 800
+       },
+       {
+        "item_id": "996449903919935",
+        "count_min": 8,
+        "count_max": 800
+       },
+       {
+        "item_id": "1054913936530539",
+        "count_min": 8,
+        "count_max": 800
+       },
+       {
+        "item_id": "1347032823924283",
+        "count_min": 8,
+        "count_max": 800
+       },
+       {
+        "item_id": "1400452231532493",
+        "count_min": 8,
+        "count_max": 100
+       },
+       {
+        "item_id": "1729777815609503",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "1746409571347969",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "1839419476280165",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "1881328610304151",
+        "count_min": 8,
+        "count_max": 800
+       },
+       {
+        "item_id": "2142379036270579",
+        "count_min": 8,
+        "count_max": 800
+       },
+       {
+        "item_id": "2324481078875843",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "2377697932661433",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "2579679074621081",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "2827184494720053",
+        "count_min": 8,
+        "count_max": 800
+       },
+       {
+        "item_id": "2910263815821737",
+        "count_min": 8,
+        "count_max": 100
+       },
+       {
+        "item_id": "3495050861657105",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "3533801361262097",
+        "count_min": 8,
+        "count_max": 800
+       },
+       {
+        "item_id": "3876675989385936",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "3912684228307645",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "4132111818609309",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "4653996445097808",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "4738307322796518",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "4848833534828072",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "4871798268110196",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "4916508218791450",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "5119483846087306",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "5537606910669675",
+        "count_min": 8,
+        "count_max": 800
+       },
+       {
+        "item_id": "5543463424625676",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "5634738734696864",
+        "count_min": 8,
+        "count_max": 100
+       },
+       {
+        "item_id": "5638193476830986",
+        "count_min": 8,
+        "count_max": 100
+       },
+       {
+        "item_id": "5754301726344216",
+        "count_min": 8,
+        "count_max": 100
+       },
+       {
+        "item_id": "5791560379598773",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "5805462744053207",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "5994551327083110",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "6040517570001758",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "6123716423516406",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "6630231426722794",
+        "count_min": 8,
+        "count_max": 800
+       },
+       {
+        "item_id": "6852995734809854",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "6923411322327805",
+        "count_min": 8,
+        "count_max": 100
+       },
+       {
+        "item_id": "7375856718904969",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "7607924758047183",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "7905521621377816",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "7907029139353530",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "8064327381314079",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "8290709933838005",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "8380785602867301",
+        "count_min": 8,
+        "count_max": 100
+       },
+       {
+        "item_id": "8386605835156191",
+        "count_min": 8,
+        "count_max": 100
+       },
+       {
+        "item_id": "8394962427910704",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "8560905659388620",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "8567703698633267",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "8624836965261405",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "8640047493374189",
+        "count_min": 8,
+        "count_max": 100
+       },
+       {
+        "item_id": "8663457816762986",
+        "count_min": 8,
+        "count_max": 250
+       }
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "vfx_asset": "store_po_store_thin_02/PO_store_thin_02",
+      "override_costs": [
+       {
+        "item_id": "5219856141371232",
+        "count": "100"
+       }
+      ],
+      "show_details_for_purchase_confirm": true
+     },
+     {
+      "id": "864786359092960",
+      "name_key": "STORE_ITEM_SHARED_CURRENCY_PREMIUM_NAME",
+      "sticker_key": "STORE_ITEM_SHARED_MOST_POPULAR",
+      "main_image": "store_gems_square_m/gems_square_m",
+      "showcase_override_prefab": "store_gems_crate_m/gems_crate_m",
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_gems_2x_m/gems_2x_m",
+      "iap_product_id_ios": "com.glu.disneygame.gem_pack_4",
+      "iap_product_id_android": "com.glu.disneygame.gem_pack_4",
+      "item_counts": [
+       {
+        "item_id": "31",
+        "count_min": 2800,
+        "count_max": 2800,
+        "guaranteed": true
+       }
+      ],
+      "highlighted_items": [
+       "31"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "vfx_asset": "store_po_store_item_01/PO_store_item_01"
+     }
+    ]
+   },
+   {
+    "id": "7880124641675230",
+    "sort_order": "40",
+    "name_key": "STORE_TAB_NAME_CHARACTER_PACKS",
+    "icon": "icons_store/store_tab_event_frozen",
+    "item_size": "SPECIAL_OFFER_STORE_ITEM_SIZE",
+    "items": [
+     {
+      "id": "3105676898589356",
+      "name_key": "STORE_ITEM_F2_TEAM_NAME",
+      "sticker_key": "STORE_FROZEN_EVENT_STICKER",
+      "main_image": "store_special_offer_sven_olaf_kristoff_anna/special_offer_sven_olaf_kristoff_anna",
+      "cost": {
+       "item_id": "31",
+       "count": "10000"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816",
+       "purchase_data": [
+        {
+         "granularity": 3,
+         "remaining_purchases": 2
+        }
+       ]
+      },
+      "subtitle_key": "STORE_ITEM_F2_TEAM_SUBTITLE",
+      "box_back_asset": "store_char_2x_anna/char_2x_anna",
+      "iap_product_id_ios": "com.glu.disneygame.event_deal_079_40",
+      "iap_product_id_android": "com.glu.disneygame.event_deal_079_40",
+      "item_counts": [
+       {
+        "item_id": "13",
+        "count_min": 300000,
+        "count_max": 300000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "26",
+        "count_min": 30000,
+        "count_max": 30000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "31",
+        "count_min": 1000,
+        "count_max": 1000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "133",
+        "count_min": 75,
+        "count_max": 75,
+        "guaranteed": true
+       },
+       {
+        "item_id": "748231379358511",
+        "count_min": 50,
+        "count_max": 50,
+        "guaranteed": true
+       },
+       {
+        "item_id": "1532650026871995",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "1949330146132045",
+        "count_min": 4,
+        "count_max": 4,
+        "guaranteed": true
+       },
+       {
+        "item_id": "3179470540328821",
+        "count_min": 4,
+        "count_max": 4,
+        "guaranteed": true
+       },
+       {
+        "item_id": "3883066061505188",
+        "count_min": 25,
+        "count_max": 25,
+        "guaranteed": true
+       },
+       {
+        "item_id": "4738307322796518",
+        "count_min": 50,
+        "count_max": 50,
+        "guaranteed": true
+       },
+       {
+        "item_id": "5274591237803763",
+        "count_min": 2,
+        "count_max": 2,
+        "guaranteed": true
+       },
+       {
+        "item_id": "5800404643593210",
+        "count_min": 2,
+        "count_max": 2,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6123716423516406",
+        "count_min": 50,
+        "count_max": 50,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6221535176831871",
+        "count_min": 5,
+        "count_max": 5,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6291390382388483",
+        "count_min": 2,
+        "count_max": 2,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6344519489203639",
+        "count_min": 2,
+        "count_max": 2,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6490301028561825",
+        "count_min": 3,
+        "count_max": 3,
+        "guaranteed": true
+       },
+       {
+        "item_id": "7453799976449616",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "8290709933838005",
+        "count_min": 50,
+        "count_max": 50,
+        "guaranteed": true
+       },
+       {
+        "item_id": "8331552497003191",
+        "count_min": 2,
+        "count_max": 2,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604354399",
+      "special_offer_icon": "icons_store/special_offers_icon",
+      "special_offer_vgp_placement_triggers": [
+       "home_screen"
+      ],
+      "highlighted_items": [
+       "748231379358511",
+       "4738307322796518",
+       "8290709933838005",
+       "6123716423516406",
+       "31",
+       "133",
+       "3883066061505188",
+       "6221535176831871",
+       "13",
+       "6490301028561825",
+       "26",
+       "7453799976449616",
+       "1532650026871995",
+       "6344519489203639",
+       "8331552497003191"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "main_image_special_offer_override": "store_special_offer_sven_olaf_kristoff_anna/special_offer_sven_olaf_kristoff_anna",
+      "vfx_asset": "store_po_store_large_leaves/PO_store_large_leaves",
+      "special_offer_popup_frequency_s": 129600
+     },
+     {
+      "id": "7527486478923958",
+      "name_key": "STORE_ITEM_F2_TEAM_GEMS_NAME",
+      "sticker_key": "STORE_ITEM_WV_HH_2_SHELF",
+      "main_image": "store_special_offer_sven_olaf_kristoff_anna/special_offer_sven_olaf_kristoff_anna",
+      "cost": {
+       "item_id": "31",
+       "count": "2800"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "subtitle_key": "STORE_ITEM_F2_TEAM_GEMS_SUBTITLE",
+      "box_back_asset": "store_char_2x_anna/char_2x_anna",
+      "item_counts": [
+       {
+        "item_id": "13",
+        "count_min": 50000,
+        "count_max": 50000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "26",
+        "count_min": 10000,
+        "count_max": 10000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "133",
+        "count_min": 10,
+        "count_max": 50,
+        "guaranteed": true
+       },
+       {
+        "item_id": "748231379358511",
+        "count_min": 8,
+        "count_max": 330,
+        "guaranteed": true
+       },
+       {
+        "item_id": "1949330146132045",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "2836539702967744",
+        "count_min": 2,
+        "count_max": 2
+       },
+       {
+        "item_id": "3098169505142870",
+        "count_min": 2,
+        "count_max": 2
+       },
+       {
+        "item_id": "3179470540328821",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "4738307322796518",
+        "count_min": 8,
+        "count_max": 330,
+        "guaranteed": true
+       },
+       {
+        "item_id": "5274591237803763",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "5461757687019266",
+        "count_min": 2,
+        "count_max": 2
+       },
+       {
+        "item_id": "5800404643593210",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "6123716423516406",
+        "count_min": 8,
+        "count_max": 330,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6291390382388483",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "8290709933838005",
+        "count_min": 8,
+        "count_max": 330,
+        "guaranteed": true
+       },
+       {
+        "item_id": "8331552497003191",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "8561757942901548",
+        "count_min": 2,
+        "count_max": 2
+       }
+      ],
+      "expiry": "1604354399",
+      "special_offer_icon": "icons_store/special_offers_icon",
+      "special_offer_vgp_placement_triggers": [
+       "home_screen"
+      ],
+      "highlighted_items": [
+       "748231379358511",
+       "4738307322796518",
+       "8290709933838005",
+       "6123716423516406",
+       "13",
+       "133",
+       "26",
+       "3179470540328821"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "main_image_special_offer_override": "store_special_offer_sven_olaf_kristoff_anna/special_offer_sven_olaf_kristoff_anna",
+      "vfx_asset": "store_po_store_large_leaves_border/PO_store_large_leaves_border",
+      "special_offer_popup_frequency_s": 129600
+     },
+     {
+      "id": "1878110601676151",
+      "name_key": "STORE_ITEM_F2_ANNA_NAME",
+      "sticker_key": "STORE_FROZEN_EVENT_STICKER",
+      "main_image": "store_special_offer_anna/special_offer_anna",
+      "cost": {
+       "item_id": "31",
+       "count": "3000"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816",
+       "purchase_data": [
+        {
+         "granularity": 3,
+         "remaining_purchases": 1
+        }
+       ]
+      },
+      "subtitle_key": "STORE_ITEM_F2_ANNA_SUBTITLE",
+      "box_back_asset": "store_char_2x_anna/char_2x_anna",
+      "iap_product_id_ios": "com.glu.disneygame.event_deal_069_30",
+      "iap_product_id_android": "com.glu.disneygame.event_deal_069_30",
+      "item_counts": [
+       {
+        "item_id": "13",
+        "count_min": 50000,
+        "count_max": 50000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "26",
+        "count_min": 10000,
+        "count_max": 10000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "31",
+        "count_min": 300,
+        "count_max": 300,
+        "guaranteed": true
+       },
+       {
+        "item_id": "748231379358511",
+        "count_min": 50,
+        "count_max": 50,
+        "guaranteed": true
+       },
+       {
+        "item_id": "1949330146132045",
+        "count_min": 2,
+        "count_max": 2,
+        "guaranteed": true
+       },
+       {
+        "item_id": "3179470540328821",
+        "count_min": 2,
+        "count_max": 2,
+        "guaranteed": true
+       },
+       {
+        "item_id": "5274591237803763",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "5800404643593210",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6291390382388483",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6344519489203639",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6490301028561825",
+        "count_min": 3,
+        "count_max": 3,
+        "guaranteed": true
+       },
+       {
+        "item_id": "8331552497003191",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604354399",
+      "special_offer_icon": "icons_store/special_offers_icon",
+      "special_offer_vgp_placement_triggers": [
+       "home_screen"
+      ],
+      "highlighted_items": [
+       "748231379358511",
+       "6490301028561825",
+       "31",
+       "13",
+       "6344519489203639",
+       "8331552497003191",
+       "5274591237803763",
+       "1949330146132045",
+       "5800404643593210",
+       "6291390382388483",
+       "3179470540328821",
+       "26"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "main_image_special_offer_override": "store_special_offer_anna/special_offer_anna",
+      "vfx_asset": "store_po_store_large_leaves/PO_store_large_leaves",
+      "special_offer_popup_frequency_s": 129600
+     },
+     {
+      "id": "4015942784220982",
+      "name_key": "STORE_ITEM_F2_OLAF_NAME",
+      "sticker_key": "STORE_FROZEN_EVENT_STICKER",
+      "main_image": "store_special_offer_olaf/special_offer_olaf",
+      "cost": {
+       "item_id": "31",
+       "count": "3000"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816",
+       "purchase_data": [
+        {
+         "granularity": 3,
+         "remaining_purchases": 1
+        }
+       ]
+      },
+      "subtitle_key": "STORE_ITEM_F2_OLAF_SUBTITLE",
+      "box_back_asset": "store_char_2x_olaf/char_2x_olaf",
+      "iap_product_id_ios": "com.glu.disneygame.event_deal_068_30",
+      "iap_product_id_android": "com.glu.disneygame.event_deal_068_30",
+      "item_counts": [
+       {
+        "item_id": "13",
+        "count_min": 50000,
+        "count_max": 50000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "26",
+        "count_min": 10000,
+        "count_max": 10000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "31",
+        "count_min": 300,
+        "count_max": 300,
+        "guaranteed": true
+       },
+       {
+        "item_id": "1949330146132045",
+        "count_min": 2,
+        "count_max": 2,
+        "guaranteed": true
+       },
+       {
+        "item_id": "3179470540328821",
+        "count_min": 2,
+        "count_max": 2,
+        "guaranteed": true
+       },
+       {
+        "item_id": "5274591237803763",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "5800404643593210",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6123716423516406",
+        "count_min": 50,
+        "count_max": 50,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6291390382388483",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6344519489203639",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6490301028561825",
+        "count_min": 3,
+        "count_max": 3,
+        "guaranteed": true
+       },
+       {
+        "item_id": "7312042125271986",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "8331552497003191",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604354399",
+      "special_offer_icon": "icons_store/special_offers_icon",
+      "special_offer_vgp_placement_triggers": [
+       "home_screen"
+      ],
+      "highlighted_items": [
+       "6123716423516406",
+       "7312042125271986",
+       "6490301028561825",
+       "31",
+       "13",
+       "6344519489203639",
+       "8331552497003191",
+       "5274591237803763",
+       "1949330146132045",
+       "5800404643593210",
+       "6291390382388483",
+       "3179470540328821",
+       "26"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "main_image_special_offer_override": "store_special_offer_olaf/special_offer_olaf",
+      "vfx_asset": "store_po_store_large_leaves/PO_store_large_leaves",
+      "special_offer_popup_frequency_s": 129600
+     },
+     {
+      "id": "7334521977512886",
+      "name_key": "STORE_ITEM_F2_KRISTOFF_NAME",
+      "sticker_key": "STORE_FROZEN_EVENT_STICKER",
+      "main_image": "store_special_offer_kristoff/special_offer_kristoff",
+      "cost": {
+       "item_id": "31",
+       "count": "5000"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816",
+       "purchase_data": [
+        {
+         "granularity": 3,
+         "remaining_purchases": 1
+        }
+       ]
+      },
+      "subtitle_key": "STORE_ITEM_F2_KRISTOFF_SUBTITLE",
+      "box_back_asset": "store_char_2x_kristoff/char_2x_kristoff",
+      "iap_product_id_ios": "com.glu.disneygame.event_deal_066_30",
+      "iap_product_id_android": "com.glu.disneygame.event_deal_066_30",
+      "item_counts": [
+       {
+        "item_id": "13",
+        "count_min": 50000,
+        "count_max": 50000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "26",
+        "count_min": 10000,
+        "count_max": 10000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "31",
+        "count_min": 300,
+        "count_max": 300,
+        "guaranteed": true
+       },
+       {
+        "item_id": "1949330146132045",
+        "count_min": 2,
+        "count_max": 2,
+        "guaranteed": true
+       },
+       {
+        "item_id": "3179470540328821",
+        "count_min": 2,
+        "count_max": 2,
+        "guaranteed": true
+       },
+       {
+        "item_id": "4738307322796518",
+        "count_min": 50,
+        "count_max": 50,
+        "guaranteed": true
+       },
+       {
+        "item_id": "5274591237803763",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "5800404643593210",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6291390382388483",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6344519489203639",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6490301028561825",
+        "count_min": 3,
+        "count_max": 3,
+        "guaranteed": true
+       },
+       {
+        "item_id": "8331552497003191",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604354399",
+      "special_offer_icon": "icons_store/special_offers_icon",
+      "special_offer_vgp_placement_triggers": [
+       "home_screen"
+      ],
+      "highlighted_items": [
+       "4738307322796518",
+       "6490301028561825",
+       "31",
+       "13",
+       "6344519489203639",
+       "8331552497003191",
+       "5274591237803763",
+       "1949330146132045",
+       "5800404643593210",
+       "6291390382388483",
+       "3179470540328821",
+       "26"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "main_image_special_offer_override": "store_special_offer_kristoff/special_offer_kristoff",
+      "vfx_asset": "store_po_store_large_leaves/PO_store_large_leaves",
+      "special_offer_popup_frequency_s": 129600
+     },
+     {
+      "id": "3078401360228001",
+      "name_key": "STORE_ITEM_F2_SVEN_NAME",
+      "sticker_key": "STORE_FROZEN_EVENT_STICKER",
+      "main_image": "store_special_offer_sven/special_offer_sven",
+      "cost": {
+       "item_id": "31",
+       "count": "5000"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816",
+       "purchase_data": [
+        {
+         "granularity": 3,
+         "remaining_purchases": 1
+        }
+       ]
+      },
+      "subtitle_key": "STORE_ITEM_F2_SVEN_SUBTITLE",
+      "box_back_asset": "store_char_2x_sven/char_2x_sven",
+      "iap_product_id_ios": "com.glu.disneygame.event_deal_067_30",
+      "iap_product_id_android": "com.glu.disneygame.event_deal_067_30",
+      "item_counts": [
+       {
+        "item_id": "13",
+        "count_min": 50000,
+        "count_max": 50000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "26",
+        "count_min": 10000,
+        "count_max": 10000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "31",
+        "count_min": 300,
+        "count_max": 300,
+        "guaranteed": true
+       },
+       {
+        "item_id": "1949330146132045",
+        "count_min": 2,
+        "count_max": 2,
+        "guaranteed": true
+       },
+       {
+        "item_id": "3179470540328821",
+        "count_min": 2,
+        "count_max": 2,
+        "guaranteed": true
+       },
+       {
+        "item_id": "5274591237803763",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "5800404643593210",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6291390382388483",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6344519489203639",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6490301028561825",
+        "count_min": 3,
+        "count_max": 3,
+        "guaranteed": true
+       },
+       {
+        "item_id": "7269590866273345",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "8290709933838005",
+        "count_min": 50,
+        "count_max": 50,
+        "guaranteed": true
+       },
+       {
+        "item_id": "8331552497003191",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604354399",
+      "special_offer_icon": "icons_store/special_offers_icon",
+      "special_offer_vgp_placement_triggers": [
+       "home_screen"
+      ],
+      "highlighted_items": [
+       "8290709933838005",
+       "7269590866273345",
+       "6490301028561825",
+       "31",
+       "13",
+       "6344519489203639",
+       "8331552497003191",
+       "5274591237803763",
+       "1949330146132045",
+       "5800404643593210",
+       "6291390382388483",
+       "3179470540328821",
+       "26"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "main_image_special_offer_override": "store_special_offer_sven/special_offer_sven",
+      "vfx_asset": "store_po_store_large_leaves/PO_store_large_leaves",
+      "special_offer_popup_frequency_s": 129600
+     }
+    ],
+    "showcase_items": [
+     {
+      "id": "864786359092960",
+      "name_key": "STORE_ITEM_SHARED_CURRENCY_PREMIUM_NAME",
+      "sticker_key": "STORE_ITEM_SHARED_MOST_POPULAR",
+      "main_image": "store_gems_square_m/gems_square_m",
+      "showcase_override_prefab": "store_gems_crate_m/gems_crate_m",
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_gems_2x_m/gems_2x_m",
+      "iap_product_id_ios": "com.glu.disneygame.gem_pack_4",
+      "iap_product_id_android": "com.glu.disneygame.gem_pack_4",
+      "item_counts": [
+       {
+        "item_id": "31",
+        "count_min": 2800,
+        "count_max": 2800,
+        "guaranteed": true
+       }
+      ],
+      "highlighted_items": [
+       "31"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "vfx_asset": "store_po_store_item_01/PO_store_item_01"
+     }
+    ]
+   },
+   {
+    "id": "856419929952026",
+    "sort_order": "23",
+    "name_key": "STORE_TAB_NAME_CHARACTER_PACKS",
+    "icon": "icons_store/store_tab_event_toystory",
+    "item_size": "SPECIAL_OFFER_STORE_ITEM_SIZE",
+    "items": [
+     {
+      "id": "6234781761347818",
+      "name_key": "STORE_ITEM_TS2_BO_PEEP_NAME",
+      "sticker_key": "STORE_ITEM_TS2_BO_PEEP_STICKER",
+      "main_image": "store_special_offer_toy_story_bobeep/special_offer_toy_story_bobeep",
+      "cost": {
+       "item_id": "31",
+       "count": "5000"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816",
+       "purchase_data": [
+        {
+         "granularity": 3,
+         "remaining_purchases": 3
+        }
+       ]
+      },
+      "subtitle_key": "STORE_ITEM_TS2_BO_PEEP_SUBTITLE",
+      "box_back_asset": "store_char_2x_bobeep/char_2x_bobeep",
+      "iap_product_id_ios": "com.glu.disneygame.special_offer_067_50",
+      "iap_product_id_android": "com.glu.disneygame.special_offer_067_50",
+      "item_counts": [
+       {
+        "item_id": "13",
+        "count_min": 200000,
+        "count_max": 200000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "26",
+        "count_min": 20000,
+        "count_max": 20000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "31",
+        "count_min": 300,
+        "count_max": 300,
+        "guaranteed": true
+       },
+       {
+        "item_id": "133",
+        "count_min": 50,
+        "count_max": 50,
+        "guaranteed": true
+       },
+       {
+        "item_id": "1949330146132045",
+        "count_min": 2,
+        "count_max": 2,
+        "guaranteed": true
+       },
+       {
+        "item_id": "3179470540328821",
+        "count_min": 2,
+        "count_max": 2,
+        "guaranteed": true
+       },
+       {
+        "item_id": "3883066061505188",
+        "count_min": 15,
+        "count_max": 15,
+        "guaranteed": true
+       },
+       {
+        "item_id": "5274591237803763",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "5800404643593210",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6291390382388483",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6344519489203639",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6490301028561825",
+        "count_min": 3,
+        "count_max": 3,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6697522305622874",
+        "count_min": 80,
+        "count_max": 80,
+        "guaranteed": true
+       },
+       {
+        "item_id": "7453799976449616",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "8331552497003191",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604613599",
+      "special_offer_icon": "icons_store/special_offers_icon",
+      "special_offer_vgp_placement_triggers": [
+       "home_screen"
+      ],
+      "highlighted_items": [
+       "6697522305622874",
+       "133",
+       "3883066061505188",
+       "31",
+       "13",
+       "6490301028561825",
+       "26",
+       "7453799976449616",
+       "6344519489203639",
+       "8331552497003191",
+       "5274591237803763",
+       "1949330146132045",
+       "5800404643593210",
+       "8331552497003191",
+       "5274591237803763"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "main_image_special_offer_override": "store_special_offer_toy_story_bobeep/special_offer_toy_story_bobeep",
+      "special_offer_popup_frequency_s": 259200
+     },
+     {
+      "id": "3879656159406059",
+      "name_key": "STORE_ITEM_TS2_SPELL_COMBO_NAME",
+      "sticker_key": "STICKER_EVENT_EXCLUSIVE",
+      "main_image": "store_special_offer_toy_spellscombo/special_offer_toy_spellscombo",
+      "cost": {
+       "item_id": "31",
+       "count": "3000"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816",
+       "purchase_data": [
+        {
+         "granularity": 3,
+         "remaining_purchases": 2
+        }
+       ]
+      },
+      "subtitle_key": "STORE_ITEM_TS2_SPELL_COMBO_SUBTITLE",
+      "box_back_asset": "store_spell_2x_claw/spell_2x_claw",
+      "iap_product_id_ios": "com.glu.disneygame.special_offer_178",
+      "iap_product_id_android": "com.glu.disneygame.special_offer_178",
+      "item_counts": [
+       {
+        "item_id": "13",
+        "count_min": 100000,
+        "count_max": 100000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "31",
+        "count_min": 300,
+        "count_max": 300,
+        "guaranteed": true
+       },
+       {
+        "item_id": "248562853627691",
+        "count_min": 500,
+        "count_max": 500,
+        "guaranteed": true
+       },
+       {
+        "item_id": "1548088886590623",
+        "count_min": 300,
+        "count_max": 300,
+        "guaranteed": true
+       },
+       {
+        "item_id": "1950236319355823",
+        "count_min": 30,
+        "count_max": 30,
+        "guaranteed": true
+       },
+       {
+        "item_id": "1954928886370092",
+        "count_min": 30,
+        "count_max": 30,
+        "guaranteed": true
+       },
+       {
+        "item_id": "5145963959784111",
+        "count_min": 30,
+        "count_max": 30,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6490301028561825",
+        "count_min": 3,
+        "count_max": 3,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604613599",
+      "special_offer_icon": "icons_store/special_offers_icon",
+      "special_offer_vgp_placement_triggers": [
+       "home_screen"
+      ],
+      "highlighted_items": [
+       "1954928886370092",
+       "1950236319355823",
+       "5145963959784111",
+       "248562853627691",
+       "1548088886590623",
+       "31",
+       "13",
+       "6490301028561825",
+       "6490301028561825"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "main_image_special_offer_override": "store_special_offer_toy_spellscombo/special_offer_toy_spellscombo",
+      "special_offer_popup_frequency_s": 259200
+     },
+     {
+      "id": "1309027881072835",
+      "name_key": "STORE_ITEM_TS2_BUCKET_NAME",
+      "sticker_key": "STICKER_EVENT_EXCLUSIVE",
+      "main_image": "store_special_offer_toy_bucket/special_offer_toy_bucket",
+      "cost": {
+       "item_id": "31",
+       "count": "1500"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816",
+       "purchase_data": [
+        {
+         "granularity": 3,
+         "remaining_purchases": 3
+        }
+       ]
+      },
+      "subtitle_key": "STORE_ITEM_TS2_BUCKET_SUBTITLE",
+      "box_back_asset": "store_spell_2x_bucket_of_soldiers/spell_2x_bucket_of_soldiers",
+      "iap_product_id_ios": "com.glu.disneygame.special_offer_149",
+      "iap_product_id_android": "com.glu.disneygame.special_offer_149",
+      "item_counts": [
+       {
+        "item_id": "13",
+        "count_min": 50000,
+        "count_max": 50000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "31",
+        "count_min": 150,
+        "count_max": 150,
+        "guaranteed": true
+       },
+       {
+        "item_id": "248562853627691",
+        "count_min": 250,
+        "count_max": 250,
+        "guaranteed": true
+       },
+       {
+        "item_id": "1548088886590623",
+        "count_min": 100,
+        "count_max": 100,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6490301028561825",
+        "count_min": 3,
+        "count_max": 3,
+        "guaranteed": true
+       },
+       {
+        "item_id": "7765921330468482",
+        "count_min": 30,
+        "count_max": 30,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604613599",
+      "special_offer_icon": "icons_store/special_offers_icon",
+      "special_offer_vgp_placement_triggers": [
+       "event_group_7104620432493927"
+      ],
+      "highlighted_items": [
+       "7765921330468482",
+       "248562853627691",
+       "1548088886590623",
+       "31",
+       "13",
+       "6490301028561825"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "main_image_special_offer_override": "store_special_offer_toy_bucket/special_offer_toy_bucket",
+      "special_offer_popup_frequency_s": 259200
+     },
+     {
+      "id": "5057559595236745",
+      "name_key": "STORE_ITEM_TS2_CLAW_NAME",
+      "sticker_key": "STICKER_EVENT_EXCLUSIVE",
+      "main_image": "store_special_offer_toy_theclaw/special_offer_toy_theclaw",
+      "cost": {
+       "item_id": "31",
+       "count": "1500"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816",
+       "purchase_data": [
+        {
+         "granularity": 3,
+         "remaining_purchases": 3
+        }
+       ]
+      },
+      "subtitle_key": "STORE_ITEM_TS2_CLAW_SUBTITLE",
+      "box_back_asset": "store_spell_2x_claw/spell_2x_claw",
+      "iap_product_id_ios": "com.glu.disneygame.special_offer_150",
+      "iap_product_id_android": "com.glu.disneygame.special_offer_150",
+      "item_counts": [
+       {
+        "item_id": "13",
+        "count_min": 50000,
+        "count_max": 50000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "31",
+        "count_min": 150,
+        "count_max": 150,
+        "guaranteed": true
+       },
+       {
+        "item_id": "248562853627691",
+        "count_min": 250,
+        "count_max": 250,
+        "guaranteed": true
+       },
+       {
+        "item_id": "1548088886590623",
+        "count_min": 100,
+        "count_max": 100,
+        "guaranteed": true
+       },
+       {
+        "item_id": "2591675169106684",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "5145963959784111",
+        "count_min": 30,
+        "count_max": 30,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6490301028561825",
+        "count_min": 3,
+        "count_max": 3,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604613599",
+      "special_offer_icon": "icons_store/special_offers_icon",
+      "special_offer_vgp_placement_triggers": [
+       "event_group_7104620432493927"
+      ],
+      "highlighted_items": [
+       "5145963959784111",
+       "2591675169106684",
+       "248562853627691",
+       "1548088886590623",
+       "31",
+       "13",
+       "6490301028561825"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "main_image_special_offer_override": "store_special_offer_toy_theclaw/special_offer_toy_theclaw",
+      "special_offer_popup_frequency_s": 259200
+     },
+     {
+      "id": "4623583319965336",
+      "name_key": "STORE_ITEM_TS2_DUKE_CABOOM_NAME",
+      "sticker_key": "STICKER_EVENT_EXCLUSIVE",
+      "main_image": "store_special_offer_toy_duke/special_offer_toy_duke",
+      "cost": {
+       "item_id": "31",
+       "count": "1500"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816",
+       "purchase_data": [
+        {
+         "granularity": 3,
+         "remaining_purchases": 3
+        }
+       ]
+      },
+      "subtitle_key": "STORE_ITEM_TS2_DUKE_CABOOM_SUBTITLE",
+      "box_back_asset": "store_spell_2x_duke_kaboom/spell_2x_duke_kaboom",
+      "iap_product_id_ios": "com.glu.disneygame.special_offer_151",
+      "iap_product_id_android": "com.glu.disneygame.special_offer_151",
+      "item_counts": [
+       {
+        "item_id": "13",
+        "count_min": 50000,
+        "count_max": 50000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "31",
+        "count_min": 150,
+        "count_max": 150,
+        "guaranteed": true
+       },
+       {
+        "item_id": "248562853627691",
+        "count_min": 250,
+        "count_max": 250,
+        "guaranteed": true
+       },
+       {
+        "item_id": "1548088886590623",
+        "count_min": 100,
+        "count_max": 100,
+        "guaranteed": true
+       },
+       {
+        "item_id": "1950236319355823",
+        "count_min": 30,
+        "count_max": 30,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6490301028561825",
+        "count_min": 3,
+        "count_max": 3,
+        "guaranteed": true
+       },
+       {
+        "item_id": "7771674062892646",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604613599",
+      "special_offer_icon": "icons_store/special_offers_icon",
+      "special_offer_vgp_placement_triggers": [
+       "event_group_7104620432493927"
+      ],
+      "highlighted_items": [
+       "1950236319355823",
+       "7771674062892646",
+       "248562853627691",
+       "1548088886590623",
+       "31",
+       "13",
+       "6490301028561825"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "main_image_special_offer_override": "store_special_offer_toy_duke/special_offer_toy_duke",
+      "special_offer_popup_frequency_s": 259200
+     },
+     {
+      "id": "7363250869233319",
+      "name_key": "STORE_ITEM_TS2_WILD_IMAGINATION_NAME",
+      "sticker_key": "STICKER_EVENT_EXCLUSIVE",
+      "main_image": "store_special_offer_toy_wild_imag/special_offer_toy_wild_imag",
+      "cost": {
+       "item_id": "31",
+       "count": "1500"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816",
+       "purchase_data": [
+        {
+         "granularity": 3,
+         "remaining_purchases": 3
+        }
+       ]
+      },
+      "subtitle_key": "STORE_ITEM_TS2_WILD_IMAGINATION_SUBTITLE",
+      "box_back_asset": "store_spell_2x_ducky_bunny/spell_2x_ducky_bunny",
+      "iap_product_id_ios": "com.glu.disneygame.special_offer_152",
+      "iap_product_id_android": "com.glu.disneygame.special_offer_152",
+      "item_counts": [
+       {
+        "item_id": "13",
+        "count_min": 50000,
+        "count_max": 50000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "31",
+        "count_min": 150,
+        "count_max": 150,
+        "guaranteed": true
+       },
+       {
+        "item_id": "248562853627691",
+        "count_min": 250,
+        "count_max": 250,
+        "guaranteed": true
+       },
+       {
+        "item_id": "1548088886590623",
+        "count_min": 100,
+        "count_max": 100,
+        "guaranteed": true
+       },
+       {
+        "item_id": "1954928886370092",
+        "count_min": 30,
+        "count_max": 30,
+        "guaranteed": true
+       },
+       {
+        "item_id": "2589079553780542",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6490301028561825",
+        "count_min": 3,
+        "count_max": 3,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604613599",
+      "special_offer_icon": "icons_store/special_offers_icon",
+      "special_offer_vgp_placement_triggers": [
+       "event_group_7104620432493927"
+      ],
+      "highlighted_items": [
+       "1954928886370092",
+       "2589079553780542",
+       "248562853627691",
+       "1548088886590623",
+       "31",
+       "13",
+       "6490301028561825"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "main_image_special_offer_override": "store_special_offer_toy_wild_imag/special_offer_toy_wild_imag",
+      "special_offer_popup_frequency_s": 259200
+     },
+     {
+      "id": "7074798362097920",
+      "name_key": "STORE_ITEM_TS2_CHARACTERS_NAME",
+      "sticker_key": "Event_202002_ToyStory_META_NAME",
+      "main_image": "store_special_offer_toy_story_buzz_woody_jessie/special_offer_toy_story_buzz_woody_jessie",
+      "cost": {
+       "item_id": "31",
+       "count": "5000"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816",
+       "purchase_data": [
+        {
+         "granularity": 3,
+         "remaining_purchases": 2
+        }
+       ]
+      },
+      "subtitle_key": "STORE_ITEM_TS2_CHARACTERS_SUBTITLE",
+      "box_back_asset": "store_char_2x_woody/char_2x_woody",
+      "iap_product_id_ios": "com.glu.disneygame.special_offer_068_50",
+      "iap_product_id_android": "com.glu.disneygame.special_offer_068_50",
+      "item_counts": [
+       {
+        "item_id": "13",
+        "count_min": 200000,
+        "count_max": 200000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "15",
+        "count_min": 80,
+        "count_max": 80,
+        "guaranteed": true
+       },
+       {
+        "item_id": "26",
+        "count_min": 20000,
+        "count_max": 20000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "31",
+        "count_min": 500,
+        "count_max": 500,
+        "guaranteed": true
+       },
+       {
+        "item_id": "133",
+        "count_min": 50,
+        "count_max": 50,
+        "guaranteed": true
+       },
+       {
+        "item_id": "1534600534653696",
+        "count_min": 80,
+        "count_max": 80,
+        "guaranteed": true
+       },
+       {
+        "item_id": "1949330146132045",
+        "count_min": 2,
+        "count_max": 2,
+        "guaranteed": true
+       },
+       {
+        "item_id": "2799876626894845",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "3179470540328821",
+        "count_min": 2,
+        "count_max": 2,
+        "guaranteed": true
+       },
+       {
+        "item_id": "3883066061505188",
+        "count_min": 15,
+        "count_max": 15,
+        "guaranteed": true
+       },
+       {
+        "item_id": "5274591237803763",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "5800404643593210",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6291390382388483",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6344519489203639",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6490301028561825",
+        "count_min": 3,
+        "count_max": 3,
+        "guaranteed": true
+       },
+       {
+        "item_id": "7453799976449616",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "8331552497003191",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "8942600746390784",
+        "count_min": 20000,
+        "count_max": 20000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "8978118799990747",
+        "count_min": 80,
+        "count_max": 80,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604613599",
+      "special_offer_icon": "icons_store/special_offers_icon",
+      "special_offer_vgp_placement_triggers": [
+       "home_screen"
+      ],
+      "highlighted_items": [
+       "15",
+       "8978118799990747",
+       "1534600534653696",
+       "2799876626894845",
+       "8942600746390784",
+       "31",
+       "3883066061505188",
+       "133",
+       "13",
+       "6490301028561825",
+       "26",
+       "7453799976449616",
+       "6344519489203639",
+       "6344519489203639",
+       "8331552497003191"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "main_image_special_offer_override": "store_special_offer_toy_story_buzz_woody_jessie/special_offer_toy_story_buzz_woody_jessie",
+      "special_offer_popup_frequency_s": 259200
+     },
+     {
+      "id": "2975950631570213",
+      "name_key": "STORE_ITEM_BUZZ_OUTFIT_NAME",
+      "sticker_key": "STICKER_EVENT_EXCLUSIVE",
+      "main_image": "store_special_offer_buzz_skin/special_offer_buzz_skin",
+      "cost": {
+       "item_id": "31",
+       "count": "2000"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816",
+       "purchase_data": [
+        {
+         "granularity": "LIFETIME_PURCHASE_LIMIT_GRANULARITY",
+         "remaining_purchases": 1
+        }
+       ]
+      },
+      "subtitle_key": "STORE_ITEM_BUZZ_OUTFIT_SUBTITLE",
+      "box_back_asset": "store_char_2x_buzz_skin_passholder/char_2x_buzz_skin_passholder",
+      "iap_product_id_ios": "com.glu.disneygame.special_offer_059_20",
+      "iap_product_id_android": "com.glu.disneygame.special_offer_059_20",
+      "item_counts": [
+       {
+        "item_id": "13",
+        "count_min": 50000,
+        "count_max": 50000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "15",
+        "count_min": 25,
+        "count_max": 25,
+        "guaranteed": true
+       },
+       {
+        "item_id": "31",
+        "count_min": 100,
+        "count_max": 100,
+        "guaranteed": true
+       },
+       {
+        "item_id": "519289310372597",
+        "count_min": 100,
+        "count_max": 100,
+        "guaranteed": true
+       },
+       {
+        "item_id": "1949330146132045",
+        "count_min": 4,
+        "count_max": 4,
+        "guaranteed": true
+       },
+       {
+        "item_id": "3179470540328821",
+        "count_min": 4,
+        "count_max": 4,
+        "guaranteed": true
+       },
+       {
+        "item_id": "5274591237803763",
+        "count_min": 2,
+        "count_max": 2,
+        "guaranteed": true
+       },
+       {
+        "item_id": "5668615018329305",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "5800404643593210",
+        "count_min": 2,
+        "count_max": 2,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6291390382388483",
+        "count_min": 2,
+        "count_max": 2,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6490301028561825",
+        "count_min": 3,
+        "count_max": 3,
+        "guaranteed": true
+       },
+       {
+        "item_id": "8331552497003191",
+        "count_min": 2,
+        "count_max": 2,
+        "guaranteed": true
+       },
+       {
+        "item_id": "8942600746390784",
+        "count_min": 10000,
+        "count_max": 10000,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604613599",
+      "special_offer_icon": "icons_store/special_offers_icon",
+      "special_offer_vgp_placement_triggers": [
+       "event_group_7104620432493927"
+      ],
+      "highlighted_items": [
+       "15",
+       "519289310372597",
+       "5668615018329305",
+       "31",
+       "8942600746390784",
+       "6490301028561825",
+       "13",
+       "8331552497003191",
+       "5274591237803763",
+       "1949330146132045",
+       "5800404643593210",
+       "6291390382388483",
+       "3179470540328821",
+       "6291390382388483",
+       "3179470540328821"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "main_image_special_offer_override": "store_special_offer_buzz_skin/special_offer_buzz_skin",
+      "special_offer_popup_frequency_s": 259200
+     },
+     {
+      "id": "4829234578658716",
+      "name_key": "STORE_ITEM_TS2_BUZZ_NAME",
+      "sticker_key": "STORE_ITEM_TS2_BUZZ_STICKER",
+      "main_image": "store_special_offer_toy_story_buzz/special_offer_toy_story_buzz",
+      "cost": {
+       "item_id": "31",
+       "count": "1000"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816",
+       "purchase_data": [
+        {
+         "granularity": "LIFETIME_PURCHASE_LIMIT_GRANULARITY",
+         "remaining_purchases": 1
+        }
+       ]
+      },
+      "subtitle_key": "STORE_ITEM_TS2_BUZZ_SUBTITLE",
+      "box_back_asset": "store_char_2x_buzz/char_2x_buzz",
+      "iap_product_id_ios": "com.glu.disneygame.event_deal_017_10",
+      "iap_product_id_android": "com.glu.disneygame.event_deal_017_10",
+      "item_counts": [
+       {
+        "item_id": "13",
+        "count_min": 50000,
+        "count_max": 50000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "15",
+        "count_min": 50,
+        "count_max": 50,
+        "guaranteed": true
+       },
+       {
+        "item_id": "26",
+        "count_min": 5000,
+        "count_max": 5000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "31",
+        "count_min": 150,
+        "count_max": 150,
+        "guaranteed": true
+       },
+       {
+        "item_id": "1949330146132045",
+        "count_min": 2,
+        "count_max": 2,
+        "guaranteed": true
+       },
+       {
+        "item_id": "3179470540328821",
+        "count_min": 2,
+        "count_max": 2,
+        "guaranteed": true
+       },
+       {
+        "item_id": "5191088614485441",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "5274591237803763",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "5800404643593210",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6291390382388483",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6490301028561825",
+        "count_min": 3,
+        "count_max": 3,
+        "guaranteed": true
+       },
+       {
+        "item_id": "8331552497003191",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "8942600746390784",
+        "count_min": 10000,
+        "count_max": 10000,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604613599",
+      "special_offer_icon": "icons_store/special_offers_icon",
+      "special_offer_vgp_placement_triggers": [
+       "event_group_7104620432493927"
+      ],
+      "highlighted_items": [
+       "15",
+       "5191088614485441",
+       "8942600746390784",
+       "31",
+       "13",
+       "6490301028561825",
+       "26",
+       "8331552497003191",
+       "5274591237803763",
+       "1949330146132045",
+       "5800404643593210",
+       "6291390382388483",
+       "3179470540328821",
+       "5800404643593210",
+       "6291390382388483"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "main_image_special_offer_override": "store_special_offer_toy_story_buzz/special_offer_toy_story_buzz",
+      "special_offer_popup_frequency_s": 259200
+     },
+     {
+      "id": "3076080180854682",
+      "name_key": "STORE_ITEM_TS2_WOODY_NAME",
+      "sticker_key": "STORE_ITEM_TS2_WOODY_STICKER",
+      "main_image": "store_special_offer_toy_story_woody/special_offer_toy_story_woody",
+      "cost": {
+       "item_id": "31",
+       "count": "1000"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816",
+       "purchase_data": [
+        {
+         "granularity": "LIFETIME_PURCHASE_LIMIT_GRANULARITY",
+         "remaining_purchases": 1
+        }
+       ]
+      },
+      "subtitle_key": "STORE_ITEM_TS2_WOODY_SUBTITLE",
+      "box_back_asset": "store_char_2x_woody/char_2x_woody",
+      "iap_product_id_ios": "com.glu.disneygame.event_deal_016_10",
+      "iap_product_id_android": "com.glu.disneygame.event_deal_016_10",
+      "item_counts": [
+       {
+        "item_id": "13",
+        "count_min": 50000,
+        "count_max": 50000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "26",
+        "count_min": 5000,
+        "count_max": 5000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "31",
+        "count_min": 150,
+        "count_max": 150,
+        "guaranteed": true
+       },
+       {
+        "item_id": "1949330146132045",
+        "count_min": 2,
+        "count_max": 2,
+        "guaranteed": true
+       },
+       {
+        "item_id": "3179470540328821",
+        "count_min": 2,
+        "count_max": 2,
+        "guaranteed": true
+       },
+       {
+        "item_id": "5274591237803763",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "5324844430113357",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "5800404643593210",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6291390382388483",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6490301028561825",
+        "count_min": 3,
+        "count_max": 3,
+        "guaranteed": true
+       },
+       {
+        "item_id": "8331552497003191",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "8942600746390784",
+        "count_min": 10000,
+        "count_max": 10000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "8978118799990747",
+        "count_min": 50,
+        "count_max": 50,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604613599",
+      "special_offer_icon": "icons_store/special_offers_icon",
+      "special_offer_vgp_placement_triggers": [
+       "event_group_7104620432493927"
+      ],
+      "highlighted_items": [
+       "8978118799990747",
+       "5324844430113357",
+       "8942600746390784",
+       "31",
+       "13",
+       "6490301028561825",
+       "26",
+       "8331552497003191",
+       "5274591237803763",
+       "1949330146132045",
+       "5800404643593210",
+       "6291390382388483",
+       "3179470540328821",
+       "5800404643593210",
+       "6291390382388483"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "main_image_special_offer_override": "store_special_offer_toy_story_woody/special_offer_toy_story_woody",
+      "special_offer_popup_frequency_s": 259200
+     },
+     {
+      "id": "6511292886996159",
+      "name_key": "STORE_ITEM_TS2_JESSIE_NAME",
+      "sticker_key": "STORE_ITEM_TS2_JESSIE_STICKER",
+      "main_image": "store_special_offer_toy_story_jessie/special_offer_toy_story_jessie",
+      "cost": {
+       "item_id": "31",
+       "count": "1500"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816",
+       "purchase_data": [
+        {
+         "granularity": "LIFETIME_PURCHASE_LIMIT_GRANULARITY",
+         "remaining_purchases": 1
+        }
+       ]
+      },
+      "subtitle_key": "STORE_ITEM_TS2_JESSIE_SUBTITLE",
+      "box_back_asset": "store_char_2x_jessie/char_2x_jessie",
+      "iap_product_id_ios": "com.glu.disneygame.event_deal_015_10",
+      "iap_product_id_android": "com.glu.disneygame.event_deal_015_10",
+      "item_counts": [
+       {
+        "item_id": "13",
+        "count_min": 50000,
+        "count_max": 50000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "26",
+        "count_min": 5000,
+        "count_max": 5000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "31",
+        "count_min": 150,
+        "count_max": 150,
+        "guaranteed": true
+       },
+       {
+        "item_id": "432292178988759",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "1534600534653696",
+        "count_min": 50,
+        "count_max": 50,
+        "guaranteed": true
+       },
+       {
+        "item_id": "1949330146132045",
+        "count_min": 2,
+        "count_max": 2,
+        "guaranteed": true
+       },
+       {
+        "item_id": "3179470540328821",
+        "count_min": 2,
+        "count_max": 2,
+        "guaranteed": true
+       },
+       {
+        "item_id": "5274591237803763",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "5800404643593210",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6291390382388483",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6490301028561825",
+        "count_min": 3,
+        "count_max": 3,
+        "guaranteed": true
+       },
+       {
+        "item_id": "8331552497003191",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "8942600746390784",
+        "count_min": 10000,
+        "count_max": 10000,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604613599",
+      "special_offer_icon": "icons_store/special_offers_icon",
+      "special_offer_vgp_placement_triggers": [
+       "event_group_7104620432493927"
+      ],
+      "highlighted_items": [
+       "1534600534653696",
+       "432292178988759",
+       "8942600746390784",
+       "31",
+       "13",
+       "6490301028561825",
+       "26",
+       "8331552497003191",
+       "5274591237803763",
+       "1949330146132045",
+       "5800404643593210",
+       "6291390382388483",
+       "3179470540328821",
+       "5800404643593210",
+       "6291390382388483"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "main_image_special_offer_override": "store_special_offer_toy_story_jessie/special_offer_toy_story_jessie",
+      "special_offer_popup_frequency_s": 259200
+     }
+    ],
+    "showcase_items": [
+     {
+      "id": "864786359092960",
+      "name_key": "STORE_ITEM_SHARED_CURRENCY_PREMIUM_NAME",
+      "sticker_key": "STORE_ITEM_SHARED_MOST_POPULAR",
+      "main_image": "store_gems_square_m/gems_square_m",
+      "showcase_override_prefab": "store_gems_crate_m/gems_crate_m",
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_gems_2x_m/gems_2x_m",
+      "iap_product_id_ios": "com.glu.disneygame.gem_pack_4",
+      "iap_product_id_android": "com.glu.disneygame.gem_pack_4",
+      "item_counts": [
+       {
+        "item_id": "31",
+        "count_min": 2800,
+        "count_max": 2800,
+        "guaranteed": true
+       }
+      ],
+      "highlighted_items": [
+       "31"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "vfx_asset": "store_po_store_item_01/PO_store_item_01"
+     }
+    ]
+   },
+   {
+    "id": "2693814162969865",
+    "sort_order": "80",
+    "name_key": "STORE_TAB_NAME_PASSORT",
+    "icon": "icons_store/store_tab_mickey",
+    "item_size": "MEDIUM_STORE_ITEM_SIZE",
+    "items": [
+     {
+      "id": "5798723893870625",
+      "name_key": "STORE_ITEM_PASSHOLDER_BOOSTER_NAME",
+      "sticker_key": "PASSHOLDER_201910_BOOSTER_TITLE",
+      "main_image": "store_pouch_2x_pass_xpboost_l/pouch_2x_pass_xpboost_l",
+      "cost": {
+       "item_id": "31",
+       "count": "2000"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816",
+       "purchase_data": [
+        {
+         "granularity": "LIFETIME_PURCHASE_LIMIT_GRANULARITY",
+         "remaining_purchases": 1
+        }
+       ]
+      },
+      "subtitle_key": "PASSHOLDER_202011_1_SEASON_NAME",
+      "box_back_asset": "store_pouch_2x_pass_xpboost_l/pouch_2x_pass_xpboost_l",
+      "iap_product_id_ios": "com.glu.disneygame.saeson14_passholder_gold_booster",
+      "iap_product_id_android": "com.glu.disneygame.saeson14_passholder_gold_booster",
+      "item_counts": [
+       {
+        "item_id": "31",
+        "count_min": 500,
+        "count_max": 500,
+        "guaranteed": true
+       },
+       {
+        "item_id": "3940002793932006",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6463010382463932",
+        "count_min": 100,
+        "count_max": 100,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6490301028561825",
+        "count_min": 3,
+        "count_max": 3,
+        "guaranteed": true
+       },
+       {
+        "item_id": "7073777338032942",
+        "count_min": 5000,
+        "count_max": 5000,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1605513599",
+      "highlighted_items": [
+       "3940002793932006",
+       "31",
+       "6463010382463932"
+      ],
+      "frame_color": {
+       "r": 253,
+       "g": 192,
+       "b": 23,
+       "a": 1.0
+      },
+      "vfx_asset": "store_po_store_item_02/PO_store_item_02"
+     },
+     {
+      "id": "5062343526515398",
+      "name_key": "STORE_ITEM_PASSHOLDER_NAME",
+      "main_image": "store_pouch_2x_pass/pouch_2x_pass",
+      "cost": {
+       "item_id": "31",
+       "count": "1000"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816",
+       "purchase_data": [
+        {
+         "granularity": "LIFETIME_PURCHASE_LIMIT_GRANULARITY",
+         "remaining_purchases": 1
+        }
+       ]
+      },
+      "subtitle_key": "PASSHOLDER_202011_1_SEASON_NAME",
+      "box_back_asset": "store_pouch_2x_pass/pouch_2x_pass",
+      "iap_product_id_ios": "com.glu.disneygame.season14_passholder_gold",
+      "iap_product_id_android": "com.glu.disneygame.season14_passholder_gold",
+      "item_counts": [
+       {
+        "item_id": "31",
+        "count_min": 200,
+        "count_max": 200,
+        "guaranteed": true
+       },
+       {
+        "item_id": "3940002793932006",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6490301028561825",
+        "count_min": 3,
+        "count_max": 3,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1605513599",
+      "highlighted_items": [
+       "3940002793932006",
+       "31",
+       "6490301028561825"
+      ],
+      "frame_color": {
+       "r": 253,
+       "g": 192,
+       "b": 23,
+       "a": 1.0
+      },
+      "vfx_asset": "store_po_store_item_01/PO_store_item_01"
+     },
+     {
+      "id": "1305994555992602",
+      "name_key": "STORE_ITEM_VIP_DELUXE_NAME",
+      "main_image": "store_gems_2x_l/gems_2x_l",
+      "cost": {
+       "item_id": "31",
+       "count": "2500"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_keys_2x_gold/keys_2x_gold",
+      "iap_product_id_ios": "com.glu.disneygame.vip_4",
+      "iap_product_id_android": "com.glu.disneygame.vip_4",
+      "item_counts": [
+       {
+        "item_id": "31",
+        "count_min": 1000,
+        "count_max": 1000,
+        "guaranteed": true
+       }
+      ],
+      "store_pack_type": 4,
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "vip_data": {
+       "initial_reward": {
+        "item_id": "31",
+        "count": "1000"
+       },
+       "daily_reward": {
+        "item_id": "31",
+        "count": "150"
+       },
+       "total_reward": {
+        "item_id": "31",
+        "count": "5500"
+       }
+      }
+     },
+     {
+      "id": "7319373228332410",
+      "name_key": "STORE_ITEM_VIP_STANDARD_NAME",
+      "main_image": "store_gems_2x_m/gems_2x_m",
+      "cost": {
+       "item_id": "31",
+       "count": "1000"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_keys_2x_gold/keys_2x_gold",
+      "iap_product_id_ios": "com.glu.disneygame.vip_2",
+      "iap_product_id_android": "com.glu.disneygame.vip_2",
+      "item_counts": [
+       {
+        "item_id": "31",
+        "count_min": 500,
+        "count_max": 500,
+        "guaranteed": true
+       }
+      ],
+      "store_pack_type": 4,
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "vip_data": {
+       "initial_reward": {
+        "item_id": "31",
+        "count": "500"
+       },
+       "daily_reward": {
+        "item_id": "31",
+        "count": "50"
+       },
+       "total_reward": {
+        "item_id": "31",
+        "count": "2000"
+       }
+      }
+     },
+     {
+      "id": "7458823703030960",
+      "name_key": "STORE_ITEM_PASSHOLDER_XP_LARGE_NAME",
+      "sticker_key": "STORE_ITEM_PASSHOLDER_XP_LARGE_STICKER_KEY",
+      "main_image": "store_pouch_2x_pass_xp_l/pouch_2x_pass_xp_l",
+      "cost": {
+       "item_id": "31",
+       "count": "2000"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_pouch_2x_pass_xp_l/pouch_2x_pass_xp_l",
+      "iap_product_id_ios": "com.glu.disneygame.passholder_xp_large",
+      "iap_product_id_android": "com.glu.disneygame.passholder_xp_large",
+      "item_counts": [
+       {
+        "item_id": "7073777338032942",
+        "count_min": 12500,
+        "count_max": 12500,
+        "guaranteed": true
+       }
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      }
+     },
+     {
+      "id": "4549809839284481",
+      "name_key": "STORE_ITEM_PASSHOLDER_XP_MEDIUM_NAME",
+      "main_image": "store_pouch_2x_pass_xp_m/pouch_2x_pass_xp_m",
+      "cost": {
+       "item_id": "31",
+       "count": "1000"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_pouch_2x_pass_xp_m/pouch_2x_pass_xp_m",
+      "iap_product_id_ios": "com.glu.disneygame.passholder_xp_medium",
+      "iap_product_id_android": "com.glu.disneygame.passholder_xp_medium",
+      "item_counts": [
+       {
+        "item_id": "7073777338032942",
+        "count_min": 6000,
+        "count_max": 6000,
+        "guaranteed": true
+       }
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      }
+     },
+     {
+      "id": "3513314134708682",
+      "name_key": "STORE_ITEM_PASSHOLDER_XP_SMALL_NAME",
+      "main_image": "store_pouch_2x_pass_xp_s/pouch_2x_pass_xp_s",
+      "cost": {
+       "item_id": "31",
+       "count": "500"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_pouch_2x_pass_xp_s/pouch_2x_pass_xp_s",
+      "iap_product_id_ios": "com.glu.disneygame.passholder_xp_small",
+      "iap_product_id_android": "com.glu.disneygame.passholder_xp_small",
+      "item_counts": [
+       {
+        "item_id": "7073777338032942",
+        "count_min": 2500,
+        "count_max": 2500,
+        "guaranteed": true
+       }
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      }
+     },
+     {
+      "id": "8514892599689522",
+      "name_key": "STORE_ITEM_STPK_FRNDGFT2200_NAME",
+      "sticker_key": "STORE_ITEM_STPK_FRNDGFT2200_STICKER",
+      "main_image": "store_pouch_2x_friend/pouch_2x_friend",
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_pouch_2x_friend/pouch_2x_friend",
+      "iap_product_id_ios": "com.glu.disneygame.premium_deal_23",
+      "iap_product_id_android": "com.glu.disneygame.premium_deal_23",
+      "item_counts": [
+       {
+        "item_id": "31",
+        "count_min": 2800,
+        "count_max": 2800,
+        "guaranteed": true
+       }
+      ],
+      "highlighted_items": [
+       "31"
+      ],
+      "is_afriend_gift": true,
+      "store_pack_type": 3,
+      "frame_color": {
+       "r": 253,
+       "g": 192,
+       "b": 23,
+       "a": 1.0
+      },
+      "vfx_asset": "store_po_store_medium_01/PO_store_medium_01"
+     }
+    ],
+    "showcase_items": [
+     {
+      "id": "4493268092040050",
+      "name_key": "STORE_ITEM_GEMS_5_BONUS_NAME",
+      "sticker_key": "STORE_ITEM_GEMS_5_BONUS_STICKER",
+      "main_image": "store_gems_square_xs/gems_square_xs",
+      "showcase_override_prefab": "store_spinning_gem/spinning_gem",
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_gems_2x_xs/gems_2x_xs",
+      "iap_product_id_ios": "com.glu.disneygame.gem_pack_2_b",
+      "iap_product_id_android": "com.glu.disneygame.gem_pack_2_b",
+      "item_counts": [
+       {
+        "item_id": "31",
+        "count_min": 765,
+        "count_max": 765,
+        "guaranteed": true
+       }
+      ],
+      "highlighted_items": [
+       "31",
+       "31"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "vfx_asset": "store_po_store_item_01/PO_store_item_01"
+     },
+     {
+      "id": "4837397928694032",
+      "name_key": "STORE_ITEM_GEMS_10_BONUS_NAME",
+      "sticker_key": "STORE_ITEM_GEMS_10_BONUS_STICKER",
+      "main_image": "store_gems_square_s/gems_square_s",
+      "showcase_override_prefab": "store_gems_crate_m/gems_crate_m",
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_gems_2x_s/gems_2x_s",
+      "iap_product_id_ios": "com.glu.disneygame.gem_pack_3_b",
+      "iap_product_id_android": "com.glu.disneygame.gem_pack_3_b",
+      "item_counts": [
+       {
+        "item_id": "31",
+        "count_min": 1675,
+        "count_max": 1675,
+        "guaranteed": true
+       }
+      ],
+      "highlighted_items": [
+       "31"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "vfx_asset": "store_po_store_square_01/PO_store_square_01"
+     },
+     {
+      "id": "1438291441461287",
+      "name_key": "STORE_ITEM_GEMS_20_BONUS_NAME",
+      "sticker_key": "STORE_ITEM_GEMS_20_BONUS_STICKER",
+      "main_image": "store_gems_square_m/gems_square_m",
+      "showcase_override_prefab": "store_gems_crate_l/gems_crate_l",
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_gems_2x_m/gems_2x_m",
+      "iap_product_id_ios": "com.glu.disneygame.gem_pack_4_b",
+      "iap_product_id_android": "com.glu.disneygame.gem_pack_4_b",
+      "item_counts": [
+       {
+        "item_id": "31",
+        "count_min": 3500,
+        "count_max": 3500,
+        "guaranteed": true
+       }
+      ],
+      "highlighted_items": [
+       "31"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "vfx_asset": "store_po_store_square_02/PO_store_square_02"
+     },
+     {
+      "id": "864786359092960",
+      "name_key": "STORE_ITEM_SHARED_CURRENCY_PREMIUM_NAME",
+      "sticker_key": "STORE_ITEM_SHARED_MOST_POPULAR",
+      "main_image": "store_gems_square_m/gems_square_m",
+      "showcase_override_prefab": "store_gems_crate_m/gems_crate_m",
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_gems_2x_m/gems_2x_m",
+      "iap_product_id_ios": "com.glu.disneygame.gem_pack_4",
+      "iap_product_id_android": "com.glu.disneygame.gem_pack_4",
+      "item_counts": [
+       {
+        "item_id": "31",
+        "count_min": 2800,
+        "count_max": 2800,
+        "guaranteed": true
+       }
+      ],
+      "highlighted_items": [
+       "31"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "vfx_asset": "store_po_store_item_01/PO_store_item_01"
+     }
+    ]
+   },
+   {
+    "id": "7292342123123806",
+    "sort_order": "100",
+    "name_key": "STORE_TAB_NAME_GEMS",
+    "icon": "icons_store/store_tab_hc",
+    "item_size": "SQUARE_STORE_ITEM_SIZE",
+    "items": [
+     {
+      "id": "2299069450580821",
+      "name_key": "STORE_ITEM_GEMS_100_BONUS_NAME",
+      "sticker_key": "STORE_ITEM_GEMS_100_BONUS_STICKER",
+      "main_image": "store_gems_square_xl/gems_square_xl",
+      "showcase_override_prefab": "store_gems_crate_xl/gems_crate_xl",
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_gems_2x_xl/gems_2x_xl",
+      "iap_product_id_ios": "com.glu.disneygame.gem_pack_8_b",
+      "iap_product_id_android": "com.glu.disneygame.gem_pack_8_b",
+      "item_counts": [
+       {
+        "item_id": "31",
+        "count_min": 19640,
+        "count_max": 19640,
+        "guaranteed": true
+       }
+      ],
+      "highlighted_items": [
+       "31"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "vfx_asset": "store_po_store_square_03/PO_store_square_03"
+     },
+     {
+      "id": "1438291441461287",
+      "name_key": "STORE_ITEM_GEMS_20_BONUS_NAME",
+      "sticker_key": "STORE_ITEM_GEMS_20_BONUS_STICKER",
+      "main_image": "store_gems_square_m/gems_square_m",
+      "showcase_override_prefab": "store_gems_crate_l/gems_crate_l",
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_gems_2x_m/gems_2x_m",
+      "iap_product_id_ios": "com.glu.disneygame.gem_pack_4_b",
+      "iap_product_id_android": "com.glu.disneygame.gem_pack_4_b",
+      "item_counts": [
+       {
+        "item_id": "31",
+        "count_min": 3500,
+        "count_max": 3500,
+        "guaranteed": true
+       }
+      ],
+      "highlighted_items": [
+       "31"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "vfx_asset": "store_po_store_square_02/PO_store_square_02"
+     },
+     {
+      "id": "4837397928694032",
+      "name_key": "STORE_ITEM_GEMS_10_BONUS_NAME",
+      "sticker_key": "STORE_ITEM_GEMS_10_BONUS_STICKER",
+      "main_image": "store_gems_square_s/gems_square_s",
+      "showcase_override_prefab": "store_gems_crate_m/gems_crate_m",
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_gems_2x_s/gems_2x_s",
+      "iap_product_id_ios": "com.glu.disneygame.gem_pack_3_b",
+      "iap_product_id_android": "com.glu.disneygame.gem_pack_3_b",
+      "item_counts": [
+       {
+        "item_id": "31",
+        "count_min": 1675,
+        "count_max": 1675,
+        "guaranteed": true
+       }
+      ],
+      "highlighted_items": [
+       "31"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "vfx_asset": "store_po_store_square_01/PO_store_square_01"
+     },
+     {
+      "id": "4493268092040050",
+      "name_key": "STORE_ITEM_GEMS_5_BONUS_NAME",
+      "sticker_key": "STORE_ITEM_GEMS_5_BONUS_STICKER",
+      "main_image": "store_gems_square_xs/gems_square_xs",
+      "showcase_override_prefab": "store_spinning_gem/spinning_gem",
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_gems_2x_xs/gems_2x_xs",
+      "iap_product_id_ios": "com.glu.disneygame.gem_pack_2_b",
+      "iap_product_id_android": "com.glu.disneygame.gem_pack_2_b",
+      "item_counts": [
+       {
+        "item_id": "31",
+        "count_min": 765,
+        "count_max": 765,
+        "guaranteed": true
+       }
+      ],
+      "highlighted_items": [
+       "31",
+       "31"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "vfx_asset": "store_po_store_item_01/PO_store_item_01"
+     },
+     {
+      "id": "3552543062589802",
+      "name_key": "STORE_ITEM_SHARED_CURRENCY_PREMIUM_NAME",
+      "sticker_key": "STORE_ITEM_SHARED_BEST_VALUE",
+      "main_image": "store_gems_square_xl/gems_square_xl",
+      "showcase_override_prefab": "store_gems_crate_m/gems_crate_m",
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_gems_2x_xl/gems_2x_xl",
+      "iap_product_id_ios": "com.glu.disneygame.gem_pack_8",
+      "iap_product_id_android": "com.glu.disneygame.gem_pack_8",
+      "item_counts": [
+       {
+        "item_id": "31",
+        "count_min": 15710,
+        "count_max": 15710,
+        "guaranteed": true
+       }
+      ],
+      "highlighted_items": [
+       "31"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "vfx_asset": "store_po_store_item_02/PO_store_item_02"
+     },
+     {
+      "id": "3520457524372484",
+      "name_key": "STORE_ITEM_SHARED_CURRENCY_PREMIUM_NAME",
+      "main_image": "store_gems_square_l/gems_square_l",
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_gems_2x_l/gems_2x_l",
+      "iap_product_id_ios": "com.glu.disneygame.gem_pack_6",
+      "iap_product_id_android": "com.glu.disneygame.gem_pack_6",
+      "item_counts": [
+       {
+        "item_id": "31",
+        "count_min": 7370,
+        "count_max": 7370,
+        "guaranteed": true
+       }
+      ],
+      "highlighted_items": [
+       "31"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      }
+     },
+     {
+      "id": "864786359092960",
+      "name_key": "STORE_ITEM_SHARED_CURRENCY_PREMIUM_NAME",
+      "sticker_key": "STORE_ITEM_SHARED_MOST_POPULAR",
+      "main_image": "store_gems_square_m/gems_square_m",
+      "showcase_override_prefab": "store_gems_crate_m/gems_crate_m",
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_gems_2x_m/gems_2x_m",
+      "iap_product_id_ios": "com.glu.disneygame.gem_pack_4",
+      "iap_product_id_android": "com.glu.disneygame.gem_pack_4",
+      "item_counts": [
+       {
+        "item_id": "31",
+        "count_min": 2800,
+        "count_max": 2800,
+        "guaranteed": true
+       }
+      ],
+      "highlighted_items": [
+       "31"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "vfx_asset": "store_po_store_item_01/PO_store_item_01"
+     },
+     {
+      "id": "663494349930747",
+      "name_key": "STORE_ITEM_SHARED_CURRENCY_PREMIUM_NAME",
+      "main_image": "store_gems_square_s/gems_square_s",
+      "showcase_override_prefab": "store_gems_crate_m/gems_crate_m",
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_gems_2x_s/gems_2x_s",
+      "iap_product_id_ios": "com.glu.disneygame.gem_pack_3",
+      "iap_product_id_android": "com.glu.disneygame.gem_pack_3",
+      "item_counts": [
+       {
+        "item_id": "31",
+        "count_min": 1340,
+        "count_max": 1340,
+        "guaranteed": true
+       }
+      ],
+      "highlighted_items": [
+       "31"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      }
+     },
+     {
+      "id": "2822870885453552",
+      "name_key": "STORE_ITEM_SHARED_CURRENCY_PREMIUM_NAME",
+      "main_image": "store_gems_square_xs/gems_square_xs",
+      "showcase_override_prefab": "store_gems_crate_m/gems_crate_m",
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_gems_2x_xs/gems_2x_xs",
+      "iap_product_id_ios": "com.glu.disneygame.gem_pack_2",
+      "iap_product_id_android": "com.glu.disneygame.gem_pack_2",
+      "item_counts": [
+       {
+        "item_id": "31",
+        "count_min": 610,
+        "count_max": 610,
+        "guaranteed": true
+       }
+      ],
+      "highlighted_items": [
+       "31"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      }
+     },
+     {
+      "id": "413569305803587",
+      "name_key": "STORE_ITEM_SHARED_CURRENCY_PREMIUM_NAME",
+      "main_image": "store_gems_square_xs/gems_square_xs",
+      "showcase_override_prefab": "store_spinning_gem/spinning_gem",
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_gems_2x_xs/gems_2x_xs",
+      "iap_product_id_ios": "com.glu.disneygame.gem_pack_1",
+      "iap_product_id_android": "com.glu.disneygame.gem_pack_1",
+      "item_counts": [
+       {
+        "item_id": "31",
+        "count_min": 240,
+        "count_max": 240,
+        "guaranteed": true
+       }
+      ],
+      "highlighted_items": [
+       "31"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      }
+     },
+     {
+      "id": "8964216313514239",
+      "name_key": "STORE_ITEM_SHARED_CURRENCY_GRIND_NAME",
+      "main_image": "store_coins_square_m/coins_square_m",
+      "cost": {
+       "item_id": "31",
+       "count": "220"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_coins_2x_m/coins_2x_m",
+      "item_counts": [
+       {
+        "item_id": "13",
+        "count_min": 220000,
+        "count_max": 220000,
+        "guaranteed": true
+       }
+      ],
+      "highlighted_items": [
+       "13"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      }
+     },
+     {
+      "id": "3444339504482381",
+      "name_key": "STORE_ITEM_SHARED_CURRENCY_GRIND_NAME",
+      "main_image": "store_coins_square_l/coins_square_l",
+      "cost": {
+       "item_id": "31",
+       "count": "550"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_coins_2x_l/coins_2x_l",
+      "item_counts": [
+       {
+        "item_id": "13",
+        "count_min": 600000,
+        "count_max": 600000,
+        "guaranteed": true
+       }
+      ],
+      "highlighted_items": [
+       "13"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      }
+     },
+     {
+      "id": "3695098783996210",
+      "name_key": "STORE_ITEM_SHARED_CURRENCY_GRIND_NAME",
+      "sticker_key": "STORE_ITEM_SHARED_BEST_VALUE",
+      "main_image": "store_coins_square_xl/coins_square_xl",
+      "cost": {
+       "item_id": "31",
+       "count": "1100"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_coins_2x_xl/coins_2x_xl",
+      "item_counts": [
+       {
+        "item_id": "13",
+        "count_min": 1300000,
+        "count_max": 1300000,
+        "guaranteed": true
+       }
+      ],
+      "highlighted_items": [
+       "13"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "vfx_asset": "store_po_store_item_01/PO_store_item_01"
+     },
+     {
+      "id": "1363725186558127",
+      "name_key": "STORE_ITEM_SHARED_CURRENCY_TRAIN_NAME",
+      "main_image": "store_potions_square_s/potions_square_s",
+      "cost": {
+       "item_id": "31",
+       "count": "250"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_potions_2x_s/potions_2x_s",
+      "item_counts": [
+       {
+        "item_id": "26",
+        "count_min": 50000,
+        "count_max": 50000,
+        "guaranteed": true
+       }
+      ],
+      "highlighted_items": [
+       "26"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      }
+     },
+     {
+      "id": "2191197079091203",
+      "name_key": "STORE_ITEM_SHARED_CURRENCY_TRAIN_NAME",
+      "main_image": "store_potions_square_m/potions_square_m",
+      "cost": {
+       "item_id": "31",
+       "count": "500"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_potions_2x_m/potions_2x_m",
+      "item_counts": [
+       {
+        "item_id": "26",
+        "count_min": 110000,
+        "count_max": 110000,
+        "guaranteed": true
+       }
+      ],
+      "highlighted_items": [
+       "26"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      }
+     },
+     {
+      "id": "4921704529379859",
+      "name_key": "STORE_ITEM_SHARED_CURRENCY_TRAIN_NAME",
+      "sticker_key": "STORE_ITEM_SHARED_BEST_VALUE",
+      "main_image": "store_potions_square_l/potions_square_l",
+      "cost": {
+       "item_id": "31",
+       "count": "1000"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_potions_2x_l/potions_2x_l",
+      "item_counts": [
+       {
+        "item_id": "26",
+        "count_min": 250000,
+        "count_max": 250000,
+        "guaranteed": true
+       }
+      ],
+      "highlighted_items": [
+       "26"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "vfx_asset": "store_po_store_item_01/PO_store_item_01"
+     }
+    ],
+    "showcase_items": [
+     {
+      "id": "864786359092960",
+      "name_key": "STORE_ITEM_SHARED_CURRENCY_PREMIUM_NAME",
+      "sticker_key": "STORE_ITEM_SHARED_MOST_POPULAR",
+      "main_image": "store_gems_square_m/gems_square_m",
+      "showcase_override_prefab": "store_gems_crate_m/gems_crate_m",
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_gems_2x_m/gems_2x_m",
+      "iap_product_id_ios": "com.glu.disneygame.gem_pack_4",
+      "iap_product_id_android": "com.glu.disneygame.gem_pack_4",
+      "item_counts": [
+       {
+        "item_id": "31",
+        "count_min": 2800,
+        "count_max": 2800,
+        "guaranteed": true
+       }
+      ],
+      "highlighted_items": [
+       "31"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "vfx_asset": "store_po_store_item_01/PO_store_item_01"
+     }
+    ]
+   },
+   {
+    "id": "5157625726100426",
+    "sort_order": "90",
+    "name_key": "STORE_TAB_NAME_RESOURCES",
+    "icon": "icons_store/store_tab_tokens",
+    "item_size": "THIN_STORE_ITEM_SIZE",
+    "items": [
+     {
+      "id": "3309902812474494",
+      "name_key": "STORE_ITEM_ULTIMATE_CHEST_NAME",
+      "main_image": "store_chest_1x_ultimate_1x/chest_1x_ultimate_1x",
+      "cost": {
+       "item_id": "31",
+       "count": "400"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_chest_2x_ultimate_1x/chest_2x_ultimate_1x",
+      "item_counts": [
+       {
+        "item_id": "14",
+        "count_min": 8,
+        "count_max": 10
+       },
+       {
+        "item_id": "15",
+        "count_min": 8,
+        "count_max": 25
+       },
+       {
+        "item_id": "37",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "41",
+        "count_min": 8,
+        "count_max": 25
+       },
+       {
+        "item_id": "51",
+        "count_min": 8,
+        "count_max": 80
+       },
+       {
+        "item_id": "69",
+        "count_min": 8,
+        "count_max": 10
+       },
+       {
+        "item_id": "122",
+        "count_min": 8,
+        "count_max": 25
+       },
+       {
+        "item_id": "125717942094543",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "545645511357190",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "629555636552897",
+        "count_min": 8,
+        "count_max": 25
+       },
+       {
+        "item_id": "748231379358511",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "775972187148480",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "956333145208243",
+        "count_min": 8,
+        "count_max": 80
+       },
+       {
+        "item_id": "996449903919935",
+        "count_min": 8,
+        "count_max": 80
+       },
+       {
+        "item_id": "1054913936530539",
+        "count_min": 8,
+        "count_max": 80
+       },
+       {
+        "item_id": "1347032823924283",
+        "count_min": 8,
+        "count_max": 80
+       },
+       {
+        "item_id": "1400452231532493",
+        "count_min": 8,
+        "count_max": 10
+       },
+       {
+        "item_id": "1729777815609503",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "1746409571347969",
+        "count_min": 8,
+        "count_max": 25
+       },
+       {
+        "item_id": "1839419476280165",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "1881328610304151",
+        "count_min": 8,
+        "count_max": 80
+       },
+       {
+        "item_id": "2142379036270579",
+        "count_min": 8,
+        "count_max": 80
+       },
+       {
+        "item_id": "2324481078875843",
+        "count_min": 8,
+        "count_max": 25
+       },
+       {
+        "item_id": "2377697932661433",
+        "count_min": 8,
+        "count_max": 25
+       },
+       {
+        "item_id": "2579679074621081",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "2827184494720053",
+        "count_min": 8,
+        "count_max": 80
+       },
+       {
+        "item_id": "2910263815821737",
+        "count_min": 8,
+        "count_max": 10
+       },
+       {
+        "item_id": "3495050861657105",
+        "count_min": 8,
+        "count_max": 25
+       },
+       {
+        "item_id": "3533801361262097",
+        "count_min": 8,
+        "count_max": 80
+       },
+       {
+        "item_id": "3876675989385936",
+        "count_min": 8,
+        "count_max": 25
+       },
+       {
+        "item_id": "3912684228307645",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "4132111818609309",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "4653996445097808",
+        "count_min": 8,
+        "count_max": 25
+       },
+       {
+        "item_id": "4738307322796518",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "4848833534828072",
+        "count_min": 8,
+        "count_max": 25
+       },
+       {
+        "item_id": "4871798268110196",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "4916508218791450",
+        "count_min": 8,
+        "count_max": 25
+       },
+       {
+        "item_id": "5119483846087306",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "5537606910669675",
+        "count_min": 8,
+        "count_max": 80
+       },
+       {
+        "item_id": "5543463424625676",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "5634738734696864",
+        "count_min": 8,
+        "count_max": 10
+       },
+       {
+        "item_id": "5638193476830986",
+        "count_min": 8,
+        "count_max": 10
+       },
+       {
+        "item_id": "5754301726344216",
+        "count_min": 8,
+        "count_max": 10
+       },
+       {
+        "item_id": "5791560379598773",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "5805462744053207",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "5994551327083110",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "6040517570001758",
+        "count_min": 8,
+        "count_max": 25
+       },
+       {
+        "item_id": "6123716423516406",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "6630231426722794",
+        "count_min": 8,
+        "count_max": 80
+       },
+       {
+        "item_id": "6852995734809854",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "6923411322327805",
+        "count_min": 8,
+        "count_max": 10
+       },
+       {
+        "item_id": "7375856718904969",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "7607924758047183",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "7905521621377816",
+        "count_min": 8,
+        "count_max": 25
+       },
+       {
+        "item_id": "7907029139353530",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "8064327381314079",
+        "count_min": 8,
+        "count_max": 25
+       },
+       {
+        "item_id": "8290709933838005",
+        "count_min": 8,
+        "count_max": 25
+       },
+       {
+        "item_id": "8380785602867301",
+        "count_min": 8,
+        "count_max": 10
+       },
+       {
+        "item_id": "8386605835156191",
+        "count_min": 8,
+        "count_max": 10
+       },
+       {
+        "item_id": "8394962427910704",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "8560905659388620",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "8567703698633267",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "8624836965261405",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "8640047493374189",
+        "count_min": 8,
+        "count_max": 10
+       },
+       {
+        "item_id": "8663457816762986",
+        "count_min": 8,
+        "count_max": 25
+       }
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "vfx_asset": "store_po_store_item_01/PO_store_item_01",
+      "override_costs": [
+       {
+        "item_id": "6463010382463932",
+        "count": "100"
+       }
+      ]
+     },
+     {
+      "id": "3632925024565220",
+      "name_key": "STORE_ITEM_ULTIMATE_CHEST_5X_NAME",
+      "sticker_key": "STORE_ITEM_ULTIMATE_CHEST_5X_STICKER",
+      "main_image": "store_chest_1x_ultimate_5x/chest_1x_ultimate_5x",
+      "cost": {
+       "item_id": "31",
+       "count": "1900"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_chest_2x_ultimate_5x/chest_2x_ultimate_5x",
+      "item_counts": [
+       {
+        "item_id": "14",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "15",
+        "count_min": 8,
+        "count_max": 125
+       },
+       {
+        "item_id": "37",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "41",
+        "count_min": 8,
+        "count_max": 125
+       },
+       {
+        "item_id": "51",
+        "count_min": 8,
+        "count_max": 400
+       },
+       {
+        "item_id": "69",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "122",
+        "count_min": 8,
+        "count_max": 125
+       },
+       {
+        "item_id": "125717942094543",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "545645511357190",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "629555636552897",
+        "count_min": 8,
+        "count_max": 125
+       },
+       {
+        "item_id": "748231379358511",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "775972187148480",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "956333145208243",
+        "count_min": 8,
+        "count_max": 400
+       },
+       {
+        "item_id": "996449903919935",
+        "count_min": 8,
+        "count_max": 400
+       },
+       {
+        "item_id": "1054913936530539",
+        "count_min": 8,
+        "count_max": 400
+       },
+       {
+        "item_id": "1347032823924283",
+        "count_min": 8,
+        "count_max": 400
+       },
+       {
+        "item_id": "1400452231532493",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "1729777815609503",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "1746409571347969",
+        "count_min": 8,
+        "count_max": 125
+       },
+       {
+        "item_id": "1839419476280165",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "1881328610304151",
+        "count_min": 8,
+        "count_max": 400
+       },
+       {
+        "item_id": "2142379036270579",
+        "count_min": 8,
+        "count_max": 400
+       },
+       {
+        "item_id": "2324481078875843",
+        "count_min": 8,
+        "count_max": 125
+       },
+       {
+        "item_id": "2377697932661433",
+        "count_min": 8,
+        "count_max": 125
+       },
+       {
+        "item_id": "2579679074621081",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "2827184494720053",
+        "count_min": 8,
+        "count_max": 400
+       },
+       {
+        "item_id": "2910263815821737",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "3495050861657105",
+        "count_min": 8,
+        "count_max": 125
+       },
+       {
+        "item_id": "3533801361262097",
+        "count_min": 8,
+        "count_max": 400
+       },
+       {
+        "item_id": "3876675989385936",
+        "count_min": 8,
+        "count_max": 57
+       },
+       {
+        "item_id": "3912684228307645",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "4132111818609309",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "4653996445097808",
+        "count_min": 8,
+        "count_max": 125
+       },
+       {
+        "item_id": "4738307322796518",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "4848833534828072",
+        "count_min": 8,
+        "count_max": 125
+       },
+       {
+        "item_id": "4871798268110196",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "4916508218791450",
+        "count_min": 8,
+        "count_max": 125
+       },
+       {
+        "item_id": "5119483846087306",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "5537606910669675",
+        "count_min": 8,
+        "count_max": 400
+       },
+       {
+        "item_id": "5543463424625676",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "5634738734696864",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "5638193476830986",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "5754301726344216",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "5791560379598773",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "5805462744053207",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "5994551327083110",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "6040517570001758",
+        "count_min": 8,
+        "count_max": 125
+       },
+       {
+        "item_id": "6123716423516406",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "6630231426722794",
+        "count_min": 8,
+        "count_max": 400
+       },
+       {
+        "item_id": "6852995734809854",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "6923411322327805",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "7375856718904969",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "7607924758047183",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "7905521621377816",
+        "count_min": 8,
+        "count_max": 125
+       },
+       {
+        "item_id": "7907029139353530",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "8064327381314079",
+        "count_min": 8,
+        "count_max": 125
+       },
+       {
+        "item_id": "8290709933838005",
+        "count_min": 8,
+        "count_max": 125
+       },
+       {
+        "item_id": "8380785602867301",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "8386605835156191",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "8394962427910704",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "8560905659388620",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "8567703698633267",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "8624836965261405",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "8640047493374189",
+        "count_min": 8,
+        "count_max": 50
+       },
+       {
+        "item_id": "8663457816762986",
+        "count_min": 8,
+        "count_max": 125
+       }
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "vfx_asset": "store_po_store_item_02/PO_store_item_02",
+      "override_costs": [
+       {
+        "item_id": "5417076866734877",
+        "count": "100"
+       }
+      ]
+     },
+     {
+      "id": "5154415858917195",
+      "name_key": "STORE_ITEM_ULTIMATE_CHEST_10X_NAME",
+      "sticker_key": "STORE_ITEM_ULTIMATE_CHEST_10X_STICKER",
+      "main_image": "store_chest_1x_ultimate_10x/chest_1x_ultimate_10x",
+      "showcase_override_prefab": "store_ultra_pack_gacha_d/ultra_pack_gacha_d",
+      "cost": {
+       "item_id": "31",
+       "count": "3600"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "subtitle_key": "STORE_ITEM_ULTIMATE_CHEST_10X_SUBTITLE",
+      "box_back_asset": "store_chest_2x_ultimate_10x/chest_2x_ultimate_10x",
+      "item_counts": [
+       {
+        "item_id": "14",
+        "count_min": 8,
+        "count_max": 100
+       },
+       {
+        "item_id": "15",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "37",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "41",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "51",
+        "count_min": 8,
+        "count_max": 800
+       },
+       {
+        "item_id": "69",
+        "count_min": 8,
+        "count_max": 100
+       },
+       {
+        "item_id": "122",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "125717942094543",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "545645511357190",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "629555636552897",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "748231379358511",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "775972187148480",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "956333145208243",
+        "count_min": 8,
+        "count_max": 800
+       },
+       {
+        "item_id": "996449903919935",
+        "count_min": 8,
+        "count_max": 800
+       },
+       {
+        "item_id": "1054913936530539",
+        "count_min": 8,
+        "count_max": 800
+       },
+       {
+        "item_id": "1347032823924283",
+        "count_min": 8,
+        "count_max": 800
+       },
+       {
+        "item_id": "1400452231532493",
+        "count_min": 8,
+        "count_max": 100
+       },
+       {
+        "item_id": "1729777815609503",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "1746409571347969",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "1839419476280165",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "1881328610304151",
+        "count_min": 8,
+        "count_max": 800
+       },
+       {
+        "item_id": "2142379036270579",
+        "count_min": 8,
+        "count_max": 800
+       },
+       {
+        "item_id": "2324481078875843",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "2377697932661433",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "2579679074621081",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "2827184494720053",
+        "count_min": 8,
+        "count_max": 800
+       },
+       {
+        "item_id": "2910263815821737",
+        "count_min": 8,
+        "count_max": 100
+       },
+       {
+        "item_id": "3495050861657105",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "3533801361262097",
+        "count_min": 8,
+        "count_max": 800
+       },
+       {
+        "item_id": "3876675989385936",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "3912684228307645",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "4132111818609309",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "4653996445097808",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "4738307322796518",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "4848833534828072",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "4871798268110196",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "4916508218791450",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "5119483846087306",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "5537606910669675",
+        "count_min": 8,
+        "count_max": 800
+       },
+       {
+        "item_id": "5543463424625676",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "5634738734696864",
+        "count_min": 8,
+        "count_max": 100
+       },
+       {
+        "item_id": "5638193476830986",
+        "count_min": 8,
+        "count_max": 100
+       },
+       {
+        "item_id": "5754301726344216",
+        "count_min": 8,
+        "count_max": 100
+       },
+       {
+        "item_id": "5791560379598773",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "5805462744053207",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "5994551327083110",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "6040517570001758",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "6123716423516406",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "6630231426722794",
+        "count_min": 8,
+        "count_max": 800
+       },
+       {
+        "item_id": "6852995734809854",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "6923411322327805",
+        "count_min": 8,
+        "count_max": 100
+       },
+       {
+        "item_id": "7375856718904969",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "7607924758047183",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "7905521621377816",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "7907029139353530",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "8064327381314079",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "8290709933838005",
+        "count_min": 8,
+        "count_max": 250
+       },
+       {
+        "item_id": "8380785602867301",
+        "count_min": 8,
+        "count_max": 100
+       },
+       {
+        "item_id": "8386605835156191",
+        "count_min": 8,
+        "count_max": 100
+       },
+       {
+        "item_id": "8394962427910704",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "8560905659388620",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "8567703698633267",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "8624836965261405",
+        "count_min": 8,
+        "count_max": 500
+       },
+       {
+        "item_id": "8640047493374189",
+        "count_min": 8,
+        "count_max": 100
+       },
+       {
+        "item_id": "8663457816762986",
+        "count_min": 8,
+        "count_max": 250
+       }
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "vfx_asset": "store_po_store_thin_02/PO_store_thin_02",
+      "override_costs": [
+       {
+        "item_id": "5219856141371232",
+        "count": "100"
+       }
+      ],
+      "show_details_for_purchase_confirm": true
+     },
+     {
+      "id": "8385063680933832",
+      "name_key": "STORE_ITEM_8.0_GRAND_GACHA_NAME",
+      "main_image": "store_chest_1x_gacha_grand/chest_1x_gacha_grand",
+      "cost": {
+       "item_id": "3368349137896609",
+       "count": "5500"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "1604153423"
+      },
+      "box_back_asset": "store_chest_2x_gacha_grand/chest_2x_gacha_grand",
+      "item_counts": [
+       {
+        "item_id": "14",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "15",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "69",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "122",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "133",
+        "count_min": 2,
+        "count_max": 4,
+        "guaranteed": true
+       },
+       {
+        "item_id": "125717942094543",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "545645511357190",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "775972187148480",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "996449903919935",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "1347032823924283",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "1400452231532493",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "1729777815609503",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "1839419476280165",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "2324481078875843",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "2836539702967744",
+        "count_min": 5,
+        "count_max": 5
+       },
+       {
+        "item_id": "2910263815821737",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "3098169505142870",
+        "count_min": 5,
+        "count_max": 5
+       },
+       {
+        "item_id": "3876675989385936",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "3912684228307645",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "4132111818609309",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "4252354700696583",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "4848833534828072",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "4916508218791450",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "5119483846087306",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "5461757687019266",
+        "count_min": 5,
+        "count_max": 5
+       },
+       {
+        "item_id": "5537606910669675",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "5634738734696864",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "5638193476830986",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "5754301726344216",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "6040517570001758",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "6123716423516406",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "6852995734809854",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "6923411322327805",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "7375856718904969",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "7607924758047183",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "7907029139353530",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "8064327381314079",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "8290709933838005",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "8380785602867301",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "8386605835156191",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "8560905659388620",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "8561757942901548",
+        "count_min": 5,
+        "count_max": 5
+       },
+       {
+        "item_id": "8624836965261405",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "8640047493374189",
+        "count_min": 1,
+        "count_max": 1
+       },
+       {
+        "item_id": "8663457816762986",
+        "count_min": 1,
+        "count_max": 1
+       }
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      }
+     },
+     {
+      "id": "2919032542707661",
+      "name_key": "STORE_ITEM_FREE_PACK_LOYALTY_NAME",
+      "main_image": "store_chest_1x_free_l/chest_1x_free_l",
+      "cost": {
+       "item_id": "6490301028561825",
+       "count": "3"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_chest_2x_free_l/chest_2x_free_l",
+      "item_counts": [
+       {
+        "item_id": "13",
+        "count_min": 30000,
+        "count_max": 60000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "31",
+        "count_min": 5,
+        "count_max": 15,
+        "guaranteed": true
+       },
+       {
+        "item_id": "41",
+        "count_min": 2,
+        "count_max": 4
+       },
+       {
+        "item_id": "133",
+        "count_min": 8,
+        "count_max": 12,
+        "guaranteed": true
+       },
+       {
+        "item_id": "629555636552897",
+        "count_min": 2,
+        "count_max": 4
+       },
+       {
+        "item_id": "775972187148480",
+        "count_min": 2,
+        "count_max": 4
+       },
+       {
+        "item_id": "1746409571347969",
+        "count_min": 2,
+        "count_max": 4
+       },
+       {
+        "item_id": "1949330146132045",
+        "count_min": 2,
+        "count_max": 7
+       },
+       {
+        "item_id": "2324481078875843",
+        "count_min": 2,
+        "count_max": 4
+       },
+       {
+        "item_id": "2579679074621081",
+        "count_min": 2,
+        "count_max": 4
+       },
+       {
+        "item_id": "2836539702967744",
+        "count_min": 2,
+        "count_max": 5
+       },
+       {
+        "item_id": "2910263815821737",
+        "count_min": 2,
+        "count_max": 4
+       },
+       {
+        "item_id": "3098169505142870",
+        "count_min": 2,
+        "count_max": 5
+       },
+       {
+        "item_id": "4252354700696583",
+        "count_min": 2,
+        "count_max": 4
+       },
+       {
+        "item_id": "4738307322796518",
+        "count_min": 2,
+        "count_max": 4
+       },
+       {
+        "item_id": "4871798268110196",
+        "count_min": 2,
+        "count_max": 4
+       },
+       {
+        "item_id": "5274591237803763",
+        "count_min": 2,
+        "count_max": 7
+       },
+       {
+        "item_id": "5461757687019266",
+        "count_min": 2,
+        "count_max": 5
+       },
+       {
+        "item_id": "6123716423516406",
+        "count_min": 2,
+        "count_max": 4
+       },
+       {
+        "item_id": "7375856718904969",
+        "count_min": 2,
+        "count_max": 4
+       },
+       {
+        "item_id": "7907029139353530",
+        "count_min": 2,
+        "count_max": 4
+       },
+       {
+        "item_id": "8290709933838005",
+        "count_min": 2,
+        "count_max": 4
+       },
+       {
+        "item_id": "8331552497003191",
+        "count_min": 2,
+        "count_max": 7
+       }
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      }
+     },
+     {
+      "id": "3131489280616156",
+      "name_key": "STORE_ITEM_FREE_PACK_LARGE_NAME",
+      "sticker_key": "STORE_ITEM_FREE_STICKER",
+      "main_image": "store_chest_1x_free_m/chest_1x_free_m",
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "1604325523"
+      },
+      "box_back_asset": "store_chest_2x_free_m/chest_2x_free_m",
+      "is_free": true,
+      "item_counts": [
+       {
+        "item_id": "13",
+        "count_min": 2500,
+        "count_max": 15000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "14",
+        "count_min": 1,
+        "count_max": 2
+       },
+       {
+        "item_id": "15",
+        "count_min": 1,
+        "count_max": 2
+       },
+       {
+        "item_id": "31",
+        "count_min": 3,
+        "count_max": 10,
+        "guaranteed": true
+       },
+       {
+        "item_id": "69",
+        "count_min": 1,
+        "count_max": 2
+       },
+       {
+        "item_id": "122",
+        "count_min": 1,
+        "count_max": 2
+       },
+       {
+        "item_id": "1400452231532493",
+        "count_min": 1,
+        "count_max": 2
+       },
+       {
+        "item_id": "1839419476280165",
+        "count_min": 1,
+        "count_max": 2
+       },
+       {
+        "item_id": "1949330146132045",
+        "count_min": 1,
+        "count_max": 5
+       },
+       {
+        "item_id": "2324481078875843",
+        "count_min": 1,
+        "count_max": 2
+       },
+       {
+        "item_id": "2836539702967744",
+        "count_min": 2,
+        "count_max": 5
+       },
+       {
+        "item_id": "3098169505142870",
+        "count_min": 2,
+        "count_max": 5
+       },
+       {
+        "item_id": "4916508218791450",
+        "count_min": 1,
+        "count_max": 2
+       },
+       {
+        "item_id": "5274591237803763",
+        "count_min": 2,
+        "count_max": 5
+       },
+       {
+        "item_id": "5461757687019266",
+        "count_min": 2,
+        "count_max": 5
+       },
+       {
+        "item_id": "5634738734696864",
+        "count_min": 1,
+        "count_max": 2
+       },
+       {
+        "item_id": "5638193476830986",
+        "count_min": 1,
+        "count_max": 2
+       },
+       {
+        "item_id": "5994551327083110",
+        "count_min": 1,
+        "count_max": 2
+       },
+       {
+        "item_id": "8331552497003191",
+        "count_min": 2,
+        "count_max": 5
+       },
+       {
+        "item_id": "8380785602867301",
+        "count_min": 1,
+        "count_max": 2
+       },
+       {
+        "item_id": "8560905659388620",
+        "count_min": 1,
+        "count_max": 2
+       },
+       {
+        "item_id": "8640047493374189",
+        "count_min": 1,
+        "count_max": 2
+       }
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      }
+     },
+     {
+      "id": "1872156857015775",
+      "name_key": "STORE_ITEM_FREE_PACK_MEDIUM_NAME",
+      "sticker_key": "STORE_ITEM_FREE_STICKER",
+      "main_image": "store_chest_1x_free_s/chest_1x_free_s",
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "1604253528"
+      },
+      "box_back_asset": "store_chest_2x_free_s/chest_2x_free_s",
+      "is_free": true,
+      "item_counts": [
+       {
+        "item_id": "13",
+        "count_min": 500,
+        "count_max": 4000
+       },
+       {
+        "item_id": "26",
+        "count_min": 200,
+        "count_max": 600
+       },
+       {
+        "item_id": "1949330146132045",
+        "count_min": 2,
+        "count_max": 3
+       },
+       {
+        "item_id": "2836539702967744",
+        "count_min": 2,
+        "count_max": 5
+       },
+       {
+        "item_id": "3098169505142870",
+        "count_min": 2,
+        "count_max": 5
+       },
+       {
+        "item_id": "5274591237803763",
+        "count_min": 2,
+        "count_max": 3
+       },
+       {
+        "item_id": "5461757687019266",
+        "count_min": 2,
+        "count_max": 5
+       },
+       {
+        "item_id": "8331552497003191",
+        "count_min": 2,
+        "count_max": 3
+       }
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      }
+     },
+     {
+      "id": "8863765071411907",
+      "name_key": "STORE_ITEM_FREE_AD_NAME",
+      "sticker_key": "STORE_ITEM_FREE_STICKER",
+      "main_image": "store_chest_1x_ad/chest_1x_ad",
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816",
+       "purchase_data": [
+        {
+         "granularity": "DAY_PURCHASE_LIMIT_GRANULARITY",
+         "remaining_purchases": 10
+        }
+       ]
+      },
+      "subtitle_key": "STORE_ITEM_FREE_AD_SUBTITLE",
+      "box_back_asset": "store_chest_2x_ad/chest_2x_ad",
+      "item_counts": [
+       {
+        "item_id": "13",
+        "count_min": 200,
+        "count_max": 1000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "26",
+        "count_min": 100,
+        "count_max": 500,
+        "guaranteed": true
+       },
+       {
+        "item_id": "31",
+        "count_min": 2,
+        "count_max": 2,
+        "guaranteed": true
+       },
+       {
+        "item_id": "1949330146132045",
+        "count_min": 1,
+        "count_max": 2
+       },
+       {
+        "item_id": "2836539702967744",
+        "count_min": 1,
+        "count_max": 4
+       },
+       {
+        "item_id": "3098169505142870",
+        "count_min": 1,
+        "count_max": 4
+       },
+       {
+        "item_id": "5274591237803763",
+        "count_min": 1,
+        "count_max": 2
+       },
+       {
+        "item_id": "5461757687019266",
+        "count_min": 1,
+        "count_max": 4
+       },
+       {
+        "item_id": "8331552497003191",
+        "count_min": 1,
+        "count_max": 2
+       }
+      ],
+      "frame_color": {
+       "r": 74,
+       "g": 144,
+       "b": 226,
+       "a": 1.0
+      },
+      "vfx_asset": "store_po_store_thin_01/PO_store_thin_01",
+      "rev_sdk_video_ad_type": 9
+     }
+    ],
+    "showcase_items": [
+     {
+      "id": "2299069450580821",
+      "name_key": "STORE_ITEM_GEMS_100_BONUS_NAME",
+      "sticker_key": "STORE_ITEM_GEMS_100_BONUS_STICKER",
+      "main_image": "store_gems_square_xl/gems_square_xl",
+      "showcase_override_prefab": "store_gems_crate_xl/gems_crate_xl",
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_gems_2x_xl/gems_2x_xl",
+      "iap_product_id_ios": "com.glu.disneygame.gem_pack_8_b",
+      "iap_product_id_android": "com.glu.disneygame.gem_pack_8_b",
+      "item_counts": [
+       {
+        "item_id": "31",
+        "count_min": 19640,
+        "count_max": 19640,
+        "guaranteed": true
+       }
+      ],
+      "highlighted_items": [
+       "31"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "vfx_asset": "store_po_store_square_03/PO_store_square_03"
+     },
+     {
+      "id": "1438291441461287",
+      "name_key": "STORE_ITEM_GEMS_20_BONUS_NAME",
+      "sticker_key": "STORE_ITEM_GEMS_20_BONUS_STICKER",
+      "main_image": "store_gems_square_m/gems_square_m",
+      "showcase_override_prefab": "store_gems_crate_l/gems_crate_l",
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_gems_2x_m/gems_2x_m",
+      "iap_product_id_ios": "com.glu.disneygame.gem_pack_4_b",
+      "iap_product_id_android": "com.glu.disneygame.gem_pack_4_b",
+      "item_counts": [
+       {
+        "item_id": "31",
+        "count_min": 3500,
+        "count_max": 3500,
+        "guaranteed": true
+       }
+      ],
+      "highlighted_items": [
+       "31"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "vfx_asset": "store_po_store_square_02/PO_store_square_02"
+     },
+     {
+      "id": "864786359092960",
+      "name_key": "STORE_ITEM_SHARED_CURRENCY_PREMIUM_NAME",
+      "sticker_key": "STORE_ITEM_SHARED_MOST_POPULAR",
+      "main_image": "store_gems_square_m/gems_square_m",
+      "showcase_override_prefab": "store_gems_crate_m/gems_crate_m",
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_gems_2x_m/gems_2x_m",
+      "iap_product_id_ios": "com.glu.disneygame.gem_pack_4",
+      "iap_product_id_android": "com.glu.disneygame.gem_pack_4",
+      "item_counts": [
+       {
+        "item_id": "31",
+        "count_min": 2800,
+        "count_max": 2800,
+        "guaranteed": true
+       }
+      ],
+      "highlighted_items": [
+       "31"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "vfx_asset": "store_po_store_item_01/PO_store_item_01"
+     }
+    ]
+   },
+   {
+    "id": "4972750404268087",
+    "sort_order": "60",
+    "name_key": "STORE_TAB_NAME_CHARACTER_PACKS",
+    "icon": "icons_store/store_tab_special",
+    "item_size": "SPECIAL_OFFER_STORE_ITEM_SIZE",
+    "items": [
+     {
+      "id": "6848158365556363",
+      "name_key": "STORE_ITEM_ABILITY_MATS_GACHA_NAME",
+      "sticker_key": "STORE_ITEM_LIMITED_TIME_STICKER",
+      "main_image": "store_special_offer_abilitmats-pack/special_offer_abilitmats-pack",
+      "cost": {
+       "item_id": "31",
+       "count": "500"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816",
+       "purchase_data": [
+        {
+         "granularity": 3,
+         "remaining_purchases": 3
+        }
+       ]
+      },
+      "subtitle_key": "STORE_ITEM_ABILITY_MATS_GEM_B_SUBTITLE",
+      "box_back_asset": "store_pouch_2x_ability_aby/pouch_2x_ability_aby",
+      "iap_product_id_ios": "com.glu.disneygame.special_offer_177",
+      "iap_product_id_android": "com.glu.disneygame.special_offer_177",
+      "item_counts": [
+       {
+        "item_id": "13",
+        "count_min": 10000,
+        "count_max": 10000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "133",
+        "count_min": 30,
+        "count_max": 30,
+        "guaranteed": true
+       },
+       {
+        "item_id": "3883066061505188",
+        "count_min": 12,
+        "count_max": 12,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6221535176831871",
+        "count_min": 3,
+        "count_max": 3,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604390399",
+      "special_offer_icon": "icons_store/special_offers_icon",
+      "highlighted_items": [
+       "133",
+       "3883066061505188",
+       "6221535176831871",
+       "13"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "main_image_special_offer_override": "store_special_offer_abilitmats-pack/special_offer_abilitmats-pack"
+     },
+     {
+      "id": "3941554357234294",
+      "name_key": "STORE_ITEM_DAILY_LOYALTY_PACK_NAME",
+      "sticker_key": "STORE_ITEM_DAILY_DEAL_STICKER",
+      "main_image": "store_special_offer_loyalty_gem_coins_potions/special_offer_loyalty_gem_coins_potions",
+      "cost": {
+       "item_id": "31",
+       "count": "500"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816",
+       "purchase_data": [
+        {
+         "granularity": 3,
+         "remaining_purchases": 1
+        }
+       ]
+      },
+      "subtitle_key": "STORE_ITEM_DAILY_LOYALTY_COIN_PACK_SUBTITLE",
+      "box_back_asset": "store_special_2x_loyalty_gem_coins_potions/special_2x_loyalty_gem_coins_potions",
+      "iap_product_id_ios": "com.glu.disneygame.special_offer_174",
+      "iap_product_id_android": "com.glu.disneygame.special_offer_174",
+      "item_counts": [
+       {
+        "item_id": "13",
+        "count_min": 50000,
+        "count_max": 50000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "26",
+        "count_min": 10000,
+        "count_max": 10000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "31",
+        "count_min": 100,
+        "count_max": 100,
+        "guaranteed": true
+       },
+       {
+        "item_id": "133",
+        "count_min": 25,
+        "count_max": 25,
+        "guaranteed": true
+       },
+       {
+        "item_id": "6490301028561825",
+        "count_min": 9,
+        "count_max": 9,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604419199",
+      "special_offer_icon": "icons_store/special_offers_icon",
+      "special_offer_vgp_placement_triggers": [
+       "home_screen"
+      ],
+      "highlighted_items": [
+       "6490301028561825",
+       "133",
+       "31",
+       "13",
+       "26"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "main_image_special_offer_override": "store_special_offer_loyalty_gem_coins_potions/special_offer_loyalty_gem_coins_potions",
+      "special_offer_popup_frequency_s": 129600
+     },
+     {
+      "id": "5899195596976665",
+      "name_key": "STORE_ITEM_DAILY_GEAR_DEFENSE_SPEED_NAME",
+      "sticker_key": "STORE_ITEM_DAILY_DEAL_STICKER",
+      "main_image": "store_special_offer_gear_speedy_t3t4/special_offer_gear_speedy_t3t4",
+      "cost": {
+       "item_id": "31",
+       "count": "500"
+      },
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816",
+       "purchase_data": [
+        {
+         "granularity": 3,
+         "remaining_purchases": 1
+        }
+       ]
+      },
+      "subtitle_key": "STORE_ITEM_DAILY_GEAR_PACK_SUBTITLE",
+      "box_back_asset": "store_special_2x_gear_gem_coins_potions/special_2x_gear_gem_coins_potions",
+      "iap_product_id_ios": "com.glu.disneygame.premium_deal_10",
+      "iap_product_id_android": "com.glu.disneygame.premium_deal_10",
+      "item_counts": [
+       {
+        "item_id": "13",
+        "count_min": 5000,
+        "count_max": 5000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "26",
+        "count_min": 5000,
+        "count_max": 5000,
+        "guaranteed": true
+       },
+       {
+        "item_id": "31",
+        "count_min": 50,
+        "count_max": 50,
+        "guaranteed": true
+       },
+       {
+        "item_id": "1532650026871995",
+        "count_min": 2,
+        "count_max": 2,
+        "guaranteed": true
+       },
+       {
+        "item_id": "3098169505142870",
+        "count_min": 20,
+        "count_max": 20,
+        "guaranteed": true
+       },
+       {
+        "item_id": "4341174772736048",
+        "count_min": 1,
+        "count_max": 1,
+        "guaranteed": true
+       },
+       {
+        "item_id": "7102597852819715",
+        "count_min": 20,
+        "count_max": 20,
+        "guaranteed": true
+       },
+       {
+        "item_id": "8516882342655442",
+        "count_min": 2,
+        "count_max": 2,
+        "guaranteed": true
+       }
+      ],
+      "expiry": "1604419199",
+      "special_offer_icon": "icons_store/special_offers_icon",
+      "special_offer_vgp_placement_triggers": [
+       "home_screen"
+      ],
+      "highlighted_items": [
+       "4341174772736048",
+       "1532650026871995",
+       "8516882342655442",
+       "3098169505142870",
+       "7102597852819715",
+       "31",
+       "13",
+       "26"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "main_image_special_offer_override": "store_special_offer_gear_speedy_t3t4/special_offer_gear_speedy_t3t4",
+      "special_offer_popup_frequency_s": 129600
+     }
+    ],
+    "showcase_items": [
+     {
+      "id": "864786359092960",
+      "name_key": "STORE_ITEM_SHARED_CURRENCY_PREMIUM_NAME",
+      "sticker_key": "STORE_ITEM_SHARED_MOST_POPULAR",
+      "main_image": "store_gems_square_m/gems_square_m",
+      "showcase_override_prefab": "store_gems_crate_m/gems_crate_m",
+      "purchase_limits": {
+       "limit_elapsed_timestamp": "18446744011573954816"
+      },
+      "box_back_asset": "store_gems_2x_m/gems_2x_m",
+      "iap_product_id_ios": "com.glu.disneygame.gem_pack_4",
+      "iap_product_id_android": "com.glu.disneygame.gem_pack_4",
+      "item_counts": [
+       {
+        "item_id": "31",
+        "count_min": 2800,
+        "count_max": 2800,
+        "guaranteed": true
+       }
+      ],
+      "highlighted_items": [
+       "31"
+      ],
+      "frame_color": {
+       "r": 112,
+       "g": 95,
+       "b": 152,
+       "a": 1.0
+      },
+      "vfx_asset": "store_po_store_item_01/PO_store_item_01"
+     }
+    ]
+   }
+  ]
+ }
+}

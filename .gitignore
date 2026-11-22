@@ -1,0 +1,11 @@
+__pycache__/
+.DS_Store
+.venv/
+*.apk
+*.jks
+*.keystore
+build/
+data/
+dist/
+native/cas_host/out/
+var/

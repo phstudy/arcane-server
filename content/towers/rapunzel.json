@@ -1,0 +1,3638 @@
+{
+ "tower_event": {
+  "content_id": "3828703521446732",
+  "event_group_id": "5904367801255990",
+  "maps": [
+   {
+    "id": {
+     "tower_id": "3828703521446732"
+    },
+    "name": "TOWER_RAPUNZEL_EVENT_MAP_1_NAME",
+    "description": "TOWER_RAPUNZEL_EVENT_MAP_1_DESC",
+    "image": "icons_scheduled_events_event_tangled/tangled_cover_rapunzel",
+    "showcase_items": [
+     "6682891455152019",
+     "8927824578314110",
+     "2352909193225519"
+    ],
+    "node_count": "5"
+   },
+   {
+    "id": {
+     "tower_id": "3828703521446732",
+     "map_id": "1"
+    },
+    "name": "TOWER_RAPUNZEL_EVENT_MAP_2_NAME",
+    "description": "TOWER_RAPUNZEL_EVENT_MAP_2_DESC",
+    "image": "icons_scheduled_events_event_tangled/tangled_cover_rapunzel",
+    "showcase_items": [
+     "6682891455152019",
+     "8927824578314110",
+     "3592475363781214",
+     "2352909193225519"
+    ],
+    "node_count": "7"
+   },
+   {
+    "id": {
+     "tower_id": "3828703521446732",
+     "map_id": "2"
+    },
+    "name": "TOWER_RAPUNZEL_EVENT_MAP_3_NAME",
+    "description": "TOWER_RAPUNZEL_EVENT_MAP_3_DESC",
+    "image": "icons_scheduled_events_event_tangled/tangled_cover_rapunzel",
+    "showcase_items": [
+     "6682891455152019",
+     "8927824578314110",
+     "3592475363781214",
+     "2352909193225519"
+    ],
+    "node_count": "9"
+   }
+  ],
+  "begin_timestamp": "1622325600",
+  "end_timestamp": "1622498399",
+  "marquee_image": "icons_scheduled_events_event_tangled/Event_portal_tangled",
+  "locked_color": {},
+  "unlocked_color": {},
+  "shipment_def_id": "998213433772813",
+  "milestone_reward_table_id": "8644321141312850",
+  "hud_currency": "2352909193225519"
+ },
+ "tower": {
+  "def_id": "3828703521446732",
+  "maps": [
+   {
+    "id": {
+     "tower_id": "3828703521446732"
+    },
+    "nodes": [
+     {
+      "battle_data": {
+       "name": "TOWERNODE_00_00_NAME",
+       "possible_rewards": [
+        {
+         "item_id": "6682891455152019",
+         "count": "1",
+         "loot_tag": "FIRST_TIME_REWARD"
+        },
+        {
+         "item_id": "8927824578314110",
+         "count": "1"
+        },
+        {
+         "item_id": "2352909193225519",
+         "count": "120"
+        },
+        {
+         "item_id": "717898132760390",
+         "count": "200"
+        }
+       ],
+       "battle_restriction": "8017463071338105",
+       "entry_cost_id": "6821013986026800",
+       "entry_cost_count": "8",
+       "possible_enemies": [
+        {
+         "content_id": "3331593180574271",
+         "icon": "icons_units_daisy/portrait_daisy_duck",
+         "range": 1.0,
+         "name_key": "DAISYDUCK_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "2489250258015164",
+          "1735573666711246",
+          "1102804729261314",
+          "4623262297475655",
+          "8597917023531694"
+         ],
+         "unit_health": "1634"
+        },
+        {
+         "content_id": "7484496426816642",
+         "icon": "icons_units_monterey_jack/portrait_monterey_jack",
+         "range": 1.0,
+         "name_key": "MONTEREY_JACK_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "2489250258015164",
+          "3414121522116146",
+          "1102804729261314",
+          "1515770659265273"
+         ],
+         "unit_health": "2179"
+        },
+        {
+         "content_id": "6677378796004658",
+         "icon": "icons_units_sgt_calhoun/portrait_sgt_calhoun",
+         "range": 4.0,
+         "name_key": "SERGEANT_CALHOUN_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "2489250258015164",
+          "5039684465977895",
+          "1102804729261314",
+          "5800061760299363",
+          "6896032918037657"
+         ],
+         "unit_health": "1193"
+        },
+        {
+         "content_id": "8713130068551573",
+         "icon": "icons_units_scrooge/portrait_scrooge",
+         "range": 1.0,
+         "name_key": "SCROOGEMCDUCK_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "2489250258015164",
+          "6663377657461749",
+          "1102804729261314",
+          "8597917023531694"
+         ],
+         "unit_health": "1433"
+        },
+        {
+         "content_id": "1319488816909964",
+         "icon": "icons_units_donald_duck/portrait_donald_duck",
+         "range": 1.0,
+         "name_key": "DONALDDUCK_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "2489250258015164",
+          "1735573666711246",
+          "1102804729261314",
+          "4623262297475655",
+          "8597917023531694"
+         ],
+         "unit_health": "2179"
+        }
+       ],
+       "enemy_stats": {
+        "level": "35",
+        "rarity": "1",
+        "gear_tier": "3"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "6682891455152019",
+         "count_min": 1,
+         "count_max": 1,
+         "loot_tag": "FIRST_TIME_REWARD",
+         "guaranteed": true
+        },
+        {
+         "item_id": "8927824578314110",
+         "count_min": 1,
+         "count_max": 1
+        },
+        {
+         "item_id": "2352909193225519",
+         "count_min": 120,
+         "count_max": 120,
+         "guaranteed": true
+        },
+        {
+         "item_id": "717898132760390",
+         "count_min": 200,
+         "count_max": 200,
+         "guaranteed": true
+        }
+       ],
+       "override_boss_index": -1
+      }
+     },
+     {
+      "id": "1",
+      "battle_data": {
+       "name": "TOWERNODE_00_01_NAME",
+       "possible_rewards": [
+        {
+         "item_id": "6682891455152019",
+         "count": "1",
+         "loot_tag": "FIRST_TIME_REWARD"
+        },
+        {
+         "item_id": "8927824578314110",
+         "count": "1"
+        },
+        {
+         "item_id": "2352909193225519",
+         "count": "120"
+        },
+        {
+         "item_id": "717898132760390",
+         "count": "200"
+        }
+       ],
+       "battle_restriction": "6507995958567572",
+       "entry_cost_id": "6821013986026800",
+       "entry_cost_count": "8",
+       "possible_enemies": [
+        {
+         "content_id": "6495565017355218",
+         "icon": "icons_units_jangles/portrait_jangles",
+         "range": 1.0,
+         "name_key": "JANGLES_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "185013331968872",
+          "2489250258015164",
+          "7803373101595394",
+          "4324500008569381"
+         ],
+         "unit_health": "2964"
+        },
+        {
+         "content_id": "4979608122848331",
+         "icon": "icons_units_pete/portrait_pete",
+         "range": 1.0,
+         "name_key": "PETE_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "2489250258015164",
+          "4623262297475655",
+          "4324500008569381"
+         ],
+         "unit_health": "1904"
+        },
+        {
+         "content_id": "8218042807117239",
+         "icon": "icons_units_big_bad_wolf/portrait_big_bad_wolf",
+         "range": 1.0,
+         "name_key": "BIG_BAD_WOLF_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "2489250258015164",
+          "4623262297475655",
+          "4324500008569381"
+         ],
+         "unit_health": "1904"
+        },
+        {
+         "content_id": "2425318463423019",
+         "icon": "icons_units_yzma/portrait_yzma",
+         "range": 40.0,
+         "name_key": "YZMA_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5495262680796735",
+          "4419393874676815",
+          "3019196162921018",
+          "2136312807087658"
+         ],
+         "unit_health": "2116"
+        },
+        {
+         "content_id": "3793696733556542",
+         "icon": "icons_units_demona/portrait_demona",
+         "range": 80.0,
+         "name_key": "DEMONA_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "2489250258015164",
+          "4193773771140306",
+          "4324500008569381",
+          "5800061760299363"
+         ],
+         "unit_health": "1904"
+        }
+       ],
+       "enemy_stats": {
+        "level": "36",
+        "rarity": "2",
+        "gear_tier": "3"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "6682891455152019",
+         "count_min": 1,
+         "count_max": 1,
+         "loot_tag": "FIRST_TIME_REWARD",
+         "guaranteed": true
+        },
+        {
+         "item_id": "8927824578314110",
+         "count_min": 1,
+         "count_max": 1
+        },
+        {
+         "item_id": "2352909193225519",
+         "count_min": 120,
+         "count_max": 120,
+         "guaranteed": true
+        },
+        {
+         "item_id": "717898132760390",
+         "count_min": 200,
+         "count_max": 200,
+         "guaranteed": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "2",
+      "battle_data": {
+       "name": "TOWERNODE_00_02_NAME",
+       "possible_rewards": [
+        {
+         "item_id": "6682891455152019",
+         "count": "1",
+         "loot_tag": "FIRST_TIME_REWARD"
+        },
+        {
+         "item_id": "8927824578314110",
+         "count": "1"
+        },
+        {
+         "item_id": "2352909193225519",
+         "count": "120"
+        },
+        {
+         "item_id": "717898132760390",
+         "count": "200"
+        }
+       ],
+       "battle_restriction": "1631229890889760",
+       "entry_cost_id": "6821013986026800",
+       "entry_cost_count": "8",
+       "possible_enemies": [
+        {
+         "content_id": "6248908469179626",
+         "icon": "icons_units_kronk/portrait_kronk",
+         "range": 1.0,
+         "name_key": "KRONK_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "4419393874676815",
+          "3019196162921018",
+          "5059163436552255"
+         ],
+         "unit_health": "3014"
+        },
+        {
+         "content_id": "1809998714774592",
+         "icon": "icons_units_shan_yu/portrait_shan_yu",
+         "range": 1.0,
+         "name_key": "SHAN_YU_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "4419393874676815",
+          "6268674455014635",
+          "2136312807087658"
+         ],
+         "unit_health": "1934"
+        },
+        {
+         "content_id": "1736798772274835",
+         "icon": "icons_units_aladdin/portrait_aladdin",
+         "range": 1.0,
+         "name_key": "ALADDIN_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4419393874676815",
+          "6950932538148189",
+          "5059163436552255"
+         ],
+         "unit_health": "1934"
+        },
+        {
+         "content_id": "2425318463423019",
+         "icon": "icons_units_yzma/portrait_yzma",
+         "range": 40.0,
+         "name_key": "YZMA_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5495262680796735",
+          "4419393874676815",
+          "3019196162921018",
+          "2136312807087658"
+         ],
+         "unit_health": "2152"
+        },
+        {
+         "content_id": "1198211944242711",
+         "icon": "icons_units_genie/portrait_genie",
+         "range": 3.0,
+         "name_key": "GENIE_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "4419393874676815",
+          "6950932538148189",
+          "5059163436552255"
+         ],
+         "unit_health": "2152"
+        }
+       ],
+       "enemy_stats": {
+        "level": "37",
+        "rarity": "2",
+        "gear_tier": "3"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "6682891455152019",
+         "count_min": 1,
+         "count_max": 1,
+         "loot_tag": "FIRST_TIME_REWARD",
+         "guaranteed": true
+        },
+        {
+         "item_id": "8927824578314110",
+         "count_min": 1,
+         "count_max": 1
+        },
+        {
+         "item_id": "2352909193225519",
+         "count_min": 120,
+         "count_max": 120,
+         "guaranteed": true
+        },
+        {
+         "item_id": "717898132760390",
+         "count_min": 200,
+         "count_max": 200,
+         "guaranteed": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "3",
+      "battle_data": {
+       "name": "TOWERNODE_00_03_NAME",
+       "possible_rewards": [
+        {
+         "item_id": "6682891455152019",
+         "count": "1",
+         "loot_tag": "FIRST_TIME_REWARD"
+        },
+        {
+         "item_id": "8927824578314110",
+         "count": "1"
+        },
+        {
+         "item_id": "2352909193225519",
+         "count": "160"
+        },
+        {
+         "item_id": "717898132760390",
+         "count": "200"
+        }
+       ],
+       "battle_restriction": "1849688830016588",
+       "entry_cost_id": "6821013986026800",
+       "entry_cost_count": "8",
+       "possible_enemies": [
+        {
+         "content_id": "2760323008706986",
+         "icon": "icons_units_pluto/portrait_pluto",
+         "name_key": "PLUTO_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "2489250258015164",
+          "4623262297475655",
+          "1735573666711246",
+          "1102804729261314"
+         ],
+         "unit_health": "2594"
+        },
+        {
+         "content_id": "3331593180574271",
+         "icon": "icons_units_daisy/portrait_daisy_duck",
+         "range": 1.0,
+         "name_key": "DAISYDUCK_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "2489250258015164",
+          "1735573666711246",
+          "1102804729261314",
+          "4623262297475655",
+          "8597917023531694"
+         ],
+         "unit_health": "2928"
+        },
+        {
+         "content_id": "3217439617028435",
+         "icon": "icons_units_minnie_mouse/portrait_minnie_mouse",
+         "range": 4.0,
+         "name_key": "MINNIEMOUSE_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "2489250258015164",
+          "4623262297475655",
+          "1735573666711246",
+          "1102804729261314"
+         ],
+         "unit_health": "2594"
+        },
+        {
+         "content_id": "1319488816909964",
+         "icon": "icons_units_donald_duck/portrait_donald_duck",
+         "range": 1.0,
+         "name_key": "DONALDDUCK_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "2489250258015164",
+          "1735573666711246",
+          "1102804729261314",
+          "4623262297475655",
+          "8597917023531694"
+         ],
+         "unit_health": "4144"
+        },
+        {
+         "content_id": "1428774108615339",
+         "icon": "icons_units_goofy/portrait_goofy",
+         "range": 3.0,
+         "name_key": "GOOFY_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "2489250258015164",
+          "4623262297475655",
+          "1102804729261314",
+          "1735573666711246"
+         ],
+         "unit_health": "3904"
+        }
+       ],
+       "enemy_stats": {
+        "level": "38",
+        "rarity": "2",
+        "gear_tier": "4"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "6682891455152019",
+         "count_min": 1,
+         "count_max": 1,
+         "loot_tag": "FIRST_TIME_REWARD",
+         "guaranteed": true
+        },
+        {
+         "item_id": "8927824578314110",
+         "count_min": 1,
+         "count_max": 1
+        },
+        {
+         "item_id": "2352909193225519",
+         "count_min": 160,
+         "count_max": 160,
+         "guaranteed": true
+        },
+        {
+         "item_id": "717898132760390",
+         "count_min": 200,
+         "count_max": 200,
+         "guaranteed": true
+        }
+       ],
+       "override_boss_index": 3
+      }
+     },
+     {
+      "id": "4",
+      "battle_data": {
+       "name": "TOWERNODE_00_04_NAME",
+       "possible_rewards": [
+        {
+         "item_id": "6682891455152019",
+         "count": "1",
+         "loot_tag": "FIRST_TIME_REWARD"
+        },
+        {
+         "item_id": "8927824578314110",
+         "count": "1"
+        },
+        {
+         "item_id": "2352909193225519",
+         "count": "160"
+        },
+        {
+         "item_id": "717898132760390",
+         "count": "200"
+        }
+       ],
+       "battle_restriction": "189787033925453",
+       "entry_cost_id": "6821013986026800",
+       "entry_cost_count": "8",
+       "possible_enemies": [
+        {
+         "content_id": "1120886486277251",
+         "icon": "icons_units_kristoff/portrait_kristoff",
+         "range": 1.0,
+         "name_key": "KRISTOFF_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "4650364419227244",
+          "1417430934200025"
+         ],
+         "unit_health": "3955"
+        },
+        {
+         "content_id": "3220171862554103",
+         "icon": "icons_units_maximus/portrait_maximus",
+         "range": 1.0,
+         "name_key": "MAXIMUS_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "4419393874676815",
+          "3545371783249927",
+          "5059163436552255"
+         ],
+         "unit_health": "3955"
+        },
+        {
+         "content_id": "5424845974987535",
+         "icon": "icons_units_sven/portrait_sven",
+         "range": 1.0,
+         "name_key": "SVEN_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4650364419227244",
+          "1417430934200025",
+          "3435498373630924"
+         ],
+         "unit_health": "2852"
+        },
+        {
+         "content_id": "7836378166039323",
+         "icon": "icons_units_anna/portrait_anna",
+         "range": 80.0,
+         "name_key": "ANNA_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "4419393874676815",
+          "1417430934200025",
+          "5059163436552255"
+         ],
+         "unit_health": "2966"
+        },
+        {
+         "content_id": "3077390668497398",
+         "icon": "icons_units_elsa/portrait_elsa",
+         "range": 4.0,
+         "name_key": "ELSA2_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4650364419227244",
+          "1417430934200025"
+         ],
+         "unit_health": "2625"
+        }
+       ],
+       "enemy_stats": {
+        "level": "39",
+        "rarity": "2",
+        "gear_tier": "4"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "6682891455152019",
+         "count_min": 1,
+         "count_max": 1,
+         "loot_tag": "FIRST_TIME_REWARD",
+         "guaranteed": true
+        },
+        {
+         "item_id": "8927824578314110",
+         "count_min": 1,
+         "count_max": 1
+        },
+        {
+         "item_id": "2352909193225519",
+         "count_min": 160,
+         "count_max": 160,
+         "guaranteed": true
+        },
+        {
+         "item_id": "717898132760390",
+         "count_min": 200,
+         "count_max": 200,
+         "guaranteed": true
+        }
+       ]
+      }
+     }
+    ],
+    "required_completion_count": "1",
+    "image": "icons_scheduled_events_event_tangled/tangled_cover_rapunzel",
+    "scene": "env_rapunzel_tower/rapunzel_tower",
+    "name_key": "TOWER_RAPUNZEL_EVENT_MAP_1_NAME",
+    "description_key": "TOWER_RAPUNZEL_EVENT_MAP_1_DESC",
+    "showcase_items": [
+     "6682891455152019",
+     "8927824578314110",
+     "2352909193225519"
+    ],
+    "progression_rewards": [
+     {
+      "item_id": "6682891455152019",
+      "count_min": 5,
+      "count_max": 5,
+      "guaranteed": true
+     }
+    ],
+    "tower_type": "TOWER_EVENT",
+    "shipment_def_id_override": "998213433772813",
+    "hud_currency": "2352909193225519",
+    "milestone_reward_table_id": "8644321141312850"
+   },
+   {
+    "id": {
+     "tower_id": "3828703521446732",
+     "map_id": "1"
+    },
+    "nodes": [
+     {
+      "battle_data": {
+       "name": "TOWERNODE_01_00_NAME",
+       "possible_rewards": [
+        {
+         "item_id": "6682891455152019",
+         "count": "1",
+         "loot_tag": "FIRST_TIME_REWARD"
+        },
+        {
+         "item_id": "8927824578314110",
+         "count": "1"
+        },
+        {
+         "item_id": "2352909193225519",
+         "count": "250"
+        },
+        {
+         "item_id": "717898132760390",
+         "count": "300"
+        }
+       ],
+       "battle_restriction": "519968270377549",
+       "entry_cost_id": "6821013986026800",
+       "entry_cost_count": "10",
+       "possible_enemies": [
+        {
+         "content_id": "7223888738756585",
+         "icon": "icons_units_mr_incredible/portrait_mr_incredible",
+         "range": 1.0,
+         "name_key": "MR_INCREDIBLE_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "2489250258015164",
+          "4475336535634831",
+          "1102804729261314"
+         ],
+         "unit_health": "4245"
+        },
+        {
+         "content_id": "6975264719804706",
+         "icon": "icons_units_elastigirl/portrait_elastigirl",
+         "range": 1.0,
+         "name_key": "ELASTIGIRL_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "2489250258015164",
+          "4475336535634831",
+          "1102804729261314"
+         ],
+         "unit_health": "2655"
+        },
+        {
+         "content_id": "7037884731553552",
+         "icon": "icons_units_frozone/portrait_frozone",
+         "range": 4.0,
+         "name_key": "FROZONE_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "2489250258015164",
+          "4475336535634831",
+          "1102804729261314",
+          "2786228526981547"
+         ],
+         "unit_health": "2887"
+        },
+        {
+         "content_id": "6814002232054243",
+         "icon": "icons_units_dash/portrait_dash",
+         "range": 1.0,
+         "name_key": "DASH_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "2489250258015164",
+          "4475336535634831",
+          "1102804729261314",
+          "7663520267777078"
+         ],
+         "unit_health": "2655"
+        },
+        {
+         "content_id": "1424534210893336",
+         "icon": "icons_units_jack_jack/portrait_jack_jack",
+         "range": 4.0,
+         "name_key": "JACKJACK_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "2489250258015164",
+          "4475336535634831",
+          "1102804729261314",
+          "7663520267777078"
+         ],
+         "unit_health": "2655"
+        }
+       ],
+       "enemy_stats": {
+        "level": "40",
+        "rarity": "2",
+        "gear_tier": "4"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "6682891455152019",
+         "count_min": 1,
+         "count_max": 1,
+         "loot_tag": "FIRST_TIME_REWARD",
+         "guaranteed": true
+        },
+        {
+         "item_id": "8927824578314110",
+         "count_min": 1,
+         "count_max": 1
+        },
+        {
+         "item_id": "2352909193225519",
+         "count_min": 250,
+         "count_max": 250,
+         "guaranteed": true
+        },
+        {
+         "item_id": "717898132760390",
+         "count_min": 300,
+         "count_max": 300,
+         "guaranteed": true
+        }
+       ],
+       "override_boss_index": -1
+      }
+     },
+     {
+      "id": "1",
+      "battle_data": {
+       "name": "TOWERNODE_01_01_NAME",
+       "possible_rewards": [
+        {
+         "item_id": "6682891455152019",
+         "count": "1",
+         "loot_tag": "FIRST_TIME_REWARD"
+        },
+        {
+         "item_id": "8927824578314110",
+         "count": "1"
+        },
+        {
+         "item_id": "2352909193225519",
+         "count": "250"
+        },
+        {
+         "item_id": "717898132760390",
+         "count": "300"
+        }
+       ],
+       "battle_restriction": "7498095275251930",
+       "entry_cost_id": "6821013986026800",
+       "entry_cost_count": "10",
+       "possible_enemies": [
+        {
+         "content_id": "8079831875819121",
+         "icon": "icons_units_bo_peep/portrait_bo_peep",
+         "range": 1.0,
+         "name_key": "BO_PEEP_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "2489250258015164",
+          "4345897184857488",
+          "1102804729261314",
+          "1515770659265273"
+         ],
+         "unit_health": "4632"
+        },
+        {
+         "content_id": "11",
+         "icon": "icons_units_buzz/portrait_buzz_lightyear",
+         "range": 1.0,
+         "name_key": "BUZZLIGHTYEAR_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "2489250258015164",
+          "4345897184857488",
+          "6896032918037657",
+          "1102804729261314"
+         ],
+         "unit_health": "3031"
+        },
+        {
+         "content_id": "6799823887600150",
+         "icon": "icons_units_jessie/portrait_jessie",
+         "range": 3.0,
+         "name_key": "JESSIE_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "2489250258015164",
+          "4345897184857488",
+          "1102804729261314"
+         ],
+         "unit_health": "3031"
+        },
+        {
+         "content_id": "151",
+         "icon": "icons_units_woody/portrait_woody",
+         "range": 3.0,
+         "name_key": "WOODY_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "2489250258015164",
+          "4345897184857488",
+          "1102804729261314"
+         ],
+         "unit_health": "3326"
+        },
+        {
+         "content_id": "8079429168333959",
+         "icon": "icons_units_zurg/portrait_zurg",
+         "range": 4.0,
+         "name_key": "EMPEROR_ZURG_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "2489250258015164",
+          "4345897184857488",
+          "4324500008569381",
+          "6896032918037657"
+         ],
+         "unit_health": "3031"
+        }
+       ],
+       "enemy_stats": {
+        "level": "41",
+        "rarity": "3",
+        "gear_tier": "4"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "6682891455152019",
+         "count_min": 1,
+         "count_max": 1,
+         "loot_tag": "FIRST_TIME_REWARD",
+         "guaranteed": true
+        },
+        {
+         "item_id": "8927824578314110",
+         "count_min": 1,
+         "count_max": 1
+        },
+        {
+         "item_id": "2352909193225519",
+         "count_min": 250,
+         "count_max": 250,
+         "guaranteed": true
+        },
+        {
+         "item_id": "717898132760390",
+         "count_min": 300,
+         "count_max": 300,
+         "guaranteed": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "2",
+      "battle_data": {
+       "name": "TOWERNODE_01_02_NAME",
+       "possible_rewards": [
+        {
+         "item_id": "6682891455152019",
+         "count": "1",
+         "loot_tag": "FIRST_TIME_REWARD"
+        },
+        {
+         "item_id": "8927824578314110",
+         "count": "1"
+        },
+        {
+         "item_id": "3592475363781214",
+         "count": "1"
+        },
+        {
+         "item_id": "2352909193225519",
+         "count": "260"
+        },
+        {
+         "item_id": "717898132760390",
+         "count": "300"
+        }
+       ],
+       "battle_restriction": "2596394098394441",
+       "entry_cost_id": "6821013986026800",
+       "entry_cost_count": "10",
+       "possible_enemies": [
+        {
+         "content_id": "2294812731867727",
+         "icon": "icons_units_mordu/portrait_mordu",
+         "range": 1.0,
+         "name_key": "MORDU_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "185013331968872",
+          "4650364419227244",
+          "5968787601315360",
+          "3435498373630924"
+         ],
+         "unit_health": "4696"
+        },
+        {
+         "content_id": "50",
+         "icon": "icons_units_shere_khan/portrait_shere_khan",
+         "name_key": "SHEREKHAN_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "4650364419227244",
+          "3527948419375253"
+         ],
+         "unit_health": "3070"
+        },
+        {
+         "content_id": "5584717432624453",
+         "icon": "icons_units_scar/portrait_scar",
+         "range": 1.0,
+         "name_key": "SCAR_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "4650364419227244",
+          "8302746766098706"
+         ],
+         "unit_health": "3070"
+        },
+        {
+         "content_id": "2116902913444099",
+         "icon": "icons_units_pocahontas/portrait_pocahontas",
+         "range": 4.0,
+         "name_key": "POCAHONTAS_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "4650364419227244",
+          "4120166060123730",
+          "5820897550663740"
+         ],
+         "unit_health": "3371"
+        },
+        {
+         "content_id": "508341540759214",
+         "icon": "icons_units_merida/portrait_merida",
+         "range": 4.0,
+         "name_key": "MERIDA_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4650364419227244",
+          "5968787601315360",
+          "5820897550663740"
+         ],
+         "unit_health": "3070"
+        }
+       ],
+       "enemy_stats": {
+        "level": "42",
+        "rarity": "3",
+        "gear_tier": "4"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "6682891455152019",
+         "count_min": 1,
+         "count_max": 1,
+         "loot_tag": "FIRST_TIME_REWARD",
+         "guaranteed": true
+        },
+        {
+         "item_id": "8927824578314110",
+         "count_min": 1,
+         "count_max": 1
+        },
+        {
+         "item_id": "3592475363781214",
+         "count_min": 1,
+         "count_max": 1
+        },
+        {
+         "item_id": "2352909193225519",
+         "count_min": 260,
+         "count_max": 260,
+         "guaranteed": true
+        },
+        {
+         "item_id": "717898132760390",
+         "count_min": 300,
+         "count_max": 300,
+         "guaranteed": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "3",
+      "battle_data": {
+       "name": "TOWERNODE_01_03_NAME",
+       "possible_rewards": [
+        {
+         "item_id": "6682891455152019",
+         "count": "1",
+         "loot_tag": "FIRST_TIME_REWARD"
+        },
+        {
+         "item_id": "8927824578314110",
+         "count": "1"
+        },
+        {
+         "item_id": "3592475363781214",
+         "count": "1"
+        },
+        {
+         "item_id": "2352909193225519",
+         "count": "270"
+        },
+        {
+         "item_id": "717898132760390",
+         "count": "300"
+        }
+       ],
+       "battle_restriction": "8427405558763863",
+       "entry_cost_id": "6821013986026800",
+       "entry_cost_count": "10",
+       "possible_enemies": [
+        {
+         "content_id": "1833609470868558",
+         "icon": "icons_units_maui/portrait_maui",
+         "range": 1.0,
+         "name_key": "MAUI_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "5308420037568950",
+          "2469462995899328"
+         ],
+         "unit_health": "4761"
+        },
+        {
+         "content_id": "2516666220254955",
+         "icon": "icons_units_moana/portrait_moana",
+         "range": 1.0,
+         "name_key": "MOANA_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "5308420037568950",
+          "2469462995899328",
+          "5820897550663740",
+          "1515770659265273"
+         ],
+         "unit_health": "3108"
+        },
+        {
+         "content_id": "600284832226040",
+         "icon": "icons_units_stitch/portrait_stitch",
+         "range": 3.0,
+         "name_key": "STITCH_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "5308420037568950",
+          "1685574569952946",
+          "6896032918037657"
+         ],
+         "unit_health": "3108"
+        },
+        {
+         "content_id": "8040952014412195",
+         "icon": "icons_units_cobra_bubbles/portrait_cobra_bubbles",
+         "range": 1.0,
+         "name_key": "COBRABUBBLES_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "5308420037568950",
+          "1685574569952946"
+         ],
+         "unit_health": "4119"
+        },
+        {
+         "content_id": "72",
+         "icon": "icons_units_tinkerbell/portrait_tinkerbell",
+         "range": 4.0,
+         "name_key": "TINKERBELL_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "5308420037568950",
+          "8798989884907941"
+         ],
+         "unit_health": "3417"
+        }
+       ],
+       "enemy_stats": {
+        "level": "43",
+        "rarity": "3",
+        "gear_tier": "4"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "6682891455152019",
+         "count_min": 1,
+         "count_max": 1,
+         "loot_tag": "FIRST_TIME_REWARD",
+         "guaranteed": true
+        },
+        {
+         "item_id": "8927824578314110",
+         "count_min": 1,
+         "count_max": 1
+        },
+        {
+         "item_id": "3592475363781214",
+         "count_min": 1,
+         "count_max": 1
+        },
+        {
+         "item_id": "2352909193225519",
+         "count_min": 270,
+         "count_max": 270,
+         "guaranteed": true
+        },
+        {
+         "item_id": "717898132760390",
+         "count_min": 300,
+         "count_max": 300,
+         "guaranteed": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "4",
+      "battle_data": {
+       "name": "TOWERNODE_01_04_NAME",
+       "possible_rewards": [
+        {
+         "item_id": "6682891455152019",
+         "count": "2",
+         "loot_tag": "FIRST_TIME_REWARD"
+        },
+        {
+         "item_id": "8927824578314110",
+         "count": "1"
+        },
+        {
+         "item_id": "3592475363781214",
+         "count": "1"
+        },
+        {
+         "item_id": "2352909193225519",
+         "count": "280"
+        },
+        {
+         "item_id": "717898132760390",
+         "count": "350"
+        }
+       ],
+       "battle_restriction": "4047923955190142",
+       "entry_cost_id": "6821013986026800",
+       "entry_cost_count": "10",
+       "possible_enemies": [
+        {
+         "content_id": "6122772866382469",
+         "icon": "icons_units_gizmoduck/portrait_gizmoduck",
+         "range": 1.0,
+         "name_key": "GIZMODUCK_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "2489250258015164",
+          "367812718792421",
+          "1102804729261314",
+          "6663377657461749",
+          "5800061760299363",
+          "8597917023531694"
+         ],
+         "unit_health": "5755"
+        },
+        {
+         "content_id": "8713130068551573",
+         "icon": "icons_units_scrooge/portrait_scrooge",
+         "range": 1.0,
+         "name_key": "SCROOGEMCDUCK_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "2489250258015164",
+          "6663377657461749",
+          "1102804729261314",
+          "8597917023531694"
+         ],
+         "unit_health": "3705"
+        },
+        {
+         "content_id": "1319488816909964",
+         "icon": "icons_units_donald_duck/portrait_donald_duck",
+         "range": 1.0,
+         "name_key": "DONALDDUCK_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "2489250258015164",
+          "1735573666711246",
+          "1102804729261314",
+          "4623262297475655",
+          "8597917023531694"
+         ],
+         "unit_health": "5995"
+        },
+        {
+         "content_id": "3331593180574271",
+         "icon": "icons_units_daisy/portrait_daisy_duck",
+         "range": 1.0,
+         "name_key": "DAISYDUCK_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "2489250258015164",
+          "1735573666711246",
+          "1102804729261314",
+          "4623262297475655",
+          "8597917023531694"
+         ],
+         "unit_health": "4316"
+        },
+        {
+         "content_id": "6718413568421239",
+         "icon": "icons_units_darkwing_duck/portrait_darkwing_duck",
+         "range": 1.0,
+         "name_key": "DARKWINGDUCK_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "2489250258015164",
+          "367812718792421",
+          "1102804729261314",
+          "5800061760299363",
+          "8597917023531694"
+         ],
+         "unit_health": "4316"
+        }
+       ],
+       "enemy_stats": {
+        "level": "44",
+        "rarity": "4",
+        "gear_tier": "4"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "6682891455152019",
+         "count_min": 2,
+         "count_max": 2,
+         "loot_tag": "FIRST_TIME_REWARD",
+         "guaranteed": true
+        },
+        {
+         "item_id": "8927824578314110",
+         "count_min": 1,
+         "count_max": 1
+        },
+        {
+         "item_id": "3592475363781214",
+         "count_min": 1,
+         "count_max": 1
+        },
+        {
+         "item_id": "2352909193225519",
+         "count_min": 280,
+         "count_max": 280,
+         "guaranteed": true
+        },
+        {
+         "item_id": "717898132760390",
+         "count_min": 350,
+         "count_max": 350,
+         "guaranteed": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "5",
+      "battle_data": {
+       "name": "TOWERNODE_01_05_NAME",
+       "possible_rewards": [
+        {
+         "item_id": "6682891455152019",
+         "count": "2",
+         "loot_tag": "FIRST_TIME_REWARD"
+        },
+        {
+         "item_id": "8927824578314110",
+         "count": "1"
+        },
+        {
+         "item_id": "3592475363781214",
+         "count": "1"
+        },
+        {
+         "item_id": "2352909193225519",
+         "count": "290"
+        },
+        {
+         "item_id": "717898132760390",
+         "count": "350"
+        }
+       ],
+       "battle_restriction": "4725306481379196",
+       "entry_cost_id": "6821013986026800",
+       "entry_cost_count": "10",
+       "possible_enemies": [
+        {
+         "content_id": "3266443875899032",
+         "icon": "icons_units_mickey_mouse/portrait_mickey_mouse",
+         "name_key": "MICKEYMOUSE_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "2489250258015164",
+          "4623262297475655",
+          "1102804729261314",
+          "1735573666711246"
+         ],
+         "unit_health": "4413"
+        },
+        {
+         "content_id": "1428774108615339",
+         "icon": "icons_units_goofy/portrait_goofy",
+         "range": 3.0,
+         "name_key": "GOOFY_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "2489250258015164",
+          "4623262297475655",
+          "1102804729261314",
+          "1735573666711246"
+         ],
+         "unit_health": "5841"
+        },
+        {
+         "content_id": "2760323008706986",
+         "icon": "icons_units_pluto/portrait_pluto",
+         "name_key": "PLUTO_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "2489250258015164",
+          "4623262297475655",
+          "1735573666711246",
+          "1102804729261314"
+         ],
+         "unit_health": "3756"
+        },
+        {
+         "content_id": "36",
+         "icon": "icons_units_baloo/portrait_baloo",
+         "range": 3.0,
+         "name_key": "BALOO_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "4650364419227244",
+          "3527948419375253"
+         ],
+         "unit_health": "4173"
+        },
+        {
+         "content_id": "4914158096592074",
+         "icon": "icons_units_quorra/portrait_quorra",
+         "range": 1.0,
+         "name_key": "QUORRA_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "2489250258015164",
+          "8255668117143183",
+          "5800061760299363",
+          "1102804729261314"
+         ],
+         "unit_health": "3756"
+        }
+       ],
+       "enemy_stats": {
+        "level": "45",
+        "rarity": "4",
+        "gear_tier": "4"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "6682891455152019",
+         "count_min": 2,
+         "count_max": 2,
+         "loot_tag": "FIRST_TIME_REWARD",
+         "guaranteed": true
+        },
+        {
+         "item_id": "8927824578314110",
+         "count_min": 1,
+         "count_max": 1
+        },
+        {
+         "item_id": "3592475363781214",
+         "count_min": 1,
+         "count_max": 1
+        },
+        {
+         "item_id": "2352909193225519",
+         "count_min": 290,
+         "count_max": 290,
+         "guaranteed": true
+        },
+        {
+         "item_id": "717898132760390",
+         "count_min": 350,
+         "count_max": 350,
+         "guaranteed": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "6",
+      "battle_data": {
+       "name": "TOWERNODE_01_06_NAME",
+       "possible_rewards": [
+        {
+         "item_id": "6682891455152019",
+         "count": "2",
+         "loot_tag": "FIRST_TIME_REWARD"
+        },
+        {
+         "item_id": "8927824578314110",
+         "count": "1"
+        },
+        {
+         "item_id": "3592475363781214",
+         "count": "1"
+        },
+        {
+         "item_id": "2352909193225519",
+         "count": "300"
+        },
+        {
+         "item_id": "717898132760390",
+         "count": "350"
+        }
+       ],
+       "battle_restriction": "6198071693687117",
+       "entry_cost_id": "6821013986026800",
+       "entry_cost_count": "10",
+       "possible_enemies": [
+        {
+         "content_id": "1581819488991070",
+         "icon": "icons_units_flynn_rider/portrait_flynn_rider",
+         "range": 1.0,
+         "name_key": "FLYNN_RIDER_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "4419393874676815",
+          "3545371783249927",
+          "5059163436552255"
+         ],
+         "unit_health": "5256"
+        },
+        {
+         "content_id": "3940153952957",
+         "icon": "icons_units_prince_eric/portrait_prince_eric_2",
+         "range": 1.0,
+         "name_key": "PRINCEERIC_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "5308420037568950",
+          "3133581935767717"
+         ],
+         "unit_health": "6848"
+        },
+        {
+         "content_id": "5710225926985727",
+         "icon": "icons_units_robin_hood/portrait_robin_hood",
+         "range": 4.0,
+         "name_key": "ROBIN_HOOD_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4419393874676815",
+          "4934108704849804",
+          "3435498373630924",
+          "5059163436552255"
+         ],
+         "unit_health": "4498"
+        },
+        {
+         "content_id": "7836378166039323",
+         "icon": "icons_units_anna/portrait_anna",
+         "range": 80.0,
+         "name_key": "ANNA_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "4419393874676815",
+          "1417430934200025",
+          "5059163436552255"
+         ],
+         "unit_health": "5136"
+        },
+        {
+         "content_id": "508341540759214",
+         "icon": "icons_units_merida/portrait_merida",
+         "range": 4.0,
+         "name_key": "MERIDA_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4650364419227244",
+          "5968787601315360",
+          "5820897550663740"
+         ],
+         "unit_health": "4498"
+        }
+       ],
+       "enemy_stats": {
+        "level": "46",
+        "rarity": "4",
+        "gear_tier": "5"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "6682891455152019",
+         "count_min": 2,
+         "count_max": 2,
+         "loot_tag": "FIRST_TIME_REWARD",
+         "guaranteed": true
+        },
+        {
+         "item_id": "8927824578314110",
+         "count_min": 1,
+         "count_max": 1
+        },
+        {
+         "item_id": "3592475363781214",
+         "count_min": 1,
+         "count_max": 1
+        },
+        {
+         "item_id": "2352909193225519",
+         "count_min": 300,
+         "count_max": 300,
+         "guaranteed": true
+        },
+        {
+         "item_id": "717898132760390",
+         "count_min": 350,
+         "count_max": 350,
+         "guaranteed": true
+        }
+       ]
+      }
+     }
+    ],
+    "required_completion_count": "1",
+    "image": "icons_scheduled_events_event_tangled/tangled_cover_rapunzel",
+    "scene": "env_rapunzel_tower/rapunzel_tower",
+    "name_key": "TOWER_RAPUNZEL_EVENT_MAP_2_NAME",
+    "description_key": "TOWER_RAPUNZEL_EVENT_MAP_2_DESC",
+    "showcase_items": [
+     "6682891455152019",
+     "8927824578314110",
+     "3592475363781214",
+     "2352909193225519"
+    ],
+    "progression_rewards": [
+     {
+      "item_id": "6682891455152019",
+      "count_min": 30,
+      "count_max": 30,
+      "guaranteed": true
+     }
+    ],
+    "tower_type": "TOWER_EVENT",
+    "shipment_def_id_override": "998213433772813",
+    "hud_currency": "2352909193225519",
+    "milestone_reward_table_id": "8644321141312850"
+   },
+   {
+    "id": {
+     "tower_id": "3828703521446732",
+     "map_id": "2"
+    },
+    "nodes": [
+     {
+      "battle_data": {
+       "name": "TOWERNODE_02_00_NAME",
+       "possible_rewards": [
+        {
+         "item_id": "6682891455152019",
+         "count": "2",
+         "loot_tag": "FIRST_TIME_REWARD"
+        },
+        {
+         "item_id": "8927824578314110",
+         "count": "1"
+        },
+        {
+         "item_id": "3592475363781214",
+         "count": "1"
+        },
+        {
+         "item_id": "2352909193225519",
+         "count": "400"
+        },
+        {
+         "item_id": "717898132760390",
+         "count": "480"
+        }
+       ],
+       "battle_restriction": "7584376633261696",
+       "entry_cost_id": "6821013986026800",
+       "entry_cost_count": "12",
+       "possible_enemies": [
+        {
+         "content_id": "7786425981047712",
+         "icon": "icons_units_chunk/portrait_chunk",
+         "range": 1.0,
+         "name_key": "CHUNK_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "185013331968872",
+          "2489250258015164",
+          "4345897184857488",
+          "4324500008569381",
+          "379740972651392"
+         ],
+         "unit_health": "12151"
+        },
+        {
+         "content_id": "5702473871132078",
+         "icon": "icons_units_big_baby/portrait_big_baby",
+         "range": 1.0,
+         "name_key": "BIG_BABY_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "2489250258015164",
+          "4345897184857488",
+          "4324500008569381",
+          "379740972651392"
+         ],
+         "unit_health": "8022"
+        },
+        {
+         "content_id": "4979608122848331",
+         "icon": "icons_units_pete/portrait_pete",
+         "range": 1.0,
+         "name_key": "PETE_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "2489250258015164",
+          "4623262297475655",
+          "4324500008569381"
+         ],
+         "unit_health": "7782"
+        },
+        {
+         "content_id": "8397384975680519",
+         "icon": "icons_units_lotso/portrait_lotso",
+         "range": 3.0,
+         "name_key": "LOTSO_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5495262680796735",
+          "2489250258015164",
+          "4345897184857488",
+          "4324500008569381",
+          "379740972651392"
+         ],
+         "unit_health": "8589"
+        },
+        {
+         "content_id": "3793696733556542",
+         "icon": "icons_units_demona/portrait_demona",
+         "range": 80.0,
+         "name_key": "DEMONA_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "2489250258015164",
+          "4193773771140306",
+          "4324500008569381",
+          "5800061760299363"
+         ],
+         "unit_health": "7782"
+        }
+       ],
+       "enemy_stats": {
+        "level": "52",
+        "rarity": "5",
+        "gear_tier": "6"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "6682891455152019",
+         "count_min": 2,
+         "count_max": 2,
+         "loot_tag": "FIRST_TIME_REWARD",
+         "guaranteed": true
+        },
+        {
+         "item_id": "8927824578314110",
+         "count_min": 1,
+         "count_max": 1
+        },
+        {
+         "item_id": "3592475363781214",
+         "count_min": 1,
+         "count_max": 1
+        },
+        {
+         "item_id": "2352909193225519",
+         "count_min": 400,
+         "count_max": 400,
+         "guaranteed": true
+        },
+        {
+         "item_id": "717898132760390",
+         "count_min": 480,
+         "count_max": 480,
+         "guaranteed": true
+        }
+       ],
+       "override_boss_index": -1
+      }
+     },
+     {
+      "id": "1",
+      "battle_data": {
+       "name": "TOWERNODE_02_01_NAME",
+       "possible_rewards": [
+        {
+         "item_id": "6682891455152019",
+         "count": "2",
+         "loot_tag": "FIRST_TIME_REWARD"
+        },
+        {
+         "item_id": "8927824578314110",
+         "count": "1"
+        },
+        {
+         "item_id": "3592475363781214",
+         "count": "1"
+        },
+        {
+         "item_id": "2352909193225519",
+         "count": "400"
+        },
+        {
+         "item_id": "717898132760390",
+         "count": "480"
+        }
+       ],
+       "battle_restriction": "1491361919816325",
+       "entry_cost_id": "6821013986026800",
+       "entry_cost_count": "12",
+       "possible_enemies": [
+        {
+         "content_id": "8355588830097610",
+         "icon": "icons_units_sulley/portrait_sulley",
+         "range": 1.0,
+         "name_key": "SULLEY_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "2489250258015164",
+          "4946503385482089",
+          "1102804729261314"
+         ],
+         "unit_health": "13030"
+        },
+        {
+         "content_id": "6651802205495402",
+         "icon": "icons_units_randall/portrait_randall",
+         "range": 1.0,
+         "name_key": "RANDALLBOGGS_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "2489250258015164",
+          "4946503385482089",
+          "4324500008569381"
+         ],
+         "unit_health": "7964"
+        },
+        {
+         "content_id": "4914158096592074",
+         "icon": "icons_units_quorra/portrait_quorra",
+         "range": 1.0,
+         "name_key": "QUORRA_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "2489250258015164",
+          "8255668117143183",
+          "5800061760299363",
+          "1102804729261314"
+         ],
+         "unit_health": "7964"
+        },
+        {
+         "content_id": "3368663937660261",
+         "icon": "icons_units_syndrome/portrait_syndrome",
+         "range": 3.0,
+         "name_key": "SYNDROME_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "2489250258015164",
+          "4475336535634831",
+          "4324500008569381",
+          "5800061760299363"
+         ],
+         "unit_health": "7964"
+        },
+        {
+         "content_id": "8079429168333959",
+         "icon": "icons_units_zurg/portrait_zurg",
+         "range": 4.0,
+         "name_key": "EMPEROR_ZURG_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "2489250258015164",
+          "4345897184857488",
+          "4324500008569381",
+          "6896032918037657"
+         ],
+         "unit_health": "7964"
+        }
+       ],
+       "enemy_stats": {
+        "level": "54",
+        "rarity": "5",
+        "gear_tier": "6"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "6682891455152019",
+         "count_min": 2,
+         "count_max": 2,
+         "loot_tag": "FIRST_TIME_REWARD",
+         "guaranteed": true
+        },
+        {
+         "item_id": "8927824578314110",
+         "count_min": 1,
+         "count_max": 1
+        },
+        {
+         "item_id": "3592475363781214",
+         "count_min": 1,
+         "count_max": 1
+        },
+        {
+         "item_id": "2352909193225519",
+         "count_min": 400,
+         "count_max": 400,
+         "guaranteed": true
+        },
+        {
+         "item_id": "717898132760390",
+         "count_min": 480,
+         "count_max": 480,
+         "guaranteed": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "2",
+      "battle_data": {
+       "name": "TOWERNODE_02_02_NAME",
+       "possible_rewards": [
+        {
+         "item_id": "6682891455152019",
+         "count": "2",
+         "loot_tag": "FIRST_TIME_REWARD"
+        },
+        {
+         "item_id": "8927824578314110",
+         "count": "1"
+        },
+        {
+         "item_id": "3592475363781214",
+         "count": "1"
+        },
+        {
+         "item_id": "2352909193225519",
+         "count": "420"
+        },
+        {
+         "item_id": "717898132760390",
+         "count": "480"
+        }
+       ],
+       "battle_restriction": "6107159272398871",
+       "entry_cost_id": "6821013986026800",
+       "entry_cost_count": "12",
+       "possible_enemies": [
+        {
+         "content_id": "3940153952957",
+         "icon": "icons_units_prince_eric/portrait_prince_eric_2",
+         "range": 1.0,
+         "name_key": "PRINCEERIC_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "5308420037568950",
+          "3133581935767717"
+         ],
+         "unit_health": "16952"
+        },
+        {
+         "content_id": "150",
+         "icon": "icons_units_jack_sparrow/portrait_jack_sparrow",
+         "range": 1.0,
+         "name_key": "JACK_SPARROW_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "5308420037568950",
+          "8576325908096714",
+          "1515770659265273"
+         ],
+         "unit_health": "10359"
+        },
+        {
+         "content_id": "149",
+         "icon": "icons_units_hook/portrait_hook",
+         "range": 1.0,
+         "name_key": "CAPTAINHOOK_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "5308420037568950",
+          "8798989884907941"
+         ],
+         "unit_health": "10759"
+        },
+        {
+         "content_id": "10",
+         "icon": "icons_units_ariel/portrait_ariel",
+         "range": 80.0,
+         "name_key": "ARIEL_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "5308420037568950",
+          "3133581935767717",
+          "5820897550663740"
+         ],
+         "unit_health": "12062"
+        },
+        {
+         "content_id": "6953054855346287",
+         "icon": "icons_units_king_triton/portrait_king_triton",
+         "range": 3.0,
+         "name_key": "KINGTRITON_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "5308420037568950",
+          "3133581935767717"
+         ],
+         "unit_health": "10999"
+        }
+       ],
+       "enemy_stats": {
+        "level": "56",
+        "rarity": "6",
+        "gear_tier": "6"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "6682891455152019",
+         "count_min": 2,
+         "count_max": 2,
+         "loot_tag": "FIRST_TIME_REWARD",
+         "guaranteed": true
+        },
+        {
+         "item_id": "8927824578314110",
+         "count_min": 1,
+         "count_max": 1
+        },
+        {
+         "item_id": "3592475363781214",
+         "count_min": 1,
+         "count_max": 1
+        },
+        {
+         "item_id": "2352909193225519",
+         "count_min": 420,
+         "count_max": 420,
+         "guaranteed": true
+        },
+        {
+         "item_id": "717898132760390",
+         "count_min": 480,
+         "count_max": 480,
+         "guaranteed": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "3",
+      "battle_data": {
+       "name": "TOWERNODE_02_03_NAME",
+       "possible_rewards": [
+        {
+         "item_id": "6682891455152019",
+         "count": "2",
+         "loot_tag": "FIRST_TIME_REWARD"
+        },
+        {
+         "item_id": "8927824578314110",
+         "count": "1"
+        },
+        {
+         "item_id": "3592475363781214",
+         "count": "1"
+        },
+        {
+         "item_id": "2352909193225519",
+         "count": "420"
+        },
+        {
+         "item_id": "717898132760390",
+         "count": "480"
+        }
+       ],
+       "battle_restriction": "6903050012291743",
+       "entry_cost_id": "6821013986026800",
+       "entry_cost_count": "12",
+       "possible_enemies": [
+        {
+         "content_id": "5239884894495182",
+         "icon": "icons_units_steamboat_willie_mickey/portrait_mickey_steamboat",
+         "range": 1.0,
+         "name_key": "STEAMBOATWILLIEMICKEY_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "2489250258015164",
+          "4623262297475655",
+          "1102804729261314"
+         ],
+         "unit_health": "17412"
+        },
+        {
+         "content_id": "3266443875899032",
+         "icon": "icons_units_mickey_mouse/portrait_mickey_mouse",
+         "name_key": "MICKEYMOUSE_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "2489250258015164",
+          "4623262297475655",
+          "1102804729261314",
+          "1735573666711246"
+         ],
+         "unit_health": "12624"
+        },
+        {
+         "content_id": "39",
+         "icon": "icons_units_mickey/portrait_sorcerers_apprentice_mickey",
+         "range": 80.0,
+         "name_key": "SORCERERSAPPRENTICEMICKEY_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4419393874676815",
+          "4623262297475655",
+          "5059163436552255"
+         ],
+         "unit_health": "10935"
+        },
+        {
+         "content_id": "1428774108615339",
+         "icon": "icons_units_goofy/portrait_goofy",
+         "range": 3.0,
+         "name_key": "GOOFY_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "2489250258015164",
+          "4623262297475655",
+          "1102804729261314",
+          "1735573666711246"
+         ],
+         "unit_health": "17412"
+        },
+        {
+         "content_id": "2760323008706986",
+         "icon": "icons_units_pluto/portrait_pluto",
+         "name_key": "PLUTO_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "2489250258015164",
+          "4623262297475655",
+          "1735573666711246",
+          "1102804729261314"
+         ],
+         "unit_health": "11035"
+        }
+       ],
+       "enemy_stats": {
+        "level": "58",
+        "rarity": "6",
+        "gear_tier": "6"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "6682891455152019",
+         "count_min": 2,
+         "count_max": 2,
+         "loot_tag": "FIRST_TIME_REWARD",
+         "guaranteed": true
+        },
+        {
+         "item_id": "8927824578314110",
+         "count_min": 1,
+         "count_max": 1
+        },
+        {
+         "item_id": "3592475363781214",
+         "count_min": 1,
+         "count_max": 1
+        },
+        {
+         "item_id": "2352909193225519",
+         "count_min": 420,
+         "count_max": 420,
+         "guaranteed": true
+        },
+        {
+         "item_id": "717898132760390",
+         "count_min": 480,
+         "count_max": 480,
+         "guaranteed": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "4",
+      "battle_data": {
+       "name": "TOWERNODE_02_04_NAME",
+       "possible_rewards": [
+        {
+         "item_id": "6682891455152019",
+         "count": "2",
+         "loot_tag": "FIRST_TIME_REWARD"
+        },
+        {
+         "item_id": "8927824578314110",
+         "count": "1"
+        },
+        {
+         "item_id": "3592475363781214",
+         "count": "1"
+        },
+        {
+         "item_id": "2352909193225519",
+         "count": "480"
+        },
+        {
+         "item_id": "717898132760390",
+         "count": "480"
+        }
+       ],
+       "battle_restriction": "1910581097595341",
+       "entry_cost_id": "6821013986026800",
+       "entry_cost_count": "12",
+       "possible_enemies": [
+        {
+         "content_id": "553069276713467",
+         "icon": "icons_units_dr_facilier/portrait_drfacilier",
+         "range": 3.0,
+         "name_key": "DR_FACILIER_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "2489250258015164",
+          "1750147552920622",
+          "4324500008569381"
+         ],
+         "unit_health": "12707"
+        },
+        {
+         "content_id": "4264839534548679",
+         "icon": "icons_units_hades/portrait_hades",
+         "range": 4.0,
+         "name_key": "HADES_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "5960529125021754",
+          "8842003313865136",
+          "1871025105244876"
+         ],
+         "unit_health": "11952"
+        },
+        {
+         "content_id": "125",
+         "icon": "icons_units_jack_skellington/portrait_skellington",
+         "range": 3.0,
+         "name_key": "JACKSKELLINGTON_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "8842003313865136",
+          "1465066247313418",
+          "2786228526981547"
+         ],
+         "unit_health": "13405"
+        },
+        {
+         "content_id": "370744954140450",
+         "icon": "icons_units_sally/portrait_sally",
+         "name_key": "SALLY_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "8842003313865136",
+          "1465066247313418",
+          "2786228526981547"
+         ],
+         "unit_health": "11312"
+        },
+        {
+         "content_id": "124",
+         "icon": "icons_units_oogie/portrait_oogie",
+         "range": 1.0,
+         "name_key": "OOGIEBOOGIE_UNIT_NAME",
+         "categories": [
+          "614606076824576",
+          "185013331968872",
+          "8842003313865136",
+          "1465066247313418",
+          "2786228526981547"
+         ],
+         "unit_health": "18273"
+        }
+       ],
+       "enemy_stats": {
+        "level": "60",
+        "rarity": "6",
+        "gear_tier": "6"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "6682891455152019",
+         "count_min": 2,
+         "count_max": 2,
+         "loot_tag": "FIRST_TIME_REWARD",
+         "guaranteed": true
+        },
+        {
+         "item_id": "8927824578314110",
+         "count_min": 1,
+         "count_max": 1
+        },
+        {
+         "item_id": "3592475363781214",
+         "count_min": 1,
+         "count_max": 1
+        },
+        {
+         "item_id": "2352909193225519",
+         "count_min": 480,
+         "count_max": 480,
+         "guaranteed": true
+        },
+        {
+         "item_id": "717898132760390",
+         "count_min": 480,
+         "count_max": 480,
+         "guaranteed": true
+        }
+       ],
+       "override_boss_index": 4
+      }
+     },
+     {
+      "id": "5",
+      "battle_data": {
+       "name": "TOWERNODE_02_05_NAME",
+       "possible_rewards": [
+        {
+         "item_id": "6682891455152019",
+         "count": "2",
+         "loot_tag": "FIRST_TIME_REWARD"
+        },
+        {
+         "item_id": "8927824578314110",
+         "count": "1"
+        },
+        {
+         "item_id": "3592475363781214",
+         "count": "1"
+        },
+        {
+         "item_id": "2352909193225519",
+         "count": "540"
+        },
+        {
+         "item_id": "717898132760390",
+         "count": "600"
+        }
+       ],
+       "battle_restriction": "2462645914651336",
+       "entry_cost_id": "6821013986026800",
+       "entry_cost_count": "12",
+       "possible_enemies": [
+        {
+         "content_id": "4892760259249624",
+         "icon": "icons_units_manticore/portrait_manticore",
+         "range": 1.0,
+         "name_key": "THE_MANTICORE_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "8842003313865136",
+          "250487217701028"
+         ],
+         "unit_health": "18334"
+        },
+        {
+         "content_id": "1503883920944448",
+         "icon": "icons_units_miguel/portrait_miguel",
+         "range": 1.0,
+         "name_key": "MIGUEL_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "8842003313865136",
+          "5106839896838633",
+          "7663520267777078"
+         ],
+         "unit_health": "13910"
+        },
+        {
+         "content_id": "5534722310856030",
+         "icon": "icons_units_olaf/portrait_olaf",
+         "range": 1.0,
+         "name_key": "OLAF_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "8842003313865136",
+          "1417430934200025",
+          "2786228526981547"
+         ],
+         "unit_health": "12630"
+        },
+        {
+         "content_id": "8802679835947633",
+         "icon": "icons_units_barley/portrait_barley",
+         "range": 4.0,
+         "name_key": "BARLEY_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "2489250258015164",
+          "250487217701028",
+          "1102804729261314",
+          "1515770659265273"
+         ],
+         "unit_health": "13750"
+        },
+        {
+         "content_id": "5100662395947751",
+         "icon": "icons_units_ian/portrait_ian",
+         "range": 4.0,
+         "name_key": "IAN_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "2489250258015164",
+          "250487217701028",
+          "7663520267777078",
+          "1102804729261314"
+         ],
+         "unit_health": "11588"
+        }
+       ],
+       "enemy_stats": {
+        "level": "62",
+        "rarity": "6",
+        "gear_tier": "6"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "6682891455152019",
+         "count_min": 2,
+         "count_max": 2,
+         "loot_tag": "FIRST_TIME_REWARD",
+         "guaranteed": true
+        },
+        {
+         "item_id": "8927824578314110",
+         "count_min": 1,
+         "count_max": 1
+        },
+        {
+         "item_id": "3592475363781214",
+         "count_min": 1,
+         "count_max": 1
+        },
+        {
+         "item_id": "2352909193225519",
+         "count_min": 540,
+         "count_max": 540,
+         "guaranteed": true
+        },
+        {
+         "item_id": "717898132760390",
+         "count_min": 600,
+         "count_max": 600,
+         "guaranteed": true
+        }
+       ]
+      }
+     },
+     {
+      "id": "6",
+      "battle_data": {
+       "name": "TOWERNODE_02_06_NAME",
+       "possible_rewards": [
+        {
+         "item_id": "6682891455152019",
+         "count": "2",
+         "loot_tag": "FIRST_TIME_REWARD"
+        },
+        {
+         "item_id": "2352909193225519",
+         "count": "600"
+        },
+        {
+         "item_id": "717898132760390",
+         "count": "660"
+        }
+       ],
+       "battle_restriction": "5049412563463841",
+       "entry_cost_id": "6821013986026800",
+       "entry_cost_count": "12",
+       "possible_enemies": [
+        {
+         "content_id": "5684938898918823",
+         "icon": "icons_units_wasabi/portrait_wasabi",
+         "range": 3.0,
+         "name_key": "WASABI_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "2489250258015164",
+          "4742156979219619",
+          "5800061760299363",
+          "1102804729261314"
+         ],
+         "unit_health": "14042"
+        },
+        {
+         "content_id": "1819554549721588",
+         "icon": "icons_units_go_go_tomago/portrait_go_go_tomago",
+         "range": 3.0,
+         "name_key": "GO_GO_TOMAGO_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "2489250258015164",
+          "4742156979219619",
+          "5800061760299363",
+          "1102804729261314"
+         ],
+         "unit_health": "14042"
+        },
+        {
+         "content_id": "8279082701199788",
+         "icon": "icons_units_hiro_hamada/portrait_hiro_hamada",
+         "range": 3.0,
+         "name_key": "HIRO_HAMADA_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "2489250258015164",
+          "4742156979219619",
+          "5800061760299363",
+          "1102804729261314"
+         ],
+         "unit_health": "16258"
+        },
+        {
+         "content_id": "4001595138299649",
+         "icon": "icons_units_honey_lemon/portrait_honey_lemon",
+         "range": 3.0,
+         "name_key": "HONEY_LEMON_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "2489250258015164",
+          "4742156979219619",
+          "5800061760299363",
+          "1102804729261314"
+         ],
+         "unit_health": "14042"
+        },
+        {
+         "content_id": "8014374100911476",
+         "icon": "icons_units_baymax/portrait_baymax",
+         "range": 3.0,
+         "name_key": "BAYMAX_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "2489250258015164",
+          "4742156979219619",
+          "5800061760299363",
+          "1102804729261314"
+         ],
+         "unit_health": "20884"
+        }
+       ],
+       "enemy_stats": {
+        "level": "64",
+        "rarity": "7",
+        "gear_tier": "6"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "6682891455152019",
+         "count_min": 2,
+         "count_max": 2,
+         "loot_tag": "FIRST_TIME_REWARD",
+         "guaranteed": true
+        },
+        {
+         "item_id": "2352909193225519",
+         "count_min": 600,
+         "count_max": 600,
+         "guaranteed": true
+        },
+        {
+         "item_id": "717898132760390",
+         "count_min": 660,
+         "count_max": 660,
+         "guaranteed": true
+        }
+       ],
+       "override_boss_index": 4
+      }
+     },
+     {
+      "id": "7",
+      "battle_data": {
+       "name": "TOWERNODE_02_07_NAME",
+       "possible_rewards": [
+        {
+         "item_id": "6682891455152019",
+         "count": "2",
+         "loot_tag": "FIRST_TIME_REWARD"
+        },
+        {
+         "item_id": "2352909193225519",
+         "count": "660"
+        },
+        {
+         "item_id": "717898132760390",
+         "count": "720"
+        }
+       ],
+       "battle_restriction": "8981748468471438",
+       "entry_cost_id": "6821013986026800",
+       "entry_cost_count": "12",
+       "possible_enemies": [
+        {
+         "content_id": "1279631643825630",
+         "icon": "icons_units_maurice/portrait_maurice",
+         "range": 4.0,
+         "name_key": "MAURICE_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4419393874676815",
+          "1497983993938491",
+          "5800061760299363",
+          "5059163436552255"
+         ],
+         "unit_health": "16038"
+        },
+        {
+         "content_id": "2151328540931649",
+         "icon": "icons_units_mrs_potts/portrait_mrs_potts",
+         "range": 1.0,
+         "name_key": "MRS_POTTS_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "4419393874676815",
+          "1497983993938491",
+          "5059163436552255"
+         ],
+         "unit_health": "17346"
+        },
+        {
+         "content_id": "5774733529014843",
+         "icon": "icons_units_belle/portrait_belle",
+         "range": 1.0,
+         "name_key": "BELLE_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "4419393874676815",
+          "1497983993938491",
+          "5820897550663740",
+          "5059163436552255"
+         ],
+         "unit_health": "18300"
+        },
+        {
+         "content_id": "6086771560778259",
+         "icon": "icons_units_lumiere/portrait_lumiere",
+         "range": 1.0,
+         "name_key": "LUMIERE_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4419393874676815",
+          "1497983993938491",
+          "5059163436552255"
+         ],
+         "unit_health": "15438"
+        },
+        {
+         "content_id": "37106888302811",
+         "icon": "icons_units_beast/portrait_beast",
+         "range": 1.0,
+         "name_key": "THE_BEAST_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "4419393874676815",
+          "1497983993938491",
+          "5059163436552255"
+         ],
+         "unit_health": "25080"
+        }
+       ],
+       "enemy_stats": {
+        "level": "66",
+        "rarity": "7",
+        "gear_tier": "7"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "6682891455152019",
+         "count_min": 2,
+         "count_max": 2,
+         "loot_tag": "FIRST_TIME_REWARD",
+         "guaranteed": true
+        },
+        {
+         "item_id": "2352909193225519",
+         "count_min": 660,
+         "count_max": 660,
+         "guaranteed": true
+        },
+        {
+         "item_id": "717898132760390",
+         "count_min": 720,
+         "count_max": 720,
+         "guaranteed": true
+        }
+       ],
+       "override_boss_index": 4
+      }
+     },
+     {
+      "id": "8",
+      "battle_data": {
+       "name": "TOWERNODE_02_08_NAME",
+       "possible_rewards": [
+        {
+         "item_id": "6682891455152019",
+         "count": "4",
+         "loot_tag": "FIRST_TIME_REWARD"
+        },
+        {
+         "item_id": "2352909193225519",
+         "count": "720"
+        },
+        {
+         "item_id": "717898132760390",
+         "count": "840"
+        }
+       ],
+       "battle_restriction": "4585183508778575",
+       "entry_cost_id": "6821013986026800",
+       "entry_cost_count": "12",
+       "possible_enemies": [
+        {
+         "content_id": "1727796772827020",
+         "icon": "icons_units_rapunzel/portrait_rapunzel",
+         "range": 1.0,
+         "name_key": "RAPUNZEL_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4419393874676815",
+          "3545371783249927",
+          "5820897550663740",
+          "5059163436552255"
+         ],
+         "unit_health": "16743"
+        },
+        {
+         "content_id": "1351297219824244",
+         "icon": "icons_units_jasmine/portrait_jasmine",
+         "range": 1.0,
+         "name_key": "JASMINE_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "185013331968872",
+          "4419393874676815",
+          "6950932538148189",
+          "5820897550663740",
+          "5059163436552255"
+         ],
+         "unit_health": "17749"
+        },
+        {
+         "content_id": "6569997645566663",
+         "icon": "icons_units_mulan/portrait_mulan",
+         "range": 1.0,
+         "name_key": "MULAN_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4419393874676815",
+          "6268674455014635",
+          "5820897550663740",
+          "5059163436552255"
+         ],
+         "unit_health": "15783"
+        },
+        {
+         "content_id": "10",
+         "icon": "icons_units_ariel/portrait_ariel",
+         "range": 80.0,
+         "name_key": "ARIEL_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5495262680796735",
+          "5308420037568950",
+          "3133581935767717",
+          "5820897550663740"
+         ],
+         "unit_health": "17749"
+        },
+        {
+         "content_id": "508341540759214",
+         "icon": "icons_units_merida/portrait_merida",
+         "range": 4.0,
+         "name_key": "MERIDA_UNIT_NAME",
+         "categories": [
+          "5785710300459637",
+          "5960529125021754",
+          "4650364419227244",
+          "5968787601315360",
+          "5820897550663740"
+         ],
+         "unit_health": "15783"
+        }
+       ],
+       "enemy_stats": {
+        "level": "68",
+        "rarity": "7",
+        "gear_tier": "7"
+       },
+       "possible_reward_ranges": [
+        {
+         "item_id": "6682891455152019",
+         "count_min": 4,
+         "count_max": 4,
+         "loot_tag": "FIRST_TIME_REWARD",
+         "guaranteed": true
+        },
+        {
+         "item_id": "2352909193225519",
+         "count_min": 720,
+         "count_max": 720,
+         "guaranteed": true
+        },
+        {
+         "item_id": "717898132760390",
+         "count_min": 840,
+         "count_max": 840,
+         "guaranteed": true
+        }
+       ]
+      }
+     }
+    ],
+    "required_completion_count": "1",
+    "image": "icons_scheduled_events_event_tangled/tangled_cover_rapunzel",
+    "scene": "env_rapunzel_tower/rapunzel_tower",
+    "name_key": "TOWER_RAPUNZEL_EVENT_MAP_3_NAME",
+    "description_key": "TOWER_RAPUNZEL_EVENT_MAP_3_DESC",
+    "showcase_items": [
+     "6682891455152019",
+     "8927824578314110",
+     "3592475363781214",
+     "2352909193225519"
+    ],
+    "progression_rewards": [
+     {
+      "item_id": "6682891455152019",
+      "count_min": 30,
+      "count_max": 30,
+      "guaranteed": true
+     },
+     {
+      "item_id": "5496531619155434",
+      "count_min": 1,
+      "count_max": 1,
+      "guaranteed": true
+     }
+    ],
+    "tower_type": "TOWER_EVENT",
+    "shipment_def_id_override": "998213433772813",
+    "hud_currency": "2352909193225519",
+    "milestone_reward_table_id": "8644321141312850"
+   }
+  ]
+ },
+ "milestone_table": {
+  "id": 8644321141312850,
+  "table": {
+   "milestone_point_item_id": "717898132760390",
+   "personal_rewards": [
+    {
+     "items": [
+      {
+       "item_id": "13",
+       "count_min": 5000,
+       "count_max": 5000,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "1650",
+     "claimed": true,
+     "background_image": "store_coins_2x_m/coins_2x_m"
+    },
+    {
+     "id": "1",
+     "items": [
+      {
+       "item_id": "26",
+       "count_min": 1000,
+       "count_max": 1000,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "3300",
+     "claimed": true,
+     "background_image": "store_potions_2x_m/potions_2x_m"
+    },
+    {
+     "id": "2",
+     "items": [
+      {
+       "item_id": "6682891455152019",
+       "count_min": 1,
+       "count_max": 1,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "4950",
+     "claimed": true,
+     "background_image": "store_char_2x_rapunzel/char_2x_rapunzel"
+    },
+    {
+     "id": "3",
+     "items": [
+      {
+       "item_id": "1171951539086697",
+       "count_min": 5,
+       "count_max": 5,
+       "guaranteed": true
+      },
+      {
+       "item_id": "1982171667398936",
+       "count_min": 5,
+       "count_max": 5,
+       "guaranteed": true
+      },
+      {
+       "item_id": "381128010781287",
+       "count_min": 5,
+       "count_max": 5,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "6600",
+     "claimed": true,
+     "background_image": "store_gw-2x-t4-packs/gw-2x-t4-packs"
+    },
+    {
+     "id": "4",
+     "items": [
+      {
+       "item_id": "13",
+       "count_min": 10000,
+       "count_max": 10000,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "8250",
+     "claimed": true,
+     "background_image": "store_coins_2x_m/coins_2x_m"
+    },
+    {
+     "id": "5",
+     "items": [
+      {
+       "item_id": "2231922868182045",
+       "count_min": 15,
+       "count_max": 15,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "9900",
+     "claimed": true,
+     "background_image": "store_gw-2x-t4-fiberpack/gw-2x-t4-fiberpack"
+    },
+    {
+     "id": "6",
+     "items": [
+      {
+       "item_id": "133",
+       "count_min": 20,
+       "count_max": 20,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "11550",
+     "claimed": true,
+     "background_image": "store_pouch_2x_ability_s/pouch_2x_ability_s"
+    },
+    {
+     "id": "7",
+     "items": [
+      {
+       "item_id": "26",
+       "count_min": 1000,
+       "count_max": 1000,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "13200",
+     "claimed": true,
+     "background_image": "store_potions_2x_m/potions_2x_m"
+    },
+    {
+     "id": "8",
+     "items": [
+      {
+       "item_id": "13",
+       "count_min": 25000,
+       "count_max": 25000,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "14850",
+     "claimed": true,
+     "background_image": "store_coins_2x_m/coins_2x_m"
+    },
+    {
+     "id": "9",
+     "items": [
+      {
+       "item_id": "381128010781287",
+       "count_min": 10,
+       "count_max": 10,
+       "guaranteed": true
+      },
+      {
+       "item_id": "1982171667398936",
+       "count_min": 10,
+       "count_max": 10,
+       "guaranteed": true
+      },
+      {
+       "item_id": "1171951539086697",
+       "count_min": 10,
+       "count_max": 10,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "16500",
+     "background_image": "store_gw-2x-t4-packs/gw-2x-t4-packs"
+    },
+    {
+     "id": "10",
+     "items": [
+      {
+       "item_id": "7531001555655815",
+       "count_min": 5,
+       "count_max": 5,
+       "guaranteed": true
+      },
+      {
+       "item_id": "5699237400778713",
+       "count_min": 5,
+       "count_max": 5,
+       "guaranteed": true
+      },
+      {
+       "item_id": "5482566426068031",
+       "count_min": 5,
+       "count_max": 5,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "18150",
+     "background_image": "store_gw-2x-t5-pack/gw-2x-t5-pack"
+    },
+    {
+     "id": "11",
+     "items": [
+      {
+       "item_id": "26",
+       "count_min": 1000,
+       "count_max": 1000,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "19800",
+     "background_image": "store_potions_2x_m/potions_2x_m"
+    },
+    {
+     "id": "12",
+     "items": [
+      {
+       "item_id": "3883066061505188",
+       "count_min": 10,
+       "count_max": 10,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "21450",
+     "background_image": "store_pouch_2x_ability_s_b/pouch_2x_ability_s_b"
+    },
+    {
+     "id": "13",
+     "items": [
+      {
+       "item_id": "6682891455152019",
+       "count_min": 1,
+       "count_max": 1,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "23100",
+     "background_image": "store_char_2x_rapunzel/char_2x_rapunzel"
+    },
+    {
+     "id": "14",
+     "items": [
+      {
+       "item_id": "13",
+       "count_min": 25000,
+       "count_max": 25000,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "24750",
+     "background_image": "store_coins_2x_m/coins_2x_m"
+    },
+    {
+     "id": "15",
+     "items": [
+      {
+       "item_id": "2231922868182045",
+       "count_min": 30,
+       "count_max": 30,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "26400",
+     "background_image": "store_gw-2x-t4-fiberpack/gw-2x-t4-fiberpack"
+    },
+    {
+     "id": "16",
+     "items": [
+      {
+       "item_id": "26",
+       "count_min": 2000,
+       "count_max": 2000,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "28050",
+     "background_image": "store_potions_2x_m/potions_2x_m"
+    },
+    {
+     "id": "17",
+     "items": [
+      {
+       "item_id": "5699237400778713",
+       "count_min": 5,
+       "count_max": 5,
+       "guaranteed": true
+      },
+      {
+       "item_id": "5482566426068031",
+       "count_min": 5,
+       "count_max": 5,
+       "guaranteed": true
+      },
+      {
+       "item_id": "7531001555655815",
+       "count_min": 15,
+       "count_max": 15,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "29700",
+     "background_image": "store_gw-2x-t5-pack/gw-2x-t5-pack"
+    },
+    {
+     "id": "18",
+     "items": [
+      {
+       "item_id": "133",
+       "count_min": 10,
+       "count_max": 10,
+       "guaranteed": true
+      },
+      {
+       "item_id": "3883066061505188",
+       "count_min": 5,
+       "count_max": 5,
+       "guaranteed": true
+      },
+      {
+       "item_id": "6221535176831871",
+       "count_min": 5,
+       "count_max": 5,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "31350",
+     "background_image": "store_pouch_2x_ability_aby/pouch_2x_ability_aby"
+    },
+    {
+     "id": "19",
+     "items": [
+      {
+       "item_id": "6682891455152019",
+       "count_min": 2,
+       "count_max": 2,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "33000",
+     "background_image": "store_char_2x_rapunzel/char_2x_rapunzel"
+    }
+   ],
+   "club_rewards": [
+    {
+     "items": [
+      {
+       "item_id": "13",
+       "count_min": 5000,
+       "count_max": 5000,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "24600",
+     "claimed": true,
+     "background_image": "store_coins_2x_m/coins_2x_m"
+    },
+    {
+     "id": "1",
+     "items": [
+      {
+       "item_id": "26",
+       "count_min": 2500,
+       "count_max": 2500,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "49200",
+     "claimed": true,
+     "background_image": "store_potions_2x_m/potions_2x_m"
+    },
+    {
+     "id": "2",
+     "items": [
+      {
+       "item_id": "6682891455152019",
+       "count_min": 2,
+       "count_max": 2,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "73800",
+     "claimed": true,
+     "background_image": "store_char_2x_rapunzel/char_2x_rapunzel"
+    },
+    {
+     "id": "3",
+     "items": [
+      {
+       "item_id": "6463010382463932",
+       "count_min": 25,
+       "count_max": 25,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "123000",
+     "claimed": true,
+     "background_image": "store_coins_2x_ultimate/coins_2x_ultimate"
+    },
+    {
+     "id": "4",
+     "items": [
+      {
+       "item_id": "13",
+       "count_min": 10000,
+       "count_max": 10000,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "172200",
+     "claimed": true,
+     "background_image": "store_coins_2x_m/coins_2x_m"
+    },
+    {
+     "id": "5",
+     "items": [
+      {
+       "item_id": "3058145459290044",
+       "count_min": 2000,
+       "count_max": 2000,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "221400",
+     "claimed": true,
+     "background_image": "store_coins_2x_club/coins_2x_club"
+    },
+    {
+     "id": "6",
+     "items": [
+      {
+       "item_id": "31",
+       "count_min": 50,
+       "count_max": 50,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "270600",
+     "claimed": true,
+     "background_image": "store_gems_2x_m/gems_2x_m"
+    },
+    {
+     "id": "7",
+     "items": [
+      {
+       "item_id": "13",
+       "count_min": 10000,
+       "count_max": 10000,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "319800",
+     "background_image": "store_coins_2x_m/coins_2x_m"
+    },
+    {
+     "id": "8",
+     "items": [
+      {
+       "item_id": "6463010382463932",
+       "count_min": 25,
+       "count_max": 25,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "369000",
+     "background_image": "store_coins_2x_ultimate/coins_2x_ultimate"
+    },
+    {
+     "id": "9",
+     "items": [
+      {
+       "item_id": "6682891455152019",
+       "count_min": 2,
+       "count_max": 2,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "430500",
+     "background_image": "store_char_2x_rapunzel/char_2x_rapunzel"
+    },
+    {
+     "id": "10",
+     "items": [
+      {
+       "item_id": "3883066061505188",
+       "count_min": 5,
+       "count_max": 5,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "504300",
+     "background_image": "store_pouch_2x_ability_s_b/pouch_2x_ability_s_b"
+    },
+    {
+     "id": "11",
+     "items": [
+      {
+       "item_id": "3058145459290044",
+       "count_min": 4000,
+       "count_max": 4000,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "578100",
+     "background_image": "store_coins_2x_club/coins_2x_club"
+    },
+    {
+     "id": "12",
+     "items": [
+      {
+       "item_id": "6682891455152019",
+       "count_min": 2,
+       "count_max": 2,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "651900",
+     "background_image": "store_char_2x_rapunzel/char_2x_rapunzel"
+    },
+    {
+     "id": "13",
+     "items": [
+      {
+       "item_id": "6463010382463932",
+       "count_min": 50,
+       "count_max": 50,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "725700",
+     "background_image": "store_coins_2x_ultimate/coins_2x_ultimate"
+    },
+    {
+     "id": "14",
+     "items": [
+      {
+       "item_id": "31",
+       "count_min": 50,
+       "count_max": 50,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "799500",
+     "background_image": "store_gems_2x_m/gems_2x_m"
+    },
+    {
+     "id": "15",
+     "items": [
+      {
+       "item_id": "6682891455152019",
+       "count_min": 3,
+       "count_max": 3,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "922500",
+     "background_image": "store_char_2x_rapunzel/char_2x_rapunzel"
+    },
+    {
+     "id": "16",
+     "items": [
+      {
+       "item_id": "3883066061505188",
+       "count_min": 10,
+       "count_max": 10,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "1045500",
+     "background_image": "store_pouch_2x_ability_s_b/pouch_2x_ability_s_b"
+    },
+    {
+     "id": "17",
+     "items": [
+      {
+       "item_id": "3058145459290044",
+       "count_min": 4000,
+       "count_max": 4000,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "1168500",
+     "background_image": "store_coins_2x_club/coins_2x_club"
+    },
+    {
+     "id": "18",
+     "items": [
+      {
+       "item_id": "6221535176831871",
+       "count_min": 5,
+       "count_max": 5,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "1291500",
+     "background_image": "store_pouch_2x_ability_gamma/pouch_2x_ability_gamma"
+    },
+    {
+     "id": "19",
+     "items": [
+      {
+       "item_id": "6682891455152019",
+       "count_min": 4,
+       "count_max": 4,
+       "guaranteed": true
+      }
+     ],
+     "required_value": "1414500",
+     "background_image": "store_char_2x_rapunzel/char_2x_rapunzel"
+    }
+   ],
+   "name": "MILESTONE_REWARD_NAME",
+   "description": "MILESTONE_REWARD_DESC",
+   "id": "8644321141312850",
+   "expiration_timestamp": "1622498399"
+  }
+ }
+}

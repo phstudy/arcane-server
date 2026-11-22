@@ -1,0 +1,605 @@
+{
+ "event_group": {
+  "contentId": "2021111100000001",
+  "name": "202111_MONSTERS_INC_META_NAME",
+  "description": "202111_MONSTERS_INC_META_DESC",
+  "image": "icons_scheduled_events_event_monsters_inc/monsters_inc_event_meta",
+  "sortOrder": "39",
+  "showcaseItems": [
+   "4495963668336265",
+   "8999944209807186"
+  ],
+  "marqueeImage": "icons_scheduled_events_event_monsters_inc/event_portal_mike_wazowski",
+  "hasPlayerActivated": true,
+  "frameColor": {
+   "a": 1.0
+  },
+  "panelColor": {
+   "a": 1.0
+  },
+  "portalName": "202111_MONSTERS_INC_PORTAL_NAME",
+  "portalDesc": "202111_MONSTERS_INC_PORTAL_DESC"
+ },
+ "rotation": {
+  "lane": "story",
+  "after": 5612093870412230
+ },
+ "mail": {
+  "preview": [
+   "INBOX_EVENT_2021_MONSTERS_INC_PREVIEW_SUBJECT",
+   "INBOX_EVENT_2021_MONSTERS_INC_PREVIEW_BODY"
+  ],
+  "start": [
+   "INBOX_EVENT_2021_MONSTERS_INC_ACTIVE_SUBJECT",
+   "INBOX_EVENT_2021_MONSTERS_INC_ACTIVE_BODY"
+  ],
+  "last_chance": [
+   "INBOX_EVENT_2021_MONSTERS_INC_LAST_CHANCE_SUBJECT",
+   "INBOX_EVENT_2021_MONSTERS_INC_LAST_CHANCE_BODY"
+  ]
+ },
+ "events": [
+  {
+   "key_prefix": "202111_MONSTERS_INC_A",
+   "tier_keys": {
+    "name": "{prefix}_L{i}_NAME_ALT",
+    "description": "202111_MONSTERS_INC_AURA_DESC",
+    "recommended": "{prefix}_L{i}_RECOMMENDED"
+   },
+   "event": {
+    "contentId": "2021111100000002",
+    "name": "202111_MONSTERS_INC_A_NAME_ALT",
+    "description": "202111_MONSTERS_INC_PORTAL_DESC",
+    "image": "icons_scheduled_events_event_monsters_inc/monsters_inc_cover_mike_wazowski",
+    "sortOrder": "100",
+    "battleLimit": "3",
+    "battleLimitRefreshCost": [
+     {
+      "itemId": "31",
+      "count": "150"
+     },
+     {
+      "itemId": "31",
+      "count": "250"
+     },
+     {
+      "itemId": "31",
+      "count": "350"
+     },
+     {
+      "itemId": "31",
+      "count": "450"
+     },
+     {
+      "itemId": "31",
+      "count": "550"
+     },
+     {
+      "itemId": "31",
+      "count": "650"
+     },
+     {
+      "itemId": "31",
+      "count": "750"
+     },
+     {
+      "itemId": "31",
+      "count": "850"
+     }
+    ],
+    "marqueeImage": "icons_scheduled_events_event_monsters_inc/event_portal_mike_wazowski",
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "allowInstantBattle": true,
+    "showcaseItems": [
+     "4495963668336265",
+     "8999944209807186"
+    ],
+    "eventGroupId": "2021111100000001"
+   },
+   "roster": {
+    "bosses": [
+     1424534210893336,
+     6814002232054243,
+     5810646426533593,
+     1503883920944448,
+     6230489939604426
+    ]
+   },
+   "mutators": [
+    5076434063120063
+   ],
+   "battle_environment": "env_monsters_inc/env_monsters_inc",
+   "intro_cinematic": "cin_intro_cinematic_monsters_inc_cut/intro_cinematic_monsters_inc_cut",
+   "tiers": [
+    {
+     "restriction": 3279692004384233,
+     "enemy_stats": {
+      "rarity": 3
+     },
+     "persistent": {
+      "id": 4495963668336265,
+      "min": 1,
+      "max": 1,
+      "goal": 30
+     },
+     "rewards": [
+      {
+       "id": 4495963668336265,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 5000
+      },
+      {
+       "id": 1171951539086697,
+       "count": 1
+      },
+      {
+       "id": 2568938000304629,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "restriction": 6065844013686194,
+     "enemy_stats": {
+      "rarity": 4
+     },
+     "persistent": {
+      "id": 4495963668336265,
+      "min": 1,
+      "max": 2,
+      "goal": 50
+     },
+     "rewards": [
+      {
+       "id": 4495963668336265,
+       "count": 2,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 7500
+      },
+      {
+       "id": 1171951539086697,
+       "count": 1
+      },
+      {
+       "id": 2568938000304629,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "restriction": 8171070991060052,
+     "enemy_stats": {
+      "rarity": 5
+     },
+     "persistent": {
+      "id": 4495963668336265,
+      "min": 1,
+      "max": 3,
+      "goal": 65
+     },
+     "rewards": [
+      {
+       "id": 4495963668336265,
+       "count": 3,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 10000
+      },
+      {
+       "id": 2231922868182045,
+       "count": 3
+      },
+      {
+       "id": 1171951539086697,
+       "count": 2
+      },
+      {
+       "id": 2568938000304629,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "restriction": 4699769865246289,
+     "enemy_stats": {
+      "rarity": 6
+     },
+     "persistent": {
+      "id": 4495963668336265,
+      "min": 1,
+      "max": 4,
+      "goal": 40
+     },
+     "rewards": [
+      {
+       "id": 4495963668336265,
+       "count": 4,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 15000
+      },
+      {
+       "id": 2231922868182045,
+       "count": 4
+      },
+      {
+       "id": 1171951539086697,
+       "count": 2
+      },
+      {
+       "id": 2568938000304629,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "restriction": 475783368015548,
+     "enemy_stats": {
+      "rarity": 7
+     },
+     "persistent": {
+      "id": 4495963668336265,
+      "min": 1,
+      "max": 5,
+      "goal": 45
+     },
+     "rewards": [
+      {
+       "id": 4495963668336265,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 2289339325233397,
+       "count": 1
+      },
+      {
+       "id": 13,
+       "count": 20000
+      },
+      {
+       "id": 2231922868182045,
+       "count": 5
+      },
+      {
+       "id": 1171951539086697,
+       "count": 3
+      },
+      {
+       "id": 2568938000304629,
+       "count": 3
+      },
+      {
+       "id": 7531001555655815,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "restriction": 5025444134748490,
+     "enemy_stats": {
+      "rarity": 7
+     },
+     "persistent": {
+      "id": 4495963668336265,
+      "min": 1,
+      "max": 6,
+      "goal": 50
+     },
+     "rewards": [
+      {
+       "id": 4495963668336265,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 2289339325233397,
+       "count": 2
+      },
+      {
+       "id": 13,
+       "count": 25000
+      },
+      {
+       "id": 2231922868182045,
+       "count": 6
+      },
+      {
+       "id": 1171951539086697,
+       "count": 4
+      },
+      {
+       "id": 2568938000304629,
+       "count": 4
+      },
+      {
+       "id": 7531001555655815,
+       "count": 3
+      },
+      {
+       "id": 2847867582043978,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "restriction": 5919179009198213,
+     "enemy_stats": {
+      "rarity": 7
+     },
+     "persistent": {
+      "id": 4495963668336265,
+      "min": 1,
+      "max": 7,
+      "goal": 50
+     },
+     "rewards": [
+      {
+       "id": 8999944209807186,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 4495963668336265,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 2289339325233397,
+       "count": 3
+      },
+      {
+       "id": 13,
+       "count": 30000
+      },
+      {
+       "id": 2231922868182045,
+       "count": 7
+      },
+      {
+       "id": 1171951539086697,
+       "count": 5
+      },
+      {
+       "id": 2568938000304629,
+       "count": 5
+      },
+      {
+       "id": 7531001555655815,
+       "count": 5
+      },
+      {
+       "id": 2847867582043978,
+       "count": 3
+      },
+      {
+       "id": 4369788399977460,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key_prefix": "202111_MONSTERS_INC_B",
+   "tier_keys": {
+    "name": "{prefix}_L{i}_NAME_ALT",
+    "description": "202111_MONSTERS_INC_AURA_DESC",
+    "recommended": "{prefix}_L{i}_RECOMMENDED"
+   },
+   "event": {
+    "contentId": "2021111100000003",
+    "name": "202111_MONSTERS_INC_B_NAME_ALT",
+    "description": "202111_MONSTERS_INC_PORTAL_DESC",
+    "image": "icons_scheduled_events_event_monsters_inc/monsters_inc_cover_prestige",
+    "sortOrder": "400",
+    "battleLimit": "2",
+    "battleLimitRefreshCost": [
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "400"
+     },
+     {
+      "itemId": "31",
+      "count": "500"
+     },
+     {
+      "itemId": "31",
+      "count": "600"
+     },
+     {
+      "itemId": "31",
+      "count": "700"
+     },
+     {
+      "itemId": "31",
+      "count": "800"
+     },
+     {
+      "itemId": "31",
+      "count": "900"
+     },
+     {
+      "itemId": "31",
+      "count": "1000"
+     }
+    ],
+    "marqueeImage": "icons_scheduled_events_event_monsters_inc/event_portal_mike_wazowski",
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "allowInstantBattle": true,
+    "showcaseItems": [
+     "5554127934867117",
+     "3814210565101861",
+     "3883066061505188",
+     "6221535176831871"
+    ],
+    "eventGroupId": "2021111100000001",
+    "lifetimeProgressEvent": true
+   },
+   "roster": {
+    "bosses": [
+     1424534210893336,
+     6814002232054243,
+     5810646426533593,
+     1503883920944448,
+     6230489939604426
+    ]
+   },
+   "mutators": [
+    5076434063120063
+   ],
+   "battle_environment": "env_monsters_inc/env_monsters_inc",
+   "intro_cinematic": "cin_intro_cinematic_monsters_inc_cut/intro_cinematic_monsters_inc_cut",
+   "tiers": [
+    {
+     "restriction": 802531281122484,
+     "enemy_stats": {
+      "rarity": 5,
+      "gear_tier": 5
+     },
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 0
+     }
+    },
+    {
+     "restriction": 6723582504290167,
+     "enemy_stats": {
+      "rarity": 6,
+      "gear_tier": 6
+     },
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 1
+     }
+    },
+    {
+     "restriction": 7256538465936344,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 6
+     },
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 2
+     }
+    },
+    {
+     "restriction": 4079974224217316,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 7
+     },
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 3
+     }
+    },
+    {
+     "restriction": 5554476643865402,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 8
+     },
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 4
+     }
+    }
+   ]
+  }
+ ],
+ "waves": [
+  {
+   "event": 2021111100000002,
+   "tier": 1,
+   "name_key": "202111_MONSTERS_INC_A_L1_NAME_ALT",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 1424534210893336,
+       "count": 1
+      },
+      {
+       "id": 6814002232054243,
+       "count": 1
+      },
+      {
+       "id": 5810646426533593,
+       "count": 1
+      },
+      {
+       "id": 1503883920944448,
+       "count": 1
+      },
+      {
+       "id": 6230489939604426,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 2021111100000002,
+   "tier": 6,
+   "name_key": "202111_MONSTERS_INC_A_L6_NAME_ALT",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 1424534210893336,
+       "count": 1
+      },
+      {
+       "id": 6814002232054243,
+       "count": 1
+      },
+      {
+       "id": 5810646426533593,
+       "count": 1
+      },
+      {
+       "id": 1503883920944448,
+       "count": 1
+      },
+      {
+       "id": 6230489939604426,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

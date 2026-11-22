@@ -1,0 +1,964 @@
+{
+ "event_group": {
+  "contentId": "2022060900000001",
+  "name": "EVENT_202206_STAND_OUT_META_NAME",
+  "description": "EVENT_202206_STAND_OUT_META_DESC",
+  "image": "icons_scheduled_events_event_goofy_movie/goofy_event_meta",
+  "sortOrder": "40",
+  "showcaseItems": [
+   "8010905093929163",
+   "6080318662595024",
+   "3066475967235933"
+  ],
+  "marqueeImage": "icons_scheduled_events_event_goofy_movie/event_portal_goofy",
+  "hasPlayerActivated": true,
+  "frameColor": {
+   "a": 1.0
+  },
+  "panelColor": {
+   "a": 1.0
+  },
+  "portalName": "EVENT_202206_STAND_OUT_PORTAL_NAME",
+  "portalDesc": "EVENT_202206_STAND_OUT_PORTAL_DESC"
+ },
+ "rotation": {
+  "lane": "story",
+  "after": 2022052000000001
+ },
+ "mail": {
+  "preview": [
+   "INBOX_EVENT_202206_STAND_OUT_PREVIEW_SUBJECT",
+   "INBOX_EVENT_202206_STAND_OUT_PREVIEW_BODY"
+  ],
+  "start": [
+   "INBOX_EVENT_202206_STAND_OUT_ACTIVE_SUBJECT",
+   "INBOX_EVENT_202206_STAND_OUT_ACTIVE_BODY"
+  ],
+  "last_chance": [
+   "INBOX_EVENT_202206_STAND_OUT_LAST_CHANCE_SUBJECT",
+   "INBOX_EVENT_202206_STAND_OUT_LAST_CHANCE_BODY"
+  ]
+ },
+ "events": [
+  {
+   "key_prefix": "EVENT_202206_STAND_OUT_A",
+   "tier_keys": {
+    "name": "{prefix}_L{i}_NAME",
+    "description": "EVENT_202206_STAND_OUT_A_L0_DESC",
+    "recommended": "{prefix}_L{i}_RECOMMENDED"
+   },
+   "event": {
+    "contentId": "2022060900000002",
+    "name": "EVENT_202206_STAND_OUT_A_NAME",
+    "image": "icons_scheduled_events_event_goofy_movie/event_cover_max_goof",
+    "sortOrder": "100",
+    "battleLimit": "3",
+    "battleLimitRefreshCost": [
+     {
+      "itemId": "31",
+      "count": "100"
+     },
+     {
+      "itemId": "31",
+      "count": "200"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "400"
+     },
+     {
+      "itemId": "31",
+      "count": "500"
+     },
+     {
+      "itemId": "31",
+      "count": "600"
+     },
+     {
+      "itemId": "31",
+      "count": "700"
+     },
+     {
+      "itemId": "31",
+      "count": "800"
+     }
+    ],
+    "marqueeImage": "icons_scheduled_events_event_goofy_movie/event_portal_goofy",
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "allowInstantBattle": true,
+    "showcaseItems": [
+     "8010905093929163",
+     "13"
+    ],
+    "eventGroupId": "2022060900000001"
+   },
+   "roster": {
+    "minions": [
+     849875388301141,
+     3026417329322044,
+     3053795370654951
+    ]
+   },
+   "battle_environment": "env_powerline_stage/env_powerline_stage",
+   "tiers": [
+    {
+     "restriction": 6807007549838256,
+     "persistent": {
+      "id": 8010905093929163,
+      "min": 1,
+      "max": 1,
+      "goal": 30
+     },
+     "rewards": [
+      {
+       "id": 8010905093929163,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 5000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 3
+      },
+      {
+       "id": 2231922868182045,
+       "count": 1
+      },
+      {
+       "id": 1171951539086697,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "restriction": 3249092883892670,
+     "persistent": {
+      "id": 8010905093929163,
+      "min": 1,
+      "max": 2,
+      "goal": 50
+     },
+     "rewards": [
+      {
+       "id": 8010905093929163,
+       "count": 2,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 7500
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 2
+      },
+      {
+       "id": 1171951539086697,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "restriction": 3058316664541634,
+     "persistent": {
+      "id": 8010905093929163,
+      "min": 1,
+      "max": 3,
+      "goal": 65
+     },
+     "rewards": [
+      {
+       "id": 8010905093929163,
+       "count": 3,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 15000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 3
+      },
+      {
+       "id": 1171951539086697,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "restriction": 7965648226882769,
+     "persistent": {
+      "id": 8010905093929163,
+      "min": 1,
+      "max": 4,
+      "goal": 40
+     },
+     "rewards": [
+      {
+       "id": 8010905093929163,
+       "count": 4,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 25000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 4
+      },
+      {
+       "id": 1171951539086697,
+       "count": 4
+      },
+      {
+       "id": 7531001555655815,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "restriction": 6476336862014101,
+     "persistent": {
+      "id": 8010905093929163,
+      "min": 1,
+      "max": 5,
+      "goal": 45
+     },
+     "rewards": [
+      {
+       "id": 8010905093929163,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 30000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 5
+      },
+      {
+       "id": 1171951539086697,
+       "count": 5
+      },
+      {
+       "id": 7531001555655815,
+       "count": 5
+      },
+      {
+       "id": 2847867582043978,
+       "count": 3
+      },
+      {
+       "id": 2250334176732565,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "restriction": 2200239866797547,
+     "persistent": {
+      "id": 8010905093929163,
+      "min": 1,
+      "max": 6,
+      "goal": 50
+     },
+     "rewards": [
+      {
+       "id": 8010905093929163,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 40000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 5
+      },
+      {
+       "id": 1171951539086697,
+       "count": 5
+      },
+      {
+       "id": 7531001555655815,
+       "count": 5
+      },
+      {
+       "id": 2847867582043978,
+       "count": 5
+      },
+      {
+       "id": 2250334176732565,
+       "count": 5
+      },
+      {
+       "id": 4369788399977460,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "restriction": 2160286673439256,
+     "persistent": {
+      "id": 8010905093929163,
+      "min": 1,
+      "max": 7,
+      "goal": 50
+     },
+     "rewards": [
+      {
+       "id": 8010905093929163,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 50000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 5
+      },
+      {
+       "id": 1171951539086697,
+       "count": 5
+      },
+      {
+       "id": 7531001555655815,
+       "count": 5
+      },
+      {
+       "id": 2847867582043978,
+       "count": 5
+      },
+      {
+       "id": 2250334176732565,
+       "count": 5
+      },
+      {
+       "id": 4369788399977460,
+       "count": 3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key_prefix": "EVENT_202206_STAND_OUT_B",
+   "tier_keys": {
+    "name": "{prefix}_L{i}_NAME",
+    "description": "EVENT_202206_STAND_OUT_A_L0_DESC",
+    "recommended": "{prefix}_L{i}_RECOMMENDED"
+   },
+   "event": {
+    "contentId": "2022060900000003",
+    "name": "EVENT_202206_STAND_OUT_B_NAME",
+    "image": "icons_scheduled_events_event_goofy_movie/event_cover_powerline",
+    "sortOrder": "200",
+    "battleLimit": "3",
+    "battleLimitRefreshCost": [
+     {
+      "itemId": "31",
+      "count": "100"
+     },
+     {
+      "itemId": "31",
+      "count": "200"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "400"
+     },
+     {
+      "itemId": "31",
+      "count": "500"
+     },
+     {
+      "itemId": "31",
+      "count": "600"
+     },
+     {
+      "itemId": "31",
+      "count": "700"
+     },
+     {
+      "itemId": "31",
+      "count": "800"
+     }
+    ],
+    "marqueeImage": "icons_scheduled_events_event_goofy_movie/event_portal_goofy",
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "allowInstantBattle": true,
+    "showcaseItems": [
+     "6080318662595024",
+     "3066475967235933",
+     "13"
+    ],
+    "eventGroupId": "2022060900000001"
+   },
+   "roster": {
+    "bosses": [
+     4914158096592074
+    ],
+    "minions": [
+     3667354290875560,
+     849875388301141,
+     3026417329322044
+    ]
+   },
+   "battle_environment": "env_powerline_stage/env_powerline_stage",
+   "tiers": [
+    {
+     "restriction": 8778209252956026,
+     "persistent": {
+      "id": 6080318662595024,
+      "min": 1,
+      "max": 1,
+      "goal": 25
+     },
+     "rewards": [
+      {
+       "id": 6080318662595024,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 7500
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 2
+      },
+      {
+       "id": 1171951539086697,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "restriction": 1069695073056322,
+     "persistent": {
+      "id": 6080318662595024,
+      "min": 1,
+      "max": 2,
+      "goal": 35
+     },
+     "rewards": [
+      {
+       "id": 6080318662595024,
+       "count": 2,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 15000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 3
+      },
+      {
+       "id": 1171951539086697,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "restriction": 7385715066897122,
+     "persistent": {
+      "id": 6080318662595024,
+      "min": 1,
+      "max": 3,
+      "goal": 40
+     },
+     "rewards": [
+      {
+       "id": 6080318662595024,
+       "count": 3,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 25000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 4
+      },
+      {
+       "id": 1171951539086697,
+       "count": 4
+      },
+      {
+       "id": 7531001555655815,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "restriction": 3321458535502602,
+     "persistent": {
+      "id": 6080318662595024,
+      "min": 1,
+      "max": 4,
+      "goal": 70
+     },
+     "rewards": [
+      {
+       "id": 6080318662595024,
+       "count": 4,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 30000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 5
+      },
+      {
+       "id": 1171951539086697,
+       "count": 5
+      },
+      {
+       "id": 7531001555655815,
+       "count": 5
+      },
+      {
+       "id": 2847867582043978,
+       "count": 3
+      },
+      {
+       "id": 2250334176732565,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "restriction": 3939095787219374,
+     "persistent": {
+      "id": 6080318662595024,
+      "min": 1,
+      "max": 5,
+      "goal": 60
+     },
+     "rewards": [
+      {
+       "id": 6080318662595024,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 40000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 5
+      },
+      {
+       "id": 1171951539086697,
+       "count": 5
+      },
+      {
+       "id": 7531001555655815,
+       "count": 5
+      },
+      {
+       "id": 2847867582043978,
+       "count": 5
+      },
+      {
+       "id": 2250334176732565,
+       "count": 5
+      },
+      {
+       "id": 4369788399977460,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "restriction": 1560820580381810,
+     "persistent": {
+      "id": 6080318662595024,
+      "min": 1,
+      "max": 6,
+      "goal": 50
+     },
+     "rewards": [
+      {
+       "id": 6080318662595024,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 55000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 5
+      },
+      {
+       "id": 1171951539086697,
+       "count": 5
+      },
+      {
+       "id": 7531001555655815,
+       "count": 5
+      },
+      {
+       "id": 2847867582043978,
+       "count": 5
+      },
+      {
+       "id": 2250334176732565,
+       "count": 5
+      },
+      {
+       "id": 4369788399977460,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "restriction": 5660448638694285,
+     "persistent": {
+      "id": 6080318662595024,
+      "min": 1,
+      "max": 7,
+      "goal": 50
+     },
+     "rewards": [
+      {
+       "id": 3066475967235933,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 6080318662595024,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 65000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 5
+      },
+      {
+       "id": 1171951539086697,
+       "count": 5
+      },
+      {
+       "id": 7531001555655815,
+       "count": 5
+      },
+      {
+       "id": 2847867582043978,
+       "count": 5
+      },
+      {
+       "id": 2250334176732565,
+       "count": 5
+      },
+      {
+       "id": 4369788399977460,
+       "count": 5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key_prefix": "EVENT_202210_STAND_OUT_PRESITIGE",
+   "tier_keys": {
+    "name": "{prefix}_L{i}_NAME",
+    "description": "EVENT_202206_STAND_OUT_A_L0_DESC",
+    "recommended": "{prefix}_L{i}_RECOMMENDED"
+   },
+   "event": {
+    "contentId": "2022060900000004",
+    "name": "EVENT_202210_STAND_OUT_PRESTIGE_NAME",
+    "image": "icons_scheduled_events_event_goofy_movie/goofy_cover_prestige",
+    "sortOrder": "300",
+    "battleLimit": "2",
+    "battleLimitRefreshCost": [
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "400"
+     },
+     {
+      "itemId": "31",
+      "count": "500"
+     },
+     {
+      "itemId": "31",
+      "count": "600"
+     },
+     {
+      "itemId": "31",
+      "count": "700"
+     },
+     {
+      "itemId": "31",
+      "count": "800"
+     },
+     {
+      "itemId": "31",
+      "count": "900"
+     },
+     {
+      "itemId": "31",
+      "count": "1000"
+     }
+    ],
+    "marqueeImage": "icons_scheduled_events_event_goofy_movie/event_portal_goofy",
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "allowInstantBattle": true,
+    "showcaseItems": [
+     "2289339325233397",
+     "3883066061505188",
+     "6221535176831871"
+    ],
+    "eventGroupId": "2022060900000001"
+   },
+   "roster": {
+    "bosses": [
+     4914158096592074
+    ],
+    "minions": [
+     3667354290875560,
+     849875388301141,
+     3026417329322044
+    ]
+   },
+   "battle_environment": "env_powerline_stage/env_powerline_stage",
+   "tiers": [
+    {
+     "restriction": 1460779585364732,
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 0
+     }
+    },
+    {
+     "restriction": 1950788913782539,
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 1
+     }
+    },
+    {
+     "restriction": 5554726499519535,
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 2
+     }
+    },
+    {
+     "restriction": 2428435723404931,
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 3
+     }
+    },
+    {
+     "restriction": 53032032640579,
+     "rewards": [
+      {
+       "id": 4369788399977460,
+       "count": 1
+      }
+     ],
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 4
+     }
+    }
+   ]
+  }
+ ],
+ "waves": [
+  {
+   "event": 2022060900000002,
+   "tier": 0,
+   "name_key": "EVENT_202206_STAND_OUT_A_L0_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 849875388301141,
+       "count": 1
+      },
+      {
+       "id": 3026417329322044,
+       "count": 2
+      },
+      {
+       "id": 3053795370654951,
+       "count": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 2022060900000002,
+   "tier": 1,
+   "name_key": "EVENT_202206_STAND_OUT_A_L1_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 849875388301141,
+       "count": 1
+      },
+      {
+       "id": 3026417329322044,
+       "count": 2
+      },
+      {
+       "id": 3053795370654951,
+       "count": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 2022060900000003,
+   "tier": 0,
+   "name_key": "EVENT_202206_STAND_OUT_B_L0_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 849875388301141,
+       "count": 1
+      },
+      {
+       "id": 3026417329322044,
+       "count": 1
+      },
+      {
+       "id": 3667354290875560,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 4914158096592074,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 3667354290875560,
+       "count": 3
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

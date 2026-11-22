@@ -1,0 +1,705 @@
+{
+ "chests": [
+  {
+   "activity": 99165263685740,
+   "campaign": 2288124075589037,
+   "map": 0,
+   "name": "player_activity_finish_villain_hard_map_1_choose_reward",
+   "required": 1,
+   "sort_order": 0,
+   "deep_link_location": 3,
+   "deep_link_sublocation": "16:0",
+   "choices": [
+    {
+     "rewards": [
+      {
+       "id": "7453799976449616",
+       "count": "2"
+      },
+      {
+       "id": "1532650026871995",
+       "count": "2"
+      },
+      {
+       "id": "31",
+       "count": "25"
+      },
+      {
+       "id": "13",
+       "count": "25000"
+      },
+      {
+       "id": "26",
+       "count": "2000"
+      }
+     ],
+     "previewAsset": "store_player_activity_reward_global/player_activity_reward_global"
+    }
+   ]
+  },
+  {
+   "activity": 37649921497708,
+   "campaign": 2288124075589037,
+   "map": 1,
+   "name": "player_activity_finish_villain_hard_map_2_choose_reward",
+   "required": 1,
+   "sort_order": 0,
+   "deep_link_location": 3,
+   "deep_link_sublocation": "16:0",
+   "choices": [
+    {
+     "rewards": [
+      {
+       "id": "3883066061505188",
+       "count": "55"
+      },
+      {
+       "id": "31",
+       "count": "50"
+      },
+      {
+       "id": "13",
+       "count": "50000"
+      },
+      {
+       "id": "26",
+       "count": "3000"
+      }
+     ],
+     "previewAsset": "store_player_activity_reward_global/player_activity_reward_global"
+    }
+   ]
+  },
+  {
+   "activity": 13437902134703,
+   "campaign": 2288124075589037,
+   "map": 2,
+   "name": "player_activity_finish_villain_hard_map_3_choose_reward",
+   "required": 1,
+   "sort_order": 0,
+   "deep_link_location": 3,
+   "deep_link_sublocation": "16:0",
+   "choices": [
+    {
+     "rewards": [
+      {
+       "id": "248562853627691",
+       "count": "250"
+      },
+      {
+       "id": "31",
+       "count": "75"
+      },
+      {
+       "id": "13",
+       "count": "75000"
+      },
+      {
+       "id": "26",
+       "count": "4000"
+      }
+     ],
+     "previewAsset": "store_player_activity_reward_global/player_activity_reward_global"
+    }
+   ]
+  },
+  {
+   "activity": 15985464387269,
+   "campaign": 2288124075589037,
+   "map": 3,
+   "name": "player_activity_finish_villain_hard_map_4_choose_reward",
+   "required": 1,
+   "sort_order": 0,
+   "deep_link_location": 3,
+   "deep_link_sublocation": "16:0",
+   "choices": [
+    {
+     "rewards": [
+      {
+       "id": "2231922868182045",
+       "count": "20"
+      },
+      {
+       "id": "31",
+       "count": "100"
+      },
+      {
+       "id": "13",
+       "count": "100000"
+      },
+      {
+       "id": "26",
+       "count": "5000"
+      }
+     ],
+     "previewAsset": "store_player_activity_reward_global/player_activity_reward_global"
+    }
+   ]
+  },
+  {
+   "activity": 52133400697914,
+   "campaign": 2288124075589037,
+   "map": 4,
+   "name": "player_activity_finish_villain_hard_map_5_choose_reward",
+   "required": 1,
+   "sort_order": 0,
+   "deep_link_location": 3,
+   "deep_link_sublocation": "16:0",
+   "choices": [
+    {
+     "rewards": [
+      {
+       "id": "1548088886590623",
+       "count": "600"
+      },
+      {
+       "id": "31",
+       "count": "150"
+      },
+      {
+       "id": "13",
+       "count": "150000"
+      },
+      {
+       "id": "26",
+       "count": "6000"
+      }
+     ],
+     "previewAsset": "store_player_activity_reward_global/player_activity_reward_global"
+    }
+   ]
+  },
+  {
+   "activity": 14803106270337,
+   "campaign": 2288124075589037,
+   "map": 5,
+   "name": "player_activity_finish_villain_hard_map_6_choose_reward",
+   "required": 1,
+   "sort_order": 0,
+   "deep_link_location": 3,
+   "deep_link_sublocation": "16:0",
+   "choices": [
+    {
+     "rewards": [
+      {
+       "id": "6221535176831871",
+       "count": "20"
+      },
+      {
+       "id": "31",
+       "count": "200"
+      },
+      {
+       "id": "13",
+       "count": "200000"
+      },
+      {
+       "id": "26",
+       "count": "10000"
+      }
+     ],
+     "previewAsset": "store_player_activity_reward_global/player_activity_reward_global"
+    }
+   ]
+  },
+  {
+   "activity": 1483717599225706,
+   "campaign": 2288124075589037,
+   "map": 6,
+   "name": "player_activity_finish_villain_hard_map_7_choose_reward",
+   "required": 1,
+   "sort_order": 0,
+   "deep_link_location": 3,
+   "deep_link_sublocation": "16:0",
+   "choices": [
+    {
+     "rewards": [
+      {
+       "id": "6221535176831871",
+       "count": "20"
+      },
+      {
+       "id": "31",
+       "count": "200"
+      },
+      {
+       "id": "13",
+       "count": "200000"
+      },
+      {
+       "id": "26",
+       "count": "10000"
+      }
+     ],
+     "previewAsset": "store_player_activity_reward_global/player_activity_reward_global"
+    }
+   ]
+  },
+  {
+   "activity": 18360528542397,
+   "campaign": 5453892519953982,
+   "map": 0,
+   "name": "player_activity_finish_villain_normal_map_1_choose_reward",
+   "required": 1,
+   "sort_order": 0,
+   "deep_link_location": 3,
+   "deep_link_sublocation": "16:0",
+   "choices": [
+    {
+     "rewards": [
+      {
+       "id": "6463010382463932",
+       "count": "100"
+      },
+      {
+       "id": "31",
+       "count": "10"
+      },
+      {
+       "id": "13",
+       "count": "10000"
+      },
+      {
+       "id": "26",
+       "count": "1000"
+      }
+     ],
+     "previewAsset": "store_player_activity_reward_global/player_activity_reward_global"
+    }
+   ]
+  },
+  {
+   "activity": 61965348936191,
+   "campaign": 7495537894870835,
+   "map": 0,
+   "name": "player_activity_finish_grand_map_1_choose_reward",
+   "required": 6,
+   "sort_order": 0,
+   "deep_link_location": 3,
+   "deep_link_sublocation": "16:0",
+   "choices": [
+    {
+     "rewards": [
+      {
+       "id": "629555636552897",
+       "count": "3"
+      },
+      {
+       "id": "26",
+       "count": "5000"
+      },
+      {
+       "id": "122",
+       "count": "3"
+      },
+      {
+       "id": "8560905659388620",
+       "count": "3"
+      },
+      {
+       "id": "13",
+       "count": "15000"
+      }
+     ],
+     "previewAsset": "store_player_activity_reward_global/player_activity_reward_global"
+    }
+   ]
+  },
+  {
+   "activity": 87373507830869,
+   "campaign": 7495537894870835,
+   "map": 2,
+   "name": "player_activity_finish_grand_map_3_choose_reward",
+   "required": 12,
+   "sort_order": 0,
+   "deep_link_location": 3,
+   "deep_link_sublocation": "16:0",
+   "choices": [
+    {
+     "rewards": [
+      {
+       "id": "6463010382463932",
+       "count": "100"
+      },
+      {
+       "id": "31",
+       "count": "50"
+      },
+      {
+       "id": "13",
+       "count": "25000"
+      },
+      {
+       "id": "26",
+       "count": "1000"
+      }
+     ],
+     "previewAsset": "store_player_activity_reward_global/player_activity_reward_global"
+    }
+   ]
+  },
+  {
+   "activity": 46350630459299,
+   "campaign": 7495537894870835,
+   "map": 3,
+   "name": "player_activity_finish_grand_map_4_choose_reward",
+   "required": 12,
+   "sort_order": 0,
+   "deep_link_location": 3,
+   "deep_link_sublocation": "16:0",
+   "choices": [
+    {
+     "rewards": [
+      {
+       "id": "248562853627691",
+       "count": "250"
+      },
+      {
+       "id": "31",
+       "count": "75"
+      },
+      {
+       "id": "13",
+       "count": "50000"
+      },
+      {
+       "id": "26",
+       "count": "2000"
+      }
+     ],
+     "previewAsset": "store_player_activity_reward_global/player_activity_reward_global"
+    }
+   ]
+  },
+  {
+   "activity": 13792987334969,
+   "campaign": 7495537894870835,
+   "map": 4,
+   "name": "player_activity_finish_grand_map_5_choose_reward",
+   "required": 12,
+   "sort_order": 0,
+   "deep_link_location": 3,
+   "deep_link_sublocation": "16:0",
+   "choices": [
+    {
+     "rewards": [
+      {
+       "id": "2231922868182045",
+       "count": "20"
+      },
+      {
+       "id": "31",
+       "count": "100"
+      },
+      {
+       "id": "13",
+       "count": "100000"
+      },
+      {
+       "id": "26",
+       "count": "3000"
+      }
+     ],
+     "previewAsset": "store_player_activity_reward_global/player_activity_reward_global"
+    }
+   ]
+  },
+  {
+   "activity": 80450113554009,
+   "campaign": 7495537894870835,
+   "map": 5,
+   "name": "player_activity_finish_grand_map_6_choose_reward",
+   "required": 12,
+   "sort_order": 0,
+   "deep_link_location": 3,
+   "deep_link_sublocation": "16:0",
+   "choices": [
+    {
+     "rewards": [
+      {
+       "id": "6221535176831871",
+       "count": "20"
+      },
+      {
+       "id": "31",
+       "count": "200"
+      },
+      {
+       "id": "13",
+       "count": "200000"
+      },
+      {
+       "id": "26",
+       "count": "5000"
+      }
+     ],
+     "previewAsset": "store_player_activity_reward_global/player_activity_reward_global"
+    }
+   ]
+  },
+  {
+   "activity": 4240733414804770,
+   "campaign": 7495537894870835,
+   "map": 6,
+   "name": "player_activity_finish_grand_map_7_choose_reward",
+   "required": 12,
+   "sort_order": 0,
+   "deep_link_location": 3,
+   "deep_link_sublocation": "16:0",
+   "choices": [
+    {
+     "rewards": [
+      {
+       "id": "6221535176831871",
+       "count": "20"
+      },
+      {
+       "id": "31",
+       "count": "200"
+      },
+      {
+       "id": "13",
+       "count": "200000"
+      },
+      {
+       "id": "26",
+       "count": "5000"
+      }
+     ],
+     "previewAsset": "store_player_activity_reward_global/player_activity_reward_global"
+    }
+   ]
+  },
+  {
+   "activity": 24087921074288,
+   "campaign": 8106159060030786,
+   "map": 0,
+   "name": "player_activity_finish_hero_hard_map_1_choose_reward",
+   "required": 1,
+   "sort_order": 0,
+   "deep_link_location": 3,
+   "deep_link_sublocation": "16:0",
+   "choices": [
+    {
+     "rewards": [
+      {
+       "id": "6463010382463932",
+       "count": "100"
+      },
+      {
+       "id": "31",
+       "count": "25"
+      },
+      {
+       "id": "13",
+       "count": "25000"
+      },
+      {
+       "id": "26",
+       "count": "1000"
+      }
+     ],
+     "previewAsset": "store_player_activity_reward_global/player_activity_reward_global"
+    }
+   ]
+  },
+  {
+   "activity": 13891495311939,
+   "campaign": 8106159060030786,
+   "map": 1,
+   "name": "player_activity_finish_hero_hard_map_2_choose_reward",
+   "required": 1,
+   "sort_order": 0,
+   "deep_link_location": 3,
+   "deep_link_sublocation": "16:0",
+   "choices": [
+    {
+     "rewards": [
+      {
+       "id": "3883066061505188",
+       "count": "55"
+      },
+      {
+       "id": "31",
+       "count": "50"
+      },
+      {
+       "id": "13",
+       "count": "50000"
+      },
+      {
+       "id": "26",
+       "count": "2000"
+      }
+     ],
+     "previewAsset": "store_player_activity_reward_global/player_activity_reward_global"
+    }
+   ]
+  },
+  {
+   "activity": 46953849987418,
+   "campaign": 8106159060030786,
+   "map": 2,
+   "name": "player_activity_finish_hero_hard_map_3_choose_reward",
+   "required": 1,
+   "sort_order": 0,
+   "deep_link_location": 3,
+   "deep_link_sublocation": "16:0",
+   "choices": [
+    {
+     "rewards": [
+      {
+       "id": "248562853627691",
+       "count": "250"
+      },
+      {
+       "id": "31",
+       "count": "75"
+      },
+      {
+       "id": "13",
+       "count": "75000"
+      },
+      {
+       "id": "26",
+       "count": "3000"
+      }
+     ],
+     "previewAsset": "store_player_activity_reward_global/player_activity_reward_global"
+    }
+   ]
+  },
+  {
+   "activity": 34209678363692,
+   "campaign": 8106159060030786,
+   "map": 3,
+   "name": "player_activity_finish_hero_hard_map_4_choose_reward",
+   "required": 1,
+   "sort_order": 0,
+   "deep_link_location": 3,
+   "deep_link_sublocation": "16:0",
+   "choices": [
+    {
+     "rewards": [
+      {
+       "id": "2231922868182045",
+       "count": "20"
+      },
+      {
+       "id": "31",
+       "count": "100"
+      },
+      {
+       "id": "13",
+       "count": "100000"
+      },
+      {
+       "id": "26",
+       "count": "4000"
+      }
+     ],
+     "previewAsset": "store_player_activity_reward_global/player_activity_reward_global"
+    }
+   ]
+  },
+  {
+   "activity": 78456488185667,
+   "campaign": 8106159060030786,
+   "map": 4,
+   "name": "player_activity_finish_hero_hard_map_5_choose_reward",
+   "required": 1,
+   "sort_order": 0,
+   "deep_link_location": 3,
+   "deep_link_sublocation": "16:0",
+   "choices": [
+    {
+     "rewards": [
+      {
+       "id": "1548088886590623",
+       "count": "600"
+      },
+      {
+       "id": "31",
+       "count": "150"
+      },
+      {
+       "id": "13",
+       "count": "150000"
+      },
+      {
+       "id": "26",
+       "count": "5000"
+      }
+     ],
+     "previewAsset": "store_player_activity_reward_global/player_activity_reward_global"
+    }
+   ]
+  },
+  {
+   "activity": 17377054802143,
+   "campaign": 8106159060030786,
+   "map": 5,
+   "name": "player_activity_finish_hero_hard_map_6_choose_reward",
+   "required": 1,
+   "sort_order": 0,
+   "deep_link_location": 3,
+   "deep_link_sublocation": "16:0",
+   "choices": [
+    {
+     "rewards": [
+      {
+       "id": "6221535176831871",
+       "count": "20"
+      },
+      {
+       "id": "31",
+       "count": "200"
+      },
+      {
+       "id": "13",
+       "count": "200000"
+      },
+      {
+       "id": "26",
+       "count": "10000"
+      }
+     ],
+     "previewAsset": "store_player_activity_reward_global/player_activity_reward_global"
+    }
+   ]
+  },
+  {
+   "activity": 3202674227419320,
+   "campaign": 8106159060030786,
+   "map": 6,
+   "name": "player_activity_finish_hero_hard_map_7_choose_reward",
+   "required": 1,
+   "sort_order": 0,
+   "deep_link_location": 3,
+   "deep_link_sublocation": "16:0",
+   "choices": [
+    {
+     "rewards": [
+      {
+       "id": "6221535176831871",
+       "count": "20"
+      },
+      {
+       "id": "31",
+       "count": "200"
+      },
+      {
+       "id": "13",
+       "count": "200000"
+      },
+      {
+       "id": "26",
+       "count": "10000"
+      }
+     ],
+     "previewAsset": "store_player_activity_reward_global/player_activity_reward_global"
+    }
+   ]
+  }
+ ]
+}

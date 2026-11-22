@@ -1,0 +1,964 @@
+{
+ "items": [
+  {
+   "tab": 5177587151438301,
+   "after": "STORE_ITEM_TS2_CHEST_NAME",
+   "event_group": 6725109604398782,
+   "item": {
+    "id": "2716383919024431",
+    "name_key": "STORE_ITEM_OW_CHEST_NAME",
+    "sticker_key": "Event_202003_Onward_META_NAME",
+    "main_image": "store_chest_2x_onward/chest_2x_onward",
+    "cost": {
+     "item_id": "12844794678098",
+     "count": "10000"
+    },
+    "box_back_asset": "store_chest_2x_onward/chest_2x_onward",
+    "item_counts": [
+     {
+      "item_id": "13",
+      "count_min": 500,
+      "count_max": 10000,
+      "guaranteed": true
+     },
+     {
+      "item_id": "26",
+      "count_min": 150,
+      "count_max": 3000,
+      "guaranteed": true
+     },
+     {
+      "item_id": "5754301726344216",
+      "count_min": 1,
+      "count_max": 3,
+      "guaranteed": true
+     },
+     {
+      "item_id": "7905521621377816",
+      "count_min": 1,
+      "count_max": 3,
+      "guaranteed": true
+     },
+     {
+      "item_id": "36078045317270",
+      "count_min": 1,
+      "count_max": 10,
+      "guaranteed": true
+     },
+     {
+      "item_id": "3179470540328821",
+      "count_min": 1,
+      "count_max": 1
+     },
+     {
+      "item_id": "5800404643593210",
+      "count_min": 1,
+      "count_max": 1
+     },
+     {
+      "item_id": "6291390382388483",
+      "count_min": 1,
+      "count_max": 1
+     },
+     {
+      "item_id": "1949330146132045",
+      "count_min": 1,
+      "count_max": 1
+     },
+     {
+      "item_id": "8331552497003191",
+      "count_min": 1,
+      "count_max": 1
+     },
+     {
+      "item_id": "5274591237803763",
+      "count_min": 1,
+      "count_max": 1
+     },
+     {
+      "item_id": "2836539702967744",
+      "count_min": 2,
+      "count_max": 2
+     },
+     {
+      "item_id": "3098169505142870",
+      "count_min": 2,
+      "count_max": 2
+     },
+     {
+      "item_id": "6857113807824868",
+      "count_min": 2,
+      "count_max": 2
+     },
+     {
+      "item_id": "5461757687019266",
+      "count_min": 2,
+      "count_max": 2
+     }
+    ],
+    "highlighted_items": [
+     "5754301726344216",
+     "36078045317270",
+     "7905521621377816"
+    ],
+    "frame_color": {
+     "r": 112,
+     "g": 95,
+     "b": 152,
+     "a": 1.0
+    }
+   },
+   "odds": [
+    [
+     [
+      "36078045317270",
+      4,
+      30
+     ],
+     [
+      "36078045317270",
+      3,
+      25
+     ],
+     [
+      "36078045317270",
+      2,
+      15
+     ],
+     [
+      "36078045317270",
+      8,
+      9.45
+     ],
+     [
+      "36078045317270",
+      6,
+      7.5
+     ],
+     [
+      "36078045317270",
+      1,
+      5
+     ],
+     [
+      "36078045317270",
+      5,
+      5
+     ],
+     [
+      "36078045317270",
+      7,
+      2.5
+     ],
+     [
+      "36078045317270",
+      10,
+      0.5
+     ],
+     [
+      "36078045317270",
+      9,
+      0.05
+     ]
+    ],
+    [
+     [
+      "5754301726344216",
+      1,
+      70
+     ],
+     [
+      "5754301726344216",
+      2,
+      27.5
+     ],
+     [
+      "5754301726344216",
+      3,
+      2.5
+     ]
+    ],
+    [
+     [
+      "7905521621377816",
+      1,
+      70
+     ],
+     [
+      "7905521621377816",
+      2,
+      27.5
+     ],
+     [
+      "7905521621377816",
+      3,
+      2.5
+     ]
+    ],
+    [
+     [
+      "26",
+      750,
+      65
+     ],
+     [
+      "26",
+      1500,
+      15
+     ],
+     [
+      "26",
+      300,
+      12.5
+     ],
+     [
+      "26",
+      150,
+      5
+     ],
+     [
+      "26",
+      3000,
+      2.5
+     ]
+    ],
+    [
+     [
+      "13",
+      2500,
+      65
+     ],
+     [
+      "13",
+      5000,
+      15
+     ],
+     [
+      "13",
+      1000,
+      12.5
+     ],
+     [
+      "13",
+      500,
+      5
+     ],
+     [
+      "13",
+      10000,
+      2.5
+     ]
+    ],
+    [
+     [
+      "3179470540328821",
+      1,
+      10
+     ],
+     [
+      "5800404643593210",
+      1,
+      10
+     ],
+     [
+      "6291390382388483",
+      1,
+      10
+     ],
+     [
+      "1949330146132045",
+      1,
+      10
+     ],
+     [
+      "8331552497003191",
+      1,
+      10
+     ],
+     [
+      "5274591237803763",
+      1,
+      10
+     ],
+     [
+      "2836539702967744",
+      2,
+      10
+     ],
+     [
+      "3098169505142870",
+      2,
+      10
+     ],
+     [
+      "6857113807824868",
+      2,
+      10
+     ],
+     [
+      "5461757687019266",
+      2,
+      10
+     ]
+    ]
+   ]
+  },
+  {
+   "tab": 5177587151438301,
+   "after": "2716383919024431",
+   "event_group": 6725109604398782,
+   "item": {
+    "id": "3318620745520873",
+    "name_key": "STORE_ITEM_OW_IAN_GEMS_NAME",
+    "sticker_key": "STICKER_EVENT_EXCLUSIVE",
+    "main_image": "store_char_2x_ian/char_2x_ian",
+    "cost": {
+     "item_id": "31",
+     "count": "800"
+    },
+    "purchase_limits": {
+     "limit_elapsed_timestamp": "18446744011573954816"
+    },
+    "box_back_asset": "store_char_2x_ian/char_2x_ian",
+    "item_counts": [
+     {
+      "item_id": "5754301726344216",
+      "count_min": 8,
+      "count_max": 330,
+      "guaranteed": true
+     },
+     {
+      "item_id": "12844794678098",
+      "count_min": 2500,
+      "count_max": 2500,
+      "guaranteed": true
+     }
+    ],
+    "highlighted_items": [
+     "5754301726344216",
+     "12844794678098"
+    ],
+    "frame_color": {
+     "r": 112,
+     "g": 95,
+     "b": 152,
+     "a": 1.0
+    }
+   }
+  },
+  {
+   "tab": 5177587151438301,
+   "after": "3318620745520873",
+   "event_group": 6725109604398782,
+   "item": {
+    "id": "3318620745520874",
+    "name_key": "STORE_ITEM_OW_BARLEY_GEMS_NAME",
+    "sticker_key": "STICKER_EVENT_EXCLUSIVE",
+    "main_image": "store_char_2x_barley/char_2x_barley",
+    "cost": {
+     "item_id": "31",
+     "count": "800"
+    },
+    "purchase_limits": {
+     "limit_elapsed_timestamp": "18446744011573954816"
+    },
+    "box_back_asset": "store_char_2x_barley/char_2x_barley",
+    "item_counts": [
+     {
+      "item_id": "7905521621377816",
+      "count_min": 8,
+      "count_max": 330,
+      "guaranteed": true
+     },
+     {
+      "item_id": "12844794678098",
+      "count_min": 2500,
+      "count_max": 2500,
+      "guaranteed": true
+     }
+    ],
+    "highlighted_items": [
+     "7905521621377816",
+     "12844794678098"
+    ],
+    "frame_color": {
+     "r": 112,
+     "g": 95,
+     "b": 152,
+     "a": 1.0
+    }
+   }
+  },
+  {
+   "tab": 5177587151438301,
+   "after": "3318620745520874",
+   "event_group": 6725109604398782,
+   "item": {
+    "id": "3318620745520875",
+    "name_key": "STORE_ITEM_OW_MANTICORE_GEMS_NAME",
+    "sticker_key": "STICKER_EVENT_EXCLUSIVE",
+    "main_image": "store_char_2x_manticore/char_2x_manticore",
+    "cost": {
+     "item_id": "31",
+     "count": "1000"
+    },
+    "purchase_limits": {
+     "limit_elapsed_timestamp": "18446744011573954816"
+    },
+    "box_back_asset": "store_char_2x_manticore/char_2x_manticore",
+    "item_counts": [
+     {
+      "item_id": "36078045317270",
+      "count_min": 10,
+      "count_max": 330,
+      "guaranteed": true
+     },
+     {
+      "item_id": "12844794678098",
+      "count_min": 5000,
+      "count_max": 5000,
+      "guaranteed": true
+     }
+    ],
+    "highlighted_items": [
+     "36078045317270",
+     "12844794678098"
+    ],
+    "frame_color": {
+     "r": 112,
+     "g": 95,
+     "b": 152,
+     "a": 1.0
+    }
+   }
+  },
+  {
+   "tab": 5177587151438301,
+   "after": "3318620745520875",
+   "event_group": 6725109604398782,
+   "item": {
+    "id": "3318620745520876",
+    "name_key": "STORE_ITEM_OW_DADMOVES_GEMS_NAME",
+    "sticker_key": "STICKER_EVENT_EXCLUSIVE",
+    "main_image": "store_spell_2x_pants/spell_2x_pants",
+    "cost": {
+     "item_id": "31",
+     "count": "800"
+    },
+    "purchase_limits": {
+     "limit_elapsed_timestamp": "18446744011573954816"
+    },
+    "box_back_asset": "store_spell_2x_pants/spell_2x_pants",
+    "item_counts": [
+     {
+      "item_id": "842899410965971",
+      "count_min": 10,
+      "count_max": 60,
+      "guaranteed": true
+     },
+     {
+      "item_id": "12844794678098",
+      "count_min": 2500,
+      "count_max": 2500,
+      "guaranteed": true
+     },
+     {
+      "item_id": "248562853627691",
+      "count_min": 50,
+      "count_max": 50,
+      "guaranteed": true
+     }
+    ],
+    "highlighted_items": [
+     "842899410965971",
+     "12844794678098",
+     "248562853627691"
+    ],
+    "frame_color": {
+     "r": 112,
+     "g": 95,
+     "b": 152,
+     "a": 1.0
+    }
+   }
+  },
+  {
+   "tab": 5177587151438301,
+   "after": "3318620745520876",
+   "event_group": 6725109604398782,
+   "item": {
+    "id": "3318620745520877",
+    "name_key": "STORE_ITEM_OW_COIN_NAME",
+    "sticker_key": "Event_202003_Onward_META_NAME",
+    "main_image": "store_coins_2x_onward/coins_2x_onward",
+    "purchase_limits": {
+     "limit_elapsed_timestamp": "18446744011573954816",
+     "purchase_data": [
+      {
+       "granularity": "DAY_PURCHASE_LIMIT_GRANULARITY",
+       "remaining_purchases": 1
+      }
+     ]
+    },
+    "subtitle_key": "STORE_ITEM_DAILY_DEAL_NAME",
+    "box_back_asset": "store_coins_2x_onward/coins_2x_onward",
+    "iap_product_id_ios": "com.glu.disneygame.event_currency_05_onward",
+    "iap_product_id_android": "com.glu.disneygame.event_currency_05_onward",
+    "item_counts": [
+     {
+      "item_id": "12844794678098",
+      "count_min": 15000,
+      "count_max": 15000,
+      "guaranteed": true
+     }
+    ],
+    "highlighted_items": [
+     "12844794678098"
+    ],
+    "frame_color": {
+     "r": 112,
+     "g": 95,
+     "b": 152,
+     "a": 1.0
+    }
+   }
+  },
+  {
+   "tab": 5177587151438301,
+   "after": "3318620745520877",
+   "event_group": 6725109604398782,
+   "item": {
+    "id": "3318620745520878",
+    "name_key": "STORE_ITEM_OW_COIN_NAME",
+    "sticker_key": "Event_202003_Onward_META_NAME",
+    "main_image": "store_coins_2x_onward/coins_2x_onward",
+    "purchase_limits": {
+     "limit_elapsed_timestamp": "18446744011573954816"
+    },
+    "box_back_asset": "store_coins_2x_onward/coins_2x_onward",
+    "iap_product_id_ios": "com.glu.disneygame.event_currency_10_onward",
+    "iap_product_id_android": "com.glu.disneygame.event_currency_10_onward",
+    "item_counts": [
+     {
+      "item_id": "12844794678098",
+      "count_min": 20000,
+      "count_max": 20000,
+      "guaranteed": true
+     }
+    ],
+    "highlighted_items": [
+     "12844794678098"
+    ],
+    "frame_color": {
+     "r": 112,
+     "g": 95,
+     "b": 152,
+     "a": 1.0
+    }
+   }
+  },
+  {
+   "tab": 5177587151438301,
+   "after": "3318620745520878",
+   "event_group": 6725109604398782,
+   "item": {
+    "id": "3318620745520879",
+    "name_key": "STORE_ITEM_OW_COIN_NAME",
+    "sticker_key": "Event_202003_Onward_META_NAME",
+    "main_image": "store_coins_2x_onward/coins_2x_onward",
+    "purchase_limits": {
+     "limit_elapsed_timestamp": "18446744011573954816"
+    },
+    "box_back_asset": "store_coins_2x_onward/coins_2x_onward",
+    "iap_product_id_ios": "com.glu.disneygame.event_currency_20_onward",
+    "iap_product_id_android": "com.glu.disneygame.event_currency_20_onward",
+    "item_counts": [
+     {
+      "item_id": "12844794678098",
+      "count_min": 45000,
+      "count_max": 45000,
+      "guaranteed": true
+     }
+    ],
+    "highlighted_items": [
+     "12844794678098"
+    ],
+    "frame_color": {
+     "r": 112,
+     "g": 95,
+     "b": 152,
+     "a": 1.0
+    }
+   }
+  },
+  {
+   "tab": 5177587151438301,
+   "after": "3318620745520879",
+   "event_group": 6725109604398782,
+   "item": {
+    "id": "3318620745520880",
+    "name_key": "STORE_ITEM_OW_COIN_NAME",
+    "sticker_key": "Event_202003_Onward_META_NAME",
+    "main_image": "store_coins_2x_onward/coins_2x_onward",
+    "purchase_limits": {
+     "limit_elapsed_timestamp": "18446744011573954816"
+    },
+    "box_back_asset": "store_coins_2x_onward/coins_2x_onward",
+    "iap_product_id_ios": "com.glu.disneygame.event_currency_50_onward",
+    "iap_product_id_android": "com.glu.disneygame.event_currency_50_onward",
+    "item_counts": [
+     {
+      "item_id": "12844794678098",
+      "count_min": 120000,
+      "count_max": 120000,
+      "guaranteed": true
+     }
+    ],
+    "highlighted_items": [
+     "12844794678098"
+    ],
+    "frame_color": {
+     "r": 112,
+     "g": 95,
+     "b": 152,
+     "a": 1.0
+    }
+   }
+  },
+  {
+   "tab": 5177587151438301,
+   "after": "3318620745520880",
+   "event_group": 2021021100000001,
+   "item": {
+    "id": "2021021100000003",
+    "name_key": "STORE_ITEM_SUNDROP_CHEST_NAME",
+    "sticker_key": "EVENT_202102_MOTHERGOTHEL_META_NAME",
+    "main_image": "store_2x_chest_mother_gothel/2x_chest_mother_gothel",
+    "cost": {
+     "item_id": "1776556210706116",
+     "count": "10000"
+    },
+    "box_back_asset": "store_2x_chest_mother_gothel/2x_chest_mother_gothel",
+    "item_counts": [
+     {
+      "item_id": "3803449086160393",
+      "count_min": 1,
+      "count_max": 10,
+      "guaranteed": true
+     },
+     {
+      "item_id": "13",
+      "count_min": 1500,
+      "count_max": 2500,
+      "guaranteed": true
+     },
+     {
+      "item_id": "133",
+      "count_min": 1,
+      "count_max": 5,
+      "guaranteed": true
+     },
+     {
+      "item_id": "2142379036270579",
+      "count_min": 2,
+      "count_max": 5
+     },
+     {
+      "item_id": "51",
+      "count_min": 2,
+      "count_max": 5
+     },
+     {
+      "item_id": "2745372405287393",
+      "count_min": 2,
+      "count_max": 5
+     },
+     {
+      "item_id": "41",
+      "count_min": 2,
+      "count_max": 5
+     },
+     {
+      "item_id": "5461757687019266",
+      "count_min": 1,
+      "count_max": 3
+     },
+     {
+      "item_id": "1171951539086697",
+      "count_min": 1,
+      "count_max": 3
+     },
+     {
+      "item_id": "2231922868182045",
+      "count_min": 1,
+      "count_max": 3
+     },
+     {
+      "item_id": "7531001555655815",
+      "count_min": 1,
+      "count_max": 3
+     },
+     {
+      "item_id": "1912819287917109",
+      "count_min": 1,
+      "count_max": 3
+     }
+    ],
+    "highlighted_items": [
+     "3803449086160393",
+     "2142379036270579",
+     "51",
+     "2745372405287393"
+    ],
+    "frame_color": {
+     "r": 112,
+     "g": 95,
+     "b": 152,
+     "a": 1.0
+    }
+   },
+   "odds": [
+    [
+     [
+      "3803449086160393",
+      4,
+      30
+     ],
+     [
+      "3803449086160393",
+      3,
+      25
+     ],
+     [
+      "3803449086160393",
+      2,
+      15
+     ],
+     [
+      "3803449086160393",
+      8,
+      9.45
+     ],
+     [
+      "3803449086160393",
+      6,
+      7.5
+     ],
+     [
+      "3803449086160393",
+      1,
+      5
+     ],
+     [
+      "3803449086160393",
+      5,
+      5
+     ],
+     [
+      "3803449086160393",
+      7,
+      2.5
+     ],
+     [
+      "3803449086160393",
+      10,
+      0.5
+     ],
+     [
+      "3803449086160393",
+      9,
+      0.05
+     ]
+    ],
+    [
+     [
+      "13",
+      1750,
+      40
+     ],
+     [
+      "13",
+      2000,
+      30
+     ],
+     [
+      "13",
+      1500,
+      20
+     ],
+     [
+      "13",
+      2500,
+      10
+     ]
+    ],
+    [
+     [
+      "133",
+      2,
+      35
+     ],
+     [
+      "133",
+      3,
+      30
+     ],
+     [
+      "133",
+      1,
+      20
+     ],
+     [
+      "133",
+      4,
+      10
+     ],
+     [
+      "133",
+      5,
+      5
+     ]
+    ],
+    [
+     [
+      "2142379036270579",
+      2,
+      12.5
+     ],
+     [
+      "2142379036270579",
+      3,
+      7.5
+     ],
+     [
+      "2142379036270579",
+      5,
+      5
+     ],
+     [
+      "51",
+      2,
+      12.5
+     ],
+     [
+      "51",
+      3,
+      7.5
+     ],
+     [
+      "51",
+      5,
+      5
+     ],
+     [
+      "2745372405287393",
+      2,
+      12.5
+     ],
+     [
+      "2745372405287393",
+      3,
+      7.5
+     ],
+     [
+      "2745372405287393",
+      5,
+      5
+     ],
+     [
+      "41",
+      2,
+      12.5
+     ],
+     [
+      "41",
+      3,
+      7.5
+     ],
+     [
+      "41",
+      5,
+      5
+     ]
+    ],
+    [
+     [
+      "5461757687019266",
+      2,
+      10
+     ],
+     [
+      "5461757687019266",
+      3,
+      6
+     ],
+     [
+      "5461757687019266",
+      1,
+      4
+     ],
+     [
+      "1171951539086697",
+      2,
+      10
+     ],
+     [
+      "1171951539086697",
+      3,
+      6
+     ],
+     [
+      "1171951539086697",
+      1,
+      4
+     ],
+     [
+      "2231922868182045",
+      2,
+      10
+     ],
+     [
+      "2231922868182045",
+      3,
+      6
+     ],
+     [
+      "2231922868182045",
+      1,
+      4
+     ],
+     [
+      "7531001555655815",
+      2,
+      10
+     ],
+     [
+      "7531001555655815",
+      3,
+      6
+     ],
+     [
+      "7531001555655815",
+      1,
+      4
+     ],
+     [
+      "1912819287917109",
+      2,
+      10
+     ],
+     [
+      "1912819287917109",
+      3,
+      6
+     ],
+     [
+      "1912819287917109",
+      1,
+      4
+     ]
+    ]
+   ]
+  }
+ ]
+}

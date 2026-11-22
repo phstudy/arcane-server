@@ -1,0 +1,221 @@
+{
+ "event_group": {
+  "contentId": "2020070800000001",
+  "name": "EVENT_202007_HIROHAMADAMARQUEE_META_NAME",
+  "description": "EVENT_202007_HIROHAMADAMARQUEE_META_DESC",
+  "image": "icons_scheduled_events_event_hiro/hiro_event_meta_v2",
+  "sortOrder": "17",
+  "showcaseItems": [
+   "4848833534828072"
+  ],
+  "marqueeImage": "icons_scheduled_events_event_hiro/event_portal_hiro",
+  "hasPlayerActivated": true,
+  "frameColor": {
+   "a": 1.0
+  },
+  "panelColor": {
+   "a": 1.0
+  },
+  "portalName": "EVENT_202007_HIROHAMADAMARQUEE_META_NAME",
+  "portalDesc": "EVENT_202007_HIROHAMADAMARQUEE_PORTAL_DESC"
+ },
+ "events": [
+  {
+   "key_prefix": "EVENT_202007_HIROHAMADAMARQUEE_A",
+   "tier_keys": {
+    "name": "{prefix}_L{i}_NAME",
+    "description": "EVENT_202007_HIROHAMADAMARQUEE_TIERS_DESC",
+    "recommended": "{prefix}_L{i}_RECOMMENDED"
+   },
+   "event": {
+    "contentId": "36350177853162",
+    "name": "EVENT_202007_HIROHAMADAMARQUEE_A_NAME",
+    "image": "icons_scheduled_events_event_hiro/hiro_cover",
+    "sortOrder": "100",
+    "battleLimit": "999",
+    "marqueeImage": "icons_scheduled_events_event_hiro/event_portal_hiro",
+    "lifetimeProgressEvent": true,
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "showcaseItems": [
+     "4848833534828072"
+    ],
+    "eventGroupId": "2020070800000001",
+    "isPermanent": true
+   },
+   "roster": {
+    "minions": [
+     3793696733556542,
+     8348586603157706,
+     5411986143930567
+    ]
+   },
+   "mutators": [
+    8520302083132622
+   ],
+   "tiers": [
+    {
+     "restriction": 2520538165465132,
+     "rewards": [
+      {
+       "id": 4848833534828072,
+       "count": 15,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 10000,
+       "first_time": true
+      },
+      {
+       "id": 26,
+       "count": 1000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 564269364860730,
+     "rewards": [
+      {
+       "id": 4848833534828072,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 15000,
+       "first_time": true
+      },
+      {
+       "id": 26,
+       "count": 1500,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 5152019385848349,
+     "rewards": [
+      {
+       "id": 4848833534828072,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 20000,
+       "first_time": true
+      },
+      {
+       "id": 26,
+       "count": 2000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 300798546196903,
+     "rewards": [
+      {
+       "id": 4848833534828072,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 10,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 30000,
+       "first_time": true
+      },
+      {
+       "id": 26,
+       "count": 3000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 5476095005871504,
+     "rewards": [
+      {
+       "id": 4848833534828072,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 15,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 40000,
+       "first_time": true
+      },
+      {
+       "id": 26,
+       "count": 4000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 8365037352632174,
+     "rewards": [
+      {
+       "id": 7716285272195316,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 4848833534828072,
+       "count": 15,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 20,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 50000,
+       "first_time": true
+      },
+      {
+       "id": 26,
+       "count": 5000,
+       "first_time": true
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

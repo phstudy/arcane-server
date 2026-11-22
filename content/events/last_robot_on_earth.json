@@ -1,0 +1,869 @@
+{
+ "enemy_health": [
+  {
+   "unit": 5411986143930567,
+   "level": 55,
+   "rarity": 6,
+   "gear_tier": 5,
+   "health": 5200
+  }
+ ],
+ "event_group": {
+  "contentId": "5612093870412250",
+  "name": "EVENT_202105_WALLE_META_NAME",
+  "description": "EVENT_202105_WALLE_META_DESC",
+  "image": "icons_scheduled_events_event_walle/wall_e_event_meta",
+  "sortOrder": "33",
+  "showcaseItems": [
+   "140364377469362",
+   "2604101597808263",
+   "4858163157220461"
+  ],
+  "marqueeImage": "icons_scheduled_events_event_walle/Event_portal_wall_e",
+  "hasPlayerActivated": true,
+  "frameColor": {
+   "a": 1.0
+  },
+  "panelColor": {
+   "a": 1.0
+  },
+  "portalName": "EVENT_202105_WALLE_PORTAL_NAME",
+  "portalDesc": "EVENT_202105_WALLE_PORTAL_DESC"
+ },
+ "rotation": {
+  "lane": "story",
+  "after": 5612093870412240
+ },
+ "mail": {
+  "preview": [
+   "INBOX_EVENT_202105_WALLE_PREVIEW_SUBJECT",
+   "INBOX_EVENT_202105_WALLE_PREVIEW_BODY"
+  ],
+  "start": [
+   "INBOX_EVENT_202105_WALLE_START_SUBJECT",
+   "INBOX_EVENT_202105_WALLE_START_BODY"
+  ],
+  "last_chance": [
+   "INBOX_EVENT_202105_WALLE_LAST_CHANCE_SUBJECT",
+   "INBOX_EVENT_202105_WALLE_LAST_CHANCE_BODY"
+  ]
+ },
+ "hero_variants": [
+  {
+   "id": 7612271970208437,
+   "hero": 7214551069584365
+  }
+ ],
+ "events": [
+  {
+   "key_prefix": "EVENT_202105_WALLE_A",
+   "tier_keys": {
+    "name": "{prefix}_L{i}_NAME",
+    "description": "EVENT_202105_WALLE_A_AURA_DESC",
+    "recommended": "{prefix}_L{i}_RECOMMENDED"
+   },
+   "event": {
+    "contentId": "5612093870412251",
+    "name": "EVENT_202105_WALLE_A_NAME",
+    "description": "EVENT_202105_WALLE_A_DESC",
+    "image": "icons_scheduled_events_event_walle/wall_e_cover_eve",
+    "sortOrder": "100",
+    "battleLimit": "3",
+    "battleLimitRefreshCost": [
+     {
+      "itemId": "31",
+      "count": "150"
+     },
+     {
+      "itemId": "31",
+      "count": "250"
+     },
+     {
+      "itemId": "31",
+      "count": "400"
+     },
+     {
+      "itemId": "31",
+      "count": "550"
+     },
+     {
+      "itemId": "31",
+      "count": "700"
+     }
+    ],
+    "marqueeImage": "icons_scheduled_events_event_walle/Event_portal_wall_e",
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "allowInstantBattle": true,
+    "showcaseItems": [
+     "140364377469362",
+     "5903155096602763"
+    ],
+    "eventGroupId": "5612093870412250"
+   },
+   "roster": {
+    "bosses": [
+     7612271970208437
+    ],
+    "minions": [
+     8348586603157706,
+     5411986143930567
+    ],
+    "allies": [
+     5858420042770967
+    ]
+   },
+   "mutators": [
+    8985693290159078
+   ],
+   "battle_environment": "env_legendary_area_05/env_legendary_area_05",
+   "tiers": [
+    {
+     "restriction": 7740638940460478,
+     "enemy_stats": {
+      "rarity": 4,
+      "gear_tier": 3
+     },
+     "persistent": {
+      "id": 140364377469362,
+      "min": 1,
+      "max": 2,
+      "goal": 20
+     },
+     "rewards": [
+      {
+       "id": 140364377469362,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 7500
+      },
+      {
+       "id": 2836539702967744,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "restriction": 5120934719101044,
+     "enemy_stats": {
+      "rarity": 5,
+      "gear_tier": 4
+     },
+     "persistent": {
+      "id": 140364377469362,
+      "min": 1,
+      "max": 3,
+      "goal": 30
+     },
+     "rewards": [
+      {
+       "id": 140364377469362,
+       "count": 2,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 10000
+      },
+      {
+       "id": 2836539702967744,
+       "count": 3
+      },
+      {
+       "id": 381128010781287,
+       "count": 1
+      },
+      {
+       "id": 2231922868182045,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "restriction": 4110022691304243,
+     "enemy_stats": {
+      "rarity": 6,
+      "gear_tier": 5
+     },
+     "persistent": {
+      "id": 140364377469362,
+      "min": 1,
+      "max": 4,
+      "goal": 30
+     },
+     "rewards": [
+      {
+       "id": 140364377469362,
+       "count": 3,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 15000
+      },
+      {
+       "id": 2836539702967744,
+       "count": 5
+      },
+      {
+       "id": 381128010781287,
+       "count": 2
+      },
+      {
+       "id": 2231922868182045,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "restriction": 283652104302452,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 5
+     },
+     "persistent": {
+      "id": 140364377469362,
+      "min": 1,
+      "max": 5,
+      "goal": 65
+     },
+     "rewards": [
+      {
+       "id": 140364377469362,
+       "count": 4,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 20000
+      },
+      {
+       "id": 2836539702967744,
+       "count": 5
+      },
+      {
+       "id": 381128010781287,
+       "count": 3
+      },
+      {
+       "id": 2231922868182045,
+       "count": 3
+      },
+      {
+       "id": 5699237400778713,
+       "count": 2
+      },
+      {
+       "id": 3472383282447130,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "restriction": 8041719168242210,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 6
+     },
+     "persistent": {
+      "id": 140364377469362,
+      "min": 1,
+      "max": 6,
+      "goal": 85
+     },
+     "rewards": [
+      {
+       "id": 140364377469362,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 25000
+      },
+      {
+       "id": 3472383282447130,
+       "count": 2
+      },
+      {
+       "id": 2836539702967744,
+       "count": 5
+      },
+      {
+       "id": 381128010781287,
+       "count": 4
+      },
+      {
+       "id": 2231922868182045,
+       "count": 4
+      },
+      {
+       "id": 5699237400778713,
+       "count": 3
+      },
+      {
+       "id": 3218172284382800,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "restriction": 2977579378734631,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 7
+     },
+     "persistent": {
+      "id": 140364377469362,
+      "min": 1,
+      "max": 7,
+      "goal": 100
+     },
+     "rewards": [
+      {
+       "id": 5903155096602763,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 140364377469362,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 30000
+      },
+      {
+       "id": 3472383282447130,
+       "count": 3
+      },
+      {
+       "id": 2836539702967744,
+       "count": 5
+      },
+      {
+       "id": 381128010781287,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 5
+      },
+      {
+       "id": 5699237400778713,
+       "count": 5
+      },
+      {
+       "id": 3218172284382800,
+       "count": 3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key_prefix": "EVENT_202105_WALLE_B",
+   "tier_keys": {
+    "name": "{prefix}_L{i}_NAME",
+    "description": "EVENT_202105_WALLE_B_AURA_DESC",
+    "recommended": "{prefix}_L{i}_RECOMMENDED"
+   },
+   "event": {
+    "contentId": "3869304641759927",
+    "name": "EVENT_202105_WALLE_B_NAME",
+    "description": "EVENT_202105_WALLE_B_DESC",
+    "image": "icons_scheduled_events_event_walle/wall_e_cover_wall_e",
+    "sortOrder": "200",
+    "battleLimit": "3",
+    "battleLimitRefreshCost": [
+     {
+      "itemId": "31",
+      "count": "150"
+     },
+     {
+      "itemId": "31",
+      "count": "250"
+     },
+     {
+      "itemId": "31",
+      "count": "400"
+     },
+     {
+      "itemId": "31",
+      "count": "550"
+     },
+     {
+      "itemId": "31",
+      "count": "700"
+     }
+    ],
+    "marqueeImage": "icons_scheduled_events_event_walle/Event_portal_wall_e",
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "allowInstantBattle": true,
+    "showcaseItems": [
+     "2604101597808263",
+     "1002078910498517",
+     "4858163157220461"
+    ],
+    "eventGroupId": "5612093870412250"
+   },
+   "roster": {
+    "bosses": [
+     2074773902046201
+    ],
+    "companions": [
+     2933161987253580,
+     747832664055299
+    ],
+    "minions": [
+     5411986143930567,
+     6801006398299652,
+     8216755321726831
+    ],
+    "allies": [
+     8848720124054131
+    ]
+   },
+   "mutators": [
+    6896038283486618
+   ],
+   "battle_environment": "env_legendary_area_05/env_legendary_area_05",
+   "tiers": [
+    {
+     "restriction": 2277487318939373,
+     "enemy_stats": {
+      "rarity": 4,
+      "gear_tier": 3
+     },
+     "persistent": {
+      "id": 2604101597808263,
+      "min": 1,
+      "max": 2,
+      "goal": 20
+     },
+     "rewards": [
+      {
+       "id": 2604101597808263,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 7500
+      },
+      {
+       "id": 2836539702967744,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "restriction": 1045723343307066,
+     "enemy_stats": {
+      "rarity": 5,
+      "gear_tier": 4
+     },
+     "persistent": {
+      "id": 2604101597808263,
+      "min": 1,
+      "max": 3,
+      "goal": 30
+     },
+     "rewards": [
+      {
+       "id": 2604101597808263,
+       "count": 2,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 10000
+      },
+      {
+       "id": 2836539702967744,
+       "count": 3
+      },
+      {
+       "id": 381128010781287,
+       "count": 1
+      },
+      {
+       "id": 2231922868182045,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "restriction": 920623405097724,
+     "enemy_stats": {
+      "rarity": 6,
+      "gear_tier": 5
+     },
+     "persistent": {
+      "id": 2604101597808263,
+      "min": 1,
+      "max": 4,
+      "goal": 30
+     },
+     "rewards": [
+      {
+       "id": 2604101597808263,
+       "count": 3,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 15000
+      },
+      {
+       "id": 2836539702967744,
+       "count": 5
+      },
+      {
+       "id": 381128010781287,
+       "count": 2
+      },
+      {
+       "id": 2231922868182045,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "restriction": 1965761872689317,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 6
+     },
+     "persistent": {
+      "id": 2604101597808263,
+      "min": 1,
+      "max": 5,
+      "goal": 65
+     },
+     "rewards": [
+      {
+       "id": 2604101597808263,
+       "count": 4,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 20000
+      },
+      {
+       "id": 2836539702967744,
+       "count": 5
+      },
+      {
+       "id": 381128010781287,
+       "count": 3
+      },
+      {
+       "id": 2231922868182045,
+       "count": 3
+      },
+      {
+       "id": 7531001555655815,
+       "count": 2
+      },
+      {
+       "id": 3472383282447130,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "restriction": 8737547623111581,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 7
+     },
+     "persistent": {
+      "id": 2604101597808263,
+      "min": 1,
+      "max": 6,
+      "goal": 85
+     },
+     "rewards": [
+      {
+       "id": 1002078910498517,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 2604101597808263,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 25000
+      },
+      {
+       "id": 3472383282447130,
+       "count": 2
+      },
+      {
+       "id": 2836539702967744,
+       "count": 5
+      },
+      {
+       "id": 381128010781287,
+       "count": 4
+      },
+      {
+       "id": 2231922868182045,
+       "count": 4
+      },
+      {
+       "id": 7531001555655815,
+       "count": 3
+      },
+      {
+       "id": 3218172284382800,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "restriction": 4648379921367998,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 8
+     },
+     "persistent": {
+      "id": 2604101597808263,
+      "min": 1,
+      "max": 7,
+      "goal": 100
+     },
+     "mutators": [
+      6896038283486618,
+      6456849170568596,
+      1792011465050053,
+      3920379926693127,
+      6019118440424643,
+      2727614511579066,
+      1596538980486179
+     ],
+     "rewards": [
+      {
+       "id": 4858163157220461,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 2604101597808263,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 30000
+      },
+      {
+       "id": 3472383282447130,
+       "count": 3
+      },
+      {
+       "id": 2836539702967744,
+       "count": 5
+      },
+      {
+       "id": 381128010781287,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 5
+      },
+      {
+       "id": 7531001555655815,
+       "count": 5
+      },
+      {
+       "id": 3218172284382800,
+       "count": 3
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "waves": [
+  {
+   "event": 5612093870412251,
+   "tier": 0,
+   "name_key": "EVENT_202105_WALLE_A_L0_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 7612271970208437,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 8348586603157706,
+       "count": 2
+      },
+      {
+       "id": 5411986143930567,
+       "count": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412251,
+   "tier": 1,
+   "name_key": "EVENT_202105_WALLE_A_L1_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 7612271970208437,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 8348586603157706,
+       "count": 2
+      },
+      {
+       "id": 5411986143930567,
+       "count": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412251,
+   "tier": 2,
+   "name_key": "EVENT_202105_WALLE_A_L2_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 7612271970208437,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 8348586603157706,
+       "count": 2
+      },
+      {
+       "id": 5411986143930567,
+       "count": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412251,
+   "tier": 5,
+   "name_key": "EVENT_202105_WALLE_A_L5_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 7612271970208437,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 8348586603157706,
+       "count": 2
+      },
+      {
+       "id": 5411986143930567,
+       "count": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 3869304641759927,
+   "tier": 2,
+   "name_key": "EVENT_202105_WALLE_B_L2_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 2074773902046201,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 2933161987253580,
+       "count": 1
+      },
+      {
+       "id": 5411986143930567,
+       "count": 2
+      },
+      {
+       "id": 747832664055299,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 3869304641759927,
+   "tier": 5,
+   "name_key": "EVENT_202105_WALLE_B_L5_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 2074773902046201,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 2933161987253580,
+       "count": 1
+      },
+      {
+       "id": 747832664055299,
+       "count": 1
+      },
+      {
+       "id": 6801006398299652,
+       "count": 1
+      },
+      {
+       "id": 8216755321726831,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,5908 @@
+syntax = "proto3";
+package serverproto;
+
+
+
+enum AgeGateStatus {
+	HAS_NOT_SEEN_AGE_GATE = 0;
+	NEEDS_TO_SEE_AGE_GATE = 1;
+	FAILED_AGE_GATE = 2;
+	PASSED_AGE_GATE = 3;
+}
+
+enum AuthType {
+	INVALID_a41b = 0;
+	EDITOR = 1;
+	GAMECENTER = 2;
+	GOOGLE_PLAY = 3;
+	ANON_IOS = 4;
+	ANON_ANDROID = 5;
+}
+
+enum BattleSim_PvpGameMode {
+	PVP_a694 = 0;
+	CLUB_WAR_a694 = 1;
+}
+
+enum ChapterState {
+	CHAPTER_INVALID = 0;
+	CHAPTER_LOCKED = 1;
+	CHAPTER_UNLOCKED = 2;
+	CHAPTER_IN_PROGRESS = 3;
+	CHAPTER_COMPLETE = 4;
+	CHAPTER_COOLDOWN = 5;
+}
+
+enum ChatChannelType {
+	INVALID_CHANNEL = 0;
+	GLOBAL_CHANNEL = 1;
+	CLUB_CHANNEL = 2;
+	CLUB_SYSTEM_MESSAGE_CHANNEL = 3;
+	SOCIAL_CHALLENGES_CHANNEL = 4;
+}
+
+enum ChatMessageType {
+	INVALID_CHAT_MESSAGE = 0;
+	USER_CHAT_MESSAGE = 1;
+	SYSTEM_CHAT_MESSAGE = 2;
+}
+
+enum ChatSystemMessageType {
+	INVALID_ADMIN_MESSAGE = 0;
+	CLUB_SYSTEM_MESSAGE = 1;
+	GLOBAL_SYSTEM_MESSAGE = 2;
+	SOCIAL_OPEN_CHALLENGE = 3;
+}
+
+enum ClubInvitePolicy {
+	INVALID_INVITE_POLICY = 0;
+	OPEN_INVITE_POLICY = 1;
+	REQUEST_INVITE_POLICY = 2;
+	INVITE_ONLY_INVITE_POLICY = 3;
+}
+
+enum ClubInvitePolicyFilter {
+	INVALID_INVITE_POLICY_FILTER = 0;
+	OPEN_INVITE_POLICY_FILTER = 1;
+	REQUEST_INVITE_POLICY_FILTER = 2;
+	INVITE_ONLY_INVITE_POLICY_FILTER = 4;
+}
+
+enum ClubLeaderboardType {
+	INVALID_a71c = 0;
+	DUNGEON_a71c = 1;
+}
+
+enum ClubMemberLeaderboardType {
+	INVALID_a23e = 0;
+	DUNGEON_a23e = 1;
+}
+
+enum ClubMessageType {
+	INVALID_MESSAGE_TYPE = 0;
+	CHAT_MESSAGE_TYPE = 1;
+	EMAIL_MESSAGE_TYPE = 2;
+}
+
+enum ClubRole {
+	INVALID_ROLE = 0;
+	MEMBER_ROLE = 1;
+	CO_LEADER_ROLE = 2;
+	LEADER_ROLE = 3;
+}
+
+enum ClubSupportRequestState {
+	UNFULFILLED = 0;
+	FULFILLED = 1;
+	CLAIMED_a955 = 2;
+}
+
+enum ClubSupportRequestType {
+	CLUB_SUPPORT_REQUEST_INVALID = 0;
+	CLUB_SUPPORT_REQUEST_PVE_ENERGY = 1;
+	CLUB_SUPPORT_REQUEST_GRAND_ENERGY = 2;
+	CLUB_SUPPORT_REQUEST_CAMPAIGN_ATTEMPT_LIMIT = 3;
+	CLUB_SUPPORT_REQUEST_SCHEDULED_EVENT_ATTEMPT = 4;
+	CLUB_SUPPORT_REQUEST_SHIPMENT_REFRESH = 5;
+	CLUB_SUPPORT_REQUEST_KOTH_ATTEMPT = 6;
+	CLUB_SUPPORT_REQUEST_ASCENTION_ENERGY = 7;
+	CLUB_SUPPORT_REQUEST_INFERNO_ENERGY = 8;
+}
+
+enum ClubType {
+	SOCIAL = 0;
+	COMPETITIVE = 1;
+}
+
+enum DeviceGraphicsSetting {
+	HIGH_GRAPHICS_SETTING = 0;
+	MEDIUM_GRAPHICS_SETTING = 1;
+	LOW_GRAPHICS_SETTING = 2;
+}
+
+enum DevicePlatform {
+	INVALID_DEVICE_PLATFORM = 0;
+	IOS_DEVICE_PLATFORM = 1;
+	ANDROID_DEVICE_PLATFORM = 2;
+}
+
+enum DynamicMessageType {
+	INVALID_DYNAMIC_MESSAGE = 0;
+	PLAYER_ACTIVITY_DYNAMIC_MESSAGE = 1;
+	CAMPAIGN_PROGRESS_DYNAMIC_MESSAGE = 2;
+	EXPIRE_RPC_CACHE_MESSAGE = 3;
+	PLAYER_COLLECTION_POWER_DYNAMIC_MESSAGE = 4;
+	SHOW_VIP_PROFILE_BG_DYNAMIC_MESSAGE = 5;
+	LOCKABLE_FEATURE_UPDATED_DYNAMIC_MESSAGE = 6;
+	DISABLED_FEATURE_UPDATED_DYNAMIC_MESSAGE = 7;
+	EVENT_UNLOCKED_DYNAMIC_MESSAGE = 8;
+	AGE_GATE_STATUS_DYNAMIC_MESSAGE = 9;
+	CONTEXTUAL_MESSAGE_UNLOCK_DYNAMIC_MESSAGE = 10;
+	CHAT_DYNAMIC_MESSAGE = 11;
+	CHAT_MESSAGE_DELETED_DYNAMIC_MESSAGE = 12;
+	SPECIAL_OFFER_UPDATED_DYNAMIC_MESSAGE = 13;
+	PLAYER_VIP_STATUS_UPDATED_DYNAMIC_MESSAGE = 14;
+	SERVER_MAINTENANCE_MODE_DYNAMIC_MESSAGE = 15;
+	ACCOUNT_LINK_CODE_ENTERED_DYNAMIC_MESSAGE = 16;
+	ACCOUNT_LINK_CODE_VERIFIED_DYNAMIC_MESSAGE = 17;
+	PLAYER_BANNED_DYNAMIC_MESSAGE = 18;
+	CLUB_MEMBER_ROLE_CHANGED_DYNAMIC_MESSAGE = 19;
+	SOCIAL_PVP_INVITE_STATUS_UPDATE_DYNAMIC_MESSAGE = 20;
+	SOCIAL_PVP_PLAYER_SQUAD_UPDATE_DYNAMIC_MESSAGE = 21;
+	PLAYER_ONLINE_DYNAMIC_MESSAGE = 22;
+}
+
+enum EmailConnectState {
+	EMAIL_CONNECT_INVALID = 0;
+	EMAIL_CONNECT_REQUESTED = 1;
+	EMAIL_CONNECT_VERIFIED = 2;
+	EMAIL_CONNECT_INCORRECT_PIN = 3;
+	EMAIL_CONNECT_EXPIRED_PIN = 4;
+}
+
+enum ExpRoomTypes {
+	NONE_a0b7 = 0;
+	EMPTY = 1;
+	BATTLE = 2;
+	DEPLOY = 3;
+	CHEST = 4;
+	BOSS = 5;
+}
+
+enum ExpRoomVisibility {
+	INVISIBILE = 0;
+	LOCKED = 1;
+	UNLOCKED = 2;
+	COMPLETED = 3;
+}
+
+enum FindClubSortType {
+	AVAILABLE_SLOTS_DESC = 0;
+	AVAILABLE_SLOTS_ASC = 1;
+	ALPHABETICAL_DESC = 2;
+	ALPHABETICAL_ASC = 3;
+	LEVEL_REQUIREMENT_DESC = 4;
+	LEVEL_REQUIREMENT_ASC = 5;
+}
+
+enum FriendsListModifyAction {
+	FRIENDS_LIST_ACTION_INVALID = 0;
+	FRIENDS_LIST_ADD = 1;
+	FRIENDS_LIST_ADD_BY_TOKEN = 2;
+	FRIENDS_LIST_DELETE = 3;
+	FRIENDS_LIST_ACCEPT_FRIEND_REQUEST = 4;
+	FRIENDS_LIST_REJECT_FRIEND_REQUEST = 5;
+	FRIENDS_LIST_CANCEL_FRIEND_REQUEST = 6;
+}
+
+enum FriendStatus {
+	INVALID_afc9 = 0;
+	FRIEND = 1;
+	PENDING_FRIEND_ACCEPT = 2;
+	PENDING_SELF_ACCEPT = 3;
+}
+
+enum InboxMessageStatus {
+	INVALID_af10 = 0;
+	UNREAD = 1;
+	READ = 2;
+	CLAIMED_af10 = 3;
+	DELETED = 4;
+}
+
+enum LeaderboardChallengeType {
+	PERSONAL = 0;
+	GLOBAL = 1;
+	CLUB = 2;
+}
+
+enum LocalizeInst {
+	LOCALIZE_INVALID = 0;
+	LOCALIZE_VALID = 1;
+}
+
+enum LootTag {
+	NONE_aa8b = 0;
+	FIRST_TIME_REWARD = 1;
+	BONUS_LOOT = 2;
+	PERSISTENT_LOOT = 3;
+	PERSISTENT_GOAL = 4;
+	FOR_LOSS = 5;
+}
+
+enum MatchMakerResult {
+	FAILED_ae72 = 0;
+	SUCCESS_ae72 = 1;
+	DECLINED = 2;
+	CANCELED = 3;
+}
+
+enum MatchType {
+	PVP_a6f2 = 0;
+	COOP = 1;
+	KOTH_a6f2 = 2;
+	CLUB_WAR_a6f2 = 3;
+	LIMITED_TIME_ARENA = 4;
+	SOCIAL_PVP = 5;
+}
+
+enum PlayerActivityScoreType {
+	DEFAULT = 0;
+	HIGH_SCORE = 1;
+}
+
+enum PlayerActivityType {
+	INVALID_PLAYER_ACTIVITY = 0;
+	LIFETIME_PLAYER_ACTIVITY = 1;
+	DAILY_PLAYER_ACTIVITY = 2;
+	DAILY_COMPLETE_ALL = 3;
+	SEASONAL_PLAYER_ACTIVITY = 4;
+	TUTORIAL_PLAYER_ACTIVITY = 5;
+	DAILY_PVP_ACTIVITY = 6;
+	SEASONAL_FREE_PLAYER_ACTIVITY = 7;
+	LIFETIME_CHOOSE_REWARD_PLAYER_ACTIVITY = 8;
+	DAILY_WATCH_AD_PLAYER_ACTIVITY = 9;
+	DAILY_OPTIONAL_ACTIVITY = 10;
+	LEADERBOARD_CHALLENGE = 11;
+	STORE_CHEST = 12;
+	DAILY_SOCIAL_PVP_ACTIVITY = 13;
+}
+
+enum PlayerAvailabilityStatus {
+	PLAYER_UNAVAILABLE = 0;
+	PLAYER_AVAILABLE = 1;
+	PLAYER_TEMP_UNAVAILABLE = 2;
+}
+
+enum PlayerClubInviteState {
+	INVITE_STATE_INVALID = 0;
+	INVITE_STATE_REQUESTED = 1;
+	INVITE_STATE_INVITED = 2;
+}
+
+enum PlayerLeaderboardType {
+	INVALID_a52e = 0;
+	PVP_LOCAL = 1;
+	PVP_GLOBAL = 2;
+	KOTH_a52e = 3;
+}
+
+enum PurchaseLimitGranularity {
+	INVALID_PURCHASE_LIMIT_GRANULARITY = 0;
+	DAY_PURCHASE_LIMIT_GRANULARITY = 1;
+	LIFETIME_PURCHASE_LIMIT_GRANULARITY = 2;
+}
+
+enum PushNotificationProvider {
+	INVALID_a70a = 0;
+	APNS = 1;
+	FCM = 2;
+}
+
+enum QuestState {
+	QUEST_INVALID = 0;
+	QUEST_LOCKED = 1;
+	QUEST_UNLOCKED = 2;
+	QUEST_IN_PROGRESS = 3;
+	QUEST_COMPLETE = 4;
+	QUEST_EXPIRED = 5;
+}
+
+enum RaidTierStates {
+	UNSTARTED = 0;
+	IN_PROGRESS = 1;
+	FINISHED = 2;
+}
+
+enum RaidType {
+	STANDARD = 0;
+	NON_SEQUENTIAL = 1;
+}
+
+enum ReceivePlayerOnlinePopupsStatus {
+	RECEIVE_ENABLED = 0;
+	RECEIVE_DISABLED = 1;
+}
+
+enum ResponseCode {
+	OK = 0;
+	ERROR = 2001;
+	INVALID_CLIENT_VERSION = 2002;
+	NOT_FOUND = 2003;
+	UNAUTHORIZED = 2004;
+	BAD_REQUEST = 2005;
+	DUPLICATE_NAME = 2006;
+	CLUB_IS_FULL = 2007;
+	CLUB_INVITE_ALREADY_EXISTS = 2008;
+	CLUB_INVITES_ARE_CLOSED = 2009;
+	CLUB_JOIN_IS_LOCKED = 2010;
+	PLAYER_IS_ALREADY_IN_CLUB = 2011;
+	INSUFFICIENT_PLAYER_LEVEL = 2012;
+	TEMPORARY_BAN = 2013;
+	PERMANENT_BAN = 2014;
+	INVALID_AUTH_TOKEN = 2015;
+	KOTH_PLAYER_RANK_HAS_CHANGED = 2016;
+	KOTH_OPPONENT_IS_UNAVAILABLE = 2017;
+	KOTH_ATTACKER_IS_UNAVAILABLE = 2018;
+	CLUB_WAR_INVALID_PHASE = 2019;
+	CLUB_WAR_DEFENSE_SLOT_NOT_EMPTY = 2020;
+	CLUB_WAR_DEFENSE_NOT_AVAILABLE = 2021;
+	CLUB_WAR_NODE_OWNER_CHANGED = 2022;
+	CLUB_WAR_DEFENSE_ALREADY_DEFEATED = 2023;
+	NO_CLUB = 2024;
+	PLAYER_ALREADY_CLAIMED_CLUB_REWARD = 2025;
+	CLUB_WAR_NODE_DEFENSE_ALREADY_UNDER_ATTACK = 2026;
+	CLUB_DONATION_FULFILLED = 2027;
+	REQUESTED_FRIEND_HAS_FULL_FRIEND_LIST = 2028;
+	REQUESTED_FRIEND_SELF = 2029;
+	REQUESTED_FRIEND_INVITE_EXPIRED = 2030;
+	REQUESTED_FRIEND_HAS_PENDING_INVITE = 2031;
+	REQUESTED_FRIENDSHIP_EXIST = 2032;
+	PLAYER_HAS_FULL_FRIEND_LIST = 2033;
+	KOTH_OPPONENT_SQUAD_CHANGED = 2034;
+	CHAT_MESSAGE_THROTTLED = 2035;
+	CLUB_PROMOTION_INVALID_LEADER = 2036;
+	ACCOUNT_LINK_CODE_DOES_NOT_EXIST = 2037;
+	ACCOUNT_LINK_CODE_CONFLICTS_GAMECENTER = 2038;
+	ACCOUNT_LINK_CODE_CONFLICTS_GOOGLE_PLAY = 2039;
+	ACCOUNT_LINK_VERIFY_CODE_DOES_NOT_EXIST = 2040;
+	USERNAME_IS_RESTRICTED = 2041;
+	CLUB_CREATE_COOLDOWN_RESTRICTED = 2042;
+	TUTORIAL_BATTLE_EXPIRED = 2043;
+	CLUB_WAR_NODE_HAS_BEEN_CUT_OFF = 2044;
+	CLUB_WAR_UNABLE_TO_EDIT_DEFENSES = 2045;
+	RAID_HAS_ALREADY_STARTED = 2046;
+	RAID_IS_NO_LONGER_AVAILABLE = 2047;
+	CLUB_NO_LONGER_RANKING_OFFICER = 2048;
+	RAID_REQUIREMENT_FAILED_ERROR = 2049;
+	RAID_UNIT_IS_DEAD_ERROR = 2050;
+	RAID_SPELL_ALREADY_USED_ERROR = 2051;
+	TOWER_TIER_INDEX_OUT_OF_RANGE_ERROR = 2052;
+	RAID_ENCOUNTER_ALREADY_DEAD_ERROR = 2053;
+	ENERGY_OUT_OF_SYNC_ERROR = 2054;
+	CLUB_EXP_BATTLE_UNAVAILABLE_TO_JOIN_ERROR = 2055;
+	BATTLE_RESTRICTIONS_FAILED_ERROR = 2056;
+	PLAYER_IN_COOLDOWN_ERROR = 2057;
+	SOCIAL_INVITE_ALREADY_EXISTS_ERROR = 2058;
+	SOCIAL_CHALLENGE_INVITE_EXPIRED_ERROR = 2059;
+	SOCIAL_CHALLENGE_INVALID_MODIFY_REQUEST_ERROR = 2060;
+	SOCIAL_CHALLENGE_INVITE_ALREADY_MODIFIED_ERROR = 2061;
+	OPPONENT_NOT_AVAILABLE_ERROR = 2062;
+	PLAYER_NOT_AVAILBLE_ERROR = 2063;
+	SOCIAL_CHALLENGE_REJECTED_ERROR = 2064;
+	SOCIAL_PVP_NOT_UNLOCKED_ERROR = 2065;
+	PLAYER_REACHED_MAX_BATTLES_ERROR = 2066;
+	OPPONENT_REACHED_MAX_BATTLES_ERROR = 2067;
+	PLAYER_POST_REACHED_MAX_INVITES_ERROR = 2068;
+	PLAYER_REACHED_MAX_POSTS_PER_DAY_ERROR = 2069;
+	POST_EXPIRED_ERROR = 2070;
+	PLAYER_IN_COOLDOWN_TO_POST_AGAIN_ERROR = 2071;
+	INVITE_ALREADY_SENT_FROM_THIS_POST_ERROR = 2072;
+}
+
+enum RevSdkRewardType {
+	INVALID_REWARD_TYPE = 0;
+	DAILY_LOGIN_BONUS = 1;
+	STORE_BONUS = 2;
+	PVE_ENERGY_BONUS = 3;
+	GRAND_CAMPAIGN_ENERGY_BONUS = 4;
+	CLUB_DUNGEON_ATTEMPTS_BONUS = 5;
+	PVE_ENERGY_GENERATE_BONUS = 6;
+	GRAND_CAMPAIGN_ENERGY_GENERATE_BONUS = 7;
+	DAILY_ACTIVITY_BONUS = 8;
+	RVFREE_PACK = 9;
+	RESET_KOTH_COOLDOWN = 10;
+	ASCENTION_ENERGY_BONUS = 11;
+	ASCENTION_ENERGY_GENERATE_BONUS = 12;
+	EXPEDITION_ENERGY_BONUS = 13;
+	EXPEDITION_ENERGY_GENERATE_BONUS = 14;
+	INFERNO_ENERGY_BONUS = 15;
+	INFERNO_ENERGY_GENERATE_BONUS = 16;
+}
+
+enum RewardSource {
+	RAID = 0;
+	EXPEDITION = 1;
+}
+
+enum SocialGrantItemAction {
+	SEND = 0;
+	RECEIVE = 1;
+	SEND_ALL = 2;
+	RECEIVE_ALL = 3;
+}
+
+enum SocialGrantItemActionStatus {
+	SUCCESS_a937 = 0;
+	FAILED_a937 = 1;
+	CAP_LIMIT_REACHED = 2;
+}
+
+enum SocialPvpInviteActions {
+	CHALLENGE_INVITE = 0;
+	CHALLENGE_ACCEPTED = 1;
+	CHALLENGE_REJECTED = 2;
+	CHALLENGE_CANCELED = 3;
+	CHALLENGE_RESUME = 4;
+}
+
+enum SocialPvpInviteStatus {
+	CHALLENGE_STATUS_INVITE = 0;
+	CHALLENGE_STATUS_ACCEPTED = 1;
+	CHALLENGE_STATUS_REJECTED = 2;
+	CHALLENGE_STATUS_CANCELED = 3;
+}
+
+enum StampType {
+	INVALID_a1b2 = 0;
+	SILVER = 1;
+	GOLD = 2;
+	BRONZE = 3;
+}
+
+enum StoreItemSize {
+	INVALID_STORE_ITEM_SIZE = 0;
+	THIN_STORE_ITEM_SIZE = 1;
+	MEDIUM_STORE_ITEM_SIZE = 2;
+	WIDE_STORE_ITEM_SIZE = 3;
+	SQUARE_STORE_ITEM_SIZE = 4;
+	SPECIAL_OFFER_STORE_ITEM_SIZE = 5;
+	VIP_STORE_ITEM_SIZE = 6;
+	PASSPORT_STORE_ITEM_SIZE = 7;
+	SHIPMENT_STORE_ITEM_SIZE = 8;
+	SPECIAL_OFFER_GROUP_STORE_ITEM_SIZE = 9;
+	MAGIC_LEAP = 10;
+	HYPER_DRIVE = 11;
+	HYPER_DRIVE_GROUP = 12;
+}
+
+enum StreakRewardClaimStatus {
+	STREAK_REWARD_LOCKED = 0;
+	STREAK_REWARD_UNLOCKED = 1;
+	STREAK_REWARD_CLAIMED = 2;
+}
+
+enum TowerType {
+	STANDARD_TOWER = 0;
+	TOWER_EVENT = 1;
+}
+
+message AbilityUpgradeRequest {
+	uint64 unit_id = 1;
+	uint64 ability = 2;
+}
+
+message AbilityUpgradeResponse {
+	InventoryDelta inventory_delta = 1;
+}
+
+message AccountLinkCodeEnteredDynamicMessage {
+}
+
+message AccountLinkCodeVerifiedDynamicMessage {
+	string new_anon_id = 1;
+}
+
+message ActivateEventGroupRequest {
+	uint64 event_group_id = 1;
+}
+
+message ActivateEventGroupResponse {
+	InventoryDelta inventory_delta = 1;
+	repeated TowerStatus tower_event_statuses = 2 [packed=false];
+}
+
+message ActivateLeaderboardChallengeRequest {
+	LeaderboardChallengeIdentifier challenge_id = 1;
+	uint64 end_time = 2;
+}
+
+message ActivateLeaderboardChallengeResponse {
+}
+
+message AdRewardedEnergyRequest {
+	uint64 energy_item_id = 1;
+}
+
+message AdRewardedEnergyResponse {
+	InventoryDelta inventory_delta = 1;
+	uint64 daily_ad_reward_count = 2;
+	uint64 energy_item_id = 3;
+	bool validated = 4;
+}
+
+message AgeGateRequest {
+	uint64 age = 1;
+}
+
+message AgeGateResponse {
+}
+
+message AgeGateStatusMessage {
+	AgeGateStatus status = 1;
+}
+
+message ApproveClubInviteRequest {
+	string club_id = 1;
+	string player_id = 2;
+}
+
+message ApproveClubInviteResponse {
+	Club club = 1;
+}
+
+message AssetBundleMetadata {
+	repeated BundleInfo bundle_info = 1 [packed=false];
+}
+
+message AuthRequest {
+	AuthType auth_type = 1;
+	string auth_id = 2;
+	string timezone = 3;
+	int32 utc_offset_seconds = 4;
+	string client_app_version = 5;
+}
+
+message AuthResponse {
+	string auth_token = 1;
+	Player player = 2;
+	string account_id = 3;
+	uint64 sync_time = 4;
+}
+
+message AuthTokenRequest {
+	AuthType auth_type = 1;
+	string anon_id = 2;
+	AuthTokenRequestAndroidGpgs auth_data_gpgs = 3;
+	AuthTokenRequestIosGameCenter auth_data_game_center = 4;
+	string timezone = 5;
+	string client_app_version = 6;
+	PushNotificationProvider push_notification_provider = 7;
+	string push_notification_token = 8;
+	string language = 9;
+}
+
+message AuthTokenRequestAndroidGpgs {
+	string player_id = 1;
+	string auth_code = 2;
+}
+
+message AuthTokenRequestIosGameCenter {
+	string player_id = 1;
+	string public_key_url = 2;
+	uint64 timestamp = 3;
+	string signature = 4;
+	string salt = 5;
+	string alias = 6;
+	string bundle_id = 7;
+}
+
+message AuthTokenResponse {
+	string auth_token = 1;
+	int32 account_status = 2;
+	uint64 ban_time = 3;
+	string public_id = 4;
+}
+
+message AutoJoinClubRequest {
+}
+
+message AutoJoinClubResponse {
+	Club assigned_club = 1;
+}
+
+message BasicStampProgressInfo {
+	uint64 set_id = 1;
+	int32 total_slots = 2;
+	repeated StampType stamped_slots = 3 [packed=false];
+	uint64 end_time = 4;
+}
+
+message BattleActivityResult {
+	uint64 battle_player_id = 1;
+	uint64 activity_def_id = 2;
+	uint64 activity_value = 3;
+	uint64 tracker_def_id = 4;
+}
+
+message BattleBootstrapRequest {
+	string battle_id = 1;
+	bytes battle_script = 2;
+	bytes bootstrap_bytes = 3;
+	string gamedata_version = 4;
+	string end_battle_auth_token = 5;
+	repeated BattleBootstrapRequestPlayer player_tokens = 6 [packed=false];
+}
+
+message BattleBootstrapRequestPlayer {
+	string player_token = 1;
+	uint64 player_battle_id = 2;
+	string player_account_id = 3;
+}
+
+message BattleBootstrapResponse {
+}
+
+message BattleInvite {
+	string sender_public_id = 1;
+	string friend_public_id = 2;
+	MatchType match_type = 3;
+	CampaignIdentifier campaign_identifier = 4;
+	uint64 expire_timestamp = 5;
+	EventIdentifier event_id = 6;
+}
+
+message BattleInviteMsg {
+	BattleInvite invite = 1;
+	PlayerProfileSimple sender_profile = 2;
+}
+
+message BattleLib_ActivityTracker {
+	uint64 activity_id = 1;
+	uint64 tracker_id = 2;
+	uint64 value = 3;
+}
+
+message BattleLib_Bootstrap {
+	enum RemoteControl {
+		INVALID = 0;
+		CLIENT_READY = 1;
+		SERVER_FINISHED_PROCESSING_RESULTS = 2;
+		ALL_CLIENTS_READY = 3;
+		EMOTE = 4;
+		BATTLE_SPEED = 5;
+		SERVER_SOCKET_FAILURE = 6;
+		FORFEIT = 7;
+	}
+
+	message Ability {
+		string name_key = 1;
+		string icon = 2;
+		uint32 mana_cost = 3;
+		bool activated = 4;
+		uint32 level = 5;
+		uint32 shape = 6;
+		float shape_length = 7;
+		float shape_width = 8;
+		float shape_angle = 9;
+		bool target_self = 10;
+		bool target_ally = 11;
+		bool target_enemy = 12;
+		uint32 add_unit_max_count = 13;
+		BattleLib_Bootstrap.Unit add_unit = 14;
+		uint64 geo_id = 15;
+		float range = 16;
+		uint32 id = 17;
+		uint32 cast_area = 18;
+		bool is_alternate = 19;
+		string desc_key = 20;
+		bool preview_strength = 21;
+		bool ignore_buildings = 22;
+		uint32 initial_mana = 23;
+		uint32 ability_type = 24;
+		uint64 battle_granted_id = 25;
+		repeated float balance_vars = 26 [packed=false];
+		uint32 sort_order = 27;
+		string special_icon_path = 28;
+	}
+
+	message BattleChoice {
+		uint64 id = 1;
+		string offer_description = 2;
+		string offer_image = 3;
+		string offer_accepted_info_icon = 4;
+		string offer_accepted_info_name = 5;
+		string offer_accepted_info_description = 6;
+		string progress_description = 7;
+		string expire_duration_remaining_description = 8;
+		string offer_description_accept = 9;
+		string offer_description_decline = 10;
+	}
+
+	message BattleValue {
+		uint32 key = 1;
+		int64 value = 2;
+	}
+
+	message Encounter {
+		string id = 1;
+		float x = 2;
+		float y = 3;
+		uint32 num_lanes = 4;
+		uint32 grid_gap = 5;
+		string cinematic = 6;
+		float verticality = 7;
+		repeated BattleLib_Bootstrap.BattleChoice battle_choices = 8 [packed=false];
+		string exit_cinematic = 9;
+		string entry_cinematic = 10;
+	}
+
+	message Environment {
+		repeated string prefabs = 1 [packed=false];
+		BattleLib_Bootstrap.Map map = 2;
+		repeated BattleLib_Bootstrap.SpawnPoint spawn_points = 3 [packed=false];
+		string vfx_prefab = 4;
+	}
+
+	message Map {
+		float width = 1;
+		float height = 2;
+		float grid_scale = 3;
+		repeated BattleLib_Bootstrap.Encounter encounters = 4 [packed=false];
+		repeated BattleLib_Bootstrap.Obstruction obstructions = 5 [packed=false];
+	}
+
+	message MutatorData {
+		uint64 mutator = 1;
+		repeated uint64 unit_id_list = 2 [packed=false];
+	}
+
+	message Obstruction {
+		uint32 xstart = 1;
+		uint32 xend = 2;
+		uint32 y = 3;
+	}
+
+	message Player {
+		uint64 ai_content_id = 1;
+		repeated BattleLib_Bootstrap.Squad squads = 2 [packed=false];
+		bool is_human = 3;
+		uint32 player_id = 4;
+		uint32 team_id = 5;
+		repeated BattleLib_Bootstrap.Spell spells = 6 [packed=false];
+		repeated BattleLib_ActivityTracker activity_trackers = 7 [packed=false];
+		uint32 player_level = 8;
+		bool enable_auto = 9;
+		repeated uint64 emotes = 10 [packed=false];
+		string client_version = 11;
+	}
+
+	message RaidUnitStatus {
+		uint64 definition_id = 1;
+		float health_percent = 2;
+	}
+
+	message SpawnPoint {
+		uint32 team_id = 1;
+		uint32 unit_type = 2;
+		float x = 3;
+		float y = 4;
+	}
+
+	message Spell {
+		uint64 definition_id = 1;
+		repeated uint64 effect_def_ids = 2 [packed=false];
+		BattleLib_Bootstrap.Ability ability = 3;
+		uint32 power_rating = 4;
+	}
+
+	message Squad {
+		repeated BattleLib_Bootstrap.Unit units = 1 [packed=false];
+		string encounter = 2;
+		repeated uint32 spawn_order = 3 [packed=false];
+	}
+
+	message Unit {
+		uint64 definition_id = 1;
+		uint32 persistent_id = 2;
+		uint32 rarity = 3;
+		uint32 level = 4;
+		repeated bool gear_slot_equipped = 5 [packed=false];
+		uint32 gear_tier = 6;
+		uint32 offense = 7;
+		uint32 defense = 8;
+		uint32 health = 9;
+		uint32 recovery = 10;
+		float crit_chance = 11;
+		float crit_power = 12;
+		float attack_speed = 13;
+		float walk_speed = 14;
+		float attack_range = 15;
+		float radius = 16;
+		string name_key = 17;
+		string asset_id = 18;
+		string icon = 19;
+		repeated uint64 effect_def_ids = 20 [packed=false];
+		repeated BattleLib_Bootstrap.Ability abilities = 21 [packed=false];
+		uint32 unit_type = 22;
+		float health_percent = 23;
+		uint32 power_rating = 24;
+		uint32 unit_slot_type = 25;
+		string subtitle_key = 26;
+		uint64 skin_item_id = 27;
+		repeated uint64 category_ids = 28 [packed=false];
+		uint64 sorcerer_stone_id = 29;
+		uint32 speed = 30;
+		float potency = 31;
+		float tenacity = 32;
+		float accuracy = 33;
+		float evasion = 34;
+		repeated BattleLib_Bootstrap.UnitAltPrefab alt_prefabs = 35 [packed=false];
+		bool affects_star_rating = 36;
+		uint32 bootstrap_unique_id = 37;
+		bool not_targetable = 38;
+		bool no_health_bar = 39;
+		bool no_turns = 40;
+		bool is_primary_cinematics_unit = 41;
+		uint32 override_spawn_index = 42;
+	}
+
+	message UnitAltPrefab {
+		uint32 id = 1;
+		string asset_id = 2;
+	}
+
+	Environment environment = 1;
+	repeated Player players = 2 [packed=false];
+	uint32 ruleset = 3;
+	repeated uint64 mutators = 4 [packed=false];
+	string intro_cinematic_override = 5;
+	string exit_cinematic_override = 6;
+	repeated string event_cinematics = 7 [packed=false];
+	bool view_cinematics_once = 8;
+	uint64 battle_id = 9;
+	repeated Environment environments = 10 [packed=false];
+	repeated MutatorData mutator_data_list = 11 [packed=false];
+	repeated RaidUnitStatus raid_units_status = 12 [packed=false];
+	float default_speed = 13;
+	uint32 turn_duration_s = 14;
+	int32 game_mode = 15;
+	repeated uint64 visual_effect_ids = 20 [packed=false];
+	repeated BattleValue battle_values = 21 [packed=false];
+}
+
+message BattleLib_PlayerMessage {
+	message AutoBattle {
+		bool enabled = 1;
+		uint32 preferred_target = 2;
+	}
+
+	message BattleChoiceDecided {
+		uint64 id = 1;
+		bool accepted = 2;
+	}
+
+	message Cast {
+		uint32 source_type = 1;
+		uint32 source_id = 2;
+		uint32 ability_id = 3;
+		uint32 target_unit = 4;
+		float target_pos_x = 5;
+		float target_pos_y = 6;
+		uint32 spawn_index = 7;
+	}
+
+	message CinematicDone {
+		uint32 encounter_index = 1;
+	}
+
+	message Emote {
+		uint64 emote_id = 1;
+	}
+
+	message EncounterEndCinematicDone {
+		uint32 encounter_index = 1;
+	}
+
+	message EncounterTransitionDone {
+		uint32 encounter_index = 1;
+	}
+
+	message EventCinematicDone {
+		uint32 event_index = 1;
+	}
+
+	repeated Cast casts = 1 [packed=false];
+	AutoBattle auto_battle = 2;
+	CinematicDone cinematic_done = 3;
+	EncounterTransitionDone encounter_transition_done = 4;
+	Emote emote = 5;
+	EventCinematicDone event_cinematic_done = 6;
+	BattleChoiceDecided battle_choice_decided = 7;
+	EncounterEndCinematicDone encounter_end_cinematic_done = 8;
+}
+
+message BattleLib_UpdateResult {
+	enum Reason_ac53 {
+		INVALID_ac53 = 0;
+		DEFAULT = 1;
+		TURN_LIMIT_REACHED = 2;
+		ALLY_DIED = 3;
+		FORFEIT = 4;
+	}
+
+	enum Reason_aeb9 {
+		INVALID_aeb9 = 0;
+		FINISHED = 1;
+		INTERRUPTED = 2;
+	}
+
+	enum Strength {
+		INVALID_a7a8 = 0;
+		STRONG = 1;
+		WEAK = 2;
+	}
+
+	message AbilityCamera {
+		uint64 visual_id = 1;
+		float duration = 2;
+		uint32 source_unit_id = 3;
+		float source_pos_x = 4;
+		float source_pos_y = 5;
+		uint32 target_unit_id = 6;
+		float target_pos_x = 7;
+		float target_pos_y = 8;
+	}
+
+	message AbilityCard {
+		uint32 source_type = 1;
+		uint32 source_id = 2;
+		uint32 ability_id = 3;
+		uint32 secondary_source_type = 4;
+		uint32 secondary_source_id = 5;
+		uint32 secondary_ability_id = 6;
+		uint32 ability_impairment_status = 7;
+		uint32 mana_cost = 8;
+		float ability_impairment_end_time = 9;
+		uint32 ability_buff_status = 10;
+		uint32 ability_type = 11;
+		uint64 polymorph_unit_def_id = 12;
+	}
+
+	message Aura {
+		uint32 player_id = 1;
+		uint64 aura_content_id = 2;
+		uint64 unit_content_id = 3;
+		uint32 ability_id = 4;
+		uint32 unit_bootstrap_unique_id = 5;
+	}
+
+	message AutoAttackTargetChange {
+		uint32 unit_id = 1;
+		uint32 target_unit_id = 2;
+	}
+
+	message BattleActivityUpdate {
+		uint32 player_id = 1;
+		uint64 activity_id = 2;
+		uint64 value = 3;
+	}
+
+	message BattleChoiceAccepted {
+		uint64 id = 1;
+		string icon = 2;
+		string name = 3;
+		string description = 4;
+		string progress_description = 5;
+		string expire_duration_remaining_description = 6;
+	}
+
+	message BattleChoiceEnded {
+		uint64 id = 1;
+		bool success = 2;
+	}
+
+	message BattleChoiceStatusUpdated {
+		uint64 id = 1;
+		uint32 progress_current = 2;
+		uint32 progress_goal = 3;
+		uint32 expire_duration_remaining = 4;
+	}
+
+	message BattleChoiceTriggered {
+		uint64 id = 1;
+		string offer_description = 2;
+		string offer_image = 3;
+		string offer_description_accept = 4;
+		string offer_description_decline = 5;
+	}
+
+	message BattleEmote {
+		uint32 player_id = 1;
+		uint64 emote_id = 2;
+	}
+
+	message BattleEnded {
+		enum Reason_ac53 {
+			INVALID_ac53 = 0;
+			DEFAULT = 1;
+			TURN_LIMIT_REACHED = 2;
+			ALLY_DIED = 3;
+			FORFEIT = 4;
+		}
+
+		int32 winning_team = 1;
+		repeated BattleLib_UpdateResult.UnitResult unit_results = 2 [packed=false];
+		repeated BattleLib_UpdateResult.PlayerResult player_results = 3 [packed=false];
+		repeated BattleLib_UpdateResult.TeamResult team_results = 4 [packed=false];
+		BattleLib_UpdateResult.Reason_ac53 reason = 5;
+		repeated BattleLib_UpdateResult.DamageReport unit_damage_reports = 6 [packed=false];
+		repeated BattleLib_UpdateResult.DamageReport spell_damage_reports = 7 [packed=false];
+		repeated BattleLib_UpdateResult.DeathReport unit_death_reports = 8 [packed=false];
+	}
+
+	message BattleMessage {
+		uint64 content_id = 1;
+		uint32 point_at_unit_id = 2;
+	}
+
+	message BattleTimeLimit {
+		float time_limit_s = 1;
+		float overtime_begin_s = 2;
+	}
+
+	message BattleTurnLimit {
+		uint32 turns_left = 1;
+	}
+
+	message CastEnd {
+		enum Reason_aeb9 {
+			INVALID_aeb9 = 0;
+			FINISHED = 1;
+			INTERRUPTED = 2;
+		}
+
+		uint32 source_type = 1;
+		uint32 source_id = 2;
+		uint32 cast_id = 3;
+		BattleLib_UpdateResult.Reason_aeb9 reason = 4;
+	}
+
+	message CastStart {
+		uint32 source_type = 1;
+		uint32 source_id = 2;
+		uint32 ability_id = 3;
+		uint32 cast_id = 4;
+	}
+
+	message Damage {
+		enum Strength {
+			INVALID_a7a8 = 0;
+			STRONG = 1;
+			WEAK = 2;
+		}
+
+		int32 amount = 1;
+		uint32 unit_id = 2;
+		bool is_crit = 3;
+		BattleLib_UpdateResult.Strength strength = 4;
+	}
+
+	message DamageReport {
+		uint32 entity_id = 1;
+		uint32 player_id = 2;
+		uint32 team_id = 3;
+		uint32 damage = 4;
+	}
+
+	message DeathReport {
+		uint32 entity_id = 1;
+		uint32 player_id = 2;
+		uint32 team_id = 3;
+	}
+
+	message Effect {
+		uint32 icon_type = 1;
+		uint32 icon_stack_id = 2;
+		bool is_permanent = 3;
+		uint32 duration_turns = 4;
+		uint32 stack_count = 5;
+	}
+
+	message EventCinematicEnd {
+		uint32 event_index = 1;
+	}
+
+	message EventCinematicStart {
+		uint32 event_index = 1;
+	}
+
+	message ExitCinematicStart {
+		uint32 encounter_index = 1;
+	}
+
+	message ForfeitEnabled {
+		bool enabled = 1;
+		string disabled_reason_key = 2;
+		uint32 player_id = 3;
+	}
+
+	message HudElementData {
+		uint64 id = 1;
+		uint32 unit_id = 2;
+		bool spawn = 3;
+	}
+
+	message HudElementValueData {
+		uint32 unit_id = 1;
+		string var_name = 2;
+		float value = 3;
+	}
+
+	message KillingBlow {
+		uint32 killed_unit_id = 1;
+		uint32 source_unit_id = 2;
+	}
+
+	message PlayerHand {
+		uint32 player_id = 1;
+		BattleLib_UpdateResult.AbilityCard next_card = 2;
+		repeated BattleLib_UpdateResult.AbilityCard hand = 3 [packed=false];
+	}
+
+	message PlayerMana {
+		float mana = 1;
+		uint32 player_id = 2;
+	}
+
+	message PlayerManaMeta {
+		float mana_per_s = 1;
+		uint32 player_id = 2;
+		uint32 max_mana = 3;
+	}
+
+	message PlayerResult {
+		uint32 player_id = 1;
+		repeated BattleLib_ActivityTracker activity_trackers = 2 [packed=false];
+	}
+
+	message PlayerSpellCharge {
+		uint32 player_id = 1;
+		float current_charge = 2;
+		uint32 charge_max = 3;
+		uint32 ability_id = 4;
+	}
+
+	message PlayerTurnIdled {
+		uint32 player_id = 1;
+	}
+
+	message Spawn {
+		uint64 unit_content_id = 1;
+		uint32 max_hp = 2;
+		float x = 4;
+		float y = 5;
+		uint32 unit_id = 6;
+		uint32 player_id = 7;
+		uint32 team_id = 8;
+		uint32 spawn_index = 9;
+		uint32 alt_prefab_id = 10;
+		uint32 bootstrap_unique_id = 11;
+	}
+
+	message SpellHand {
+		uint32 player_id = 1;
+		repeated BattleLib_UpdateResult.AbilityCard spells = 2 [packed=false];
+	}
+
+	message TeamResult {
+		int32 team_id = 1;
+		uint64 star_count = 2;
+	}
+
+	message UnitEffects {
+		uint32 unit_id = 1;
+		repeated BattleLib_UpdateResult.Effect effects = 2 [packed=false];
+	}
+
+	message UnitHealth {
+		float health_percent = 1;
+		float shield_percent = 2;
+		uint32 unit_id = 3;
+		bool is_cc_immune = 4;
+		float speed_bar_percent = 5;
+		bool apply_immediate = 6;
+	}
+
+	message UnitHpDecay {
+		uint32 unit_id = 1;
+		uint32 hp_decay = 2;
+	}
+
+	message UnitPosition {
+		float x = 1;
+		float y = 2;
+		uint32 unit_id = 3;
+		bool teleport = 4;
+	}
+
+	message UnitResult {
+		float health_percent = 1;
+		uint32 persistent_id = 2;
+		bool is_alive = 3;
+	}
+
+	message UnitTurnInfo {
+		uint32 unit_id = 1;
+		float speed_bar_percent = 2;
+		uint32 turn_order = 3;
+	}
+
+	message UnitTurnStarted {
+		uint32 unit_id = 1;
+		int64 turn_expire_timestamp = 2;
+		float turn_expire_duration_s = 3;
+		int32 player_id = 4;
+	}
+
+	message UnitVisible {
+		uint32 unit_id = 1;
+		bool visible = 2;
+	}
+
+	message UseAbilityResponse {
+		uint32 player_id = 1;
+		uint32 source_type = 2;
+		uint32 source_id = 3;
+		uint32 ability_id = 4;
+		bool success = 5;
+		uint32 failure_code = 6;
+	}
+
+	message VisualAtPosition {
+		uint64 visual_id = 1;
+		BattleLib_UpdateResult.VisualPos origin_pos = 2;
+		BattleLib_UpdateResult.VisualPos target_pos = 3;
+		float expire_time = 4;
+		uint32 source_id = 5;
+	}
+
+	message VisualInterrupt {
+		uint32 source_id = 1;
+	}
+
+	message VisualOnUnit {
+		uint64 visual_id = 1;
+		float expire_time = 2;
+		uint32 source_id = 3;
+		uint32 caster_unit_id = 4;
+		uint32 target_unit_id = 5;
+	}
+
+	message VisualOnWorld {
+		uint64 visual_id = 1;
+		float target_pos_x = 2;
+		float target_pos_y = 3;
+		float target_pos_verticality = 4;
+		float expire_time = 5;
+		uint32 source_id = 6;
+		uint32 caster_unit_id = 7;
+	}
+
+	message VisualPos {
+		float x = 1;
+		float y = 2;
+		float verticality = 3;
+	}
+
+	float clock_s = 1;
+	repeated Damage damage = 2 [packed=false];
+	repeated UnitPosition positions = 3 [packed=false];
+	repeated VisualOnUnit visuals_on_units = 4 [packed=false];
+	repeated VisualOnWorld visuals_on_world = 5 [packed=false];
+	repeated UnitHealth health = 6 [packed=false];
+	repeated PlayerMana mana = 7 [packed=false];
+	repeated AutoAttackTargetChange auto_attack_target_changes = 8 [packed=false];
+	repeated VisualInterrupt visuals_interrupted = 9 [packed=false];
+	repeated CastStart cast_starts = 10 [packed=false];
+	repeated CastEnd cast_ends = 11 [packed=false];
+	repeated UseAbilityResponse use_ability_responses = 12 [packed=false];
+	repeated PlayerHand hands = 13 [packed=false];
+	repeated Spawn spawns = 14 [packed=false];
+	repeated uint32 deaths = 15 [packed=false];
+	repeated uint32 encounters_started = 16 [packed=false];
+	repeated uint32 encounters_ended = 17 [packed=false];
+	repeated PlayerManaMeta mana_meta = 18 [packed=false];
+	BattleEnded battle_ended = 19;
+	repeated VisualAtPosition visuals_at_position = 20 [packed=false];
+	repeated UnitHpDecay hp_decay = 21 [packed=false];
+	repeated BattleActivityUpdate battle_activity_updates = 22 [packed=false];
+	repeated BattleEmote emotes = 23 [packed=false];
+	BattleTimeLimit time_limit = 24;
+	KillingBlow killing_blow = 25;
+	repeated PlayerSpellCharge spell_charge = 26 [packed=false];
+	repeated SpellHand spell_hands = 28 [packed=false];
+	repeated UnitEffects unit_effects = 29 [packed=false];
+	repeated UnitTurnInfo unit_turn_info = 30 [packed=false];
+	repeated string debug_logs = 31 [packed=false];
+	UnitTurnStarted unit_turn_started = 32;
+	repeated AbilityCamera ability_cameras = 33 [packed=false];
+	PlayerTurnIdled player_turn_idled = 34;
+	BattleTurnLimit turn_limit = 35;
+	repeated BattleMessage messages = 36 [packed=false];
+	repeated Aura auras = 37 [packed=false];
+	bool battle_busy = 38;
+	EventCinematicStart event_cinematic_start = 39;
+	repeated ForfeitEnabled forfeit_enabled = 40 [packed=false];
+	repeated uint32 fleeing_units = 41 [packed=false];
+	BattleChoiceTriggered battle_choice_triggered = 42;
+	BattleChoiceAccepted battle_choice_accepted = 43;
+	BattleChoiceEnded battle_choice_ended = 44;
+	BattleChoiceStatusUpdated battle_choice_status_updated = 45;
+	ExitCinematicStart start_encounter_exit_cinematic = 46;
+	repeated UnitVisible unit_visibilities = 47 [packed=false];
+	bool battle_skip_exit_cinematic = 48;
+	repeated HudElementData hud_element_changes = 49 [packed=false];
+	repeated HudElementValueData hud_element_value_changes = 50 [packed=false];
+}
+
+message BattleLib_UpdateResultList {
+	repeated BattleLib_UpdateResult results = 1 [packed=false];
+}
+
+message BattleLib_UpdateResultLogs {
+	repeated string debug_logs = 1 [packed=false];
+}
+
+message BattleMutator {
+	string icon = 1;
+	string desc_key = 2;
+	repeated uint64 units = 3 [packed=false];
+	string name_key = 4;
+}
+
+message BattleNode {
+	string name = 1;
+	string description = 2;
+	string locked_key = 3;
+	repeated ItemCount possible_rewards = 4 [packed=false];
+	uint64 battle_restriction = 5;
+	uint64 entry_cost_id = 6;
+	uint64 entry_cost_count = 7;
+	repeated EnemyUnitPreview possible_enemies = 8 [packed=false];
+	UnitStatOverride enemy_stats = 9;
+	uint64 unit_bonus_restriction = 10;
+	repeated ItemCountRange possible_reward_ranges = 11 [packed=false];
+	string recommended_description = 12;
+	bool show_bonus_loot_label = 13;
+	int32 override_boss_index = 14;
+}
+
+message BattleNodeOverrideDescriptor {
+	string title_key = 1;
+	string description_key = 2;
+	string description_image = 3;
+}
+
+message BattleSim_BattleScript {
+	bytes battle_script_bytes = 1;
+}
+
+message BattleSim_CampaignRequest {
+	uint64 campaign_id = 1;
+}
+
+message BattleSim_CampaignResponse {
+	message Map {
+		uint64 num_nodes = 1;
+	}
+
+	repeated Map maps = 1 [packed=false];
+}
+
+message BattleSim_Player {
+	uint64 player_level = 1;
+	repeated BattleSim_Unit units = 2 [packed=false];
+	repeated BattleSim_Spell spells = 3 [packed=false];
+}
+
+message BattleSim_PlayerSquadOptions {
+	repeated uint64 unit_ids = 1 [packed=false];
+	repeated uint64 spell_ids = 2 [packed=false];
+	repeated uint64 leader_unit_ids = 3 [packed=false];
+	BattleSim_PvpGameMode game_mode = 4;
+}
+
+message BattleSim_PveRequest {
+	BattleSim_Player player = 1;
+	CampaignIdentifier campaign_id = 2;
+}
+
+message BattleSim_PveResponse {
+	uint64 player_team_id = 1;
+	bytes bootstrap = 2;
+}
+
+message BattleSim_PvpRequest {
+	BattleSim_SimplePlayer player_one = 1;
+	BattleSim_SimplePlayer player_two = 2;
+	BattleSim_PvpGameMode game_mode = 3;
+	uint64 battle_id = 4;
+}
+
+message BattleSim_PvpResponse {
+	uint64 player_one_team_id = 1;
+	uint64 player_two_team_id = 2;
+	bytes bootstrap = 3;
+}
+
+message BattleSim_SimplePlayer {
+	uint64 player_level = 1;
+	repeated uint64 unit_ids = 2 [packed=false];
+	repeated uint64 spell_ids = 3 [packed=false];
+	uint64 unit_level = 4;
+	uint64 unit_rarity = 5;
+	uint64 unit_gear_tier = 6;
+	uint64 unit_ability_level = 7;
+	uint64 spell_level = 8;
+	bool enable_ai = 9;
+	uint64 leader_unit_id = 10;
+}
+
+message BattleSim_Spell {
+	uint64 def_id = 1;
+	uint64 level = 2;
+}
+
+message BattleSim_Unit {
+	uint64 def_id = 1;
+	uint64 level = 2;
+	uint64 rarity = 3;
+	uint64 gear_tier = 4;
+	repeated bool gear_slot_equipped = 5 [packed=false];
+	repeated uint64 ability_levels = 6 [packed=false];
+}
+
+message BattleSquadSaveInfo {
+	int32 game_mode = 1;
+	uint64 slot = 2;
+}
+
+message BlockChatUserRequest {
+	string player_id = 1;
+}
+
+message BlockChatUserResponse {
+}
+
+message BonusForSpecialUnits {
+	uint64 bonus_points = 1;
+	repeated uint64 unit_list = 2 [packed=false];
+}
+
+message BonusLootData {
+	uint64 expire_timestamp = 1;
+	string title_loc_key = 2;
+	string description_loc_key = 3;
+}
+
+message BundleInfo {
+	string bundle_name = 1;
+	uint64 download_size_byte = 2;
+	int32 download_order = 3;
+	uint64 crc = 4;
+	bool tutorial_asset = 5;
+}
+
+message BuyAllShipmentItemsRequest {
+	uint64 shipment_def_id = 1;
+}
+
+message BuyAllShipmentItemsResponse {
+	InventoryDelta inventory_delta = 2;
+}
+
+message BuyAndEquipAllGearRequest {
+	uint64 unit_id = 1;
+}
+
+message BuyAndEquipAllGearResponse {
+	InventoryDelta inventory_delta = 1;
+}
+
+message BuyAndEquipGearRequest {
+	uint64 unit_id = 1;
+	uint64 slot = 2;
+}
+
+message BuyAndEquipGearResponse {
+	InventoryDelta inventory_delta = 1;
+}
+
+message BuyExpiredDailyLoginRequest {
+}
+
+message BuyExpiredDailyLoginResponse {
+	InventoryDelta inventory_delta = 1;
+}
+
+message BuyPassportSeasonLevelRequest {
+}
+
+message BuyPassportSeasonLevelResponse {
+	InventoryDelta inventory_delta = 1;
+}
+
+message BuyPveRefreshRequest {
+	CampaignIdentifier campaign_identifier = 1;
+	bool use_free_club_support = 2;
+}
+
+message BuyPveRefreshResponse {
+	InventoryDelta inventory_delta = 1;
+	CampaignProgress updated_progress = 2;
+}
+
+message BuyShipmentItemRequest {
+	string shipment_item_id = 1;
+}
+
+message BuyShipmentItemResponse {
+	InventoryDelta inventory_delta = 1;
+}
+
+message BuyStoreItemDirectRequest {
+	uint64 store_item_id = 1;
+}
+
+message BuyStoreItemDirectResponse {
+	InventoryDelta inventory_delta = 1;
+}
+
+message BuyStoreItemRequest {
+	uint64 store_item_id = 1;
+	string iap_product_id = 2;
+	string iap_transaction_id = 3;
+	string iap_validation_request_body = 4;
+	bool defer_granting_items = 5;
+	uint64 store_shelf_id = 6;
+	bool club_gift_anon = 7;
+	string gift_id = 8;
+	uint64 cost_item_id = 9;
+	string gvs_store_override = 10;
+	int64 purchase_time = 11;
+	bool is_stamps_feature_enabled = 12;
+}
+
+message BuyStoreItemResponse {
+	InventoryDelta inventory_delta = 1;
+	PurchaseLimits purchase_limits = 2;
+	uint64 next_free_store_item_timestamp = 3;
+	InventoryDelta conversions = 4;
+	float total_spend = 5;
+	StoreResponse refreshed_store = 6;
+	bool is_sandbox_environment = 7;
+	bool is_afriend_gift = 8;
+	string gifted_friend_id = 9;
+	uint64 daily_reward_id = 10;
+	repeated StoreStampRewardInfo store_stamp_rewards = 11 [packed=false];
+	StoreItem rv_free_pack_item = 12;
+	HyperdriveProgressionInfo progression_info = 13;
+}
+
+message CacheSettings {
+	uint64 expire_timestamp = 1;
+	uint64 num_to_keep = 2;
+}
+
+message CalendarDate {
+	uint64 year = 1;
+	uint64 month = 2;
+	uint64 day = 3;
+}
+
+message CampaignDetailRequest {
+	uint64 campaign_id = 1;
+}
+
+message CampaignDetailResponse {
+	repeated CampaignMap normal_maps = 1 [packed=false];
+	repeated CampaignMap hard_maps = 2 [packed=false];
+	uint64 bonus_loot_expire_timestamp = 3;
+	repeated BonusLootData bonus_loot_data = 4 [packed=false];
+}
+
+message CampaignIdentifier {
+	uint64 campaign_id = 1;
+	uint64 map_index = 2;
+	uint64 node_index = 3;
+	uint64 battle_index = 4;
+}
+
+message CampaignMap {
+	repeated CampaignNode nodes = 1 [packed=false];
+	uint64 reward_player_activity_id = 2;
+	BattleNodeOverrideDescriptor active_bonus_descriptor = 3;
+}
+
+message CampaignMapDetailRequest {
+	CampaignIdentifier campaign_identifier = 1;
+}
+
+message CampaignMapDetailResponse {
+	repeated CampaignNode nodes = 1 [packed=false];
+	uint64 reward_player_activity_id = 2;
+	BattleNodeOverrideDescriptor active_bonus_descriptor = 3;
+}
+
+message CampaignModifier {
+	uint64 campaign_id = 1;
+	uint64 preview_end_time = 2;
+	uint64 locked_end_time = 3;
+	string background_asset = 4;
+	uint64 background_end_time = 5;
+	string background_scene_asset = 6;
+	uint64 background_scene_end_time = 7;
+}
+
+message CampaignNode {
+	repeated BattleNode battles = 1 [packed=false];
+}
+
+message CampaignProgress {
+	CampaignIdentifier campaign_identifier = 1;
+	uint64 star_level = 2;
+	uint64 limited_attempt_reset_time = 3;
+	uint64 limited_attempt_count = 4;
+	uint64 limited_attempt_refresh_count = 5;
+}
+
+message CampaignRewardsPreview {
+	CampaignIdentifier campaign_identifier = 1;
+	repeated ItemCount possible_rewards = 2 [packed=false];
+	repeated ItemCount first_time_rewards = 3 [packed=false];
+	repeated ItemCountRange possible_reward_ranges = 4 [packed=false];
+	repeated ItemCountRange first_time_reward_ranges = 5 [packed=false];
+}
+
+message CancelBattleInviteMsg {
+	BattleInvite invite = 1;
+}
+
+message CancelClubInviteRequest {
+	string club_id = 1;
+	string player_id = 2;
+}
+
+message CancelClubInviteResponse {
+}
+
+message CancelMatchmakingRequest {
+}
+
+message CancelMatchmakingResponse {
+}
+
+message CarouselCustomItem {
+	string name_key = 1;
+	string image_path = 2;
+	int32 deep_link_location = 3;
+	string deep_link_sublocation = 4;
+	int32 priority = 5;
+	uint64 expiry = 6;
+}
+
+message CarouselItemsRequest {
+}
+
+message CarouselItemsResponse {
+	repeated CarouselStoreItem store_items = 1 [packed=false];
+	repeated CarouselCustomItem custom_items = 2 [packed=false];
+}
+
+message CarouselStoreItem {
+	uint64 store_item_id = 1;
+	int32 priority = 2;
+}
+
+message Chapter {
+	string id = 1;
+	string name_loc_key = 2;
+	string desc_loc_key = 3;
+	string cover_image = 4;
+	QuestReward quest_reward = 5;
+	repeated Quest quests = 6 [packed=false];
+	Quest challenge_quest = 7;
+	int32 sort_order = 8;
+	uint64 start_timestamp = 9;
+	ChapterState state = 10;
+	uint64 time_to_complete_end_time = 11;
+	uint64 cooldown_end_time = 12;
+	uint64 attempt_count = 13;
+	string unlock_requirement = 14;
+	bool claimed_reward = 15;
+	uint64 definition_id = 16;
+	string locked_desc_loc_key = 17;
+}
+
+message CharacterEqualization {
+	uint64 level = 1;
+	uint64 gear_tier = 2;
+	repeated uint64 ability_level = 3 [packed=false];
+	uint64 rarity = 4;
+	uint64 sorcerer_stone_level = 5;
+}
+
+message ChatMessage {
+	ChatMessageType message_type = 1;
+	string message = 2;
+	ChatChannelType channel_type = 3;
+	string channel_name = 4;
+	string player_id = 5;
+	string player_username = 6;
+	uint64 avatar_id = 7;
+	uint64 timestamp = 8;
+	ChatSystemMessageType system_message_type = 9;
+	bytes system_message_payload = 10;
+	uint64 deep_link_location = 11;
+	string deep_link_sublocation = 12;
+	string message_id = 13;
+	uint64 profile_frame_id = 14;
+	uint64 expiry_timestamp = 15;
+	string social_challenge_post_id = 16;
+}
+
+message ChatMessageDeleted {
+	string message_id = 1;
+}
+
+message ChatMessageResponse {
+}
+
+message ChatReportRequest {
+	string player_id = 1;
+	string message_id = 2;
+	uint64 message_timestamp = 3;
+	string channel_name = 4;
+}
+
+message ChatReportResponse {
+}
+
+message CheatRequest {
+	string command = 1;
+	repeated string arguments = 2 [packed=false];
+}
+
+message CheatResponse {
+	string result = 1;
+}
+
+message ClaimActivityRequest {
+	uint64 definition_id = 1;
+	uint64 reward_choice = 2;
+}
+
+message ClaimActivityResponse {
+	uint64 definition_id = 1;
+	InventoryDelta inventory_delta = 2;
+	bool validated = 3;
+}
+
+message ClaimAllQuestGoalRewardsRequest {
+	string quest_id = 1;
+}
+
+message ClaimAllQuestGoalRewardsResponse {
+	repeated QuestGoal claimed_goals = 1 [packed=false];
+	InventoryDelta reward_delta = 2;
+}
+
+message ClaimBonusClubDungeonAttemptRequest {
+}
+
+message ClaimBonusClubDungeonAttemptResponse {
+	uint64 limited_attempts_remaining = 1;
+	bool validated = 2;
+}
+
+message ClaimChapterRewardRequest {
+	string chapter_id = 1;
+}
+
+message ClaimChapterRewardResponse {
+	InventoryDelta inventory_delta = 1;
+	Chapter claimed_chapter = 2;
+}
+
+message ClaimDailyEnergyGiftRequest {
+	uint64 energy_item_id = 1;
+}
+
+message ClaimDailyEnergyGiftResponse {
+	InventoryDelta inventory_delta = 1;
+	repeated PlayerEnergyDailyGifts daily_gifts = 2 [packed=false];
+	uint64 energy_item_id = 3;
+}
+
+message ClaimDailyLoginBonusRequest {
+}
+
+message ClaimDailyLoginBonusResponse {
+	InventoryDelta inventory_delta = 1;
+	bool validated = 2;
+}
+
+message ClaimDailyLoginRequest {
+}
+
+message ClaimDailyLoginResponse {
+	InventoryDelta inventory_delta = 1;
+	uint64 today_bonus_eligibility_time = 2;
+}
+
+message ClaimEventMilestoneRewardRequest {
+	uint64 reward_table_id = 1;
+	int64 reward_id = 2;
+	bool is_club_reward = 3;
+	uint64 bonus_game_mode = 4;
+	string bonus_game_mode_id = 5;
+}
+
+message ClaimEventMilestoneRewardResponse {
+	InventoryDelta inventory_delta = 1;
+}
+
+message ClaimEventRewardChestRequest {
+	EventIdentifier event_id = 1;
+}
+
+message ClaimEventRewardChestResponse {
+	InventoryDelta inventory_delta = 1;
+}
+
+message ClaimQuestGoalRewardRequest {
+	string quest_id = 1;
+	string quest_goal_id = 2;
+}
+
+message ClaimQuestGoalRewardResponse {
+	QuestGoal claimed_goal = 1;
+	InventoryDelta reward_delta = 2;
+}
+
+message ClaimRewardRequest {
+	string reward_id = 1;
+}
+
+message ClaimRewardResponse {
+	InventoryDelta inventory_delta = 1;
+}
+
+message ClaimStreakRewardRequest {
+	uint64 streak_type = 1;
+	uint64 reward_index = 2;
+}
+
+message ClaimStreakRewardResponse {
+	InventoryDelta inventory_delta = 1;
+	StreakReward streak_reward = 2;
+}
+
+message ClaimTowerProgressionLootRequest {
+	TowerIdentifier id = 1;
+}
+
+message ClaimTowerProgressionLootResponse {
+	InventoryDelta inventory_delta = 1;
+}
+
+message ClosedTime {
+	uint64 closed_start_time = 1;
+	uint64 closed_end_time = 2;
+}
+
+message Club {
+	string id = 1;
+	string name = 2;
+	ClubSettings settings = 3;
+	repeated ClubRosterEntry roster = 4 [packed=false];
+	repeated ClubMessage messages = 5 [packed=false];
+	uint64 created_timestamp = 6;
+	repeated ClubInvite invites = 7 [packed=false];
+	repeated ClubItemRequest item_requests = 8 [packed=false];
+	repeated ClubSupportRequest support_requests = 9 [packed=false];
+	repeated InventoryItem club_item_inventory = 10 [packed=false];
+	PlayerClubInviteState invite_state = 11;
+}
+
+message ClubActivitiesRequest {
+}
+
+message ClubActivitiesResponse {
+	repeated ClubActivity activities = 1 [packed=false];
+	uint64 reset_timestamp = 2;
+}
+
+message ClubActivity {
+	uint64 sort_order = 1;
+	uint64 deep_link_location = 2;
+	string deep_link_sublocation = 3;
+	repeated ClubActivityTier tiers = 4 [packed=false];
+	repeated ClubActivityPlayer players = 5 [packed=false];
+}
+
+message ClubActivityPlayer {
+	string public_id = 1;
+	uint64 current_value = 2;
+}
+
+message ClubActivityTier {
+	string name = 1;
+	string description = 2;
+	uint64 required_value = 3;
+	repeated ItemCount rewards = 4 [packed=false];
+	repeated ItemCountRange reward_ranges = 5 [packed=false];
+}
+
+message ClubAdminMsg {
+	string msg_loc_key = 1;
+	repeated string params = 2 [packed=false];
+	repeated LocalizeInst local_param = 3 [packed=false];
+}
+
+message ClubDungeon {
+	repeated ClubDungeonMap maps = 1 [packed=false];
+	uint64 expire_timestamp = 2;
+	uint64 end_timestamp = 3;
+	repeated ClubDungeonRewardGroup reward_groups = 4 [packed=false];
+	BattleNodeOverrideDescriptor active_bonus_descriptor = 5;
+}
+
+message ClubDungeonAttemptsRequest {
+}
+
+message ClubDungeonAttemptsResponse {
+	uint64 attempts_used = 1;
+	uint64 max_attempts = 2;
+	uint64 end_time = 3;
+}
+
+message ClubDungeonBattleEndRequest {
+	bool win = 1;
+	repeated BattleActivityResult activity_results = 2 [packed=false];
+}
+
+message ClubDungeonBattleEndResponse {
+	InventoryDelta inventory_delta = 1;
+}
+
+message ClubDungeonBattleStartRequest {
+	repeated uint64 units = 1 [packed=false];
+	repeated uint64 spells = 2 [packed=false];
+	BattleSquadSaveInfo squad_save = 3;
+	uint64 leader_unit = 4;
+}
+
+message ClubDungeonBattleStartResponse {
+	bytes bootstrap_bytes = 1;
+	uint64 player_id = 2;
+}
+
+message ClubDungeonDoorsRequest {
+}
+
+message ClubDungeonDoorsResponse {
+	repeated uint64 failed_doors = 1 [packed=false];
+	string map_prefab = 2;
+}
+
+message ClubDungeonMap {
+	repeated ClubDungeonNode nodes = 1 [packed=false];
+	string map_prefab = 2;
+}
+
+message ClubDungeonNode {
+	BattleNode battle_data = 1;
+	uint64 node_type = 2;
+	uint64 id = 3;
+}
+
+message ClubDungeonPlayer {
+	string public_id = 1;
+	uint64 current_map = 2;
+	uint64 current_node = 3;
+}
+
+message ClubDungeonRequest {
+	string dungeon_id = 1;
+}
+
+message ClubDungeonResponse {
+	ClubDungeon dungeon = 1;
+}
+
+message ClubDungeonRewardGroup {
+	uint64 start_node_id = 1;
+	uint64 end_node_id = 2;
+	repeated ItemCount rewards = 3 [packed=false];
+	repeated ItemCountRange reward_ranges = 4 [packed=false];
+}
+
+message ClubDungeonStatus {
+	string dungeon_id = 1;
+	uint64 current_map = 2;
+	uint64 current_node = 3;
+	uint64 limited_attempt_reset_time = 4;
+	uint64 limited_attempts_remaining = 5;
+	bool can_participate = 6;
+	repeated ClubDungeonPlayer other_players = 7 [packed=false];
+	bool claimed_bonus_attempt = 8;
+	bool is_dungeon_active = 9;
+	bool has_pending_door_selection = 10;
+	uint64 final_node_wins = 11;
+}
+
+message ClubDungeonStatusRequest {
+}
+
+message ClubDungeonStatusResponse {
+	ClubDungeonStatus status = 1;
+}
+
+message ClubExpeditionBattleEndRequest {
+	bool win = 1;
+	repeated UnitBattleResult units = 2 [packed=false];
+	repeated BattleActivityResult activity_results = 3 [packed=false];
+	bool is_boss = 4;
+	bool quit = 5;
+}
+
+message ClubExpeditionBattleEndResponse {
+	InventoryDelta inventory_delta = 1;
+	ExpeditionStatus new_status = 2;
+	PendingRaidReward reward = 3;
+	bool room_completed = 4;
+	float new_health_percent = 5;
+}
+
+message ClubExpeditionBattleStartRequest {
+	uint32 battle_index = 1;
+	int32 room_x = 2;
+	int32 room_y = 3;
+	uint32 floor_depth = 4;
+	repeated uint64 units = 5 [packed=false];
+	repeated uint64 spells = 6 [packed=false];
+	BattleSquadSaveInfo squad_save = 7;
+	uint64 leader_unit = 8;
+	bool is_boss = 9;
+}
+
+message ClubExpeditionBattleStartResponse {
+	bytes bootstrap_bytes = 1;
+	uint64 player_id = 2;
+	InventoryDelta inventory_delta = 3;
+	repeated uint64 active_auras = 4 [packed=false];
+	repeated uint64 inactive_auras = 5 [packed=false];
+}
+
+message ClubInventoryItemTracker {
+	uint64 id = 1;
+	int64 personal_daily_limited_amount_earned = 2;
+	uint64 personal_daily_limited_amount_expiration_timestamp = 3;
+}
+
+message ClubInvite {
+	string club_id = 1;
+	string club_name = 2;
+	uint64 club_avatar_id = 3;
+	string player_id = 4;
+	uint64 player_avatar_id = 5;
+	string player_username = 6;
+	uint64 player_level = 7;
+	string sender_id = 8;
+	uint64 sender_avatar_id = 9;
+	string sender_username = 10;
+	uint64 sender_level = 11;
+	uint64 timestamp = 12;
+	bool show_player_vip_profile_bg = 13;
+	int64 telemetry_ref_id = 14;
+}
+
+message ClubInviteRequest {
+	string club_id = 1;
+	string player_id = 2;
+}
+
+message ClubInviteResponse {
+	Club club = 1;
+	ClubInvite invite = 2;
+	InventoryDelta inventory_delta = 3;
+}
+
+message ClubItemRequest {
+	bytes id = 1;
+	uint64 item_id = 2;
+	uint64 donation_count = 3;
+	uint64 donation_capacity = 4;
+	PlayerProfileSimple owner = 5;
+	uint64 created = 6;
+	uint64 expiry = 7;
+	int64 telemetry_ref_id = 8;
+}
+
+message ClubLeaderboardEntry {
+	string id = 1;
+	string name = 2;
+	uint64 avatar_id = 3;
+	uint64 current_score = 4;
+	int32 rank_delta = 5;
+	int32 rank = 6;
+}
+
+message ClubLeaderboardRequest {
+	ClubLeaderboardType type = 1;
+}
+
+message ClubLeaderboardResponse {
+	ClubLeaderboardType type = 1;
+	repeated ClubLeaderboardEntry entries = 2 [packed=false];
+}
+
+message ClubMemberContributor {
+	string public_id = 1;
+	uint64 daily_contribution = 2;
+	uint64 seasonal_contribution = 3;
+	uint64 lifetime_contribution = 4;
+	uint64 seasonal_titans_contribution = 5;
+	uint64 lifetime_titans_contribution = 6;
+}
+
+message ClubMemberLeaderboardRequest {
+	ClubMemberLeaderboardType type = 1;
+}
+
+message ClubMemberLeaderboardResponse {
+	ClubMemberLeaderboardType type = 1;
+	repeated PlayerLeaderboardEntry entries = 2 [packed=false];
+}
+
+message ClubMemberRoleChangedDynamicMessage {
+	ClubRole new_club_role = 1;
+}
+
+message ClubMessage {
+	string text = 1;
+	string sender_id = 2;
+	ClubMessageType message_type = 3;
+	uint64 timestamp = 4;
+}
+
+message ClubProfileSimple {
+	string id = 1;
+	string name = 2;
+	uint64 avatar_id = 3;
+}
+
+message ClubRequest {
+	string id = 1;
+}
+
+message ClubResponse {
+	Club club = 1;
+}
+
+message ClubRosterEntry {
+	PlayerProfileSimple player = 1;
+	uint64 donation_count = 2;
+	uint64 joined_timestamp = 3;
+	uint64 last_login_timestamp = 4;
+	uint64 days_since_last_login = 5;
+}
+
+message ClubSettings {
+	uint64 avatar_id = 1;
+	string description = 2;
+	uint64 level_requirement = 3;
+	ClubInvitePolicy invite_policy = 4;
+	ClubType club_type = 5;
+}
+
+message ClubSupportRequest {
+	bytes id = 1;
+	ClubSupportRequestType request_type = 2;
+	PlayerProfileSimple owner = 3;
+	int64 created_timestamp = 4;
+	int64 expiry_timestamp = 5;
+	ClubSupportRequestState state = 6;
+	int64 telemetry_ref_id = 7;
+}
+
+message ClubWar {
+	message NodeSummary {
+		string gd_node_id = 1;
+		uint64 owner_team_id = 2;
+		uint64 num_defenders = 3;
+		uint64 num_defenders_defeated = 4;
+		uint64 rebuild_finish_time = 5;
+		bool has_mutator = 6;
+		string battle_mutator_icon = 7;
+	}
+
+	uint64 definition_id = 1;
+	uint64 phase = 2;
+	repeated ClubWarClub clubs = 3 [packed=false];
+	repeated NodeSummary nodes = 4 [packed=false];
+	repeated string registered_player_ids = 5 [packed=false];
+	string node_target = 6;
+	ClubWarPlayerState player_state = 7;
+	uint64 phase_end_time = 8;
+	uint64 war_start_time = 9;
+	uint32 total_club_power_score = 10;
+}
+
+message ClubWarBattleResultRequest {
+	string battle_id = 1;
+	repeated UnitBattleResult units = 2 [packed=false];
+}
+
+message ClubWarBattleResultResponse {
+	InventoryDelta inventory_delta = 1;
+	repeated ClubWarClubScoreDelta score_deltas = 2 [packed=false];
+	bool captured_node = 3;
+	uint64 num_defenses_remaining = 4;
+}
+
+message ClubWarBattleStartRequest {
+	string gd_node_id = 1;
+	string defense_id = 2;
+	repeated uint64 units = 3 [packed=false];
+	repeated uint64 spells = 4 [packed=false];
+	uint64 leader_unit = 5;
+}
+
+message ClubWarBattleStartResponse {
+	bytes bootstrap_bytes = 1;
+	uint64 player_id = 2;
+	string player_token = 3;
+	Player opponent = 4;
+	string battle_server = 5;
+	string battle_id = 6;
+	MatchMakerResult result = 7;
+	string match_id = 8;
+}
+
+message ClubWarCaptureUndefendedNodeRequest {
+	string gd_node_id = 1;
+}
+
+message ClubWarCaptureUndefendedNodeResponse {
+	ClubWarNodeDetailResponse node_detail = 1;
+}
+
+message ClubWarClub {
+	Club club = 1;
+	uint64 gd_team_id = 2;
+	uint64 score = 3;
+}
+
+message ClubWarClubDefensesRequest {
+}
+
+message ClubWarClubDefensesResponse {
+	repeated ClubWarSquad defenses = 1 [packed=false];
+}
+
+message ClubWarClubScoreDelta {
+	ClubProfileSimple club = 1;
+	uint64 gd_team_id = 2;
+	uint64 old_score = 3;
+	uint64 new_score = 4;
+}
+
+message ClubWarDefense {
+	repeated uint64 defeated_by_team_ids = 1 [packed=false];
+	ClubWarSquad squad = 2;
+	bool under_attack_by_players_club = 3;
+}
+
+message ClubWarDeleteDefenseRequest {
+	string squad_id = 1;
+}
+
+message ClubWarDeleteDefenseResponse {
+}
+
+message ClubWarMakeDefenseRequest {
+	string squad_id = 1;
+	repeated uint64 unit_ids = 2 [packed=false];
+	repeated uint64 spell_ids = 3 [packed=false];
+	uint64 leader_unit_id = 4;
+}
+
+message ClubWarMakeDefenseResponse {
+}
+
+message ClubWarNodeDetailRequest {
+	string node_id = 1;
+}
+
+message ClubWarNodeDetailResponse {
+	uint64 owner_team_id = 1;
+	repeated ClubWarDefense defenses = 2 [packed=false];
+	uint64 rebuild_finish_time = 3;
+	repeated string mutator_desc_keys = 4 [packed=false];
+	repeated string mutator_icons = 5 [packed=false];
+}
+
+message ClubWarOpenRewardRequest {
+	string id = 1;
+}
+
+message ClubWarOpenRewardResponse {
+	InventoryDelta inventory_delta = 1;
+	ClubWarReward reward = 2;
+}
+
+message ClubWarPlayerProfileSimple {
+	string id = 1;
+	string username = 2;
+	uint64 level = 3;
+	uint64 avatar_id = 4;
+	bool show_vip_profile_bg = 5;
+	uint64 frame_id = 6;
+}
+
+message ClubWarPlayerState {
+	repeated uint64 used_attack_unit_ids = 1 [packed=false];
+	repeated uint64 used_attack_spell_ids = 2 [packed=false];
+}
+
+message ClubWarRegisterMemberRequest {
+	bool auto_register = 1;
+}
+
+message ClubWarRegisterMemberResponse {
+}
+
+message ClubWarRequest {
+}
+
+message ClubWarResponse {
+	ClubWar war = 1;
+}
+
+message ClubWarReward {
+	string id = 1;
+	PlayerProfileSimple profile = 2;
+	repeated InventoryItem items = 3 [packed=false];
+	string image = 4;
+	string name_key = 5;
+	uint64 chest_def_id = 6;
+}
+
+message ClubWarRewardsRequest {
+}
+
+message ClubWarRewardsResponse {
+	repeated ClubWarReward club_war_rewards = 1 [packed=false];
+	uint64 place = 2;
+	bool is_player_eligible = 3;
+	string war_telemetry_id = 4;
+}
+
+message ClubWarSetDefenseRequest {
+	string squad_id = 1;
+	string gd_node_id = 2;
+	repeated uint64 unit_ids = 3 [packed=false];
+	repeated uint64 spell_ids = 4 [packed=false];
+	uint64 leader_unit_id = 5;
+}
+
+message ClubWarSetDefenseResponse {
+}
+
+message ClubWarSetNodeTargetRequest {
+	string gd_node_id = 1;
+}
+
+message ClubWarSetNodeTargetResponse {
+}
+
+message ClubWarSquad {
+	string id = 1;
+	ClubWarPlayerProfileSimple profile = 2;
+	repeated Unit units = 3 [packed=false];
+	repeated Spell spells = 4 [packed=false];
+	uint64 leader_unit_id = 5;
+	bool rebuilding_defense_squad = 6;
+	string gd_node_id = 7;
+	bool dead = 8;
+	uint64 power_rating = 9;
+	repeated UnitBattleState unit_states = 10 [packed=false];
+}
+
+message ClubWarTierRewards {
+	uint32 tier_powerscore = 1;
+	repeated ItemCountRange reward_ranges = 2 [packed=false];
+	uint32 rank = 3;
+	string tier_name_key = 4;
+}
+
+message ClubWarTierRewardsRequest {
+}
+
+message ClubWarTierRewardsResponse {
+	repeated ClubWarTierRewards club_war_rank_rewards = 1 [packed=false];
+}
+
+message ClubWarUnregisterMemberRequest {
+}
+
+message ClubWarUnregisterMemberResponse {
+}
+
+message ClubWarUnsetDefenseRequest {
+	string squad_id = 1;
+}
+
+message ClubWarUnsetDefenseResponse {
+}
+
+message Color {
+	int32 r = 1;
+	int32 g = 2;
+	int32 b = 3;
+	float a = 4;
+}
+
+message CombatPoints {
+	int32 type = 1;
+	uint64 points = 2;
+}
+
+message ContextualMessageUnlockedMessage {
+	repeated uint64 unlocked_message_group_ids = 1 [packed=false];
+	repeated uint64 auto_completed_existing_message_group_ids = 2 [packed=false];
+}
+
+message ConvertGemsToCurrencyRequest {
+	uint32 currency_cost = 1;
+	uint64 currency_item_id = 2;
+}
+
+message ConvertGemsToCurrencyResponse {
+	InventoryDelta delta = 1;
+}
+
+message CoopAcceptMatchRequest {
+	BattleInvite invite = 1;
+	repeated uint64 units = 2 [packed=false];
+	repeated uint64 spells = 3 [packed=false];
+	uint64 leader_unit = 4;
+}
+
+message CoopFindMatchRequest {
+	CampaignIdentifier campaign_identifier = 1;
+	repeated uint64 units = 2 [packed=false];
+	repeated uint64 spells = 3 [packed=false];
+	BattleSquadSaveInfo squad_save = 4;
+	EventIdentifier event_id = 5;
+	uint64 leader_unit = 6;
+}
+
+message CoopFindMatchResponse {
+	string player_token = 1;
+	Player ally = 2;
+	string battle_server = 3;
+	string battle_id = 4;
+	bytes bootstrap_bytes = 5;
+	uint64 player_battle_id = 8;
+	MatchMakerResult result = 9;
+}
+
+message CoopInviteToMatchRequest {
+	CampaignIdentifier campaign_identifier = 1;
+	repeated uint64 units = 2 [packed=false];
+	repeated uint64 spells = 3 [packed=false];
+	string friend_id = 4;
+	BattleSquadSaveInfo squad_save = 5;
+	EventIdentifier event_id = 6;
+	uint64 leader_unit = 7;
+}
+
+message CraftInventoryItemRequest {
+	uint64 item_id = 1;
+}
+
+message CraftInventoryItemResponse {
+	InventoryDelta inventory_delta = 1;
+}
+
+message CreateClubRequest {
+	string name = 1;
+	ClubSettings settings = 2;
+}
+
+message CreateClubResponse {
+	Club club = 1;
+	InventoryDelta inventory_delta = 2;
+	uint64 create_club_timestamp = 3;
+}
+
+message DailyLogin {
+	repeated ItemCount rewards = 1 [packed=false];
+	bool can_claim_rva_bonus = 2;
+	uint32 rva_multiplier = 3;
+	uint32 vip_multiplier = 4;
+	string rva_claim_bonus_text = 5;
+	string vip_claim_bonus_text = 6;
+}
+
+message DailyLoginStatus {
+	uint64 days_claimed_this_month = 1;
+	bool today_claimed = 2;
+	bool today_bonus_granted = 3;
+	uint64 today_bonus_eligibility_timestamp = 4;
+	uint64 starting_day_today = 5;
+	uint64 definition_id = 6;
+	uint32 final_vip_rewards_multiplier = 7;
+	repeated StreakReward streak_rewards = 8 [packed=false];
+}
+
+message DailyReward {
+	uint64 reward_id = 1;
+	uint64 tier_index = 2;
+	uint64 reward_index = 3;
+	uint64 reset_time = 4;
+	bool completed = 5;
+	bool is_preview = 6;
+	uint64 store_item_def = 7;
+	uint64 store_item_available_time = 8;
+	string store_item_ios_product_id = 9;
+	string store_item_android_product_id = 10;
+	uint64 store_item_cost_item_id = 11;
+	uint64 store_item_cost_count = 12;
+}
+
+message DailyRewardClaimRequest {
+	uint64 reward_id = 1;
+	uint64 tier_index = 2;
+	uint64 reward_index = 3;
+}
+
+message DailyRewardClaimResponse {
+	InventoryDelta inventory_delta = 1;
+	DailyReward daily_reward = 2;
+}
+
+message DeathReport {
+	uint32 entity_id = 1;
+	uint32 player_id = 2;
+	uint32 team_id = 3;
+}
+
+message DeclineMatchRequest {
+	BattleInvite invite = 1;
+}
+
+message DeclineMatchResponse {
+}
+
+message DemoteClubMemberRequest {
+	string player_id = 1;
+}
+
+message DemoteClubMemberResponse {
+	Club club = 1;
+}
+
+message DeregisterBattleServerRequest {
+	string addr = 1;
+}
+
+message DeregisterBattleServerResponse {
+}
+
+message DeviceInfo {
+	DevicePlatform platform = 1;
+	uint64 ios_generation = 2;
+	string gpu_name = 3;
+}
+
+message DisabledFeatureUpdated {
+	repeated DisabledFeatureUpdatedEntry updated_features = 1 [packed=false];
+	bool events_updated = 2;
+}
+
+message DisabledFeatureUpdatedEntry {
+	uint64 feature_index = 1;
+	bool is_disabled = 2;
+}
+
+message DismissContextualMessageRequest {
+	uint64 message_group_id = 1;
+}
+
+message DismissContextualMessageResponse {
+}
+
+message DonateClubItemRequest {
+	bytes request_id = 1;
+}
+
+message DonateClubItemResponse {
+	InventoryDelta inventory_delta = 1;
+}
+
+message DynamicMessage {
+	DynamicMessageType type = 1;
+	bytes payload = 2;
+}
+
+message EarnedLeaderboardChallengePoints {
+	uint64 challenge_id = 1;
+	int64 earned_points = 2;
+	uint64 start_time = 3;
+}
+
+message EnemyUnitPreview {
+	uint64 content_id = 1;
+	string icon = 2;
+	float range = 3;
+	string name_key = 4;
+	repeated uint64 categories = 5 [packed=false];
+	uint64 unit_type = 6;
+	uint64 unit_health = 7;
+}
+
+message EnergyRefreshRequest {
+	uint64 energy_item_id = 1;
+}
+
+message EnergyRefreshResponse {
+	InventoryDelta inventory_delta = 1;
+	uint64 daily_purchases = 2;
+	uint64 energy_item_id = 3;
+}
+
+message EnterAccountLinkCodeRequest {
+	string account_link_code = 1;
+}
+
+message EnterAccountLinkCodeResponse {
+	string account_link_verify_code = 1;
+	int64 verify_code_expiration_timestamp = 2;
+}
+
+message EquipAllGearRequest {
+	uint64 unit_id = 1;
+}
+
+message EquipAllGearResponse {
+	InventoryDelta inventory_delta = 1;
+}
+
+message EquipEmoteRequest {
+	repeated uint64 emote_deck = 1 [packed=false];
+}
+
+message EquipEmoteResponse {
+	repeated uint64 emote_deck = 1 [packed=false];
+}
+
+message EquipGearRequest {
+	uint64 unit_id = 1;
+	uint64 slot = 2;
+}
+
+message EquipGearResponse {
+	InventoryDelta inventory_delta = 1;
+}
+
+message EquipSorcererStoneRequest {
+	uint64 unit_id = 1;
+	uint64 sorcerer_stone_id = 2;
+}
+
+message EquipSorcererStoneResponse {
+	InventoryDelta inventory_delta = 1;
+}
+
+message EquipUnitSkinRequest {
+	uint64 unit_id = 1;
+	uint64 unit_skin_item_id = 2;
+}
+
+message EquipUnitSkinResponse {
+}
+
+message Event {
+	uint64 content_id = 1;
+	string name = 2;
+	string description = 3;
+	string image = 4;
+	int64 sort_order = 5;
+	uint64 battle_limit = 6;
+	repeated ItemCount battle_limit_refresh_cost = 7 [packed=false];
+	repeated EventTier tiers = 8 [packed=false];
+	uint64 begin_timestamp = 9;
+	uint64 end_timestamp = 10;
+	string marquee_image = 11;
+	bool lifetime_progress_event = 12;
+	string preview_text = 13;
+	bool require_previous_tier_completion = 14;
+	uint64 shipment_location = 15;
+	Color locked_color = 16;
+	Color unlocked_color = 17;
+	bool allow_instant_battle = 18;
+	uint64 hud_currency = 19;
+	uint64 shipment_def_id = 20;
+	string banner_image = 21;
+	string banner_text = 22;
+	repeated uint64 showcase_items = 23 [packed=false];
+	string recommended_description = 24;
+	uint64 event_group_id = 25;
+	bool is_permanent = 26;
+	uint64 battle_cooldown_seconds = 27;
+}
+
+message EventBattleEndRequest {
+	bool win = 1;
+	uint64 star_level = 2;
+	repeated BattleActivityResult activity_results = 3 [packed=false];
+}
+
+message EventBattleEndResponse {
+	InventoryDelta inventory_delta = 1;
+	EventStatus updated_status = 2;
+}
+
+message EventBattleStartRequest {
+	EventIdentifier event_id = 1;
+	repeated uint64 units = 2 [packed=false];
+	repeated uint64 spells = 3 [packed=false];
+	BattleSquadSaveInfo squad_save = 4;
+	uint64 leader_unit = 5;
+}
+
+message EventBattleStartResponse {
+	bytes bootstrap_bytes = 1;
+	uint64 player_id = 2;
+	InventoryDelta inventory_delta = 3;
+}
+
+message EventGroup {
+	uint64 content_id = 1;
+	string name = 2;
+	string description = 3;
+	string image = 4;
+	int64 sort_order = 5;
+	repeated uint64 showcase_items = 6 [packed=false];
+	string marquee_image = 7;
+	bool disable_timer = 8;
+	bool has_player_activated = 9;
+	Color frame_color = 10;
+	Color panel_color = 11;
+	string vfx_asset = 12;
+	uint64 store_deep_link_tab_id = 13;
+	string portal_name = 14;
+	string portal_desc = 15;
+	int64 unlock_level = 16;
+	int64 preview_level = 17;
+}
+
+message EventIdentifier {
+	uint64 event_content_id = 1;
+	uint64 tier_index = 2;
+}
+
+message EventMilestoneReward {
+	int64 id = 1;
+	repeated ItemCountRange items = 2 [packed=false];
+	uint64 required_value = 3;
+	bool claimed = 4;
+	string background_image = 5;
+}
+
+message EventMilestoneRewardClubMemberEntry {
+	PlayerProfileSimple player = 1;
+	uint64 amount_earned = 2;
+}
+
+message EventMilestoneRewardStatus {
+	uint64 reward_table_id = 1;
+	uint64 milestone_point_item_id = 2;
+	uint64 expiration_timestamp = 3;
+	string stamped_public_club_id = 4;
+	uint64 club_points = 5;
+	repeated EventMilestoneRewardStatusEntry personal_rewards = 6 [packed=false];
+	repeated EventMilestoneRewardStatusEntry club_rewards = 7 [packed=false];
+}
+
+message EventMilestoneRewardStatusEntry {
+	int64 id = 1;
+	uint64 required_value = 2;
+	bool claimed = 3;
+}
+
+message EventMilestoneRewardTable {
+	uint64 milestone_point_item_id = 1;
+	repeated EventMilestoneReward personal_rewards = 2 [packed=false];
+	repeated EventMilestoneReward club_rewards = 3 [packed=false];
+	string name = 4;
+	string description = 5;
+	uint64 id = 6;
+	uint64 expiration_timestamp = 7;
+}
+
+message EventProgress {
+	EventIdentifier id = 1;
+	uint64 star_count = 2;
+	bool reward_chest_claimed = 3;
+}
+
+message EventRewardChest {
+	repeated ItemCountRange possible_rewards = 1 [packed=false];
+	string name = 2;
+	EventIdentifier tier_id = 3;
+}
+
+message EventStatus {
+	uint64 event_content_id = 1;
+	uint64 battles_remaining = 2;
+	uint64 battle_limit_refreshed_count = 3;
+	uint64 next_battle_limit_reset_timestamp = 4;
+	uint64 next_battle_cooldown_timestamp = 5;
+	repeated PersistentRewards persistent_rewards = 6 [packed=false];
+}
+
+message EventTier {
+	EventIdentifier id = 1;
+	BattleNode battle_node = 2;
+	uint32 ruleset = 3;
+	EventRewardChest reward_chest = 4;
+}
+
+message EventUnlocked {
+	repeated EventProgress progress = 1 [packed=false];
+	repeated EventStatus status = 2 [packed=false];
+}
+
+message ExpBattle {
+	repeated EnemyUnitPreview unit_previews = 1 [packed=false];
+	UnitStatOverride unit_stat_overrides = 2;
+	repeated UnitBattleState unit_battle_states = 3 [packed=false];
+	bool available_to_join = 4;
+	string enemy_label_str_key = 5;
+	bool completed = 6;
+	PlayerProfileSimple completed_player = 7;
+}
+
+message ExpBattleRoom {
+	int32 x = 1;
+	int32 y = 2;
+	repeated ExpBattle battles = 3 [packed=false];
+	uint64 battle_restriction = 4;
+	string battle_room_str_key = 5;
+	repeated BattleMutator active_mutators = 6 [packed=false];
+	int32 energy_cost = 7;
+	uint64 energy_item = 8;
+	int32 index = 9;
+}
+
+message ExpBossRoom {
+	int32 x = 1;
+	int32 y = 2;
+	float health_percent = 3;
+	string image_path = 4;
+	uint64 requirements = 5;
+	uint64 battle_restriction = 6;
+	string battle_room_str_key = 7;
+	repeated BattleMutator active_mutators = 8 [packed=false];
+	bool available_to_join = 9;
+	uint64 health = 10;
+	int32 index = 11;
+	int32 energy_cost = 12;
+	uint64 energy_item = 13;
+	uint64 recommended_units = 14;
+	uint64 boss_unit_id = 15;
+}
+
+message ExpChestRoom {
+	int32 x = 1;
+	int32 y = 2;
+	int32 index = 3;
+}
+
+message ExpDeployRoom {
+	int32 x = 1;
+	int32 y = 2;
+	uint64 power_target = 3;
+	uint64 requirement = 4;
+	string description_key = 5;
+	string image_path = 6;
+	uint64 score = 7;
+	uint32 max_units = 8;
+	uint32 num_previously_deployed_units = 9;
+	int32 index = 10;
+	string mutator_description_key = 11;
+}
+
+message ExpeditionClaimChestRoomRequest {
+	int32 x = 1;
+	int32 y = 2;
+	int32 floor = 3;
+	int32 room_index = 4;
+}
+
+message ExpeditionClaimChestRoomResponse {
+	ExpeditionFloorLayout updated_layout = 1;
+	PendingRaidReward reward = 2;
+	InventoryDelta inventory_delta = 3;
+}
+
+message ExpeditionClaimRewardRequest {
+	string id = 1;
+}
+
+message ExpeditionClaimRewardResponse {
+	InventoryDelta inv_delta = 1;
+	int32 difficulty = 2;
+	uint64 season_id = 3;
+	uint64 floor_id = 4;
+	int32 room_index = 5;
+	uint64 season_start_time = 6;
+}
+
+message ExpeditionDefinition {
+	string name = 1;
+	string subtitle = 2;
+	string description = 3;
+	uint64 start_time = 4;
+	uint64 end_time = 5;
+	repeated ExpeditionDifficultyLevel difficulty_levels = 6 [packed=false];
+	string info_key = 7;
+	EventMilestoneRewardTable milestone_reward_table = 8;
+	uint64 season_id = 9;
+	repeated uint64 floor_unlock_times = 10 [packed=false];
+}
+
+message ExpeditionDefinitionRequest {
+}
+
+message ExpeditionDefinitionResponse {
+	ExpeditionDefinition definition = 1;
+	ExpeditionStatus status = 2;
+}
+
+message ExpeditionDeployUnitsRequest {
+	repeated uint64 units = 1 [packed=false];
+	int32 x = 2;
+	int32 y = 3;
+	int32 floor = 4;
+}
+
+message ExpeditionDeployUnitsResponse {
+	uint64 updated_score = 1;
+	bool layout_changed = 2;
+	ExpeditionFloorLayout updated_layout = 3;
+	InventoryDelta inventory_delta = 4;
+	uint32 num_deployed_units = 5;
+}
+
+message ExpeditionDifficultyLevel {
+	uint32 num_floors = 1;
+	string name_key = 2;
+	string recommended_key = 3;
+	string description_key = 4;
+}
+
+message ExpeditionFloorLayout {
+	uint32 floor_num = 1;
+	repeated ExpRoomStub rooms = 2 [packed=false];
+	repeated ExpeditionProp props = 3 [packed=false];
+	repeated int32 chest_rooms_with_pending_rewards = 4 [packed=false];
+}
+
+message ExpeditionFloorLayoutRequest {
+	uint32 level = 1;
+	bool validate = 2;
+}
+
+message ExpeditionFloorLayoutResponse {
+	ExpeditionFloorLayout layout = 1;
+}
+
+message ExpeditionGetMarkedRoomsRequest {
+	int32 floor = 1;
+}
+
+message ExpeditionGetMarkedRoomsResponse {
+	repeated int32 x = 1 [packed=false];
+	repeated int32 y = 2 [packed=false];
+}
+
+message ExpeditionGetRoomInfoRequest {
+	uint32 level = 1;
+	int32 x = 2;
+	int32 y = 3;
+}
+
+message ExpeditionGetRoomInfoResponse {
+	enum RoomOneofCase {
+		NONE = 0;
+		EMPTY_ROOM = 2;
+		BATTLE_ROOM = 3;
+		DEPLOY_ROOM = 4;
+		CHEST_ROOM = 5;
+		BOSS_ROOM = 6;
+	}
+
+	uint32 level = 1;
+	ExpEmptyRoom empty_room = 2;
+	ExpBattleRoom battle_room = 3;
+	ExpDeployRoom deploy_room = 4;
+	ExpChestRoom chest_room = 5;
+	ExpBossRoom boss_room = 6;
+	ExpRoomVisibility visibility = 7;
+}
+
+message ExpeditionMarkRoomRequest {
+	repeated int32 x = 1 [packed=false];
+	repeated int32 y = 2 [packed=false];
+	int32 floor = 3;
+}
+
+message ExpeditionMarkRoomResponse {
+}
+
+message ExpeditionProgressRequest {
+}
+
+message ExpeditionProgressResponse {
+	repeated ExpFloorProgress floors = 1 [packed=false];
+}
+
+message ExpeditionProp {
+	int32 x = 1;
+	int32 y = 2;
+	string prefab = 3;
+	int32 size_x = 4;
+	int32 size_y = 5;
+}
+
+message ExpeditionStatus {
+	uint32 difficulty = 1;
+	bool started = 2;
+	uint32 highest_unlocked_floor = 3;
+	ExpeditionUnitStatus unit_status = 4;
+	repeated PendingRaidReward pending_rewards = 5 [packed=false];
+	InventoryDelta milestone_rewards = 6;
+	repeated float floor_progress = 7 [packed=false];
+	EventMilestoneRewardTable milestone_reward_table = 8;
+	repeated BonusLootData bonus_loot = 9 [packed=false];
+	repeated uint64 floor_ids = 10 [packed=false];
+	EventMilestoneRewardStatus milestone_reward_status = 11;
+}
+
+message ExpeditionStatusRequest {
+}
+
+message ExpeditionStatusResponse {
+	ExpeditionStatus status = 1;
+	InventoryDelta resolved_milestone_rewards = 2;
+	ExpiredMilestoneRewards expired_milestone_rewards = 3;
+}
+
+message ExpeditionUnitStatus {
+	repeated uint64 consumed_units = 1 [packed=false];
+	uint64 refresh_time = 2;
+}
+
+message ExpEmptyRoom {
+	int32 x = 1;
+	int32 y = 2;
+}
+
+message ExpFloorProgress {
+	repeated ExpRoomProgress rooms = 1 [packed=false];
+	int32 floor = 2;
+}
+
+message ExpiredMilestoneRewards {
+	repeated uint64 table_ids = 1 [packed=false];
+	repeated InventoryDelta rewards = 2 [packed=false];
+	repeated string analytics_tag = 3 [packed=false];
+}
+
+message ExpireRpcCacheMessage {
+	string rpc_name = 1;
+}
+
+message ExpRoomProgress {
+	ExpRoomTypes room_type = 1;
+	uint64 requirement = 2;
+	ExpRoomVisibility visibility = 3;
+}
+
+message ExpRoomStub {
+	int32 x = 1;
+	int32 y = 2;
+	ExpRoomTypes type = 3;
+	ExpRoomVisibility visibility = 4;
+	int32 index = 5;
+}
+
+message FilterClubsRequest {
+	string name = 1;
+	uint64 created_after_timestamp = 2;
+	ClubInvitePolicyFilter policy = 3;
+	FindClubSortType sort_type = 4;
+	bool show_full_clubs = 5;
+	uint64 offset = 6;
+}
+
+message FilterClubsResponse {
+	repeated Club clubs = 1 [packed=false];
+	bool has_next_page = 2;
+	uint64 offset = 3;
+}
+
+message FindClubsRequest {
+	string name = 1;
+	uint64 created_after_timestamp = 2;
+	uint64 offset = 3;
+}
+
+message FindClubsResponse {
+	repeated Club clubs = 1 [packed=false];
+	bool has_next_page = 2;
+	uint64 offset = 3;
+}
+
+message FindPlayerProfile {
+	PlayerProfileSimple profile = 1;
+	FriendStatus status = 2;
+}
+
+message FindPlayersRequest {
+	string search_query = 1;
+	uint64 offset = 3;
+}
+
+message FindPlayersResponse {
+	repeated FindPlayerProfile players = 1 [packed=false];
+	bool has_next_page = 2;
+	uint64 offset = 3;
+}
+
+message ForfeitRaidRequest {
+	string attempt_id = 1;
+}
+
+message ForfeitRaidResponse {
+	RaidStatus raid_status = 1;
+	InventoryDelta inventory_delta = 2;
+}
+
+message Friend {
+	PlayerProfileSimple profile = 1;
+	FriendStatus status = 2;
+	int64 telemetry_ref_id = 3;
+	FriendSocialStatusInfo social_info = 4;
+	SocialPvpStats social_pvp_stats = 5;
+}
+
+message FriendGiftSelectRequest {
+	string sender_id = 1;
+	string receiver_id = 2;
+	string product_id = 3;
+}
+
+message FriendGiftSelectResponse {
+	string gift_id = 1;
+}
+
+message FriendsListInviteURLRequest {
+}
+
+message FriendsListInviteURLResponse {
+	string url = 1;
+}
+
+message FriendsListModifyRequest {
+	FriendsListModifyAction action = 1;
+	string id = 2;
+	string token = 3;
+	int64 telemetry_ref_id = 4;
+}
+
+message FriendsListModifyResponse {
+}
+
+message FriendsListRequest {
+}
+
+message FriendsListResponse {
+	repeated Friend friends = 1 [packed=false];
+	int64 next_refresh_time_stamp = 2;
+	int32 social_free_gift_count = 3;
+}
+
+message FriendSocialStatusInfo {
+	bool is_buddy = 1;
+	int32 count_of_items_to_claim = 2;
+	bool can_friend_grant_item = 3;
+}
+
+message FulfillAllClubSupportRequest {
+}
+
+message FulfillAllClubSupportResponse {
+}
+
+message FulfillClubSupportRequest {
+	bytes request_id = 1;
+}
+
+message FulfillClubSupportResponse {
+	int64 next_fulfill_available_timestamp = 1;
+}
+
+message GearTierUpRequest {
+	uint64 unit_id = 1;
+}
+
+message GearTierUpResponse {
+	InventoryDelta inventory_delta = 1;
+}
+
+message GenerateAccountLinkCodeRequest {
+}
+
+message GenerateAccountLinkCodeResponse {
+	string account_link_code = 1;
+	int64 code_expiration_timestamp = 2;
+}
+
+message GenerateBonusEnergyRequest {
+	uint64 energy_item_id = 1;
+}
+
+message GenerateBonusEnergyResponse {
+	uint64 bonus_generate_end_timestamp = 1;
+	bool validated = 2;
+}
+
+message GetBlockedChatUsersRequest {
+}
+
+message GetBlockedChatUsersResponse {
+	repeated PlayerProfileSimple players = 1 [packed=false];
+}
+
+message GetClubContributionsRequest {
+	string club_id = 1;
+}
+
+message GetClubContributionsResponse {
+	repeated ClubMemberContributor contributors = 1 [packed=false];
+}
+
+message GetClubInvitesRequest {
+}
+
+message GetClubInvitesResponse {
+	repeated ClubInvite invites = 1 [packed=false];
+}
+
+message GetClubItemInventoryRequest {
+}
+
+message GetClubItemInventoryResponse {
+	repeated InventoryItem club_item_inventory = 1 [packed=false];
+}
+
+message GetClubRaidLeaderboardRankRequest {
+	bool regional = 1;
+	uint64 raid_id = 2;
+}
+
+message GetClubRaidLeaderboardRankResponse {
+	ClubLeaderboardEntry club_leaderboard_entry = 1;
+	uint64 leaderboard_expiry_time = 2;
+}
+
+message GetCurrentLeaderboardChallengesRequest {
+}
+
+message GetCurrentLeaderboardChallengesResponse {
+	repeated LeaderboardChallengeDefinition leaderboard_challenges = 1 [packed=false];
+	repeated LeaderboardChallengeStatus current_statuses = 2 [packed=false];
+	InventoryDelta inv_delta = 3;
+}
+
+message GetCurrentLimitedTimeArenasRequest {
+}
+
+message GetCurrentLimitedTimeArenasResponse {
+	repeated LimitedTimeArena limited_time_arenas = 1 [packed=false];
+}
+
+message GetDailyEventsRequest {
+}
+
+message GetDailyEventsResponse {
+	repeated Event daily_events = 1 [packed=false];
+}
+
+message GetDailyLoginRequest {
+}
+
+message GetDailyLoginResponse {
+	DailyLogin data = 1;
+}
+
+message GetEventMilestoneContributionsRequest {
+	uint64 reward_table_id = 1;
+	string club_id = 2;
+}
+
+message GetEventMilestoneContributionsResponse {
+	repeated EventMilestoneRewardClubMemberEntry club_members = 1 [packed=false];
+}
+
+message GetEventMilestoneRewardsRequest {
+	uint64 reward_table_id = 1;
+}
+
+message GetEventMilestoneRewardsResponse {
+	EventMilestoneRewardTable reward_table = 1;
+	repeated EventMilestoneRewardClubMemberEntry club_members = 2 [packed=false];
+	string stamped_public_club_id = 3;
+}
+
+message GetEventStatusRequest {
+	uint64 event_content_id = 1;
+	repeated uint64 event_content_ids = 2 [packed=false];
+}
+
+message GetEventStatusResponse {
+	EventStatus status = 1;
+	repeated EventStatus statuses = 2 [packed=false];
+}
+
+message GetExpeditionBossLeaderboardRequest {
+	int32 x = 1;
+	int32 y = 2;
+	int32 floor = 3;
+}
+
+message GetExpeditionBossLeaderboardResponse {
+	repeated PlayerLeaderboardEntry leaderboard = 1 [packed=false];
+	uint64 leaderboard_expiry_time = 2;
+}
+
+message GetExpeditionLeaderboardRequest {
+}
+
+message GetExpeditionLeaderboardResponse {
+	repeated PlayerLeaderboardEntry leaderboard = 1 [packed=false];
+	uint64 leaderboard_expiry_time = 2;
+}
+
+message GetExpeditionUnitStatusRequest {
+}
+
+message GetExpeditionUnitStatusResponse {
+	ExpeditionUnitStatus unit_status = 1;
+}
+
+message GetLeaderboardChallengeClubLeaderboardRequest {
+	LeaderboardChallengeIdentifier leaderboard_challenge = 1;
+}
+
+message GetLeaderboardChallengeClubLeaderboardResponse {
+	LeaderboardChallengeIdentifier leaderboard_challenge = 1;
+	repeated ClubLeaderboardEntry entries = 2 [packed=false];
+}
+
+message GetLeaderboardChallengeGlobalLeaderboardRequest {
+	LeaderboardChallengeIdentifier leaderboard_challenge = 1;
+}
+
+message GetLeaderboardChallengeGlobalLeaderboardResponse {
+	LeaderboardChallengeIdentifier leaderboard_challenge = 1;
+	repeated PlayerLeaderboardEntry entries = 2 [packed=false];
+	InventoryDelta inventory_delta = 3;
+}
+
+message GetLeaderboardChallengeLeaderboardRequest {
+	LeaderboardChallengeIdentifier leaderboard_challenge = 1;
+}
+
+message GetLeaderboardChallengeLeaderboardResponse {
+	LeaderboardChallengeIdentifier leaderboard_challenge = 1;
+	repeated PlayerLeaderboardEntry entries = 2 [packed=false];
+	InventoryDelta inventory_delta = 3;
+}
+
+message GetLeaderboardChallengePendingRewardsRequest {
+	LeaderboardChallengeIdentifier challenge_id = 1;
+}
+
+message GetLeaderboardChallengePendingRewardsResponse {
+	repeated EventMilestoneReward unclaimed_rewards = 1 [packed=false];
+	EventMilestoneReward next_reward = 2;
+}
+
+message GetLeaderboardChallengeStatusRequest {
+	repeated LeaderboardChallengeIdentifier challenge_ids = 1 [packed=false];
+}
+
+message GetLeaderboardChallengeStatusResponse {
+	repeated LeaderboardChallengeStatus current_statuses = 1 [packed=false];
+}
+
+message GetLimitedTimeArenaStatusesRequest {
+}
+
+message GetLimitedTimeArenaStatusesResponse {
+	repeated LimitedTimeArenaStatus statuses = 1 [packed=false];
+}
+
+message GetMaxedUnitsAndSpellsRequest {
+}
+
+message GetMaxedUnitsAndSpellsResponse {
+	repeated Unit unit_inventory = 1 [packed=false];
+	repeated Spell spell_inventory = 2 [packed=false];
+}
+
+message GetPendingRewardsRequest {
+}
+
+message GetPendingRewardsResponse {
+	repeated PendingRaidReward pending_rewards = 1 [packed=false];
+}
+
+message GetPlayerClubSupportStatusRequest {
+	ClubSupportRequestType support_request_type = 1;
+}
+
+message GetPlayerClubSupportStatusResponse {
+	ClubSupportRequest support_request = 1;
+}
+
+message GetRaidLeaderboardRequest {
+	bool regional = 1;
+	uint64 raid_id = 2;
+}
+
+message GetRaidLeaderboardResponse {
+	repeated ClubLeaderboardEntry leaderboard = 1 [packed=false];
+	uint64 leaderboard_expiry_time = 2;
+}
+
+message GetRaidStatusRequest {
+	uint64 player_id = 1;
+	repeated uint64 raid_ids = 2 [packed=false];
+	bool get_unit_spell_status = 3;
+	bool initialize_milestones = 4;
+}
+
+message GetRaidStatusResponse {
+	repeated RaidStatus raid_status = 1 [packed=false];
+	bool should_replace_cache = 2;
+	InventoryDelta inventory_delta = 3;
+}
+
+message GetRaidTiersStatusRequest {
+	uint64 raid_id = 1;
+}
+
+message GetRaidTiersStatusResponse {
+	RaidTiersStatus status = 1;
+}
+
+message GetRVFreePackItemRequest {
+}
+
+message GetRVFreePackItemResponse {
+	StoreItem item = 1;
+}
+
+message GetScheduledEventsRequest {
+}
+
+message GetScheduledEventsResponse {
+	repeated Event scheduled_events = 1 [packed=false];
+	repeated EventGroup event_groups = 2 [packed=false];
+	repeated InfoEvent info_events = 3 [packed=false];
+	repeated TowerEvent tower_events = 4 [packed=false];
+	repeated TowerStatus tower_event_statuses = 5 [packed=false];
+	InventoryDelta resolved_milestone_rewards = 6;
+	repeated EventMilestoneRewardStatus milestone_reward_statuses = 7 [packed=false];
+	repeated LeaderboardChallengeDefinition lc_definitions = 8 [packed=false];
+	repeated LeaderboardChallengeStatus lc_statuses = 9 [packed=false];
+	ExpiredMilestoneRewards expired_milestone_rewards = 10;
+	repeated LimitedTimeArena limited_time_arenas = 11 [packed=false];
+}
+
+message GetScheduledRaidsRequest {
+}
+
+message GetScheduledRaidsResponse {
+	repeated RaidDefinition raids = 1 [packed=false];
+}
+
+message GlobalAdminMsg {
+	string msg_loc_key = 1;
+	repeated string params = 2 [packed=false];
+}
+
+message HomeBattleSelectRequest {
+}
+
+message HomeBattleSelectResponse {
+	uint64 bonus_loot_expire_timestamp = 1;
+	repeated uint64 bonus_loot_game_mode_ids = 2 [packed=false];
+	bool pvp_has_bonus_loot = 3;
+	repeated CampaignModifier modifiers = 4 [packed=false];
+	uint64 limited_time_arena_expire_timestamp = 5;
+}
+
+message HomeClubDonationsRequest {
+}
+
+message HomeClubDonationsResponse {
+	repeated ClubItemRequest item_requests = 1 [packed=false];
+	uint64 next_item_request_timestamp = 2;
+	uint32 item_donations_remaining = 3;
+	uint64 item_donations_reset_timestamp = 4;
+	repeated ClubSupportRequest support_requests = 5 [packed=false];
+}
+
+message HomeClubDungeonStatusRequest {
+}
+
+message HomeClubDungeonStatusResponse {
+	bool is_playable = 1;
+	bool is_lead = 2;
+	string dungeon_id = 3;
+	uint64 end_timestamp = 4;
+	uint64 rank = 5;
+	uint64 completed_attempts_today = 6;
+	uint64 max_attempts_today = 7;
+}
+
+message HomeClubInventoryRequest {
+}
+
+message HomeClubInventoryResponse {
+	repeated InventoryItem inventory = 1 [packed=false];
+}
+
+message HomeClubInvitesRequest {
+}
+
+message HomeClubInvitesResponse {
+	repeated ClubInvite invites = 1 [packed=false];
+}
+
+message HomeClubWarRequest {
+}
+
+message HomeClubWarResponse {
+	string club_war_id = 1;
+	uint64 club_war_def_id = 2;
+	uint64 current_phase = 3;
+	uint64 current_phase_end_time = 4;
+	bool is_player_registered = 5;
+	bool has_unclaimed_reward = 6;
+}
+
+message HomeDailyEventsRequest {
+}
+
+message HomeDailyEventsResponse {
+	uint32 available_battles = 1;
+	uint32 total_battles = 2;
+}
+
+message HomeFriendsRequest {
+}
+
+message HomeFriendsResponse {
+	repeated Friend friends = 1 [packed=false];
+}
+
+message HomeInboxRequest {
+}
+
+message HomeInboxResponse {
+	uint32 unread_count = 1;
+}
+
+message HomeKothRequest {
+}
+
+message HomeKothResponse {
+	uint32 current_rank = 1;
+	uint32 attempts_remaining = 2;
+	uint64 attack_cooldown_end_time = 3;
+}
+
+message HomeLtaStatusRequest {
+}
+
+message HomeLtaStatusResponse {
+	repeated LimitedTimeArenaStatus lta_statuses = 1 [packed=false];
+}
+
+message HomePlayerActivityRequest {
+}
+
+message HomePlayerActivityResponse {
+	uint32 star_count = 1;
+	uint32 star_total = 2;
+	bool is_claimed = 3;
+}
+
+message HomePvpRequest {
+}
+
+message HomePvpResponse {
+	string home_pvp_asset = 1;
+	string pvp_pack_asset = 2;
+}
+
+message HomeQuestStatusRequest {
+}
+
+message HomeQuestStatusResponse {
+	repeated Quest quests = 1 [packed=false];
+}
+
+message HomeRaidDefinitionsRequest {
+}
+
+message HomeRaidDefinitionsResponse {
+	repeated RaidDefinition raid_definitions = 1 [packed=false];
+}
+
+message HomeRaidPendingRewardsRequest {
+}
+
+message HomeRaidPendingRewardsResponse {
+	repeated PendingRaidReward pending_rewards = 1 [packed=false];
+}
+
+message HomeRaidStatusesRequest {
+}
+
+message HomeRaidStatusesResponse {
+	repeated RaidStatus raid_statuses = 1 [packed=false];
+	repeated RaidTiersStatus raid_tiers_statuses = 2 [packed=false];
+	repeated RaidDefinition raid_definitions = 3 [packed=false];
+}
+
+message HomeRequest {
+	GetDailyEventsRequest daily_events = 1;
+	GetScheduledEventsRequest scheduled_events = 2;
+	TowerRequest tower = 3;
+	TowerStatusRequest tower_status = 4;
+	ClubDungeonStatusRequest club_dungeon_status = 5;
+	InboxUnreadCountRequest inbox_unread_count = 6;
+	HomeDailyEventsRequest home_daily_events = 7;
+	HomeScheduledEventsRequest home_scheduled_events = 8;
+	HomeTowerStatusRequest home_tower_status = 9;
+	HomeClubDungeonStatusRequest home_club_dungeon_status = 10;
+	HomeClubDonationsRequest home_club_donations = 11;
+	HomeClubInvitesRequest home_club_invites = 12;
+	HomeStoreRequest home_store = 13;
+	HomeInboxRequest home_inbox = 14;
+	HomePlayerActivityRequest home_player_activity = 15;
+	HomeShowcaseRequest home_showcase = 16;
+	HomeKothRequest home_koth = 17;
+	HomeClubWarRequest home_club_war = 18;
+	HomePvpRequest home_pvp = 19;
+	HomeFriendsRequest home_friends = 20;
+	HomeBattleSelectRequest home_battle_select = 21;
+	HomeRaidDefinitionsRequest home_raid_definition_request = 22;
+	HomeRaidStatusesRequest home_raid_statuses_request = 23;
+	HomeClubInventoryRequest home_club_inventory_request = 24;
+	HomeRaidPendingRewardsRequest home_raid_pending_rewards_request = 25;
+	HomeQuestStatusRequest home_quest_status_request = 26;
+	HomeLtaStatusRequest home_lta_status_request = 27;
+	HomeStampStatusRequest home_stamp_status_request = 28;
+}
+
+message HomeResponse {
+	GetDailyEventsResponse daily_events = 1;
+	CacheSettings daily_events_cache_settings = 2;
+	GetScheduledEventsResponse scheduled_events = 3;
+	CacheSettings scheduled_events_cache_settings = 4;
+	TowerResponse tower = 5;
+	CacheSettings tower_cache_settings = 6;
+	TowerStatusResponse tower_status = 7;
+	CacheSettings tower_status_cache_settings = 8;
+	ClubDungeonStatusResponse club_dungeon_status = 9;
+	CacheSettings club_dungeon_status_cache_settings = 10;
+	InboxUnreadCountResponse inbox_unread_count = 11;
+	CacheSettings inbox_unread_count_cache_settings = 12;
+	HomeDailyEventsResponse home_daily_events = 13;
+	CacheSettings home_daily_events_cache_settings = 14;
+	HomeScheduledEventsResponse home_scheduled_events = 15;
+	CacheSettings home_scheduled_events_cache_settings = 16;
+	HomeTowerStatusResponse home_tower_status = 17;
+	CacheSettings home_tower_status_cache_settings = 18;
+	HomeClubDungeonStatusResponse home_club_dungeon_status = 19;
+	CacheSettings home_club_dungeon_status_cache_settings = 20;
+	HomeClubDonationsResponse home_club_donations = 21;
+	CacheSettings home_club_donations_cache_settings = 22;
+	HomeClubInvitesResponse home_club_invites = 23;
+	CacheSettings home_club_invites_cache_settings = 24;
+	HomeStoreResponse home_store = 25;
+	CacheSettings home_store_cache_settings = 26;
+	HomeInboxResponse home_inbox = 27;
+	CacheSettings home_inbox_cache_settings = 28;
+	HomePlayerActivityResponse home_player_activity = 29;
+	CacheSettings home_player_activity_cache_settings = 30;
+	HomeShowcaseResponse home_showcase = 31;
+	CacheSettings home_showcase_cache_settings = 32;
+	HomeKothResponse home_koth = 33;
+	CacheSettings home_koth_cache_settings = 34;
+	HomeClubWarResponse home_club_war = 35;
+	CacheSettings home_club_war_cache_settings = 36;
+	HomePvpResponse home_pvp = 37;
+	CacheSettings home_pvp_cache_settings = 38;
+	HomeFriendsResponse home_friends = 39;
+	CacheSettings home_friends_cache_settings = 40;
+	HomeBattleSelectResponse home_battle_select = 41;
+	CacheSettings home_battle_select_cache_settings = 42;
+	HomeRaidDefinitionsResponse home_raid_definitions_response = 43;
+	CacheSettings home_raid_definitions_response_cache_settings = 44;
+	HomeRaidStatusesResponse home_raid_statuses_response = 45;
+	CacheSettings home_raid_statuses_response_cache_settings = 46;
+	HomeClubInventoryResponse home_club_inventory_response = 47;
+	CacheSettings home_club_inventory_response_cache_settings = 48;
+	HomeRaidPendingRewardsResponse home_raid_pending_rewards_response = 49;
+	CacheSettings home_raid_pending_rewards_response_cache_settings = 50;
+	HomeLtaStatusResponse home_lta_status_response = 51;
+	CacheSettings home_lta_status_response_cache_settings = 52;
+	HomeStampStatusResponse home_stamp_status_response = 53;
+	CacheSettings home_stamp_status_cache_settings = 54;
+}
+
+message HomeScheduledEventsRequest {
+}
+
+message HomeScheduledEventsResponse {
+	Event marquee_event = 1;
+	repeated Event scheduled_events = 2 [packed=false];
+	repeated EventGroup event_groups = 3 [packed=false];
+	repeated TowerEvent tower_events = 4 [packed=false];
+	repeated EventMilestoneRewardStatus milestone_reward_statuses = 5 [packed=false];
+	repeated LeaderboardChallengeDefinition leaderboard_challenge_definitions = 6 [packed=false];
+	repeated LimitedTimeArena limited_time_arenas = 7 [packed=false];
+}
+
+message HomeShowcase {
+	string image = 1;
+	string text = 2;
+	uint64 deep_link_location = 3;
+	string deep_link_sublocation = 4;
+	uint64 end_timestamp = 5;
+	bool show_timer = 6;
+	int64 priority = 7;
+	repeated ItemCount store_item_highlights = 8 [packed=false];
+	string image_material = 9;
+}
+
+message HomeShowcaseRequest {
+}
+
+message HomeShowcaseResponse {
+	repeated HomeShowcase showcases = 1 [packed=false];
+}
+
+message HomeStampStatusRequest {
+}
+
+message HomeStampStatusResponse {
+	BasicStampProgressInfo stamp_progress = 1;
+}
+
+message HomeStoreRequest {
+}
+
+message HomeStoreResponse {
+	uint32 num_available_free_items = 1;
+	uint64 next_free_item_timestamp = 2;
+	StoreItem special_offer_item = 3;
+	StoreResponse store = 4;
+	StoreItem rv_free_pack_item = 5;
+}
+
+message HomeTowerStatusRequest {
+}
+
+message HomeTowerStatusResponse {
+	uint32 current_node = 1;
+	uint32 total_nodes = 2;
+	TowerIdentifier tower_id = 3;
+}
+
+message HyperdriveProgressionInfo {
+	int32 level_upgrade = 1;
+	float reward_multiplier = 2;
+	int32 multiplier_valid_days = 3;
+	repeated LocalizableMessage campaign_progress = 4 [packed=false];
+	LocalizableMessage tower_progress = 5;
+	repeated LocalizableMessage summoners_challenges_progress = 6 [packed=false];
+}
+
+message IapCatalogEntry {
+	string product_id = 1;
+	float price_usd = 2;
+}
+
+message IapCatalogRequest {
+}
+
+message IapCatalogResponse {
+	repeated IapCatalogEntry products = 1 [packed=false];
+}
+
+message InboxMarkAllAsReadRequest {
+}
+
+message InboxMarkAllAsReadResponse {
+}
+
+message InboxMarkAsClaimedRequest {
+	string message_id = 1;
+}
+
+message InboxMarkAsClaimedResponse {
+	InventoryDelta inventory_delta = 1;
+}
+
+message InboxMarkAsDeletedRequest {
+	string message_id = 1;
+}
+
+message InboxMarkAsDeletedResponse {
+}
+
+message InboxMarkAsReadRequest {
+	string message_id = 1;
+}
+
+message InboxMarkAsReadResponse {
+}
+
+message InboxMessage {
+	string id = 1;
+	uint64 sent_timestamp = 2;
+	uint64 expiry_timestamp = 3;
+	string body_key = 4;
+	string sender_key = 5;
+	string subject_key = 6;
+	InboxMessageStatus status = 7;
+	repeated InventoryItem attachments = 8 [packed=false];
+	uint64 deep_link_location = 9;
+	string deep_link_sublocation = 10;
+	uint64 template_id = 11;
+	repeated string additional_parameters = 12 [packed=false];
+}
+
+message InboxMessagesRequest {
+}
+
+message InboxMessagesResponse {
+	repeated InboxMessage messages = 1 [packed=false];
+}
+
+message InboxUnreadCountRequest {
+}
+
+message InboxUnreadCountResponse {
+	uint64 count = 1;
+}
+
+message InfoEvent {
+	uint64 content_id = 1;
+	uint64 event_group_id = 2;
+	uint64 begin_timestamp = 3;
+	uint64 end_timestamp = 4;
+	string name = 5;
+	string description = 6;
+	string image = 7;
+	int64 sort_order = 8;
+	string preview_text = 9;
+	string banner_image = 10;
+	string banner_text = 11;
+	repeated uint64 showcase_items = 12 [packed=false];
+	uint64 deep_link_location = 13;
+	string deep_link_sublocation = 14;
+}
+
+message InstantBattleAllDailyEventsRequest {
+}
+
+message InstantBattleAllDailyEventsResponse {
+	InventoryDelta inventory_delta = 1;
+	repeated EventStatus updated_statuses = 2 [packed=false];
+}
+
+message InstantBattleEventRequest {
+	EventIdentifier event_id = 1;
+	uint64 num_battles = 2;
+}
+
+message InstantBattleEventResponse {
+	InventoryDelta inventory_delta = 1;
+	EventStatus updated_status = 2;
+}
+
+message InstantBattleRequest {
+	CampaignIdentifier campaign_identifier = 1;
+	uint64 num_battles = 2;
+}
+
+message InstantBattleResponse {
+	InventoryDelta inventory_delta = 1;
+	CampaignProgress updated_progress = 2;
+}
+
+message InstantBattleTowerEventRequest {
+	TowerIdentifier tower_id = 1;
+	uint64 node_id = 2;
+	uint64 num_battles = 3;
+}
+
+message InstantBattleTowerEventResponse {
+	InventoryDelta inventory_delta = 1;
+}
+
+message InventoryDelta {
+	repeated InventoryItem items = 1 [packed=false];
+	repeated Unit units = 2 [packed=false];
+	PlayerLevelUp player_level_up = 3;
+	repeated Spell spells = 4 [packed=false];
+	PassportSeasonLevelUp passport_season_level_up = 5;
+	repeated InventoryItemConversion item_conversions = 6 [packed=false];
+	repeated ClubInventoryItemTracker club_inventory_item_trackers = 7 [packed=false];
+	repeated EarnedLeaderboardChallengePoints earned_lc_points = 8 [packed=false];
+}
+
+message InventoryItem {
+	uint64 id = 1;
+	int64 count = 2;
+	LootTag loot_tag = 3;
+	bool vip_exclusive = 4;
+	bool club_exclusive = 5;
+	float boost_amount = 6;
+}
+
+message InventoryItemConversion {
+	InventoryItem from = 1;
+	InventoryItem to = 2;
+}
+
+message ItemCount {
+	uint64 item_id = 1;
+	uint64 count = 2;
+	LootTag loot_tag = 3;
+	bool guaranteed = 4;
+	bool vip_exclusive = 5;
+}
+
+message ItemCountRange {
+	uint64 item_id = 1;
+	uint32 count_min = 2;
+	uint32 count_max = 3;
+	LootTag loot_tag = 4;
+	bool guaranteed = 5;
+	bool vip_exclusive = 6;
+}
+
+message ItemFindRaid {
+	RaidIdentifier raid_id = 1;
+	string raid_name = 2;
+	string tier_name_override = 3;
+}
+
+message ItemFindRequest {
+	uint64 item_id = 1;
+}
+
+message ItemFindResponse {
+	repeated CampaignRewardsPreview campaigns = 1 [packed=false];
+	repeated EventIdentifier daily_events = 2 [packed=false];
+	repeated EventIdentifier scheduled_events = 3 [packed=false];
+	repeated uint64 shipment_locations = 4 [packed=false];
+	bool tower = 5;
+	bool club_dungeon = 6;
+	bool arena = 7;
+	repeated uint64 active_shipment_locations = 8 [packed=false];
+	repeated PlayerActivityType player_activity_locations = 9 [packed=false];
+	bool store = 10;
+	bool passport_season_level_rewards = 11;
+	repeated uint64 shipment_def_ids = 12 [packed=false];
+	repeated uint64 active_shipment_def_ids = 13 [packed=false];
+	bool koth = 14;
+	bool club_war = 15;
+	bool pvp_pack = 16;
+	string pvp_pack_asset = 17;
+	repeated uint64 campaigns_with_map_rewards = 18 [packed=false];
+	repeated ItemFindShipment active_shipments = 19 [packed=false];
+	repeated ItemFindTower towers = 20 [packed=false];
+	repeated StoreItem store_items = 21 [packed=false];
+	repeated ItemFindTower tower_events = 22 [packed=false];
+	repeated ItemFindRaid raids = 23 [packed=false];
+	bool expeditions = 24;
+}
+
+message ItemFindShipment {
+	string id = 1;
+	uint64 shipment_id = 2;
+	uint64 item_def_id = 3;
+	uint64 item_count = 4;
+	uint64 cost_def_id = 5;
+	uint64 cost_count = 6;
+	bool on_sale = 7;
+	bool vip_only = 8;
+	bool is_locked = 9;
+	string locked_key = 10;
+}
+
+message ItemFindTower {
+	TowerIdentifier tower_id = 1;
+	string tower_name = 2;
+}
+
+message KickClubMemberRequest {
+	string player_id = 1;
+}
+
+message KickClubMemberResponse {
+	Club club = 1;
+	PlayerJoinClubLock join_lock = 2;
+}
+
+message KothBattleHistory {
+	KothLobbyOpponent opponent = 1;
+	bool player_won = 2;
+	uint64 player_rank = 3;
+	uint64 battle_end_time = 4;
+}
+
+message KothBattleHistoryRequest {
+}
+
+message KothBattleHistoryResponse {
+	repeated KothBattleHistory defense_history = 1 [packed=false];
+}
+
+message KothBattleResultRequest {
+	string battle_id = 1;
+}
+
+message KothBattleResultResponse {
+	uint64 new_rank = 1;
+	InventoryDelta inventory_delta = 2;
+	uint64 rank_delta = 3;
+}
+
+message KothBattleStartRequest {
+	string opponent_id = 1;
+	repeated uint64 units = 2 [packed=false];
+	repeated uint64 spells = 3 [packed=false];
+	BattleSquadSaveInfo squad_save = 4;
+	uint64 opponent_rank = 5;
+	uint64 leader_unit = 6;
+	repeated uint64 opponent_squad_units = 7 [packed=false];
+	repeated uint64 opponent_squad_spells = 8 [packed=false];
+}
+
+message KothBattleStartResponse {
+	bytes bootstrap_bytes = 1;
+	uint64 player_id = 2;
+	string player_token = 3;
+	Player opponent = 4;
+	string battle_server = 5;
+	string battle_id = 6;
+	MatchMakerResult result = 7;
+	string match_id = 8;
+}
+
+message KothChallengeBattleStartRequest {
+	string enemy_player_id = 1;
+	repeated uint64 units = 2 [packed=false];
+	repeated uint64 spells = 3 [packed=false];
+	BattleSquadSaveInfo squad_save = 4;
+	uint64 leader_unit = 5;
+}
+
+message KothChallengeBattleStartResponse {
+	bytes bootstrap_bytes = 1;
+	uint64 player_id = 2;
+	Player opponent = 3;
+}
+
+message KothClearCooldownRequest {
+	RevSdkRewardType reward_type = 1;
+}
+
+message KothClearCooldownResponse {
+	InventoryDelta inventory_delta = 1;
+	uint64 cooldown_end_time = 2;
+	bool cooldown_lapsed = 3;
+}
+
+message KothLobbyOpponent {
+	PlayerProfileSimple profile = 1;
+	uint64 rank = 2;
+	repeated Unit units = 3 [packed=false];
+	repeated Spell spells = 4 [packed=false];
+	uint64 leader_unit_id = 5;
+}
+
+message KothLobbyRequest {
+}
+
+message KothLobbyResponse {
+	uint64 attempts_remaining = 1;
+	uint64 cooldown_end_time = 2;
+	repeated KothLobbyOpponent opponents = 3 [packed=false];
+	uint64 player_rank = 4;
+	uint64 shard_id = 5;
+	repeated ItemCount daily_payout = 6 [packed=false];
+}
+
+message KothRankRewardPreview {
+	uint64 koth_min_rank = 1;
+	uint64 koth_max_rank = 2;
+	repeated ItemCount daily_payout = 3 [packed=false];
+}
+
+message KothRankRewardPreviewRequest {
+}
+
+message KothRankRewardPreviewResponse {
+	repeated KothRankRewardPreview rank_reward_previews = 1 [packed=false];
+}
+
+message KothSendPayoutRequest {
+}
+
+message KothSendPayoutResponse {
+	uint64 koth_payout_timestamp = 1;
+}
+
+message LeaderboardChallengeDefinition {
+	uint64 definition_id = 1;
+	string name_key = 2;
+	string description_key = 3;
+	string visual_asset = 4;
+	uint64 start_time = 5;
+	uint64 end_time = 6;
+	uint64 cooldown_end_time = 7;
+	repeated InventoryItem showcase_prizes = 8 [packed=false];
+	Color active_color = 9;
+	uint64 point_item_id = 10;
+	uint64 personal_milestone_table_id = 11;
+	int64 sort_order = 12;
+	repeated LeaderboardChallengeRankedRewards personal_rewards = 13 [packed=false];
+	LeaderboardChallengeRankedRewards club_rewards = 14;
+	LeaderboardChallengeRankedRewards global_rewards = 15;
+	LeaderboardChallengeRankedRewards club_global_rewards = 16;
+	string points_icon_asset = 17;
+	string detailed_description_key = 18;
+	string detailed_description_title_key = 19;
+	bool is_activated = 20;
+	Color inactive_color = 21;
+	uint64 hidden_start_time = 22;
+	string event_visual_asset = 23;
+	EventMilestoneRewardTable milestone_rewards = 24;
+	string short_info_key = 25;
+	string event_milestone_info_key = 26;
+	int32 unlock_level = 27;
+	int32 deep_link_location = 28;
+	string deep_link_sublocation = 29;
+	uint64 milestone_point_item_id = 30;
+	string portal_image = 31;
+	string portal_name = 32;
+	string portal_description = 33;
+	uint64 limited_time_arena_definition = 34;
+	uint64 preview_start_time = 35;
+}
+
+message LeaderboardChallengeIdentifier {
+	uint64 definition_id = 1;
+	uint64 start_time = 2;
+}
+
+message LeaderboardChallengeRankedRewards {
+	repeated LeaderboardChallengeRewardBand rewards = 1 [packed=false];
+	uint64 id = 2;
+}
+
+message LeaderboardChallengeRewardBand {
+	int32 min_rank = 1;
+	repeated ItemCount rewards = 2 [packed=false];
+}
+
+message LeaderboardChallengeScoringInfo {
+	int32 rank = 1;
+	int32 points = 2;
+	int32 next_reward_points = 3;
+	int32 previous_reward_points = 4;
+}
+
+message LeaderboardChallengeStatus {
+	uint64 challenge_id = 1;
+	uint64 start_time = 2;
+	LeaderboardChallengeScoringInfo personal_score_info = 3;
+	LeaderboardChallengeScoringInfo club_score_info = 4;
+	LeaderboardChallengeScoringInfo global_score_info = 5;
+	int32 personal_challenge_tier = 6;
+	int32 challenge_group_index = 7;
+}
+
+message LimitedTimeArena {
+	uint64 definition_id = 1;
+	string name_key = 2;
+	string description_key = 3;
+	string visual_asset = 4;
+	uint64 start_time = 5;
+	uint64 end_time = 6;
+	uint64 hidden_start_time = 7;
+	uint64 celebration_end_time = 8;
+	repeated ClosedTime closed_times = 9 [packed=false];
+	repeated uint64 unit_whitelist = 10 [packed=false];
+	repeated uint64 spell_whitelist = 11 [packed=false];
+	repeated uint64 showcase_items = 12 [packed=false];
+	LimitedTimeArenaStaminaData stamina_data = 13;
+	uint64 battle_restriction = 14;
+	uint64 leaderboard_challenge_definition = 15;
+	ItemCount entry_cost = 16;
+	repeated LimitedTimeArenaBattleMutator mutators = 17 [packed=false];
+	uint64 preview_start_time = 18;
+	CharacterEqualization character_equalize_criteria = 19;
+	CharacterEqualization character_updated_stats = 20;
+	ItemCount rewards_increase_cost = 21;
+	float rewards_increase_multipler = 22;
+	repeated BonusForSpecialUnits unit_bonus = 23 [packed=false];
+	uint64 show_closing_time_threshold_seconds = 24;
+	uint64 spell_equalize_criteria_level = 25;
+	uint64 spell_updated_stats_level = 26;
+	uint64 player_equalize_criteria_level = 27;
+	uint64 player_updated_stats_level = 28;
+	repeated uint64 store_tabs = 29 [packed=false];
+	string event_visual_asset = 30;
+	string marquee_visual_asset = 31;
+	string portal_short_name_key = 32;
+	string portal_short_desc_key = 33;
+	int64 marquee_sort_order = 34;
+	int64 event_group_sort_order = 35;
+	string info_body_key = 36;
+}
+
+message LimitedTimeArenaBattleMutator {
+	string icon = 1;
+	string desc_key = 2;
+	repeated uint64 units = 3 [packed=false];
+}
+
+message LimitedTimeArenaBattleResultRequest {
+	string battle_id = 1;
+}
+
+message LimitedTimeArenaBattleResultResponse {
+	PlayerProfileSimple profile = 1;
+	PlayerProfileSimple opponent_profile = 2;
+	repeated CombatPoints combat_points = 3 [packed=false];
+	bool is_bot = 4;
+	InventoryDelta inventory_delta = 5;
+	PvpTakeoverResultResponse pvp_takeover_response = 6;
+}
+
+message LimitedTimeArenaBattleStartRequest {
+	LimitedTimeArenaIdentifier limited_time_arena = 1;
+	repeated uint64 units = 2 [packed=false];
+	repeated uint64 spells = 3 [packed=false];
+	BattleSquadSaveInfo squad_save = 4;
+	uint64 leader_unit = 5;
+}
+
+message LimitedTimeArenaBattleStartResponse {
+	string player_token = 1;
+	Player opponent = 2;
+	string battle_server = 3;
+	string battle_id = 4;
+	bytes bootstrap_bytes = 5;
+	uint64 player_battle_id = 6;
+	MatchMakerResult result = 7;
+	string match_id = 8;
+}
+
+message LimitedTimeArenaCelebrationData {
+	PlayerProfileSimple player = 1;
+	uint64 rank = 2;
+	uint64 display_unit_id = 3;
+	uint64 display_unit_skin_item_id = 4;
+}
+
+message LimitedTimeArenaClaimRewardRequest {
+	repeated LimitedTimeArenaPendingReward pending_rewards = 1 [packed=false];
+}
+
+message LimitedTimeArenaClaimRewardResponse {
+	InventoryDelta inventory_delta = 1;
+}
+
+message LimitedTimeArenaIdentifier {
+	uint64 definition_id = 1;
+	uint64 start_time = 2;
+}
+
+message LimitedTimeArenaPendingReward {
+	string reward_id = 1;
+	LeaderboardChallengeType type = 2;
+	repeated ItemCount rewards = 3 [packed=false];
+	LimitedTimeArenaIdentifier id = 4;
+	bool reward_claimed = 5;
+}
+
+message LimitedTimeArenaRegistrationRequest {
+	uint64 arena_definition_id = 1;
+	uint64 start_time = 2;
+}
+
+message LimitedTimeArenaRegistrationResponse {
+	InventoryDelta inventory_delta = 1;
+	uint64 arena_definition_id = 2;
+}
+
+message LimitedTimeArenaRewardsIncreaseRequest {
+	LimitedTimeArenaIdentifier id = 1;
+}
+
+message LimitedTimeArenaRewardsIncreaseResponse {
+	InventoryDelta inventory_delta = 1;
+}
+
+message LimitedTimeArenaStaminaData {
+	uint64 stamina_item_id = 1;
+	uint64 stamina_count_cap = 2;
+	uint64 free_stamina_usage_count = 3;
+	repeated uint64 stamina_cost = 4 [packed=false];
+}
+
+message LimitedTimeArenaStatus {
+	uint64 definition_id = 1;
+	uint64 start_time = 2;
+	repeated LimitedTimeArenaUnitStamina unit_stamina_data = 3 [packed=false];
+	bool entry_fee_paid = 4;
+	repeated LimitedTimeArenaPendingReward pending_rewards = 5 [packed=false];
+	bool rewards_increase = 6;
+	repeated LimitedTimeArenaCelebrationData celebration_data = 7 [packed=false];
+}
+
+message LimitedTimeArenaUnitStamina {
+	uint64 unit_id = 1;
+	uint64 times_battled = 2;
+	uint64 next_refresh_cost_reset_time = 3;
+	uint64 cooldown_time = 4;
+	uint64 times_refreshed = 5;
+	uint64 total_times_refreshed = 6;
+	bool is_refreshed = 7;
+}
+
+message LocalizableMessage {
+	string localization_key = 1;
+	repeated string attributes = 2 [packed=false];
+}
+
+message LockableFeatureUpdated {
+	repeated LockableFeatureUpdatedEntry updated_features = 1 [packed=false];
+}
+
+message LockableFeatureUpdatedEntry {
+	uint64 feature_index = 1;
+	bool is_unlocked = 2;
+}
+
+message MatchMakerAcceptRequest {
+	MatchMakerPlayerInfo player_info = 1;
+	string sender_id = 2;
+	BattleInvite invite = 3;
+}
+
+message MatchMakerCancelRequest {
+	string player_id = 1;
+}
+
+message MatchMakerDeclineRequest {
+	string sender_id = 1;
+	BattleInvite invite = 2;
+}
+
+message MatchMakerInviteToRequest {
+	MatchMakerPlayerInfo player_info = 1;
+	BattleInvite invite = 2;
+}
+
+message MatchMakerPlayerInfo {
+	string gamedata_version = 1;
+	string player_id = 2;
+	uint64 power_rating = 3;
+	repeated Unit units = 4 [packed=false];
+	repeated Spell spells = 5 [packed=false];
+	repeated MultiplayerBattleActivity activities = 6 [packed=false];
+	uint64 player_level = 7;
+	repeated uint64 emotes = 8 [packed=false];
+}
+
+message MatchMakerRequest {
+	MatchMakerPlayerInfo player_info = 1;
+	MatchType match_type = 2;
+	CampaignIdentifier campaign_identifier = 3;
+	uint64 power_rating = 4;
+	EventIdentifier event_id = 5;
+}
+
+message MatchMakerResponse {
+	string player_token = 1;
+	repeated string other_player_ids = 2 [packed=false];
+	string battle_server = 3;
+	string battle_id = 4;
+	bytes bootstrap_bytes = 5;
+	string gamedata_version = 6;
+	string end_battle_auth_token = 7;
+	string error_message = 8;
+	uint64 player_battle_id = 9;
+	MatchMakerResult result = 10;
+}
+
+message MetadataRequest {
+	DeviceInfo device_info = 1;
+}
+
+message MetadataResponse {
+	string bundle_version = 1;
+	string gamedata_version = 2;
+	string cdn_base_url = 3;
+	string loc_version = 4;
+	string loc_cdn_base_url = 5;
+	string asset_cdn_base_url = 6;
+	DeviceGraphicsSetting graphics_setting = 7;
+	DeviceGraphicsSetting max_graphics_setting = 8;
+}
+
+message ModifySocialPvpInviteRequest {
+	string opponent_id = 1;
+	string challenge_id = 2;
+	SocialPvpInviteActions action = 3;
+	string chat_post_id = 4;
+}
+
+message ModifySocialPvpInviteResponse {
+	string challenge_id = 1;
+	SocialPvpInviteStatus status = 2;
+	PlayerProfileSimple challenger = 3;
+	int64 invite_expiration_timestamp = 4;
+	int64 battle_start_expiration_timestamp = 5;
+	ItemCount bolster_cost = 6;
+}
+
+message MultiplayerBattleActivity {
+	string player_account_id = 1;
+	uint64 activity_def_id = 2;
+	uint64 tracker_id = 3;
+	uint64 activity_value = 4;
+}
+
+message MultiplayerBattleEndRequest {
+	string battle_id = 1;
+	int64 winning_team_id = 2;
+	string end_battle_auth_token = 3;
+	repeated MultiplayerBattleActivity activity_results = 4 [packed=false];
+	repeated MultiplayerBattleTeamResult team_results = 5 [packed=false];
+	repeated DeathReport death_reports = 6 [packed=false];
+}
+
+message MultiplayerBattleEndResponse {
+}
+
+message MultiplayerBattleResultRequest {
+	string battle_id = 1;
+}
+
+message MultiplayerBattleResultResponse {
+	InventoryDelta inventory_delta = 1;
+	PvpScore pvp_score = 2;
+	PvpTakeoverResultResponse pvp_takeover_response = 3;
+	PlayerProfileSimple opponent = 4;
+	bool is_winner = 5;
+}
+
+message MultiplayerBattleTeamResult {
+	int32 team_id = 1;
+	uint64 star_count = 2;
+}
+
+message NonSeqRaidStatusInfo {
+	uint64 raid_id = 1;
+	repeated TierStatus statuses = 2 [packed=false];
+}
+
+message OriginalPackInfo {
+	uint64 id = 1;
+	string iap_product_id_ios = 2;
+	string iap_product_id_android = 3;
+}
+
+message PassportSeasonLevelUp {
+	InventoryDelta inventory_delta = 1;
+}
+
+message PendingRaidReward {
+	string id = 1;
+	string raid_title_key = 2;
+	string reward_model = 3;
+	int32 tier_index = 4;
+	uint64 raid_id = 5;
+	string cinematic_environment = 6;
+	string cinematic_asset = 7;
+	RewardSource source = 8;
+	string title_key = 9;
+}
+
+message PersistentRewards {
+	uint64 item_id = 1;
+	uint64 goal = 2;
+	uint64 reward_count = 3;
+	uint64 tier_index = 4;
+}
+
+message Player {
+	string id = 1;
+	repeated Unit unit_inventory = 2 [packed=false];
+	repeated InventoryItem item_inventory = 3 [packed=false];
+	uint64 level = 4;
+	repeated PlayerActivity activities = 5 [packed=false];
+	repeated CampaignProgress campaign_progress = 6 [packed=false];
+	uint64 day_end_timestamp = 7;
+	repeated PlayerEnergyTracker energy_trackers = 8 [packed=false];
+	repeated Spell spell_inventory = 9 [packed=false];
+	string username = 10;
+	repeated PlayerSquadSelection squad_selections = 11 [packed=false];
+	uint64 avatar_id = 12;
+	string club_id = 13;
+	string club_name = 14;
+	uint64 club_avatar_id = 15;
+	ClubRole club_role = 16;
+	repeated ClubInvite club_invites = 17 [packed=false];
+	repeated ClubItemRequest club_item_requests = 18 [packed=false];
+	repeated uint64 club_requestable_items = 19 [packed=false];
+	uint64 next_club_item_request_timestamp = 20;
+	uint64 club_item_donations_remaining = 21;
+	uint64 club_item_donations_reset_timestamp = 22;
+	DailyLoginStatus daily_login_status = 23;
+	CalendarDate current_calendar_date = 24;
+	uint64 shipment_reset_timestamp = 25;
+	bool show_vip_profile_bg = 26;
+	uint64 collection_power = 27;
+	repeated uint64 unlocked_features = 28 [packed=false];
+	repeated uint64 disabled_features = 29 [packed=false];
+	repeated EventProgress event_progress = 30 [packed=false];
+	repeated EventStatus event_status = 31 [packed=false];
+	string chat_access_token = 32;
+	uint64 next_free_store_item_timestamp = 33;
+	PvpScore pvp_score = 34;
+	AgeGateStatus age_gate_status = 35;
+	repeated uint64 unlocked_contextual_message_group_ids = 36 [packed=false];
+	repeated uint64 variant_ids = 37 [packed=false];
+	uint64 daily_store_ad_rewards_claimed = 38;
+	bool is_spender = 39;
+	string chat_server_app_id = 40;
+	uint64 left_club_timestamp = 41;
+	uint64 join_club_lock_level = 42;
+	uint64 creation_timestamp = 43;
+	repeated uint64 emote_deck = 44 [packed=false];
+	uint64 koth_payout_timestamp = 45;
+	int64 club_support_fulfill_cooldown_expire_timestamp = 46;
+	DailyReward daily_reward = 47;
+	uint64 vip_expire_timestamp = 48;
+	uint64 koth_rank = 49;
+	string global_chat_channel_name = 50;
+	bool are_active_benefits_visible = 51;
+	uint64 koth_payout_custom_time_offset = 52;
+	uint64 time_settings_changed_count = 53;
+	repeated DailyReward daily_rewards = 54 [packed=false];
+	uint64 create_club_timestamp = 55;
+	int32 last_known_email_connect_state = 56;
+	repeated ClubInventoryItemTracker club_inventory_item_trackers = 57 [packed=false];
+	uint64 profile_frame_id = 58;
+	PlayerAvailabilityStatus availibility_status = 59;
+	ReceivePlayerOnlinePopupsStatus receive_player_online_popups = 60;
+	string social_pvp_chat_channel_name = 61;
+	float quest_reward_multiplier = 62;
+	uint64 quest_reward_multiplier_expiry = 63;
+}
+
+message PlayerActivity {
+	uint64 definition_id = 1;
+	string name = 2;
+	string description = 3;
+	PlayerActivityType type = 4;
+	uint64 current_value = 5;
+	uint64 required_value = 6;
+	uint64 sort_order = 7;
+	repeated InventoryItem rewards = 8 [packed=false];
+	uint64 deep_link_location = 9;
+	string deep_link_sublocation = 10;
+	int64 telemetry_ref_id = 11;
+	repeated PlayerActivityRewardChoice reward_choices = 12 [packed=false];
+	PlayerActivityScoreType score_type = 13;
+	uint64 related_leaderboard_challenge_id = 14;
+}
+
+message PlayerActivityRewardChoice {
+	repeated InventoryItem rewards = 1 [packed=false];
+	string preview_asset = 2;
+}
+
+message PlayerBannedDynamicMessage {
+	uint64 ban_type = 1;
+}
+
+message PlayerCollectionPowerUpdated {
+	uint64 collection_power = 1;
+}
+
+message PlayerEnergyDailyGifts {
+	uint64 start_timestamp = 1;
+	bool claimed = 2;
+}
+
+message PlayerEnergyTracker {
+	uint64 item_id = 1;
+	uint64 last_generated_timestamp = 2;
+	uint64 daily_refreshes_purchased = 3;
+	repeated PlayerEnergyDailyGifts daily_gifts = 4 [packed=false];
+	uint64 daily_ad_reward_count = 5;
+	uint64 bonus_generate_end_timestamp = 6;
+	uint64 daily_bonus_generate_claims = 7;
+}
+
+message PlayerJoinClubLock {
+	uint64 left_club_timestamp = 1;
+	uint64 join_club_lock_level = 2;
+}
+
+message PlayerLeaderboardEntry {
+	PlayerProfileSimple player = 1;
+	uint64 current_score = 2;
+	int32 rank_delta = 3;
+	int32 rank = 4;
+}
+
+message PlayerLeaderboardRequest {
+	PlayerLeaderboardType type = 1;
+}
+
+message PlayerLeaderboardResponse {
+	PlayerLeaderboardType type = 1;
+	repeated PlayerLeaderboardEntry entries = 2 [packed=false];
+}
+
+message PlayerLevelUp {
+	uint64 player_level = 1;
+	InventoryDelta inventory_delta = 2;
+}
+
+message PlayerOnlineDynamicMessage {
+	PlayerProfileSimple player = 1;
+}
+
+message PlayerProfileRequest {
+	string id = 1;
+	bool include_player = 2;
+}
+
+message PlayerProfileResponse {
+	Player player = 1;
+	repeated PlayerStat stats = 2 [packed=false];
+}
+
+message PlayerProfileSimple {
+	string id = 1;
+	string username = 2;
+	uint64 level = 3;
+	uint64 avatar_id = 4;
+	string club_id = 5;
+	string club_name = 6;
+	uint64 club_avatar_id = 7;
+	ClubRole club_role = 8;
+	bool show_vip_profile_bg = 9;
+	uint64 collection_power = 10;
+	uint64 frame_id = 11;
+	uint64 days_since_last_login = 12;
+	PlayerAvailabilityStatus availability_status = 13;
+}
+
+message PlayerRequest {
+}
+
+message PlayerResponse {
+	Player player = 1;
+	uint64 sync_time = 2;
+	float total_spend = 3;
+	repeated ChatMessage chat_history = 4 [packed=false];
+}
+
+message PlayerSquadSelection {
+	int32 game_mode = 1;
+	uint64 slot = 2;
+	repeated uint64 unit_ids = 3 [packed=false];
+	repeated uint64 spell_ids = 4 [packed=false];
+	uint64 leader_unit_id = 5;
+}
+
+message PlayerStat {
+	uint64 stat_id = 1;
+	uint64 count = 2;
+}
+
+message PlayerVipStatusUpdatedDynamicMessage {
+	uint64 expire_timestamp = 1;
+}
+
+message PromoteClubMemberRequest {
+	string player_id = 1;
+}
+
+message PromoteClubMemberResponse {
+	Club club = 1;
+}
+
+message PromoteUnitRequest {
+	uint64 unit_id = 1;
+}
+
+message PromoteUnitResponse {
+	InventoryDelta inventory_delta = 1;
+}
+
+message PurchaseLimit {
+	PurchaseLimitGranularity granularity = 1;
+	int32 count = 2;
+	int32 remaining_purchases = 3;
+}
+
+message PurchaseLimits {
+	uint64 limit_elapsed_timestamp = 1;
+	repeated PurchaseLimit purchase_data = 2 [packed=false];
+}
+
+message PveBattleEndRequest {
+	bool win = 1;
+	uint64 star_level = 2;
+	repeated BattleActivityResult activity_results = 3 [packed=false];
+	uint64 tutorial_campaign_id = 4;
+}
+
+message PveBattleEndResponse {
+	InventoryDelta inventory_delta = 1;
+	CampaignProgress updated_progress = 2;
+}
+
+message PveBattleStartRequest {
+	CampaignIdentifier campaign_identifier = 1;
+	repeated uint64 units = 2 [packed=false];
+	repeated uint64 spells = 3 [packed=false];
+	BattleSquadSaveInfo squad_save = 4;
+	uint64 leader_unit = 5;
+}
+
+message PveBattleStartResponse {
+	bytes bootstrap_bytes = 5;
+	uint64 player_id = 7;
+	InventoryDelta inventory_delta = 8;
+}
+
+message PvpFindMatchRequest {
+	repeated uint64 units = 1 [packed=false];
+	repeated uint64 spells = 2 [packed=false];
+	BattleSquadSaveInfo squad_save = 3;
+	uint64 leader_unit = 4;
+}
+
+message PvpFindMatchResponse {
+	string player_token = 1;
+	Player opponent = 2;
+	string battle_server = 3;
+	string battle_id = 4;
+	bytes bootstrap_bytes = 5;
+	uint64 player_battle_id = 8;
+	MatchMakerResult result = 9;
+	string match_id = 10;
+}
+
+message PvpLobbyRequest {
+}
+
+message PvpLobbyResponse {
+	string left_banner_asset = 1;
+	string left_banner_text = 2;
+	string right_banner_asset = 3;
+	string right_banner_text = 4;
+	string lobby_asset = 5;
+	string pack_asset = 6;
+}
+
+message PvpRankRewardPreview {
+	uint64 pvp_rank_id = 1;
+	repeated ItemCount weekly_payout = 2 [packed=false];
+	repeated ItemCount season_payout = 3 [packed=false];
+}
+
+message PvpRankRewardPreviewRequest {
+}
+
+message PvpRankRewardPreviewResponse {
+	repeated PvpRankRewardPreview rank_reward_previews = 1 [packed=false];
+	uint64 next_payout_time = 2;
+	uint64 season_end_time = 3;
+	uint64 next_season_start_time = 4;
+	uint64 season_start_time = 5;
+}
+
+message PvpScore {
+	uint64 current_season_id = 1;
+	uint64 current_season_score = 2;
+	uint64 prev_season_id = 3;
+	uint64 prev_season_score = 4;
+	uint64 lifetime_score = 5;
+	uint64 daily_battle_count = 6;
+	uint64 daily_battle_reset_time = 7;
+	uint64 current_season_high_score = 8;
+}
+
+message PvpTakeoverResultResponse {
+	string pvp_pack_asset = 1;
+}
+
+message Quest {
+	string id = 1;
+	string name_loc_key = 2;
+	string desc_loc_key = 3;
+	QuestReward reward = 4;
+	QuestState state = 5;
+	repeated QuestGoal goals = 6 [packed=false];
+	repeated QuestGoal challenges = 7 [packed=false];
+	repeated ItemCountRange preview_rewards = 8 [packed=false];
+	string locked_desc_loc_key = 9;
+	uint64 complete_end_time = 10;
+	repeated uint64 showcase_items = 11 [packed=false];
+	uint64 definition_id = 15;
+}
+
+message QuestChaptersRequest {
+}
+
+message QuestChaptersResponse {
+	repeated Chapter chapters = 1 [packed=false];
+}
+
+message QuestGoal {
+	string id = 1;
+	string name_loc_key = 2;
+	string desc_loc_key = 3;
+	uint64 current_value = 4;
+	uint64 required_value = 5;
+	int32 goal_type = 6;
+	repeated ItemCountRange rewards = 7 [packed=false];
+	bool claimed_reward = 8;
+	uint64 time_to_complete_end_time = 9;
+	bool completed = 10;
+	bool expired = 11;
+	uint64 deep_link_location = 12;
+	string deep_link_sub_location = 13;
+	uint64 definition_id = 14;
+}
+
+message QuestReward {
+	uint64 loot_table = 1;
+	string icon = 2;
+	string name_loc_key = 3;
+	repeated ItemCountRange rewards = 4 [packed=false];
+}
+
+message QuestSyncRequest {
+}
+
+message QuestSyncResponse {
+}
+
+message RaidBattleEndRequest {
+	bool win = 1;
+	repeated UnitBattleResult units = 2 [packed=false];
+	string attempt_id = 3;
+	repeated BattleActivityResult activity_results = 4 [packed=false];
+	uint64 raid_id = 5;
+	uint32 tier_index = 6;
+	uint32 battle_index = 7;
+}
+
+message RaidBattleEndResponse {
+	InventoryDelta inventory_delta = 1;
+	RaidStatus raid_status = 2;
+	repeated PendingRaidReward pending_rewards = 3 [packed=false];
+	uint64 earned_milestone_xp = 4;
+	EventMilestoneRewardStatus milestone_status = 5;
+	string stamped_public_club_id = 6;
+}
+
+message RaidBattleQuitRequest {
+	string attempt_id = 1;
+}
+
+message RaidBattleQuitResponse {
+	RaidStatus raid_status = 1;
+}
+
+message RaidBattleStartRequest {
+	RaidIdentifier raid = 1;
+	repeated uint64 units = 2 [packed=false];
+	repeated uint64 spells = 3 [packed=false];
+	BattleSquadSaveInfo squad_save = 4;
+	uint64 leader_unit = 5;
+	string attempt_id = 6;
+	int32 battle_index = 7;
+}
+
+message RaidBattleStartResponse {
+	bytes bootstrap_bytes = 1;
+	uint64 player_id = 2;
+	InventoryDelta inventory_delta = 3;
+	repeated int32 persistent_units_per_encounter = 4 [packed=false];
+	repeated uint64 boss_units = 5 [packed=false];
+}
+
+message RaidClubMembersDamage {
+	PlayerProfileSimple player_profile = 1;
+	uint64 total_damage = 2;
+}
+
+message RaidClubMembersDamageRequest {
+	RaidIdentifier raid_identifier = 1;
+}
+
+message RaidClubMembersDamageResponse {
+	repeated RaidClubMembersDamage damage_results = 1 [packed=false];
+}
+
+message RaidDefinition {
+	uint64 id = 1;
+	string name_key = 2;
+	string tagline_key = 3;
+	string image_asset_path = 4;
+	string vfx_path = 5;
+	int32 sort_order = 6;
+	repeated RaidTier tiers = 7 [packed=false];
+	uint64 start_timestamp = 8;
+	uint64 end_timestamp = 9;
+	bool permanent = 10;
+	RaidShowcaseItem showcase_item = 11;
+	string description_key = 12;
+	string showcase_environment = 13;
+	string home_screen_model_path = 14;
+	uint64 milestone_reward_table = 15;
+	repeated string showcase_environments = 16 [packed=false];
+	repeated string images_parallax = 17 [packed=false];
+	uint64 store_tab_deep_link = 18;
+	RaidType raid_type = 19;
+	uint64 hud_currency_id = 20;
+	string chest_reward_title_key = 21;
+	uint64 shipment_tab_id = 22;
+	string raid_xp_icon = 23;
+}
+
+message RaidIdentifier {
+	uint64 raid_id = 1;
+	int32 tier_index = 2;
+}
+
+message RaidShowcaseItem {
+	string name_key = 1;
+	string subtitle_key = 2;
+	string bottom_line_key = 3;
+	string prefab_path = 4;
+}
+
+message RaidStatus {
+	uint64 raid_id = 1;
+	string attempt_id = 2;
+	int32 currently_active_tier_index = 3;
+	uint32 highest_unlocked_tier = 4;
+	RaidTierStates current_state = 5;
+	float current_health = 6;
+	repeated UnitBattleState unit_status = 7 [packed=false];
+	int32 current_tier_stages = 8;
+	int64 end_time = 9;
+	int64 start_time = 10;
+	int64 next_unit_spell_refresh_time = 11;
+	int64 remaining_attempts = 12;
+	int64 max_attempts = 13;
+	int64 next_attempts_refresh_time = 14;
+	int32 last_active_tier_index = 15;
+	repeated uint64 used_spell_ids = 16 [packed=false];
+	uint64 current_encounter_index = 17;
+	repeated UnitBattleState nonseq_raid_enemies = 18 [packed=false];
+	int32 player_battle_index = 19;
+	int32 club_leader_battle_index = 20;
+}
+
+message RaidTier {
+	repeated RichDescriptionElement description = 1 [packed=false];
+	string preview_asset = 2;
+	string preview_vfx = 3;
+	uint64 entry_cost_id = 4;
+	uint32 entry_cost_count = 5;
+	uint64 battle_restriction = 7;
+	repeated ItemCount guaranteed_rewards = 8 [packed=false];
+	string short_description = 9;
+	string recommended_description = 10;
+	repeated ItemCountRange chest_rewards = 11 [packed=false];
+	uint64 start_cost_id = 12;
+	uint32 start_cost_count = 13;
+	uint32 duration_days = 14;
+	uint32 unit_spell_refresh_interval_days = 15;
+	bool forfeit_raid_allowed = 16;
+	uint32 forfeit_raid_refund_amount = 17;
+	bool is_locked = 18;
+	string locked_description = 19;
+	string title_override = 20;
+	string reward_chest_asset = 21;
+	string reward_chest_name = 22;
+	string reward_chest_popup_window_asset = 23;
+}
+
+message RaidTiersStatus {
+	uint64 raid_id = 1;
+	repeated TierStatus statuses = 2 [packed=false];
+}
+
+message RedeemRedemptionCodeRequest {
+	string code = 1;
+}
+
+message RedeemRedemptionCodeResponse {
+	InventoryDelta inventory_delta = 1;
+	int32 campaign_id = 2;
+	string code = 3;
+	int32 player_claim_count = 4;
+}
+
+message RefreshClubDungeonRequest {
+}
+
+message RefreshClubDungeonResponse {
+}
+
+message RefreshEventBattleLimitRequest {
+	uint64 event_content_id = 1;
+	bool use_free_club_support = 2;
+}
+
+message RefreshEventBattleLimitResponse {
+	InventoryDelta inventory_delta = 1;
+	EventStatus status = 2;
+}
+
+message RefreshKothAttemptsRequest {
+	bool use_free_club_support = 1;
+}
+
+message RefreshKothAttemptsResponse {
+	uint64 attempts_remaining = 1;
+	uint64 cooldown_end_time = 2;
+}
+
+message RefreshShipmentRequest {
+	uint64 location = 1;
+	uint64 shipment_def_id = 2;
+	bool use_free_club_support = 3;
+}
+
+message RefreshShipmentResponse {
+	Shipment refreshed_shipment = 1;
+	InventoryDelta inventory_delta = 2;
+}
+
+message RefreshTowerRequest {
+	TowerIdentifier id = 1;
+}
+
+message RefreshTowerResponse {
+}
+
+message RefreshUnitsStaminaRequest {
+	uint64 arena_definition_id = 1;
+	uint64 start_time = 2;
+	repeated uint64 unit_ids = 3 [packed=false];
+}
+
+message RefreshUnitsStaminaResponse {
+	InventoryDelta inventory_delta = 1;
+	repeated LimitedTimeArenaUnitStamina unit_stamina_data = 2 [packed=false];
+	uint64 arena_definition_id = 3;
+}
+
+message RegisterBattleServerRequest {
+	string addr = 1;
+	int64 num_battles = 2;
+}
+
+message RegisterBattleServerResponse {
+}
+
+message RejectClubInviteRequest {
+	string club_id = 1;
+	string player_id = 2;
+}
+
+message RejectClubInviteResponse {
+}
+
+message RequestClubItemRequest {
+	uint64 item_id = 1;
+}
+
+message RequestClubItemResponse {
+	ClubItemRequest request = 1;
+	uint64 next_club_item_request_timestamp = 2;
+}
+
+message RequestClubSupportRequest {
+	ClubSupportRequestType support_request_type = 1;
+}
+
+message RequestClubSupportResponse {
+	ClubSupportRequest support_request = 1;
+	repeated ClubSupportRequest support_requests = 2 [packed=false];
+}
+
+message RequestEnvelope {
+	bytes payload = 1;
+	string auth_token = 2;
+	string client_version = 3;
+	string gamedata_version = 4;
+	string rpc_name = 5;
+	uint64 correlation_id = 6;
+}
+
+message ResetMissedSocialPvpInvitesRequest {
+	repeated string player_ids = 1 [packed=false];
+}
+
+message ResetMissedSocialPvpInvitesResponse {
+}
+
+message ResponseEnvelope {
+	bytes payload = 1;
+	ResponseCode response_code = 2;
+	string error_message = 3;
+	repeated DynamicMessage dynamic_messages = 4 [packed=false];
+	CacheSettings cache_settings = 5;
+	uint64 correlation_id = 6;
+	bool out_of_band = 7;
+}
+
+message RestartRaidRequest {
+	string attempt_id = 1;
+}
+
+message RestartRaidResponse {
+	RaidStatus raid_status = 1;
+}
+
+message RichDescriptionCustomObject {
+	string title_key = 1;
+	string description_key = 2;
+	string icon = 3;
+}
+
+message RichDescriptionElement {
+	repeated string text_keys = 1 [packed=false];
+	repeated uint64 items = 2 [packed=false];
+	repeated RichDescriptionCustomObject custom_objects = 3 [packed=false];
+	string title_key = 4;
+}
+
+message SelectClubDungeonDoorRequest {
+	uint64 selected_door = 1;
+}
+
+message SelectClubDungeonDoorResponse {
+	bool correct_door = 1;
+}
+
+message ServerMaintenanceModeDynamicMessage {
+	bool under_maintenance = 1;
+	string raw_message_override = 2;
+	string message_override = 3;
+	string maintenance_duration = 4;
+}
+
+message SetActiveBenefitsAreVisibleRequest {
+	bool are_active_benefits_visible = 1;
+}
+
+message SetActiveBenefitsAreVisibleResponse {
+}
+
+message SetLastKnownEmailConnectStateRequest {
+	EmailConnectState state = 1;
+}
+
+message SetLastKnownEmailConnectStateResponse {
+}
+
+message SetPlayerSquadSelectionRequest {
+	PlayerSquadSelection squad_selection = 1;
+}
+
+message SetPlayerSquadSelectionResponse {
+}
+
+message Shipment {
+	string icon_asset = 1;
+	uint64 location = 2;
+	repeated ShipmentItem items = 3 [packed=false];
+	ItemCount refresh_cost = 4;
+	int64 sort_order = 5;
+	bool is_locked = 6;
+	string locked_key = 7;
+	uint64 def_id = 8;
+	uint64 occasion_expire_timestamp = 9;
+	bool allow_vip_buy_all = 10;
+	bool vip_only = 11;
+	uint64 reset_timestamp = 12;
+	bool allow_refresh = 13;
+}
+
+message ShipmentItem {
+	string id = 1;
+	ItemCount item = 2;
+	ItemCount cost = 3;
+	bool purchased = 4;
+	bool is_locked = 5;
+	string locked_key = 6;
+	StoreItem store_item = 7;
+	int64 sort_order = 8;
+	bool on_sale = 9;
+	bool is_vip_locked = 10;
+}
+
+message ShipmentsRequest {
+}
+
+message ShipmentsResponse {
+	repeated Shipment shipments = 1 [packed=false];
+	uint64 shipment_reset_timestamp = 2;
+}
+
+message ShowVipProfileBgUpdated {
+	bool show_vip_profile_bg = 1;
+}
+
+message SkipTutorialRequest {
+}
+
+message SkipTutorialResponse {
+}
+
+message SocialChallengesListRequest {
+}
+
+message SocialChallengesListResponse {
+	repeated Friend friends = 1 [packed=false];
+}
+
+message SocialGrantItemRequest {
+	SocialGrantItemAction action = 1;
+	string friend_id = 2;
+}
+
+message SocialGrantItemResponse {
+	repeated SocialGrantItemStatus status = 1 [packed=false];
+	InventoryDelta inventory_delta = 2;
+}
+
+message SocialGrantItemStatus {
+	string player_id = 1;
+	SocialGrantItemActionStatus status = 2;
+}
+
+message SocialOpenChallengeMsg {
+	string msg_loc_key = 1;
+	repeated string params = 2 [packed=false];
+}
+
+message SocialPvpInviteStatusDynamicMessage {
+	string challenge_id = 1;
+	SocialPvpInviteActions status = 2;
+	int64 invite_expiry = 3;
+	int64 battle_start_expiry = 4;
+	PlayerProfileSimple player = 5;
+}
+
+message SocialPvpMatchRequest {
+	repeated uint64 units = 1 [packed=false];
+	repeated uint64 spells = 2 [packed=false];
+	BattleSquadSaveInfo squad_save = 3;
+	uint64 leader_unit = 4;
+	string challenge_id = 5;
+	bool is_bolster_applied = 6;
+}
+
+message SocialPvpMatchResponse {
+	string player_token = 1;
+	Player opponent = 2;
+	string battle_server = 3;
+	string battle_id = 4;
+	bytes bootstrap_bytes = 5;
+	uint64 player_battle_id = 8;
+	MatchMakerResult result = 9;
+	string match_id = 10;
+	InventoryDelta inventory_delta = 11;
+}
+
+message SocialPvpOpenChallengeRequest {
+	repeated string channel_names = 1 [packed=false];
+}
+
+message SocialPvpOpenChallengeResponse {
+	string post_id = 1;
+}
+
+message SocialPvpSquadUpdateDynamicMessage {
+	string username = 1;
+	repeated Unit units = 2 [packed=false];
+	repeated Spell spells = 3 [packed=false];
+	uint64 leader_unit = 4;
+	bool is_bolster_applied = 5;
+	string challenge_id = 6;
+}
+
+message SocialPvpSquadUpdateRequest {
+	repeated uint64 units = 1 [packed=false];
+	repeated uint64 spells = 2 [packed=false];
+	uint64 leader_unit = 3;
+	string challenge_id = 4;
+	bool is_bolster_applied = 5;
+}
+
+message SocialPvpSquadUpdateResponse {
+}
+
+message SocialPvpStats {
+	string active_invite_sent = 1;
+	string active_invite_received = 2;
+	uint64 cooldown_end_time = 3;
+	int32 total_battles = 4;
+	int32 invites_missed = 5;
+	bool is_challenge_active = 6;
+}
+
+message SpecialOfferDynamicMessage {
+	StoreItem store_item = 1;
+	repeated uint64 available_store_item_ids = 2 [packed=false];
+	repeated StoreItem store_items = 3 [packed=false];
+	repeated uint64 available_daily_reward_ids = 4 [packed=false];
+}
+
+message Spell {
+	uint64 definition_id = 1;
+	uint64 level = 2;
+	uint64 power_rating = 3;
+}
+
+message SpellUpgradeRequest {
+	uint64 spell_id = 1;
+}
+
+message SpellUpgradeResponse {
+	InventoryDelta inventory_delta = 1;
+}
+
+message StampStatuRequest {
+}
+
+message StampStatusResponse {
+	BasicStampProgressInfo stamp_progress = 1;
+}
+
+message StartChapterRequest {
+	string chapter_id = 1;
+}
+
+message StartChapterResponse {
+	Chapter chapter = 1;
+}
+
+message StartExpeditionRequest {
+	uint32 difficulty = 1;
+}
+
+message StartExpeditionResponse {
+	ExpeditionStatus status = 1;
+	InventoryDelta start_energy = 2;
+}
+
+message StartQuestRequest {
+	string quest_id = 1;
+}
+
+message StartQuestResponse {
+	Quest quest = 1;
+}
+
+message StartRaidRequest {
+	uint64 raid_id = 1;
+	int32 tier_index = 2;
+}
+
+message StartRaidResponse {
+	InventoryDelta inventory_delta = 1;
+	RaidStatus status = 2;
+}
+
+message StoreAdRewardRequest {
+}
+
+message StoreAdRewardResponse {
+	InventoryDelta inventory_delta = 1;
+	uint64 daily_store_ad_reward_count = 2;
+	bool validated = 3;
+}
+
+message StoreItem {
+	uint64 id = 1;
+	string name_key = 2;
+	string sticker_key = 3;
+	string main_image = 4;
+	string showcase_override_prefab = 5;
+	uint32 pack_opening_type = 6;
+	ItemCount cost = 7;
+	PurchaseLimits purchase_limits = 8;
+	string subtitle_key = 9;
+	string shelf_key = 10;
+	string box_back_asset = 11;
+	uint32 min_quantity = 12;
+	uint32 max_quantity = 13;
+	string iap_product_id_ios = 14;
+	string iap_product_id_android = 15;
+	uint64 special_offer_end_timestamp = 16;
+	bool is_free = 17;
+	repeated string contents_preview_assets = 18 [packed=false];
+	repeated ItemCountRange item_counts = 19 [packed=false];
+	uint64 expiry = 20;
+	string special_offer_icon = 21;
+	repeated string special_offer_vgp_placement_triggers = 22 [packed=false];
+	repeated uint64 highlighted_items = 23 [packed=false];
+	bool has_gifts = 24;
+	bool is_purchase_limits_hidden = 25;
+	bool is_afriend_gift = 26;
+	uint32 store_pack_type = 27;
+	Color frame_color = 28;
+	string main_image_special_offer_override = 29;
+	string name_key_special_offer_tab_override = 30;
+	string vfx_asset = 31;
+	StoreItemVipData vip_data = 32;
+	uint32 special_offer_popup_frequency_s = 33;
+	uint32 special_offer_popup_before_expire_s = 34;
+	StoreItemSize popup_item_size = 35;
+	string subtitle_key_special_offer_override = 36;
+	repeated ItemCount override_costs = 37 [packed=false];
+	string vfx_asset_special_offer_override = 38;
+	int32 rev_sdk_video_ad_type = 39;
+	bool hide_you_own_info = 40;
+	bool show_details_for_purchase_confirm = 41;
+	uint64 daily_reward_id = 42;
+	bool is_special_offer = 43;
+	StampType stamp_type = 44;
+	string stamp_store_badge_asset = 45;
+	int32 stamp_tokens = 46;
+	uint64 player_activity = 47;
+	uint64 collection_score = 48;
+	string magic_leap_desc = 49;
+	bool is_item_locked = 50;
+	OriginalPackInfo original_pack_info = 51;
+}
+
+message StoreItemGrant {
+	string title_loc_key = 1;
+	repeated StoreItemGrantOption options = 2 [packed=false];
+	float percent_chance = 3;
+	bool is_club_gift = 4;
+}
+
+message StoreItemGrantOption {
+	ItemCountRange item = 1;
+	float percent_chance = 2;
+}
+
+message StoreItemInfoRequest {
+	uint64 store_item_id = 1;
+}
+
+message StoreItemInfoResponse {
+	StoreItem item = 1;
+}
+
+message StoreItemRequest {
+	uint64 store_item_id = 1;
+}
+
+message StoreItemResponse {
+	string title_loc_key = 1;
+	string description_loc_key = 2;
+	repeated StoreItemGrant grants = 3 [packed=false];
+	string short_description_loc_key = 4;
+	repeated Unit upgrade_units = 5 [packed=false];
+	HyperdriveProgressionInfo progression_info = 6;
+}
+
+message StoreItemVipData {
+	ItemCount initial_reward = 1;
+	ItemCount daily_reward = 2;
+	ItemCount total_reward = 3;
+}
+
+message StoreRequest {
+}
+
+message StoreResponse {
+	repeated StoreTab tabs = 1 [packed=false];
+}
+
+message StoreShelf {
+	string name_key = 1;
+	string background = 2;
+	repeated StoreItem items = 3 [packed=false];
+	uint64 id = 4;
+}
+
+message StoreStampRewardInfo {
+	BasicStampProgressInfo progress = 1;
+	int32 stamps_awarded_count = 2;
+	StampType stamp_type = 3;
+	InventoryDelta slot_reward = 4;
+	InventoryDelta set_reward = 5;
+	InventoryDelta cummulative_reward = 6;
+}
+
+message StoreTab {
+	uint64 id = 1;
+	uint64 sort_order = 2;
+	string name_key = 3;
+	string icon = 4;
+	repeated StoreShelf shelves = 5 [packed=false];
+	StoreItemSize item_size = 6;
+	repeated StoreItem items = 7 [packed=false];
+	StoreItem showcase_item = 8;
+	bool hidden = 9;
+	repeated StoreItem showcase_items = 10 [packed=false];
+	string unlock_requirement_key = 11;
+}
+
+message StreakReward {
+	uint64 streak_type = 1;
+	uint64 definition_id = 2;
+	repeated StreakRewardClaimStatus rewards_claim_status = 3 [packed=false];
+	uint64 current_streak = 4;
+}
+
+message SwapSorcererStoneRequest {
+	uint64 unit_id = 1;
+	uint64 new_sorcerer_stone_id = 2;
+}
+
+message SwapSorcererStoneResponse {
+	InventoryDelta inventory_delta = 1;
+}
+
+message SyncChaptersRequest {
+}
+
+message SyncChaptersResponse {
+}
+
+message TierStatus {
+	bool is_locked = 1;
+	string locked_description = 2;
+	uint32 tier_index = 3;
+}
+
+message Tower {
+	repeated TowerNode nodes = 1 [packed=false];
+	uint64 def_id = 2;
+	repeated TowerMap maps = 3 [packed=false];
+	int64 sort_order = 4;
+}
+
+message TowerAutoWinRequest {
+	TowerIdentifier id = 1;
+}
+
+message TowerAutoWinResponse {
+	InventoryDelta inventory_delta = 1;
+}
+
+message TowerBattleEndRequest {
+	bool win = 1;
+	repeated UnitBattleResult units = 2 [packed=false];
+	repeated BattleActivityResult activity_results = 3 [packed=false];
+}
+
+message TowerBattleEndResponse {
+	InventoryDelta inventory_delta = 1;
+}
+
+message TowerBattleStartRequest {
+	repeated uint64 units = 1 [packed=false];
+	repeated uint64 spells = 2 [packed=false];
+	BattleSquadSaveInfo squad_save = 3;
+	uint64 leader_unit = 4;
+	TowerIdentifier id = 5;
+}
+
+message TowerBattleStartResponse {
+	bytes bootstrap_bytes = 1;
+	uint64 player_id = 2;
+}
+
+message TowerEvent {
+	uint64 content_id = 1;
+	uint64 event_group_id = 2;
+	repeated TowerEventMap maps = 3 [packed=false];
+	uint64 begin_timestamp = 4;
+	uint64 end_timestamp = 5;
+	string marquee_image = 6;
+	Color locked_color = 7;
+	Color unlocked_color = 8;
+	uint64 shipment_def_id = 9;
+	uint64 milestone_reward_table_id = 10;
+	uint64 hud_currency = 11;
+}
+
+message TowerEventAutoWinRequest {
+	TowerIdentifier id = 1;
+}
+
+message TowerEventAutoWinResponse {
+	InventoryDelta inventory_delta = 1;
+}
+
+message TowerEventBattleEndRequest {
+	bool win = 1;
+	repeated UnitBattleResult units = 2 [packed=false];
+	repeated BattleActivityResult activity_results = 3 [packed=false];
+}
+
+message TowerEventBattleEndResponse {
+	InventoryDelta inventory_delta = 1;
+}
+
+message TowerEventBattleStartRequest {
+	repeated uint64 units = 1 [packed=false];
+	repeated uint64 spells = 2 [packed=false];
+	BattleSquadSaveInfo squad_save = 3;
+	uint64 leader_unit = 4;
+	TowerIdentifier id = 5;
+}
+
+message TowerEventBattleStartResponse {
+	bytes bootstrap_bytes = 1;
+	uint64 player_id = 2;
+	InventoryDelta inventory_delta = 3;
+}
+
+message TowerEventMap {
+	TowerIdentifier id = 1;
+	string name = 2;
+	string description = 3;
+	string image = 4;
+	string preview_text = 5;
+	repeated uint64 showcase_items = 6 [packed=false];
+	uint64 node_count = 7;
+	bool auto_complete_enabled = 8;
+}
+
+message TowerIdentifier {
+	uint64 tower_id = 1;
+	uint64 map_id = 2;
+}
+
+message TowerMap {
+	TowerIdentifier id = 1;
+	repeated TowerNode nodes = 2 [packed=false];
+	uint64 required_completion_count = 3;
+	string image = 4;
+	string scene = 5;
+	string name_key = 6;
+	string description_key = 7;
+	repeated uint64 showcase_items = 8 [packed=false];
+	repeated ItemCountRange progression_rewards = 9 [packed=false];
+	bool restarts_disabled = 10;
+	TowerType tower_type = 11;
+	uint64 shipment_def_id_override = 12;
+	uint64 hud_currency = 13;
+	uint64 milestone_reward_table_id = 14;
+	bool auto_complete_enabled = 15;
+	uint64 auto_complete_cost_id = 16;
+	uint32 auto_complete_cost_count = 17;
+}
+
+message TowerNode {
+	uint64 id = 1;
+	BattleNode battle_data = 2;
+}
+
+message TowerRequest {
+	repeated uint64 towers_def_ids = 1 [packed=false];
+}
+
+message TowerResponse {
+	Tower tower = 1;
+	repeated Tower towers = 2 [packed=false];
+}
+
+message TowerStatus {
+	uint64 refresh_timestamp = 1;
+	uint64 current_node = 2;
+	repeated UnitBattleState unit_states = 3 [packed=false];
+	TowerIdentifier id = 4;
+	uint64 times_completed = 5;
+	bool claimed_progression_loot = 6;
+	uint64 highest_node_reached = 7;
+	bool auto_win_used = 8;
+	bool auto_complete_enabled = 9;
+}
+
+message TowerStatusRequest {
+	repeated TowerIdentifier towers = 1 [packed=false];
+}
+
+message TowerStatusResponse {
+	TowerStatus status = 1;
+	repeated TowerStatus statuses = 2 [packed=false];
+}
+
+message TrainUnitRequest {
+	uint64 unit_id = 1;
+	uint64 level = 2;
+}
+
+message TrainUnitResponse {
+	InventoryDelta inventory_delta = 1;
+}
+
+message UnblockChatUserRequest {
+	string player_id = 1;
+}
+
+message UnblockChatUserResponse {
+}
+
+message UnequipSorcererStoneRequest {
+	uint64 unit_id = 1;
+}
+
+message UnequipSorcererStoneResponse {
+	InventoryDelta inventory_delta = 1;
+}
+
+message Unit {
+	uint64 definition_id = 1;
+	uint64 rarity = 2;
+	uint64 level = 3;
+	repeated bool gear_slot_equipped = 4 [packed=false];
+	uint64 gear_tier = 5;
+	uint64 offense = 6;
+	uint64 defense = 7;
+	uint64 health = 8;
+	double crit_chance = 9;
+	double crit_power = 10;
+	double attack_speed = 11;
+	repeated uint64 ability_level = 12 [packed=false];
+	uint64 power_rating = 13;
+	uint64 recovery = 14;
+	uint64 skin_item_id = 15;
+	uint64 sorcerer_stone_id = 16;
+	uint64 speed = 17;
+	double potency = 18;
+	double tenacity = 19;
+	double accuracy = 20;
+	double evasion = 21;
+}
+
+message UnitBattleResult {
+	uint64 persistent_id = 1;
+	bool is_alive = 2;
+	float health_percent = 3;
+}
+
+message UnitBattleState {
+	uint64 definition_id = 1;
+	bool is_enemy = 2;
+	bool is_alive = 3;
+	float health_percent = 4;
+	uint32 battle_index = 5;
+}
+
+message UnitStatOverride {
+	uint64 level = 1;
+	uint64 rarity = 2;
+	uint64 gear_tier = 3;
+}
+
+message UpdateClubRequest {
+	string id = 1;
+	ClubSettings settings = 2;
+}
+
+message UpdateClubResponse {
+}
+
+message UpdatePlayerAvailabilityRequest {
+	PlayerAvailabilityStatus status = 1;
+}
+
+message UpdatePlayerAvailabilityResponse {
+}
+
+message UpdatePlayerProfileRequest {
+	string new_username = 1;
+	uint64 new_avatar_id = 2;
+	bool show_vip_bg = 3;
+	uint64 new_frame_id = 4;
+}
+
+message UpdatePlayerProfileResponse {
+}
+
+message UpdatePlayerTimeSettingsRequest {
+	uint64 koth_payout_custom_time_offset = 1;
+}
+
+message UpdatePlayerTimeSettingsResponse {
+	uint64 time_settings_changed_count = 1;
+	uint64 koth_payout_timestamp = 2;
+}
+
+message UpdateReceivePlayerOnlinePopupsStatusRequest {
+	ReceivePlayerOnlinePopupsStatus status = 1;
+}
+
+message UpdateReceivePlayerOnlinePopupsStatusResponse {
+}
+
+message VerifyAccountLinkCodeRequest {
+	string account_link_code = 1;
+	string account_link_verify_code = 2;
+}
+
+message VerifyAccountLinkCodeResponse {
+}
+

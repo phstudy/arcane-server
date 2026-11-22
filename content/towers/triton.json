@@ -1,0 +1,1828 @@
+{
+ "tower_id": 7712109999548389,
+ "scene": "env_triton_tower/triton_tower",
+ "exchange_lock_key": "TRITON_TOWER_EXCHANGE_TOWER_{tier}_LOCKED",
+ "maps": [
+  {
+   "chest": [
+    {
+     "id": 8411592585918351,
+     "count": 5
+    }
+   ],
+   "nodes": [
+    {
+     "battle_restriction": 2525894610386401,
+     "entry_cost": {
+      "id": 6821013986026800,
+      "count": 8
+     },
+     "enemies": [
+      {
+       "id": 5710225926985727
+      },
+      {
+       "id": 2425318463423019
+      },
+      {
+       "id": 7266520144288097
+      },
+      {
+       "id": 6569997645566663
+      },
+      {
+       "id": 6248908469179626
+      }
+     ],
+     "enemy_stats": {
+      "level": 35,
+      "rarity": 1,
+      "gear_tier": 3
+     },
+     "rewards": [
+      {
+       "id": 8411592585918351,
+       "count": 1,
+       "first_time": true,
+       "chance": false
+      },
+      {
+       "id": 3818822420600700,
+       "count": 1,
+       "first_time": false,
+       "chance": true
+      },
+      {
+       "id": 4242516528530722,
+       "count": 80,
+       "first_time": false,
+       "chance": false
+      },
+      {
+       "id": 717898132760390,
+       "count": 200,
+       "first_time": false,
+       "chance": false
+      }
+     ]
+    },
+    {
+     "battle_restriction": 5354461110040806,
+     "entry_cost": {
+      "id": 6821013986026800,
+      "count": 8
+     },
+     "enemies": [
+      {
+       "id": 4914158096592074
+      },
+      {
+       "id": 6799823887600150
+      },
+      {
+       "id": 11
+      },
+      {
+       "id": 151
+      },
+      {
+       "id": 8079831875819121
+      }
+     ],
+     "enemy_stats": {
+      "level": 36,
+      "rarity": 2,
+      "gear_tier": 3
+     },
+     "rewards": [
+      {
+       "id": 8411592585918351,
+       "count": 1,
+       "first_time": true,
+       "chance": false
+      },
+      {
+       "id": 3818822420600700,
+       "count": 1,
+       "first_time": false,
+       "chance": true
+      },
+      {
+       "id": 4242516528530722,
+       "count": 80,
+       "first_time": false,
+       "chance": false
+      },
+      {
+       "id": 717898132760390,
+       "count": 200,
+       "first_time": false,
+       "chance": false
+      }
+     ]
+    },
+    {
+     "battle_restriction": 712040486793225,
+     "entry_cost": {
+      "id": 6821013986026800,
+      "count": 8
+     },
+     "enemies": [
+      {
+       "id": 4264839534548679
+      },
+      {
+       "id": 5534722310856030
+      },
+      {
+       "id": 370744954140450
+      },
+      {
+       "id": 4655438307398817
+      },
+      {
+       "id": 124
+      }
+     ],
+     "enemy_stats": {
+      "level": 37,
+      "rarity": 2,
+      "gear_tier": 3
+     },
+     "rewards": [
+      {
+       "id": 8411592585918351,
+       "count": 1,
+       "first_time": true,
+       "chance": false
+      },
+      {
+       "id": 3818822420600700,
+       "count": 1,
+       "first_time": false,
+       "chance": true
+      },
+      {
+       "id": 4242516528530722,
+       "count": 80,
+       "first_time": false,
+       "chance": false
+      },
+      {
+       "id": 717898132760390,
+       "count": 200,
+       "first_time": false,
+       "chance": false
+      }
+     ]
+    },
+    {
+     "battle_restriction": 4782101794764358,
+     "entry_cost": {
+      "id": 6821013986026800,
+      "count": 8
+     },
+     "enemies": [
+      {
+       "id": 8079429168333959
+      },
+      {
+       "id": 3793696733556542
+      },
+      {
+       "id": 7786425981047712
+      },
+      {
+       "id": 8397384975680519
+      },
+      {
+       "id": 5702473871132078
+      }
+     ],
+     "enemy_stats": {
+      "level": 38,
+      "rarity": 2,
+      "gear_tier": 4
+     },
+     "rewards": [
+      {
+       "id": 8411592585918351,
+       "count": 1,
+       "first_time": true,
+       "chance": false
+      },
+      {
+       "id": 3818822420600700,
+       "count": 1,
+       "first_time": false,
+       "chance": true
+      },
+      {
+       "id": 4242516528530722,
+       "count": 80,
+       "first_time": false,
+       "chance": false
+      },
+      {
+       "id": 717898132760390,
+       "count": 200,
+       "first_time": false,
+       "chance": false
+      }
+     ]
+    },
+    {
+     "battle_restriction": 6530336206584987,
+     "entry_cost": {
+      "id": 6821013986026800,
+      "count": 8
+     },
+     "enemies": [
+      {
+       "id": 3940153952957
+      },
+      {
+       "id": 8040952014412195
+      },
+      {
+       "id": 2516666220254955
+      },
+      {
+       "id": 72
+      },
+      {
+       "id": 600284832226040
+      }
+     ],
+     "enemy_stats": {
+      "level": 39,
+      "rarity": 2,
+      "gear_tier": 4
+     },
+     "rewards": [
+      {
+       "id": 8411592585918351,
+       "count": 1,
+       "first_time": true,
+       "chance": false
+      },
+      {
+       "id": 3818822420600700,
+       "count": 1,
+       "first_time": false,
+       "chance": true
+      },
+      {
+       "id": 4242516528530722,
+       "count": 80,
+       "first_time": false,
+       "chance": false
+      },
+      {
+       "id": 717898132760390,
+       "count": 200,
+       "first_time": false,
+       "chance": false
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "chest": [
+    {
+     "id": 8411592585918351,
+     "count": 30
+    }
+   ],
+   "nodes": [
+    {
+     "battle_restriction": 6412464223013924,
+     "entry_cost": {
+      "id": 6821013986026800,
+      "count": 10
+     },
+     "enemies": [
+      {
+       "id": 39
+      },
+      {
+       "id": 1736798772274835
+      },
+      {
+       "id": 1198211944242711
+      },
+      {
+       "id": 7266520144288097
+      },
+      {
+       "id": 6801450488388220
+      }
+     ],
+     "enemy_stats": {
+      "level": 40,
+      "rarity": 2,
+      "gear_tier": 4
+     },
+     "rewards": [
+      {
+       "id": 8411592585918351,
+       "count": 1,
+       "first_time": true,
+       "chance": false
+      },
+      {
+       "id": 3818822420600700,
+       "count": 1,
+       "first_time": false,
+       "chance": true
+      },
+      {
+       "id": 4242516528530722,
+       "count": 100,
+       "first_time": false,
+       "chance": false
+      },
+      {
+       "id": 717898132760390,
+       "count": 300,
+       "first_time": false,
+       "chance": false
+      }
+     ]
+    },
+    {
+     "battle_restriction": 981338823979543,
+     "entry_cost": {
+      "id": 6821013986026800,
+      "count": 10
+     },
+     "enemies": [
+      {
+       "id": 6677378796004658
+      },
+      {
+       "id": 6718413568421239
+      },
+      {
+       "id": 6122772866382469
+      },
+      {
+       "id": 4914158096592074
+      },
+      {
+       "id": 7214551069584365
+      }
+     ],
+     "enemy_stats": {
+      "level": 41,
+      "rarity": 3,
+      "gear_tier": 4
+     },
+     "rewards": [
+      {
+       "id": 8411592585918351,
+       "count": 1,
+       "first_time": true,
+       "chance": false
+      },
+      {
+       "id": 3818822420600700,
+       "count": 1,
+       "first_time": false,
+       "chance": true
+      },
+      {
+       "id": 4242516528530722,
+       "count": 100,
+       "first_time": false,
+       "chance": false
+      },
+      {
+       "id": 717898132760390,
+       "count": 300,
+       "first_time": false,
+       "chance": false
+      }
+     ]
+    },
+    {
+     "battle_restriction": 1079206963768951,
+     "entry_cost": {
+      "id": 6821013986026800,
+      "count": 10
+     },
+     "enemies": [
+      {
+       "id": 4996798494226789
+      },
+      {
+       "id": 370744954140450
+      },
+      {
+       "id": 5534722310856030
+      },
+      {
+       "id": 125
+      },
+      {
+       "id": 1225277242550499
+      }
+     ],
+     "enemy_stats": {
+      "level": 42,
+      "rarity": 3,
+      "gear_tier": 4
+     },
+     "rewards": [
+      {
+       "id": 8411592585918351,
+       "count": 1,
+       "first_time": true,
+       "chance": false
+      },
+      {
+       "id": 3818822420600700,
+       "count": 1,
+       "first_time": false,
+       "chance": true
+      },
+      {
+       "id": 4242516528530722,
+       "count": 110,
+       "first_time": false,
+       "chance": false
+      },
+      {
+       "id": 717898132760390,
+       "count": 300,
+       "first_time": false,
+       "chance": false
+      }
+     ]
+    },
+    {
+     "battle_restriction": 4663781530444109,
+     "entry_cost": {
+      "id": 6821013986026800,
+      "count": 10
+     },
+     "enemies": [
+      {
+       "id": 7786425981047712
+      },
+      {
+       "id": 5702473871132078
+      },
+      {
+       "id": 6651802205495402
+      },
+      {
+       "id": 4979608122848331
+      },
+      {
+       "id": 6495565017355218
+      }
+     ],
+     "enemy_stats": {
+      "level": 43,
+      "rarity": 3,
+      "gear_tier": 4
+     },
+     "rewards": [
+      {
+       "id": 8411592585918351,
+       "count": 1,
+       "first_time": true,
+       "chance": false
+      },
+      {
+       "id": 3818822420600700,
+       "count": 1,
+       "first_time": false,
+       "chance": true
+      },
+      {
+       "id": 4242516528530722,
+       "count": 120,
+       "first_time": false,
+       "chance": false
+      },
+      {
+       "id": 717898132760390,
+       "count": 300,
+       "first_time": false,
+       "chance": false
+      }
+     ]
+    },
+    {
+     "battle_restriction": 986385372915988,
+     "entry_cost": {
+      "id": 6821013986026800,
+      "count": 10
+     },
+     "enemies": [
+      {
+       "id": 3544131010430743
+      },
+      {
+       "id": 1824298448652545
+      },
+      {
+       "id": 5584717432624453
+      },
+      {
+       "id": 50
+      },
+      {
+       "id": 2294812731867727
+      }
+     ],
+     "enemy_stats": {
+      "level": 44,
+      "rarity": 4,
+      "gear_tier": 4
+     },
+     "rewards": [
+      {
+       "id": 8411592585918351,
+       "count": 2,
+       "first_time": true,
+       "chance": false
+      },
+      {
+       "id": 3818822420600700,
+       "count": 1,
+       "first_time": false,
+       "chance": true
+      },
+      {
+       "id": 4242516528530722,
+       "count": 130,
+       "first_time": false,
+       "chance": false
+      },
+      {
+       "id": 717898132760390,
+       "count": 350,
+       "first_time": false,
+       "chance": false
+      }
+     ]
+    },
+    {
+     "battle_restriction": 285931970468936,
+     "entry_cost": {
+      "id": 6821013986026800,
+      "count": 10
+     },
+     "enemies": [
+      {
+       "id": 508341540759214
+      },
+      {
+       "id": 3077390668497398
+      },
+      {
+       "id": 2116902913444099
+      },
+      {
+       "id": 5424845974987535
+      },
+      {
+       "id": 1120886486277251
+      }
+     ],
+     "enemy_stats": {
+      "level": 45,
+      "rarity": 4,
+      "gear_tier": 4
+     },
+     "rewards": [
+      {
+       "id": 8411592585918351,
+       "count": 2,
+       "first_time": true,
+       "chance": false
+      },
+      {
+       "id": 3818822420600700,
+       "count": 1,
+       "first_time": false,
+       "chance": true
+      },
+      {
+       "id": 4242516528530722,
+       "count": 140,
+       "first_time": false,
+       "chance": false
+      },
+      {
+       "id": 717898132760390,
+       "count": 350,
+       "first_time": false,
+       "chance": false
+      }
+     ]
+    },
+    {
+     "battle_restriction": 1446686475781536,
+     "entry_cost": {
+      "id": 6821013986026800,
+      "count": 10
+     },
+     "enemies": [
+      {
+       "id": 72
+      },
+      {
+       "id": 2687882053781774
+      },
+      {
+       "id": 150
+      },
+      {
+       "id": 149
+      },
+      {
+       "id": 2541505114257629
+      }
+     ],
+     "enemy_stats": {
+      "level": 46,
+      "rarity": 4,
+      "gear_tier": 5
+     },
+     "rewards": [
+      {
+       "id": 8411592585918351,
+       "count": 2,
+       "first_time": true,
+       "chance": false
+      },
+      {
+       "id": 3818822420600700,
+       "count": 1,
+       "first_time": false,
+       "chance": true
+      },
+      {
+       "id": 4242516528530722,
+       "count": 150,
+       "first_time": false,
+       "chance": false
+      },
+      {
+       "id": 717898132760390,
+       "count": 350,
+       "first_time": false,
+       "chance": false
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "chest": [
+    {
+     "id": 8411592585918351,
+     "count": 30
+    },
+    {
+     "id": 1932049242431837,
+     "count": 1
+    }
+   ],
+   "nodes": [
+    {
+     "battle_restriction": 997559397121774,
+     "entry_cost": {
+      "id": 6821013986026800,
+      "count": 12
+     },
+     "enemies": [
+      {
+       "id": 4892760259249624
+      },
+      {
+       "id": 5100662395947751
+      },
+      {
+       "id": 8802679835947633
+      },
+      {
+       "id": 4264839534548679
+      },
+      {
+       "id": 4996798494226789
+      }
+     ],
+     "enemy_stats": {
+      "level": 52,
+      "rarity": 5,
+      "gear_tier": 6
+     },
+     "rewards": [
+      {
+       "id": 8411592585918351,
+       "count": 2,
+       "first_time": true,
+       "chance": false
+      },
+      {
+       "id": 3818822420600700,
+       "count": 1,
+       "first_time": false,
+       "chance": true
+      },
+      {
+       "id": 4242516528530722,
+       "count": 300,
+       "first_time": false,
+       "chance": false
+      },
+      {
+       "id": 717898132760390,
+       "count": 480,
+       "first_time": false,
+       "chance": false
+      }
+     ]
+    },
+    {
+     "battle_restriction": 3439294047826598,
+     "entry_cost": {
+      "id": 6821013986026800,
+      "count": 12
+     },
+     "enemies": [
+      {
+       "id": 8014374100911476
+      },
+      {
+       "id": 8279082701199788
+      },
+      {
+       "id": 8713130068551573
+      },
+      {
+       "id": 4505487594415447
+      },
+      {
+       "id": 5410579083337168
+      }
+     ],
+     "enemy_stats": {
+      "level": 54,
+      "rarity": 5,
+      "gear_tier": 6
+     },
+     "rewards": [
+      {
+       "id": 8411592585918351,
+       "count": 2,
+       "first_time": true,
+       "chance": false
+      },
+      {
+       "id": 3818822420600700,
+       "count": 1,
+       "first_time": false,
+       "chance": true
+      },
+      {
+       "id": 4242516528530722,
+       "count": 320,
+       "first_time": false,
+       "chance": false
+      },
+      {
+       "id": 717898132760390,
+       "count": 480,
+       "first_time": false,
+       "chance": false
+      }
+     ]
+    },
+    {
+     "battle_restriction": 3772209021680848,
+     "entry_cost": {
+      "id": 6821013986026800,
+      "count": 12
+     },
+     "enemies": [
+      {
+       "id": 6814002232054243
+      },
+      {
+       "id": 1424534210893336
+      },
+      {
+       "id": 7223888738756585
+      },
+      {
+       "id": 6975264719804706
+      },
+      {
+       "id": 5810646426533593
+      }
+     ],
+     "enemy_stats": {
+      "level": 56,
+      "rarity": 6,
+      "gear_tier": 6
+     },
+     "rewards": [
+      {
+       "id": 8411592585918351,
+       "count": 2,
+       "first_time": true,
+       "chance": false
+      },
+      {
+       "id": 3818822420600700,
+       "count": 1,
+       "first_time": false,
+       "chance": true
+      },
+      {
+       "id": 4242516528530722,
+       "count": 360,
+       "first_time": false,
+       "chance": false
+      },
+      {
+       "id": 717898132760390,
+       "count": 480,
+       "first_time": false,
+       "chance": false
+      }
+     ]
+    },
+    {
+     "battle_restriction": 8802949022921393,
+     "entry_cost": {
+      "id": 6821013986026800,
+      "count": 12
+     },
+     "enemies": [
+      {
+       "id": 8079429168333959
+      },
+      {
+       "id": 8218042807117239
+      },
+      {
+       "id": 3368663937660261
+      },
+      {
+       "id": 7214551069584365
+      },
+      {
+       "id": 553069276713467
+      }
+     ],
+     "enemy_stats": {
+      "level": 58,
+      "rarity": 6,
+      "gear_tier": 6
+     },
+     "rewards": [
+      {
+       "id": 8411592585918351,
+       "count": 2,
+       "first_time": true,
+       "chance": false
+      },
+      {
+       "id": 3818822420600700,
+       "count": 1,
+       "first_time": false,
+       "chance": true
+      },
+      {
+       "id": 4242516528530722,
+       "count": 420,
+       "first_time": false,
+       "chance": false
+      },
+      {
+       "id": 717898132760390,
+       "count": 540,
+       "first_time": false,
+       "chance": false
+      }
+     ]
+    },
+    {
+     "battle_restriction": 2135210059987526,
+     "entry_cost": {
+      "id": 6821013986026800,
+      "count": 12
+     },
+     "enemies": [
+      {
+       "id": 39
+      },
+      {
+       "id": 5710225926985727
+      },
+      {
+       "id": 1809998714774592
+      },
+      {
+       "id": 1736798772274835
+      },
+      {
+       "id": 1351297219824244
+      }
+     ],
+     "enemy_stats": {
+      "level": 60,
+      "rarity": 6,
+      "gear_tier": 6
+     },
+     "rewards": [
+      {
+       "id": 8411592585918351,
+       "count": 2,
+       "first_time": true,
+       "chance": false
+      },
+      {
+       "id": 3818822420600700,
+       "count": 1,
+       "first_time": false,
+       "chance": true
+      },
+      {
+       "id": 4242516528530722,
+       "count": 480,
+       "first_time": false,
+       "chance": false
+      },
+      {
+       "id": 717898132760390,
+       "count": 540,
+       "first_time": false,
+       "chance": false
+      }
+     ]
+    },
+    {
+     "battle_restriction": 3831874027996649,
+     "entry_cost": {
+      "id": 6821013986026800,
+      "count": 12
+     },
+     "enemies": [
+      {
+       "id": 2687882053781774
+      },
+      {
+       "id": 1833609470868558
+      },
+      {
+       "id": 2516666220254955
+      },
+      {
+       "id": 8040952014412195
+      },
+      {
+       "id": 8218042807117239
+      }
+     ],
+     "enemy_stats": {
+      "level": 62,
+      "rarity": 6,
+      "gear_tier": 6
+     },
+     "rewards": [
+      {
+       "id": 8411592585918351,
+       "count": 2,
+       "first_time": true,
+       "chance": false
+      },
+      {
+       "id": 4242516528530722,
+       "count": 540,
+       "first_time": false,
+       "chance": false
+      },
+      {
+       "id": 717898132760390,
+       "count": 600,
+       "first_time": false,
+       "chance": false
+      }
+     ]
+    },
+    {
+     "battle_restriction": 2219983028183034,
+     "entry_cost": {
+      "id": 6821013986026800,
+      "count": 12
+     },
+     "enemies": [
+      {
+       "id": 5424845974987535
+      },
+      {
+       "id": 7836378166039323
+      },
+      {
+       "id": 3077390668497398
+      },
+      {
+       "id": 8279082701199788
+      },
+      {
+       "id": 1120886486277251
+      }
+     ],
+     "enemy_stats": {
+      "level": 64,
+      "rarity": 7,
+      "gear_tier": 6
+     },
+     "rewards": [
+      {
+       "id": 8411592585918351,
+       "count": 2,
+       "first_time": true,
+       "chance": false
+      },
+      {
+       "id": 4242516528530722,
+       "count": 600,
+       "first_time": false,
+       "chance": false
+      },
+      {
+       "id": 717898132760390,
+       "count": 660,
+       "first_time": false,
+       "chance": false
+      }
+     ]
+    },
+    {
+     "battle_restriction": 8838447947634313,
+     "entry_cost": {
+      "id": 6821013986026800,
+      "count": 12
+     },
+     "enemies": [
+      {
+       "id": 8040952014412195
+      },
+      {
+       "id": 3077390668497398
+      },
+      {
+       "id": 8279082701199788
+      },
+      {
+       "id": 4001595138299649
+      },
+      {
+       "id": 8014374100911476
+      }
+     ],
+     "enemy_stats": {
+      "level": 66,
+      "rarity": 7,
+      "gear_tier": 7
+     },
+     "rewards": [
+      {
+       "id": 8411592585918351,
+       "count": 2,
+       "first_time": true,
+       "chance": false
+      },
+      {
+       "id": 4242516528530722,
+       "count": 660,
+       "first_time": false,
+       "chance": false
+      },
+      {
+       "id": 717898132760390,
+       "count": 720,
+       "first_time": false,
+       "chance": false
+      }
+     ]
+    },
+    {
+     "battle_restriction": 4830927946970198,
+     "entry_cost": {
+      "id": 6821013986026800,
+      "count": 12
+     },
+     "enemies": [
+      {
+       "id": 6953054855346287
+      },
+      {
+       "id": 10
+      },
+      {
+       "id": 3940153952957
+      },
+      {
+       "id": 600284832226040
+      },
+      {
+       "id": 5684938898918823
+      }
+     ],
+     "enemy_stats": {
+      "level": 68,
+      "rarity": 7,
+      "gear_tier": 7
+     },
+     "rewards": [
+      {
+       "id": 8411592585918351,
+       "count": 4,
+       "first_time": true,
+       "chance": false
+      },
+      {
+       "id": 4242516528530722,
+       "count": 720,
+       "first_time": false,
+       "chance": false
+      },
+      {
+       "id": 717898132760390,
+       "count": 840,
+       "first_time": false,
+       "chance": false
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "exchange": [
+  {
+   "id": 8411592585918351,
+   "count": 2,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 4000
+   },
+   "requires_tier": "II"
+  },
+  {
+   "id": 8411592585918351,
+   "count": 2,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 4000
+   },
+   "requires_tier": "II"
+  },
+  {
+   "id": 8411592585918351,
+   "count": 3,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 6000
+   },
+   "requires_tier": "III"
+  },
+  {
+   "id": 3818822420600700,
+   "count": 3,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 2400
+   }
+  },
+  {
+   "id": 3818822420600700,
+   "count": 3,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 2400
+   }
+  },
+  {
+   "id": 3818822420600700,
+   "count": 5,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 4000
+   }
+  },
+  {
+   "id": 14,
+   "count": 3,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 1500
+   }
+  },
+  {
+   "id": 37,
+   "count": 3,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 2400
+   }
+  },
+  {
+   "id": 1400452231532493,
+   "count": 3,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 1500
+   }
+  },
+  {
+   "id": 122,
+   "count": 3,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 1500
+   }
+  },
+  {
+   "id": 5784856723423288,
+   "count": 3,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 5100
+   }
+  },
+  {
+   "id": 7887545258168546,
+   "count": 3,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 5100
+   }
+  },
+  {
+   "id": 8962330036148078,
+   "count": 3,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 5100
+   }
+  },
+  {
+   "id": 5007297434955457,
+   "count": 6,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 4200
+   }
+  },
+  {
+   "id": 2858171621115265,
+   "count": 6,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 4200
+   }
+  },
+  {
+   "id": 8331674240806556,
+   "count": 6,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 4200
+   }
+  },
+  {
+   "id": 4359736493162385,
+   "count": 8,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 4200
+   }
+  },
+  {
+   "id": 3776051996157214,
+   "count": 8,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 4200
+   }
+  },
+  {
+   "id": 7349058565226736,
+   "count": 8,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 4200
+   }
+  },
+  {
+   "id": 6951631747773325,
+   "count": 5,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 3750
+   }
+  },
+  {
+   "id": 946211064381860,
+   "count": 5,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 3750
+   }
+  },
+  {
+   "id": 3218172284382800,
+   "count": 5,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 3750
+   }
+  },
+  {
+   "id": 2847867582043978,
+   "count": 5,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 3750
+   }
+  },
+  {
+   "id": 5291641157276905,
+   "count": 5,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 3750
+   }
+  },
+  {
+   "id": 5699237400778713,
+   "count": 5,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 3000
+   }
+  },
+  {
+   "id": 2945137569183386,
+   "count": 5,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 3000
+   }
+  },
+  {
+   "id": 5162107487910141,
+   "count": 5,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 3000
+   }
+  },
+  {
+   "id": 7531001555655815,
+   "count": 5,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 3000
+   }
+  },
+  {
+   "id": 5482566426068031,
+   "count": 5,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 3000
+   }
+  },
+  {
+   "id": 2231922868182045,
+   "count": 10,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 3000
+   }
+  },
+  {
+   "id": 2231922868182045,
+   "count": 5,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 1500
+   }
+  },
+  {
+   "id": 2123928786263283,
+   "count": 5,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 1000
+   }
+  },
+  {
+   "id": 381128010781287,
+   "count": 5,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 1000
+   }
+  },
+  {
+   "id": 2568938000304629,
+   "count": 5,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 1000
+   }
+  },
+  {
+   "id": 1171951539086697,
+   "count": 5,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 1000
+   }
+  },
+  {
+   "id": 1982171667398936,
+   "count": 5,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 1000
+   }
+  },
+  {
+   "id": 6344519489203639,
+   "count": 1,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 2500
+   }
+  },
+  {
+   "id": 1532650026871995,
+   "count": 1,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 2500
+   }
+  },
+  {
+   "id": 7453799976449616,
+   "count": 1,
+   "cost": {
+    "id": 4242516528530722,
+    "count": 2500
+   }
+  }
+ ],
+ "milestones": [
+  {
+   "points": 1650,
+   "background_image": "store_coins_2x_m/coins_2x_m",
+   "rewards": [
+    {
+     "id": 13,
+     "count": 5000
+    }
+   ]
+  },
+  {
+   "points": 3300,
+   "background_image": "store_potions_2x_m/potions_2x_m",
+   "rewards": [
+    {
+     "id": 26,
+     "count": 1000
+    }
+   ]
+  },
+  {
+   "points": 4950,
+   "background_image": "store_char_2x_king_triton/char_2x_king_triton",
+   "rewards": [
+    {
+     "id": 8411592585918351,
+     "count": 1
+    }
+   ]
+  },
+  {
+   "points": 6600,
+   "background_image": "store_gw-2x-t4-packs/gw-2x-t4-packs",
+   "rewards": [
+    {
+     "id": 1171951539086697,
+     "count": 5
+    },
+    {
+     "id": 1982171667398936,
+     "count": 5
+    },
+    {
+     "id": 381128010781287,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "points": 8250,
+   "background_image": "store_coins_2x_m/coins_2x_m",
+   "rewards": [
+    {
+     "id": 13,
+     "count": 10000
+    }
+   ]
+  },
+  {
+   "points": 9900,
+   "background_image": "store_gw-2x-t4-fiberpack/gw-2x-t4-fiberpack",
+   "rewards": [
+    {
+     "id": 2231922868182045,
+     "count": 15
+    }
+   ]
+  },
+  {
+   "points": 11550,
+   "background_image": "store_pouch_2x_ability_s/pouch_2x_ability_s",
+   "rewards": [
+    {
+     "id": 133,
+     "count": 20
+    }
+   ]
+  },
+  {
+   "points": 13200,
+   "background_image": "store_potions_2x_m/potions_2x_m",
+   "rewards": [
+    {
+     "id": 26,
+     "count": 1000
+    }
+   ]
+  },
+  {
+   "points": 14850,
+   "background_image": "store_coins_2x_m/coins_2x_m",
+   "rewards": [
+    {
+     "id": 13,
+     "count": 25000
+    }
+   ]
+  },
+  {
+   "points": 16500,
+   "background_image": "store_gw-2x-t4-packs/gw-2x-t4-packs",
+   "rewards": [
+    {
+     "id": 1171951539086697,
+     "count": 10
+    },
+    {
+     "id": 1982171667398936,
+     "count": 10
+    },
+    {
+     "id": 381128010781287,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "points": 18150,
+   "background_image": "store_gw-2x-t5-pack/gw-2x-t5-pack",
+   "rewards": [
+    {
+     "id": 7531001555655815,
+     "count": 5
+    },
+    {
+     "id": 5699237400778713,
+     "count": 5
+    },
+    {
+     "id": 5482566426068031,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "points": 19800,
+   "background_image": "store_potions_2x_m/potions_2x_m",
+   "rewards": [
+    {
+     "id": 26,
+     "count": 1000
+    }
+   ]
+  },
+  {
+   "points": 21450,
+   "background_image": "store_pouch_2x_ability_s_b/pouch_2x_ability_s_b",
+   "rewards": [
+    {
+     "id": 3883066061505188,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "points": 23100,
+   "background_image": "store_char_2x_king_triton/char_2x_king_triton",
+   "rewards": [
+    {
+     "id": 8411592585918351,
+     "count": 1
+    }
+   ]
+  },
+  {
+   "points": 24750,
+   "background_image": "store_coins_2x_m/coins_2x_m",
+   "rewards": [
+    {
+     "id": 13,
+     "count": 25000
+    }
+   ]
+  },
+  {
+   "points": 26400,
+   "background_image": "store_gw-2x-t4-fiberpack/gw-2x-t4-fiberpack",
+   "rewards": [
+    {
+     "id": 2231922868182045,
+     "count": 30
+    }
+   ]
+  },
+  {
+   "points": 28050,
+   "background_image": "store_potions_2x_m/potions_2x_m",
+   "rewards": [
+    {
+     "id": 26,
+     "count": 2000
+    }
+   ]
+  },
+  {
+   "points": 29700,
+   "background_image": "store_gw-2x-t5-pack/gw-2x-t5-pack",
+   "rewards": [
+    {
+     "id": 7531001555655815,
+     "count": 15
+    },
+    {
+     "id": 5699237400778713,
+     "count": 5
+    },
+    {
+     "id": 5482566426068031,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "points": 31350,
+   "background_image": "store_pouch_2x_ability_aby/pouch_2x_ability_aby",
+   "rewards": [
+    {
+     "id": 133,
+     "count": 10
+    },
+    {
+     "id": 3883066061505188,
+     "count": 5
+    },
+    {
+     "id": 6221535176831871,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "points": 33000,
+   "background_image": "store_char_2x_king_triton/char_2x_king_triton",
+   "rewards": [
+    {
+     "id": 8411592585918351,
+     "count": 2
+    }
+   ]
+  }
+ ],
+ "tower_event": {
+  "contentId": "7712109999548389",
+  "eventGroupId": "3641853082371457",
+  "maps": [
+   {
+    "id": {
+     "towerId": "7712109999548389"
+    },
+    "name": "TRITON_TOWER_EVENT_MAP_1",
+    "description": "TRITON_TOWER_EVENT_MAP_1_DESC",
+    "image": "icons_scheduled_events_event_triton_tower/triton_tower_cover",
+    "showcaseItems": [
+     "8411592585918351",
+     "3818822420600700",
+     "4242516528530722"
+    ],
+    "nodeCount": 5
+   },
+   {
+    "id": {
+     "towerId": "7712109999548389",
+     "mapId": 1
+    },
+    "name": "TRITON_TOWER_EVENT_MAP_2",
+    "description": "TRITON_TOWER_EVENT_MAP_2_DESC",
+    "image": "icons_scheduled_events_event_triton_tower/triton_tower_cover",
+    "showcaseItems": [
+     "8411592585918351",
+     "3818822420600700",
+     "4242516528530722"
+    ],
+    "nodeCount": 7
+   },
+   {
+    "id": {
+     "towerId": "7712109999548389",
+     "mapId": 2
+    },
+    "name": "TRITON_TOWER_EVENT_MAP_3",
+    "description": "TRITON_TOWER_EVENT_MAP_3_DESC",
+    "image": "icons_scheduled_events_event_triton_tower/triton_tower_cover",
+    "showcaseItems": [
+     "8411592585918351",
+     "3818822420600700",
+     "4242516528530722"
+    ],
+    "nodeCount": 9
+   }
+  ],
+  "marqueeImage": "icons_scheduled_events_event_triton_tower/event_portal_triton",
+  "lockedColor": {},
+  "unlockedColor": {
+   "r": 96,
+   "g": 111,
+   "b": 255
+  },
+  "shipmentDefId": "8667692342057869",
+  "milestoneRewardTableId": "5337836586361308",
+  "hudCurrency": "4242516528530722"
+ },
+ "event_group": {
+  "contentId": "3641853082371457",
+  "name": "EVENT_TRITON_META_NAME",
+  "description": "EVENT_TRITON_META_DESC",
+  "image": "icons_scheduled_events_event_triton_tower/triton_tower_event_meta",
+  "sortOrder": 80,
+  "showcaseItems": [
+   "8411592585918351",
+   "4242516528530722",
+   "1932049242431837"
+  ],
+  "marqueeImage": "icons_scheduled_events_event_triton_tower/event_portal_triton",
+  "frameColor": {
+   "r": 96,
+   "g": 111,
+   "b": 255,
+   "a": 1
+  },
+  "panelColor": {
+   "r": 96,
+   "g": 111,
+   "b": 255,
+   "a": 1
+  },
+  "portalName": "EVENT_TRITON_META_NAME",
+  "portalDesc": "EVENT_TRITON_PORTAL_DESC"
+ },
+ "mail": {
+  "preview": [
+   "EVENT_TRITON_TOWER_INBOX_PREVIEW_SUBJECT",
+   "EVENT_TRITON_TOWER_INBOX_PREVIEW_BODY"
+  ],
+  "start": [
+   "EVENT_TRITON_TOWER_INBOX_START_SUBJECT",
+   "EVENT_TRITON_TOWER_INBOX_START_BODY"
+  ]
+ }
+}

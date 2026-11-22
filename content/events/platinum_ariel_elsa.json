@@ -1,0 +1,757 @@
+{
+ "group": 5612093870412230,
+ "events": [
+  {
+   "key_prefix": "EVENT_202402_PLATINUM_EVENT_B",
+   "tier_keys": {
+    "name": "{prefix}_L{i}_NAME",
+    "description": "{prefix}_L{i}_DESC",
+    "recommended": "{prefix}_L{i}_RECOMMENDED"
+   },
+   "event": {
+    "contentId": "5612093870412232",
+    "name": "EVENT_202402_PLATINUM_EVENT_B_NAME",
+    "description": "",
+    "image": "icons_scheduled_events_event_platinum/platinum_donald_cover2",
+    "sortOrder": "200",
+    "battleLimit": "3",
+    "battleLimitRefreshCost": [
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     }
+    ],
+    "marqueeImage": "icons_scheduled_events_event_platinum/Event_portal_platinum_donald2",
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "allowInstantBattle": true,
+    "showcaseItems": [
+     "3928145984903330",
+     "31",
+     "13"
+    ],
+    "eventGroupId": "5612093870412230"
+   },
+   "roster": {
+    "bosses": [
+     3959670576127254,
+     3368663937660261,
+     3793696733556542
+    ],
+    "minions": [
+     5411986143930567,
+     108161813674962
+    ]
+   },
+   "mutators": [
+    4988899896937906
+   ],
+   "battle_environment": "env_disneyland/env_disneyland",
+   "tiers": [
+    {
+     "restriction": 5270592247432833,
+     "enemy_stats": {
+      "rarity": 4,
+      "gear_tier": 3
+     },
+     "roster": {
+      "bosses": [
+       3793696733556542
+      ]
+     },
+     "persistent": {
+      "id": 3928145984903330,
+      "min": 1,
+      "max": 2,
+      "goal": 10
+     },
+     "rewards": [
+      {
+       "id": 3928145984903330,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 25,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 30000,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 10000
+      }
+     ]
+    },
+    {
+     "restriction": 6861345408413991,
+     "enemy_stats": {
+      "rarity": 4,
+      "gear_tier": 4
+     },
+     "roster": {
+      "bosses": [
+       3368663937660261
+      ]
+     },
+     "persistent": {
+      "id": 3928145984903330,
+      "min": 1,
+      "max": 2,
+      "goal": 20
+     },
+     "rewards": [
+      {
+       "id": 3928145984903330,
+       "count": 10,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 25,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 40000,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 10000
+      }
+     ]
+    },
+    {
+     "restriction": 6849588319626654,
+     "enemy_stats": {
+      "rarity": 5,
+      "gear_tier": 5
+     },
+     "roster": {
+      "bosses": [
+       3959670576127254
+      ]
+     },
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 0,
+      "without": [
+       13
+      ]
+     },
+     "persistent": {
+      "id": 3928145984903330,
+      "min": 1,
+      "max": 2,
+      "goal": 30
+     },
+     "rewards": [
+      {
+       "id": 3928145984903330,
+       "count": 15,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 50,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 50000,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 11000
+      }
+     ]
+    },
+    {
+     "restriction": 396384500325578,
+     "enemy_stats": {
+      "rarity": 6,
+      "gear_tier": 6
+     },
+     "roster": {
+      "bosses": [
+       3959670576127254,
+       3793696733556542
+      ]
+     },
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 1,
+      "without": [
+       13
+      ]
+     },
+     "persistent": {
+      "id": 3928145984903330,
+      "min": 1,
+      "max": 2,
+      "goal": 30
+     },
+     "rewards": [
+      {
+       "id": 3928145984903330,
+       "count": 15,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 50,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 60000,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 12000
+      }
+     ]
+    },
+    {
+     "restriction": 2790863132361582,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 7
+     },
+     "roster": {
+      "bosses": [
+       3959670576127254,
+       3368663937660261
+      ]
+     },
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 3,
+      "without": [
+       13
+      ]
+     },
+     "persistent": {
+      "id": 3928145984903330,
+      "min": 1,
+      "max": 2,
+      "goal": 40
+     },
+     "rewards": [
+      {
+       "id": 3928145984903330,
+       "count": 15,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 75,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 70000,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 13000
+      }
+     ]
+    },
+    {
+     "restriction": 7793880319981561,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 8
+     },
+     "description": "EVENT_202402_PLATINUM_EVENT_B_AURA_DESC",
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 4,
+      "without": [
+       13
+      ]
+     },
+     "persistent": {
+      "id": 3928145984903330,
+      "min": 1,
+      "max": 2,
+      "goal": 40
+     },
+     "rewards": [
+      {
+       "id": 3928145984903330,
+       "count": 20,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 75,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 80000,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 14000
+      }
+     ]
+    },
+    {
+     "restriction": 2351093749018544,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 8
+     },
+     "roster": {
+      "bosses": [
+       3368663937660261,
+       3793696733556542
+      ]
+     },
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 4,
+      "without": [
+       13
+      ]
+     },
+     "persistent": {
+      "id": 3928145984903330,
+      "min": 1,
+      "max": 2,
+      "goal": 50
+     },
+     "rewards": [
+      {
+       "id": 3928145984903330,
+       "count": 20,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 100,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 90000,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 15000
+      }
+     ]
+    },
+    {
+     "restriction": 448848089723807,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 9
+     },
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 4,
+      "without": [
+       13
+      ]
+     },
+     "persistent": {
+      "id": 3928145984903330,
+      "min": 1,
+      "max": 2,
+      "goal": 50
+     },
+     "rewards": [
+      {
+       "id": 3928145984903330,
+       "count": 20,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 100,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 100000,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 16000
+      }
+     ]
+    },
+    {
+     "restriction": 4218008451241657,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 10
+     },
+     "description": "EVENT_202402_PLATINUM_EVENT_B_AURA_DESC",
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 4,
+      "without": [
+       13
+      ]
+     },
+     "persistent": {
+      "id": 3928145984903330,
+      "min": 1,
+      "max": 2,
+      "goal": 60
+     },
+     "rewards": [
+      {
+       "id": 8751936747528852,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 3928145984903330,
+       "count": 30,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 100,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 100000,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 17000
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key_prefix": "EVENT_202402_PLATINUM_EVENT_C",
+   "tier_keys": {
+    "name": "{prefix}_L{i}_NAME",
+    "description": "{prefix}_L{i}_DESC",
+    "recommended": "{prefix}_L{i}_RECOMMENDED"
+   },
+   "event": {
+    "contentId": "5612093870412233",
+    "name": "EVENT_202402_PLATINUM_EVENT_C_NAME",
+    "description": "EVENT_202402_PLATINUM_EVENT_PORTAL_DESC",
+    "image": "icons_scheduled_events_event_platinum/platinum_donald_cover3",
+    "sortOrder": "300",
+    "battleLimit": "999",
+    "marqueeImage": "icons_scheduled_events_event_platinum/Event_portal_platinum_donald2",
+    "lifetimeProgressEvent": true,
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "showcaseItems": [
+     "3757523732488835",
+     "31",
+     "13"
+    ],
+    "eventGroupId": "5612093870412230"
+   },
+   "roster": {
+    "bosses": [
+     2667239065995313,
+     2687882053781774,
+     1421376032119017,
+     3129984899726440
+    ],
+    "minions": [
+     4170618875395494,
+     5249573924933804
+    ]
+   },
+   "mutators": [
+    7925788193197127
+   ],
+   "battle_environment": "env_disneyland/env_disneyland",
+   "tiers": [
+    {
+     "restriction": 4207287292563648,
+     "enemy_stats": {
+      "rarity": 4,
+      "gear_tier": 4
+     },
+     "roster": {
+      "bosses": []
+     },
+     "rewards": [
+      {
+       "id": 3757523732488835,
+       "count": 10,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 50,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 50000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 2948524196372849,
+     "enemy_stats": {
+      "rarity": 5,
+      "gear_tier": 5
+     },
+     "roster": {
+      "bosses": [
+       2687882053781774
+      ]
+     },
+     "rewards": [
+      {
+       "id": 3757523732488835,
+       "count": 15,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 50,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 60000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 2680558501118842,
+     "enemy_stats": {
+      "rarity": 6,
+      "gear_tier": 6
+     },
+     "roster": {
+      "bosses": [
+       3129984899726440
+      ]
+     },
+     "rewards": [
+      {
+       "id": 3757523732488835,
+       "count": 25,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 50,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 70000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 4858145274096979,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 7
+     },
+     "description": "EVENT_202402_PLATINUM_EVENT_C_AURA_DESC",
+     "rewards": [
+      {
+       "id": 3757523732488835,
+       "count": 30,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 75,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 80000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 1139862180549645,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 8
+     },
+     "description": "EVENT_202402_PLATINUM_EVENT_C_AURA_DESC",
+     "rewards": [
+      {
+       "id": 3757523732488835,
+       "count": 35,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 75,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 90000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 4867227696130058,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 8
+     },
+     "roster": {
+      "bosses": [
+       2667239065995313,
+       2687882053781774
+      ]
+     },
+     "rewards": [
+      {
+       "id": 3757523732488835,
+       "count": 40,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 100,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 100000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 6101935621795951,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 9
+     },
+     "roster": {
+      "bosses": [
+       1421376032119017,
+       3129984899726440
+      ]
+     },
+     "rewards": [
+      {
+       "id": 3757523732488835,
+       "count": 45,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 100,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 100000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 2460300937400337,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 10
+     },
+     "rewards": [
+      {
+       "id": 8908359409374496,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 3757523732488835,
+       "count": 50,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 100,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 100000,
+       "first_time": true
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

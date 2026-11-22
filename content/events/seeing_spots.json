@@ -1,0 +1,537 @@
+{
+ "event_group": {
+  "contentId": "2021060900000001",
+  "name": "EVENT_202106_CRUELLA_META_NAME",
+  "description": "EVENT_202106_CRUELLA_META_DESC",
+  "image": "icons_scheduled_events_event_cruella/cruella_event_meta",
+  "sortOrder": "18",
+  "showcaseItems": [
+   "5146153709895701",
+   "8392488448223413"
+  ],
+  "marqueeImage": "icons_scheduled_events_event_cruella/cruella_event_portal",
+  "hasPlayerActivated": true,
+  "frameColor": {
+   "a": 1.0
+  },
+  "panelColor": {
+   "a": 1.0
+  },
+  "portalName": "EVENT_202106_CRUELLA_PORTAL_NAME",
+  "portalDesc": "EVENT_202106_CRUELLA_PORTAL_DESC"
+ },
+ "rotation": {
+  "lane": "story",
+  "after": 6725109604398782
+ },
+ "mail": {
+  "preview": [
+   "EVENT_202106_CRUELLA_INBOX_PREVIEW_SUBJECT",
+   "EVENT_202106_CRUELLA_INBOX_PREVIEW_BODY"
+  ],
+  "start": [
+   "EVENT_202106_CRUELLA_INBOX_EVENT_START_SUBJECT",
+   "EVENT_202106_CRUELLA_INBOX_EVENT_START_BODY"
+  ],
+  "reminder": [
+   "EVENT_202106_CRUELLA_INBOX_DAILY_SUBJECT",
+   "EVENT_202106_CRUELLA_INBOX_DAILY_BODY"
+  ],
+  "last_chance": [
+   "EVENT_202106_CRUELLA_INBOX_LAST_CHANCE_SUBJECT",
+   "EVENT_202106_CRUELLA_INBOX_LAST_CHANCE_BODY"
+  ]
+ },
+ "events": [
+  {
+   "key_prefix": "EVENT_202106_CRUELLA_A",
+   "tier_keys": {
+    "name": "{prefix}_L{i}_NAME",
+    "description": "{prefix}_L{i}_DESC",
+    "recommended": "{prefix}_L{i}_RECOMMENDED"
+   },
+   "event": {
+    "contentId": "2021060900000002",
+    "name": "EVENT_202106_CRUELLA_A_NAME",
+    "description": "EVENT_202106_CRUELLA_A_DESC",
+    "image": "icons_scheduled_events_event_cruella/cruella_event_cover",
+    "sortOrder": "100",
+    "battleLimit": "3",
+    "battleLimitRefreshCost": [
+     {
+      "itemId": "31",
+      "count": "100"
+     },
+     {
+      "itemId": "31",
+      "count": "200"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "400"
+     },
+     {
+      "itemId": "31",
+      "count": "500"
+     },
+     {
+      "itemId": "31",
+      "count": "600"
+     },
+     {
+      "itemId": "31",
+      "count": "700"
+     },
+     {
+      "itemId": "31",
+      "count": "800"
+     }
+    ],
+    "marqueeImage": "icons_scheduled_events_event_cruella/cruella_event_portal",
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "allowInstantBattle": true,
+    "hudCurrency": "8392488448223413",
+    "showcaseItems": [
+     "5146153709895701",
+     "8392488448223413"
+    ],
+    "eventGroupId": "2021060900000001"
+   },
+   "roster": {
+    "bosses": [
+     3035686526246763
+    ],
+    "companions": [
+     4505487594415447,
+     8400433758611485,
+     6801450488388220,
+     149
+    ]
+   },
+   "tiers": [
+    {
+     "restriction": 2035840901141856,
+     "persistent": {
+      "id": 8392488448223413,
+      "min": 2500,
+      "max": 2500,
+      "goal": 30000
+     },
+     "rewards": [
+      {
+       "id": 5146153709895701,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 5461757687019266,
+       "count": 1
+      },
+      {
+       "id": 13,
+       "count": 1000
+      }
+     ]
+    },
+    {
+     "restriction": 5748880593146421,
+     "persistent": {
+      "id": 8392488448223413,
+      "min": 2500,
+      "max": 2500,
+      "goal": 40000
+     },
+     "rewards": [
+      {
+       "id": 5146153709895701,
+       "count": 2,
+       "first_time": true
+      },
+      {
+       "id": 5461757687019266,
+       "count": 1
+      },
+      {
+       "id": 13,
+       "count": 2000
+      }
+     ]
+    },
+    {
+     "restriction": 7703880291481381,
+     "persistent": {
+      "id": 8392488448223413,
+      "min": 2500,
+      "max": 2500,
+      "goal": 60000
+     },
+     "rewards": [
+      {
+       "id": 5146153709895701,
+       "count": 3,
+       "first_time": true
+      },
+      {
+       "id": 5461757687019266,
+       "count": 2
+      },
+      {
+       "id": 13,
+       "count": 3000
+      }
+     ]
+    },
+    {
+     "restriction": 170477564136313,
+     "persistent": {
+      "id": 8392488448223413,
+      "min": 2500,
+      "max": 2500,
+      "goal": 80000
+     },
+     "rewards": [
+      {
+       "id": 5146153709895701,
+       "count": 4,
+       "first_time": true
+      },
+      {
+       "id": 5461757687019266,
+       "count": 2
+      },
+      {
+       "id": 2231922868182045,
+       "count": 1
+      },
+      {
+       "id": 1171951539086697,
+       "count": 1
+      },
+      {
+       "id": 13,
+       "count": 4000
+      }
+     ]
+    },
+    {
+     "restriction": 2260805638305883,
+     "persistent": {
+      "id": 8392488448223413,
+      "min": 5000,
+      "max": 5000,
+      "goal": 100000
+     },
+     "rewards": [
+      {
+       "id": 5146153709895701,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 5461757687019266,
+       "count": 2
+      },
+      {
+       "id": 2231922868182045,
+       "count": 1
+      },
+      {
+       "id": 1171951539086697,
+       "count": 1
+      },
+      {
+       "id": 13,
+       "count": 5000
+      }
+     ]
+    },
+    {
+     "restriction": 6925046006004242,
+     "persistent": {
+      "id": 8392488448223413,
+      "min": 5000,
+      "max": 5000,
+      "goal": 140000
+     },
+     "rewards": [
+      {
+       "id": 5146153709895701,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 5461757687019266,
+       "count": 2
+      },
+      {
+       "id": 2231922868182045,
+       "count": 1
+      },
+      {
+       "id": 1171951539086697,
+       "count": 1
+      },
+      {
+       "id": 7531001555655815,
+       "count": 1
+      },
+      {
+       "id": 13,
+       "count": 6000
+      }
+     ]
+    },
+    {
+     "restriction": 3390219214878099,
+     "persistent": {
+      "id": 8392488448223413,
+      "min": 5000,
+      "max": 5000,
+      "goal": 140000
+     },
+     "rewards": [
+      {
+       "id": 5146153709895701,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 5461757687019266,
+       "count": 2
+      },
+      {
+       "id": 2231922868182045,
+       "count": 2
+      },
+      {
+       "id": 1171951539086697,
+       "count": 2
+      },
+      {
+       "id": 7531001555655815,
+       "count": 1
+      },
+      {
+       "id": 1912819287917109,
+       "count": 1
+      },
+      {
+       "id": 13,
+       "count": 7000
+      }
+     ]
+    },
+    {
+     "restriction": 6748927327305724,
+     "persistent": {
+      "id": 8392488448223413,
+      "min": 5000,
+      "max": 5000,
+      "goal": 140000
+     },
+     "rewards": [
+      {
+       "id": 5146153709895701,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 5461757687019266,
+       "count": 2
+      },
+      {
+       "id": 2231922868182045,
+       "count": 2
+      },
+      {
+       "id": 1171951539086697,
+       "count": 2
+      },
+      {
+       "id": 7531001555655815,
+       "count": 2
+      },
+      {
+       "id": 1912819287917109,
+       "count": 2
+      },
+      {
+       "id": 13,
+       "count": 8000
+      }
+     ]
+    },
+    {
+     "restriction": 4719410266355717,
+     "persistent": {
+      "id": 8392488448223413,
+      "min": 5000,
+      "max": 5000,
+      "goal": 270000
+     },
+     "rewards": [
+      {
+       "id": 4889577364246224,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 5146153709895701,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 5461757687019266,
+       "count": 3
+      },
+      {
+       "id": 2231922868182045,
+       "count": 3
+      },
+      {
+       "id": 1171951539086697,
+       "count": 3
+      },
+      {
+       "id": 7531001555655815,
+       "count": 3
+      },
+      {
+       "id": 1912819287917109,
+       "count": 3
+      },
+      {
+       "id": 13,
+       "count": 10000
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key_prefix": "EVENT_202106_CRUELLA_B",
+   "tier_keys": {
+    "name": "{prefix}_L{i}_NAME",
+    "description": "{prefix}_L{i}_DESC",
+    "recommended": "{prefix}_L{i}_RECOMMENDED"
+   },
+   "event": {
+    "contentId": "2021060900000003",
+    "name": "EVENT_202106_CRUELLA_B_NAME",
+    "description": "EVENT_202106_CRUELLA_B_DESC",
+    "image": "icons_scheduled_events_event_cruella/cruella_prestige_event_cover",
+    "sortOrder": "300",
+    "battleLimit": "2",
+    "battleLimitRefreshCost": [
+     {
+      "itemId": "31",
+      "count": "150"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "500"
+     },
+     {
+      "itemId": "31",
+      "count": "700"
+     },
+     {
+      "itemId": "31",
+      "count": "900"
+     },
+     {
+      "itemId": "31",
+      "count": "1100"
+     },
+     {
+      "itemId": "31",
+      "count": "1300"
+     },
+     {
+      "itemId": "31",
+      "count": "1500"
+     }
+    ],
+    "marqueeImage": "icons_scheduled_events_event_cruella/cruella_event_portal",
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "allowInstantBattle": true,
+    "showcaseItems": [
+     "2289339325233397",
+     "3883066061505188",
+     "6221535176831871"
+    ],
+    "eventGroupId": "2021060900000001"
+   },
+   "roster": {
+    "bosses": [
+     3035686526246763
+    ],
+    "companions": [
+     4505487594415447,
+     8400433758611485,
+     6801450488388220,
+     149
+    ]
+   },
+   "tiers": [
+    {
+     "restriction": 2143413987832372,
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 0
+     }
+    },
+    {
+     "restriction": 2334802525809045,
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 1
+     }
+    },
+    {
+     "restriction": 1547923969311398,
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 2
+     }
+    },
+    {
+     "restriction": 3207651013935820,
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 3
+     }
+    },
+    {
+     "restriction": 2128111599627327,
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 4
+     }
+    }
+   ]
+  }
+ ]
+}

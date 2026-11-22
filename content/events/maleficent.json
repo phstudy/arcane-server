@@ -1,0 +1,887 @@
+{
+ "enemy_health": [
+  {
+   "unit": 1002821954206646,
+   "level": 65,
+   "rarity": 6,
+   "gear_tier": 6,
+   "health": 4700
+  }
+ ],
+ "event_group": {
+  "contentId": "5612093870412220",
+  "name": "EVENT_202110_MALEFICENT_META_NAME",
+  "description": "EVENT_202110_MALEFICENT_META_DESC",
+  "image": "icons_scheduled_events_event_maleficent/event_meta_maleficent",
+  "sortOrder": "36",
+  "showcaseItems": [
+   "2493484969130575",
+   "31",
+   "13"
+  ],
+  "marqueeImage": "icons_scheduled_events_event_maleficent/event_portal_maleficent",
+  "hasPlayerActivated": true,
+  "frameColor": {
+   "a": 1.0
+  },
+  "panelColor": {
+   "a": 1.0
+  },
+  "portalName": "EVENT_202110_MALEFICENT_PORTAL_NAME",
+  "portalDesc": "EVENT_202110_MALEFICENT_PORTAL_DESC"
+ },
+ "rotation": {
+  "lane": "story",
+  "after": 2023083100000001
+ },
+ "mail": {
+  "preview": [
+   "INBOX_EVENT_2021_MALEFICENT_PREVIEW_SUBJECT",
+   "INBOX_EVENT_2021_MALEFICENT_PREVIEW_BODY"
+  ],
+  "start": [
+   "INBOX_EVENT_2021_MALEFICENT_ACTIVE_SUBJECT",
+   "INBOX_EVENT_2021_MALEFICENT_ACTIVE_BODY"
+  ],
+  "last_chance": [
+   "INBOX_EVENT_2021_MALEFICENT_LAST_CHANCE_SUBJECT",
+   "INBOX_EVENT_2021_MALEFICENT_LAST_CHANCE_BODY"
+  ]
+ },
+ "script_minions": [
+  {
+   "id": 1002821954206646,
+   "asset": "unit_goon/u_goon",
+   "name_key": "GOON_UNIT_NAME",
+   "icon": "icons_units_goon/portrait_goon",
+   "range": 1.0
+  }
+ ],
+ "hero_variants": [
+  {
+   "id": 5787842279670948,
+   "hero": 5595621495782876
+  }
+ ],
+ "events": [
+  {
+   "key_prefix": "EVENT_202110_MALEFICENT_A",
+   "tier_keys": {
+    "name": "{prefix}_L{i}_NAME",
+    "description": "EVENT_202110_MALEFICENT_AURA_DESC",
+    "recommended": "{prefix}_L{i}_RECOMMENDED"
+   },
+   "event": {
+    "contentId": "5612093870412221",
+    "name": "EVENT_202110_MALEFICENT_A_NAME",
+    "description": "EVENT_202110_MALEFICENT_PORTAL_DESC",
+    "image": "icons_scheduled_events_event_maleficent/maleficent_cover_heroes",
+    "sortOrder": "100",
+    "battleLimit": "999",
+    "marqueeImage": "icons_scheduled_events_event_maleficent/event_portal_maleficent",
+    "lifetimeProgressEvent": true,
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "showcaseItems": [
+     "2493484969130575",
+     "31",
+     "13"
+    ],
+    "eventGroupId": "5612093870412220"
+   },
+   "roster": {
+    "bosses": [
+     5787842279670948
+    ],
+    "minions": [
+     1002821954206646
+    ]
+   },
+   "mutators": [
+    7788326678200023
+   ],
+   "battle_environment": "env_maleficents_throne_room/env_maleficents_throne_room",
+   "boss_cinematic": "cin_boss_maleficent_maleficent_throne_room_cut/boss_maleficent_maleficent_throne_room_cut",
+   "tiers": [
+    {
+     "restriction": 3070222520868596,
+     "enemy_stats": {
+      "rarity": 4,
+      "gear_tier": 4
+     },
+     "rewards": [
+      {
+       "id": 2493484969130575,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 50,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 50000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 6357093136205410,
+     "enemy_stats": {
+      "rarity": 5,
+      "gear_tier": 5
+     },
+     "rewards": [
+      {
+       "id": 2493484969130575,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 100,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 100000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 6220349781725195,
+     "enemy_stats": {
+      "rarity": 6,
+      "gear_tier": 6
+     },
+     "rewards": [
+      {
+       "id": 2493484969130575,
+       "count": 15,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 150,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 150000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 4619466969416192,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 7
+     },
+     "rewards": [
+      {
+       "id": 2493484969130575,
+       "count": 40,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 200,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 200000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 290579690803644,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 8
+     },
+     "rewards": [
+      {
+       "id": 2493484969130575,
+       "count": 50,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 250,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 250000,
+       "first_time": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key_prefix": "EVENT_202110_MALEFICENT_B",
+   "tier_keys": {
+    "name": "{prefix}_L{i}_NAME",
+    "description": "EVENT_202110_MALEFICENT_AURA_DESC",
+    "recommended": "{prefix}_L{i}_RECOMMENDED"
+   },
+   "event": {
+    "contentId": "5612093870412222",
+    "name": "EVENT_202110_MALEFICENT_B_NAME",
+    "description": "EVENT_202110_MALEFICENT_PORTAL_DESC",
+    "image": "icons_scheduled_events_event_maleficent/maleficent_cover_villains2",
+    "sortOrder": "200",
+    "battleLimit": "999",
+    "marqueeImage": "icons_scheduled_events_event_maleficent/event_portal_maleficent",
+    "lifetimeProgressEvent": true,
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "showcaseItems": [
+     "2493484969130575",
+     "31",
+     "13"
+    ],
+    "eventGroupId": "5612093870412220"
+   },
+   "roster": {
+    "bosses": [
+     5787842279670948
+    ],
+    "minions": [
+     1002821954206646
+    ]
+   },
+   "mutators": [
+    7788326678200023
+   ],
+   "battle_environment": "env_maleficents_throne_room/env_maleficents_throne_room",
+   "boss_cinematic": "cin_boss_maleficent_maleficent_throne_room_cut/boss_maleficent_maleficent_throne_room_cut",
+   "tiers": [
+    {
+     "restriction": 93590162523075,
+     "enemy_stats": {
+      "rarity": 4,
+      "gear_tier": 4
+     },
+     "rewards": [
+      {
+       "id": 2493484969130575,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 50,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 50000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 3420576783905829,
+     "enemy_stats": {
+      "rarity": 5,
+      "gear_tier": 5
+     },
+     "rewards": [
+      {
+       "id": 2493484969130575,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 100,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 100000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 6565715261042625,
+     "enemy_stats": {
+      "rarity": 6,
+      "gear_tier": 6
+     },
+     "rewards": [
+      {
+       "id": 2493484969130575,
+       "count": 15,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 150,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 150000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 4236928988629363,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 7
+     },
+     "rewards": [
+      {
+       "id": 2493484969130575,
+       "count": 40,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 200,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 200000,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 3615703158123944,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 8
+     },
+     "rewards": [
+      {
+       "id": 2493484969130575,
+       "count": 50,
+       "first_time": true
+      },
+      {
+       "id": 31,
+       "count": 250,
+       "first_time": true
+      },
+      {
+       "id": 13,
+       "count": 250000,
+       "first_time": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key_prefix": "EVENT_202110_MALEFICENT_C",
+   "tier_keys": {
+    "name": "{prefix}_L{i}_NAME",
+    "description": "EVENT_202110_MALEFICENT_AURA_DESC",
+    "recommended": "{prefix}_L{i}_RECOMMENDED"
+   },
+   "event": {
+    "contentId": "5612093870412223",
+    "name": "EVENT_202110_MALEFICENT_C_NAME",
+    "description": "EVENT_202110_MALEFICENT_PORTAL_DESC",
+    "image": "icons_scheduled_events_event_maleficent/maleficent_cover_prestige",
+    "sortOrder": "400",
+    "battleLimit": "2",
+    "battleLimitRefreshCost": [
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "400"
+     },
+     {
+      "itemId": "31",
+      "count": "500"
+     },
+     {
+      "itemId": "31",
+      "count": "600"
+     },
+     {
+      "itemId": "31",
+      "count": "700"
+     },
+     {
+      "itemId": "31",
+      "count": "800"
+     },
+     {
+      "itemId": "31",
+      "count": "900"
+     },
+     {
+      "itemId": "31",
+      "count": "1000"
+     }
+    ],
+    "marqueeImage": "icons_scheduled_events_event_maleficent/event_portal_maleficent",
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "allowInstantBattle": true,
+    "showcaseItems": [
+     "5554127934867117",
+     "3814210565101861",
+     "3883066061505188",
+     "6221535176831871"
+    ],
+    "eventGroupId": "5612093870412220",
+    "lifetimeProgressEvent": true
+   },
+   "roster": {
+    "bosses": [
+     5787842279670948
+    ],
+    "minions": [
+     1002821954206646
+    ]
+   },
+   "mutators": [
+    7788326678200023
+   ],
+   "battle_environment": "env_maleficents_throne_room/env_maleficents_throne_room",
+   "boss_cinematic": "cin_boss_maleficent_maleficent_throne_room_cut/boss_maleficent_maleficent_throne_room_cut",
+   "tiers": [
+    {
+     "restriction": 1628372859816863,
+     "enemy_stats": {
+      "rarity": 5,
+      "gear_tier": 5
+     },
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 0
+     },
+     "rewards": [
+      {
+       "id": 31,
+       "count": 100,
+       "first_time": true
+      },
+      {
+       "id": 3883066061505188,
+       "count": 30,
+       "first_time": true
+      },
+      {
+       "id": 2173501501491649,
+       "count": 2,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 8575701451093307,
+     "enemy_stats": {
+      "rarity": 6,
+      "gear_tier": 6
+     },
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 1
+     },
+     "rewards": [
+      {
+       "id": 31,
+       "count": 200,
+       "first_time": true
+      },
+      {
+       "id": 3883066061505188,
+       "count": 60,
+       "first_time": true
+      },
+      {
+       "id": 6221535176831871,
+       "count": 5,
+       "first_time": true
+      },
+      {
+       "id": 8336987653526165,
+       "count": 2,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 5115074533131609,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 6
+     },
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 2
+     },
+     "rewards": [
+      {
+       "id": 31,
+       "count": 300,
+       "first_time": true
+      },
+      {
+       "id": 3883066061505188,
+       "count": 80,
+       "first_time": true
+      },
+      {
+       "id": 6221535176831871,
+       "count": 10,
+       "first_time": true
+      },
+      {
+       "id": 32395651401654,
+       "count": 1,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 3688705352390158,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 7
+     },
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 3
+     },
+     "rewards": [
+      {
+       "id": 31,
+       "count": 400,
+       "first_time": true
+      },
+      {
+       "id": 3883066061505188,
+       "count": 100,
+       "first_time": true
+      },
+      {
+       "id": 6221535176831871,
+       "count": 15,
+       "first_time": true
+      },
+      {
+       "id": 8629592800169206,
+       "count": 1,
+       "first_time": true
+      }
+     ]
+    },
+    {
+     "restriction": 2254603417010568,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 8
+     },
+     "rewards_like": {
+      "event": 2120263135446269,
+      "tier": 4
+     },
+     "rewards": [
+      {
+       "id": 31,
+       "count": 500,
+       "first_time": true
+      },
+      {
+       "id": 3883066061505188,
+       "count": 150,
+       "first_time": true
+      },
+      {
+       "id": 6221535176831871,
+       "count": 20,
+       "first_time": true
+      },
+      {
+       "id": 1334818708235286,
+       "count": 1,
+       "first_time": true
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "waves": [
+  {
+   "event": 5612093870412222,
+   "tier": 0,
+   "name_key": "EVENT_202110_MALEFICENT_B_L0_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 5787842279670948,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 1002821954206646,
+       "count": 4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412221,
+   "tier": 0,
+   "name_key": "EVENT_202110_MALEFICENT_A_L0_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 5787842279670948,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 1002821954206646,
+       "count": 4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412221,
+   "tier": 1,
+   "name_key": "EVENT_202110_MALEFICENT_A_L1_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 5787842279670948,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 1002821954206646,
+       "count": 4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412222,
+   "tier": 1,
+   "name_key": "EVENT_202110_MALEFICENT_B_L1_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 5787842279670948,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 1002821954206646,
+       "count": 4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412222,
+   "tier": 2,
+   "name_key": "EVENT_202110_MALEFICENT_B_L2_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 5787842279670948,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 1002821954206646,
+       "count": 4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412221,
+   "tier": 2,
+   "name_key": "EVENT_202110_MALEFICENT_A_L2_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 5787842279670948,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 1002821954206646,
+       "count": 4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412221,
+   "tier": 3,
+   "name_key": "EVENT_202110_MALEFICENT_A_L3_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 5787842279670948,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 1002821954206646,
+       "count": 4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412221,
+   "tier": 4,
+   "name_key": "EVENT_202110_MALEFICENT_A_L4_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 5787842279670948,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 1002821954206646,
+       "count": 4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412222,
+   "tier": 4,
+   "name_key": "EVENT_202110_MALEFICENT_B_L4_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 5787842279670948,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 1002821954206646,
+       "count": 4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412223,
+   "tier": 2,
+   "name_key": "EVENT_202110_MALEFICENT_C_L2_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 5787842279670948,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 1002821954206646,
+       "count": 4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412223,
+   "tier": 3,
+   "name_key": "EVENT_202110_MALEFICENT_C_L3_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 5787842279670948,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 1002821954206646,
+       "count": 4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412223,
+   "tier": 4,
+   "name_key": "EVENT_202110_MALEFICENT_C_L4_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 5787842279670948,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 1002821954206646,
+       "count": 4
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

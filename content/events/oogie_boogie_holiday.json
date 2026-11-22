@@ -1,0 +1,547 @@
+{
+ "event_group": {
+  "contentId": "5612093870412240",
+  "name": "EVENT_NIGHTMARE_NAME",
+  "description": "EVENT_NIGHTMARE_META_DESC",
+  "image": "icons_scheduled_events_event_nightmare/nbc_oogie_event_meta",
+  "sortOrder": "34",
+  "showcaseItems": [
+   "1054913936530539",
+   "6852995734809854",
+   "4653996445097808"
+  ],
+  "marqueeImage": "icons_scheduled_events_event_nightmare/Event_portal_nbc_oogie",
+  "hasPlayerActivated": true,
+  "frameColor": {
+   "a": 1.0
+  },
+  "panelColor": {
+   "a": 1.0
+  },
+  "portalName": "EVENT_NIGHTMARE_PORTAL_NAME",
+  "portalDesc": "EVENT_NIGHTMARE_PORTAL_DESC"
+ },
+ "rotation": {
+  "lane": "story",
+  "after": 2918346833003376
+ },
+ "mail": {
+  "preview": [
+   "EVENT_202012_NIGHTMARE_INBOX_PREVIEW_SUBJECT",
+   "EVENT_202012_NIGHTMARE_INBOX_PREVIEW_BODY"
+  ],
+  "start": [
+   "EVENT_202012_NIGHTMARE_INBOX_EVENT_START_SUBJECT",
+   "EVENT_202012_NIGHTMARE_INBOX_EVENT_START_BODY"
+  ],
+  "last_chance": [
+   "EVENT_202012_NIGHTMARE_INBOX_LAST_CHANCE_SUBJECT",
+   "EVENT_202012_NIGHTMARE_INBOX_LAST_CHANCE_BODY"
+  ]
+ },
+ "hero_variants": [
+  {
+   "id": 5388387745142451,
+   "hero": 124
+  }
+ ],
+ "events": [
+  {
+   "key_prefix": "EVENT_NIGHTMARE",
+   "tier_keys": {
+    "name": "EVENT_NIGHTMARE_TIER_{i}_NAME",
+    "description": "EVENT_NIGHTMARE_TIER_{i}_DESC",
+    "recommended": "EVENT_NIGHTMARE_TIER_{i}_RECOMMENDED"
+   },
+   "event": {
+    "contentId": "5612093870412241",
+    "name": "EVENT_NIGHTMARE_NAME",
+    "description": "EVENT_NIGHTMARE_BOOKCOVER_DESC",
+    "image": "icons_scheduled_events_event_nightmare/nbc_oogie_event_meta_book_cover",
+    "sortOrder": "100",
+    "battleLimit": "3",
+    "battleLimitRefreshCost": [
+     {
+      "itemId": "31",
+      "count": "100"
+     },
+     {
+      "itemId": "31",
+      "count": "200"
+     },
+     {
+      "itemId": "31",
+      "count": "300"
+     },
+     {
+      "itemId": "31",
+      "count": "400"
+     },
+     {
+      "itemId": "31",
+      "count": "500"
+     }
+    ],
+    "marqueeImage": "icons_scheduled_events_event_nightmare/Event_portal_nbc_oogie",
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "allowInstantBattle": true,
+    "showcaseItems": [
+     "4653996445097808",
+     "1054913936530539",
+     "6852995734809854"
+    ],
+    "eventGroupId": "5612093870412240"
+   },
+   "roster": {
+    "bosses": [
+     5388387745142451
+    ],
+    "minions": [
+     2207399084365587,
+     4223125015619336
+    ]
+   },
+   "mutators": [
+    2124315424708012,
+    2124315424708012,
+    2124315424708012,
+    2299164350908806,
+    2138773536759910,
+    2138773536759910,
+    2138773536759910
+   ],
+   "battle_environment": "env_nightmare_arena/env_nightmare_arena",
+   "intro_cinematic": "cin_intro_cinematic_nightmare/intro_cinematic_nightmare",
+   "tiers": [
+    {
+     "restriction": 564269364860730,
+     "enemy_stats": {
+      "level": 25,
+      "rarity": 3,
+      "gear_tier": 3
+     },
+     "rewards": [
+      {
+       "id": 4653996445097808,
+       "count": 25,
+       "first_time": true
+      },
+      {
+       "id": 6090990275499779,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 1054913936530539,
+       "min": 1,
+       "max": 1
+      },
+      {
+       "id": 6852995734809854,
+       "min": 1,
+       "max": 1
+      },
+      {
+       "id": 13,
+       "count": 5000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 1
+      },
+      {
+       "id": 1171951539086697,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "restriction": 4139690257319945,
+     "enemy_stats": {
+      "level": 30,
+      "rarity": 3,
+      "gear_tier": 3
+     },
+     "rewards": [
+      {
+       "id": 4653996445097808,
+       "count": 25,
+       "first_time": true
+      },
+      {
+       "id": 1054913936530539,
+       "min": 1,
+       "max": 2
+      },
+      {
+       "id": 6852995734809854,
+       "min": 1,
+       "max": 2
+      },
+      {
+       "id": 13,
+       "count": 10000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 2
+      },
+      {
+       "id": 1171951539086697,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "restriction": 8556141719065413,
+     "enemy_stats": {
+      "level": 35,
+      "rarity": 4,
+      "gear_tier": 4
+     },
+     "rewards": [
+      {
+       "id": 4653996445097808,
+       "count": 30,
+       "first_time": true
+      },
+      {
+       "id": 503457376294972,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 1054913936530539,
+       "min": 1,
+       "max": 3
+      },
+      {
+       "id": 6852995734809854,
+       "min": 1,
+       "max": 3
+      },
+      {
+       "id": 13,
+       "count": 15000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 3
+      },
+      {
+       "id": 1171951539086697,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "restriction": 5166196243732609,
+     "enemy_stats": {
+      "level": 45,
+      "rarity": 5,
+      "gear_tier": 5
+     },
+     "rewards": [
+      {
+       "id": 4653996445097808,
+       "count": 40,
+       "first_time": true
+      },
+      {
+       "id": 1054913936530539,
+       "min": 1,
+       "max": 4
+      },
+      {
+       "id": 6852995734809854,
+       "min": 1,
+       "max": 4
+      },
+      {
+       "id": 13,
+       "count": 20000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 4
+      },
+      {
+       "id": 2231922868182045,
+       "count": 2
+      },
+      {
+       "id": 1171951539086697,
+       "count": 3
+      },
+      {
+       "id": 5162107487910141,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "restriction": 153042722872474,
+     "enemy_stats": {
+      "level": 55,
+      "rarity": 6,
+      "gear_tier": 5
+     },
+     "rewards": [
+      {
+       "id": 4653996445097808,
+       "count": 50,
+       "first_time": true
+      },
+      {
+       "id": 2156488486556203,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 1054913936530539,
+       "min": 1,
+       "max": 5
+      },
+      {
+       "id": 6852995734809854,
+       "min": 1,
+       "max": 5
+      },
+      {
+       "id": 13,
+       "count": 25000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 3
+      },
+      {
+       "id": 1171951539086697,
+       "count": 4
+      },
+      {
+       "id": 5162107487910141,
+       "count": 3
+      },
+      {
+       "id": 946211064381860,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "restriction": 2134464399988144,
+     "enemy_stats": {
+      "level": 60,
+      "rarity": 7,
+      "gear_tier": 6
+     },
+     "rewards": [
+      {
+       "id": 4653996445097808,
+       "count": 50,
+       "first_time": true
+      },
+      {
+       "id": 1054913936530539,
+       "min": 1,
+       "max": 6
+      },
+      {
+       "id": 6852995734809854,
+       "min": 1,
+       "max": 6
+      },
+      {
+       "id": 13,
+       "count": 30000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 4
+      },
+      {
+       "id": 1171951539086697,
+       "count": 5
+      },
+      {
+       "id": 5162107487910141,
+       "count": 4
+      },
+      {
+       "id": 946211064381860,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "restriction": 530301679830062,
+     "enemy_stats": {
+      "level": 60,
+      "rarity": 7,
+      "gear_tier": 6
+     },
+     "rewards": [
+      {
+       "id": 7680568221637485,
+       "count": 1,
+       "first_time": true
+      },
+      {
+       "id": 4653996445097808,
+       "count": 50,
+       "first_time": true
+      },
+      {
+       "id": 1054913936530539,
+       "min": 1,
+       "max": 7
+      },
+      {
+       "id": 6852995734809854,
+       "min": 1,
+       "max": 7
+      },
+      {
+       "id": 13,
+       "count": 35000
+      },
+      {
+       "id": 5461757687019266,
+       "count": 5
+      },
+      {
+       "id": 2231922868182045,
+       "count": 5
+      },
+      {
+       "id": 1171951539086697,
+       "count": 5
+      },
+      {
+       "id": 5162107487910141,
+       "count": 5
+      },
+      {
+       "id": 946211064381860,
+       "count": 5
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "waves": [
+  {
+   "event": 5612093870412241,
+   "tier": 0,
+   "name_key": "EVENT_NIGHTMARE_TIER_0_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 5388387745142451,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 2207399084365587,
+       "count": 2
+      },
+      {
+       "id": 4223125015619336,
+       "count": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412241,
+   "tier": 1,
+   "name_key": "EVENT_NIGHTMARE_TIER_1_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 5388387745142451,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 2207399084365587,
+       "count": 2
+      },
+      {
+       "id": 4223125015619336,
+       "count": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412241,
+   "tier": 3,
+   "name_key": "EVENT_NIGHTMARE_TIER_3_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 5388387745142451,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 2207399084365587,
+       "count": 2
+      },
+      {
+       "id": 4223125015619336,
+       "count": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5612093870412241,
+   "tier": 4,
+   "name_key": "EVENT_NIGHTMARE_TIER_4_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 5388387745142451,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 2207399084365587,
+       "count": 2
+      },
+      {
+       "id": 4223125015619336,
+       "count": 2
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

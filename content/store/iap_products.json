@@ -1,0 +1,2128 @@
+{
+ "products": [
+  {
+   "product_id": "com.glu.disneygame.premium_deal_40",
+   "price_usd": 0.99
+  },
+  {
+   "product_id": "com.glu.disneygame.brave_pack",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_179",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.last_chance_pack",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_127_20",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.genie_pack",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.202008_01_passholder_gold",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_134",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.202005_02_passholder_gold",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_041_15",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.202003_passholder_gold_booster",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season13_passholder_gold",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_016_3",
+   "price_usd": 2.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_130",
+   "price_usd": 99.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_62",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_016_10",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.gem_pack_4_b",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.simba_bundle_10",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season18_passholder_platinum_upgrade",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_168",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_126",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_046_20",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_54",
+   "price_usd": 2.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_033_10",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_078_10",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_074_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_currency_30_onward",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.202004_passholder_gold",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_16",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_100_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_121_20",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.202007_01_b_passholder_gold_booster",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_039_10",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_107",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_4",
+   "price_usd": 1.99
+  },
+  {
+   "product_id": "com.glu.disneygame.simba_outfit_pack",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.elsa",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.202006_01_b_passholder_gold_booster",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_178",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_011_2",
+   "price_usd": 1.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_069_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season12_passholder_platinum",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_070_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_58",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_106",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.super_coins_02",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_009_1",
+   "price_usd": 11.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_111_40",
+   "price_usd": 39.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_117",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_102",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.jasmine_pack2",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.gem_pack_5",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_020_20",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_095_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_173",
+   "price_usd": 3.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_029_5",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season14_passholder_platinum_booster",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_43",
+   "price_usd": 1.99
+  },
+  {
+   "product_id": "com.glu.disneygame.simba_bundle_20",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_079_40",
+   "price_usd": 99.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_096_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.gem_pack_4",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_coins_3",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_041_10",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_10",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_128",
+   "price_usd": 99.99
+  },
+  {
+   "product_id": "com.glu.disneygame.mickey_steamboat_pack",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.lion_king",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_031_5",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_131",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_068_50",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.jasmine_jafar_special_offer_2",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.202002_passholder_gold",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_pack_2",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_074_100",
+   "price_usd": 99.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_141",
+   "price_usd": 7.99
+  },
+  {
+   "product_id": "com.glu.disneygame.super_coins_04",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_182",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_16",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_keys_5",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.202003_passholder_gold",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_034_5",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_087_40",
+   "price_usd": 39.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_232",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_028_5",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_007_1",
+   "price_usd": 5.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season11_passholder_platinum_booster",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_065_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_040_10",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_008",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season15_passholder_gold",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_052_20",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_098_20",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.202009_01_b_passholder_gold_booster",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_146",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_59",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_109",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season14_passholder_gold",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_currency_20_onward",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_005",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.202005_02_b_passholder_gold_booster",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.gem_pack_3_b",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_022_5",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season17_passholder_platinum_upgrade",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.sprinkle_of_gems",
+   "price_usd": 0.99
+  },
+  {
+   "product_id": "com.glu.disneygame.202006_02_passholder_gold",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_045_20",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.toy_story_jessie_pack",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_053_25",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.201912_passholder_gold_booster",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.202001_passholder_gold",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.mordu_bundle_25",
+   "price_usd": 24.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_057_20",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.202008_02_b_passholder_gold_booster",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season14_passholder_platinum_upgrade",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.merlin_bundle_25",
+   "price_usd": 24.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_054_25",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_64",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season11_passholder_platinum_upgrade",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.scar_bundle_75",
+   "price_usd": 74.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_currency_10_onward",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_63",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season15_passholder_platinum_booster",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.minnie",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_076_10",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.baloo",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_028_50",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_172",
+   "price_usd": 3.99
+  },
+  {
+   "product_id": "com.glu.disneygame.pixar",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_26",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_067_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_14",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_101_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_12",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_002",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season18_passholder_platinum",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.elastigirl_bundle_20",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_010_1",
+   "price_usd": 7.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_072_100",
+   "price_usd": 99.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_051_25",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_077_40",
+   "price_usd": 69.99
+  },
+  {
+   "product_id": "com.glu.disneygame.june_2019_passholder_gold",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_090_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_058_20",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.gem_pack_1",
+   "price_usd": 1.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_087_40",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.simba_bundle_50",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.october_2019_passholder_gold",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.202007_02_passholder_gold",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_034_10",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.merida_wisp_pack_4",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.saeson12_passholder_gold_booster",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_055_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_106_40",
+   "price_usd": 39.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_032_10",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.disney",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_081_40",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_093_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.super_coins_01",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_13",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_036_15",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.gem_pack_7",
+   "price_usd": 79.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_39",
+   "price_usd": 0.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_071_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_108_40",
+   "price_usd": 39.99
+  },
+  {
+   "product_id": "com.glu.disneygame.cruella_de_vil",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_145",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.passholder_gold_booster",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_138",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.mickey_mouse",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_083_25",
+   "price_usd": 24.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_merida_offer_3",
+   "price_usd": 99.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_185",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_024_5",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_129",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_139",
+   "price_usd": 7.99
+  },
+  {
+   "product_id": "com.glu.disneygame.saeson18_passholder_gold_booster",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season10_passholder_platinum",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.saeson15_passholder_gold_booster",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_049_20",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_037_10",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_042_15",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_048_20",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.oogie_boogie_outfit_pack",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_096_20",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_keys_10",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season15_passholder_platinum_upgrade",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.gem_pack_8",
+   "price_usd": 99.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_keys_50",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season16_passholder_platinum_booster",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_088_40",
+   "price_usd": 39.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_109_40",
+   "price_usd": 39.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_136",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_026_5",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.toy_story_forky_pack",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_153",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_222",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.aladdin",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_57",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_8",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.gem_pack_1_b",
+   "price_usd": 1.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_currency_10_mulan",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_170",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.vip_4",
+   "price_usd": 24.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_125",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.rafiki_bundle_20",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_pack_3",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.mickey_superpack_4",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_099_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_52",
+   "price_usd": 2.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season13_passholder_platinum",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_118",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_066_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_094_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.sulley",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_176",
+   "price_usd": 3.99
+  },
+  {
+   "product_id": "com.glu.disneygame.ultimate_oogie_boogie_pack",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.merida_wisp_pack_3",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_119",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_123",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_031_5",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_061_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_072_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_124",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.cruella",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_024_35",
+   "price_usd": 34.99
+  },
+  {
+   "product_id": "com.glu.disneygame.202006_01_passholder_gold",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_021_5",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.genie_pack2",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_currency_05_onward",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.202001_passholder_gold_booster",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.202005_01_passholder_gold",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_currency_30_mulan",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_006",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_174",
+   "price_usd": 3.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_18",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_086_40",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_104_40",
+   "price_usd": 39.99
+  },
+  {
+   "product_id": "com.glu.disneygame.gem_pack_3",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season15_passholder_platinum",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_225",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.202005_01_b_passholder_gold_booster",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_131",
+   "price_usd": 99.99
+  },
+  {
+   "product_id": "com.glu.disneygame.darkwing_duck",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_097_20",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.202002_passholder_gold_b",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_186",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_226",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_133",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season16_passholder_platinum",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_125_20",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.rafiki_bundle_50",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_091_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_064_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_046_15",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.monsters_inc",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.201912_passholder_gold",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.steamboat_pete_outfit",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_069_50",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_095_20",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.202006_02_b_passholder_gold_booster",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_023_5",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.scar_bundle_100",
+   "price_usd": 99.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_6",
+   "price_usd": 24.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_keys_20",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_007",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_151",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.202009_02_passholder_gold",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.pixar_onward",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.202002_passholder_gold_booster",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_040_15",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_051_20",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_currency_20_mulan",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_054_20",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_093_20",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_023_35",
+   "price_usd": 34.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_013_5",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_124_20",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.oogie_boogie_pack",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_078_40",
+   "price_usd": 69.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_60",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.super_coins_03",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_1",
+   "price_usd": 0.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_026_50",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_105",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.gem_pack_6",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.202008_01_b_passholder_gold_booster",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season10_passholder_platinum_booster",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_132",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.passholder_xp_medium",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.passholder_xp_small",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_currency_05_mulan",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.may_2019_passholder",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_32",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_004",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.woody_power_up_pack",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_063_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_110",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_184",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_018_3",
+   "price_usd": 2.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_053_20",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season12_passholder_platinum_booster",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_066_50",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_167",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_27",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.minnie_mouse",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_094_20",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_44",
+   "price_usd": 1.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_050_15",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_073_100",
+   "price_usd": 99.99
+  },
+  {
+   "product_id": "com.glu.disneygame.gem_pack_8_b",
+   "price_usd": 99.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_103_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_088_40",
+   "price_usd": 39.99
+  },
+  {
+   "product_id": "com.glu.disneygame.big_bad_wolf",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_017_3",
+   "price_usd": 2.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_171",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.saeson16_passholder_gold_booster",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.saeson13_passholder_gold_booster",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_092_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_061_50",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_111",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_66",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_165",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_073_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_148",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_242",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.pirates_of_the_caribbean",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_063_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_108",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_035_5",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_149",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.202003_passholder_gold_booster_b",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_166",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_2",
+   "price_usd": 0.99
+  },
+  {
+   "product_id": "com.glu.disneygame.toy_story_last_chance",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_65",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.mickey",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.bucket_gems_25",
+   "price_usd": 7.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_027_5",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_152",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_30",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_11",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_197",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_010",
+   "price_usd": 99.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_118_40",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season17_passholder_platinum",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_050_25",
+   "price_usd": 24.99
+  },
+  {
+   "product_id": "com.glu.disneygame.conversion_pack_2",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_51",
+   "price_usd": 2.99
+  },
+  {
+   "product_id": "com.glu.disneygame.mickey_second_chance_pack",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_119_20",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_23",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.villains",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_100_20",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_098_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_077_10",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_001_1",
+   "price_usd": 0.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_175",
+   "price_usd": 3.99
+  },
+  {
+   "product_id": "com.glu.disneygame.202007_01_passholder_gold",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.saeson17_passholder_gold_booster",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_currency_50_mulan",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_081_15",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.chest_gems_10",
+   "price_usd": 17.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_55",
+   "price_usd": 2.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_127",
+   "price_usd": 99.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_017_10",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_060_20",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_079_15",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_212",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_22",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.castle_gems_20",
+   "price_usd": 79.99
+  },
+  {
+   "product_id": "com.glu.disneygame.chest_gems_25",
+   "price_usd": 15.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_060_50",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_183",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_137",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season17_passholder_platinum_booster",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_coins_2",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_142",
+   "price_usd": 7.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_merida_offer_1",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.kronk",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_currency_50_onward",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_043_15",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.elastigirl",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_086_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_084_25",
+   "price_usd": 24.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_032_5",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.spirit_mufasa",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_104",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_144",
+   "price_usd": 7.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_055_20",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season13_passholder_platinum_booster",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_164",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.202002_passholder_gold_booster_b",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_130",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_135",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_61",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_038_10",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_merida_offer_2",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.august_2019_passholder_gold",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_128_20",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.king_pack",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.bucket_gems_40",
+   "price_usd": 6.99
+  },
+  {
+   "product_id": "com.glu.disneygame.anna",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_068_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_015_10",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_056_20",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_143",
+   "price_usd": 7.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_056_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.september_passholder",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_53",
+   "price_usd": 2.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_147",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.paw_pack",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.buzz_power_up_pack",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.goofy",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_089_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.toy_story",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_025_5",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_120_20",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_082_25",
+   "price_usd": 24.99
+  },
+  {
+   "product_id": "com.glu.disneygame.disney_villains",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_7",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season12_passholder_gold",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_126_20",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_085_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_076_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season10_passholder_platinum_upgrade",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_coins_4",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.202008_02_passholder_gold",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.vip_2",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_181",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_122_20",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_059_20",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.onward",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.july_2019_passholder_gold",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.powerup_pack",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season18_passholder_platinum_booster",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_044_20",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_030_5",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season12_passholder_platinum_upgrade",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_pack_6",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season17_passholder_gold",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.202004_passholder_gold_booster",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.mega_mordu_pack",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.202009_01_passholder_gold",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_025_35",
+   "price_usd": 34.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_014_5",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.donald",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.buzz_woody_pack",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season18_passholder_gold",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.november_2019_gold_booster",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.merida_wisp_pack_2",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.princess",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_033_5",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_020_3",
+   "price_usd": 2.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_049_15",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season16_passholder_gold",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_105_40",
+   "price_usd": 39.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_037_15",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.saeson14_passholder_gold_booster",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.ultimate_rafiki_pack",
+   "price_usd": 99.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_50",
+   "price_usd": 2.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_140",
+   "price_usd": 7.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_042_10",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_009",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_150",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_065_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_224",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_110_40",
+   "price_usd": 39.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_043_10",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_099_20",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.202009_02_b_passholder_gold_booster",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season13_passholder_platinum_upgrade",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_107_40",
+   "price_usd": 39.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_223",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_067_50",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.merida_wisp_pack_5",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.mordu_second_chance_pack",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_030_5",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.rafiki_bundle_10",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_123_20",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_177",
+   "price_usd": 3.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_035_15",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.mickey_superpack_3",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.merida",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_15",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_027_50",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_059_50",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_012_5",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.gem_pack_6_b",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_092_20",
+   "price_usd": 14.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_currency_02_onward",
+   "price_usd": 1.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_097_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.olaf",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_9",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.scar_bundle_50",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.cap_gems_25",
+   "price_usd": 3.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_080_40",
+   "price_usd": 99.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_41",
+   "price_usd": 0.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season11_passholder_platinum",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_5",
+   "price_usd": 1.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_075_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_003",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_38",
+   "price_usd": 0.99
+  },
+  {
+   "product_id": "com.glu.disneygame.202003_passholder_gold_b",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.202007_02_b_passholder_gold_booster",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_071_100",
+   "price_usd": 99.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_019_3",
+   "price_usd": 2.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_062_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.elastigirl_bundle_10",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_currency_02_mulan",
+   "price_usd": 1.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_082_40",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season14_passholder_platinum",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.donald_duck",
+   "price_usd": 9.99
+  },
+  {
+   "product_id": "com.glu.disneygame.madam_mim_and_horned_king_pack",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_coins_1",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_129",
+   "price_usd": 99.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_070_50",
+   "price_usd": 49.99
+  },
+  {
+   "product_id": "com.glu.disneygame.gem_pack_2",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.november_2019_passholder_gold",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.gem_pack_2_b",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.merida_wisp_pack_1",
+   "price_usd": 4.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_057_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_29",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_102_30",
+   "price_usd": 29.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_002_1",
+   "price_usd": 0.99
+  },
+  {
+   "product_id": "com.glu.disneygame.season16_passholder_platinum_upgrade",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.special_offer_169",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.passholder_xp_large",
+   "price_usd": 19.99
+  },
+  {
+   "product_id": "com.glu.disneygame.premium_deal_42",
+   "price_usd": 0.99
+  },
+  {
+   "product_id": "com.glu.disneygame.bucket_gems_10",
+   "price_usd": 8.99
+  },
+  {
+   "product_id": "com.glu.disneygame.event_deal_101_20",
+   "price_usd": 14.99
+  }
+ ]
+}

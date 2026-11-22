@@ -1,0 +1,3593 @@
+{
+ "nodes": [
+  {
+   "campaign": 953203441585268,
+   "map": 0,
+   "node": 0,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_01_A_NAME",
+   "possible_enemies": [
+    {
+     "id": 2294812731867727,
+     "boss": true
+    },
+    {
+     "id": 1494696548715032,
+     "boss": false
+    },
+    {
+     "id": 541339423403349,
+     "boss": false
+    },
+    {
+     "id": 758275367121177,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 4369788399977460,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 0,
+   "node": 1,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_01_B_NAME",
+   "possible_enemies": [
+    {
+     "id": 50,
+     "boss": true
+    },
+    {
+     "id": 5584717432624453,
+     "boss": false
+    },
+    {
+     "id": 3544131010430743,
+     "boss": false
+    },
+    {
+     "id": 541339423403349,
+     "boss": false
+    },
+    {
+     "id": 1494696548715032,
+     "boss": false
+    },
+    {
+     "id": 758275367121177,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 6875764007480445,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 0,
+   "node": 2,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_01_C_NAME",
+   "possible_enemies": [
+    {
+     "id": 6122772866382469,
+     "boss": true
+    },
+    {
+     "id": 6718413568421239,
+     "boss": false
+    },
+    {
+     "id": 4799029638292706,
+     "boss": false
+    },
+    {
+     "id": 3564955291304970,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 852411359203467,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 0,
+   "node": 3,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_01_D_NAME",
+   "possible_enemies": [
+    {
+     "id": 8079429168333959,
+     "boss": true
+    },
+    {
+     "id": 553069276713467,
+     "boss": false
+    },
+    {
+     "id": 3793696733556542,
+     "boss": false
+    },
+    {
+     "id": 3564955291304970,
+     "boss": false
+    },
+    {
+     "id": 4799029638292706,
+     "boss": false
+    },
+    {
+     "id": 5411986143930567,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 6150067015294539,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 0,
+   "node": 4,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_01_E_NAME",
+   "possible_enemies": [
+    {
+     "id": 2425318463423019,
+     "boss": true
+    },
+    {
+     "id": 6248908469179626,
+     "boss": false
+    },
+    {
+     "id": 8449478245108925,
+     "boss": false
+    },
+    {
+     "id": 6296512697122726,
+     "boss": false
+    },
+    {
+     "id": 4326476028885937,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 6647048309780056,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 0,
+   "node": 5,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_01_F_NAME",
+   "possible_enemies": [
+    {
+     "id": 1809998714774592,
+     "boss": true
+    },
+    {
+     "id": 7266520144288097,
+     "boss": false
+    },
+    {
+     "id": 8699539162769006,
+     "boss": false
+    },
+    {
+     "id": 3129984899726440,
+     "boss": false
+    },
+    {
+     "id": 8449478245108925,
+     "boss": false
+    },
+    {
+     "id": 2616075322296139,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 1243822768094124,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 0,
+   "node": 6,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_01_G_NAME",
+   "possible_enemies": [
+    {
+     "id": 150,
+     "boss": true
+    },
+    {
+     "id": 2975027518208340,
+     "boss": false
+    },
+    {
+     "id": 6564673799239675,
+     "boss": false
+    },
+    {
+     "id": 8169073350788817,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 4039906260161852,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 0,
+   "node": 7,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_01_H_NAME",
+   "possible_enemies": [
+    {
+     "id": 2541505114257629,
+     "boss": true
+    },
+    {
+     "id": 8169073350788817,
+     "boss": false
+    },
+    {
+     "id": 6564673799239675,
+     "boss": false
+    },
+    {
+     "id": 6256911275270195,
+     "boss": false
+    },
+    {
+     "id": 2975027518208340,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 4358575851543797,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 0,
+   "node": 8,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_01_I_NAME",
+   "possible_enemies": [
+    {
+     "id": 6651802205495402,
+     "boss": true
+    },
+    {
+     "id": 8355588830097610,
+     "boss": false
+    },
+    {
+     "id": 6728376677592518,
+     "boss": false
+    },
+    {
+     "id": 5411986143930567,
+     "boss": false
+    },
+    {
+     "id": 3026417329322044,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 1470570542306690,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 0,
+   "node": 9,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_01_J_NAME",
+   "possible_enemies": [
+    {
+     "id": 7223888738756585,
+     "boss": true
+    },
+    {
+     "id": 6814002232054243,
+     "boss": false
+    },
+    {
+     "id": 5810646426533593,
+     "boss": false
+    },
+    {
+     "id": 1424534210893336,
+     "boss": false
+    },
+    {
+     "id": 6975264719804706,
+     "boss": false
+    },
+    {
+     "id": 4799029638292706,
+     "boss": false
+    },
+    {
+     "id": 3564955291304970,
+     "boss": false
+    },
+    {
+     "id": 3813773339141217,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 688058347776208,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 0,
+   "node": 10,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_01_K_NAME",
+   "possible_enemies": [
+    {
+     "id": 1225277242550499,
+     "boss": true
+    },
+    {
+     "id": 1333223846534530,
+     "boss": false
+    },
+    {
+     "id": 3460959051686191,
+     "boss": false
+    },
+    {
+     "id": 4775228554624780,
+     "boss": false
+    },
+    {
+     "id": 7803746740370685,
+     "boss": false
+    },
+    {
+     "id": 4223125015619336,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 1888778738265051,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 0,
+   "node": 11,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_01_L_NAME",
+   "possible_enemies": [
+    {
+     "id": 125,
+     "boss": true
+    },
+    {
+     "id": 370744954140450,
+     "boss": false
+    },
+    {
+     "id": 124,
+     "boss": false
+    },
+    {
+     "id": 1333223846534530,
+     "boss": false
+    },
+    {
+     "id": 6001881699133543,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 3273522970652656,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 0,
+   "node": 12,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_01_M_NAME",
+   "possible_enemies": [
+    {
+     "id": 3077390668497398,
+     "boss": true
+    },
+    {
+     "id": 5424845974987535,
+     "boss": false
+    },
+    {
+     "id": 5534722310856030,
+     "boss": false
+    },
+    {
+     "id": 7836378166039323,
+     "boss": false
+    },
+    {
+     "id": 1120886486277251,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 4418899181502134,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 0,
+   "node": 13,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_01_N_NAME",
+   "possible_enemies": [
+    {
+     "id": 8279082701199788,
+     "boss": true
+    },
+    {
+     "id": 8014374100911476,
+     "boss": false
+    },
+    {
+     "id": 5684938898918823,
+     "boss": false
+    },
+    {
+     "id": 801834318881896,
+     "boss": false
+    },
+    {
+     "id": 4001595138299649,
+     "boss": false
+    },
+    {
+     "id": 1819554549721588,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 2315083388706788,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 0,
+   "node": 14,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_01_O_NAME",
+   "possible_enemies": [
+    {
+     "id": 37106888302811,
+     "boss": true
+    },
+    {
+     "id": 2151328540931649,
+     "boss": false
+    },
+    {
+     "id": 1279631643825630,
+     "boss": false
+    },
+    {
+     "id": 5975411268446204,
+     "boss": false
+    },
+    {
+     "id": 5774733529014843,
+     "boss": false
+    },
+    {
+     "id": 6801450488388220,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 850208742744554,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 0,
+   "node": 15,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_01_P_NAME",
+   "possible_enemies": [
+    {
+     "id": 3266443875899032,
+     "boss": true
+    },
+    {
+     "id": 3217439617028435,
+     "boss": false
+    },
+    {
+     "id": 1319488816909964,
+     "boss": false
+    },
+    {
+     "id": 3331593180574271,
+     "boss": false
+    },
+    {
+     "id": 1428774108615339,
+     "boss": false
+    },
+    {
+     "id": 2760323008706986,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 445000062595958,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 0,
+   "node": 16,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_01_Q_NAME",
+   "possible_enemies": [
+    {
+     "id": 8073126432543904,
+     "boss": true
+    },
+    {
+     "id": 7269089438002544,
+     "boss": false
+    },
+    {
+     "id": 3527930412545833,
+     "boss": false
+    },
+    {
+     "id": 4264839534548679,
+     "boss": false
+    },
+    {
+     "id": 784150282061646,
+     "boss": false
+    },
+    {
+     "id": 7318168185930601,
+     "boss": false
+    },
+    {
+     "id": 6301771870772202,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 61420127502096,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 1,
+   "node": 0,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_02_A_NAME",
+   "possible_enemies": [
+    {
+     "id": 508341540759214,
+     "boss": true
+    },
+    {
+     "id": 7269623947317587,
+     "boss": false
+    },
+    {
+     "id": 2690321414583935,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 4369788399977460,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 1,
+   "node": 1,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_02_B_NAME",
+   "possible_enemies": [
+    {
+     "id": 36,
+     "boss": true
+    },
+    {
+     "id": 2294812731867727,
+     "boss": false
+    },
+    {
+     "id": 541339423403349,
+     "boss": false
+    },
+    {
+     "id": 1494696548715032,
+     "boss": false
+    },
+    {
+     "id": 758275367121177,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 6875764007480445,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 1,
+   "node": 2,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_02_C_NAME",
+   "possible_enemies": [
+    {
+     "id": 428918844529270,
+     "boss": true
+    },
+    {
+     "id": 6495565017355218,
+     "boss": false
+    },
+    {
+     "id": 381651270270350,
+     "boss": false
+    },
+    {
+     "id": 3564955291304970,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 852411359203467,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 1,
+   "node": 3,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_02_D_NAME",
+   "possible_enemies": [
+    {
+     "id": 8218042807117239,
+     "boss": true
+    },
+    {
+     "id": 4979608122848331,
+     "boss": false
+    },
+    {
+     "id": 3813773339141217,
+     "boss": false
+    },
+    {
+     "id": 5411986143930567,
+     "boss": false
+    },
+    {
+     "id": 3564955291304970,
+     "boss": false
+    },
+    {
+     "id": 4799029638292706,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 6150067015294539,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 1,
+   "node": 4,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_02_E_NAME",
+   "possible_enemies": [
+    {
+     "id": 5710225926985727,
+     "boss": true
+    },
+    {
+     "id": 7266520144288097,
+     "boss": false
+    },
+    {
+     "id": 4326476028885937,
+     "boss": false
+    },
+    {
+     "id": 2616075322296139,
+     "boss": false
+    },
+    {
+     "id": 7941268070872890,
+     "boss": false
+    },
+    {
+     "id": 6296512697122726,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 6647048309780056,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 1,
+   "node": 5,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_02_F_NAME",
+   "possible_enemies": [
+    {
+     "id": 4505487594415447,
+     "boss": true
+    },
+    {
+     "id": 1198211944242711,
+     "boss": false
+    },
+    {
+     "id": 8449478245108925,
+     "boss": false
+    },
+    {
+     "id": 2616075322296139,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 1243822768094124,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 1,
+   "node": 6,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_02_G_NAME",
+   "possible_enemies": [
+    {
+     "id": 72,
+     "boss": true
+    },
+    {
+     "id": 8169073350788817,
+     "boss": false
+    },
+    {
+     "id": 2975027518208340,
+     "boss": false
+    },
+    {
+     "id": 990933960084047,
+     "boss": false
+    },
+    {
+     "id": 6564673799239675,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 4039906260161852,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 1,
+   "node": 7,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_02_H_NAME",
+   "possible_enemies": [
+    {
+     "id": 1833609470868558,
+     "boss": true
+    },
+    {
+     "id": 6256911275270195,
+     "boss": false
+    },
+    {
+     "id": 8169073350788817,
+     "boss": false
+    },
+    {
+     "id": 530345094238519,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 4358575851543797,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 1,
+   "node": 8,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_02_I_NAME",
+   "possible_enemies": [
+    {
+     "id": 8397384975680519,
+     "boss": true
+    },
+    {
+     "id": 7786425981047712,
+     "boss": false
+    },
+    {
+     "id": 5702473871132078,
+     "boss": false
+    },
+    {
+     "id": 6728376677592518,
+     "boss": false
+    },
+    {
+     "id": 3026417329322044,
+     "boss": false
+    },
+    {
+     "id": 5411986143930567,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 1470570542306690,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 1,
+   "node": 9,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_02_J_NAME",
+   "possible_enemies": [
+    {
+     "id": 8079831875819121,
+     "boss": true
+    },
+    {
+     "id": 151,
+     "boss": false
+    },
+    {
+     "id": 6799823887600150,
+     "boss": false
+    },
+    {
+     "id": 11,
+     "boss": false
+    },
+    {
+     "id": 3813773339141217,
+     "boss": false
+    },
+    {
+     "id": 4799029638292706,
+     "boss": false
+    },
+    {
+     "id": 3564955291304970,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 688058347776208,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 1,
+   "node": 10,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_02_K_NAME",
+   "possible_enemies": [
+    {
+     "id": 5410579083337168,
+     "boss": true
+    },
+    {
+     "id": 3460959051686191,
+     "boss": false
+    },
+    {
+     "id": 4775228554624780,
+     "boss": false
+    },
+    {
+     "id": 7803746740370685,
+     "boss": false
+    },
+    {
+     "id": 4223125015619336,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 1888778738265051,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 1,
+   "node": 11,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_02_L_NAME",
+   "possible_enemies": [
+    {
+     "id": 4996798494226789,
+     "boss": true
+    },
+    {
+     "id": 1333223846534530,
+     "boss": false
+    },
+    {
+     "id": 2207399084365587,
+     "boss": false
+    },
+    {
+     "id": 6001881699133543,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 3273522970652656,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 1,
+   "node": 12,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_02_M_NAME",
+   "possible_enemies": [
+    {
+     "id": 3077390668497398,
+     "boss": true
+    },
+    {
+     "id": 5424845974987535,
+     "boss": false
+    },
+    {
+     "id": 5534722310856030,
+     "boss": false
+    },
+    {
+     "id": 7836378166039323,
+     "boss": false
+    },
+    {
+     "id": 1120886486277251,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 4418899181502134,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 1,
+   "node": 13,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_02_N_NAME",
+   "possible_enemies": [
+    {
+     "id": 8279082701199788,
+     "boss": true
+    },
+    {
+     "id": 4001595138299649,
+     "boss": false
+    },
+    {
+     "id": 1819554549721588,
+     "boss": false
+    },
+    {
+     "id": 8014374100911476,
+     "boss": false
+    },
+    {
+     "id": 5684938898918823,
+     "boss": false
+    },
+    {
+     "id": 801834318881896,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 2315083388706788,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 1,
+   "node": 14,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_02_O_NAME",
+   "possible_enemies": [
+    {
+     "id": 37106888302811,
+     "boss": true
+    },
+    {
+     "id": 2151328540931649,
+     "boss": false
+    },
+    {
+     "id": 1279631643825630,
+     "boss": false
+    },
+    {
+     "id": 5975411268446204,
+     "boss": false
+    },
+    {
+     "id": 5774733529014843,
+     "boss": false
+    },
+    {
+     "id": 6801450488388220,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 850208742744554,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 1,
+   "node": 15,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_02_P_NAME",
+   "possible_enemies": [
+    {
+     "id": 3266443875899032,
+     "boss": true
+    },
+    {
+     "id": 3217439617028435,
+     "boss": false
+    },
+    {
+     "id": 1319488816909964,
+     "boss": false
+    },
+    {
+     "id": 3331593180574271,
+     "boss": false
+    },
+    {
+     "id": 1428774108615339,
+     "boss": false
+    },
+    {
+     "id": 2760323008706986,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 445000062595958,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 1,
+   "node": 16,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_02_Q_NAME",
+   "possible_enemies": [
+    {
+     "id": 8073126432543904,
+     "boss": true
+    },
+    {
+     "id": 7269089438002544,
+     "boss": false
+    },
+    {
+     "id": 3527930412545833,
+     "boss": false
+    },
+    {
+     "id": 4264839534548679,
+     "boss": false
+    },
+    {
+     "id": 784150282061646,
+     "boss": false
+    },
+    {
+     "id": 7318168185930601,
+     "boss": false
+    },
+    {
+     "id": 6301771870772202,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 61420127502096,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 2,
+   "node": 0,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_03_A_NAME",
+   "possible_enemies": [
+    {
+     "id": 1861638347042510,
+     "boss": true
+    },
+    {
+     "id": 9003565924362054,
+     "boss": false
+    }
+   ],
+   "rewards": [
+    {
+     "id": 6150067015294539,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 6647048309780056,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 852411359203467,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 6875764007480445,
+     "count": 1,
+     "guaranteed": false
+    },
+    {
+     "id": 13,
+     "count": 1750,
+     "guaranteed": true
+    },
+    {
+     "id": 26,
+     "count": 140,
+     "guaranteed": true
+    },
+    {
+     "id": 30,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 8663828779652044,
+     "count": 14,
+     "guaranteed": true
+    },
+    {
+     "id": 2945256041493145,
+     "count": 28,
+     "guaranteed": true
+    },
+    {
+     "id": 6023708532798512,
+     "count": 21,
+     "guaranteed": true
+    }
+   ]
+  }
+ ],
+ "waves": [
+  {
+   "campaign": 953203441585268,
+   "map": 0,
+   "node": 0,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_01_A_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 1494696548715032,
+       "count": 3
+      },
+      {
+       "id": 541339423403349,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 1494696548715032,
+       "count": 3
+      },
+      {
+       "id": 758275367121177,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 2294812731867727,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 1494696548715032,
+       "count": 2
+      },
+      {
+       "id": 541339423403349,
+       "count": 1
+      },
+      {
+       "id": 758275367121177,
+       "count": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 0,
+   "node": 1,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_01_B_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 541339423403349,
+       "count": 3
+      },
+      {
+       "id": 1494696548715032,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 1494696548715032,
+       "count": 2
+      },
+      {
+       "id": 758275367121177,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 50,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 5584717432624453,
+       "count": 1
+      },
+      {
+       "id": 3544131010430743,
+       "count": 1
+      },
+      {
+       "id": 1494696548715032,
+       "count": 2
+      },
+      {
+       "id": 758275367121177,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 0,
+   "node": 2,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_01_C_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 4799029638292706,
+       "count": 2
+      },
+      {
+       "id": 3564955291304970,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 4799029638292706,
+       "count": 2
+      },
+      {
+       "id": 3564955291304970,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 6122772866382469,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 6718413568421239,
+       "count": 1
+      },
+      {
+       "id": 3564955291304970,
+       "count": 2
+      },
+      {
+       "id": 4799029638292706,
+       "count": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 0,
+   "node": 3,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_01_D_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 3564955291304970,
+       "count": 2
+      },
+      {
+       "id": 4799029638292706,
+       "count": 1
+      },
+      {
+       "id": 5411986143930567,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 5411986143930567,
+       "count": 2
+      },
+      {
+       "id": 4799029638292706,
+       "count": 1
+      },
+      {
+       "id": 3564955291304970,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 8079429168333959,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 553069276713467,
+       "count": 1
+      },
+      {
+       "id": 3793696733556542,
+       "count": 1
+      },
+      {
+       "id": 3564955291304970,
+       "count": 2
+      },
+      {
+       "id": 4799029638292706,
+       "count": 1
+      },
+      {
+       "id": 5411986143930567,
+       "count": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 0,
+   "node": 9,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_01_J_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 4799029638292706,
+       "count": 3
+      },
+      {
+       "id": 3813773339141217,
+       "count": 1
+      },
+      {
+       "id": 3564955291304970,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 3564955291304970,
+       "count": 3
+      },
+      {
+       "id": 3813773339141217,
+       "count": 2
+      },
+      {
+       "id": 4799029638292706,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 7223888738756585,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 6975264719804706,
+       "count": 1
+      },
+      {
+       "id": 6814002232054243,
+       "count": 1
+      },
+      {
+       "id": 5810646426533593,
+       "count": 1
+      },
+      {
+       "id": 1424534210893336,
+       "count": 1
+      },
+      {
+       "id": 4799029638292706,
+       "count": 2
+      },
+      {
+       "id": 3564955291304970,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 0,
+   "node": 16,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_01_Q_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 8073126432543904,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 7318168185930601,
+       "count": 1
+      },
+      {
+       "id": 3527930412545833,
+       "count": 1
+      },
+      {
+       "id": 7269089438002544,
+       "count": 1
+      },
+      {
+       "id": 4264839534548679,
+       "count": 1
+      },
+      {
+       "id": 6301771870772202,
+       "count": 1
+      },
+      {
+       "id": 784150282061646,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 1,
+   "node": 0,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_02_A_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 7269623947317587,
+       "count": 3
+      },
+      {
+       "id": 2690321414583935,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 2690321414583935,
+       "count": 5
+      },
+      {
+       "id": 7269623947317587,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 508341540759214,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 7269623947317587,
+       "count": 6
+      },
+      {
+       "id": 2690321414583935,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 1,
+   "node": 1,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_02_B_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 541339423403349,
+       "count": 3
+      },
+      {
+       "id": 1494696548715032,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 758275367121177,
+       "count": 4
+      },
+      {
+       "id": 1494696548715032,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 36,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 2294812731867727,
+       "count": 1
+      },
+      {
+       "id": 1494696548715032,
+       "count": 3
+      },
+      {
+       "id": 758275367121177,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 1,
+   "node": 2,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_02_C_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 3564955291304970,
+       "count": 3
+      },
+      {
+       "id": 381651270270350,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 3564955291304970,
+       "count": 4
+      },
+      {
+       "id": 381651270270350,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 428918844529270,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 6495565017355218,
+       "count": 1
+      },
+      {
+       "id": 3564955291304970,
+       "count": 2
+      },
+      {
+       "id": 381651270270350,
+       "count": 3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 1,
+   "node": 3,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_02_D_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 3564955291304970,
+       "count": 2
+      },
+      {
+       "id": 5411986143930567,
+       "count": 2
+      },
+      {
+       "id": 4799029638292706,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 5411986143930567,
+       "count": 3
+      },
+      {
+       "id": 3564955291304970,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 8218042807117239,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 4979608122848331,
+       "count": 1
+      },
+      {
+       "id": 3813773339141217,
+       "count": 2
+      },
+      {
+       "id": 3564955291304970,
+       "count": 3
+      },
+      {
+       "id": 5411986143930567,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 1,
+   "node": 4,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_02_E_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 2616075322296139,
+       "count": 3
+      },
+      {
+       "id": 4326476028885937,
+       "count": 2
+      },
+      {
+       "id": 7941268070872890,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 4326476028885937,
+       "count": 4
+      },
+      {
+       "id": 2616075322296139,
+       "count": 1
+      },
+      {
+       "id": 6296512697122726,
+       "count": 1
+      },
+      {
+       "id": 7941268070872890,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 5710225926985727,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 7266520144288097,
+       "count": 1
+      },
+      {
+       "id": 4326476028885937,
+       "count": 3
+      },
+      {
+       "id": 2616075322296139,
+       "count": 2
+      },
+      {
+       "id": 7941268070872890,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 1,
+   "node": 5,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_02_F_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 8449478245108925,
+       "count": 3
+      },
+      {
+       "id": 2616075322296139,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 8449478245108925,
+       "count": 4
+      },
+      {
+       "id": 2616075322296139,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 4505487594415447,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 1198211944242711,
+       "count": 1
+      },
+      {
+       "id": 8449478245108925,
+       "count": 4
+      },
+      {
+       "id": 2616075322296139,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 1,
+   "node": 6,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_02_G_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 6564673799239675,
+       "count": 3
+      },
+      {
+       "id": 8169073350788817,
+       "count": 2
+      },
+      {
+       "id": 2975027518208340,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 6564673799239675,
+       "count": 3
+      },
+      {
+       "id": 990933960084047,
+       "count": 2
+      },
+      {
+       "id": 8169073350788817,
+       "count": 1
+      },
+      {
+       "id": 2975027518208340,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 72,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 6564673799239675,
+       "count": 3
+      },
+      {
+       "id": 8169073350788817,
+       "count": 2
+      },
+      {
+       "id": 990933960084047,
+       "count": 1
+      },
+      {
+       "id": 2975027518208340,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 1,
+   "node": 7,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_02_H_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 530345094238519,
+       "count": 2
+      },
+      {
+       "id": 6256911275270195,
+       "count": 2
+      },
+      {
+       "id": 8169073350788817,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 530345094238519,
+       "count": 3
+      },
+      {
+       "id": 8169073350788817,
+       "count": 2
+      },
+      {
+       "id": 6256911275270195,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 1833609470868558,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 8169073350788817,
+       "count": 4
+      },
+      {
+       "id": 530345094238519,
+       "count": 3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 1,
+   "node": 8,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_02_I_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 6728376677592518,
+       "count": 4
+      },
+      {
+       "id": 3026417329322044,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 5411986143930567,
+       "count": 3
+      },
+      {
+       "id": 3026417329322044,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 8397384975680519,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 7786425981047712,
+       "count": 1
+      },
+      {
+       "id": 5702473871132078,
+       "count": 1
+      },
+      {
+       "id": 3026417329322044,
+       "count": 3
+      },
+      {
+       "id": 6728376677592518,
+       "count": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 1,
+   "node": 9,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_02_J_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 4799029638292706,
+       "count": 3
+      },
+      {
+       "id": 3813773339141217,
+       "count": 1
+      },
+      {
+       "id": 3564955291304970,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 3564955291304970,
+       "count": 3
+      },
+      {
+       "id": 3813773339141217,
+       "count": 2
+      },
+      {
+       "id": 4799029638292706,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 8079831875819121,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 151,
+       "count": 1
+      },
+      {
+       "id": 6799823887600150,
+       "count": 1
+      },
+      {
+       "id": 11,
+       "count": 1
+      },
+      {
+       "id": 4799029638292706,
+       "count": 2
+      },
+      {
+       "id": 3813773339141217,
+       "count": 1
+      },
+      {
+       "id": 3564955291304970,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 1,
+   "node": 11,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_02_L_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 2207399084365587,
+       "count": 4
+      },
+      {
+       "id": 1333223846534530,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 2207399084365587,
+       "count": 4
+      },
+      {
+       "id": 1333223846534530,
+       "count": 3
+      },
+      {
+       "id": 6001881699133543,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "enemies": [
+      {
+       "id": 4996798494226789,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 2207399084365587,
+       "count": 5
+      },
+      {
+       "id": 1333223846534530,
+       "count": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 1,
+   "node": 12,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_02_M_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 3077390668497398,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 7836378166039323,
+       "count": 1
+      },
+      {
+       "id": 1120886486277251,
+       "count": 1
+      },
+      {
+       "id": 5534722310856030,
+       "count": 1
+      },
+      {
+       "id": 5424845974987535,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 1,
+   "node": 13,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_02_N_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 8279082701199788,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 4001595138299649,
+       "count": 1
+      },
+      {
+       "id": 1819554549721588,
+       "count": 1
+      },
+      {
+       "id": 8014374100911476,
+       "count": 1
+      },
+      {
+       "id": 5684938898918823,
+       "count": 1
+      },
+      {
+       "id": 801834318881896,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 1,
+   "node": 14,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_02_O_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 37106888302811,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 5774733529014843,
+       "count": 1
+      },
+      {
+       "id": 6801450488388220,
+       "count": 1
+      },
+      {
+       "id": 1279631643825630,
+       "count": 1
+      },
+      {
+       "id": 5975411268446204,
+       "count": 1
+      },
+      {
+       "id": 2151328540931649,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 1,
+   "node": 15,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_02_P_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 3266443875899032,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 3217439617028435,
+       "count": 1
+      },
+      {
+       "id": 1319488816909964,
+       "count": 1
+      },
+      {
+       "id": 3331593180574271,
+       "count": 1
+      },
+      {
+       "id": 1428774108615339,
+       "count": 1
+      },
+      {
+       "id": 2760323008706986,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 1,
+   "node": 16,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_02_Q_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 8073126432543904,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 7269089438002544,
+       "count": 1
+      },
+      {
+       "id": 3527930412545833,
+       "count": 1
+      },
+      {
+       "id": 4264839534548679,
+       "count": 1
+      },
+      {
+       "id": 784150282061646,
+       "count": 1
+      },
+      {
+       "id": 7318168185930601,
+       "count": 1
+      },
+      {
+       "id": 6301771870772202,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "campaign": 953203441585268,
+   "map": 2,
+   "node": 0,
+   "battle": 0,
+   "name_key": "CAMPAIGNNODE_03_A_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 1861638347042510,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 9003565924362054,
+       "count": 1
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,30 @@
+# The server release on a version tag (v<version>, the version in pyproject.toml): the zip the patcher's offline
+# variant embeds (tools/android_package.py: src/arcane_server, content, proto; reproducible) and its sha256, attached
+# to the tag's GitHub release. The patcher pins one release in its emulator.lock.
+name: release
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  server-zip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --locked
+      - name: "The tag names the package version"
+        run: |
+          want="v$(uv run python -c 'import tomllib; print(tomllib.load(open("pyproject.toml", "rb"))["project"]["version"])')"
+          [ "$GITHUB_REF_NAME" = "$want" ] || { echo "tag $GITHUB_REF_NAME does not match pyproject version ($want)"; exit 1; }
+      - name: "Tests (without the content set: those tests skip)"
+        run: uv run pytest -q
+      - run: uv run python tools/public_text.py
+      - run: uv run python tools/android_package.py --out dist
+      - name: GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" dist/arcane-server-android-*.zip dist/arcane-server-android-*.zip.sha256 --title "$GITHUB_REF_NAME" --notes "Server zip for the patcher's offline variant (with its sha256)."

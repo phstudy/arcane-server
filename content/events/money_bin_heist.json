@@ -1,0 +1,255 @@
+{
+ "event_group": {
+  "contentId": "5612093870412260",
+  "name": "ST_202004_Gold_META_NAME",
+  "description": "ST_202004_Gold_META_DESC",
+  "image": "icons_scheduled_events_sorcerers_trials/st_gold_meta_layer",
+  "sortOrder": "2200",
+  "showcaseItems": [
+   "13"
+  ],
+  "marqueeImage": "icons_scheduled_events_sorcerers_trials/Event_portal_st_gold",
+  "frameColor": {
+   "a": 1.0
+  },
+  "panelColor": {
+   "a": 1.0
+  },
+  "portalName": "ST_202004_Gold_PORTAL_NAME",
+  "portalDesc": "ST_202004_Gold_PORTAL_DESC"
+ },
+ "mail": {
+  "start": [
+   "ST_GOLD_TRIAL_INBOX_SUBJECT",
+   "ST_GOLD_TRIAL_INBOX_BODY"
+  ]
+ },
+ "rotation": {
+  "lane": "trials",
+  "after": 7526355701676612
+ },
+ "events": [
+  {
+   "key_prefix": "ST_202004_Gold_A",
+   "event": {
+    "contentId": "5530365053424712",
+    "name": "ST_202004_Gold_A_NAME",
+    "description": "ST_202004_Gold_A_DESC",
+    "image": "icons_scheduled_events_sorcerers_trials/st_gold_meta_layer_scrooge",
+    "sortOrder": "100",
+    "battleLimit": "2",
+    "marqueeImage": "icons_scheduled_events_sorcerers_trials/Event_portal_st_gold",
+    "previewText": " ",
+    "requirePreviousTierCompletion": true,
+    "lockedColor": {
+     "r": 148,
+     "g": 139,
+     "b": 161,
+     "a": 1.0
+    },
+    "allowInstantBattle": true,
+    "showcaseItems": [
+     "13"
+    ],
+    "eventGroupId": "5612093870412260"
+   },
+   "roster": {
+    "bosses": [
+     4463049399153916
+    ],
+    "minions": [
+     3813773339141217,
+     6728376677592518
+    ]
+   },
+   "mutators": [
+    865546106214113
+   ],
+   "battle_environment": "env_scrooges_vault/env_scrooges_vault",
+   "boss_cinematic": "cin_boss_scrooge_scrooges_vault/boss_scrooge_scrooges_vault",
+   "tiers": [
+    {
+     "restriction": 3733688621324817,
+     "rewards": [
+      {
+       "id": 13,
+       "min": 70000,
+       "max": 110000
+      }
+     ]
+    },
+    {
+     "restriction": 281954326486771,
+     "rewards": [
+      {
+       "id": 13,
+       "min": 120000,
+       "max": 150000
+      }
+     ]
+    },
+    {
+     "restriction": 3016651437820364,
+     "rewards": [
+      {
+       "id": 13,
+       "min": 160000,
+       "max": 200000
+      }
+     ]
+    },
+    {
+     "restriction": 168398546698308,
+     "rewards": [
+      {
+       "id": 13,
+       "min": 280000,
+       "max": 320000
+      }
+     ]
+    },
+    {
+     "restriction": 979405506609573,
+     "enemy_stats": {
+      "rarity": 7,
+      "gear_tier": 6
+     },
+     "mutators": [
+      865546106214113,
+      6810668843070504,
+      4805841410650927
+     ],
+     "rewards": [
+      {
+       "id": 13,
+       "min": 350000,
+       "max": 440000
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "waves": [
+  {
+   "event": 5530365053424712,
+   "tier": 0,
+   "name_key": "ST_202004_Gold_A_0_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 4463049399153916,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 3813773339141217,
+       "count": 2
+      },
+      {
+       "id": 6728376677592518,
+       "count": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5530365053424712,
+   "tier": 1,
+   "name_key": "ST_202004_Gold_A_1_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 4463049399153916,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 3813773339141217,
+       "count": 2
+      },
+      {
+       "id": 6728376677592518,
+       "count": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5530365053424712,
+   "tier": 2,
+   "name_key": "ST_202004_Gold_A_2_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 4463049399153916,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 3813773339141217,
+       "count": 2
+      },
+      {
+       "id": 6728376677592518,
+       "count": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5530365053424712,
+   "tier": 3,
+   "name_key": "ST_202004_Gold_A_3_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 4463049399153916,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 3813773339141217,
+       "count": 2
+      },
+      {
+       "id": 6728376677592518,
+       "count": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event": 5530365053424712,
+   "tier": 4,
+   "name_key": "ST_202004_Gold_A_4_NAME",
+   "waves": [
+    {
+     "enemies": [
+      {
+       "id": 4463049399153916,
+       "count": 1,
+       "boss": true
+      },
+      {
+       "id": 3813773339141217,
+       "count": 2
+      },
+      {
+       "id": 6728376677592518,
+       "count": 2
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
