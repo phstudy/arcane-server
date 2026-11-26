@@ -158,9 +158,9 @@ def add_store_tab(session: Session, store: pb.StoreResponse, state: dict | None 
     tab = store.tabs.add(id=TAB_ID, sort_order=TAB_SORT_ORDER, name_key="STORE_TAB_NAME_CHARACTER_PACKS",
                          icon="icons_store/store_tab_special", item_size=pb.SPECIAL_OFFER_STORE_ITEM_SIZE)
     tab.items.extend(items)
-    showcase = next((t.showcase_items for t in store.tabs if t.showcase_items), None)
-    if showcase:
-        tab.showcase_items.extend(showcase[:1])
+    from arcane_server.handlers.inbox_store import borrow_showcase
+
+    borrow_showcase(store, tab)
 
 
 def dynamic_message(session: Session, now: int, state: dict | None = None) -> pb.DynamicMessage:

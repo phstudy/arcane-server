@@ -219,6 +219,10 @@ def original_usd(store_item_id: int) -> float:
     b = mystic_leap.BY_ID.get(store_item_id)
     if b is not None:
         return b.usd
+    from arcane_server.handlers import sorcery_surge
+
+    if (sp := sorcery_surge.BY_ID.get(store_item_id)) is not None:
+        return sp.usd
     o = special_offers._by_id().get(store_item_id)
     if o is not None:
         it = o.item

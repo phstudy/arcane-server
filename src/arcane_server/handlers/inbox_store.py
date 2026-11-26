@@ -550,6 +550,10 @@ def refresh_daily_activities(session: Session) -> bool:
     `day_end_timestamp`. Idempotent within a day; returns True (and saves) when it reset.
     Also refreshes the passholder season quests (passport.refresh)."""
     passport.refresh(session)
+    from arcane_server.handlers.sorcery_surge import expire_multiplier
+
+    if expire_multiplier(session.player, _now()):
+        session.save()
     if tutorial.in_tutorial(session.game, session.public_id):
         return False  # during the tutorial the only quest is MAGICAL BEGINNINGS (tutorial.py)
     now = _now()
@@ -655,7 +659,13 @@ async def claim_activity(session: Session, req: pb.ClaimActivityRequest) -> pb.C
     else:
         rewards = a.rewards
     res = pb.ClaimActivityResponse(definition_id=a.definition_id, validated=True)
-    _grant(p, res.inventory_delta, _reward_items(rewards, _is_vip(p, _now())))
+    items = _reward_items(rewards, _is_vip(p, _now()))
+    if a.type in DAILY_TYPES:  # Sorcery Surge II / III: the server pays the multiplied rewards (the client shows x N)
+        from arcane_server.handlers.sorcery_surge import quest_multiplier
+
+        m = quest_multiplier(p, _now())
+        items = [(i, int(n * m)) for i, n in items]
+    _grant(p, res.inventory_delta, items)
     del p.activities[idx]  # claimed activities disappear from the player
     passport.apply_level_ups(session, res.inventory_delta)  # passholder XP reward -> tier rewards
     if tutorial.in_tutorial(session.game, session.public_id):
@@ -1143,14 +1153,22 @@ def _player_store(state: dict, now: int, rules: StoreRules = StoreRules(), sessi
     return store
 
 
+def borrow_showcase(store: pb.StoreResponse, tab: pb.StoreTab) -> None:
+    """Every served store tab has showcase items: a tab a module adds gets the store's first one."""
+    showcase = next((t.showcase_items for t in store.tabs if t.showcase_items), None)
+    if showcase and not tab.showcase_items:
+        tab.showcase_items.extend(showcase[:1])
+
+
 def player_store(session: Session, now: int) -> pb.StoreResponse:
-    from arcane_server.handlers import festivals, login_calendars, mystic_leap, special_offers, stamps
+    from arcane_server.handlers import festivals, login_calendars, mystic_leap, sorcery_surge, special_offers, stamps
 
     state = _load_state(session.game, session.public_id)
     store = _player_store(state, now, rules_of(session.game), session)
     special_offers.add_store_tab(session, store, state)  # the rotating special offers (own module)
     festivals.add_store_items(store, now)  # the month's festival packs (own module)
     mystic_leap.add_store_tab(session, store, state)  # the limited Mystic Leap bundles (own module)
+    sorcery_surge.add_store_tabs(session, store, state)  # the lifetime Sorcery Surge packs (own module)
     login_calendars.add_store_tab(session, store)  # the limited-time login calendars (own module)
     stamps.badge_store(session.game, store)  # stamp badges on the items that earn stamps (own module)
     _add_tutorial_pack(session, store)
@@ -1321,6 +1339,10 @@ def _special_offer(session: Session, store_item_id: int) -> pb.StoreItem | None:
 
     if mystic_leap.is_item(store_item_id):
         return mystic_leap.current_item(session, store_item_id)
+    from arcane_server.handlers import sorcery_surge
+
+    if sorcery_surge.is_item(store_item_id):
+        return sorcery_surge.current_item(session, store_item_id)
     if login_calendars.is_item(store_item_id):
         return login_calendars.current_item(session, store_item_id)
     if (reward := stamps.reward_item(session.game, store_item_id)) is not None:  # a stamp card chest / special slot
@@ -1396,6 +1418,10 @@ async def store_item(session: Session, req: pb.StoreItemRequest) -> pb.StoreItem
 
     if mystic_leap.is_item(req.store_item_id):
         return mystic_leap.details(session, mystic_leap.BY_ID[req.store_item_id])
+    from arcane_server.handlers import sorcery_surge
+
+    if sorcery_surge.is_item(req.store_item_id):
+        return sorcery_surge.details(session, sorcery_surge.BY_ID[req.store_item_id])
     it = _special_offer(session, req.store_item_id) or _offered_item(
         session, req.store_item_id, _load_state(session.game, session.public_id), _now())
     res = pb.StoreItemResponse(title_loc_key=it.name_key, short_description_loc_key=it.subtitle_key)
@@ -1438,6 +1464,10 @@ async def _buy_store_item(session: Session, req: pb.BuyStoreItemRequest) -> pb.B
 
     if mystic_leap.is_item(req.store_item_id):
         return await mystic_leap.buy(session, req)
+    from arcane_server.handlers import sorcery_surge
+
+    if sorcery_surge.is_item(req.store_item_id):
+        return await sorcery_surge.buy(session, req)
     res = pb.BuyStoreItemResponse()
     base = _store_index(rules_of(session.game)).get(req.store_item_id)
     receiver = None

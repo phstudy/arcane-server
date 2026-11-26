@@ -1148,6 +1148,17 @@ def _progress(player: pb.Player, cid: int, tier: int, create: bool = False) -> p
     return player.event_progress.add(id=pb.EventIdentifier(event_content_id=cid, tier_index=tier))
 
 
+def complete_daily_challenge(player: pb.Player, content_id: int, tiers: int) -> pb.Event:
+    """Mark the first `tiers` tiers of a summoner challenge (daily challenge) won with 3 stars, never lowering stars,
+    and open the next tier (store bundles that grant progress, sorcery_surge.py). Returns the challenge."""
+    e = pb.Event.FromString(_daily_event_defs()[content_id])
+    for i in range(tiers):
+        p = _progress(player, content_id, i, create=True)
+        p.star_count = max(p.star_count, 3)
+    unlock_tiers(player, e)
+    return e
+
+
 def unlock_tiers(player: pb.Player, e: pb.Event) -> list[pb.EventProgress]:
     """Give the player an EventProgress entry for every tier they may play, return the new ones.
 
@@ -2478,6 +2489,25 @@ def _tower_battle_end(session: Session, req: Any) -> pb.InventoryDelta:
     _expire_tower_caches(session)
     session.save()
     return out
+
+
+def complete_standard_tower_map(session: Session, map_id: int) -> pb.TowerMap:
+    """Complete a map of the Towers of Endurance at once (store bundles that grant progress, sorcery_surge.py): every
+    node passed and the map counted completed, so its progression chest can be claimed; no node loot. A map already
+    completed is left as it is. Returns the map."""
+    run = standard_tower_run(session)
+    m = run.map(map_id)
+    st = load_tower_status(session, run, map_id)
+    if st.times_completed == 0:
+        for s in st.unit_states:
+            if s.is_enemy:
+                s.Clear()
+        st.current_node = len(m.nodes)
+        st.highest_node_reached = len(m.nodes)
+        st.times_completed = 1
+        _save_tower_status(session, run, st)
+        _expire_tower_caches(session)
+    return m
 
 
 @rpc("tower_battle_start", pb.TowerBattleStartRequest)

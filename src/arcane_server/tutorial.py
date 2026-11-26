@@ -128,16 +128,18 @@ class State:
     onboarded: bool = False  # MAGICAL BEGINNINGS claimed (or tutorial skipped): ONBOARDING_COMPLETE
     name_prompted: bool = False
     played: set[BattleKey] = field(default_factory=set)  # battles fought to the end, won or lost ("HasPlayed...")
+    surge: set[str] = field(default_factory=set)  # progress Sorcery Surge packs granted: campaign / event / tower
 
     def to_json(self) -> str:
         return json.dumps({"completed": sorted(self.completed), "onboarded": self.onboarded,
-                           "name_prompted": self.name_prompted, "played": sorted(list(k) for k in self.played)})
+                           "name_prompted": self.name_prompted, "played": sorted(list(k) for k in self.played),
+                           "surge": sorted(self.surge)})
 
     @classmethod
     def from_json(cls, raw: str) -> State:
         d = json.loads(raw)
         return cls(set(d.get("completed", [])), bool(d.get("onboarded")), bool(d.get("name_prompted")),
-                   {tuple(k) for k in d.get("played", [])})
+                   {tuple(k) for k in d.get("played", [])}, set(d.get("surge", [])))
 
 
 _SCHEMA = "CREATE TABLE IF NOT EXISTS tutorial_state (public_id TEXT PRIMARY KEY, data TEXT NOT NULL)"
@@ -374,7 +376,29 @@ _FIXED: dict[str, Callable[[Ctx], bool]] = {
     and ctx.player.level >= 10,
     "HasAtLeastOneGearTierFourUnit": lambda ctx: any(u.gear_tier >= 4 for u in ctx.units.values()),
     "HasPlayedHeroes1CAndHasYzma": lambda ctx: _played(ctx, HEROES, 0, 2) and YZMA in ctx.units,
+    # Sorcery Surge (handlers/sorcery_surge.py): SS I is buyable from level 8; a running daily quest multiplier.
+    "UnlockHyperdriveS1Bundle": lambda ctx: ctx.player.level >= SURGE_S1_LEVEL,
+    "UnlockQuestMultiplierCM": lambda ctx: ctx.player.quest_reward_multiplier > 1,
 }
+SURGE_S1_LEVEL = 8  # sorcery_surge.UNLOCK_LEVEL[1]
+# "UnlockOnPostHyperdrivePackPurchase" is shared by three groups; constants.hyperdrive{Campaign,Event,Tower}ProgressCm
+# say which group belongs to which kind of progress a pack granted (State.surge). Evaluated per group (evaluate).
+POST_SURGE = "UnlockOnPostHyperdrivePackPurchase"
+_SURGE_CM_KINDS = {"hyperdriveCampaignProgressCm": "campaign", "hyperdriveEventProgressCm": "event",
+                   "hyperdriveTowerProgressCm": "tower"}
+
+
+def _surge_kind(gd: Gamedata, gid: int) -> str | None:
+    c = gd.single("constants")
+    return next((kind for key, kind in _SURGE_CM_KINDS.items() if int(c.get(key, 0)) == gid), None)
+
+
+def record_surge(game: Game, public_id: str, kinds: set[str]) -> None:
+    """A Sorcery Surge pack granted these kinds of progress: their hint groups unlock (after_rpc tells the client)."""
+    st = state(game, public_id)
+    if st is not None and not kinds <= st.surge:
+        st.surge |= kinds
+        save_state(game, public_id, st)
 
 # "HasPlayed1C" / "HasPlayed1D" (no campaign) are Heroes battles: their groups (383356483470825, about using the new
 # Trigger's Tower spell in the next battle; 3009441011654938 after HasPlayedHeroes1CAndHasYzma) deep-link to
@@ -403,7 +427,7 @@ DONE_WHEN: dict[int, Callable[[Ctx], bool]] = {
 
 def implemented(name: str) -> bool:
     """Whether `requirement` knows the requirement (else it is never met)."""
-    return (name in _FIXED or name in CM_COMPLETED
+    return (name in _FIXED or name in CM_COMPLETED or name == POST_SURGE
             or any(rx.match(name) for rx in (_LEVEL_GE, _LEVEL_GT, _MAP_DONE, _SHORT_DONE, _PLAYED)))
 
 
@@ -476,7 +500,10 @@ def evaluate(gd: Gamedata, player: pb.Player, st: State,
                 continue
             if gid in withheld and not auto:
                 continue
-            unlock = requirement(g.get("unlockRequirement", ""), ctx)
+            if g.get("unlockRequirement") == POST_SURGE:
+                unlock = _surge_kind(gd, gid) in st.surge
+            else:
+                unlock = requirement(g.get("unlockRequirement", ""), ctx)
             if unlock is None:
                 unlock = True  # groups without an unlock requirement (the first tutorial hint, view tips)
             if not unlock:

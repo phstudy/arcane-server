@@ -90,8 +90,8 @@ def content_checks() -> tuple[Check, ...]:
     from arcane_server import bonus_loot, content_data, content_enemies, news_i18n, summons, video_waves
     from arcane_server.handlers import (
         campaign, club_quests, event_mail, events, expeditions, feature_mail, festivals, flash_gifts, inbox_store,
-        leaderboards, login_calendars, mystic_leap, passport, pvp, raid_milestones, raids, special_offers, stamps,
-        summoner_showdown,
+        leaderboards, login_calendars, mystic_leap, passport, pvp, raid_milestones, raids, sorcery_surge,
+        special_offers, stamps, summoner_showdown,
     )
 
     return (
@@ -116,8 +116,9 @@ def content_checks() -> tuple[Check, ...]:
               lambda g: raids.content_problems(g.gamedata) + raids.asset_problems(g.content.bundle_sizes)
                               + raids.detail_problems(raids._localization(str(g.content.localization_path("English"))))
                               + raid_milestones.content_problems(g)),
-        Check("flash_gifts", "flash gifts / Mystic Leap bundles are inconsistent",
-              lambda g: flash_gifts.content_problems(g) + mystic_leap.content_problems(g)),
+        Check("flash_gifts", "flash gifts / Mystic Leap / Sorcery Surge bundles are inconsistent",
+              lambda g: flash_gifts.content_problems(g) + mystic_leap.content_problems(g)
+              + sorcery_surge.content_problems(g)),
         Check("leaderboards", "leaderboard contests are inconsistent", leaderboards.content_problems),
         Check("bonus_loot", "campaign bonus loot (bonus_loot.py) references missing content", bonus_loot.content_problems),
         Check("news_i18n", "News page messages (news_i18n.MESSAGES) are incomplete", lambda g: news_i18n.problems()),

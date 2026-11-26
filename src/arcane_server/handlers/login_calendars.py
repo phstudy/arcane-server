@@ -258,9 +258,9 @@ def add_store_tab(session: Session, store: pb.StoreResponse) -> None:
         tab = store.tabs.add(id=TAB_ID, sort_order=TAB_SORT_ORDER, name_key="STORE_TAB_NAME_PACKS", icon=TAB_ICON,
                              item_size=pb.MEDIUM_STORE_ITEM_SIZE)
         tab.items.extend(its)
-        showcase = next((t.showcase_items for t in store.tabs if t.showcase_items), None)
-        if showcase:  # (every served tab has one; as special_offers.add_store_tab)
-            tab.showcase_items.extend(showcase[:1])
+        from arcane_server.handlers.inbox_store import borrow_showcase
+
+        borrow_showcase(store, tab)
 
 
 async def buy(session: Session, req: pb.BuyStoreItemRequest) -> pb.BuyStoreItemResponse:

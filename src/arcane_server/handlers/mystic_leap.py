@@ -151,37 +151,16 @@ def add_store_tab(session: Session, store: pb.StoreResponse, state: dict | None 
         tab = store.tabs.add(id=TAB_ID, sort_order=TAB_SORT_ORDER, name_key="STORE_TAB_NAME_CHARACTER_PACKS",
                              icon=TAB_ICON, item_size=pb.MAGIC_LEAP)
         tab.items.extend(its)
+        from arcane_server.handlers.inbox_store import borrow_showcase
+
+        borrow_showcase(store, tab)
 
 
 def leap_unit(session: Session, unit_id: int, unit: pb.Unit | None) -> pb.Unit | None:
     """The unit after the leap (a new pb.Unit), or None when every stat is already at or above the targets."""
-    from arcane_server.unit_stats import rules_for
+    from arcane_server.unit_raise import Targets, raise_unit
 
-    rules = rules_for(session.game.gamedata)
-    udef = rules.unit_def(unit_id)
-    if udef is None:
-        return None
-    if unit is None:
-        new = rules.new_unit(unit_id, rarity=RARITY, level=LEVEL, gear_tier=GEAR_TIER)
-    else:
-        new = pb.Unit()
-        new.CopyFrom(unit)
-        if new.gear_tier < GEAR_TIER:
-            new.gear_tier = GEAR_TIER
-            del new.gear_slot_equipped[:]
-            new.gear_slot_equipped.extend([False] * 6)
-        new.level = max(new.level, LEVEL)
-        new.rarity = max(new.rarity, RARITY)
-    rules.unlock_abilities(new)
-    for aid, a in zip(rules.ability_ids(udef), udef.get("abilities") or []):
-        cap = min(ABILITY, len(a.get("levels") or []))
-        if new.ability_level[aid] > 0 and new.ability_level[aid] < cap:
-            new.ability_level[aid] = cap
-    rules.refresh(new)
-    if unit is not None and (new.level, new.rarity, new.gear_tier, list(new.ability_level)) == (
-            unit.level, unit.rarity, unit.gear_tier, list(unit.ability_level)):
-        return None
-    return new
+    return raise_unit(session.game.gamedata, unit_id, unit, Targets(LEVEL, RARITY, GEAR_TIER, ABILITY))
 
 
 def details(session: Session, b: Bundle) -> pb.StoreItemResponse:

@@ -461,6 +461,20 @@ def push_unlocked_battles(session: Session, gd: Gamedata, player: pb.Player) -> 
                                                          payload=cp.SerializeToString()))
 
 
+def complete_maps(session: Session, campaign_id: int, maps: int) -> Ident:
+    """Win every battle of the first `maps` maps of a campaign with 3 stars, never lowering stars (store bundles that
+    grant progress, sorcery_surge.py), and open the battles that unlocks. Returns the last battle granted."""
+    gd, player = session.game.gamedata, session.player
+    last: Ident = (campaign_id, 0, 0, 0)
+    for mi, m in enumerate(campaign_def(gd, campaign_id)["maps"][:maps]):
+        for ni, node in enumerate(m.get("nodes") or []):
+            for bi in range(len(node.get("battles") or [])):
+                get_progress(player, (campaign_id, mi, ni, bi)).star_level = 3
+                last = (campaign_id, mi, ni, bi)
+    push_unlocked_battles(session, gd, player)
+    return last
+
+
 # --- rewards ------------------------------------------------------------------------------------------------
 
 

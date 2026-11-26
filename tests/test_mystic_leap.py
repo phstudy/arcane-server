@@ -68,6 +68,7 @@ async def test_store_tab_needs_level_70_and_the_sale(client, clock):
     assert [d.remaining_purchases for d in it.purchase_limits.purchase_data] == [1]
     assert tab.sort_order > max(t.sort_order for t in store.tabs if t.id != ml.TAB_ID and t.item_size == pb.SPECIAL_OFFER_STORE_ITEM_SIZE)
     assert it.magic_leap_desc == "STORE_ITEM_MAGIC_LEAP_KINGDOM_VILLAINS_202401_INFO"
+    assert tab.showcase_items  # as every store tab
     clock["t"] = OFF_SALE
     assert leap_tab(await client.call("store", pb.StoreRequest(), pb.StoreResponse)) is None
 
