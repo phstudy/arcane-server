@@ -179,8 +179,10 @@ def test_main_starts_both_with_the_wired_env(tmp_path, monkeypatch):
 # --- supervision with fake children ----------------------------------------------------------------------------------
 
 # A child that says it listens and then runs until SIGTERM (exit 0), like aiohttp's run_app.
-SERVE = ("import signal, sys\n"
-         "signal.signal(signal.SIGTERM, lambda *a: (print('{name} bye', flush=True), sys.exit(0)))\n"
+# The SIGTERM handler writes with os.write: a print() there can land while the main print still holds stdout's
+# buffer ("reentrant call inside BufferedWriter"), when the stop comes right after the ready line.
+SERVE = ("import os, signal, sys\n"
+         "signal.signal(signal.SIGTERM, lambda *a: (os.write(1, b'{name} bye\\n'), sys.exit(0)))\n"
          "print('======== Running on http://0.0.0.0:1 ========', flush=True)\n"
          "signal.pause()\n")
 # A child that ignores SIGTERM (it is killed).
