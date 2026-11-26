@@ -1,7 +1,7 @@
 """Client for native/cas_host: the client's battle engine (libcas-battle.so) in a helper process.
 
-On the x86_64 battle host the helper is an Android arm64 executable run under qemu-aarch64 with a minimal
-bionic sysroot (native/cas_host/build.sh); on an arm64 Android device it could run natively. The protocol is
+The helper is an Android arm64 executable with a minimal bionic sysroot (tools/battle_host.py setup builds it in
+var/battle_host/): under qemu-aarch64 on x86_64 Linux, through bionic's linker on arm64 Linux. The protocol is
 a request/response pipe (see native/cas_host/cas_host.c), so one EngineProcess serialises its calls; the
 battle server spreads battles over several processes.
 """
@@ -9,12 +9,12 @@ battle server spreads battles over several processes.
 from __future__ import annotations
 
 import asyncio
+import os
 import shlex
 import struct
 from dataclasses import dataclass
-from pathlib import Path
 
-from arcane_server.config import PROJECT_ROOT
+from arcane_server.battle_host import host as battle_host
 
 OP_VERSION, OP_SCRIPT, OP_INIT, OP_BOOTSTRAP, OP_BEGIN, OP_MESSAGE, OP_FORFEIT, OP_UPDATE = range(1, 9)
 OP_CATCHUP, OP_SETVALUE, OP_SHUTDOWN, OP_ISV2, OP_MEM = range(9, 14)
@@ -32,17 +32,17 @@ class EngineCommand:
 
     @classmethod
     def from_setting(cls, value: str) -> EngineCommand:
-        """Settings.engine_cmd (ARCANE_ENGINE_CMD, shell words); empty: the layout native/cas_host/build.sh makes."""
+        """Settings.engine_cmd (ARCANE_ENGINE_CMD, shell words); empty: the battle host in var/battle_host/."""
         if value:
             return cls(tuple(shlex.split(value)))
-        root = PROJECT_ROOT / "native" / "cas_host" / "out"
-        sysroot = root / "sysroot"
-        return cls((str(root / "qemu-aarch64-static"), "-L", str(sysroot), str(sysroot / "system/bin/cas_host")))
+        return cls(battle_host.BattleHost(battle_host.DEFAULT_ROOT).engine_argv())
 
     def problems(self) -> list[str]:
         """Missing files of the command (checked at startup)."""
-        return [f"engine helper missing: {a} (build it with native/cas_host/build.sh)"
-                for a in self.argv if a.startswith("/") and not Path(a).exists()]
+        missing = [a for i, a in enumerate(self.argv)
+                   if not battle_host.program_found(a) and (i == 0 or os.path.isabs(a))]
+        return [f"engine helper missing: {a} (tools/battle_host.py setup --apk <APK> builds the battle host; "
+                f"qemu-aarch64: {battle_host.qemu_hint()})" for a in missing]
 
 
 class EngineProcess:

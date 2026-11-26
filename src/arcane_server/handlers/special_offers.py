@@ -1,9 +1,11 @@
 """Rotating special offers: the login popup, the home screen's SPECIAL OFFERS entry and the store's special-offer tab.
 
 Client side: the offers reach the client only as a SPECIAL_OFFER_UPDATED dynamic message
-(SpecialOfferDynamicMessage, piggy-backed on any response; measured on the device on nearly every
-one). The client keeps its `store_items` as its special offers. (The home screen's SPECIAL OFFERS entry of older
-clients is unused in v28: no home entry.) The popup is client logic too: on the "home_screen" placement the client
+(SpecialOfferDynamicMessage, carried on any response). The client replaces its special offers with the message's
+`store_items` and keeps them until the next message; its store controller is up before the connection is made. So
+each connection is sent the offers once, on its first response, and again only when the message changed
+(attach_offers). (The home screen's SPECIAL OFFERS entry of older
+clients is unused in v29: no home entry.) The popup is client logic too: on the "home_screen" placement the client
 picks the first offer whose `special_offer_vgp_placement_triggers` contain the placement and that was not shown within
 its `special_offer_popup_frequency_s` (or `special_offer_popup_before_expire_s`), at most
 constants.specialOfferPopupLimit (2) popups per specialOfferPopupLimitCooldownS (12 h). `available_store_item_ids` only
@@ -40,7 +42,7 @@ CONTENT = PROJECT_ROOT / "content" / "store" / "special_offers.json"
 EPOCH = 1704067200  # 2024-01-01 00:00 UTC: appearance 0 starts here
 ORDER_SEED = "arcane-special-offers"
 NO_LIMIT_TS = 18446744011573954816  # "no cooldown" limit_elapsed_timestamp, as the client expects
-# PurchaseLimit.granularity of the content offers' limits: a value the v28 client has no name for (it knows DAY = 1
+# PurchaseLimit.granularity of the content offers' limits: a value the v29 client has no name for (it knows DAY = 1
 # and LIFETIME = 2) and shows like LIFETIME (remaining / count available). Here: per appearance.
 OFFER_GRANULARITY = 3
 # The store tab the active offers are listed in: the look of the content's special tab
@@ -48,6 +50,7 @@ OFFER_GRANULARITY = 3
 TAB_ID = 4972750404268090
 TAB_SORT_ORDER = 10
 STATE_KEY = "special_offers"
+SENT_KEY = "special_offers_sent"  # Session.state: the payload this connection was last sent
 
 
 def _now() -> int:
@@ -181,9 +184,9 @@ def _expire_store_cache() -> pb.DynamicMessage:
 
 
 def attach_offers(session: Session, rpc_name: str) -> None:
-    """AFTER_RPC: attach the offers to every response, as measured on the device (the client may drop the copy
-    on its first response, which arrives before its store controller is up). The message is built once per rotation
-    step and connection (and after a purchase); when the rotation moved on, the cached store is expired too."""
+    """AFTER_RPC: send the offers on a connection's first response and then only when they changed. The message is
+    built once per rotation step and connection (and after a purchase); when the rotation moved on, the cached store
+    is expired too."""
     now = _now()
     k = current_index(now, session.game.settings.toggles)
     last = session.state.get(STATE_KEY)
@@ -191,8 +194,10 @@ def attach_offers(session: Session, rpc_name: str) -> None:
         session.state[STATE_KEY] = (k, dynamic_message(session, now))
         if last is not None:
             session.pending_dynamic.append(_expire_store_cache())
-    if not any(d.type == pb.SPECIAL_OFFER_UPDATED_DYNAMIC_MESSAGE for d in session.pending_dynamic):
-        session.pending_dynamic.append(session.state[STATE_KEY][1])
+    msg = session.state[STATE_KEY][1]
+    if session.state.get(SENT_KEY) != msg.payload:
+        session.pending_dynamic.append(msg)
+        session.state[SENT_KEY] = msg.payload
 
 
 AFTER_RPC.append(attach_offers)
@@ -225,9 +230,9 @@ async def buy(session: Session, req: pb.BuyStoreItemRequest) -> pb.BuyStoreItemR
     res.purchase_limits.CopyFrom(player_item(a, state).purchase_limits)
     res.next_free_store_item_timestamp = session.player.next_free_store_item_timestamp
     res.refreshed_store.CopyFrom(st.player_store(session, now))
-    msg = dynamic_message(session, now, state)
-    session.state[STATE_KEY] = (current_index(now, session.game.settings.toggles), msg)
-    session.pending_dynamic.extend([msg, _expire_store_cache()])
+    # the new purchase count goes out with this response (attach_offers: the message changed)
+    session.state[STATE_KEY] = (current_index(now, session.game.settings.toggles), dynamic_message(session, now, state))
+    session.pending_dynamic.append(_expire_store_cache())
     return res
 
 

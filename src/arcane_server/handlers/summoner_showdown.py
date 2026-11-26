@@ -45,7 +45,7 @@ from functools import cache
 from typing import TYPE_CHECKING
 
 from arcane_server import battle_bootstrap as bb
-from arcane_server import clock, opponents, remote_battles
+from arcane_server import clock, opponents, remote_battles, remote_pve
 from arcane_server.battle_restrictions import restriction_problem, unsatisfiable
 from arcane_server.clock import zone
 from arcane_server.config import PROJECT_ROOT
@@ -896,6 +896,7 @@ class _Seeker:
     """Multiplayer: a player waiting for a human opponent in a round (held limited_time_arena_battle_start)."""
     public_id: str
     fighting: pvp.Squad
+    web: bool = False  # a browser (remote_pve): its result waits for the battle server's report
     done: asyncio.Future = field(default_factory=lambda: asyncio.get_running_loop().create_future())
 
 
@@ -965,12 +966,14 @@ async def _match_human(session: Session, r: Round, fighting: pvp.Squad) -> dict 
             other.done.set_exception(e)
             raise
         data = bb.bootstrap_bytes(bs)
+        webs = (other.web, remote_pve.wanted(session))
         for team, (me, opp) in enumerate(((other.public_id, session.public_id), (session.public_id, other.public_id))):
-            pvp.remember_remote(game, battle_id, pvp.PendingBattle("lta", me, opp, report_token, team=team))
+            pvp.remember_remote(game, battle_id, pvp.PendingBattle("lta", me, opp, report_token, team=team, web=webs[team],
+                                                                   started=remote_pve.now()))
         other.done.set_result({"team": 0, "battle_id": battle_id, "token": token_a, "bootstrap": data,
                                "opponent": session.public_id})
         return {"team": 1, "battle_id": battle_id, "token": token_b, "bootstrap": data, "opponent": other.public_id}
-    me = _Seeker(session.public_id, fighting)
+    me = _Seeker(session.public_id, fighting, remote_pve.wanted(session))
     queue.append(me)
     cancel = game.matchmaking.watch(session.public_id)  # the popup's CANCEL ends the wait (cancel_matchmaking)
     canceled = asyncio.ensure_future(cancel.wait())
@@ -997,6 +1000,7 @@ async def limited_time_arena_battle_start(session: Session, req: pb.LimitedTimeA
         raise RpcError(pb.BAD_REQUEST, "join the round first")
     mine = _check_squad(gd, player, r, rs, req)
     fighting = bolstered_squad(gd, mine, r)
+    pvp.browser_battle(session)  # a browser's battle needs the battle server: refused before the wait without one
     if not await pvp.search(session):  # the matchmaking popup's wait (matchmaking.py)
         return pb.LimitedTimeArenaBattleStartResponse(result=pb.CANCELED)
     if req.HasField("squad_save"):
@@ -1010,6 +1014,8 @@ async def limited_time_arena_battle_start(session: Session, req: pb.LimitedTimeA
         battle_id = started["battle_id"]
         res.player_token, res.player_battle_id, res.bootstrap_bytes = started["token"], started["team"], started["bootstrap"]
         res.battle_id, res.match_id = battle_id, battle_id
+        if remote_pve.wanted(session):
+            remote_pve.hand_out(session, battle_id, started["token"])
         bot = False
     else:
         opp, theirs = _pick_archived(game, session.public_id, r, random.Random())

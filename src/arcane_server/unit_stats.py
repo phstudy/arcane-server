@@ -58,7 +58,7 @@ GEAR_SLOTS = 6
 MAX_RARITY = 7
 
 
-def _f32(x: float) -> float:
+def f32(x: float) -> float:
     return struct.unpack("<f", struct.pack("<f", x))[0]
 
 
@@ -196,8 +196,8 @@ class UnitRules:
         if growth_rows and unit.rarity >= 1 and unit.level >= 1:
             g = growth_rows[min(unit.rarity, len(growth_rows)) - 1]
             for k in GROWTH_STATS:
-                per_level = _f32(_f32(g.get("baseMultiplier", 0)) * _f32(g.get(k, 0)))
-                bonus[k] += base.get(k, 0) * _f32(per_level * (unit.level - 1))
+                per_level = f32(f32(g.get("baseMultiplier", 0)) * f32(g.get(k, 0)))
+                bonus[k] += base.get(k, 0) * f32(per_level * (unit.level - 1))
 
         gst = (self.gd.by_id("gearSlotTable").get(int(udef.get("gearSlotTable", 0))) or {}).get("data") or {}
         tiers = udef.get("gearTiers") or []

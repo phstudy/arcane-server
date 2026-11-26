@@ -47,7 +47,9 @@ class Human:
     player_id: int
     token: str
     public_id: str = ""
-    sockets: set[web.WebSocketResponse] = field(default_factory=set)
+    sockets: set[web.WebSocketResponse] = field(default_factory=set)  # get every frame (the broadcast set)
+    # connected after the start, not caught up yet: they join `sockets` once rc:3 and the catch-up went out to them
+    joining: set[web.WebSocketResponse] = field(default_factory=set)
     ready: bool = False
     speed: float = 1.0
     disconnected_at: float | None = None
@@ -61,8 +63,16 @@ class Outcome:
     reason: int
     report_token: str
     survivors: tuple[int, ...] = ()  # surviving squad characters (not summoned ones) per team
+    stars: tuple[int, ...] = ()  # the engine's star count per team (TeamResult.star_count; PvE stars)
     # the humans' battle trackers at the end: (public id, activity id, tracker id, value) (leaderboard contests)
     activities: tuple[tuple[str, int, int, int], ...] = ()
+    # every unit's end state: (persistent id, alive, health percent) (towers, raids, expeditions, club war)
+    units: tuple[tuple[int, bool, float], ...] = ()
+
+
+def unit_results(ended: pb.BattleLib_UpdateResult.BattleEnded) -> tuple[tuple[int, bool, float], ...]:
+    """The engine's UnitResults, as the client hands them to a battle end (UnitBattleResult)."""
+    return tuple((int(u.persistent_id), bool(u.is_alive), float(u.health_percent)) for u in ended.unit_results)
 
 
 def activities(humans: dict[int, Human], ended: pb.BattleLib_UpdateResult.BattleEnded
@@ -70,6 +80,12 @@ def activities(humans: dict[int, Human], ended: pb.BattleLib_UpdateResult.Battle
     """The engine's activity trackers of each human player (PlayerResult.activity_trackers), by public id."""
     return tuple((humans[int(r.player_id)].public_id, int(t.activity_id), int(t.tracker_id), int(t.value))
                  for r in ended.player_results if int(r.player_id) in humans for t in r.activity_trackers)
+
+
+def stars(ended: pb.BattleLib_UpdateResult.BattleEnded) -> tuple[int, ...]:
+    """The engine's star count per team id 0..n (a team without a TeamResult: 0)."""
+    by_team = {int(t.team_id): int(t.star_count) for t in ended.team_results}
+    return tuple(by_team.get(t, 0) for t in range(max(by_team, default=-1) + 1))
 
 
 def survivors(bootstrap: bytes, ended: pb.BattleLib_UpdateResult.BattleEnded) -> tuple[int, ...]:
@@ -130,6 +146,9 @@ class Battle:
         self.error: str | None = None
         self._eid: int | None = None
         self._wake = asyncio.Event()
+        # held while frames are made and sent (a tick, a socket's catch-up): a joining socket gets the catch-up, then
+        # exactly the ticks after it
+        self._frames = asyncio.Lock()
         self._task: asyncio.Task | None = None
         self.on_closed: Callable[[Battle], None] | None = None
         self.ticks = 0
@@ -145,18 +164,20 @@ class Battle:
     # --- sockets ----------------------------------------------------------------------------------------
 
     async def attach(self, human: Human, ws: web.WebSocketResponse) -> None:
-        """A (re)connected client socket. Messages are handled by `handle_*` from the server's read loop."""
-        human.sockets.add(ws)
+        """A (re)connected client socket. Messages are handled by `handle_*` from the server's read loop. Once the
+        battle runs, the socket gets frames only after its CLIENT_READY (rc:3 + the catch-up first)."""
+        (human.joining if self.state in (State.RUNNING, State.ENDED) else human.sockets).add(ws)
         human.disconnected_at = None
         log.info("battle %s: player %d connected (%s)", self.id, human.player_id, self.state.value)
 
     def detach(self, human: Human, ws: web.WebSocketResponse) -> None:
         human.sockets.discard(ws)
-        if not human.sockets:
+        human.joining.discard(ws)
+        if not human.sockets and not human.joining:
             human.disconnected_at = self.clock()
         log.info("battle %s: player %d disconnected", self.id, human.player_id)
 
-    async def handle_control(self, human: Human, text: str) -> None:
+    async def handle_control(self, human: Human, ws: web.WebSocketResponse, text: str) -> None:
         parsed = parse_control(text)
         if parsed is None:
             log.warning("battle %s: bad control message %r", self.id, text[:80])
@@ -167,8 +188,7 @@ class Battle:
             if self.first_ready is None:
                 self.first_ready = self.clock()
             if self.state in (State.RUNNING, State.ENDED):  # reconnect: start it again from the catch-up
-                await self._send_text(human, control(RC.ALL_CLIENTS_READY))
-                await self._send_catch_up(human)
+                await self._join(human, ws)
             self._wake.set()
         elif code == RC.BATTLE_SPEED and len(data) == 3:
             try:
@@ -248,23 +268,29 @@ class Battle:
             now = self.clock()
             real_dt, last = now - last, now
             await self._check_abandoned(now)
-            buf = await self.engine.update(self._eid, real_dt * self.speed(), real_dt, int(time.time()))
-            self.ticks += 1
-            ended = battle_ended(buf)
-            if ended is not None:
-                self.state = State.ENDED
-                self.outcome = Outcome(self.id, int(ended.winning_team), int(ended.reason), self.report_token,
-                                       survivors(self.bootstrap, ended), activities(self.humans, ended))
-                log.info("battle %s ended: team %d won (reason %d) after %d ticks", self.id, ended.winning_team,
-                         ended.reason, self.ticks)
-                try:
-                    await self.reporter(self.outcome)  # before the clients see the end: they ask for the result
-                except Exception:
-                    log.exception("battle %s: reporting the result failed", self.id)
-            if buf:
-                await self._broadcast_bytes(buf)
+            async with self._frames:
+                await self._tick(real_dt)
         if self.state == State.ENDED:
             await asyncio.sleep(END_LINGER_S)
+
+    async def _tick(self, real_dt: float) -> None:
+        buf = await self.engine.update(self._eid, real_dt * self.speed(), real_dt, int(time.time()))
+        self.ticks += 1
+        ended = battle_ended(buf)
+        if ended is not None:
+            self.state = State.ENDED
+            self.outcome = Outcome(self.id, int(ended.winning_team), int(ended.reason), self.report_token,
+                                   survivors=survivors(self.bootstrap, ended),
+                                   activities=activities(self.humans, ended), stars=stars(ended),
+                                   units=unit_results(ended))
+            log.info("battle %s ended: team %d won (reason %d) after %d ticks", self.id, ended.winning_team,
+                     ended.reason, self.ticks)
+            try:
+                await self.reporter(self.outcome)  # before the clients see the end: they ask for the result
+            except Exception:
+                log.exception("battle %s: reporting the result failed", self.id)
+        if buf:
+            await self._broadcast_bytes(buf)
 
     async def _check_abandoned(self, now: float) -> None:
         for h in self.humans.values():
@@ -303,13 +329,19 @@ class Battle:
 
     # --- sending ----------------------------------------------------------------------------------------
 
-    async def _send_catch_up(self, human: Human) -> None:
-        if self._eid is None:
-            return
-        buf = await self.engine.catch_up(self._eid)
-        if buf:
-            for ws in list(human.sockets):
+    async def _join(self, human: Human, ws: web.WebSocketResponse) -> None:
+        """rc:3 and the engine's catch-up to `ws` alone, then `ws` joins the broadcast set. Under the frame lock: no
+        tick is sent between them, and the next tick is the first one after the catch-up."""
+        async with self._frames:
+            human.sockets.discard(ws)
+            human.joining.add(ws)
+            await _safe(ws.send_str(control(RC.ALL_CLIENTS_READY)))
+            buf = await self.engine.catch_up(self._eid) if self._eid is not None else b""
+            if buf:
                 await _safe(ws.send_bytes(buf))
+            if ws in human.joining:  # (still connected)
+                human.joining.discard(ws)
+                human.sockets.add(ws)
 
     async def _send_text(self, human: Human, text: str) -> None:
         for ws in list(human.sockets):
@@ -327,7 +359,7 @@ class Battle:
     def status(self) -> dict:
         return {"battle_id": self.id, "kind": self.kind, "state": self.state.value, "ticks": self.ticks,
                 "error": self.error, "outcome": self.outcome.__dict__ if self.outcome else None,
-                "players": [{"player_id": h.player_id, "public_id": h.public_id, "connected": bool(h.sockets),
+                "players": [{"player_id": h.player_id, "public_id": h.public_id, "connected": bool(h.sockets or h.joining),
                              "ready": h.ready, "forfeited": h.forfeited, "speed": h.speed}
                             for h in self.humans.values()]}
 

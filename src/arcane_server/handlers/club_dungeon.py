@@ -31,7 +31,7 @@ from functools import cache
 from typing import TYPE_CHECKING, Any
 
 from arcane_server import battle_bootstrap as bb
-from arcane_server import content_data
+from arcane_server import content_data, remote_pve
 from arcane_server.clock import day_end, day_start
 from arcane_server.handlers import clubs
 from arcane_server.handlers.campaign import Delta, MAX_SPELLS, MAX_SQUAD, grant_rewards
@@ -299,8 +299,10 @@ async def club_dungeon_battle_start(
     _, _, node = _nodes()[node_i]
     battle_id = _rng("battle", ctx.club.id, st["week"], node_i, st["used"], player.id).getrandbits(52)
     bs = bootstrap(game, node, battle_id, units, spells, req.leader_unit, int(player.level))
+    remote_id = await remote_pve.begin(session, "club_dungeon_battle_start", bs)
     st["used"] = int(st["used"]) + 1
     st["battle"] = node_i
+    st["remote"] = remote_id  # run on the battle server (remote_pve): its report decides the result
     _save(game, ctx.club.id, player.id, st)
     _save_squad(player, req)
     session.save()
@@ -322,9 +324,12 @@ async def club_dungeon_battle_end(session: Session, req: pb.ClubDungeonBattleEnd
     ctx = clubs.require_club(session)
     game, player, now = session.game, session.player, clubs.now_s()
     st = _state(game, ctx.club.id, player.id, now)
-    node_i = st.pop("battle", None)
-    if node_i is None:
+    if st.get("battle") is None:
         raise RpcError(pb.BAD_REQUEST, "no club dungeon battle in progress")
+    # a remote battle: the battle server's report decides, not what the client claims (not reported yet: the battle
+    # stays as stored, nothing was saved)
+    remote_pve.settle(session, st.pop("remote", ""), req, lambda: None)
+    node_i = st.pop("battle")
     delta = Delta()
     items = _node_rewards(int(node_i), req.win)
     club_items = [(i, n) for i, n in items if clubs.is_club_item(game, i)]

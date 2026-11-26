@@ -10,7 +10,7 @@ from typing import TYPE_CHECKING, Any
 
 from aiohttp import web
 
-from arcane_server import accounts, clock, join, pending_battles
+from arcane_server import accounts, clock, join, pending_battles, redemption
 from arcane_server.admin import core
 from arcane_server.admin.core import authed
 from arcane_server.admin.names import names, spell_name, unit_name
@@ -223,6 +223,77 @@ async def player_level(request: web.Request) -> web.Response:
     return web.json_response({"ok": True, "before": before, "after": p.level})
 
 
+MAX_UNITS_PER_REQUEST = 50
+
+
+def unit_ids(data: dict[str, Any], playable: set[int]) -> list[int]:
+    """The request's "units": a non-empty list of at most MAX_UNITS_PER_REQUEST distinct playable unit ids (integers,
+    not booleans)."""
+    ids = data.get("units")
+    if (not isinstance(ids, list) or not ids or len(ids) > MAX_UNITS_PER_REQUEST
+            or not all(isinstance(i, int) and not isinstance(i, bool) for i in ids)):
+        raise _bad(f"units must be a list of 1..{MAX_UNITS_PER_REQUEST} unit definition ids")
+    if len(set(ids)) != len(ids):
+        raise _bad("units must not repeat an id")
+    if unknown := [i for i in ids if i not in playable]:
+        raise _bad(f"not playable units: {unknown}")
+    return ids
+
+
+def club_item_after(before: int, delta: int) -> int:
+    """A club item's count after a grant (delta > 0) or removal (delta < 0, at most what the club has)."""
+    if delta == 0:
+        raise _bad("delta must not be 0")
+    if before + delta < 0:
+        raise _bad(f"club has only {before}")
+    return before + delta
+
+
+@authed
+async def player_units(request: web.Request) -> web.Response:
+    """{"units": [definition ids], "rarity", "level", "gear_tier"}: grant each playable unit the player lacks and set
+    every listed unit to these values (a test or support setup, e.g. a squad that meets a raid tier)."""
+    from arcane_server.game import playable_units
+    from arcane_server.unit_stats import MAX_RARITY, rules_for
+
+    game, pid = _game(request), request.match_info["pid"]
+    _require_account(game, pid)
+    data = await _body(request)
+    ids = unit_ids(data, {int(u["id"]) for u in playable_units(game.gamedata)})
+    rules = rules_for(game.gamedata)
+    rarity = _int(data, "rarity", 1, MAX_RARITY)
+    level = _int(data, "level", 1, rules.max_unit_level)
+    gear_tier = _int(data, "gear_tier", 1)
+    rows = game.gamedata.by_id("unit")
+    if over := [i for i in ids if gear_tier > len(rows[i].get("gearTiers") or [])]:
+        raise _bad(f"gear tier {gear_tier} is above what units {over} have")
+    p = game.player(pid)
+    owned = {u.definition_id: u for u in p.unit_inventory}
+    for i in ids:
+        u = owned.get(i)
+        if u is None:
+            u = rules.new_unit(i, rarity=rarity, level=level, gear_tier=gear_tier)
+            p.unit_inventory.append(u)
+        else:
+            u.rarity, u.level, u.gear_tier = rarity, level, gear_tier
+            rules.unlock_abilities(u)
+            rules.refresh(u)
+    game.save(pid)
+    core.audit(game.db.conn, request, "units", pid, units=ids, rarity=rarity, level=level, gear_tier=gear_tier,
+               online=game.is_online(pid))
+    return web.json_response({"ok": True, "units": ids, "online": game.is_online(pid)})
+
+
+@authed
+async def units(request: web.Request) -> web.Response:
+    """The playable units: id and name."""
+    from arcane_server.game import playable_units
+
+    game = _game(request)
+    return web.json_response({"units": [{"id": int(u["id"]), "name": unit_name(game, int(u["id"]))}
+                                        for u in playable_units(game.gamedata)]})
+
+
 @authed
 async def player_vip(request: web.Request) -> web.Response:
     """{"days"}: VIP until now + days of game time (0 = expired). Has no lasting effect while the vip_forever toggle
@@ -384,6 +455,44 @@ async def inbox_send(request: web.Request) -> web.Response:
     return web.json_response({"ok": True, "recipients": len(targets)})
 
 
+# --- redemption codes (Settings > REDEEM CODE in the game) -----------------------------------
+
+
+@authed
+async def redemption_codes(request: web.Request) -> web.Response:
+    return web.json_response({"codes": [dataclasses.asdict(c) for c in redemption.codes(_game(request).db)]})
+
+
+@authed
+async def redemption_create(request: web.Request) -> web.Response:
+    """{"code", "items": [{"item_id","count"}], "max_claims" (0 = no limit), "expires_at" (epoch s, 0 = never)}."""
+    game = _game(request)
+    data = await _body(request)
+    items = [(_int(a, "item_id", 1), _int(a, "count", 1, 10**9)) for a in data.get("items") or []]
+    for item_id, _ in items:
+        if item_id not in names(game).items:
+            raise _bad(f"unknown item {item_id}")
+    max_claims = _int(data, "max_claims", 0) if "max_claims" in data else 0
+    expires_at = _int(data, "expires_at", 0) if "expires_at" in data else 0
+    try:
+        code = redemption.create(game.db, str(data.get("code", "")), items, max_claims, expires_at,
+                                 request[core.ADMIN].actor)
+    except redemption.CodeProblem as e:
+        raise _bad(str(e)) from None
+    core.audit(game.db.conn, request, "redemption_code", code.code, items=items, max_claims=max_claims,
+               expires_at=expires_at)
+    return web.json_response(dataclasses.asdict(code))
+
+
+@authed
+async def redemption_delete(request: web.Request) -> web.Response:
+    game, code = _game(request), request.match_info["code"]
+    if not redemption.delete(game.db, code):
+        raise _bad(f"no code {code}", 404)
+    core.audit(game.db.conn, request, "redemption_code_delete", redemption.normalize(code))
+    return web.json_response({"ok": True})
+
+
 # =====================================================================================
 # Clubs
 # =====================================================================================
@@ -451,6 +560,29 @@ async def club(request: web.Request) -> web.Response:
     return web.json_response({"id": cid, "name": c.name, "description": c.settings.description,
                               "members": members, "raids": _raid_states(game, cid, now),
                               "war": _war_state(game, cid, now)})
+
+
+@authed
+async def club_items(request: web.Request) -> web.Response:
+    """{"item_id", "delta"}: grant (delta > 0) or remove (delta < 0, at most what the club has) a club item, e.g. raid
+    tickets."""
+    from arcane_server.handlers import clubs
+
+    game, cid = _game(request), request.match_info["cid"]
+    club = clubs.load_club(game, cid)
+    if club is None:
+        raise _bad(f"no club {cid}", 404)
+    data = await _body(request)
+    item_id = _int(data, "item_id", 1)
+    delta = _int(data, "delta", -10**12, 10**12)
+    if item_id not in names(game).items:
+        raise _bad(f"unknown item {item_id}")
+    before = clubs.club_inventory_count(club, item_id)
+    club_item_after(before, delta)
+    after = clubs.club_inventory_count(clubs.club_inventory_add(game, cid, item_id, delta), item_id)
+    core.audit(game.db.conn, request, "club item", cid, item_id=item_id, item=names(game).item(item_id)["name"],
+               delta=delta, before=before, after=after)
+    return web.json_response({"ok": True, "before": before, "after": after})
 
 
 # =====================================================================================

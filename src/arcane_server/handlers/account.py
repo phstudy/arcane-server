@@ -5,9 +5,10 @@ from __future__ import annotations
 import logging
 
 from arcane_server import clock
-from arcane_server import accounts, tutorial
+from arcane_server import accounts, redemption, tutorial
+from arcane_server.attempts import THROTTLE
 from arcane_server import game as g
-from arcane_server.inventory import consume_item
+from arcane_server.inventory import consume_item, grant_item
 from arcane_server import energy, opponents
 from arcane_server.handlers import clubs
 from arcane_server.proto import serverproto_pb2 as pb
@@ -77,6 +78,92 @@ async def update_player_profile(session: Session, req: pb.UpdatePlayerProfileReq
     p.show_vip_profile_bg = req.show_vip_bg
     session.save()
     return pb.UpdatePlayerProfileResponse()
+
+
+@rpc("redeem_redemption_code", pb.RedeemRedemptionCodeRequest)
+async def redeem_redemption_code(session: Session, req: pb.RedeemRedemptionCodeRequest) -> pb.RedeemRedemptionCodeResponse:
+    """Settings > REDEEM CODE: an admin-made code's items (arcane_server.redemption), shown as a pack opening.
+    Any refusal is ERROR, for which the client shows "invalid or has expired"; so is a try while too many wrong
+    codes were entered lately (arcane_server.attempts)."""
+    if THROTTLE.blocked("redemption", session.public_id):
+        raise RpcError(pb.ERROR, "too many wrong codes, try again later")
+    gd, player = session.game.gamedata, session.player
+    granted = pb.Player()
+    delta = pb.InventoryDelta()
+
+    def grant(items: list[tuple[int, int]]) -> None:  # on a copy: a grant that raises changes nothing
+        granted.CopyFrom(player)
+        for item_id, count in items:
+            if energy.is_energy(gd, item_id):  # settled first, at most globalCap
+                count = energy.grant(gd, granted, item_id, count)
+            else:
+                grant_item(granted, item_id, count)
+            if count:
+                delta.items.add(id=item_id, count=count)
+
+    got = redemption.redeem(session.game.db, req.code, session.public_id, grant)
+    if got is None:
+        THROTTLE.failed("redemption", session.public_id)
+        raise RpcError(pb.ERROR, "invalid, expired, used up or already redeemed code")
+    player.CopyFrom(granted)
+    session.save()
+    return pb.RedeemRedemptionCodeResponse(code=redemption.normalize(req.code), player_claim_count=got[1],
+                                           inventory_delta=delta)
+
+
+# --- Settings > Link Device (arcane_server.accounts: account link) -------------------------------------------
+
+
+def _link_error(session: Session, e: accounts.LinkProblem) -> RpcError:
+    THROTTLE.failed("account_link", session.public_id)
+    code = pb.ACCOUNT_LINK_VERIFY_CODE_DOES_NOT_EXIST if e.verify_code else pb.ACCOUNT_LINK_CODE_DOES_NOT_EXIST
+    return RpcError(code, str(e))
+
+
+@rpc("generate_account_link_code", pb.GenerateAccountLinkCodeRequest)
+async def generate_account_link_code(session: Session, req: pb.GenerateAccountLinkCodeRequest) -> pb.GenerateAccountLinkCodeResponse:
+    """Primary device: a link code to enter on the secondary device, with its expiry (real time)."""
+    code = accounts.create_link_code(session.game.db, session.public_id)
+    return pb.GenerateAccountLinkCodeResponse(account_link_code=code.code, code_expiration_timestamp=code.expires_at)
+
+
+@rpc("enter_account_link_code", pb.EnterAccountLinkCodeRequest)
+async def enter_account_link_code(session: Session, req: pb.EnterAccountLinkCodeRequest) -> pb.EnterAccountLinkCodeResponse:
+    """Secondary device: the primary's link code -> a verification code to enter on the primary, which is told
+    (ACCOUNT_LINK_CODE_ENTERED) to show its verification code input."""
+    if THROTTLE.blocked("account_link", session.public_id):  # too many wrong codes lately: as a wrong code
+        raise RpcError(pb.ACCOUNT_LINK_CODE_DOES_NOT_EXIST, "too many wrong codes, try again later")
+    try:
+        primary, verify, expires = accounts.enter_link_code(session.game.db, req.account_link_code, session.public_id)
+    except accounts.LinkProblem as e:
+        raise _link_error(session, e) from None
+    await session.game.push(primary, [pb.DynamicMessage(
+        type=pb.ACCOUNT_LINK_CODE_ENTERED_DYNAMIC_MESSAGE,
+        payload=pb.AccountLinkCodeEnteredDynamicMessage().SerializeToString())])
+    return pb.EnterAccountLinkCodeResponse(account_link_verify_code=verify, verify_code_expiration_timestamp=expires)
+
+
+@rpc("verify_account_link_code", pb.VerifyAccountLinkCodeRequest)
+async def verify_account_link_code(session: Session, req: pb.VerifyAccountLinkCodeRequest) -> pb.VerifyAccountLinkCodeResponse:
+    """Primary device: the secondary's verification code. The secondary is told this account's anon_id
+    (ACCOUNT_LINK_CODE_VERIFIED); it keeps it as its device id, so it logs in to this account from then on."""
+    if THROTTLE.blocked("account_link", session.public_id):
+        raise RpcError(pb.ACCOUNT_LINK_VERIFY_CODE_DOES_NOT_EXIST, "too many wrong codes, try again later")
+    db = session.game.db
+    try:
+        device = accounts.pending_link(db, req.account_link_code, req.account_link_verify_code, session.public_id)
+    except accounts.LinkProblem as e:
+        raise _link_error(session, e) from None
+    me, other = db.account_by_public_id(session.public_id), db.account_by_public_id(device)
+    if me is None or other is None:
+        raise RpcError(pb.ERROR, "account gone")
+    verified = pb.DynamicMessage(type=pb.ACCOUNT_LINK_CODE_VERIFIED_DYNAMIC_MESSAGE,
+                                 payload=pb.AccountLinkCodeVerifiedDynamicMessage(new_anon_id=me.anon_id).SerializeToString())
+    if not await session.game.push(device, [verified]):
+        raise RpcError(pb.ERROR, "the secondary device is not connected")
+    accounts.finish_link(db, req.account_link_code, other.anon_id)
+    log.info("account link: the device of %s now plays %s", device, session.public_id)
+    return pb.VerifyAccountLinkCodeResponse()
 
 
 @rpc("set_squad_selection", pb.SetPlayerSquadSelectionRequest)

@@ -29,7 +29,7 @@ standard rules for a shared server.
 | `population_growth` | `current` | `strongest` | the generated players follow a human's collection power as a normal distribution (median = that human, sd 20%): up at most +15% a game day, down at once. current: the account that logged in last; strongest: the strongest human of the last 7 days; off (population_growth.py) |
 | `server_played_lta_scores` | `True` | `False` | server-played players score on the Summoner Showdown leaderboards (summoner_showdown.py) |
 | `flash_gift_ttl_s` | `86400` | `7200` | how long a flash gift mail can be claimed after it drops (flash_gifts.py; standard: 2 hours) |
-| `solo_club_rules` | `True` | `False` | the human player always leads their club, raids need no member count, no level gate to join a club or register for Club Conquest, no inactivity role changes; off: the standard club rules (clubs, raids, club_war) |
+| `solo_club_rules` | `True` | `False` | the human player always leads their club, raids need no member count, no level gate to join a club or register for Club Conquest, no inactivity role changes, no week between new clubs; off: the standard club rules (clubs, raids, club_war) |
 | `server_played_club_open_slot` | `True` | `False` | a full club shows one open slot to players looking to join; joining evicts its weakest server-played member, never a human (clubs) |
 | `special_offer_slots` | `3` | `3` | special offers on sale at once, staggered: a new one every duration/slots (special_offers.py) |
 | `inbox_reward_mail_only` | `False` | `False` | the inbox lists (and counts as unread) only mail with attachments: announcements without a reward are kept, hidden while it is on, and back when it is turned off (inbox_store.py; the offline setup screen's "Inbox" choice) |

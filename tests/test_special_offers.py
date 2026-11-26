@@ -125,14 +125,49 @@ async def test_responses_carry_offers_like_the_original(client, clock):
         assert it.main_image and it.name_key and it.item_counts
         assert not it.iap_product_id_android and not it.iap_product_id_ios
         assert it.is_free or (it.cost.item_id == GEMS and it.cost.count > 0)
-    # attached to every response (as in the game), unchanged; the store lists them in a special-offer tab
-    env = await client.call_raw("store", pb.StoreRequest())
-    assert offers_pushed(env) == [msg]
-    assert not any(d.type == pb.EXPIRE_RPC_CACHE_MESSAGE for d in env.dynamic_messages)
+    # the store lists them in a special-offer tab
     store = pb.StoreResponse.FromString(env.payload)
     tab = next(t for t in store.tabs if t.id == so.TAB_ID)
     assert tab.item_size == pb.SPECIAL_OFFER_STORE_ITEM_SIZE
     assert [it.id for it in tab.items] == [it.id for it in msg.store_items]
+
+
+async def test_offers_are_sent_once_per_connection_then_only_when_they_change(client, clock):
+    """The client keeps the last offers it was sent until the next message replaces them (its store controller is up
+    before the connection), so repeating an unchanged copy on every response only costs traffic."""
+    from conftest import GameClient
+
+    first = offers_pushed(await client.call_raw("player", pb.PlayerRequest()))
+    assert len(first) == 1
+    for rpc, req in (("store", pb.StoreRequest()), ("player", pb.PlayerRequest())):
+        env = await client.call_raw(rpc, req)
+        assert offers_pushed(env) == [] and not any(d.type == pb.EXPIRE_RPC_CACHE_MESSAGE for d in env.dynamic_messages)
+    # the rotation moves on: the new set is sent (and the cached store expired)
+    clock["t"] += T.special_offer_duration_s // T.special_offer_slots
+    env = await client.call_raw("player", pb.PlayerRequest())
+    [moved] = offers_pushed(env)
+    assert moved != first[0] and any(d.type == pb.EXPIRE_RPC_CACHE_MESSAGE for d in env.dynamic_messages)
+    assert offers_pushed(await client.call_raw("player", pb.PlayerRequest())) == []
+    # a new connection (a restarted client) gets the current set once again
+    again = await GameClient(client.http, client.anon_id).login()
+    try:
+        assert offers_pushed(await again.call_raw("player", pb.PlayerRequest())) == [moved]
+    finally:
+        await again.ws.close()
+
+
+async def test_dynamic_messages_wait_for_a_successful_response(client, clock):
+    """The client processes dynamic messages only on a successful response (an error goes to its failure handler),
+    so whatever is queued, the offers included, stays queued through an error and rides on the next success."""
+    env = await client.call_raw("buy_store_item", pb.BuyStoreItemRequest(store_item_id=1))  # the first response
+    assert env.response_code != pb.OK and not env.dynamic_messages
+    assert len(offers_pushed(await client.call_raw("player", pb.PlayerRequest()))) == 1
+    # a rotation step answered by an error: the new offers and the store expiry come with the next success
+    clock["t"] += T.special_offer_duration_s // T.special_offer_slots
+    env = await client.call_raw("buy_store_item", pb.BuyStoreItemRequest(store_item_id=1))
+    assert env.response_code != pb.OK and not env.dynamic_messages
+    env = await client.call_raw("player", pb.PlayerRequest())
+    assert len(offers_pushed(env)) == 1 and any(d.type == pb.EXPIRE_RPC_CACHE_MESSAGE for d in env.dynamic_messages)
 
 
 async def test_official_offer_is_served_as_the_official_server_did(client, clock):

@@ -43,12 +43,12 @@ from functools import cache
 from typing import Any
 
 from arcane_server import battle_bootstrap as bb
-from arcane_server import content_data, clock, opponents, remote_battles
+from arcane_server import content_data, clock, opponents, remote_battles, remote_pve
 from arcane_server.clock import day_end
 from arcane_server.config import battle_address
 from arcane_server.game import next_koth_payout
 from arcane_server.gamedata import Gamedata
-from arcane_server.handlers import club_quests, leaderboards
+from arcane_server.handlers import club_quests, clubs, leaderboards
 from arcane_server.handlers.inbox_store import record_activity
 from arcane_server.inventory import consume_item
 from arcane_server.pending_battles import PendingBattles
@@ -134,14 +134,22 @@ def _conn(game):
 
 
 def _load_state(session: Session) -> dict:
-    row = _conn(session.game).execute("SELECT state FROM pvp_state WHERE public_id=?", (session.public_id,)).fetchone()
-    return json.loads(row[0]) if row else {}
+    return _state_of(session.game, session.public_id)
 
 
 def _save_state(session: Session, state: dict) -> None:
-    _conn(session.game).execute(
+    _put_state(session.game, session.public_id, state)
+
+
+def _state_of(game, public_id: str) -> dict:
+    row = _conn(game).execute("SELECT state FROM pvp_state WHERE public_id=?", (public_id,)).fetchone()
+    return json.loads(row[0]) if row else {}
+
+
+def _put_state(game, public_id: str, state: dict) -> None:
+    _conn(game).execute(
         "INSERT INTO pvp_state(public_id, state) VALUES (?,?) ON CONFLICT(public_id) DO UPDATE SET state=excluded.state",
-        (session.public_id, json.dumps(state, sort_keys=True)),
+        (public_id, json.dumps(state, sort_keys=True)),
     )
 
 
@@ -287,9 +295,15 @@ class PendingBattle:
     winner_team: int | None = None  # set by report_battle_outcome (remote mode)
     team: int = 0  # this player's team in the bootstrap (friendly brawls between two humans: 0 and 1)
     survivors: list[int] | None = None  # surviving characters per team (battle server report; Summoner Showdown)
-    squad: tuple[int, ...] = ()  # this player's characters (PvP Arena: damage contests of local battles)
+    squad: tuple[int, ...] = ()  # this player's characters (PvP Arena: damage contests of local battles; KOTH)
+    spells: tuple[int, ...] = ()  # this player's spells (KOTH: the defender's history shows the attack)
+    leader: int = 0
     # this player's battle trackers [activity id, tracker id, value] (battle server report; damage contests)
     activities: list[list[int]] | None = None
+    # every unit's end state [persistent id, alive, health percent] (battle server report; club war defenders)
+    units: list[list[float]] | None = None
+    web: bool = False  # started by a browser (remote_pve): an end before the report is retried, not a loss
+    started: int = 0  # real time it started (remote_pve.awaiting)
 
 
 # battle_id (team 0) / battle_id#<team> -> battle (persisted: a result reported after a server restart still counts)
@@ -311,16 +325,31 @@ def remember_remote(game, battle_id: str, b: PendingBattle) -> None:
     _PENDING.put(game, _key(battle_id, b.team), b, owner=f"{b.public_id}:{b.kind}")
 
 
+def browser_battle(session: Session) -> bool:
+    """Whether this battle start is a browser's (remote_pve): its battle must run on the battle server, so a server
+    without one refuses it (RpcError ERROR) before anything changes."""
+    if not remote_pve.wanted(session):
+        return False
+    if not has_battle_server(session.game):
+        raise RpcError(pb.ERROR, "this server has no battle server")
+    return True
+
+
 async def _start_remote(kind: str, session: Session, opponent: pb.Player, bootstrap: pb.BattleLib_Bootstrap,
-                        opponent_rank: int = 0, squad: tuple[int, ...] = ()) -> tuple[str, str]:
+                        opponent_rank: int = 0, squad: tuple[int, ...] = (), spells: tuple[int, ...] = (),
+                        leader: int = 0) -> tuple[str, str]:
     """A remote battle of the player (team 0) against `opponent` (the engine plays it: enable_auto). With a
     battle server configured it is registered there first; the client connects with the returned token."""
     battle_id, token, report_token = new_battle_ids()
+    web = browser_battle(session)
     if has_battle_server(session.game):
         await register_remote(session.game, battle_id, kind, bootstrap,
                               [remote_battles.RemotePlayer(0, token, session.public_id)], report_token)
     remember_remote(session.game, battle_id,
-                    PendingBattle(kind, session.public_id, opponent.id, report_token, opponent_rank, squad=squad))
+                    PendingBattle(kind, session.public_id, opponent.id, report_token, opponent_rank, squad=squad,
+                                  spells=spells, leader=leader, web=web, started=remote_pve.now() if web else 0))
+    if web:
+        remote_pve.hand_out(session, battle_id, token)
     return battle_id, token
 
 
@@ -336,10 +365,12 @@ async def register_remote(game, battle_id: str, kind: str, bootstrap: pb.BattleL
 
 def report_battle_outcome(game, battle_id: str, winning_team_id: int, token: str | None = None,
                           survivors: list[int] | None = None,
-                          activities: dict[str, list[list[int]]] | None = None) -> bool:
+                          activities: dict[str, list[list[int]]] | None = None,
+                          units: list[pb.UnitBattleResult] | None = None) -> bool:
     """Record a remote battle's winner (team 0 = the attacking player) and, if reported, the surviving characters
-    per team and each player's battle trackers (`activities`: public id -> [activity id, tracker id, value]) for
-    every human in it. For the battle server; `token` must be the battle's report token."""
+    per team, each player's battle trackers (`activities`: public id -> [activity id, tracker id, value]) for
+    every human in it and every unit's end state. For the battle server; `token` must be the battle's report
+    token."""
     found = False
     for team in range(MAX_TEAMS):
         b = _PENDING.get(game, _key(battle_id, team))
@@ -351,6 +382,8 @@ def report_battle_outcome(game, battle_id: str, winning_team_id: int, token: str
         b.survivors = survivors
         if activities is not None:
             b.activities = activities.get(b.public_id, [])
+        if units:
+            b.units = [[int(u.persistent_id), bool(u.is_alive), float(u.health_percent)] for u in units]
         remember_remote(game, battle_id, b)
         found = True
     return found
@@ -388,11 +421,28 @@ def battle_ids(battle_id: str) -> dict[str, str]:
     return {"battle_id": battle_id, "match_id": battle_id + LOSS_SUFFIX}
 
 
+def check_reported(game, battle_id: str, public_id: str) -> None:
+    """A browser's battle whose report is not in yet (remote_pve.awaiting): RpcError(ERROR, RESULT_PENDING) before
+    anything is counted; the browser ends it again later. Android battles end at once, as before."""
+    b = pending_battle(game, _battle_id(battle_id), public_id)
+    if b is not None and b.web and b.winner_team is None and remote_pve.awaiting(b.started):
+        raise RpcError(pb.ERROR, remote_pve.RESULT_PENDING)
+
+
+def reported_units(b: PendingBattle | None) -> list[pb.UnitBattleResult] | None:
+    """The battle server's unit end states of a remote battle (None if it reported none)."""
+    if b is None or not b.units:
+        return None
+    return [pb.UnitBattleResult(persistent_id=int(pid), is_alive=bool(alive), health_percent=float(hp))
+            for pid, alive, hp in b.units]
+
+
 def _finish_remote(kind: str, session: Session, reported_id: str) -> tuple[PendingBattle, bool]:
     """The pending battle and whether the player won: a battle server's report if there was one, else the id
     the (patched) client reported."""
     lost = reported_id.endswith(LOSS_SUFFIX)
     battle_id = _battle_id(reported_id)
+    check_reported(session.game, battle_id, session.public_id)
     b = pop_pending(session.game, battle_id, session.public_id)
     if b is None or b.kind != kind:
         raise RpcError(pb.NOT_FOUND, f"no {kind} battle {reported_id}")
@@ -770,18 +820,25 @@ async def koth_battle_start(session: Session, req: pb.KothBattleStartRequest) ->
     ladder = koth_ladder(session)
     rank = my_koth_rank(player, len(ladder))
     opp_rank = int(req.opponent_rank)
+    # the lobby the client chose from is out of date: its messages ask for a new opponent
     if opp_rank not in lobby_ranks(rank, len(ladder) + 1):
-        raise RpcError(pb.BAD_REQUEST, f"rank {opp_rank} cannot be attacked from rank {rank}")
+        raise RpcError(pb.KOTH_PLAYER_RANK_HAS_CHANGED, f"rank {opp_rank} cannot be attacked from rank {rank}")
     opp = at_rank(ladder, rank, opp_rank)
-    if opp is None:
-        raise RpcError(pb.NOT_FOUND, f"nobody at rank {opp_rank}")
+    if opp is None or (req.opponent_id and req.opponent_id != opp.id):
+        raise RpcError(pb.KOTH_PLAYER_RANK_HAS_CHANGED, f"rank {opp_rank} is no longer {req.opponent_id}")
+    defense = defense_squad(gd, opp)
+    if (req.opponent_squad_units and list(req.opponent_squad_units) != [u.definition_id for u in defense.units]) or \
+            (req.opponent_squad_spells and list(req.opponent_squad_spells) != [s.definition_id for s in defense.spells]):
+        raise RpcError(pb.KOTH_OPPONENT_SQUAD_CHANGED, f"{opp.id} changed their defense")
     # toggle no_cooldowns: no cooldown between attacks and no defensive shields (our choice); off (multiplayer):
     # kothAttackCooldownSeconds (600) and the 2 h shield of an attacked top-200 defender
     no_cd = session.game.settings.toggles.no_cooldowns
     if not no_cd and opp.id in koth_shields(session.game, now):
         raise RpcError(pb.KOTH_OPPONENT_IS_UNAVAILABLE, f"{opp.id} is shielded")
-    bs = pvp_bootstrap(gd, player, mine, opp, defense_squad(gd, opp))
-    battle_id, token = await _start_remote("koth", session, opp, bs, opp_rank)
+    bs = pvp_bootstrap(gd, player, mine, opp, defense)
+    battle_id, token = await _start_remote("koth", session, opp, bs, opp_rank,
+                                           squad=tuple(u.definition_id for u in mine.units),
+                                           spells=tuple(sp.definition_id for sp in mine.spells), leader=mine.leader)
     state["attempts"] -= 1
     if not no_cd:
         _shield(session.game, opp.id, opp_rank, now)
@@ -807,6 +864,7 @@ async def koth_battle_result(session: Session, req: pb.KothBattleResultRequest) 
         if player.koth_rank == 1:
             _award_trophy(session, KOTH_TROPHY)
     record_activity(session, "tournament_battle")  # daily + passholder Tournament-battle quests: win or lose
+    _record_defense(session, b, old, won)
     delta = pb.InventoryDelta()
     leaderboards.after_battle(session, delta, "koth", won=won)  # gold contest: a win defeats the 5 defenders
     session.save()
@@ -817,13 +875,15 @@ async def koth_battle_result(session: Session, req: pb.KothBattleResultRequest) 
 
 @rpc("koth_challenge_battle_start", pb.KothChallengeBattleStartRequest)
 async def koth_challenge_battle_start(session: Session, req: pb.KothChallengeBattleStartRequest) -> pb.KothChallengeBattleStartResponse:
-    """Practice fight against anyone on the leaderboard: simulated by the client, no result is reported."""
+    """Practice fight against anyone on the leaderboard: simulated by the client (a browser's on the battle server),
+    no result is reported."""
     gd, player = session.game.gamedata, session.player
     opp = opponents.find(session.game, req.enemy_player_id)
     if opp is None or opp.id == session.public_id:
         raise RpcError(pb.NOT_FOUND, f"no player {req.enemy_player_id}")
     mine = attack_squad(gd, player, list(req.units), list(req.spells), req.leader_unit)
     bs = pvp_bootstrap(gd, player, mine, opp, defense_squad(gd, opp))
+    await remote_pve.begin(session, "koth_challenge_battle_start", bs)
     if req.HasField("squad_save"):
         save_squad(player, req.squad_save, mine)
         session.save()
@@ -894,9 +954,38 @@ async def koth_rank_reward_preview(session: Session, req: pb.KothRankRewardPrevi
     return res
 
 
+KOTH_DEFENSE_HISTORY = 20  # defenses kept per player, newest first
+
+
+def _record_defense(session: Session, b: PendingBattle, attacker_rank: int, attacker_won: bool) -> None:
+    """A human defender's history gets the attack (server-played defenders have nobody to read it)."""
+    game = session.game
+    if not b.opponent_id or clubs._is_ai(game, b.opponent_id) or game.db.account_by_public_id(b.opponent_id) is None:
+        return
+    state = _state_of(game, b.opponent_id)
+    entry = {"attacker": session.public_id, "attacker_rank": attacker_rank, "units": list(b.squad),
+             "spells": list(b.spells), "leader": b.leader, "defender_won": not attacker_won, "at": _now(),
+             "rank": game.player(b.opponent_id).koth_rank}
+    state["koth_defenses"] = ([entry] + state.get("koth_defenses", []))[:KOTH_DEFENSE_HISTORY]
+    _put_state(game, b.opponent_id, state)
+
+
 @rpc("koth_battle_history", pb.KothBattleHistoryRequest)
 async def koth_battle_history(session: Session, req: pb.KothBattleHistoryRequest) -> pb.KothBattleHistoryResponse:
-    return pb.KothBattleHistoryResponse()  # nobody attacks a solo player's defense
+    """Attacks on the player's tournament defense, newest first: the attacker with the squad they attacked with."""
+    game, res = session.game, pb.KothBattleHistoryResponse()
+    for e in _load_state(session).get("koth_defenses", []):
+        attacker = game.player(e["attacker"]) if game.db.account_by_public_id(e["attacker"]) else None
+        if attacker is None:
+            continue
+        units = {u.definition_id: u for u in attacker.unit_inventory}
+        spells = {s.definition_id: s for s in attacker.spell_inventory}
+        opp = pb.KothLobbyOpponent(profile=profile_simple(attacker), rank=e["attacker_rank"],
+                                   units=[units[i] for i in e["units"] if i in units],
+                                   spells=[spells[i] for i in e["spells"] if i in spells], leader_unit_id=e["leader"])
+        res.defense_history.add(opponent=opp, player_won=e["defender_won"], player_rank=e["rank"],
+                                battle_end_time=e["at"])
+    return res
 
 
 # --- RPCs: PvP ----------------------------------------------------------------------------------------------

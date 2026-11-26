@@ -1,0 +1,27 @@
+# One container with the game server (18080), its battle server (18081) and the browser client at
+# http://localhost:18080/play/ (Dockerfile). Your files live in the two folders next to this file, never in the
+# image: var/ (the battle host, the database, the battle secret, the browser client in var/web_client/) and data/
+# (the content set). The servers run as your user, so what they write there stays yours: create both folders
+# yourself first (Docker would create missing ones owned by root). On Linux, when your user id is not 1000, put your
+# ids in a .env file next to this one, which compose reads: `printf 'ARCANE_UID=%s\nARCANE_GID=%s\n' $(id -u) $(id -g)
+# > .env` (the shells' own UID/GID variables are read-only or not exported). Set up once, with your APK and content
+# set copied into var/:
+#   docker compose run --rm arcane python tools/battle_host.py setup --apk var/<your APK>
+#   docker compose run --rm arcane python -m arcane_server import-client var/<your content set>
+#   docker compose run --rm arcane python -m arcane_server.local --fetch-web-client --check
+# then `docker compose up`. The ports are published on this computer only; see the README for hosting.
+services:
+  arcane:
+    build: .
+    # Rebuild from this checkout on every run / up (a cache hit when unchanged), so an updated checkout never runs
+    # the image built from the old code.
+    pull_policy: build
+    init: true
+    user: "${ARCANE_UID:-1000}:${ARCANE_GID:-1000}"
+    ports:
+      - "127.0.0.1:18080:18080"
+      - "127.0.0.1:18081:18081"
+    volumes:
+      - ./var:/app/var
+      - ./data:/app/data
+    stop_grace_period: 30s

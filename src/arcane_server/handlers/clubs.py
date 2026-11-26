@@ -17,6 +17,11 @@ Single-player rules (config.Toggles.solo_club_rules; off = the original rules, s
   (14 days) in favour of the most senior active co-leader, and when no officer was active for
   clubAutoDemoteInactivityPeriodHours (7 days) promotes the most senior active member to co-leader;
   "active" = played within clubAutoPromoteActivityPeriodHours (72 h), from the account's last save.
+- Original rules also: joining a BY REQUEST club waits for an officer (join requests, invitations: see "Join
+  requests and invitations"); leaving locks joining for joinClubLockTimeS[lock level], the level rising for a leave
+  within joinClubLockResetTimeS of the last; promoting the co-leader hands over the lead; a co-leader promotes
+  members. Under both rules the club of the last member to leave is disbanded, and join / leave lines are pushed
+  to the online members' chat.
 - Other members act on their own: they donate to the player's item requests (one item every
   `AI_DONATION_INTERVAL_S`), fulfil the player's support requests after `AI_SUPPORT_DELAY_S`, and post
   their own item / support requests the player can donate to / fulfil.
@@ -177,6 +182,8 @@ CREATE TABLE IF NOT EXISTS club_member (
 CREATE INDEX IF NOT EXISTS club_member_club ON club_member(club_id);
 CREATE TABLE IF NOT EXISTS club_kv (scope TEXT NOT NULL, key TEXT NOT NULL, value BLOB NOT NULL,
     PRIMARY KEY(scope, key));
+CREATE TABLE IF NOT EXISTS club_invite (club_id TEXT NOT NULL, player_id TEXT NOT NULL, sender_id TEXT NOT NULL,
+    created_at INTEGER NOT NULL, PRIMARY KEY(club_id, player_id));
 """
 # Connections whose schema exists; the connection is kept so its id() cannot be reused by a new one.
 _READY: dict[int, sqlite3.Connection] = {}
@@ -188,7 +195,25 @@ def _conn(game: Game) -> sqlite3.Connection:
         conn.executescript(_SCHEMA)
         _READY[id(conn)] = conn
         _seed(conn)
+        _sweep_empty_clubs(conn)
     return conn
+
+
+def _sweep_empty_clubs(conn: sqlite3.Connection) -> None:
+    """Clubs without a member (left behind before the last member's leave disbanded the club): gone, with their
+    sub-area state and invitations. Runs once per process, when the club tables are first used."""
+    empty = [r[0] for r in conn.execute(
+        "SELECT id FROM club c WHERE NOT EXISTS (SELECT 1 FROM club_member m WHERE m.club_id=c.id)")]
+    for cid in empty:
+        conn.execute("DELETE FROM club WHERE id=?", (cid,))
+        conn.execute("DELETE FROM club_kv WHERE scope=?", (cid,))
+        conn.execute("DELETE FROM club_invite WHERE club_id=?", (cid,))
+    if empty:
+        log.info("removed %d clubs without members: %s", len(empty), ", ".join(empty))
+
+
+def sweep_empty_clubs(game: Game) -> None:
+    _sweep_empty_clubs(_conn(game))
 
 
 def kv_get(game: Game, scope: str, key: str) -> bytes | None:
@@ -291,9 +316,10 @@ def solo_rules(game: Game) -> bool:
 
 
 def last_active(game: Game, public_id: str) -> int:
-    """When the member last played (their account's last save); 0: never (server-played players without an account)."""
+    """When the member last played, in game time (their account's last save, stored in real time); 0: never
+    (server-played players without an account)."""
     row = game.db.conn.execute("SELECT updated_at FROM player_state WHERE public_id=?", (public_id,)).fetchone()
-    return int(row[0]) if row else 0
+    return clock.to_game(int(row[0])) if row and row[0] else 0
 
 
 def _hours(game: Game, key: str, default: int) -> int:
@@ -352,6 +378,14 @@ def club_level_problem(game: Game, player: pb.Player, feature: str) -> str | Non
 
 
 def _set_member(game: Game, m: Member) -> None:
+    """Store a membership. A member whose role in the same club changed (promoted, demoted, made leader by a
+    leaving leader or the inactivity rules) is told at once (CLUB_MEMBER_ROLE_CHANGED), so their client updates
+    its role without a reload."""
+    was = _conn(game).execute("SELECT club_id, role FROM club_member WHERE public_id=?", (m.public_id,)).fetchone()
+    if was is not None and was[0] == m.club_id and was[1] != m.role:
+        game.push_soon(m.public_id, [pb.DynamicMessage(
+            type=pb.CLUB_MEMBER_ROLE_CHANGED_DYNAMIC_MESSAGE,
+            payload=pb.ClubMemberRoleChangedDynamicMessage(new_club_role=m.role).SerializeToString())])
     _conn(game).execute(
         "INSERT INTO club_member(public_id, club_id, role, joined_at, donation_count) VALUES (?,?,?,?,?) "
         "ON CONFLICT(public_id) DO UPDATE SET club_id=excluded.club_id, role=excluded.role, "
@@ -538,14 +572,38 @@ def require_club(session: Session) -> ClubContext:
     return ClubContext(club, m)
 
 
-def join_club(game: Game, player: pb.Player, club_id: str, now: int) -> pb.Club:
+def join_lock_level_after_leaving(game: Game, player: pb.Player, now: int) -> int:
+    """The join lock level a leave sets: one up when the last leave was less than joinClubLockResetTimeS ago, else 0
+    (what the client's leave dialog announces)."""
+    reset = int(game.gamedata.single("constants").get("joinClubLockResetTimeS") or 0)
+    if player.left_club_timestamp and now - player.left_club_timestamp < reset:
+        return int(player.join_club_lock_level) + 1
+    return 0
+
+
+def join_locked_until(game: Game, player: pb.Player) -> int:
+    """Original rules: after leaving, joining a club is locked for joinClubLockTimeS[lock level] (the last entry for
+    higher levels; no lock without the table). 0: not locked (always under the single-player rules)."""
+    locks = [int(x) for x in game.gamedata.single("constants").get("joinClubLockTimeS") or []]
+    if solo_rules(game) or not locks or not player.left_club_timestamp:
+        return 0
+    return int(player.left_club_timestamp) + locks[min(int(player.join_club_lock_level), len(locks) - 1)]
+
+
+def _check_can_join(game: Game, player: pb.Player, now: int) -> None:
     if membership(game, player.id) is not None:
         raise RpcError(pb.PLAYER_IS_ALREADY_IN_CLUB, "already in a club")
+    if now < join_locked_until(game, player):
+        raise RpcError(pb.CLUB_JOIN_IS_LOCKED, "left a club too recently")
+    if problem := club_level_problem(game, player, "CLUBS"):
+        raise RpcError(pb.INSUFFICIENT_PLAYER_LEVEL, problem)
+
+
+def join_club(game: Game, player: pb.Player, club_id: str, now: int) -> pb.Club:
     club = load_club(game, club_id)
     if club is None:
         raise RpcError(pb.NOT_FOUND, f"club {club_id} not found")
-    if problem := club_level_problem(game, player, "CLUBS"):
-        raise RpcError(pb.INSUFFICIENT_PLAYER_LEVEL, problem)
+    _check_can_join(game, player, now)
     evicted = open_slot_evictions(game, club_id)
     if len(club_members(game, club_id)) - len(evicted) >= MAX_ROSTER:
         raise RpcError(pb.CLUB_IS_FULL, "club is full")
@@ -558,7 +616,8 @@ def join_club(game: Game, player: pb.Player, club_id: str, now: int) -> pb.Club:
         _make_leader(game, player.id, club_id)
     role = membership(game, player.id).role
     _apply_player_fields(player, club, role)
-    post_system_message(game, club_id, f"{player.username} joined the club", now)
+    delete_invites(game, player_id=player.id)  # in a club now: no more requests or invitations
+    tell_members(game, club_id, f"{player.username} joined the club", now)
     return club
 
 
@@ -566,6 +625,9 @@ def remove_member(game: Game, m: Member, now: int) -> None:
     """Take a member out of their club; a leaving leader hands the club over to the senior active member."""
     _remove_member(game, m.public_id)
     rest = club_members(game, m.club_id)
+    if not rest:  # the last member left: the club is gone (the client warns "Leaving will disband this club")
+        disband(game, m.club_id)
+        return
     if m.role == pb.LEADER_ROLE and rest:
         active_s = _hours(game, "clubAutoPromoteActivityPeriodHours", 72)
         heir = max(rest, key=lambda x: (ROLE_RANK.get(x.role, 0), now - last_active(game, x.public_id) <= active_s,
@@ -574,14 +636,30 @@ def remove_member(game: Game, m: Member, now: int) -> None:
         _set_member(game, heir)
 
 
+def record_leave(game: Game, player: pb.Player, now: int) -> None:
+    """The player left or was kicked: the leave time and the next join lock level (the lock applies to both)."""
+    player.join_club_lock_level = join_lock_level_after_leaving(game, player, now)
+    player.left_club_timestamp = now
+
+
+def disband(game: Game, club_id: str) -> None:
+    """A club without members: its data, sub-area state and invitations go."""
+    conn = _conn(game)
+    conn.execute("DELETE FROM club WHERE id=?", (club_id,))
+    conn.execute("DELETE FROM club_kv WHERE scope=?", (club_id,))
+    delete_invites(game, club_id=club_id)
+    log.info("club %s disbanded: its last member left", club_id)
+
+
 def leave_club(game: Game, player: pb.Player, now: int) -> None:
     m = membership(game, player.id)
     if m is None:
         raise RpcError(pb.NO_CLUB, "not in a club")
     remove_member(game, m, now)
     _apply_player_fields(player, None, pb.INVALID_ROLE)
-    player.left_club_timestamp = now
-    post_system_message(game, m.club_id, f"{player.username} left the club", now)
+    record_leave(game, player, now)
+    if load_club(game, m.club_id) is not None:
+        tell_members(game, m.club_id, f"{player.username} left the club", now)
 
 
 # =====================================================================================
@@ -779,15 +857,136 @@ def club_view(session: Session) -> ClubContext:
     """The caller's club after simulating the other members, with its roster filled in."""
     ctx = require_club(session)
     now = now_s()
+    accept_waiting_requests(session.game, ctx.club, now)
     if _simulate(session.game, ctx.club, now):
         save_club(session.game, ctx.club)
     ctx.club.CopyFrom(_with_roster(session.game, ctx.club, now))
+    ctx.club.invites.extend(club_invites_view(session.game, ctx.club.id, session.player.id))
     return ctx
 
 
 def require_officer(ctx: ClubContext) -> None:
     if ctx.member.role not in (pb.LEADER_ROLE, pb.CO_LEADER_ROLE):
         raise RpcError(pb.UNAUTHORIZED, "officers only")
+
+
+# =====================================================================================
+# Join requests and invitations (ClubInvite)
+# =====================================================================================
+# One row per (club, player): a join request when the player sent it themselves (sender = player), an invitation
+# when a member of the club sent it. The client tells them apart the same way: its INVITE REQUESTS popup lists a
+# club's requests (player = sender), the invites tab of a clubless player the invitations (sender != player), and
+# the club hub offers CANCEL JOIN REQUEST for a club the player has a request at.
+
+
+def _invite_rows(game: Game, where: str, args: tuple) -> list[tuple[str, str, str, int]]:
+    return _conn(game).execute(
+        f"SELECT club_id, player_id, sender_id, created_at FROM club_invite WHERE {where} ORDER BY created_at, player_id",
+        args).fetchall()
+
+
+def find_invite(game: Game, club_id: str, player_id: str) -> tuple[str, str, str, int] | None:
+    rows = _invite_rows(game, "club_id=? AND player_id=?", (club_id, player_id))
+    return rows[0] if rows else None
+
+
+def add_invite(game: Game, club_id: str, player_id: str, sender_id: str, now: int) -> None:
+    if find_invite(game, club_id, player_id) is not None:
+        raise RpcError(pb.CLUB_INVITE_ALREADY_EXISTS, "already requested or invited")
+    _conn(game).execute("INSERT INTO club_invite(club_id, player_id, sender_id, created_at) VALUES (?,?,?,?)",
+                        (club_id, player_id, sender_id, now))
+
+
+def delete_invites(game: Game, club_id: str | None = None, player_id: str | None = None) -> None:
+    where = " AND ".join(c for c, v in (("club_id=?", club_id), ("player_id=?", player_id)) if v is not None)
+    _conn(game).execute(f"DELETE FROM club_invite WHERE {where}",
+                        tuple(v for v in (club_id, player_id) if v is not None))
+
+
+def invite_message(game: Game, row: tuple[str, str, str, int]) -> pb.ClubInvite:
+    club_id, player_id, sender_id, at = row
+    club = load_club(game, club_id) or pb.Club(id=club_id)
+    inv = pb.ClubInvite(club_id=club_id, club_name=club.name, club_avatar_id=club.settings.avatar_id,
+                        player_id=player_id, sender_id=sender_id, timestamp=at)
+    for who, (avatar, name, level) in ((player_id, ("player_avatar_id", "player_username", "player_level")),
+                                       (sender_id, ("sender_avatar_id", "sender_username", "sender_level"))):
+        p = member_player(game, who)
+        if p is not None:
+            setattr(inv, avatar, p.avatar_id)
+            setattr(inv, name, p.username)
+            setattr(inv, level, p.level)
+    return inv
+
+
+def invites_for(game: Game, player_id: str) -> list[pb.ClubInvite]:
+    """get_club_invites: the player's own requests and invitations, and, for an officer, their club's."""
+    rows = _invite_rows(game, "player_id=?", (player_id,))
+    m = membership(game, player_id)
+    if m is not None and ROLE_RANK.get(m.role, 0) >= ROLE_RANK[pb.CO_LEADER_ROLE]:
+        rows += [r for r in _invite_rows(game, "club_id=?", (m.club_id,)) if r[1] != player_id]
+    return [invite_message(game, r) for r in rows]
+
+
+def club_invites_view(game: Game, club_id: str, viewer: str) -> list[pb.ClubInvite]:
+    """Club.invites as `viewer` sees the club: all of them in their own club, else only their own."""
+    m = membership(game, viewer)
+    if m is not None and m.club_id == club_id:
+        rows = _invite_rows(game, "club_id=?", (club_id,))
+    else:
+        rows = _invite_rows(game, "club_id=? AND player_id=?", (club_id, viewer))
+    return [invite_message(game, r) for r in rows]
+
+
+def has_active_human_officer(game: Game, club_id: str, now: int) -> bool:
+    """A human leader or co-leader who played within clubAutoPromoteActivityPeriodHours: someone who will answer
+    join requests (server-played officers never do)."""
+    active_s = _hours(game, "clubAutoPromoteActivityPeriodHours", 72)
+    return any(m.role in (pb.LEADER_ROLE, pb.CO_LEADER_ROLE) and not _is_ai(game, m.public_id)
+               and now - last_active(game, m.public_id) <= active_s for m in club_members(game, club_id))
+
+
+def live_player(game: Game, public_id: str) -> pb.Player | None:
+    """The player to change: the live (cached, saved) one for an account, else the server-played copy."""
+    if game.db.account_by_public_id(public_id) is not None:
+        return game.player(public_id)
+    return member_player(game, public_id)
+
+
+def admit(game: Game, club: pb.Club, player_id: str, now: int) -> pb.Player:
+    """A requester or invitee is let into `club` by its officers (or by the server for a club without an active
+    officer): joins as MEMBER, their other requests and invitations go, the club is told."""
+    other = live_player(game, player_id)
+    if other is None:
+        delete_invites(game, club.id, player_id)
+        raise RpcError(pb.NOT_FOUND, "unknown player")
+    if membership(game, player_id) is not None:
+        delete_invites(game, player_id=player_id)  # joined another club meanwhile
+        raise RpcError(pb.PLAYER_IS_ALREADY_IN_CLUB, "player already in a club")
+    if len(club_members(game, club.id)) >= MAX_ROSTER:
+        raise RpcError(pb.CLUB_IS_FULL)
+    _set_member(game, Member(player_id, club.id, pb.MEMBER_ROLE, now, 0))
+    if game.db.account_by_public_id(player_id) is not None:
+        _apply_player_fields(other, club, pb.MEMBER_ROLE)
+        game.save(player_id)
+    delete_invites(game, player_id=player_id)
+    tell_members(game, club.id, f"{other.username} joined the club", now)
+    return other
+
+
+def accept_waiting_requests(game: Game, club: pb.Club, now: int) -> None:
+    """Original rules: requests to a BY REQUEST club that no active human officer runs (any more) are accepted when
+    the club is looked at, as a new request would be."""
+    if solo_rules(game) or club.settings.invite_policy != pb.REQUEST_INVITE_POLICY:
+        return
+    waiting = [r for r in _invite_rows(game, "club_id=?", (club.id,)) if r[1] == r[2]]
+    if not waiting or has_active_human_officer(game, club.id, now):
+        return
+    for _, pid, _, _ in waiting:
+        try:
+            admit(game, club, pid, now)
+        except RpcError as e:
+            log.info("club %s: waiting request of %s dropped (%s)", club.id, pid, e.code)
+            delete_invites(game, club.id, pid)
 
 
 # =====================================================================================
@@ -832,6 +1031,14 @@ async def announce(game: Game, club_id: str, text: str, now: int | None = None) 
             await game.push(m.public_id, [_chat_dynamic(msg)])
 
 
+def tell_members(game: Game, club_id: str, text: str, now: int | None = None) -> None:
+    """`announce` from code that cannot await: the line is stored at once and pushed to the online members as soon
+    as the running task yields."""
+    msg = post_system_message(game, club_id, text, now)
+    for m in club_members(game, club_id):
+        game.push_soon(m.public_id, [_chat_dynamic(msg)])
+
+
 def has_humans(game: Game, club_id: str) -> bool:
     """A club with at least one member a device has claimed (a human player)."""
     return any(not _is_ai(game, m.public_id) for m in club_members(game, club_id))
@@ -862,15 +1069,18 @@ def _validate_settings(game: Game, s: pb.ClubSettings) -> None:
 @rpc("get_club", pb.ClubRequest)
 async def get_club(session: Session, req: pb.ClubRequest) -> pb.ClubResponse:
     game = session.game
-    m = membership(game, session.player.id)
-    if not req.id or (m is not None and req.id == m.club_id):
-        return pb.ClubResponse(club=club_view(session).club)
-    club = load_club(game, req.id)
-    if club is None:
+    club = load_club(game, req.id) if req.id else None
+    if req.id and club is None:
         raise RpcError(pb.NOT_FOUND, f"club {req.id} not found")
+    if club is not None:  # first: the viewer may be one of the requesters let in now, and then sees their own club
+        accept_waiting_requests(game, club, now_s())
+    m = membership(game, session.player.id)
+    if club is None or (m is not None and club.id == m.club_id):
+        return pb.ClubResponse(club=club_view(session).club)
     view = _with_roster(game, club, now_s(), open_slot=True)
     del view.item_requests[:]
     del view.support_requests[:]
+    view.invites.extend(club_invites_view(game, club.id, session.player.id))
     return pb.ClubResponse(club=view)
 
 
@@ -882,6 +1092,9 @@ async def create_club(session: Session, req: pb.CreateClubRequest) -> pb.CreateC
         raise RpcError(pb.BAD_REQUEST, "invalid club name")
     if membership(game, player.id) is not None:
         raise RpcError(pb.PLAYER_IS_ALREADY_IN_CLUB, "leave your club first")
+    cooldown = _hours(game, "createClubCooldownTimeHours", 168)
+    if not solo_rules(game) and player.create_club_timestamp and now - player.create_club_timestamp < cooldown:
+        raise RpcError(pb.CLUB_CREATE_COOLDOWN_RESTRICTED, "a new club once every createClubCooldownTimeHours")
     taken = {(load_club(game, cid) or pb.Club()).name.casefold() for cid in all_club_ids(game)}
     if name.casefold() in taken:
         raise RpcError(pb.DUPLICATE_NAME, "club name taken")
@@ -961,23 +1174,45 @@ async def filter_clubs(session: Session, req: pb.FilterClubsRequest) -> pb.Filte
 
 @rpc("invite_to_club", pb.ClubInviteRequest)
 async def invite_to_club(session: Session, req: pb.ClubInviteRequest) -> pb.ClubInviteResponse:
-    """With the caller's own id: request to join `club_id` (accepted at once). Inviting another player to
-    the caller's club: that player is AI-controlled and accepts at once too."""
+    """With the caller's own id: join `club_id`. An OPEN club takes the player at once; a BY REQUEST club keeps a
+    join request for its officers (the response has the request, no club); an INVITE ONLY club takes none.
+    Single-player rules, or a BY REQUEST club no human officer active within clubAutoPromoteActivityPeriodHours runs:
+    accepted at once (nobody would answer; `accept_waiting_requests` takes the ones left waiting).
+    With another player's id: invite that clubless player to the caller's club (any member may, as the client
+    allows); a server-played player accepts at once, a human finds it in their invites tab. An officer inviting a
+    player who already asked to join accepts the request."""
     game, player, now = session.game, session.player, now_s()
     if not req.player_id or req.player_id == player.id:
-        club = join_club(game, player, req.club_id, now)
-        session.save()
-        return pb.ClubInviteResponse(club=_with_roster(game, club, now))
+        club = load_club(game, req.club_id)
+        if club is None:
+            raise RpcError(pb.NOT_FOUND, f"club {req.club_id} not found")
+        policy = club.settings.invite_policy
+        if not solo_rules(game) and policy not in (pb.OPEN_INVITE_POLICY, pb.REQUEST_INVITE_POLICY):
+            raise RpcError(pb.CLUB_INVITES_ARE_CLOSED, "invite only")
+        if solo_rules(game) or policy == pb.OPEN_INVITE_POLICY or not has_active_human_officer(game, club.id, now):
+            club = join_club(game, player, req.club_id, now)
+            session.save()
+            return pb.ClubInviteResponse(club=_with_roster(game, club, now))
+        _check_can_join(game, player, now)
+        add_invite(game, club.id, player.id, player.id, now)
+        return pb.ClubInviteResponse(invite=invite_message(game, find_invite(game, club.id, player.id)))
     ctx = require_club(session)
-    require_officer(ctx)
     if membership(game, req.player_id) is not None:
         raise RpcError(pb.PLAYER_IS_ALREADY_IN_CLUB, "player already in a club")
     if len(club_members(game, ctx.club.id)) >= MAX_ROSTER:
         raise RpcError(pb.CLUB_IS_FULL)
     if member_player(game, req.player_id) is None:
         raise RpcError(pb.NOT_FOUND, "unknown player")
-    _set_member(game, Member(req.player_id, ctx.club.id, pb.MEMBER_ROLE, now, 0))
-    return pb.ClubInviteResponse(club=_with_roster(game, ctx.club, now))
+    if _is_ai(game, req.player_id):
+        _set_member(game, Member(req.player_id, ctx.club.id, pb.MEMBER_ROLE, now, 0))
+        return pb.ClubInviteResponse(club=_with_roster(game, ctx.club, now))
+    asked = find_invite(game, ctx.club.id, req.player_id)
+    if asked is not None and asked[2] == req.player_id and ctx.member.role in (pb.LEADER_ROLE, pb.CO_LEADER_ROLE):
+        admit(game, ctx.club, req.player_id, now)
+        return pb.ClubInviteResponse(club=_with_roster(game, ctx.club, now))
+    add_invite(game, ctx.club.id, req.player_id, player.id, now)
+    return pb.ClubInviteResponse(club=_with_roster(game, ctx.club, now),
+                                 invite=invite_message(game, find_invite(game, ctx.club.id, req.player_id)))
 
 
 @rpc("autojoin_club", pb.AutoJoinClubRequest)
@@ -996,33 +1231,61 @@ async def autojoin_club(session: Session, req: pb.AutoJoinClubRequest) -> pb.Aut
     return pb.AutoJoinClubResponse(assigned_club=_with_roster(game, club, now))
 
 
+def _officer_of(session: Session, club_id: str) -> ClubContext:
+    """The caller manages `club_id`'s requests: co-leader or leader of it (the client's AllowsManagingInvites)."""
+    ctx = require_club(session)
+    if club_id and club_id != ctx.club.id:
+        raise RpcError(pb.UNAUTHORIZED, "not your club")
+    require_officer(ctx)
+    return ctx
+
+
 @rpc("approve_invite_to_club", pb.ApproveClubInviteRequest)
 async def approve_invite_to_club(session: Session, req: pb.ApproveClubInviteRequest) -> pb.ApproveClubInviteResponse:
+    """The client sends the invite's club and player: the invited player accepting an invitation (player = the
+    caller), or an officer approving a join request to their club. Either way that player joins."""
     game, now = session.game, now_s()
-    if req.player_id and req.player_id != session.player.id:  # an officer approving someone: they join
-        ctx = require_club(session)
-        require_officer(ctx)
-        if membership(game, req.player_id) is None:
-            _set_member(game, Member(req.player_id, ctx.club.id, pb.MEMBER_ROLE, now, 0))
-        return pb.ApproveClubInviteResponse(club=_with_roster(game, ctx.club, now))
-    club = join_club(game, session.player, req.club_id, now)
-    session.save()
-    return pb.ApproveClubInviteResponse(club=_with_roster(game, club, now))
+    if not req.player_id or req.player_id == session.player.id:
+        inv = find_invite(game, req.club_id, session.player.id)
+        if inv is None or inv[2] == session.player.id:
+            raise RpcError(pb.NOT_FOUND, "no invitation to that club")
+        club = join_club(game, session.player, req.club_id, now)
+        session.save()
+        return pb.ApproveClubInviteResponse(club=_with_roster(game, club, now))
+    ctx = _officer_of(session, req.club_id)
+    inv = find_invite(game, ctx.club.id, req.player_id)
+    if inv is None or inv[2] != req.player_id:
+        raise RpcError(pb.NOT_FOUND, "no join request from that player")
+    admit(game, ctx.club, req.player_id, now)
+    return pb.ApproveClubInviteResponse(club=_with_roster(game, ctx.club, now))
 
 
 @rpc("reject_invite_to_club", pb.RejectClubInviteRequest)
 async def reject_invite_to_club(session: Session, req: pb.RejectClubInviteRequest) -> pb.RejectClubInviteResponse:
+    """The invited player turning an invitation down, or an officer turning a join request down."""
+    game = session.game
+    if req.player_id and req.player_id != session.player.id:
+        ctx = _officer_of(session, req.club_id)
+        delete_invites(game, ctx.club.id, req.player_id)
+    else:
+        delete_invites(game, req.club_id, session.player.id)
     return pb.RejectClubInviteResponse()
 
 
 @rpc("cancel_invite_to_club", pb.CancelClubInviteRequest)
 async def cancel_invite_to_club(session: Session, req: pb.CancelClubInviteRequest) -> pb.CancelClubInviteResponse:
+    """CANCEL JOIN REQUEST: the caller withdraws their request to `club_id` (or an invitation they sent)."""
+    game, me = session.game, session.player.id
+    target = req.player_id or me
+    inv = find_invite(game, req.club_id, target)
+    if inv is not None and me in (inv[1], inv[2]):
+        delete_invites(game, req.club_id, target)
     return pb.CancelClubInviteResponse()
 
 
 @rpc("get_club_invites", pb.GetClubInvitesRequest)
 async def get_club_invites(session: Session, req: pb.GetClubInvitesRequest) -> pb.GetClubInvitesResponse:
-    return pb.GetClubInvitesResponse()  # joins are instant: never pending invites
+    return pb.GetClubInvitesResponse(invites=invites_for(session.game, session.player.id))
 
 
 def _target(session: Session, player_id: str) -> tuple[ClubContext, Member]:
@@ -1034,32 +1297,51 @@ def _target(session: Session, player_id: str) -> tuple[ClubContext, Member]:
     return ctx, m
 
 
-def _require_leader(game: Game, ctx: ClubContext) -> None:
-    """Only the leader promotes and demotes (original rules; single-player: the player leads anyway)."""
-    if not solo_rules(game) and ctx.member.role != pb.LEADER_ROLE:
-        raise RpcError(pb.CLUB_NO_LONGER_RANKING_OFFICER, "leader only")
+def _outranks(game: Game, me: Member, other: Member) -> None:
+    """The client's role rules (original rules; single-player: the player leads anyway): a co-leader or leader acts
+    on members of lower rank only."""
+    if not solo_rules(game) and not (ROLE_RANK[pb.CO_LEADER_ROLE] <= ROLE_RANK.get(me.role, 0)
+                                     and ROLE_RANK.get(other.role, 0) < ROLE_RANK.get(me.role, 0)):
+        raise RpcError(pb.CLUB_NO_LONGER_RANKING_OFFICER, "outranked")
 
 
 @rpc("promote_club_member", pb.PromoteClubMemberRequest)
 async def promote_club_member(session: Session, req: pb.PromoteClubMemberRequest) -> pb.PromoteClubMemberResponse:
+    """A member becomes co-leader. Promoting a co-leader hands over the lead (the client warns the leader "You will
+    lose your leader status"): they lead and the leader becomes co-leader; a co-leader away for longer than
+    clubAutoPromoteActivityPeriodHours cannot (CLUB_PROMOTION_INVALID_LEADER, the client's "away too long").
+    Single-player rules: the human player keeps the lead."""
+    game, now = session.game, now_s()
     ctx, m = _target(session, req.player_id)
-    _require_leader(session.game, ctx)
+    _outranks(game, ctx.member, m)
     if m.role == pb.MEMBER_ROLE:
         m.role = pb.CO_LEADER_ROLE
-        _set_member(session.game, m)
-    return pb.PromoteClubMemberResponse(club=_with_roster(session.game, ctx.club, now_s()))
+        _set_member(game, m)
+    elif m.role == pb.CO_LEADER_ROLE and ctx.member.role == pb.LEADER_ROLE and not solo_rules(game):
+        if now - last_active(game, m.public_id) > _hours(game, "clubAutoPromoteActivityPeriodHours", 72):
+            raise RpcError(pb.CLUB_PROMOTION_INVALID_LEADER, "away too long to lead")
+        m.role, ctx.member.role = pb.LEADER_ROLE, pb.CO_LEADER_ROLE
+        _set_member(game, ctx.member)
+        _set_member(game, m)
+        if _apply_player_fields(session.player, ctx.club, pb.CO_LEADER_ROLE):
+            session.save()
+    return pb.PromoteClubMemberResponse(club=_with_roster(game, ctx.club, now))
 
 
 @rpc("demote_club_member", pb.DemoteClubMemberRequest)
 async def demote_club_member(session: Session, req: pb.DemoteClubMemberRequest) -> pb.DemoteClubMemberResponse:
+    """A co-leader becomes a member, by someone who outranks them (the leader)."""
+    game = session.game
     ctx, m = _target(session, req.player_id)
-    _require_leader(session.game, ctx)
     if m.public_id == session.player.id:
-        raise RpcError(pb.CLUB_PROMOTION_INVALID_LEADER, "the leader can't demote themselves")
+        raise RpcError(pb.BAD_REQUEST, "nobody demotes themselves")
+    _outranks(game, ctx.member, m)
+    if not solo_rules(game) and m.role != pb.CO_LEADER_ROLE:  # the client's AllowsDemoting: only a co-leader
+        raise RpcError(pb.CLUB_NO_LONGER_RANKING_OFFICER, "only a co-leader can be demoted")
     if m.role == pb.CO_LEADER_ROLE:
         m.role = pb.MEMBER_ROLE
-        _set_member(session.game, m)
-    return pb.DemoteClubMemberResponse(club=_with_roster(session.game, ctx.club, now_s()))
+        _set_member(game, m)
+    return pb.DemoteClubMemberResponse(club=_with_roster(game, ctx.club, now_s()))
 
 
 @rpc("kick_club_member", pb.KickClubMemberRequest)
@@ -1069,12 +1351,16 @@ async def kick_club_member(session: Session, req: pb.KickClubMemberRequest) -> p
     if not req.player_id or req.player_id == player.id:
         leave_club(game, player, now)
         session.save()
-        return pb.KickClubMemberResponse(join_lock=pb.PlayerJoinClubLock(left_club_timestamp=now))
+        return pb.KickClubMemberResponse(join_lock=pb.PlayerJoinClubLock(
+            left_club_timestamp=now, join_club_lock_level=player.join_club_lock_level))
     ctx, m = _target(session, req.player_id)
-    if not solo_rules(game) and ctx.member.role != pb.LEADER_ROLE and m.role != pb.MEMBER_ROLE:
-        # a co-leader can kick members only, not the leader or another co-leader
-        raise RpcError(pb.CLUB_NO_LONGER_RANKING_OFFICER, "co-leaders can only kick members")
+    _outranks(game, ctx.member, m)  # a co-leader kicks members only
     _remove_member(game, m.public_id)
+    if game.db.account_by_public_id(m.public_id) is not None:
+        kicked = game.player(m.public_id)
+        _apply_player_fields(kicked, None, pb.INVALID_ROLE)
+        record_leave(game, kicked, now)
+        game.save(m.public_id)
     return pb.KickClubMemberResponse(club=_with_roster(game, ctx.club, now))
 
 
@@ -1374,7 +1660,7 @@ async def home_club_inventory(session: Session, req: Any) -> pb.HomeClubInventor
 
 
 async def home_club_invites(session: Session, req: Any) -> pb.HomeClubInvitesResponse:
-    return pb.HomeClubInvitesResponse()
+    return pb.HomeClubInvitesResponse(invites=invites_for(session.game, session.player.id))
 
 
 HOME_TILES = {

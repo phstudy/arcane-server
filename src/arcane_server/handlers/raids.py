@@ -94,7 +94,7 @@ from functools import cache
 from typing import TYPE_CHECKING, Any
 
 from arcane_server import battle_bootstrap as bb
-from arcane_server import content_data, clock, loot
+from arcane_server import content_data, clock, loot, remote_pve
 from arcane_server.battle_restrictions import can_field_squad, restriction_problem, unsatisfiable  # noqa: F401 (raids.*)
 from arcane_server.clock import day_end, local_day
 from arcane_server.config import PROJECT_ROOT
@@ -527,8 +527,9 @@ def tier_description(info: RaidInfo, tier: int, loc: dict[str, str]) -> list[pb.
 
 
 def raid_definition(gd: Any, info: RaidInfo, loc: dict[str, str]) -> pb.RaidDefinition:
-    """The raid screen's RAID EXCHANGE button opens the store on shipment `shipment_tab_id` (nothing when 0) and its
-    store button the store tab `store_tab_deep_link`: the raid's exchange, in the store's exchange tab."""
+    """The raid screen's RAID EXCHANGE button opens the store on shipment `shipment_tab_id` (nothing when 0). Its RAID
+    STORE button opens the store tab `store_tab_deep_link` and shows only when that is not 0: the server content has
+    no raid store tab (the exchange tab only holds the exchanges and shows empty when deep-linked), so it is 0."""
     k = info.key
     d = pb.RaidDefinition(
         id=info.id, name_key=f"RAID_{k}_NAME", tagline_key=f"RAID_{k}_TAGLINE", description_key=f"RAID_{k}_DESCRIPTION",
@@ -536,7 +537,6 @@ def raid_definition(gd: Any, info: RaidInfo, loc: dict[str, str]) -> pb.RaidDefi
         permanent=True, showcase_environment=info.environment, home_screen_model_path=info.homescreen,
         raid_type=info.raid_type, hud_currency_id=info.currency, chest_reward_title_key="RAID_REWARDS_TITLE",
         raid_xp_icon=info.xp_icon, milestone_reward_table=raid_milestones.specs()[info.id].table_id,
-        store_tab_deep_link=int(gd.single("constants")["storeTabs"]["shipmentsTab"]),
         shipment_tab_id=exchange_def_id(gd, info))
     d.showcase_environments.append(info.environment)
     d.images_parallax.append(info.banner)
@@ -1281,6 +1281,7 @@ class PendingRaidBattle:
     enemy_slots: list[int]  # indices into state["enemies"], in bootstrap (= persistent id) order
     spells: list[int] = field(default_factory=list)
     units: list[int] = field(default_factory=list)  # the squad, in bootstrap (= persistent id) order
+    remote_battle_id: str = ""  # run on the battle server (remote_pve): its report decides the result
 
 
 _PENDING = PendingBattles("raid", PendingRaidBattle)  # public_id -> raid battle in progress (survives a restart)
@@ -1446,8 +1447,12 @@ def build_battle(game: Game, c: Ctx, battle_index: int, units: list[B.Unit], spe
         for e in st["enemies"]:
             bs.raid_units_status.add(definition_id=e["def"], health_percent=max(e["hp"], 0.0))
     escape = info.spec(st["tier"]).escape_percent
+    # persistent ids: the squad's come after the bosses' (as the content has it), so a battle end's unit results
+    # sorted by persistent id list the bosses first (raid_battle_end)
+    first_pid = max((u.persistent_id for sq in enemy.squads for u in sq.units), default=0) + 1
     for i, u in enumerate(units, 1):
         u.bootstrap_unique_id = i
+        u.persistent_id = first_pid + i - 1
         u.unit_slot_type = bb.LEADER_SLOT if leader and u.definition_id == leader else 0
         if escape:
             add_escape(u, escape)
@@ -1515,10 +1520,17 @@ def add_escape(u: B.Unit, percent: int) -> None:
                     sort_order=max((a.sort_order for a in u.abilities), default=0) + 1)
 
 
-def _record_units(info: RaidInfo, ps: dict[str, Any], units: list[int], results: list[pb.UnitBattleResult]) -> None:
+def _record_units(info: RaidInfo, ps: dict[str, Any], units: list[int],
+                  results: list[pb.UnitBattleResult] | None) -> None:
     """Mark the squad's characters used: the fallen (or, lock_used_units, all) are out until the units refresh,
-    survivors keep their health. Without a result (battle quit) a character counts as fallen."""
+    survivors keep their health. Without a result (battle quit) a character counts as fallen. `results` None: the
+    battle's unit results are not known (a battle server that reports none): the characters keep their state, except
+    that lock_used_units still puts every character used out."""
     for i, u in enumerate(units):
+        if results is None:
+            if info.lock_used_units:
+                ps["units"][str(u)] = [False, 0.0]
+            continue
         r = results[i] if i < len(results) else None
         alive = r is not None and r.is_alive and r.health_percent > 0 and not info.lock_used_units
         ps["units"][str(u)] = [True, min(1.0, r.health_percent)] if alive and r else [False, 0.0]
@@ -1625,13 +1637,14 @@ async def raid_battle_start(session: Session, req: pb.RaidBattleStartRequest) ->
                                       [owned[u] for u in req.units]):
         raise RpcError(pb.RAID_REQUIREMENT_FAILED_ERROR, problem)
     res, order = build_battle(game, c, bi, units, spells, req.leader_unit, int(player.level))
+    remote_id = await remote_pve.begin(session, "raid_battle_start", B.FromString(res.bootstrap_bytes))
     if limited:
         ps["remaining"] -= 1
     save_player_state(game, player.id, info.id, ps)
     _save_squad(player, req)
     session.save()
     _PENDING.put(game, player.id, PendingRaidBattle(c.club_id, info.id, st["attempt_id"], bi, order, list(req.spells),
-                                                    list(req.units)))
+                                                    list(req.units), remote_id))
     return res
 
 
@@ -1641,6 +1654,8 @@ async def raid_battle_end(session: Session, req: pb.RaidBattleEndRequest) -> pb.
     pending = _PENDING.pop(game, player.id)
     if pending is None:
         raise RpcError(pb.BAD_REQUEST, "no raid battle in progress")
+    # a remote battle: the battle server's report (the win, every unit's health, the damage) decides, not the client
+    report = remote_pve.settle(session, pending.remote_battle_id, req, lambda: _PENDING.put(game, player.id, pending))
     c = _ctx(session, pending.raid_id)
     st, info = c.st, c.info
     res = pb.RaidBattleEndResponse(inventory_delta=pb.InventoryDelta(), stamped_public_club_id=c.club_id)
@@ -1652,7 +1667,8 @@ async def raid_battle_end(session: Session, req: pb.RaidBattleEndRequest) -> pb.
             ps["spells"].append(s)
     ordered = sorted(req.units, key=lambda u: u.persistent_id)  # enemies first, then the squad (client order)
     squad = ordered[len(pending.enemy_slots):len(pending.enemy_slots) + len(pending.units)]
-    _record_units(info, ps, pending.units, squad)
+    # a remote battle without unit results (an older battle server): the squad is not known, it stays as it was
+    _record_units(info, ps, pending.units, None if report is not None and report.units is None else squad)
     save_player_state(game, player.id, info.id, ps)
     if st["attempt_id"] != pending.attempt_id or st["state"] != pb.IN_PROGRESS:
         res.raid_status.CopyFrom(raid_status(game, c.club_id, player.id, info, st, c.now))
@@ -1829,16 +1845,19 @@ async def get_raid_club_members_damage(
 # =====================================================================================
 
 
+# The client keeps the raid definitions from these home tiles, and its club adventures screen lists only those (it asks
+# get_scheduled_raids only while raids are locked); a raid without a status shows "join a club". A player outside a
+# club therefore gets the definitions and no statuses, so the raids are there once they join.
+
+
 async def home_raid_definitions(session: Session, req: Any) -> pb.HomeRaidDefinitionsResponse | None:
-    if clubs.membership(session.game, session.player.id) is None:
-        return None
     return pb.HomeRaidDefinitionsResponse(raid_definitions=definitions(session.game))
 
 
 async def home_raid_statuses(session: Session, req: Any) -> pb.HomeRaidStatusesResponse | None:
-    if clubs.membership(session.game, session.player.id) is None:
-        return None
     res = pb.HomeRaidStatusesResponse(raid_definitions=definitions(session.game))
+    if clubs.membership(session.game, session.player.id) is None:
+        return res
     language = player_language(session.game, session.public_id)
     for raid_id in RAIDS:
         c = _ctx(session, raid_id)

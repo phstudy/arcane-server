@@ -106,8 +106,8 @@ class Toggles:
         86400, 7200, "how long a flash gift mail can be claimed after it drops (flash_gifts.py; standard: 2 hours)")
     solo_club_rules: bool = _toggle(
         True, False, "the human player always leads their club, raids need no member count, no level gate to join a "
-        "club or register for Club Conquest, no inactivity role changes; off: the standard club rules (clubs, raids, "
-        "club_war)")
+        "club or register for Club Conquest, no inactivity role changes, no week between new clubs; off: the standard "
+        "club rules (clubs, raids, club_war)")
     server_played_club_open_slot: bool = _toggle(
         True, False, "a full club shows one open slot to players looking to join; joining evicts its weakest "
         "server-played member, never a human (clubs)")
@@ -192,6 +192,8 @@ class Settings:
     max_battles: int = 16
     # Startup content checks (startup.py): "stamp" skips them when a validated stamp covers the inputs; "always".
     content_checks: str = "stamp"
+    # The built browser client served at /play (its index.html and assets); None: not served.
+    web_client_dir: Path | None = None
     # The server-played population (population.py): the seed a new database generates it from; None: a random one;
     # "off": none at all. A database keeps the population (or none) it got on its first start.
     population_seed: int | str | None = None
@@ -254,6 +256,7 @@ def load_settings() -> Settings:
         seed_player=Path(seed) if seed else None,
         game_epoch=_game_epoch(os.environ.get("ARCANE_GAME_EPOCH", "").strip()),
         content_checks=os.environ.get("ARCANE_CONTENT_CHECKS", "").strip() or "stamp",
+        web_client_dir=Path(d) if (d := os.environ.get("ARCANE_WEB_CLIENT_DIR", "").strip()) else None,
         account_picker=os.environ.get("ARCANE_ACCOUNT_PICKER", "").strip().lower() in ("1", "true", "yes", "on"),
         population_seed=_population_seed(os.environ.get("ARCANE_POPULATION_SEED", "")),
         **_admin_settings(),
@@ -297,6 +300,8 @@ def _population_seed(raw: str) -> int | str | None:
 def settings_problems(s: Settings) -> list[str]:
     """Inconsistent combinations, checked at startup (game server and battle server)."""
     problems = []
+    if s.web_client_dir is not None and not (s.web_client_dir / "index.html").is_file():
+        problems.append(f"ARCANE_WEB_CLIENT_DIR={s.web_client_dir} has no index.html (build the web client into it)")
     t = s.toggles
     if t.population_growth not in ("current", "strongest", "off"):
         problems.append(f"ARCANE_POPULATION_GROWTH must be current, strongest or off, not {t.population_growth!r}")

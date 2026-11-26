@@ -10,7 +10,7 @@ from zoneinfo import ZoneInfo
 
 import pytest
 
-from conftest import GameClient, client_text, report_token
+from conftest import GameClient, assert_result_pending, battle_server_reports, client_text, report_token
 from arcane_server.app import GAME as GAME_KEY
 from arcane_server.handlers import club_war as cw
 from arcane_server.handlers import clubs, pvp
@@ -503,6 +503,23 @@ async def test_multiplayer_own_members_do_not_play(seeded):
     assert all(n.num_defenders == 5 for n in war.nodes if n.owner_team_id == 2 and n.gd_node_id != "B")
 
 
+async def test_archived_members_below_the_war_level_do_not_take_part(seeded):
+    """Only the generated population stands in for a registered club at any level; an archived club's real members
+    took part only from the CLUB_WAR level (20), as the client allowed them to register."""
+    server, me = seeded
+    game = _game(server)
+    other = OTHER_CLUBS[0][0]
+    ids = [m.public_id for m in clubs.club_members(game, other)]
+    low = ids[0]
+    p = game.player(low)
+    p.level = 10
+    game.save(low)
+    clubs._PROFILE_CACHE.clear()
+    parts = cw._participants(game, other)
+    assert low not in parts
+    assert any(i in parts for i in ids[1:])
+
+
 async def test_win_condition_ends_battle_early(seeded):
     """Original rules: the rewards phase starts as soon as a club reaches winConditionPointThreshold."""
     server, me = seeded
@@ -713,3 +730,44 @@ def test_simulated_attacks_meet_the_fortification(server):
     assert abs(held - cw.MUTATOR_EDGE) < 0.03
     assert not any(cw._holds(game, {}, d, {"node": "B12", "units": other}, rng) for _ in range(200))
     assert not any(cw._holds(game, {}, d, {"node": "B1", "units": tech}, rng) for _ in range(200))
+
+
+async def test_browser_club_war_battle_takes_the_battle_servers_report(member, server):
+    game = _game(server)
+    await member.call("club_war", pb.ClubWarRequest(), pb.ClubWarResponse)
+    nid, alive = _attackable_defended(game, HOME_CLUB, cw.now_s())
+    units, spells = _squad(game, USER_ID)
+    start, battle_id = await member.web_start("club_war_battle_start", pb.ClubWarBattleStartRequest(
+        gd_node_id=nid, defense_id=alive[0]["id"], units=units, spells=spells), pb.ClubWarBattleStartResponse)
+    assert battle_id == start.battle_id
+    enemy = [u.bootstrap_unique_id for sq in pb.BattleLib_Bootstrap.FromString(start.bootstrap_bytes).players[1].squads
+             for u in sq.units]
+    claim = pb.ClubWarBattleResultRequest(battle_id=battle_id, units=[
+        pb.UnitBattleResult(persistent_id=i, is_alive=False) for i in enemy])  # "every defender fell"
+    await assert_result_pending(member, "club_war_battle_result", claim)
+    await battle_server_reports(member, battle_id, winning_team=1, units=((enemy[0], True, 0.5),) + tuple(
+        (i, False, 0.0) for i in enemy[1:]))
+    res = await member.call("club_war_battle_result", claim, pb.ClubWarBattleResultResponse)
+    assert not res.captured_node and res.num_defenses_remaining == len(alive)  # lost, as reported
+    detail = await member.call("club_war_node_detail", pb.ClubWarNodeDetailRequest(node_id=nid),
+                               pb.ClubWarNodeDetailResponse)
+    d0 = next(x for x in detail.defenses if x.squad.id == alive[0]["id"])
+    assert 0.5 in [round(s.health_percent, 3) for s in d0.squad.unit_states]  # the reported health, not the claim
+
+
+async def test_browser_club_war_battle_without_unit_results_keeps_the_defenders(member, server):
+    """A battle server that reports no unit results (an older one): a lost fight leaves the defenders' health as it
+    was, never what the browser claims."""
+    game = _game(server)
+    await member.call("club_war", pb.ClubWarRequest(), pb.ClubWarResponse)
+    nid, alive = _attackable_defended(game, HOME_CLUB, cw.now_s())
+    before = dict(alive[0]["health"])
+    units, spells = _squad(game, USER_ID)
+    start, battle_id = await member.web_start("club_war_battle_start", pb.ClubWarBattleStartRequest(
+        gd_node_id=nid, defense_id=alive[0]["id"], units=units, spells=spells), pb.ClubWarBattleStartResponse)
+    enemy = [u.bootstrap_unique_id for sq in pb.BattleLib_Bootstrap.FromString(start.bootstrap_bytes).players[1].squads
+             for u in sq.units]
+    await battle_server_reports(member, battle_id, winning_team=1)
+    await member.call("club_war_battle_result", pb.ClubWarBattleResultRequest(battle_id=battle_id, units=[
+        pb.UnitBattleResult(persistent_id=enemy[0], is_alive=True, health_percent=0.01)]), pb.ClubWarBattleResultResponse)
+    assert cw._load(game, HOME_CLUB)["defenses"][alive[0]["id"]]["health"] == before

@@ -8,7 +8,7 @@ import uuid
 from datetime import datetime
 
 import pytest
-from conftest import GameClient, report_token, until_held
+from conftest import GameClient, assert_result_pending, battle_server_reports, report_token, until_held
 
 from arcane_server.app import GAME
 from arcane_server.battle_server.battle import survivors
@@ -226,6 +226,22 @@ async def test_refresh_without_potions_costs_gems(client):
     await start(client, r, units, spells)
 
 
+async def test_refresh_short_of_potions_charges_the_shown_gem_price(client):
+    """3 potions short of a 10-potion refresh: 0.5 x 3 = 1.5 gems, shown and charged as 1."""
+    r = ready(client)
+    units, spells = squad(client, r)
+    await join(client, r)
+    started = await start(client, r, units, spells)
+    await client.call("limited_time_arena_battle_result", pb.LimitedTimeArenaBattleResultRequest(
+        battle_id=started.battle_id), pb.LimitedTimeArenaBattleResultResponse)
+    grant_item(player(client), ss.STAMINA_ITEM, 7)
+    gems = item_count(player(client), ss.GEMS)
+    res = await client.call("refresh_units_stamina", pb.RefreshUnitsStaminaRequest(
+        arena_definition_id=r.definition_id, start_time=clock.to_real(r.start), unit_ids=units[:1]), pb.RefreshUnitsStaminaResponse)
+    assert gems - item_count(player(client), ss.GEMS) == 1
+    assert sorted((i.id, i.count) for i in res.inventory_delta.items) == sorted([(ss.GEMS, -1), (ss.STAMINA_ITEM, -7)])
+
+
 async def test_leaderboard_milestones_and_rank_reward(client, monkeypatch):
     r = ready(client)
     units, spells = squad(client, r)
@@ -431,3 +447,60 @@ def test_round_milestone_icons_follow_the_videos():
     first = {need: items[0][0] for need, items in ss.ROUND_MILESTONES}
     assert (first[27_000], first[85_250], first[105_500]) == (ss.GOLD, ss.ALPHA_RUNE, ss.GOLD)
     assert [need for need, _ in ss.ROUND_MILESTONES] == [13_500, 27_000, 65_000, 85_250, 105_500, 132_500]
+
+
+# --- a browser's Summoner Showdown battles (through /web/remote) ------------------------------------------------------
+
+
+def start_req(r: ss.Round, units, spells) -> pb.LimitedTimeArenaBattleStartRequest:
+    return pb.LimitedTimeArenaBattleStartRequest(limited_time_arena=ident(r), units=units, spells=spells,
+                                                 leader_unit=units[0])
+
+
+async def test_browser_battle_against_a_bot_waits_for_the_battle_servers_report(battle_server, client, monkeypatch):
+    monkeypatch.setattr(ss, "MATCH_WAIT_S", 0.05)
+    r = ready(client)
+    await join(client, r)
+    units, spells = squad(client, r)
+    started, battle_id = await client.web_start("limited_time_arena_battle_start", start_req(r, units, spells),
+                                                pb.LimitedTimeArenaBattleStartResponse)
+    assert battle_id == started.battle_id and battle_server[0]["kind"] == "lta"
+    result = pb.LimitedTimeArenaBattleResultRequest(battle_id=started.match_id)
+    await assert_result_pending(client, "limited_time_arena_battle_result", result)
+    await battle_server_reports(client, battle_id, winning_team=0)
+    res = await client.call("limited_time_arena_battle_result", result, pb.LimitedTimeArenaBattleResultResponse)
+    assert {c.type: c.points for c in res.combat_points}[1] == 7000  # won, as reported
+
+
+async def test_browser_and_android_players_paired(battle_server, server):
+    """A browser and an Android client in one battle: each gets its seat; the browser's result waits for the report,
+    the Android client's does not (as before: no report = lost)."""
+    web = await GameClient(server, "test-" + uuid.uuid4().hex).login()
+    phone = await GameClient(server, "test-" + uuid.uuid4().hex).login()
+    r = ready(web)
+    ready(phone)
+    for c in (web, phone):
+        await join(c, r)
+    uw, sw = squad(web, r)
+    up, sp = squad(phone, r)
+    (rw, battle_id), rp = await asyncio.gather(
+        web.web_start("limited_time_arena_battle_start", start_req(r, uw, sw), pb.LimitedTimeArenaBattleStartResponse),
+        start(phone, r, up, sp))
+    assert rw.battle_id == rp.battle_id == battle_id and len(battle_server) == 1
+    seat = next(p for p in battle_server[0]["players"] if p.public_id == web.public_id)
+    assert seat.player_id == rw.player_battle_id and seat.token != rp.player_token
+    phone_res = await phone.call("limited_time_arena_battle_result", pb.LimitedTimeArenaBattleResultRequest(
+        battle_id=rp.battle_id), pb.LimitedTimeArenaBattleResultResponse)
+    assert {c.type: c.points for c in phone_res.combat_points}[1] == 2000
+    await assert_result_pending(web, "limited_time_arena_battle_result",
+                                pb.LimitedTimeArenaBattleResultRequest(battle_id=rw.battle_id))
+    for c in (web, phone):
+        await c.ws.close()
+
+
+async def test_browser_battle_without_a_battle_server_is_refused(client):
+    r = ready(client)
+    await join(client, r)
+    units, spells = squad(client, r)
+    res, body = await client.web_start_raw("limited_time_arena_battle_start", start_req(r, units, spells))
+    assert res.response_code == pb.ERROR and body["battle_id"] == ""

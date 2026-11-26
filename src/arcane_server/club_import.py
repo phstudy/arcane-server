@@ -83,6 +83,9 @@ class Store:
         self.settings = SimpleNamespace(toggles=toggles)
         self._players: dict[str, pb.Player] = {}
 
+    def push_soon(self, public_id: str, messages: list[pb.DynamicMessage]) -> None:
+        """Nobody is connected to an import tool."""
+
 
 @cache
 def known_clubs() -> dict[str, dict[str, Any]]:

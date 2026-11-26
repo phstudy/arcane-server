@@ -22,7 +22,7 @@ expeditionPointsPerDeployPower, the energy's energyConstants), so it is rebuilt 
   (Toggles.expedition_battle_unit_cooldown).
 - Difficulties: the 9 tiers of the localization (CLUB_EXPEDITION_TIER_0n_*), enemy level/rarity/gear from the
   tiers' recommended values. Seasons last Toggles.expedition_season_s (live game: a week); a season is started by
-  the club leader (the player always is one) choosing a difficulty.
+  the club leader or a co-leader (as the client allows; the player always is a leader) choosing a difficulty.
 - Milestones: Club Expedition XP (inventory item, reset each season) unlocks the season's personal milestone
   rewards; they are granted automatically and reported once in ExpeditionStatus.milestone_rewards (the client
   applies that delta).
@@ -45,7 +45,7 @@ from functools import cache
 from typing import TYPE_CHECKING, Any
 
 from arcane_server import battle_bootstrap as bb
-from arcane_server import content_data, clock, energy
+from arcane_server import content_data, clock, energy, remote_pve
 from arcane_server.clock import day_end, day_start
 from arcane_server.handlers import clubs, festivals
 from arcane_server.handlers.campaign import MAX_SPELLS, MAX_SQUAD, Delta, grant_rewards
@@ -879,8 +879,9 @@ async def start_expedition(session: Session, req: pb.StartExpeditionRequest) -> 
     if not 0 <= req.difficulty < len(TIERS):
         raise RpcError(pb.BAD_REQUEST, f"no difficulty {req.difficulty}")
     member = clubs.membership(c.game, session.player.id)
-    if member is None or member.role != pb.LEADER_ROLE:
-        raise RpcError(pb.UNAUTHORIZED, "only the club leader can start an expedition")
+    # the client lets a co-leader pick the difficulty too (below co-leader it shows its "must be a club leader" text)
+    if member is None or member.role not in (pb.LEADER_ROLE, pb.CO_LEADER_ROLE):
+        raise RpcError(pb.UNAUTHORIZED, "only the club leader or a co-leader can start an expedition")
     c.st.update(started=True, started_at=c.now, difficulty=int(req.difficulty), highest=0, rooms={}, marked={})
     player = session.player
     item = energy_item(c.game)
@@ -1176,31 +1177,43 @@ def bootstrap(game: Game, st: dict[str, Any], floor: int, r: Room, battle: int, 
     return bs, boss_hp
 
 
-@rpc("club_expedition_battle_start", pb.ClubExpeditionBattleStartRequest)
-async def club_expedition_battle_start(
-    session: Session, req: pb.ClubExpeditionBattleStartRequest
-) -> pb.ClubExpeditionBattleStartResponse:
+def _start_ctx(session: Session, req: pb.ClubExpeditionBattleStartRequest) -> tuple[Ctx, int, Room, int]:
+    """The caller's expedition with the battle `req` asks for checked (and its squad's units spent in it): the
+    context, floor, room and battle index."""
     c = _ctx(session)
     assert c is not None
     _require_started(c)
-    player = session.player
     floor = int(req.floor_depth)
     r = _room(c, floor, req.room_x, req.room_y)
     if r.type not in (BATTLE, BOSS) or (r.type == BOSS) != req.is_boss:
         raise RpcError(pb.BAD_REQUEST, "no battle in this room")
+    # a battle another member closed meanwhile: the code for which the client shows its "battle busy" alert
     if visibility(r, completed(c.st, floor)) != pb.UNLOCKED:
-        raise RpcError(pb.BAD_REQUEST, "this room is not open")
+        raise RpcError(pb.CLUB_EXP_BATTLE_UNAVAILABLE_TO_JOIN_ERROR, "this room is not open")
     battle = 0 if r.type == BOSS else int(req.battle_index)
     if r.type == BATTLE and (battle >= BATTLES_PER_ROOM or battle in _room_state_ro(c.st, floor, r.index).get("battles", [])):
-        raise RpcError(pb.BAD_REQUEST, "this battle is already won")
-    units, spells = _squad(c.game, player, req)
+        raise RpcError(pb.CLUB_EXP_BATTLE_UNAVAILABLE_TO_JOIN_ERROR, "this battle is already won")
     _spend_units(c, list(req.units))
+    return c, floor, r, battle
+
+
+@rpc("club_expedition_battle_start", pb.ClubExpeditionBattleStartRequest)
+async def club_expedition_battle_start(
+    session: Session, req: pb.ClubExpeditionBattleStartRequest
+) -> pb.ClubExpeditionBattleStartResponse:
+    c, floor, r, battle = _start_ctx(session, req)
+    player = session.player
+    units, spells = _squad(c.game, player, req)
     battle_id = _rng("battle", c.club_id, c.st["season"], floor, r.index, battle, c.now, player.id).getrandbits(52)
     bs, boss_hp = bootstrap(c.game, c.st, floor, r, battle, units, spells, req.leader_unit, int(player.level), battle_id)
+    remote_id = await remote_pve.begin(session, "club_expedition_battle_start", bs)  # before the energy is spent
+    if remote_id:  # the club's expedition may have changed while the battle server took the battle: start again from
+        c, floor, r, battle = _start_ctx(session, req)  # the stored state (written below), checked once more
     item = energy_item(c.game)
     energy.spend(c.game.gamedata, player, item, ENERGY_COST, c.now)
     enemies = sum(len(sq.units) for p in bs.players if not p.is_human for sq in p.squads)
-    c.ps["battle"] = {"floor": floor, "index": r.index, "battle": battle, "boss_hp": boss_hp, "enemies": enemies}
+    c.ps["battle"] = {"floor": floor, "index": r.index, "battle": battle, "boss_hp": boss_hp, "enemies": enemies,
+                      "remote": remote_id}  # run on the battle server (remote_pve): its report decides the result
     _save_squad(player, req)
     from arcane_server.handlers.inbox_store import record_daily
 
@@ -1223,9 +1236,13 @@ async def club_expedition_battle_end(session: Session, req: pb.ClubExpeditionBat
     c = _ctx(session)
     assert c is not None
     player = session.player
-    b = c.ps.pop("battle", None)
+    b = c.ps.get("battle")
     if b is None:
         raise RpcError(pb.NOT_FOUND, "no expedition battle in progress")
+    # a remote battle: the battle server's report (the win, the boss damage) decides, not what the client claims (not
+    # reported yet: the battle stays as stored, nothing was saved)
+    remote_pve.settle(session, b.get("remote", ""), req, lambda: None)
+    del c.ps["battle"]
     floor, index, battle = int(b["floor"]), int(b["index"]), int(b["battle"])
     r = floor_board(floor).rooms[index]
     rs = room_state(c.st, floor, index)

@@ -394,8 +394,11 @@ def _fields_squads(game: Game, p: pb.Player | None) -> bool:
 def _participants(game: Game, club_id: str) -> list[str]:
     """Members the server registers and plays: every member of a server-played club (a population club stands in
     for the real club it was), the server-played members of a club with humans (none without
-    server_played_club_members; the humans register and defend themselves). Each must have reached the CLUB_WAR
-    level and own five units."""
+    server_played_club_members; the humans register and defend themselves). Each must own five units and have
+    reached the CLUB_WAR level (as registration required), except the generated population's players: their levels
+    follow the humans' strength (population_growth), and on a server whose humans are new they sit below the war level —
+    matched with nobody registered, every base of the opponent stood empty. Archived clubs' real members keep the
+    rule."""
     played = _server_played(game, club_id)
     if not played and not _plays_own_members(game):
         return []
@@ -404,9 +407,14 @@ def _participants(game: Game, club_id: str) -> list[str]:
         if not played and not clubs._is_ai(game, m.public_id):
             continue
         p = war_player(game, m.public_id)
-        if _fields_squads(game, p) and _war_level_ok(game, p):
+        if _fields_squads(game, p) and (_generated(game, m.public_id) or _war_level_ok(game, p)):
             out.append(m.public_id)
     return out
+
+
+def _generated(game: Game, pid: str) -> bool:
+    """A player of the generated population (no account of its own): not an archived real member."""
+    return game.db.account_by_public_id(pid) is None and pid in clubs.population_data().players
 
 
 def _player_power(game: Game, pid: str) -> int:
@@ -1567,16 +1575,23 @@ async def club_war_battle_start(session: Session, req: pb.ClubWarBattleStartRequ
 @rpc("club_war_battle_result", pb.ClubWarBattleResultRequest)
 async def club_war_battle_result(session: Session, req: pb.ClubWarBattleResultRequest) -> pb.ClubWarBattleResultResponse:
     """The outcome of the caller's battle: the battle server's report when battles are remote (a battle it never
-    reported is lost; the client is trusted only for local battles). It counts unless the defense's lock passed to
+    reported is lost, a browser's once remote_pve.REPORT_WAIT_S passed; the client is trusted only for local
+    battles). It counts unless the defense's lock passed to
     somebody else meanwhile (the battle ran past inBattleTimeoutSeconds and another player took the defense)."""
     async with _war(session) as w:
         game, st, now, d = w.game, w.st, w.now, war_def(w.game, w.st)
         b = st["battles"].get(req.battle_id)
         if b is None or b.get("by", w.pid) != w.pid:
             raise RpcError(pb.NOT_FOUND, f"no club war battle {req.battle_id}")
+        pvp.check_reported(game, req.battle_id, session.public_id)  # a browser's battle: wait for the report
         del st["battles"][req.battle_id]
         pending = pvp.pop_pending(game, req.battle_id, session.public_id)
-        reported = {str(u.persistent_id): u for u in req.units}
+        # the defenders' health: the battle server's unit results when it reported them; else the client's, but
+        # never a browser's (its battle ran on the battle server: without unit results the defenders keep theirs)
+        units = pvp.reported_units(pending)
+        if units is None:
+            units = [] if pending is not None and pending.web else list(req.units)
+        reported = {str(u.persistent_id): u for u in units}
         defenders = b["defenders"]
         if pending is not None and pending.winner_team is not None:
             won = pending.winner_team == 0
@@ -1675,6 +1690,16 @@ async def club_war_tiered_rewards(session: Session, req: pb.ClubWarTierRewardsRe
 async def home_club_war(session: Session, req: Any) -> pb.HomeClubWarResponse | None:
     if clubs.membership(session.game, session.player.id) is None:
         return None
+    try:
+        return await _home_club_war(session)
+    except RpcError as e:
+        # no war for the club (no club to match it against): no tile, not a failed home (it carries every tile)
+        if e.code != pb.CLUB_WAR_INVALID_PHASE:
+            raise
+        return None
+
+
+async def _home_club_war(session: Session) -> pb.HomeClubWarResponse:
     async with _war(session) as w:
         idx, end, _ = war_phase(war_def(w.game, w.st), w.st, w.now)
         rw = _current_rewards(w.st, w.team)

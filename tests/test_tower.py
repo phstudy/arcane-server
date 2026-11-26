@@ -7,7 +7,7 @@ import time
 from types import SimpleNamespace
 
 import pytest
-from conftest import tower_squad
+from conftest import assert_down_costs_nothing, assert_result_pending, battle_server_reports, human_team, tower_squad
 
 from arcane_server.handlers import events as ev
 from arcane_server.handlers import home as home_mod
@@ -146,7 +146,7 @@ async def test_complete_map_and_chest(client, game):
     st = await status(client)
     assert (st.current_node, st.times_completed, st.highest_node_reached) == (n, 1, n)
     done = await client.call_raw("tower_battle_start", pb.TowerBattleStartRequest(id=tid(), units=squad(player)))
-    assert done.response_code == pb.BAD_REQUEST
+    assert done.response_code == pb.TOWER_TIER_INDEX_OUT_OF_RANGE_ERROR  # "You have already completed this node!"
     home = await client.call("home_tower_status", pb.HomeTowerStatusRequest(), pb.HomeTowerStatusResponse)
     assert (home.tower_id.map_id, home.current_node, home.total_nodes) == (1, 0, 10)
 
@@ -220,3 +220,58 @@ async def test_auto_win_matches_the_official_server(client, game):
 def _session(game, public_id: str) -> SimpleNamespace:
     """Just enough of a Session for the tower state helpers (game + public_id)."""
     return SimpleNamespace(game=game, public_id=public_id)
+
+
+# --- a browser's tower battles run on the battle server -------------------------------------------------------------
+
+
+def start_req(player: pb.Player) -> pb.TowerBattleStartRequest:
+    units = squad(player)
+    return pb.TowerBattleStartRequest(id=tid(), units=units, leader_unit=units[0])
+
+
+def end_states(bs: B, human_alive: bool, health: float) -> tuple[tuple[int, bool, float], ...]:
+    """Every unit's end state as the battle server reports it: the squad at `health` (or dead), the enemies dead
+    when the squad lives."""
+    return tuple((u.persistent_id, p.is_human == human_alive, health if p.is_human == human_alive else 0.0)
+                 for p in bs.players for sq in p.squads for u in sq.units)
+
+
+async def test_browser_tower_battle_keeps_the_health_the_battle_server_reports(battle_server, client, game):
+    player = game.player(client.public_id)
+    res, battle_id = await client.web_start("tower_battle_start", start_req(player), pb.TowerBattleStartResponse)
+    assert battle_server[-1]["kind"] == "tower" and battle_server[-1]["battle_id"] == battle_id
+    bs = B.FromString(res.bootstrap_bytes)
+    claim = pb.TowerBattleEndRequest(win=False, units=[pb.UnitBattleResult(persistent_id=6, is_alive=False)])
+    await assert_result_pending(client, "tower_battle_end", claim)
+    await battle_server_reports(client, battle_id, winning_team=human_team(battle_server),
+                                units=end_states(bs, human_alive=True, health=0.5))
+    end = await client.call("tower_battle_end", claim, pb.TowerBattleEndResponse)
+    assert end.inventory_delta.items  # node 0's loot: won, as reported
+    st = await status(client)
+    assert st.current_node == 1
+    assert [(s.is_alive, s.health_percent) for s in st.unit_states[5:10]] == [(True, 0.5)] * 5
+
+
+async def test_browser_tower_battle_lost_on_the_battle_server(battle_server, client, game):
+    player = game.player(client.public_id)
+    res, battle_id = await client.web_start("tower_battle_start", start_req(player), pb.TowerBattleStartResponse)
+    await battle_server_reports(client, battle_id, winning_team=1 - human_team(battle_server),
+                                units=end_states(B.FromString(res.bootstrap_bytes), human_alive=False, health=0.4))
+    claim = pb.TowerBattleEndRequest(win=True)
+    await client.call("tower_battle_end", claim, pb.TowerBattleEndResponse)
+    st = await status(client)
+    assert st.current_node == 0 and not any(s.is_alive for s in st.unit_states[5:10])
+    assert [(s.is_alive, round(s.health_percent, 3)) for s in st.unit_states[:5]] == [(True, 0.4)] * 5  # enemies keep theirs
+
+
+async def test_browser_tower_battle_with_the_battle_server_down_costs_nothing(battle_server, client, game, monkeypatch):
+    await assert_down_costs_nothing(client, monkeypatch, "tower_battle_start", start_req(game.player(client.public_id)))
+    assert (await client.call_raw("tower_battle_end", pb.TowerBattleEndRequest(win=True))).response_code == pb.BAD_REQUEST
+
+
+async def test_android_tower_battle_stays_local(battle_server, client, game):
+    bs = await start(client, squad(game.player(client.public_id)))
+    assert not battle_server
+    await finish(client, bs, health=0.5)
+    assert (await status(client)).current_node == 1

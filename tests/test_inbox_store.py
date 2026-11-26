@@ -424,13 +424,35 @@ async def test_titans_and_jafar_raid_exchanges_sell_the_listed_offers(client):
     assert delta_map(bought.inventory_delta) == {JAFAR_COINS: -21000, rune.item.item_id: 2}
 
 
-async def test_convert_gems_to_currency(client):
+async def test_convert_gems_to_currency_buys_the_missing_part_of_the_cost(client):
+    """The client's buy-the-difference popup sends the full cost of what the player wants (currency_cost) and shows,
+    prices and should get the part they lack: cost - owned (15,000 gold missing of a 20,000 cost shows 15 gems)."""
     set_count(client, GEMS, 100)
+    set_count(client, GOLD, 5000)
     res = await client.call("convert_gems_to_currency",
-                            pb.ConvertGemsToCurrencyRequest(currency_cost=10000, currency_item_id=GOLD),
+                            pb.ConvertGemsToCurrencyRequest(currency_cost=20000, currency_item_id=GOLD),
                             pb.ConvertGemsToCurrencyResponse)
-    assert delta_map(res.delta) == {GEMS: -10, GOLD: 10000}  # 0.001 gems per gold in the first tier
-    assert item_count(player_of(client), GEMS) == 90
+    assert delta_map(res.delta) == {GEMS: -15, GOLD: 15000}  # 0.001 gems per gold in the first tier
+    assert item_count(player_of(client), GEMS) == 85 and item_count(player_of(client), GOLD) == 20000
+    env = await client.call_raw("convert_gems_to_currency",
+                                pb.ConvertGemsToCurrencyRequest(currency_cost=20000, currency_item_id=GOLD))
+    assert env.response_code == pb.BAD_REQUEST and item_count(player_of(client), GEMS) == 85  # nothing missing
+
+
+@pytest.mark.parametrize(("item", "missing", "gems"), [
+    (GOLD, 1500, 1),  # 0.001 x 1500 = 1.5: the client shows 1, so 1 is charged (truncated, not rounded up)
+    (GOLD, 2501, 2),
+    (GOLD, 1, 1),  # at least 1
+    (26, 52000, 246),  # float32 0.00475 x 52000 = 246.99998: 246, as the client shows
+    (8595019443845334, 7, 7),  # no conversion row: the item's own gemConvertCost (1.0) per unit
+])
+async def test_gem_price_of_missing_currency_is_the_shown_price(client, item, missing, gems):
+    set_count(client, GEMS, 1000)
+    set_count(client, item, 300)  # owned: the request carries the full cost
+    res = await client.call("convert_gems_to_currency",
+                            pb.ConvertGemsToCurrencyRequest(currency_cost=300 + missing, currency_item_id=item),
+                            pb.ConvertGemsToCurrencyResponse)
+    assert delta_map(res.delta) == {GEMS: -gems, item: missing}
 
 
 # --- daily quests --------------------------------------------------------------------------------

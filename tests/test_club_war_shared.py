@@ -555,7 +555,8 @@ async def test_matchmaking_tells_both_clubs_to_refresh(two_clubs, clock_shift):
     assert {"club_war", "club_war_node_detail"} <= names
     for c in (b, a2):
         while (push := await c.next_push()).type != pb.EXPIRE_RPC_CACHE_MESSAGE:
-            assert push.type == pb.CHAT_DYNAMIC_MESSAGE  # (the club news lines of the phases)
+            # (the club news lines of the phases; role changes of the club rules)
+            assert push.type in (pb.CHAT_DYNAMIC_MESSAGE, pb.CLUB_MEMBER_ROLE_CHANGED_DYNAMIC_MESSAGE)
     # once only
     await _war(a)
     assert not [m for m in a.last_envelope.dynamic_messages if m.type == pb.EXPIRE_RPC_CACHE_MESSAGE]

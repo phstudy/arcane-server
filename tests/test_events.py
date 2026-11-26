@@ -6,7 +6,8 @@ import time
 
 import pytest
 
-from conftest import event_squad, fielded_squad, rotation_days, tower_squad
+from conftest import (assert_down_costs_nothing, assert_result_pending, battle_server_reports, event_squad,
+                      fielded_squad, human_team, rotation_days, tower_squad)
 
 from arcane_server.handlers import events as ev
 from arcane_server.inventory import grant_item, item_count
@@ -409,6 +410,47 @@ async def test_daily_event_battle_and_instant_all(client, game):
     assert next(a.current_value for a in player.activities if a.definition_id == qid) == 3
 
 
+# --- event battles run on the battle server for a browser ----------------------------------------------------------
+
+
+def daily_start(player: pb.Player) -> pb.EventBattleStartRequest:
+    first = ev.today_daily_events(int(time.time()))[0]
+    return pb.EventBattleStartRequest(event_id=pb.EventIdentifier(event_content_id=first.content_id), units=squad(player))
+
+
+async def test_browser_event_battle_counts_the_battle_servers_report(battle_server, client, game):
+    player = game.player(client.public_id)
+    start = daily_start(player)
+    cid = start.event_id.event_content_id
+    _, battle_id = await client.web_start("event_battle_start", start, pb.EventBattleStartResponse)
+    assert battle_server[-1]["kind"] == "event" and battle_server[-1]["battle_id"] == battle_id
+    team = human_team(battle_server)
+    claim = pb.EventBattleEndRequest(win=True, star_level=3)
+    await assert_result_pending(client, "event_battle_end", claim)
+    await battle_server_reports(client, battle_id, winning_team=1 - team)
+    lost = await client.call("event_battle_end", claim, pb.EventBattleEndResponse)
+    assert lost.updated_status.battles_remaining == 3 and not lost.inventory_delta.items  # the report, not the claim
+
+    _, battle_id = await client.web_start("event_battle_start", start, pb.EventBattleStartResponse)
+    await battle_server_reports(client, battle_id, winning_team=team, stars=(2, 2))
+    won = await client.call("event_battle_end", pb.EventBattleEndRequest(win=False), pb.EventBattleEndResponse)
+    assert won.updated_status.battles_remaining == 2 and won.inventory_delta.items
+    assert next(p.star_count for p in player.event_progress if p.id.event_content_id == cid) == 2
+
+
+async def test_browser_event_battle_with_the_battle_server_down_costs_nothing(battle_server, client, game, monkeypatch):
+    start = daily_start(game.player(client.public_id))
+    await assert_down_costs_nothing(client, monkeypatch, "event_battle_start", start)
+    assert (await client.call_raw("event_battle_end", pb.EventBattleEndRequest(win=True))).response_code == pb.BAD_REQUEST
+
+
+async def test_android_event_battle_stays_local(battle_server, client, game):
+    await client.call("event_battle_start", daily_start(game.player(client.public_id)), pb.EventBattleStartResponse)
+    assert not battle_server
+    end = await client.call("event_battle_end", pb.EventBattleEndRequest(win=True, star_level=3), pb.EventBattleEndResponse)
+    assert end.updated_status.battles_remaining == 2
+
+
 # --- tower event ------------------------------------------------------------------------------------------------
 
 
@@ -491,7 +533,7 @@ async def test_tower_event_battles_milestones_and_replays(client, game, rapunzel
     assert (st.current_node, st.times_completed) == (5, 1)
     done = await client.call_raw("tower_event_battle_start", pb.TowerEventBattleStartRequest(
         id=pb.TowerIdentifier(tower_id=RAPUNZEL_TOWER), units=units))
-    assert done.response_code == pb.BAD_REQUEST
+    assert done.response_code == pb.TOWER_TIER_INDEX_OUT_OF_RANGE_ERROR
     claim = await client.call("claim_tower_progression_loot", pb.ClaimTowerProgressionLootRequest(
         id=pb.TowerIdentifier(tower_id=RAPUNZEL_TOWER)), pb.ClaimTowerProgressionLootResponse)
     assert [(i.id, i.count) for i in claim.inventory_delta.items] == [(6682891455152019, 5)]
@@ -528,6 +570,44 @@ async def test_tower_event_battles_milestones_and_replays(client, game, rapunzel
     st = (await client.call("tower_status", pb.TowerStatusRequest(towers=[pb.TowerIdentifier(tower_id=RAPUNZEL_TOWER)]),
                             pb.TowerStatusResponse)).statuses[0]
     assert (st.current_node, st.times_completed, st.claimed_progression_loot) == (0, 1, True)
+
+
+async def test_browser_tower_event_battle_counts_the_battle_servers_report(battle_server, client, game, rapunzel):
+    player = game.player(client.public_id)
+    grant_item(player, TOWER_ENERGY, 200)
+    units = await tower_squad(client, game, RAPUNZEL_TOWER)
+    energy_before = item_count(player, TOWER_ENERGY)
+    start = pb.TowerEventBattleStartRequest(id=pb.TowerIdentifier(tower_id=RAPUNZEL_TOWER), units=units,
+                                            leader_unit=units[0])
+    res, battle_id = await client.web_start("tower_event_battle_start", start, pb.TowerEventBattleStartResponse)
+    assert battle_server[-1]["kind"] == "tower_event" and battle_server[-1]["battle_id"] == battle_id
+    assert item_count(player, TOWER_ENERGY) == energy_before - 8
+    bs = B.FromString(res.bootstrap_bytes)
+    claim = pb.TowerEventBattleEndRequest(win=False)
+    await assert_result_pending(client, "tower_event_battle_end", claim)
+    await battle_server_reports(client, battle_id, winning_team=human_team(battle_server), units=tuple(
+        (u.persistent_id, p.is_human, 0.5 if p.is_human else 0.0) for p in bs.players for u in p.squads[0].units))
+    end = await client.call("tower_event_battle_end", claim, pb.TowerEventBattleEndResponse)
+    assert {i.id: i.count for i in end.inventory_delta.items}[MILESTONE_POINTS] == 200  # won, as reported
+    st = await client.call("tower_status", pb.TowerStatusRequest(towers=[pb.TowerIdentifier(tower_id=RAPUNZEL_TOWER)]),
+                           pb.TowerStatusResponse)
+    assert st.statuses[0].current_node == 1
+    assert [round(s.health_percent, 3) for s in st.statuses[0].unit_states if not s.is_enemy and s.definition_id] == \
+        [0.5] * 5
+
+
+async def test_browser_tower_event_battle_with_the_battle_server_down_costs_nothing(battle_server, client, game,
+                                                                                     rapunzel, monkeypatch):
+    grant_item(game.player(client.public_id), TOWER_ENERGY, 200)
+    units = await tower_squad(client, game, RAPUNZEL_TOWER)
+    await assert_down_costs_nothing(client, monkeypatch, "tower_event_battle_start", pb.TowerEventBattleStartRequest(
+        id=pb.TowerIdentifier(tower_id=RAPUNZEL_TOWER), units=units, leader_unit=units[0]))
+
+
+async def test_android_tower_event_battle_stays_local(battle_server, client, game, rapunzel):
+    grant_item(game.player(client.public_id), TOWER_ENERGY, 200)
+    _, _, end = await _tower_win(client, await tower_squad(client, game, RAPUNZEL_TOWER))
+    assert not battle_server and {i.id: i.count for i in end.inventory_delta.items}[MILESTONE_POINTS] == 200
 
 
 async def test_defeated_tower_hero_cannot_fight_again(client, game, rapunzel):

@@ -17,7 +17,7 @@
  * cas_host: runs the client's battle engine (libcas-battle.so, Android arm64) as a server-side process.
  *
  * The engine library is loaded by bionic's linker; on the x86_64 battle host this whole process runs
- * under qemu-aarch64 with a minimal Android sysroot (see native/cas_host/build.sh).
+ * under qemu-aarch64 with a minimal Android sysroot (tools/battle_host.py setup).
  *
  * Protocol on stdin/stdout, all integers little endian. One process can host many battles.
  *   request : u32 len | u8 op | payload[len-1]
@@ -47,24 +47,7 @@
 #include <string.h>
 #include <unistd.h>
 
-extern int Battle_GetVersion(void);
-extern void Battle_SetMaxInstances(int maxBattles);
-extern bool Battle_HadFatalError(int battleId);
-extern const char *Battle_GetLastFatalError(int battleId);
-extern bool Battle_Init(int *outBattleId);
-extern void Battle_Shutdown(int battleId);
-extern void Battle_Bootstrap(int battleId, uint8_t *script, size_t scriptLen, uint8_t *bootstrap, size_t bootstrapLen,
-                             bool debug);
-extern void Battle_Begin(int battleId);
-extern void Battle_HandlePlayerMessage(int battleId, uint8_t playerId, uint8_t *msg, size_t offset, size_t len);
-extern void Battle_HandlePlayerForfeit(int battleId, uint8_t playerId);
-extern void Battle_SetBattleValue(int battleId, int32_t key, int64_t value);
-extern void Battle_UpdateWithFlags(int battleId, float dt, float udt, int32_t hostFlags, int64_t unixNow);
-extern uint8_t *Battle_GetUpdateResultBuffer(int battleId, size_t *len);
-extern uint8_t *Battle_GetCatchUpBuffer(int battleId, size_t *len);
-extern void Battle_FinishedReadingBuffer(int battleId);
-extern uint32_t Battle_GetTotalMem(int battleId);
-extern bool Battle_IsV2(int battleId);
+#include "cas_battle.h"
 
 enum {
     OP_VERSION = 1, OP_SCRIPT, OP_INIT, OP_BOOTSTRAP, OP_BEGIN, OP_MESSAGE, OP_FORFEIT, OP_UPDATE,

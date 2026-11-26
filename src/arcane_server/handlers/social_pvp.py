@@ -31,6 +31,13 @@ Human friends (an account a device claimed, with a battle server configured), as
   previews it with maxed_units_and_spells: the whole collection maxed).
 - No rewards, no trophies, no daily limit.
 
+Open challenges in chat (send_social_pvp_open_challenge): a player posts "looking for Friendly Brawls" to their club
+chat (a SOCIAL_OPEN_CHALLENGE system message carrying the post id; other channels have no other readers here). A
+clubmate tapping it invites the poster through modify_social_pvp_invite with the post's chat_post_id: no friendship
+needed. Limits (values ours): a post lasts `POST_TTL_S` and takes `POST_MAX_INVITES` challengers, one invite per
+challenger; a player posts at most `POSTS_PER_DAY` times a day, `POST_COOLDOWN_S` apart. Each refusal has its own
+response code, which the client shows.
+
 Storage: the challenge is a pending battle ("social_challenge", owned by the inviter: one per player); the
 battle itself is pvp's pending remote battle (kind "social", one entry per human); social_pvp_stats(owner,
 other, battles, wins) feeds the friend list's SocialPvpStats.total_battles. Held social_pvp_match calls live in
@@ -48,7 +55,7 @@ from typing import TYPE_CHECKING
 
 from arcane_server import clock
 from arcane_server import battle_bootstrap as bb
-from arcane_server import remote_battles
+from arcane_server import remote_battles, remote_pve
 from arcane_server.handlers import clubs, friends, pvp
 from arcane_server.inventory import consume_item
 from arcane_server.pending_battles import PendingBattles
@@ -75,7 +82,17 @@ MATCH_WAIT_S = 120.0  # a held social_pvp_match waits this long for the other pl
 _SCHEMA = """
 CREATE TABLE IF NOT EXISTS social_pvp_stats (owner TEXT NOT NULL, other TEXT NOT NULL,
     battles INTEGER NOT NULL DEFAULT 0, wins INTEGER NOT NULL DEFAULT 0, PRIMARY KEY(owner, other));
+CREATE TABLE IF NOT EXISTS social_pvp_post (post_id TEXT PRIMARY KEY, owner TEXT NOT NULL, created INTEGER NOT NULL,
+    expires INTEGER NOT NULL);
+CREATE TABLE IF NOT EXISTS social_pvp_post_invite (post_id TEXT NOT NULL, inviter TEXT NOT NULL,
+    PRIMARY KEY(post_id, inviter));
 """
+POST_TTL_S = 15 * 60
+POST_MAX_INVITES = 5
+POSTS_PER_DAY = 10
+POST_COOLDOWN_S = 60
+OPEN_CHALLENGE_KEY = "SOCIAL_PVP_OPEN_CHALLENGE"  # localization: "{0} is looking for ..." (the client localizes it)
+
 # Connections whose schema exists; the connection is kept so its id() cannot be reused by a new one.
 _READY: dict[int, sqlite3.Connection] = {}
 
@@ -99,6 +116,7 @@ class _Entry:
     fighting: pvp.Squad  # the squad as it fights (maxed when unleashed)
     mine: pvp.Squad
     bolster: bool
+    web: bool = False  # a browser (remote_pve): its result waits for the battle server's report
 
 
 @dataclass
@@ -215,24 +233,101 @@ def _other(ch: Challenge, me: str) -> str:
     raise RpcError(pb.SOCIAL_CHALLENGE_INVALID_MODIFY_REQUEST_ERROR, "not part of this challenge")
 
 
+# --- open challenges in chat ---------------------------------------------------------------------------------------
+
+
+@rpc("send_social_pvp_open_challenge", pb.SocialPvpOpenChallengeRequest)
+async def send_social_pvp_open_challenge(session: Session, req: pb.SocialPvpOpenChallengeRequest) -> pb.SocialPvpOpenChallengeResponse:
+    from arcane_server.game import lockable_feature_ids
+    from arcane_server.handlers import events
+
+    game, player, now = session.game, session.player, clock.now()  # game time: posts per day, chat times
+    if lockable_feature_ids().get("SOCIAL_PVP", -1) not in set(player.unlocked_features):
+        raise RpcError(pb.SOCIAL_PVP_NOT_UNLOCKED_ERROR, "friendly brawls are locked")
+    conn = _conn(game)
+    conn.execute("DELETE FROM social_pvp_post WHERE expires < ?", (now - 2 * 86400,))
+    last = conn.execute("SELECT MAX(created) FROM social_pvp_post WHERE owner=?", (player.id,)).fetchone()[0]
+    if last is not None and now - last < POST_COOLDOWN_S:
+        raise RpcError(pb.PLAYER_IN_COOLDOWN_TO_POST_AGAIN_ERROR, f"posted {now - last} s ago")
+    if conn.execute("SELECT COUNT(*) FROM social_pvp_post WHERE owner=? AND created>=?",
+                    (player.id, clock.day_start(now))).fetchone()[0] >= POSTS_PER_DAY:
+        raise RpcError(pb.PLAYER_REACHED_MAX_POSTS_PER_DAY_ERROR, f"{POSTS_PER_DAY} posts a day")
+    post_id = str(uuid.uuid4())
+    conn.execute("INSERT INTO social_pvp_post(post_id, owner, created, expires) VALUES (?,?,?,?)",
+                 (post_id, player.id, now, now + POST_TTL_S))
+    text = events.catalog(game).loc.get(OPEN_CHALLENGE_KEY, "").replace("{0}", player.username)
+    m = clubs.membership(game, player.id)
+    msg = pb.ChatMessage(
+        message_type=pb.SYSTEM_CHAT_MESSAGE, message=text, player_id=player.id, player_username=player.username,
+        avatar_id=player.avatar_id, profile_frame_id=player.profile_frame_id, timestamp=now,
+        message_id=str(uuid.uuid4()), system_message_type=pb.SOCIAL_OPEN_CHALLENGE,
+        system_message_payload=pb.SocialOpenChallengeMsg(msg_loc_key=OPEN_CHALLENGE_KEY,
+                                                         params=[player.username]).SerializeToString(),
+        expiry_timestamp=now + POST_TTL_S, social_challenge_post_id=post_id)
+    if m is not None and (not req.channel_names or m.club_id in req.channel_names):
+        msg.channel_type, msg.channel_name = pb.CLUB_CHANNEL, m.club_id
+        clubs.add_chat_message(game, m.club_id, msg)
+        for other in clubs.club_members(game, m.club_id):
+            if other.public_id != player.id and game.is_online(other.public_id):
+                await game.push(other.public_id, [pb.DynamicMessage(type=pb.CHAT_DYNAMIC_MESSAGE,
+                                                                    payload=msg.SerializeToString())])
+    else:  # a channel without other readers on this server: the poster sees their post
+        msg.channel_type = pb.SOCIAL_CHALLENGES_CHANNEL
+        # the global tab sends [global channel, social challenges channel]: the post goes to the latter
+        msg.channel_name = req.channel_names[-1] if req.channel_names else ""
+    session.pending_dynamic.append(pb.DynamicMessage(type=pb.CHAT_DYNAMIC_MESSAGE, payload=msg.SerializeToString()))
+    log.info("social pvp: %s posted open challenge %s", player.id, post_id)
+    return pb.SocialPvpOpenChallengeResponse(post_id=post_id)
+
+
+def _from_post(session: Session, req: pb.ModifySocialPvpInviteRequest) -> pb.Player:
+    """An invite from a chat post: the post's owner, if the post still takes this challenger."""
+    game, me, conn, now = session.game, session.public_id, _conn(session.game), clock.now()
+    row = conn.execute("SELECT owner, expires FROM social_pvp_post WHERE post_id=?", (req.chat_post_id,)).fetchone()
+    if row is None or row[1] <= now or (req.opponent_id and req.opponent_id != row[0]):
+        raise RpcError(pb.POST_EXPIRED_ERROR, f"post {req.chat_post_id} expired")
+    if row[0] == me:
+        raise RpcError(pb.SOCIAL_CHALLENGE_INVALID_MODIFY_REQUEST_ERROR, "own post")
+    if conn.execute("SELECT 1 FROM social_pvp_post_invite WHERE post_id=? AND inviter=?",
+                    (req.chat_post_id, me)).fetchone():
+        raise RpcError(pb.INVITE_ALREADY_SENT_FROM_THIS_POST_ERROR, "already invited from this post")
+    if conn.execute("SELECT COUNT(*) FROM social_pvp_post_invite WHERE post_id=?",
+                    (req.chat_post_id,)).fetchone()[0] >= POST_MAX_INVITES:
+        raise RpcError(pb.PLAYER_POST_REACHED_MAX_INVITES_ERROR, "post full")
+    opp = friends._player(game, row[0])
+    if opp is None:
+        raise RpcError(pb.OPPONENT_NOT_AVAILABLE_ERROR, f"{row[0]} is gone")
+    return opp
+
+
+async def _invite(session: Session, opp: pb.Player, now: int) -> pb.ModifySocialPvpInviteResponse:
+    """`session`'s player challenges `opp`: a server-played opponent accepts at once, a human gets the invite."""
+    game, me = session.game, session.public_id
+    challenge_id = str(uuid.uuid4())
+    if not _is_human(game, opp.id):
+        ch = Challenge(opp.id, now + INVITE_TTL_S, now + COUNTDOWN_S, inviter=me)
+        _CHALLENGES.put(game, challenge_id, ch, owner=me)  # replaces an earlier challenge
+        return _accept(session, challenge_id, ch, opp, now)
+    if friends.availability(game, opp.id) != pb.PLAYER_AVAILABLE:
+        raise RpcError(pb.OPPONENT_NOT_AVAILABLE_ERROR, f"{opp.id} is not available")
+    ch = Challenge(opp.id, now + HUMAN_INVITE_TTL_S, now + HUMAN_INVITE_TTL_S + COUNTDOWN_S, inviter=me, human=True)
+    _CHALLENGES.put(game, challenge_id, ch, owner=me)
+    await _push(game, opp.id, pb.SOCIAL_PVP_INVITE_STATUS_UPDATE_DYNAMIC_MESSAGE,
+                _status(challenge_id, ch, pb.CHALLENGE_INVITE, friends.profile(game, me, now)))
+    log.info("social pvp: %s invites %s (%s)", me, opp.id, challenge_id)
+    return _response(challenge_id, ch, pb.CHALLENGE_STATUS_INVITE, friends.profile(game, opp.id, now))
+
+
 @rpc("modify_social_pvp_invite", pb.ModifySocialPvpInviteRequest)
 async def modify_social_pvp_invite(session: Session, req: pb.ModifySocialPvpInviteRequest) -> pb.ModifySocialPvpInviteResponse:
     game, me, now = session.game, session.public_id, _now()
     if req.action == pb.CHALLENGE_INVITE:
-        opp = _friend(session, req.opponent_id)
-        challenge_id = str(uuid.uuid4())
-        if not _is_human(game, opp.id):
-            ch = Challenge(opp.id, now + INVITE_TTL_S, now + COUNTDOWN_S, inviter=me)
-            _CHALLENGES.put(game, challenge_id, ch, owner=me)  # replaces an earlier challenge
-            return _accept(session, challenge_id, ch, opp, now)
-        if friends.availability(game, opp.id) != pb.PLAYER_AVAILABLE:
-            raise RpcError(pb.OPPONENT_NOT_AVAILABLE_ERROR, f"{opp.id} is not available")
-        ch = Challenge(opp.id, now + HUMAN_INVITE_TTL_S, now + HUMAN_INVITE_TTL_S + COUNTDOWN_S, inviter=me, human=True)
-        _CHALLENGES.put(game, challenge_id, ch, owner=me)
-        await _push(game, opp.id, pb.SOCIAL_PVP_INVITE_STATUS_UPDATE_DYNAMIC_MESSAGE,
-                    _status(challenge_id, ch, pb.CHALLENGE_INVITE, friends.profile(game, me, now)))
-        log.info("social pvp: %s invites %s (%s)", me, opp.id, challenge_id)
-        return _response(challenge_id, ch, pb.CHALLENGE_STATUS_INVITE, friends.profile(game, opp.id, now))
+        opp = _from_post(session, req) if req.chat_post_id else _friend(session, req.opponent_id)
+        res = await _invite(session, opp, now)
+        if req.chat_post_id:  # the post's slot is spent only by an invite that went out
+            _conn(game).execute("INSERT OR IGNORE INTO social_pvp_post_invite(post_id, inviter) VALUES (?,?)",
+                                (req.chat_post_id, me))
+        return res
     ch = _challenge(session, req.challenge_id)
     if not ch.human:
         if req.action in (pb.CHALLENGE_ACCEPTED, pb.CHALLENGE_RESUME):  # back to the lobby of a live challenge
@@ -350,6 +445,7 @@ async def social_pvp_match(session: Session, req: pb.SocialPvpMatchRequest) -> p
     game, player = session.game, session.player
     gd = game.gamedata
     ch = _challenge(session, req.challenge_id)
+    web = pvp.browser_battle(session)  # a browser's battle needs the battle server: refused first without one
     mine = pvp.attack_squad(gd, player, list(req.units), list(req.spells), req.leader_unit)
     fighting = maxed_squad(gd, mine) if req.is_bolster_applied else mine
     if req.is_bolster_applied:
@@ -357,7 +453,7 @@ async def social_pvp_match(session: Session, req: pb.SocialPvpMatchRequest) -> p
     try:
         if ch.human:
             res = await _human_match(session, req.challenge_id, ch, _Entry(session.public_id, fighting, mine,
-                                                                            req.is_bolster_applied))
+                                                                            req.is_bolster_applied, web))
         else:
             res = await _ai_match(session, req.challenge_id, ch, fighting)
     except BaseException:
@@ -418,6 +514,8 @@ async def _human_match(session: Session, challenge_id: str, ch: Challenge, entry
         m.entries.pop(me, None)
         raise RpcError(pb.OPPONENT_NOT_AVAILABLE_ERROR, f"{other} did not start the battle") from None
     team, battle_id, token, bootstrap = started[me]
+    if entry.web:
+        remote_pve.hand_out(session, battle_id, token)
     opp = friends._player(game, other)
     res = pb.SocialPvpMatchResponse(opponent=pvp.public_player(opp) if opp else None, battle_server=pvp.battle_server(session),
                                     battle_id=battle_id, match_id=battle_id, player_token=token, player_battle_id=team,
@@ -440,7 +538,8 @@ async def _start_human_battle(game: Game, challenge_id: str, ch: Challenge, m: _
                                remote_battles.RemotePlayer(1, token_b, b.public_id)], report_token)
     data = bb.bootstrap_bytes(bs)
     for team, (me, other, token) in enumerate(((a.public_id, b.public_id, token_a), (b.public_id, a.public_id, token_b))):
-        pvp.remember_remote(game, battle_id, pvp.PendingBattle("social", me, other, report_token, team=team))
+        pvp.remember_remote(game, battle_id, pvp.PendingBattle("social", me, other, report_token, team=team,
+                                                               web=m.entries[me].web, started=remote_pve.now()))
     return {a.public_id: (0, battle_id, token_a, data), b.public_id: (1, battle_id, token_b, data)}
 
 

@@ -41,7 +41,7 @@ class Session:
     # the host name this client reached the server at (app.client_host): a battle server address without a host
     # (ARCANE_BATTLE_SERVER=":port") is handed out on it
     client_host: str = "127.0.0.1"
-    # dynamic messages to piggy-back on the next response
+    # dynamic messages to carry on the next response
     pending_dynamic: list[pb.DynamicMessage] = field(default_factory=list)
     # per-connection state owned by handlers and AFTER_RPC hooks (e.g. what this client was last told), keyed by module
     state: dict[str, Any] = field(default_factory=dict)
@@ -173,7 +173,9 @@ async def dispatch(session: Session, req: pb.RequestEnvelope) -> pb.ResponseEnve
                 hook(session, req.rpc_name)
         except Exception:
             log.exception("after-rpc hook %s failed (rpc=%s)", getattr(hook, "__name__", hook), req.rpc_name)
-    if session.pending_dynamic:
+    # The client processes dynamic messages only on a successful response (on an error it drops them), so they
+    # stay queued through an error for the next success.
+    if session.pending_dynamic and res.response_code == pb.OK:
         res.dynamic_messages.extend(wire_time.dynamic_to_client(session.pending_dynamic))
         session.pending_dynamic.clear()
     return res

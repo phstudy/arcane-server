@@ -64,3 +64,12 @@ def test_anniversary_starts_march_8():
     f, _ = festivals.on_sale(_pt(2027, 3, 8, 1))
     assert f.key == "anniversary"
     assert festivals.on_sale(_pt(2027, 3, 7, 23)) is None
+
+
+async def test_buying_a_plain_item_keeps_the_festival_tab_in_refreshed_store(client, monkeypatch):
+    _pin(monkeypatch, _pt(2027, 7, 5, 12))
+    store = await client.call("store", pb.StoreRequest(), pb.StoreResponse)
+    assert festivals.PACKS_TAB in {t.id for t in store.tabs}
+    pack = next(it for t in store.tabs for it in t.items if inbox_store._is_gem_pack(it) and not inbox_store.is_first_time_bonus(it))
+    res = await client.call("buy_store_item", pb.BuyStoreItemRequest(store_item_id=pack.id), pb.BuyStoreItemResponse)
+    assert [t.id for t in res.refreshed_store.tabs] == [t.id for t in store.tabs]  # the same full store the store RPC builds

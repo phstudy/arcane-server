@@ -24,6 +24,7 @@ from pathlib import Path
 import aiohttp
 from aiohttp import WSMsgType, web
 
+from arcane_server.remote_battles import STARS_HEADER, UNITS_HEADER, encode_units
 from arcane_server.battle_server.battle import Battle, Human, Outcome
 from arcane_server.battle_server.engine import EngineCommand, EngineProcess
 from arcane_server.proto import serverproto_pb2 as pb
@@ -85,7 +86,9 @@ class BattleServer:
             self._http = aiohttp.ClientSession(timeout=aiohttp.ClientTimeout(total=5))
         url = f"{self.settings.game_url}/internal/multiplayer_battle_end"
         try:
-            async with self._http.post(url, data=body, headers={SECRET_HEADER: self.settings.secret}) as r:
+            async with self._http.post(url, data=body, headers={
+                    SECRET_HEADER: self.settings.secret, STARS_HEADER: ",".join(map(str, outcome.stars)),
+                    UNITS_HEADER: encode_units(outcome.units)}) as r:
                 if r.status != 200:
                     log.warning("battle %s: game server answered %d to the result", outcome.battle_id, r.status)
                 return r.status < 500
@@ -161,7 +164,7 @@ async def websocket(request: web.Request) -> web.StreamResponse:
     try:
         async for msg in ws:
             if msg.type == WSMsgType.TEXT:
-                await battle.handle_control(human, msg.data)
+                await battle.handle_control(human, ws, msg.data)
             elif msg.type == WSMsgType.BINARY:
                 await battle.handle_message(human, msg.data)
     finally:

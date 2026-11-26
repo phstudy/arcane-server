@@ -6,11 +6,14 @@ Player-state rules derived from gamedata live here as plain functions (`compute_
 
 from __future__ import annotations
 
+import asyncio
+
 import functools
 import hashlib
 import logging
 import re
 import secrets
+import time
 from collections import Counter
 from collections.abc import Awaitable, Callable
 from pathlib import Path
@@ -714,6 +717,8 @@ class Game:
         self._conversions: dict[str, list[pb.InventoryItemConversion]] = {}
         # open client sockets per player (app.websocket): send(bytes) callables, for unsolicited pushes
         self.connections: dict[str, set[Callable[[bytes], Awaitable[None]]]] = {}
+        self._push_tasks: set[asyncio.Task] = set()  # push_soon's, kept until done
+        self._offline_since: dict[str, float] = {}  # real time each player's last socket closed (this process)
         # the address each connected player's socket came from (news.py: who is viewing the news page)
         self.remotes: dict[str, str] = {}
         # PvP / Summoner Showdown battle starts held until the client is ready for them (matchmaking.py)
@@ -733,10 +738,15 @@ class Game:
             if not sends:
                 del self.connections[public_id]
                 self.remotes.pop(public_id, None)
+                self._offline_since[public_id] = time.time()
 
     def online_from(self, remote: str | None) -> list[str]:
         """Players connected from address `remote`."""
         return [pid for pid, r in self.remotes.items() if remote and r == remote and pid in self.connections]
+
+    def went_offline_at(self, public_id: str) -> float | None:
+        """Real time the player last went offline (their last open socket closed) in this process; None if never."""
+        return self._offline_since.get(public_id)
 
     def is_online(self, public_id: str) -> bool:
         return bool(self.connections.get(public_id))
@@ -757,6 +767,19 @@ class Game:
             except (ConnectionError, RuntimeError) as e:
                 log.info("push to %s failed: %s", public_id, e)
         return True
+
+    def push_soon(self, public_id: str, messages: list[pb.DynamicMessage]) -> None:
+        """`push` from code that cannot await (a change found deep in a sync helper): sent once the running task
+        yields; nothing when the player is offline or no event loop runs (tools)."""
+        if not self.is_online(public_id):
+            return
+        try:
+            loop = asyncio.get_running_loop()
+        except RuntimeError:
+            return
+        task = loop.create_task(self.push(public_id, messages))
+        self._push_tasks.add(task)
+        task.add_done_callback(self._push_tasks.discard)
 
     # --- accounts -------------------------------------------------------------------
 

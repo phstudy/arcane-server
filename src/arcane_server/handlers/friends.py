@@ -34,6 +34,7 @@ from __future__ import annotations
 import hashlib
 import random
 import sqlite3
+import time
 import uuid
 from dataclasses import dataclass
 from typing import TYPE_CHECKING
@@ -188,6 +189,31 @@ def availability(game: Game, pid: str) -> int:
 
 
 GIFT_DAY_TIMEZONE = "America/Los_Angeles"  # since 2022-06 the daily gift resets globally at Pacific midnight
+
+
+ONLINE_ANNOUNCE_GAP_S = 5 * 60  # value ours: a socket back within this time is a reconnect, not a new session
+
+
+async def announce_online(game: Game, pid: str) -> None:
+    """A player came online: their friends who are online and did not turn off "friend is online" popups
+    (Player.receive_player_online_popups, on by default) are told (PLAYER_ONLINE). The client shows every one it
+    gets (it queues them), so a reconnect after a dropped socket (`ONLINE_ANNOUNCE_GAP_S`, real time) is not
+    announced again."""
+    if (offline := game.went_offline_at(pid)) is not None and time.time() - offline < ONLINE_ANNOUNCE_GAP_S:
+        return
+    if game.player(pid) is None:
+        return
+    msg = None
+    for r in _rows(game, pid):
+        if r.status != pb.FRIEND or not game.is_online(r.other):
+            continue
+        friend = game.player(r.other)
+        if friend is None or friend.receive_player_online_popups == pb.RECEIVE_DISABLED:
+            continue
+        if msg is None:
+            msg = pb.DynamicMessage(type=pb.PLAYER_ONLINE_DYNAMIC_MESSAGE, payload=pb.PlayerOnlineDynamicMessage(
+                player=profile(game, pid, _now())).SerializeToString())
+        await game.push(r.other, [msg])
 
 
 def _gift_day(game: Game, now: int) -> tuple[int, int]:

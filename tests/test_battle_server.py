@@ -11,6 +11,7 @@ from pathlib import Path
 import pytest
 from aiohttp import WSMsgType, WSServerHandshakeError, web
 
+from arcane_server import remote_battles
 from arcane_server.battle_server import battle as battle_mod
 from arcane_server.battle_server.battle import parse_control
 from arcane_server.battle_server.engine import EngineCommand
@@ -32,6 +33,8 @@ class FakeEngine:
         self.forfeit_by: int | None = None
         self.messages: list[tuple[int, bytes]] = []
         self.dt_total = 0.0
+        self.catch_up_at: int | None = None  # the tick the last catch-up buffer was taken at
+        self.slow_catch_up = 0  # ticks' worth of time a catch-up takes (other work may run meanwhile)
 
     async def start(self, script: bytes) -> None:
         self.calls.append(("start", len(script)))
@@ -62,9 +65,15 @@ class FakeEngine:
             self.ended = True
             r.battle_ended.winning_team = 1 - self.forfeit_by if self.forfeit_by is not None else 0
             r.battle_ended.reason = 4 if self.forfeit_by is not None else 1
+            r.battle_ended.team_results.add(team_id=0, star_count=2)
+            r.battle_ended.team_results.add(team_id=1, star_count=0)
+            r.battle_ended.unit_results.add(persistent_id=1, is_alive=True, health_percent=0.25)
+            r.battle_ended.unit_results.add(persistent_id=7, is_alive=False, health_percent=0.0)
         return pb.BattleLib_UpdateResultList(results=[r]).SerializeToString()
 
     async def catch_up(self, battle: int) -> bytes:
+        self.catch_up_at = self.ticks
+        await asyncio.sleep(self.slow_catch_up * battle_mod.TICK_S)
         r = pb.BattleLib_UpdateResult(clock_s=-1.0)
         return pb.BattleLib_UpdateResultList(results=[r]).SerializeToString()
 
@@ -88,11 +97,13 @@ def bootstrap(humans: int) -> pb.BattleLib_Bootstrap:
 @pytest.fixture
 async def bserver(aiohttp_client):
     reports: list[pb.MultiplayerBattleEndRequest] = []
+    report_headers: list[dict[str, str]] = []
     game = web.Application()
 
     async def battle_end(request: web.Request) -> web.Response:
         assert request.headers[SECRET_HEADER] == SECRET
         reports.append(pb.MultiplayerBattleEndRequest.FromString(await request.read()))
+        report_headers.append(dict(request.headers))
         return web.Response(text="ok")
 
     game.router.add_post("/internal/multiplayer_battle_end", battle_end)
@@ -109,7 +120,7 @@ async def bserver(aiohttp_client):
 
     app[SERVER].engine_factory = factory
     client = await aiohttp_client(app)
-    client.reports, client.engines = reports, engines
+    client.reports, client.engines, client.report_headers = reports, engines, report_headers
     return client
 
 
@@ -175,6 +186,28 @@ async def test_battle_against_the_engine_ai(bserver):
     assert "b1" not in bserver.app[SERVER].battles and ("close",) in engine.calls
 
 
+async def test_battle_end_reports_the_engines_star_count(bserver):
+    """The engine's own star count per team goes to the game server with the result (PvE stars)."""
+    assert (await register(bserver, "b9", 1)).status == 200
+    ws = await bserver.ws_connect("/?battle_id=b9&player_token=tok0")
+    await ws.send_str("rc:1")
+    assert (await asyncio.wait_for(ws.receive(), 5)).data == "rc:3"
+    await receive_until_end(ws)
+    assert bserver.report_headers[-1][remote_battles.STARS_HEADER] == "2,0"
+
+
+async def test_battle_end_reports_the_engines_unit_results(bserver):
+    """Every unit's end state (persistent id, alive, health) goes to the game server with the result: towers, raids,
+    expeditions and club war keep the health of characters and bosses between battles."""
+    assert (await register(bserver, "b10", 1)).status == 200
+    ws = await bserver.ws_connect("/?battle_id=b10&player_token=tok0")
+    await ws.send_str("rc:1")
+    assert (await asyncio.wait_for(ws.receive(), 5)).data == "rc:3"
+    await receive_until_end(ws)
+    units = remote_battles.decode_units(bserver.report_headers[-1][remote_battles.UNITS_HEADER])
+    assert [(u.persistent_id, u.is_alive, u.health_percent) for u in units] == [(1, True, 0.25), (7, False, 0.0)]
+
+
 async def test_two_humans_wait_for_each_other_and_forfeit(bserver):
     assert (await register(bserver, "b2", 2)).status == 200
     a = await bserver.ws_connect("/?battle_id=b2&player_token=tok0")
@@ -212,6 +245,31 @@ async def test_reconnect_gets_catch_up(bserver, monkeypatch):
     assert results[-1].battle_ended.winning_team == 0
 
 
+async def test_reconnect_gets_no_tick_before_its_catch_up(bserver):
+    """A socket that reconnects mid-battle joins the tick broadcast only once rc:3 and the catch-up went out to it:
+    ticks while it connects or while the catch-up is taken never come first (the client would take one for the
+    catch-up), and the first tick after the catch-up is the one right after it (none lost, none twice)."""
+    bserver.engines.clear()
+    assert (await register(bserver, "b5", 1)).status == 200
+    engine = bserver.engines[0]
+    engine.end_after = 200
+    ws = await bserver.ws_connect("/?battle_id=b5&player_token=tok0")
+    await ws.send_str("rc:1")
+    assert (await asyncio.wait_for(ws.receive(), 5)).data == "rc:3"
+    await asyncio.wait_for(ws.receive(), 5)  # an update
+    ws2 = await bserver.ws_connect("/?battle_id=b5&player_token=tok0")  # a second tab / the reconnect
+    await ws.close()
+    while engine.ticks < 5:  # ticks run while the new socket has not asked for the catch-up yet
+        await asyncio.sleep(battle_mod.TICK_S)
+    engine.slow_catch_up = 3  # and while the catch-up is taken
+    await ws2.send_str("rc:1")
+    assert (await asyncio.wait_for(ws2.receive(), 5)).data == "rc:3"
+    first = pb.BattleLib_UpdateResultList.FromString((await asyncio.wait_for(ws2.receive(), 5)).data)
+    assert first.results[0].clock_s == -1.0  # the catch-up comes right after rc:3
+    nxt = pb.BattleLib_UpdateResultList.FromString((await asyncio.wait_for(ws2.receive(), 5)).data)
+    assert nxt.results[0].clock_s == engine.catch_up_at + 1
+
+
 async def test_speed_scales_battle_time(bserver):
     assert (await register(bserver, "b4", 1)).status == 200
     engine = bserver.engines[-1]
@@ -222,13 +280,6 @@ async def test_speed_scales_battle_time(bserver):
     await receive_until_end(ws)
     battle_time = engine.dt_total
     assert battle_time > 20 * battle_mod.TICK_S * 2  # ~3x real time
-
-
-def test_engine_command_default_layout():
-    cmd = EngineCommand.from_setting("")
-    assert cmd.argv[0].endswith("native/cas_host/out/qemu-aarch64-static") and cmd.argv[1] == "-L"
-    assert EngineCommand.from_setting("/x/y -L /z").argv == ("/x/y", "-L", "/z")
-    assert EngineCommand(("/definitely/missing",)).problems()
 
 
 def test_helper_protocol_framing():

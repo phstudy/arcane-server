@@ -61,18 +61,35 @@ def served_gamedata(game: "Game", base_url: str, version: str | None = None, now
     cat = passport.catalog(game)
     run = passport.current_slot(game, now).run
     c = clock.current()  # the real timestamps depend on the calendar's anchor and speed
+    lock_off = no_join_lock(game)
     ver = str(uuid.uuid5(uuid.NAMESPACE_URL, f"arcane-gamedata:{cat.base_version}:passport-run:{run}"
-                                             f":clock:{c.anchor_real}:{c.anchor_game}:{c.speed}:news:{base_url}:stamps:on"))
+                                             f":clock:{c.anchor_real}:{c.anchor_game}:{c.speed}:news:{base_url}:stamps:on"
+                                             f":joinlock:{'off' if lock_off else 'on'}"))
     if ver not in cache:
         buf = bytearray(cat.gamedata)  # the original .bin
         passport.rotate_seasons(game, buf, now)
         point_newsletter(buf, base_url)
         stamps.enable_in_gamedata(buf)
+        if lock_off:
+            zero_join_lock(buf)
         scale_times(buf)
         cache[ver] = ServedGamedata(ver, bytes(buf))
         while len(cache) > CACHED_VERSIONS:
             cache.pop(next(iter(cache)))
     return cache[ver]
+
+
+def no_join_lock(game: "Game") -> bool:
+    """The server does not lock joining a club after leaving (the single-player club rules)."""
+    return bool(game.settings.toggles.solo_club_rules)
+
+
+def zero_join_lock(buf: bytearray) -> None:
+    """Constants.joinClubLockTimeS all 0, in place: the client computes the join lock itself (the time of the last
+    leave + this table's entry for the lock level) and lets a player join at once with 0."""
+    root = flatbuf.root(buf)
+    for t in flatbuf.vector_tables(buf, flatbuf.field(buf, root, _F_CONSTANTS)):
+        flatbuf.map_scalar(buf, t, "Constants", "joinClubLockTimeS", lambda v: 0)
 
 
 def point_newsletter(buf: bytearray, base_url: str) -> None:

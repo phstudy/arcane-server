@@ -307,8 +307,12 @@ async def test_the_adjustment_never_runs_while_the_client_is_talking(aiohttp_cli
     await c.call("player", pb.PlayerRequest(), pb.PlayerResponse)  # the day's first login: an adjustment is due
     home = asyncio.ensure_future(c.call("home", pb.HomeRequest(), pb.HomeResponse))
     await entered.wait()
-    for _ in range(20):  # (a player already in the worker thread when the RPC came may finish)
-        await asyncio.sleep(0)
+    # a player already in the worker thread when the RPC came may finish (real work: on a loaded machine it takes
+    # longer than a few loop turns), then the adjustment parks
+    for _ in range(4000):
+        if pg.waiting():
+            break
+        await asyncio.sleep(0.005)
     parked = len(worked)
     for _ in range(50):
         await asyncio.sleep(0)

@@ -319,6 +319,53 @@ VIEWS.inbox = async (view) => {
     attList, h("div", { class: "row" }, send)));
 };
 
+VIEWS.codes = async (view) => {
+  const { codes } = await api("GET", "redemption-codes");
+  const code = h("input", { type: "text", class: "mono", maxlength: "64", placeholder: "例如 SPRING2024（不分大小寫、空白）" });
+  const maxClaims = h("input", { type: "number", min: "0", value: "0" });
+  const expires = h("input", { type: "datetime-local" });
+  const items = [];
+  const itemList = h("ul", { class: "att-list" });
+  let picked = null;
+  const count = h("input", { type: "number", min: "1", value: "100" });
+  const renderItems = () => itemList.replaceChildren(...items.map((a, i) => h("li", {}, `${a.name} × ${num(a.count)} `,
+    h("button", { class: "link", type: "button", onclick: () => { items.splice(i, 1); renderItems(); } }, "移除"))));
+  const addBtn = h("button", { class: "secondary", type: "button" }, "加入道具");
+  addBtn.onclick = () => {
+    const n = parseInt(count.value, 10);
+    if (!picked || !(n > 0)) return toast("請選道具並輸入數量");
+    items.push({ item_id: picked.id, name: picked.name, count: n });
+    renderItems();
+  };
+  const create = h("button", { class: "primary" }, "建立兌換碼");
+  create.onclick = () => guarded(create, async () => {
+    if (!items.length) throw new Error("請至少加入一項道具");
+    const r = await api("POST", "redemption-codes", { code: code.value, max_claims: parseInt(maxClaims.value, 10) || 0,
+      expires_at: expires.value ? Math.floor(new Date(expires.value).getTime() / 1000) : 0,
+      items: items.map((a) => ({ item_id: a.item_id, count: a.count })) });
+    toast(`已建立 ${r.code}`);
+    route();
+  });
+  const del = (c, btn) => guarded(btn, async () => {
+    if (!confirm(`刪除兌換碼 ${c.code}？`)) return;
+    await api("DELETE", "redemption-codes/" + encodeURIComponent(c.code));
+    route();
+  });
+  view.append(h("div", { class: "card" }, h("h2", {}, "建立兌換碼"),
+    h("p", { class: "muted" }, "玩家在遊戲的設定 → REDEEM CODE 輸入；每位玩家每個碼只能兌換一次。"),
+    h("div", { class: "row" }, h("label", {}, "兌換碼", code), h("label", {}, "總次數上限（0 = 不限）", maxClaims),
+      h("label", {}, "到期（空白 = 不到期）", expires)),
+    h("div", { class: "row" }, h("label", {}, "道具", itemPicker((it) => (picked = it))), h("label", {}, "數量", count), addBtn),
+    itemList, h("div", { class: "row" }, create)),
+    h("div", { class: "card" }, h("h2", {}, `兌換碼（${codes.length}）`), codes.length ? table([
+      { label: "碼", render: (c) => h("span", { class: "mono" }, c.code) },
+      { label: "道具", render: (c) => c.items.map(([id, n]) => `${id} × ${num(n)}`).join("、") },
+      { label: "已兌換", render: (c) => (c.max_claims ? `${c.claims} / ${c.max_claims}` : String(c.claims)) },
+      { label: "到期", render: (c) => (c.expires_at ? fmtTime(c.expires_at) : "—") },
+      { label: "", render: (c) => h("button", { class: "link", type: "button", onclick: (e) => del(c, e.currentTarget) }, "刪除") }], codes)
+      : h("p", { class: "muted" }, "（無）")));
+};
+
 VIEWS.import = async (view) => {
   const file = h("input", { type: "file", accept: ".json,.bin" });
   const previewBtn = h("button", { class: "secondary" }, "讀取檔案");

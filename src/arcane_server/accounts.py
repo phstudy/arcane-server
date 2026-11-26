@@ -15,6 +15,11 @@ Claim codes (admin UI): `create_claim_code` makes a single-use code for an accou
 changing its in-game name to the code (handlers/account.py update_player_profile -> `redeem_claim_code`),
 which binds that device's anon_id to the account. Table: claim_code(code PK, public_id, created_at,
 expires_at, created_by, used_at, used_by).
+
+Account link (Settings > Link Device, handlers/account.py): the primary device generates a link code (a claim code
+with created_by `LINK_CODE_CREATOR`, short-lived, never usable by renaming), the secondary device enters it and gets
+a verification code, the primary enters that, and the secondary is told the primary's anon_id: from then on both
+devices log in to the primary's account. Table: account_link(code PK, device_public_id, verify_code, expires_at).
 """
 
 from __future__ import annotations
@@ -450,6 +455,7 @@ def export_json(player: pb.Player, exported_at: int | None = None, club: dict[st
 # --- claim codes ------------------------------------------------------------------------------
 
 CLAIM_CODE_TTL_S = 24 * 3600
+LINK_CODE_CREATOR = "account link"  # created_by of account link codes (see the module doc)
 CLAIM_CODE_PREFIX = "ARC"
 _CODE_ALPHABET = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"  # no 0/O, 1/I
 _CODE_LEN = 6
@@ -458,6 +464,8 @@ _SCHEMA = """
 CREATE TABLE IF NOT EXISTS claim_code (
     code TEXT PRIMARY KEY, public_id TEXT NOT NULL, created_at INTEGER NOT NULL, expires_at INTEGER NOT NULL,
     created_by TEXT NOT NULL DEFAULT '', used_at INTEGER NOT NULL DEFAULT 0, used_by TEXT NOT NULL DEFAULT '');
+CREATE TABLE IF NOT EXISTS account_link (
+    code TEXT PRIMARY KEY, device_public_id TEXT NOT NULL, verify_code TEXT NOT NULL, expires_at INTEGER NOT NULL);
 """
 _READY: dict[int, sqlite3.Connection] = {}
 
@@ -482,11 +490,13 @@ class ClaimCode:
 
 
 def create_claim_code(db: Database, public_id: str, created_by: str = "", ttl_s: int = CLAIM_CODE_TTL_S) -> ClaimCode:
-    """A fresh single-use code for `public_id` (the account's earlier unused codes are dropped)."""
+    """A fresh single-use code for `public_id` (the account's earlier unused codes of the same kind are dropped)."""
     if db.account_by_public_id(public_id) is None:
         raise ImportProblem(f"no account {public_id}")
     conn, now = _conn(db), int(time.time())
-    conn.execute("DELETE FROM claim_code WHERE used_at=0 AND (public_id=? OR expires_at<=?)", (public_id, now))
+    # the account's earlier unused codes of the same kind (admin claim code / account link code) and expired ones
+    conn.execute("DELETE FROM claim_code WHERE used_at=0 AND (expires_at<=? OR (public_id=? AND (created_by=?)=?))",
+                 (now, public_id, LINK_CODE_CREATOR, created_by == LINK_CODE_CREATOR))
     while True:
         code = CLAIM_CODE_PREFIX + "".join(secrets.choice(_CODE_ALPHABET) for _ in range(_CODE_LEN))
         try:
@@ -520,9 +530,9 @@ def redeem_claim_code(db: Database, text: str, device_public_id: str) -> str | N
     if not looks_like_claim_code(text):
         return None
     conn, now = _conn(db), int(time.time())
-    row = conn.execute("SELECT public_id, expires_at, used_at FROM claim_code WHERE code=?",
+    row = conn.execute("SELECT public_id, expires_at, used_at, created_by FROM claim_code WHERE code=?",
                        (normalize_code(text),)).fetchone()
-    if row is None or row[2] or row[1] <= now:
+    if row is None or row[2] or row[1] <= now or row[3] == LINK_CODE_CREATOR:
         return None
     target = row[0]
     device = db.account_by_public_id(device_public_id)
@@ -531,3 +541,65 @@ def redeem_claim_code(db: Database, text: str, device_public_id: str) -> str | N
     db.rebind_anon_id(target, device.anon_id)
     conn.execute("UPDATE claim_code SET used_at=?, used_by=? WHERE code=?", (now, device.anon_id, normalize_code(text)))
     return target
+
+
+# --- account link ---------------------------------------------------------------------------
+
+LINK_CODE_TTL_S = 10 * 60
+VERIFY_CODE_LEN = 6
+
+
+class LinkProblem(ValueError):
+    """An account link step that cannot go on: the link code (or, with `verify_code`, the verification code) is
+    unknown, used or expired."""
+
+    def __init__(self, message: str, verify_code: bool = False):
+        super().__init__(message)
+        self.verify_code = verify_code
+
+
+def create_link_code(db: Database, public_id: str) -> ClaimCode:
+    """The primary device's link code (replaces its earlier unused codes)."""
+    return create_claim_code(db, public_id, LINK_CODE_CREATOR, LINK_CODE_TTL_S)
+
+
+def _link_code_owner(conn: sqlite3.Connection, code: str, now: int) -> str | None:
+    row = conn.execute("SELECT public_id, expires_at, used_at, created_by FROM claim_code WHERE code=?",
+                       (code,)).fetchone()
+    if row is None or row[2] or row[1] <= now or row[3] != LINK_CODE_CREATOR:
+        return None
+    return row[0]
+
+
+def enter_link_code(db: Database, text: str, device_public_id: str) -> tuple[str, str, int]:
+    """The secondary device entered a link code: (primary's public id, verification code, its expiry)."""
+    conn, code, now = _conn(db), normalize_code(text), int(time.time())
+    conn.execute("DELETE FROM account_link WHERE expires_at <= ?", (now,))
+    owner = _link_code_owner(conn, code, now)
+    if owner is None or owner == device_public_id:
+        raise LinkProblem("no such link code")
+    verify = "".join(secrets.choice(_CODE_ALPHABET) for _ in range(VERIFY_CODE_LEN))
+    expires = now + LINK_CODE_TTL_S
+    conn.execute("INSERT INTO account_link(code, device_public_id, verify_code, expires_at) VALUES (?,?,?,?) "
+                 "ON CONFLICT(code) DO UPDATE SET device_public_id=excluded.device_public_id, "
+                 "verify_code=excluded.verify_code, expires_at=excluded.expires_at", (code, device_public_id, verify, expires))
+    return owner, verify, expires
+
+
+def pending_link(db: Database, text: str, verify_text: str, primary_public_id: str) -> str:
+    """The secondary device's public id, if the primary's link code and the verification code match."""
+    conn, code, now = _conn(db), normalize_code(text), int(time.time())
+    if _link_code_owner(conn, code, now) != primary_public_id:
+        raise LinkProblem("no such link code")
+    row = conn.execute("SELECT device_public_id, verify_code, expires_at FROM account_link WHERE code=?",
+                       (code,)).fetchone()
+    if row is None or row[2] <= now or row[1] != normalize_code(verify_text):
+        raise LinkProblem("wrong or expired verification code", verify_code=True)
+    return row[0]
+
+
+def finish_link(db: Database, text: str, device_anon_id: str) -> None:
+    """The link went through: the code is used (by the secondary device's former anon_id)."""
+    conn, code = _conn(db), normalize_code(text)
+    conn.execute("UPDATE claim_code SET used_at=?, used_by=? WHERE code=?", (int(time.time()), device_anon_id, code))
+    conn.execute("DELETE FROM account_link WHERE code=?", (code,))

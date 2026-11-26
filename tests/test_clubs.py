@@ -11,7 +11,8 @@ from arcane_server.handlers import clubs
 from arcane_server.inventory import grant_item, item_count
 from arcane_server.proto import serverproto_pb2 as pb
 from arcane_server.app import GAME as GAME_KEY
-from conftest import GameClient, client_text
+from conftest import (GameClient, assert_down_costs_nothing, assert_result_pending, battle_server_reports, client_text,
+                      human_team)
 
 from synthetic_archive import HOME_AVATAR, HOME_CLUB, HOME_NAME, OTHER_CLUBS, USER_ID, synthetic_archive  # noqa: F401
 
@@ -297,6 +298,9 @@ async def test_club_chat_reaches_online_clubmates(client, server):
     await client.call("send_message", pb.ChatMessage(message="hello", channel_type=pb.CLUB_CHANNEL),
                       pb.ChatMessageResponse)
     dm = await other.next_push()
+    # single-player rules: the joiner leads (a role push); the join line comes first too
+    while dm.type == pb.CLUB_MEMBER_ROLE_CHANGED_DYNAMIC_MESSAGE or pb.ChatMessage.FromString(dm.payload).message != "hello":
+        dm = await other.next_push()
     got = pb.ChatMessage.FromString(dm.payload)
     assert dm.type == pb.CHAT_DYNAMIC_MESSAGE and (got.message, got.player_id) == ("hello", client.public_id)
     await other.ws.close()
@@ -353,10 +357,10 @@ async def test_original_rules_inactive_leader_and_officers(server):
         clubs._set_member(game, clubs.Member(co, cid, pb.CO_LEADER_ROLE, now - 300 * 86400, 0))
         clubs._set_member(game, clubs.Member(mem, cid, pb.MEMBER_ROLE, now - 200 * 86400, 0))
         roles = lambda: {m.public_id: m.role for m in clubs.club_members(game, cid)}  # noqa: E731
-        # Original rules: a co-leader kicks members only, and only the leader promotes
+        # Original rules: a co-leader kicks members only, and demotes nobody (only a co-leader can be demoted)
         env = await users[1].call_raw("kick_club_member", pb.KickClubMemberRequest(player_id=lead))
         assert env.response_code == pb.CLUB_NO_LONGER_RANKING_OFFICER
-        env = await users[1].call_raw("promote_club_member", pb.PromoteClubMemberRequest(player_id=mem))
+        env = await users[1].call_raw("demote_club_member", pb.DemoteClubMemberRequest(player_id=mem))
         assert env.response_code == pb.CLUB_NO_LONGER_RANKING_OFFICER
         # leader away 13 days: nothing changes
         _seen(game, lead, now - 13 * 86400)
@@ -377,6 +381,65 @@ async def test_original_rules_inactive_leader_and_officers(server):
     finally:
         for u in users:
             await u.ws.close()
+
+
+async def test_a_member_is_told_when_their_role_changes(server):
+    """Promoted or demoted by the leader, or made leader by the inactivity rules: the member's client is told at
+    once (CLUB_MEMBER_ROLE_CHANGED)."""
+    import time
+
+    game = _game(server)
+    _original_rules(game)
+    now = int(time.time())
+    leader, member = [await GameClient(server, "test-" + uuid.uuid4().hex).login() for _ in range(2)]
+    try:
+        created = await leader.call("create_club", pb.CreateClubRequest(name="Pushes", settings=pb.ClubSettings()),
+                                    pb.CreateClubResponse)
+        cid = created.club.id
+        clubs._set_member(game, clubs.Member(member.public_id, cid, pb.MEMBER_ROLE, now - 86400, 0))
+        assert not member.pushes  # joining is not a role change
+
+        async def role_push():
+            dm = await member.next_push()
+            assert dm.type == pb.CLUB_MEMBER_ROLE_CHANGED_DYNAMIC_MESSAGE
+            return pb.ClubMemberRoleChangedDynamicMessage.FromString(dm.payload).new_club_role
+
+        await leader.call("promote_club_member", pb.PromoteClubMemberRequest(player_id=member.public_id),
+                          pb.PromoteClubMemberResponse)
+        assert await role_push() == pb.CO_LEADER_ROLE
+        await leader.call("demote_club_member", pb.DemoteClubMemberRequest(player_id=member.public_id),
+                          pb.DemoteClubMemberResponse)
+        assert await role_push() == pb.MEMBER_ROLE
+        await leader.call("promote_club_member", pb.PromoteClubMemberRequest(player_id=member.public_id),
+                          pb.PromoteClubMemberResponse)
+        assert await role_push() == pb.CO_LEADER_ROLE
+        _seen(game, leader.public_id, now - 15 * 86400)
+        assert clubs.apply_inactivity_rules(game, cid, now)
+        assert await role_push() == pb.LEADER_ROLE
+    finally:
+        await leader.ws.close()
+        await member.ws.close()
+
+
+async def test_original_rules_a_new_club_once_a_week(server):
+    """Original rules (gamedata createClubCooldownTimeHours 168): a player creates a club at most once every seven
+    days (the client's CLUB_CREATE_COOLDOWN_RESTRICTED message)."""
+    import time
+
+    game = _game(server)
+    _original_rules(game)
+    c = await GameClient(server, "test-" + uuid.uuid4().hex).login()
+    try:
+        game.player(c.public_id).level = 30
+        grant_item(game.player(c.public_id), 13, 10_000)
+        await c.call("create_club", pb.CreateClubRequest(name="First", settings=pb.ClubSettings()), pb.CreateClubResponse)
+        await c.call("kick_club_member", pb.KickClubMemberRequest(player_id=c.public_id), pb.KickClubMemberResponse)
+        env = await c.call_raw("create_club", pb.CreateClubRequest(name="Second", settings=pb.ClubSettings()))
+        assert env.response_code == pb.CLUB_CREATE_COOLDOWN_RESTRICTED
+        game.player(c.public_id).create_club_timestamp = int(time.time()) - 168 * 3600 - 1
+        await c.call("create_club", pb.CreateClubRequest(name="Second", settings=pb.ClubSettings()), pb.CreateClubResponse)
+    finally:
+        await c.ws.close()
 
 
 async def test_five_item_donations_a_day(member, server):
@@ -456,3 +519,60 @@ async def test_multiplayer_full_club_stays_full(client, server):
     assert env.response_code == pb.CLUB_IS_FULL
     env = await client.call_raw("autojoin_club", pb.AutoJoinClubRequest())
     assert env.response_code != pb.OK or clubs.membership(game, client.public_id).club_id != HOME_CLUB
+
+
+# --- a browser's club dungeon battles run on the battle server -------------------------------------------------------
+
+
+async def _dungeon_week(server) -> pb.ClubDungeonBattleStartRequest:
+    """The middle of this dungeon week (its last 2 hours are not playable); the 5 strongest units."""
+    import time
+
+    from arcane_server import clock
+    from arcane_server.handlers import club_dungeon as cd
+
+    _, week_start, week_end = cd._week(_game(server), clock.now())
+    clock.install(clock.GameClock(int(time.time()), (week_start + week_end) // 2, 1))
+    units, spells = await _squad(server, USER_ID)
+    return pb.ClubDungeonBattleStartRequest(units=units, spells=spells, leader_unit=units[0])
+
+
+async def _dungeon_status(member) -> pb.ClubDungeonStatus:
+    return (await member.call("club_dungeon_status", pb.ClubDungeonStatusRequest(), pb.ClubDungeonStatusResponse)).status
+
+
+async def test_browser_club_dungeon_battle_counts_the_battle_servers_report(battle_server, member, server):
+    from arcane_server.handlers import club_dungeon as cd
+
+    start = await _dungeon_week(server)
+    _, battle_id = await member.web_start("club_dungeon_battle_start", start, pb.ClubDungeonBattleStartResponse)
+    assert battle_server[-1]["kind"] == "club_dungeon" and battle_server[-1]["battle_id"] == battle_id
+    claim = pb.ClubDungeonBattleEndRequest(win=True)
+    await assert_result_pending(member, "club_dungeon_battle_end", claim)
+    await battle_server_reports(member, battle_id, winning_team=1 - human_team(battle_server))
+    lost = await member.call("club_dungeon_battle_end", claim, pb.ClubDungeonBattleEndResponse)
+    st = await _dungeon_status(member)
+    assert not st.has_pending_door_selection and st.limited_attempts_remaining == cd.DAILY_ATTEMPTS - 1
+    assert [(i.id, i.count) for i in lost.inventory_delta.items] == [(3058145459290044, 75)]  # the loss reward
+
+    _, battle_id = await member.web_start("club_dungeon_battle_start", start, pb.ClubDungeonBattleStartResponse)
+    await battle_server_reports(member, battle_id, winning_team=human_team(battle_server))
+    won = await member.call("club_dungeon_battle_end", pb.ClubDungeonBattleEndRequest(win=False),
+                            pb.ClubDungeonBattleEndResponse)
+    assert [(i.id, i.count) for i in won.inventory_delta.items] == [(3058145459290044, 100)]
+    assert (await _dungeon_status(member)).has_pending_door_selection
+
+
+async def test_browser_club_dungeon_battle_with_the_battle_server_down_costs_nothing(battle_server, member, server,
+                                                                                     monkeypatch):
+    from arcane_server.handlers import club_dungeon as cd
+
+    await assert_down_costs_nothing(member, monkeypatch, "club_dungeon_battle_start", await _dungeon_week(server))
+    assert (await _dungeon_status(member)).limited_attempts_remaining == cd.DAILY_ATTEMPTS
+
+
+async def test_android_club_dungeon_battle_stays_local(battle_server, member, server):
+    await member.call("club_dungeon_battle_start", await _dungeon_week(server), pb.ClubDungeonBattleStartResponse)
+    assert not battle_server
+    await member.call("club_dungeon_battle_end", pb.ClubDungeonBattleEndRequest(win=True), pb.ClubDungeonBattleEndResponse)
+    assert (await _dungeon_status(member)).has_pending_door_selection

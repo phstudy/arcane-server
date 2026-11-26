@@ -116,6 +116,26 @@ class GameClient:
         assert res.response_code == pb.OK, f"{rpc_name}: {res.response_code} {res.error_message}"
         return response_type.FromString(res.payload)
 
+    async def web_start_raw(self, rpc_name: str, req: Message) -> tuple[pb.ResponseEnvelope, dict]:
+        """A browser's battle start (POST /web/remote/<rpc>): the response envelope and the endpoint's JSON (the
+        ticket: battle_server, battle_id, player_token)."""
+        import base64
+
+        env = pb.RequestEnvelope(rpc_name=rpc_name, correlation_id=self._cid, auth_token=self.auth_token,
+                                 client_version=CLIENT_VERSION, payload=req.SerializeToString())
+        self._cid += 1
+        r = await self.http.post(f"/web/remote/{rpc_name}", data=env.SerializeToString())
+        assert r.status == 200, f"/web/remote/{rpc_name}: HTTP {r.status}"
+        body = await r.json()
+        return pb.ResponseEnvelope.FromString(base64.b64decode(body["envelope"])), body
+
+    async def web_start[M: Message](self, rpc_name: str, req: Message, response_type: type[M]) -> tuple[M, str]:
+        """A browser's battle start that must succeed: its response and the battle id of its ticket."""
+        res, body = await self.web_start_raw(rpc_name, req)
+        assert res.response_code == pb.OK, f"{rpc_name}: {res.response_code} {res.error_message}"
+        assert body["battle_id"] and body["player_token"] and body["battle_server"], body
+        return response_type.FromString(res.payload), body["battle_id"]
+
 
 @pytest.fixture(autouse=True)
 def _test_accounts_own_every_hero(monkeypatch):
@@ -253,7 +273,8 @@ async def client(server):
 @pytest.fixture
 def battle_server(monkeypatch):
     """Remote-battle mode with a fake battle server: registrations are recorded instead of sent.
-    Use `report_token(game, battle_id)` to play the battle server reporting a winner."""
+    Use `report_token(game, battle_id)` or `battle_server_reports` to play the battle server reporting a winner.
+    It configures the server: request it before `server` / `client`."""
     from arcane_server import remote_battles
 
     monkeypatch.setenv("ARCANE_BATTLE_SERVER", "battle.test:1")
@@ -266,6 +287,63 @@ def battle_server(monkeypatch):
 
     monkeypatch.setattr(remote_battles, "register", fake_register)
     return registered
+
+
+async def battle_server_reports(client, battle_id: str, winning_team: int = 0, stars: tuple[int, ...] = (),
+                                units: tuple[tuple[int, bool, float], ...] = (),
+                                activities: tuple[tuple[int, int, int], ...] = ()) -> None:
+    """The battle server reporting the end of a remote battle of `client` (POST /internal/multiplayer_battle_end, as
+    arcane_server.battle_server does): the winning team, the engine's stars per team, every unit's end state
+    (persistent id, alive, health) and the player's trackers (activity id, tracker id, value)."""
+    from arcane_server import remote_battles, remote_pve
+    from arcane_server.app import GAME
+
+    game = client.http.app[GAME]
+    b = remote_pve._BATTLES.get(game, battle_id)
+    token = b.report_token if b is not None else report_token(game, battle_id)
+    body = pb.MultiplayerBattleEndRequest(battle_id=battle_id, winning_team_id=winning_team, end_battle_auth_token=token)
+    for a, t, v in activities:
+        body.activity_results.add(player_account_id=client.public_id, activity_def_id=a, tracker_id=t, activity_value=v)
+    r = await client.http.post("/internal/multiplayer_battle_end", data=body.SerializeToString(), headers={
+        remote_battles.SECRET_HEADER: game.settings.battle_secret, remote_battles.STARS_HEADER: ",".join(map(str, stars)),
+        remote_battles.UNITS_HEADER: remote_battles.encode_units(units)})
+    assert r.status == 200, f"battle end report: HTTP {r.status}"
+
+
+async def assert_result_pending(client, rpc_name: str, req: Message) -> None:
+    """A browser ends a remote battle before the battle server reported it: refused, to be retried."""
+    from arcane_server import remote_pve
+
+    res = await client.call_raw(rpc_name, req)
+    assert (res.response_code, res.error_message) == (pb.ERROR, remote_pve.RESULT_PENDING), res
+
+
+def human_team(registered: list[dict]) -> int:
+    """The team of the human player of the battle registered last with the fake battle server."""
+    bs = pb.BattleLib_Bootstrap.FromString(registered[-1]["bootstrap"])
+    return int(next(p for p in bs.players if p.is_human).team_id)
+
+
+async def assert_down_costs_nothing(client, monkeypatch, rpc_name: str, req: Message) -> None:
+    """A browser's battle start while the battle server is down fails and leaves the player as it was (items,
+    energy, saved squads)."""
+    from arcane_server import remote_battles
+    from arcane_server.app import GAME
+
+    async def down(*a, **k):
+        raise remote_battles.BattleServerUnavailable("down")
+
+    monkeypatch.setattr(remote_battles, "register", down)
+    game = client.http.app[GAME]
+
+    def snapshot():
+        p = game.player(client.public_id)
+        return (sorted((i.id, i.count) for i in p.item_inventory), [s.SerializeToString() for s in p.squad_selections])
+
+    before = snapshot()
+    res, body = await client.web_start_raw(rpc_name, req)
+    assert res.response_code == pb.ERROR and body["battle_id"] == "", res
+    assert snapshot() == before
 
 
 def report_token(game, battle_id: str) -> str:

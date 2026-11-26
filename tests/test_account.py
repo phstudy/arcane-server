@@ -5,10 +5,12 @@ from __future__ import annotations
 
 import sys
 import time
+import uuid
 from pathlib import Path
 
 import pytest
 
+from arcane_server import energy
 from arcane_server import game as g
 from arcane_server.app import GAME
 from arcane_server.config import PROJECT_ROOT, load_settings
@@ -141,8 +143,9 @@ def test_energy_regen(gd):
     tracker = g.energy_tracker(p, item.id)
     t0 = tracker.last_generated_timestamp
     freq = ec["generatedFrequencySeconds"]
-    g.regen_energy(gd, p, t0 + 3 * freq + 5)
-    assert item.count == 3 and tracker.last_generated_timestamp == t0 + 3 * freq
+    first = energy.next_tick(t0, freq)  # ticks fall at multiples of freq in the UTC day
+    g.regen_energy(gd, p, first + 2 * freq + 5)
+    assert item.count == 3 and tracker.last_generated_timestamp == first + 2 * freq
     g.regen_energy(gd, p, t0 + 10_000 * freq)
     assert item.count == g.energy_cap(ec, p.level)
 
@@ -365,3 +368,78 @@ def test_population_player_exports_import_whole():
     p = accounts.read_players(archived_player_file(newest["player"]["id"]), None, False)[0]
     assert len(p.unit_inventory) == len(newest["player"]["unitInventory"])
     assert accounts.drop_unknown_content(gd, p) == []
+
+
+# --- Settings > Link Device ------------------------------------------------------------------------------------------
+
+
+async def test_link_device_lets_the_secondary_device_play_the_primary_account(server):
+    from conftest import GameClient
+
+    primary = await GameClient(server, "test-" + uuid.uuid4().hex).login()
+    secondary = await GameClient(server, "test-" + uuid.uuid4().hex).login()
+    try:
+        gen = await primary.call("generate_account_link_code", pb.GenerateAccountLinkCodeRequest(),
+                                 pb.GenerateAccountLinkCodeResponse)
+        assert gen.account_link_code and gen.code_expiration_timestamp > time.time()  # the code and its timer
+        bad = await secondary.call_raw("enter_account_link_code", pb.EnterAccountLinkCodeRequest(account_link_code="ARCXXXXXX"))
+        assert bad.response_code == pb.ACCOUNT_LINK_CODE_DOES_NOT_EXIST
+        own = await primary.call_raw("enter_account_link_code", pb.EnterAccountLinkCodeRequest(account_link_code=gen.account_link_code))
+        assert own.response_code == pb.ACCOUNT_LINK_CODE_DOES_NOT_EXIST  # not on the primary itself
+        entered = await secondary.call("enter_account_link_code", pb.EnterAccountLinkCodeRequest(
+            account_link_code=gen.account_link_code.lower()), pb.EnterAccountLinkCodeResponse)
+        assert entered.account_link_verify_code and entered.verify_code_expiration_timestamp > time.time()
+        push = await primary.next_push()  # the primary shows its verification code input
+        assert push.type == pb.ACCOUNT_LINK_CODE_ENTERED_DYNAMIC_MESSAGE
+        wrong = await primary.call_raw("verify_account_link_code", pb.VerifyAccountLinkCodeRequest(
+            account_link_code=gen.account_link_code, account_link_verify_code="ZZZZZZ"))
+        assert wrong.response_code == pb.ACCOUNT_LINK_VERIFY_CODE_DOES_NOT_EXIST
+        await primary.call("verify_account_link_code", pb.VerifyAccountLinkCodeRequest(
+            account_link_code=gen.account_link_code, account_link_verify_code=entered.account_link_verify_code),
+            pb.VerifyAccountLinkCodeResponse)
+        push = await secondary.next_push()
+        assert push.type == pb.ACCOUNT_LINK_CODE_VERIFIED_DYNAMIC_MESSAGE
+        new_anon = pb.AccountLinkCodeVerifiedDynamicMessage.FromString(push.payload).new_anon_id
+        assert new_anon == primary.anon_id  # the secondary keeps it as its device id ...
+        relaunched = await GameClient(server, new_anon).login()  # ... and logs in to the primary's account
+        assert relaunched.public_id == primary.public_id
+        await relaunched.ws.close()
+        again = await primary.call_raw("verify_account_link_code", pb.VerifyAccountLinkCodeRequest(
+            account_link_code=gen.account_link_code, account_link_verify_code=entered.account_link_verify_code))
+        assert again.response_code == pb.ACCOUNT_LINK_CODE_DOES_NOT_EXIST  # used
+        # a link code is not an admin claim code: renaming to it moves nothing
+        gen2 = await primary.call("generate_account_link_code", pb.GenerateAccountLinkCodeRequest(),
+                                  pb.GenerateAccountLinkCodeResponse)
+        renamed = await secondary.call_raw("update_player_profile", pb.UpdatePlayerProfileRequest(new_username=gen2.account_link_code))
+        assert renamed.response_code == pb.BAD_REQUEST
+    finally:
+        await primary.ws.close()
+        await secondary.ws.close()
+
+
+async def test_wrong_link_codes_are_throttled(server):
+    import time_machine
+    from conftest import GameClient
+
+    from arcane_server import attempts
+
+    primary = await GameClient(server, "test-" + uuid.uuid4().hex).login()
+    secondary = await GameClient(server, "test-" + uuid.uuid4().hex).login()
+    try:
+        gen = await primary.call("generate_account_link_code", pb.GenerateAccountLinkCodeRequest(),
+                                 pb.GenerateAccountLinkCodeResponse)
+        for _ in range(attempts.MAX_FAILURES):
+            env = await secondary.call_raw("enter_account_link_code", pb.EnterAccountLinkCodeRequest(account_link_code="ARCGUESS2"))
+            assert env.response_code == pb.ACCOUNT_LINK_CODE_DOES_NOT_EXIST
+        env = await secondary.call_raw("enter_account_link_code", pb.EnterAccountLinkCodeRequest(
+            account_link_code=gen.account_link_code))
+        assert env.response_code == pb.ACCOUNT_LINK_CODE_DOES_NOT_EXIST  # blocked: the real code too
+        assert not primary.pushes
+        with time_machine.travel(time.time() + attempts.WINDOW_S + 1, tick=False):
+            gen = await primary.call("generate_account_link_code", pb.GenerateAccountLinkCodeRequest(),
+                                     pb.GenerateAccountLinkCodeResponse)
+            await secondary.call("enter_account_link_code", pb.EnterAccountLinkCodeRequest(
+                account_link_code=gen.account_link_code), pb.EnterAccountLinkCodeResponse)
+    finally:
+        await primary.ws.close()
+        await secondary.ws.close()

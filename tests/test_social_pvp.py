@@ -159,3 +159,111 @@ async def test_unleash_is_50_gems_gear_10_and_top_grade_stone(client):
     high = pb.Unit(definition_id=int(twelve["id"]), level=1, rarity=1, gear_tier=12,
                    gear_slot_equipped=[False] * 6)
     assert social_pvp.maxed_unit(gd, high).gear_tier == 12  # an owned tier above 10 is kept
+
+
+async def test_browser_brawl_waits_for_the_battle_servers_report(battle_server, client):
+    from conftest import assert_result_pending, battle_server_reports
+
+    challenge = (await invite(client, (await a_friend(client)).profile.id)).challenge_id
+    units = squad(player(client))
+    res, battle_id = await client.web_start("social_pvp_match", pb.SocialPvpMatchRequest(
+        units=units, leader_unit=units[0], challenge_id=challenge), pb.SocialPvpMatchResponse)
+    assert battle_id == res.battle_id and battle_server[-1]["kind"] == "social"
+    result = pb.MultiplayerBattleResultRequest(battle_id=res.match_id)
+    await assert_result_pending(client, "multiplayer_battle_result", result)
+    await battle_server_reports(client, battle_id, winning_team=0)
+    out = await client.call("multiplayer_battle_result", result, pb.MultiplayerBattleResultResponse)
+    assert out.is_winner  # as reported, whatever id the client sent
+
+
+async def test_open_challenge_posted_to_club_chat_and_taken_by_a_clubmate(server, client):
+    import uuid
+
+    from conftest import GameClient
+
+    from arcane_server.game import lockable_feature_ids
+    from arcane_server.handlers import clubs
+
+    g = game(client)
+    other = await GameClient(server, "test-" + uuid.uuid4().hex).login()
+    try:
+        social = lockable_feature_ids()["SOCIAL_PVP"]
+        env = await client.call_raw("send_social_pvp_open_challenge", pb.SocialPvpOpenChallengeRequest())
+        assert env.response_code == pb.SOCIAL_PVP_NOT_UNLOCKED_ERROR
+        for c in (client, other):
+            g.player(c.public_id).unlocked_features.append(social)
+        created = await client.call("create_club", pb.CreateClubRequest(name="Brawlers", settings=pb.ClubSettings(
+            invite_policy=pb.OPEN_INVITE_POLICY)), pb.CreateClubResponse)
+        cid = created.club.id
+        await other.call("invite_to_club", pb.ClubInviteRequest(club_id=cid, player_id=other.public_id),
+                         pb.ClubInviteResponse)
+        other.pushes.clear()
+        res = await client.call("send_social_pvp_open_challenge", pb.SocialPvpOpenChallengeRequest(channel_names=[cid]),
+                                pb.SocialPvpOpenChallengeResponse)
+        assert res.post_id
+        dm = await other.next_push()  # the clubmate's chat shows the post (after the join line)
+        while dm.type != pb.CHAT_DYNAMIC_MESSAGE or not pb.ChatMessage.FromString(dm.payload).social_challenge_post_id:
+            dm = await other.next_push()
+        post = pb.ChatMessage.FromString(dm.payload)
+        assert (post.social_challenge_post_id, post.player_id, post.channel_type, post.system_message_type) == (
+            res.post_id, client.public_id, pb.CLUB_CHANNEL, pb.SOCIAL_OPEN_CHALLENGE)
+        payload = pb.SocialOpenChallengeMsg.FromString(post.system_message_payload)
+        assert (payload.msg_loc_key, list(payload.params)) == ("SOCIAL_PVP_OPEN_CHALLENGE", [player(client).username])
+        assert post.message_type == pb.SYSTEM_CHAT_MESSAGE and post.expiry_timestamp > post.timestamp
+        assert any(m.social_challenge_post_id == res.post_id for m in clubs.chat_history(g, g.player(other.public_id)))
+        # a second post right away: the cooldown
+        env = await client.call_raw("send_social_pvp_open_challenge", pb.SocialPvpOpenChallengeRequest(channel_names=[cid]))
+        assert env.response_code == pb.PLAYER_IN_COOLDOWN_TO_POST_AGAIN_ERROR
+        # the clubmate (not a friend) takes the post: an invite to the poster
+        taken = await other.call("modify_social_pvp_invite", pb.ModifySocialPvpInviteRequest(
+            opponent_id=client.public_id, action=pb.CHALLENGE_INVITE, chat_post_id=res.post_id),
+            pb.ModifySocialPvpInviteResponse)
+        assert taken.challenge_id and taken.challenger.id == client.public_id
+        env = await other.call_raw("modify_social_pvp_invite", pb.ModifySocialPvpInviteRequest(
+            opponent_id=client.public_id, action=pb.CHALLENGE_INVITE, chat_post_id=res.post_id))
+        assert env.response_code == pb.INVITE_ALREADY_SENT_FROM_THIS_POST_ERROR
+        env = await other.call_raw("modify_social_pvp_invite", pb.ModifySocialPvpInviteRequest(
+            opponent_id=client.public_id, action=pb.CHALLENGE_INVITE, chat_post_id="no-such-post"))
+        assert env.response_code == pb.POST_EXPIRED_ERROR
+        g.db.conn.execute("UPDATE social_pvp_post SET created=created-?", (social_pvp.POST_COOLDOWN_S,))
+        conn = g.db.conn
+        for _ in range(social_pvp.POSTS_PER_DAY - 1):
+            await client.call("send_social_pvp_open_challenge", pb.SocialPvpOpenChallengeRequest(channel_names=[cid]),
+                              pb.SocialPvpOpenChallengeResponse)
+            conn.execute("UPDATE social_pvp_post SET created=created-?", (social_pvp.POST_COOLDOWN_S,))
+        env = await client.call_raw("send_social_pvp_open_challenge", pb.SocialPvpOpenChallengeRequest(channel_names=[cid]))
+        assert env.response_code == pb.PLAYER_REACHED_MAX_POSTS_PER_DAY_ERROR
+    finally:
+        await other.ws.close()
+
+
+async def test_a_refused_tap_on_a_challenge_post_spends_no_slot(server, client, monkeypatch):
+    """The poster was busy (in a battle): the tap is refused, and a later tap still invites them."""
+    import uuid
+
+    from conftest import GameClient
+
+    from arcane_server.game import lockable_feature_ids
+    from arcane_server.handlers import friends as fr
+
+    g = game(client)
+    other = await GameClient(server, "test-" + uuid.uuid4().hex).login()
+    try:
+        g.player(client.public_id).unlocked_features.append(lockable_feature_ids()["SOCIAL_PVP"])
+        created = await client.call("create_club", pb.CreateClubRequest(name="Busy", settings=pb.ClubSettings(
+            invite_policy=pb.OPEN_INVITE_POLICY)), pb.CreateClubResponse)
+        await other.call("invite_to_club", pb.ClubInviteRequest(club_id=created.club.id, player_id=other.public_id),
+                         pb.ClubInviteResponse)
+        post = await client.call("send_social_pvp_open_challenge", pb.SocialPvpOpenChallengeRequest(
+            channel_names=[created.club.id]), pb.SocialPvpOpenChallengeResponse)
+        monkeypatch.setattr(social_pvp, "_is_human", lambda game, pid: True)
+        monkeypatch.setattr(fr, "availability", lambda game, pid: pb.PLAYER_TEMP_UNAVAILABLE)
+        tap = pb.ModifySocialPvpInviteRequest(opponent_id=client.public_id, action=pb.CHALLENGE_INVITE,
+                                              chat_post_id=post.post_id)
+        env = await other.call_raw("modify_social_pvp_invite", tap)
+        assert env.response_code == pb.OPPONENT_NOT_AVAILABLE_ERROR
+        monkeypatch.setattr(fr, "availability", lambda game, pid: pb.PLAYER_AVAILABLE)
+        res = await other.call("modify_social_pvp_invite", tap, pb.ModifySocialPvpInviteResponse)
+        assert res.status == pb.CHALLENGE_STATUS_INVITE
+    finally:
+        await other.ws.close()

@@ -61,6 +61,7 @@ from arcane_server import tutorial
 from arcane_server import store_gear, vip
 from arcane_server.handlers import passport
 from arcane_server.config import PROJECT_ROOT
+from arcane_server.unit_stats import f32
 from arcane_server.clock import current_timezone, day_end, day_start, local_day
 from arcane_server.unit_stats import MAX_RARITY
 from arcane_server.game import is_vip as game_is_vip, vip_feature_reached
@@ -1446,15 +1447,14 @@ async def _buy_store_item(session: Session, req: pb.BuyStoreItemRequest) -> pb.B
         receiver = take_gift_selection(session.public_id, req.gift_id)
         if receiver is None:
             raise RpcError(pb.BAD_REQUEST, f"gift pack {base.id} needs a friend (friend_gift_select)")
-    item, state = _buy(session, req.store_item_id, req.cost_item_id, res.inventory_delta, gift_to=receiver)
+    item, _ = _buy(session, req.store_item_id, req.cost_item_id, res.inventory_delta, gift_to=receiver)
     if receiver is not None:
         res.is_afriend_gift = True
         res.gifted_friend_id = receiver
     now = _now()
     res.purchase_limits.CopyFrom(item.purchase_limits)
     res.next_free_store_item_timestamp = session.player.next_free_store_item_timestamp
-    res.refreshed_store.CopyFrom(_player_store(state, now, rules_of(session.game), session))
-    _add_tutorial_pack(session, res.refreshed_store)
+    res.refreshed_store.CopyFrom(player_store(session, now))  # the same full store the store RPC returns
     return res
 
 
@@ -1661,27 +1661,36 @@ async def refresh_shipment(session: Session, req: pb.RefreshShipmentRequest) -> 
 
 
 def gems_for_currency(game: Game, currency_item_id: int, amount: int) -> int:
-    """Gem price of `amount` of a currency (constants.gemToCurrencyConversions, tiered by amount)."""
+    """Gem price of `amount` of a currency, computed as the client shows it: the first constants.gemToCurrencyConversions
+    rate of the item whose range holds `amount` (max 0 = open-ended), else the item's own gemConvertCost; then
+    float32 scale x float32 amount, truncated, at least 1."""
     conv = game.gamedata.single("constants").get("gemToCurrencyConversions") or {}
-    for entry in conv.get("currencyItems", []):
-        if int(entry["item"]) != currency_item_id:
-            continue
-        for r in entry.get("rates", []):
-            lo, hi = r.get("currencyRangeMin", 0), r.get("currencyRangeMax", 0)
-            if amount >= lo and (hi == 0 or amount <= hi):
-                return max(1, math.ceil(amount * r["gemToCurrencyScale"]))
-    raise RpcError(pb.BAD_REQUEST, f"item {currency_item_id} can't be bought with gems")
+    entry = next((e for e in conv.get("currencyItems", []) if int(e["item"]) == currency_item_id), None)
+    if entry is not None:
+        rate = next((r for r in entry.get("rates", []) if amount >= r.get("currencyRangeMin", 0)
+                     and (r.get("currencyRangeMax", 0) == 0 or amount <= r.get("currencyRangeMax", 0))), None)
+        scale = rate and rate.get("gemToCurrencyScale", 0.0)
+    else:
+        scale = game.gamedata.by_id("inventoryItem").get(currency_item_id, {}).get("gemConvertCost", 0.0)
+    if not scale or scale <= 0:
+        raise RpcError(pb.BAD_REQUEST, f"item {currency_item_id} can't be bought with gems")
+    return max(1, int(f32(f32(scale) * f32(amount))))
 
 
 @rpc("convert_gems_to_currency", pb.ConvertGemsToCurrencyRequest)
 async def convert_gems_to_currency(session: Session, req: pb.ConvertGemsToCurrencyRequest) -> pb.ConvertGemsToCurrencyResponse:
-    if req.currency_cost <= 0:
-        raise RpcError(pb.BAD_REQUEST, "nothing to convert")
+    """The buy-the-difference popup (every "not enough gold / XP / potions" path: ability and promote ingredients,
+    gear, store, LTA potions). `currency_cost` is the FULL cost of what the player wants (what the client sends), while
+    the popup shows and prices the part they lack, cost - owned. So the player pays for and gets cost - owned, at the
+    price the popup showed."""
+    missing = int(req.currency_cost) - item_count(session.player, req.currency_item_id)
+    if missing <= 0:
+        raise RpcError(pb.BAD_REQUEST, "nothing missing: the player owns the cost")
     gem_item = int((session.game.gamedata.single("constants").get("gemToCurrencyConversions") or {}).get("gemInventoryItem") or GEMS)
-    gems = gems_for_currency(session.game, req.currency_item_id, req.currency_cost)
+    gems = gems_for_currency(session.game, req.currency_item_id, missing)
     res = pb.ConvertGemsToCurrencyResponse()
     _pay(session.player, res.delta, [(gem_item, gems)])
-    _grant(session.player, res.delta, [(req.currency_item_id, req.currency_cost)])
+    _grant(session.player, res.delta, [(req.currency_item_id, missing)])
     session.save()
     return res
 

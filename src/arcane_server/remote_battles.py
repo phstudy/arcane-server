@@ -9,15 +9,39 @@ from __future__ import annotations
 
 import base64
 import logging
+from collections.abc import Iterable
 from dataclasses import dataclass
 
 import aiohttp
 
 from arcane_server.config import Settings
+from arcane_server.proto import serverproto_pb2 as pb
 
 log = logging.getLogger(__name__)
 
 SECRET_HEADER = "X-Arcane-Battle-Secret"  # same header in arcane_server.battle_server.server
+# battle server -> game server, with a battle's result: the engine's star count per team ("<team 0>,<team 1>")
+STARS_HEADER = "X-Arcane-Stars"
+# ... and every unit's end state, as the client reports it in a PvE battle end (UnitBattleResult):
+# "<persistent id>:<alive 0|1>:<health percent>,..." (encode_units / decode_units)
+UNITS_HEADER = "X-Arcane-Units"
+
+
+def encode_units(units: Iterable[tuple[int, bool, float]]) -> str:
+    """(persistent id, alive, health percent) per unit -> the UNITS_HEADER value."""
+    return ",".join(f"{int(pid)}:{int(bool(alive))}:{float(hp):.6g}" for pid, alive, hp in units)
+
+
+def decode_units(header: str) -> list[pb.UnitBattleResult]:
+    """A UNITS_HEADER value -> the units' results; missing or malformed -> []."""
+    try:
+        out = []
+        for part in filter(None, header.split(",")):
+            pid, alive, hp = part.split(":")
+            out.append(pb.UnitBattleResult(persistent_id=int(pid), is_alive=alive == "1", health_percent=float(hp)))
+        return out
+    except ValueError:
+        return []
 
 
 class BattleServerUnavailable(Exception):

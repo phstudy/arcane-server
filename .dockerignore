@@ -1,0 +1,10 @@
+# Only the paths the Dockerfile copies matter; the player's files never go into the build context.
+*
+!pyproject.toml
+!uv.lock
+!LICENSE
+!src/
+!content/
+!proto/
+!tools/
+**/__pycache__

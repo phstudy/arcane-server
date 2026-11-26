@@ -5,7 +5,8 @@ from __future__ import annotations
 import uuid
 
 import pytest
-from conftest import GameClient
+from conftest import (GameClient, assert_down_costs_nothing, assert_result_pending, battle_server_reports,
+                      human_team)
 
 from arcane_server.app import GAME as GAME_KEY
 from arcane_server.handlers import clubs
@@ -103,6 +104,30 @@ async def test_definition_and_status_before_start(member, client):
     assert env.response_code == pb.NO_CLUB
 
 
+async def test_co_leaders_start_the_expedition_members_cannot(server):
+    """As the client allows it: a role from co-leader up picks the difficulty (below it the client shows
+    CLUB_EXPEDITION_MUST_BE_LEADER_TO_START); the server refuses a member only. Roles as a shared server keeps them
+    (solo club rules would make every player its club's leader)."""
+    import dataclasses
+    import time
+
+    game = _game(server)
+    game.settings = dataclasses.replace(game.settings, toggles=dataclasses.replace(game.settings.toggles, solo_club_rules=False))
+    leader, member = [await GameClient(server, "test-" + uuid.uuid4().hex).login() for _ in range(2)]
+    try:
+        cid = (await leader.call("create_club", pb.CreateClubRequest(name="Explorers", settings=pb.ClubSettings()),
+                                 pb.CreateClubResponse)).club.id
+        clubs._set_member(game, clubs.Member(member.public_id, cid, pb.MEMBER_ROLE, int(time.time()) - 86400, 0))
+        env = await member.call_raw("start_expedition", pb.StartExpeditionRequest(difficulty=0))
+        assert env.response_code == pb.UNAUTHORIZED
+        await leader.call("promote_club_member", pb.PromoteClubMemberRequest(player_id=member.public_id),
+                          pb.PromoteClubMemberResponse)
+        assert (await _start(member, 0)).status.started
+    finally:
+        for c in (leader, member):
+            await c.ws.close()
+
+
 async def test_start_and_floor_layout(member, server):
     game = _game(server)
     res = await _start(member, 2)
@@ -137,7 +162,7 @@ async def test_battle_room_cleared_by_three_wins(member, server):
         assert end.room_completed == (i == ex.BATTLES_PER_ROOM - 1)
     env = await member.call_raw("club_expedition_battle_start", pb.ClubExpeditionBattleStartRequest(
         battle_index=0, room_x=1, room_y=0, floor_depth=0, units=_squad(server)))
-    assert env.response_code == pb.BAD_REQUEST  # room done
+    assert env.response_code == pb.CLUB_EXP_BATTLE_UNAVAILABLE_TO_JOIN_ERROR  # room done: the client's "busy" alert
     lay = (await member.call("get_floor_layout", pb.ExpeditionFloorLayoutRequest(level=0), pb.ExpeditionFloorLayoutResponse)).layout
     vis = {(r.x, r.y): r.visibility for r in lay.rooms}
     assert vis[(1, 0)] == pb.COMPLETED and vis[(2, 0)] == pb.COMPLETED  # empty room behind it opens by itself
@@ -629,3 +654,73 @@ async def test_battle_rooms_two_waves_minions_then_characters(member, server):
     waves = [[u.definition_id for u in sq.units] for sq in enemy.squads]
     assert len(waves) == 2 and len(waves[0]) == 3 and sum(map(len, waves)) >= 5
     assert not set(waves[0]) & heroes and set(waves[1]) <= heroes
+
+
+# --- a browser's expedition battles run on the battle server ----------------------------------------------------------
+
+
+def _room_battle(server, index: int = 0) -> pb.ClubExpeditionBattleStartRequest:
+    units = _squad(server)
+    return pb.ClubExpeditionBattleStartRequest(battle_index=index, room_x=1, room_y=0, floor_depth=0, units=units,
+                                               leader_unit=units[0])
+
+
+async def test_browser_expedition_battle_counts_the_battle_servers_report(battle_server, member, server):
+    await _start(member)
+    _energy(server)
+    _, battle_id = await member.web_start("club_expedition_battle_start", _room_battle(server),
+                                          pb.ClubExpeditionBattleStartResponse)
+    assert battle_server[-1]["kind"] == "club_expedition" and battle_server[-1]["battle_id"] == battle_id
+    claim = pb.ClubExpeditionBattleEndRequest(win=True)
+    await assert_result_pending(member, "club_expedition_battle_end", claim)
+    await battle_server_reports(member, battle_id, winning_team=1 - human_team(battle_server))
+    lost = await member.call("club_expedition_battle_end", claim, pb.ClubExpeditionBattleEndResponse)
+    assert [(i.id, i.count) for i in lost.inventory_delta.items] == [(ex.MILESTONE_ITEM, ex.LOSS_XP)]
+    assert 0 not in ex.room_state(_state(server), 0, ex.floor_board(0).at(1, 0).index).get("battles", [])
+
+    _, battle_id = await member.web_start("club_expedition_battle_start", _room_battle(server),
+                                          pb.ClubExpeditionBattleStartResponse)
+    await battle_server_reports(member, battle_id, winning_team=human_team(battle_server))
+    won = await member.call("club_expedition_battle_end", pb.ClubExpeditionBattleEndRequest(win=False),
+                            pb.ClubExpeditionBattleEndResponse)
+    assert [(i.id, i.count) for i in won.inventory_delta.items] == [(ex.MILESTONE_ITEM, ex.BATTLE_XP)]
+    assert 0 in ex.room_state(_state(server), 0, ex.floor_board(0).at(1, 0).index)["battles"]
+
+
+async def test_browser_expedition_battle_with_the_battle_server_down_costs_nothing(battle_server, member, server,
+                                                                                    monkeypatch):
+    await _start(member)
+    _energy(server)
+    await assert_down_costs_nothing(member, monkeypatch, "club_expedition_battle_start", _room_battle(server))
+    env = await member.call_raw("club_expedition_battle_end", pb.ClubExpeditionBattleEndRequest(win=True))
+    assert env.response_code == pb.NOT_FOUND
+
+
+async def test_android_expedition_battle_stays_local(battle_server, member, server):
+    await _start(member)
+    _energy(server)
+    end = await _battle(member, server, 0, 1, 0)
+    assert not battle_server and [(i.id, i.count) for i in end.inventory_delta.items] == [(ex.MILESTONE_ITEM, ex.BATTLE_XP)]
+
+
+async def test_browser_expedition_start_keeps_what_other_members_changed_meanwhile(battle_server, member, server,
+                                                                                    monkeypatch):
+    """The start waits for the battle server; whatever the club's expedition got meanwhile (another member's battle)
+    is not written over by the start's older copy of the state."""
+    from arcane_server import remote_battles
+
+    await _start(member)
+    _energy(server)
+    registered = remote_battles.register
+
+    async def meanwhile(*a, **k):
+        st = _state(server)
+        ex.room_state(st, 0, ex.floor_board(0).at(0, 1).index).setdefault("battles", []).append(2)
+        _put_state(server, st)
+        await registered(*a, **k)
+
+    monkeypatch.setattr(remote_battles, "register", meanwhile)
+    await member.web_start("club_expedition_battle_start", _room_battle(server), pb.ClubExpeditionBattleStartResponse)
+    st = _state(server)
+    assert 2 in ex.room_state(st, 0, ex.floor_board(0).at(0, 1).index)["battles"]  # the other member's win stays
+    assert ex.player_state(st, USER_ID)["battle"]["remote"]  # and the browser's battle is in

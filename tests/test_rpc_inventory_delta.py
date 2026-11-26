@@ -23,7 +23,7 @@ async def test_free_club_support_refresh_returns_an_empty_inventory_delta(client
 async def test_unimplemented_rpc_still_returns_an_inventory_delta(client):
     from arcane_server.rpc import REGISTRY
 
-    assert "redeem_redemption_code" not in REGISTRY  # pick another unimplemented one if this gets implemented
-    env = await client.call_raw("redeem_redemption_code", pb.RedeemRedemptionCodeRequest())
+    assert "claim_chapter_reward" not in REGISTRY  # pick another unimplemented one if this gets implemented
+    env = await client.call_raw("claim_chapter_reward", pb.ClaimChapterRewardRequest())
     assert env.response_code == pb.OK
-    assert pb.RedeemRedemptionCodeResponse.FromString(env.payload).HasField("inventory_delta")
+    assert pb.ClaimChapterRewardResponse.FromString(env.payload).HasField("inventory_delta")

@@ -475,3 +475,31 @@ async def test_game_texts_come_from_the_language_s_localization_file(client):
     assert items and hans["data_language"] == "ChineseSimplified"
     assert all(any(i["name"] == news.plain(v) for v in loc.values()) for i in items)
     assert loc["UNIT_CATEGORY_BLUEMAGIC_NAME"] == "蓝色奥术"  # Simplified (Traditional: 藍色奧術)
+
+
+def _store_many(path: str, size: int) -> str:
+    from pathlib import Path
+
+    from arcane_server import news_art
+
+    try:
+        for _ in range(200):
+            news_art.store(Path(path), bytes([size % 256]) * size)
+    except Exception as e:  # noqa: BLE001 (reported to the test)
+        return repr(e)
+    return ""
+
+
+def test_art_cache_writes_from_several_processes_at_once(tmp_path):
+    """Test workers and servers share the art cache: several processes extracting the same image at once (a cold
+    cache) each write the whole file, none fails, and the file is always one writer's whole payload."""
+    import multiprocessing
+
+    target = tmp_path / "bundle" / "texture.webp"
+    sizes = [10_000 + k for k in range(6)]
+    with multiprocessing.get_context("spawn").Pool(len(sizes)) as pool:
+        errors = pool.starmap(_store_many, [(str(target), n) for n in sizes])
+    assert errors == [""] * len(sizes)
+    data = target.read_bytes()
+    assert len(data) in sizes and data == bytes([len(data) % 256]) * len(data)
+    assert [p.name for p in target.parent.iterdir()] == ["texture.webp"]  # no temporary files left

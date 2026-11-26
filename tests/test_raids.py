@@ -10,7 +10,8 @@ import uuid
 
 import pytest
 
-from conftest import GameClient, client_text
+from conftest import (GameClient, assert_down_costs_nothing, assert_result_pending, battle_server_reports, client_text,
+                      human_team)
 from arcane_server.app import GAME as GAME_KEY
 from arcane_server.handlers import clubs, raid_milestones, raids
 from arcane_server.inventory import item_count
@@ -214,8 +215,10 @@ async def test_definitions_and_home_tiles(member, server):
 
 async def test_raid_exchange_buttons_open_the_raids_own_exchange(member, server):
     """The raid screen's exchange button opens the store on the shipment RaidDefinition.shipment_tab_id (the
-    client does nothing when it is 0) and its store button the tab store_tab_deep_link: each raid's exchange (the
-    one priced in its coins, as the shipments RPC lists it) in the store's exchange tab."""
+    client does nothing when it is 0): each raid's exchange (the one priced in its coins, as the shipments RPC lists
+    it). Its RAID STORE button opens the store on the tab store_tab_deep_link and shows only when it is not 0; the
+    server content has no raid store tab, and the exchange tab is only the holder the exchanges open in (deep-linked
+    it shows an empty page), so the button stays hidden."""
     gd = _game(server).gamedata
     shipments_tab = int(gd.single("constants")["storeTabs"]["shipmentsTab"])
     store = await member.call("store", pb.StoreRequest(), pb.StoreResponse)
@@ -230,7 +233,7 @@ async def test_raid_exchange_buttons_open_the_raids_own_exchange(member, server)
                  sched.raids):
         assert len(defs) == 3
         for d in defs:
-            assert d.store_tab_deep_link == shipments_tab
+            assert d.store_tab_deep_link == 0
             assert priced_in[d.shipment_tab_id] == {raids.RAIDS[d.id].currency}
     by_id = {d.id: d.shipment_tab_id for d in sched.raids}
     assert by_id[raids.URSULA] == 2988095342940281  # the Forbidden Depths exchange (server content)
@@ -302,10 +305,20 @@ def test_restriction_check():
 # --- playing -------------------------------------------------------------------------------------------------
 
 
-async def test_clubless_player_sees_no_raids(client):
-    home = await client.call("home", pb.HomeRequest(home_raid_statuses_request=pb.HomeRaidStatusesRequest()), pb.HomeResponse)
-    # the tile is answered (every home section the client asks for must be present) but empty
-    assert home.HasField("home_raid_statuses_response") and not home.home_raid_statuses_response.raid_statuses
+async def test_clubless_player_gets_the_raids_without_statuses(client):
+    """The client keeps the raid definitions from the home tiles and the club adventures screen lists only those (it
+    asks get_scheduled_raids only while raids are locked); a raid without a status is drawn as "join a club". So a
+    player outside a club gets the definitions, and no statuses: after joining a club the raids are there."""
+    home = await client.call("home", pb.HomeRequest(home_raid_definition_request=pb.HomeRaidDefinitionsRequest(),
+                                                    home_raid_statuses_request=pb.HomeRaidStatusesRequest(),
+                                                    home_raid_pending_rewards_request=pb.HomeRaidPendingRewardsRequest()),
+                             pb.HomeResponse)
+    st = home.home_raid_statuses_response
+    assert {d.id for d in st.raid_definitions} == {raids.URSULA, raids.TITANS, raids.JAFAR}
+    assert not st.raid_statuses and not st.raid_tiers_statuses
+    assert {d.id for d in home.home_raid_definitions_response.raid_definitions} == {raids.URSULA, raids.TITANS, raids.JAFAR}
+    assert home.HasField("home_raid_pending_rewards_response")
+    assert not home.home_raid_pending_rewards_response.pending_rewards
     res = await client.call("get_raid_status", pb.GetRaidStatusRequest(raid_ids=[raids.URSULA]), pb.GetRaidStatusResponse)
     assert not res.raid_status
 
@@ -1218,3 +1231,106 @@ def test_detail_panel_lists_each_phase_bosses_abilities():
     titans = [e for e in defs[raids.TITANS].tiers[0].description if "PHASE" in e.title_key]
     assert [o.title_key for o in titans[0].custom_objects][0] == "PYROS_BASIC_NAME"
     assert [len(e.custom_objects) for e in titans] == [7, 7, 7, 6]
+
+
+# --- a browser's raid battles run on the battle server ---------------------------------------------------------------
+
+
+async def _titans_attempt(member, game) -> tuple[str, pb.RaidBattleStartRequest]:
+    _train_squad(member, game, rarity=6, gear_tier=6)
+    _fund(game, CLUB_ID, raids.TITANS, 0)
+    attempt = (await _start(member, raids.TITANS, 0)).attempt_id
+    units, _ = await _squad(member, game)
+    return attempt, pb.RaidBattleStartRequest(raid=pb.RaidIdentifier(raid_id=raids.TITANS, tier_index=0), units=units,
+                                              attempt_id=attempt, battle_index=0, leader_unit=units[0])
+
+
+async def test_raid_squad_persistent_ids_follow_the_bosses(member, server):
+    game = _game(server)
+    _, start = await _titans_attempt(member, game)
+    res = await member.call("raid_battle_start", start, pb.RaidBattleStartResponse)
+    bs = pb.BattleLib_Bootstrap.FromString(res.bootstrap_bytes)
+    bosses = [u.persistent_id for p in bs.players if not p.is_human for sq in p.squads for u in sq.units]
+    squad = [u.persistent_id for p in bs.players if p.is_human for sq in p.squads for u in sq.units]
+    assert squad == list(range(max(bosses) + 1, max(bosses) + 6))
+
+
+async def test_browser_raid_battle_counts_the_battle_servers_report(battle_server, member, server):
+    game = _game(server)
+    attempt, start = await _titans_attempt(member, game)
+    res, battle_id = await member.web_start("raid_battle_start", start, pb.RaidBattleStartResponse)
+    assert battle_server[-1]["kind"] == "raid" and battle_server[-1]["battle_id"] == battle_id
+    bs = pb.BattleLib_Bootstrap.FromString(res.bootstrap_bytes)
+    claim = pb.RaidBattleEndRequest(win=False, attempt_id=attempt, raid_id=raids.TITANS, tier_index=0, battle_index=0)
+    await assert_result_pending(member, "raid_battle_end", claim)
+    boss_hp = sum(u.health for p in bs.players if not p.is_human for sq in p.squads for u in sq.units)
+    await battle_server_reports(member, battle_id, winning_team=human_team(battle_server),
+                                units=tuple((u.persistent_id, p.is_human, 0.7 if p.is_human else 0.0)
+                                            for p in bs.players for sq in p.squads for u in sq.units),
+                                activities=((0, raids.DAMAGE_TRACKER, boss_hp),))
+    end = await member.call("raid_battle_end", claim, pb.RaidBattleEndResponse)
+    st = raids.load_state(game, CLUB_ID, raids.TITANS)
+    assert all(e["hp"] <= raids.DEAD for e in st["enemies"] if e["bi"] == 0)  # Pyros fell, as reported
+    assert end.earned_milestone_xp > 0
+
+
+async def test_browser_raid_battle_with_the_battle_server_down_costs_nothing(battle_server, member, server, monkeypatch):
+    game = _game(server)
+    attempt, start = await _titans_attempt(member, game)
+    await assert_down_costs_nothing(member, monkeypatch, "raid_battle_start", start)
+    s = (await member.call("get_raid_status", pb.GetRaidStatusRequest(raid_ids=[raids.TITANS]),
+                           pb.GetRaidStatusResponse)).raid_status[0]
+    assert s.remaining_attempts == 4 and not s.used_spell_ids
+
+
+async def test_android_raid_battle_stays_local(battle_server, member, server):
+    game = _game(server)
+    _train_squad(member, game, rarity=6, gear_tier=6)
+    _fund(game, CLUB_ID, raids.TITANS, 0)
+    s = await _start(member, raids.TITANS, 0)
+    end = await _battle(member, game, raids.TITANS, 0, s.attempt_id, 0, kill=False)
+    assert not battle_server and end.raid_status.current_health < 1.0 and end.earned_milestone_xp > 0
+
+
+def _engine_units(bs: pb.BattleLib_Bootstrap, squad_health: float) -> list[pb.UnitBattleResult]:
+    """Unit results as the engine gives them at a battle's end: every unit with a persistent id in the bootstrap (a
+    unit without one is not reported, measured on the battle server); bosses at 0.9 health."""
+    return [pb.UnitBattleResult(persistent_id=u.persistent_id, is_alive=True,
+                                health_percent=squad_health if p.is_human else 0.9)
+            for p in bs.players for sq in p.squads for u in sq.units if u.persistent_id]
+
+
+async def _ursula(member, game) -> tuple[str, pb.RaidBattleStartRequest]:
+    _train_squad(member, game)
+    _fund(game, CLUB_ID, raids.URSULA, 0)
+    attempt = (await _start(member, raids.URSULA, 0)).attempt_id
+    units, _ = await _squad(member, game)
+    return attempt, pb.RaidBattleStartRequest(raid=pb.RaidIdentifier(raid_id=raids.URSULA, tier_index=0), units=units,
+                                              attempt_id=attempt, leader_unit=units[0])
+
+
+async def test_android_raid_survivors_keep_their_health(member, server):
+    """Android (intended change): the squad's characters now have persistent ids in the bootstrap, so the engine's
+    unit results the client hands back include them and survivors keep their health. Before, the squad had none,
+    the engine reported only the bosses, and every character counted as fallen."""
+    game = _game(server)
+    attempt, start = await _ursula(member, game)
+    res = await member.call("raid_battle_start", start, pb.RaidBattleStartResponse)
+    units = _engine_units(pb.BattleLib_Bootstrap.FromString(res.bootstrap_bytes), 0.6)
+    end = await member.call("raid_battle_end", pb.RaidBattleEndRequest(
+        win=False, units=units, attempt_id=attempt, raid_id=raids.URSULA, tier_index=0), pb.RaidBattleEndResponse)
+    status = {u.definition_id: (u.is_alive, round(u.health_percent, 2)) for u in end.raid_status.unit_status}
+    assert status == {u: (True, 0.6) for u in start.units}
+
+
+async def test_browser_raid_without_unit_results_keeps_the_squad(battle_server, member, server):
+    """A battle server that reports no unit results (an older one): the squad stays as it was, never the client's
+    claim and never "all fallen"."""
+    game = _game(server)
+    attempt, start = await _ursula(member, game)
+    _, battle_id = await member.web_start("raid_battle_start", start, pb.RaidBattleStartResponse)
+    await battle_server_reports(member, battle_id, winning_team=1 - human_team(battle_server))
+    claim = pb.RaidBattleEndRequest(win=True, attempt_id=attempt, raid_id=raids.URSULA, tier_index=0,
+                                    units=[pb.UnitBattleResult(persistent_id=99, is_alive=True, health_percent=1.0)])
+    end = await member.call("raid_battle_end", claim, pb.RaidBattleEndResponse)
+    assert not [u for u in end.raid_status.unit_status if u.definition_id in start.units]

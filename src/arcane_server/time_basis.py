@@ -283,6 +283,9 @@ TABLES: dict[str, Converter | None] = {
     "player_data_time": _REAL,  # when a snapshot's data is from (account_merge): provenance
     "player_conformed": _REAL,  # digests, updated with player_state
     "claim_code": _REAL,  # claim-code TTL
+    "account_link": _REAL,  # account-link verification TTL
+    "redemption_code": _REAL,  # admin-set expiry, creation time
+    "redemption_claim": _REAL,  # when a code was redeemed: provenance
     "game_clock": _REAL,  # the clock itself
     "time_basis": _REAL,
     "population": _REAL,  # the generated population: snapshots dated population.GENERATED_AT, like an import source
@@ -297,9 +300,12 @@ TABLES: dict[str, Converter | None] = {
     "passport_state": None,  # keyed by run number
     "lc_score": None,  # keyed by the contest's start: game time already (leaderboards ran on game time)
     "social_pvp_stats": None,  # counters
+    "social_pvp_post": None,  # game time already (written after the game-time basis existed)
+    "social_pvp_post_invite": None,  # no times
     "club": _club,
     "club_member": _club_member,
     "club_kv": _club_kv,
+    "club_invite": None,  # game time already (written after the game-time basis existed)
     "event_store": _event_store,
     "inbox_message": _inbox_message,
     "shop_state": _shop_state,

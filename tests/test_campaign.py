@@ -3,10 +3,12 @@
 from __future__ import annotations
 
 import dataclasses
+from datetime import UTC, datetime
 import random
 import uuid
 
 import pytest
+import time_machine
 
 from conftest import GameClient, fielded_squad
 
@@ -17,7 +19,7 @@ from arcane_server.app import GAME, create_app
 from arcane_server.config import load_settings
 from arcane_server.gamedata import Gamedata
 from arcane_server.handlers import campaign as c
-from arcane_server.inventory import item_count
+from arcane_server.inventory import grant_item, item_count
 from arcane_server.proto import serverproto_pb2 as pb
 
 pytestmark = pytest.mark.requires_client_data  # gamedata / battle script read directly
@@ -344,6 +346,27 @@ async def test_hard_campaign_daily_attempts_and_refresh(client):
     assert res.updated_progress.limited_attempt_count == 3 and res.updated_progress.limited_attempt_refresh_count == 0
 
 
+async def test_hard_campaign_refreshes_have_no_daily_cap(client):
+    """Refreshes past the end of hardRefreshCosts are sold at its last price, as the refresh popup shows."""
+    hard = ident(HERO_HARD)
+    costs = [int(x) for x in game(client).gamedata.single("constants")["hardRefreshCosts"]]
+    grant_item(player(client), GEMS, sum(costs) + 3 * costs[-1])
+    paid = []
+    for _ in range(len(costs) + 3):
+        ref = await client.call("buy_pve_refresh", pb.BuyPveRefreshRequest(campaign_identifier=hard), pb.BuyPveRefreshResponse)
+        paid.append(-delta_map(ref.inventory_delta)[GEMS])
+    assert paid == costs + [costs[-1]] * 3
+    assert ref.updated_progress.limited_attempt_refresh_count == len(costs) + 3
+
+
+async def test_hard_campaign_refresh_without_a_price_list_is_refused(client, monkeypatch):
+    gd = game(client).gamedata
+    constants = dict(gd.single("constants"), hardRefreshCosts=[])
+    monkeypatch.setattr(gd, "single", lambda name: constants if name == "constants" else Gamedata.single(gd, name))
+    r = await client.call_raw("buy_pve_refresh", pb.BuyPveRefreshRequest(campaign_identifier=ident(HERO_HARD)))
+    assert r.response_code == pb.BAD_REQUEST
+
+
 async def test_buy_pve_refresh_rejects_unlimited_nodes(client):
     r = await client.call_raw("buy_pve_refresh", pb.BuyPveRefreshRequest(campaign_identifier=ident(GRAND)))
     assert r.response_code == pb.BAD_REQUEST
@@ -400,7 +423,7 @@ async def test_winning_a_battle_opens_the_next_and_pushes_it(client):
     await start(client, ident(GRAND, 1, 1))
     await client.call("pve_battle_end", pb.PveBattleEndRequest(win=False), pb.PveBattleEndResponse)
     pushed = [m for m in client.last_envelope.dynamic_messages if m.type != pb.SPECIAL_OFFER_UPDATED_DYNAMIC_MESSAGE]
-    assert not pushed and (GRAND, 1, 2, 0) not in _keys(player(client))  # (special offers ride on every response)
+    assert not pushed and (GRAND, 1, 2, 0) not in _keys(player(client))  # (special offers may ride along)
     # the last battle of a map opens the next map
     gd = game(client).gamedata
     *rest, last = g.campaign_battle_keys(gd.by_id("campaign")[GRAND])[1]
@@ -502,17 +525,20 @@ def _gd() -> Gamedata:
     return Gamedata(load_settings().gamedata_json)
 
 
-def test_energy_regenerates_to_cap_and_keeps_remainder():
+DAY_START = 1_699_920_000  # a UTC midnight
+
+
+def test_energy_regenerates_to_cap():
     gd = _gd()
     p = pb.Player(level=10)
     cap = energy.regen_cap(gd, p, PVE_ENERGY)
     freq = int(energy.constants_for(gd, PVE_ENERGY)["generatedFrequencySeconds"])
-    t0 = 1_700_000_000
+    t0 = DAY_START
     p.item_inventory.add(id=PVE_ENERGY, count=0)
     energy.tracker(p, PVE_ENERGY, t0)
     assert energy.settle(gd, p, PVE_ENERGY, t0 + freq * 3 + 5) == 3
     assert item_count(p, PVE_ENERGY) == 3
-    assert energy.tracker(p, PVE_ENERGY).last_generated_timestamp == t0 + freq * 3  # remainder kept
+    assert energy.tracker(p, PVE_ENERGY).last_generated_timestamp == t0 + freq * 3  # the last tick
     energy.settle(gd, p, PVE_ENERGY, t0 + freq * 10_000)
     assert item_count(p, PVE_ENERGY) == cap
     # spending from the cap starts the regen clock now
@@ -521,6 +547,77 @@ def test_energy_regenerates_to_cap_and_keeps_remainder():
     # grants may exceed the regen cap but never the global cap
     assert energy.grant(gd, p, PVE_ENERGY, 5000, t0 + freq * 20_000) == 999 - (cap - 6)
     assert item_count(p, PVE_ENERGY) == 999
+
+
+def test_energy_ticks_where_the_client_puts_them():
+    """Ticks at multiples of the frequency from the UTC day's start, the first one strictly after
+    last_generated_timestamp: energy last generated 100 s into the day gets its next point at 360 s, not 460 s."""
+    gd = _gd()
+    p = pb.Player(level=10)
+    p.item_inventory.add(id=PVE_ENERGY, count=0)
+    energy.tracker(p, PVE_ENERGY, DAY_START + 100)
+    assert energy.settle(gd, p, PVE_ENERGY, DAY_START + 359) == 0
+    assert energy.settle(gd, p, PVE_ENERGY, DAY_START + 360) == 1
+    assert energy.tracker(p, PVE_ENERGY).last_generated_timestamp == DAY_START + 360
+    assert energy.settle(gd, p, PVE_ENERGY, DAY_START + 4 * 360 + 359) == 3
+    assert energy.tracker(p, PVE_ENERGY).last_generated_timestamp == DAY_START + 4 * 360
+
+
+def test_energy_ticks_restart_at_each_day_when_the_frequency_does_not_divide_it():
+    """4,200 s does not divide a day: the day's last tick (21 x 4,200) falls 1,800 s into the next day, whose
+    ticks then count from its own start (4,200 s)."""
+    gd = _gd()
+    item = next(int(e["inventoryItem"]) for e in gd.table("energyConstants") if e["generatedFrequencySeconds"] == 4200)
+    p = pb.Player(level=10)
+    p.item_inventory.add(id=item, count=0)
+    energy.tracker(p, item, DAY_START + 20 * 4200 + 10)
+    assert energy.settle(gd, p, item, DAY_START + 86400 + 1799) == 0
+    assert energy.settle(gd, p, item, DAY_START + 86400 + 1800) == 1
+    assert energy.settle(gd, p, item, DAY_START + 86400 + 4200) == 1
+    assert energy.tracker(p, item).last_generated_timestamp == DAY_START + 86400 + 4200
+
+
+def test_energy_ticks_on_the_clients_clock_at_game_speed():
+    """At game speed 7 the client ticks every 52 real seconds (360 / 7 rounded up) from the real UTC day's start;
+    the server counts the same ticks whatever the calendar's offset."""
+    from arcane_server import clock
+
+    clock.install(clock.GameClock(anchor_real=DAY_START, anchor_game=DAY_START - 12_345, speed=7))
+    gd = _gd()
+    p = pb.Player(level=10)
+    p.item_inventory.add(id=PVE_ENERGY, count=0)
+    energy.tracker(p, PVE_ENERGY, clock.to_game(DAY_START + 10))
+    assert energy.settle(gd, p, PVE_ENERGY, clock.to_game(DAY_START + 51)) == 0
+    assert energy.settle(gd, p, PVE_ENERGY, clock.to_game(DAY_START + 52)) == 1
+    assert energy.settle(gd, p, PVE_ENERGY, clock.to_game(DAY_START + 3 * 52)) == 2
+    assert clock.to_real(energy.tracker(p, PVE_ENERGY).last_generated_timestamp) == DAY_START + 3 * 52
+
+
+def test_bonus_generation_covers_the_next_ticks():
+    gd = _gd()
+    ec = energy.constants_for(gd, PVE_ENERGY)
+    times, bonus = int(ec["timesToApplyGeneratedBonus"]), int(ec["bonusGeneratedAmount"])
+    p = pb.Player(level=10)
+    p.item_inventory.add(id=PVE_ENERGY, count=0)
+    energy.tracker(p, PVE_ENERGY, DAY_START + 100)
+    end = energy.start_bonus_generation(gd, p, PVE_ENERGY, DAY_START + 100)
+    assert end == DAY_START + times * 360  # the client then shows `times` bonus generations left
+    assert energy.settle(gd, p, PVE_ENERGY, DAY_START + 2 * 360) == 2 * bonus
+    assert energy.settle(gd, p, PVE_ENERGY, DAY_START + (times + 2) * 360) == (times - 2) * bonus + 2
+
+
+async def test_battle_starts_on_the_energy_the_client_just_generated(client):
+    """The client shows +1 energy at its tick; a battle started 1 s later has that energy on the server too."""
+    cost = game(client).gamedata.by_id("campaign")[HERO]["maps"][0]["nodes"][0]["battles"][0]["entryCostCount"]
+    day = int(datetime.now(UTC).timestamp()) // 86400 * 86400
+    with time_machine.travel(day + 43200 + 100, tick=False):  # 100 s after a tick of the client's grid
+        p = player(client)
+        next(i for i in p.item_inventory if i.id == PVE_ENERGY).count = cost - 1
+        energy.tracker(p, PVE_ENERGY).last_generated_timestamp = energy.now_s()
+        game(client).save(client.public_id)
+    with time_machine.travel(day + 43200 + 360 + 1, tick=False):  # 1 s after the client's next tick
+        await start(client, ident(HERO))
+        assert item_count(player(client), PVE_ENERGY) == 0
 
 
 def test_player_xp_levels_up_with_energy_reward():

@@ -14,10 +14,18 @@ from synthetic_archive import synthetic_archive  # noqa: F401  (fixture)
 from arcane_server import accounts
 from arcane_server.app import GAME, create_app
 from arcane_server.content import ContentError
+from arcane_server.inventory import item_count
 from arcane_server.proto import serverproto_pb2 as pb
 
 PASSWORD = "s3cret-admin"
 GOLD = 13
+GEMS_ID = 31
+
+
+def _keep(items) -> None:
+    """A redemption grant that grants nothing (tests of the code bookkeeping only)."""
+
+
 EXPORT_ID, EXPORT_NAME = "0000B002", "Player2"
 
 
@@ -199,6 +207,47 @@ async def test_inbox_send_to_all_claimed_accounts(srv, client):
         await other.ws.close()
 
 
+async def test_redemption_code_from_the_admin_is_redeemed_once(srv, client):
+    csrf = await login(srv)
+    r = await post(srv, csrf, "redemption-codes", {"code": "Spring Gift", "items": [{"item_id": GOLD, "count": 500}],
+                                                   "max_claims": 2})
+    assert r.status == 200 and (await r.json())["code"] == "SPRINGGIFT"
+    gold = srv.app[GAME].player(client.public_id)
+    before = next(i.count for i in gold.item_inventory if i.id == GOLD)
+    res = await client.call("redeem_redemption_code", pb.RedeemRedemptionCodeRequest(code="spring gift"),
+                            pb.RedeemRedemptionCodeResponse)
+    assert [(i.id, i.count) for i in res.inventory_delta.items] == [(GOLD, 500)]  # shown as a pack opening
+    assert (res.code, res.player_claim_count) == ("SPRINGGIFT", 1)
+    assert next(i.count for i in srv.app[GAME].player(client.public_id).item_inventory if i.id == GOLD) == before + 500
+    # a second time, an unknown code and a deleted code: ERROR, which the client shows as "invalid or has expired"
+    for code in ("SPRINGGIFT", "NO-SUCH-CODE"):
+        env = await client.call_raw("redeem_redemption_code", pb.RedeemRedemptionCodeRequest(code=code))
+        assert env.response_code == pb.ERROR
+    codes = (await (await srv.get("/admin/api/redemption-codes")).json())["codes"]
+    assert [(c["code"], c["claims"]) for c in codes] == [("SPRINGGIFT", 1)]
+    r = await srv.delete("/admin/api/redemption-codes/SPRINGGIFT", headers={"X-CSRF-Token": csrf})
+    assert r.status == 200
+    other = await GameClient(srv, "test-" + uuid.uuid4().hex).login()
+    try:
+        env = await other.call_raw("redeem_redemption_code", pb.RedeemRedemptionCodeRequest(code="SPRINGGIFT"))
+        assert env.response_code == pb.ERROR
+    finally:
+        await other.ws.close()
+
+
+async def test_redemption_code_limits(srv, client):
+    from arcane_server import redemption
+
+    db = srv.app[GAME].db
+    redemption.create(db, "ONCE", [(GOLD, 1)], max_claims=1)
+    redemption.create(db, "OLD", [(GOLD, 1)], expires_at=1)
+    assert redemption.redeem(db, "ONCE", "a", _keep) == ([(GOLD, 1)], 1)
+    assert redemption.redeem(db, "ONCE", "b", _keep) is None  # used up
+    assert redemption.redeem(db, "OLD", "a", _keep) is None  # expired
+    with pytest.raises(redemption.CodeProblem):
+        redemption.create(db, "once", [(GOLD, 1)])
+
+
 # --- import + claim code --------------------------------------------------------------------
 
 
@@ -305,3 +354,117 @@ async def test_admin_schedule_is_the_news_page_schedule(srv):
                  None if v["item"].permanent else v["end"])
                 for c, tab in page["tabs"].items() for when in ("now", "next") for v in tab[when]}
         assert got == want and len(got) > 20
+
+
+async def test_wrong_redemption_codes_are_throttled(srv, client):
+    """A player who keeps entering wrong codes gets ERROR without a check for a while (no scripted guessing)."""
+    import time
+
+    import time_machine
+
+    from arcane_server import attempts, redemption
+
+    redemption.create(srv.app[GAME].db, "REAL", [(GOLD, 5)])
+    for _ in range(attempts.MAX_FAILURES):
+        env = await client.call_raw("redeem_redemption_code", pb.RedeemRedemptionCodeRequest(code="GUESS"))
+        assert env.response_code == pb.ERROR
+    env = await client.call_raw("redeem_redemption_code", pb.RedeemRedemptionCodeRequest(code="REAL"))
+    assert env.response_code == pb.ERROR  # blocked, the right code included
+    with time_machine.travel(time.time() + attempts.WINDOW_S + 1, tick=False):
+        await client.call("redeem_redemption_code", pb.RedeemRedemptionCodeRequest(code="REAL"),
+                          pb.RedeemRedemptionCodeResponse)
+
+
+async def test_a_redemption_code_made_again_is_not_redeemed_twice(srv, client):
+    from arcane_server import redemption
+
+    db = srv.app[GAME].db
+    redemption.create(db, "AGAIN", [(GOLD, 5)])
+    await client.call("redeem_redemption_code", pb.RedeemRedemptionCodeRequest(code="AGAIN"), pb.RedeemRedemptionCodeResponse)
+    redemption.delete(db, "AGAIN")
+    redemption.create(db, "AGAIN", [(GOLD, 5)])
+    env = await client.call_raw("redeem_redemption_code", pb.RedeemRedemptionCodeRequest(code="AGAIN"))
+    assert env.response_code == pb.ERROR
+
+
+async def test_a_redemption_code_grants_energy_within_its_global_cap(srv, client):
+    from arcane_server import energy, redemption
+
+    game = srv.app[GAME]
+    pve = energy.energy_ids(game.gamedata)["pve"]
+    cap = int(energy.constants_for(game.gamedata, pve)["globalCap"])
+    p = game.player(client.public_id)
+    next(i for i in p.item_inventory if i.id == pve).count = cap - 3
+    redemption.create(game.db, "ENERGY", [(pve, 50)])
+    res = await client.call("redeem_redemption_code", pb.RedeemRedemptionCodeRequest(code="ENERGY"),
+                            pb.RedeemRedemptionCodeResponse)
+    assert [(i.id, i.count) for i in res.inventory_delta.items] == [(pve, 3)]
+
+
+# --- club items and units (test setups: a raid needs club tickets and a squad that meets the tier) -------------------
+
+
+async def test_grant_club_item_is_audited_and_refuses_going_below_zero(srv, client):
+    from arcane_server.handlers import clubs
+
+    game = srv.app[GAME]
+    res = await client.call("create_club", pb.CreateClubRequest(name="Admin Granted"), pb.CreateClubResponse)
+    cid, ticket = res.club.id, 8663828779652044
+    csrf = await login(srv)
+    r = await post(srv, csrf, f"clubs/{cid}/items", {"item_id": ticket, "delta": 30000})
+    assert r.status == 200, await r.text()
+    assert (await r.json())["after"] == 30000
+    assert clubs.club_inventory_count(clubs.load_club(game, cid), ticket) == 30000
+    assert (await post(srv, csrf, f"clubs/{cid}/items", {"item_id": ticket, "delta": -40000})).status == 400
+    assert (await post(srv, csrf, "clubs/NOCLUB00/items", {"item_id": ticket, "delta": 1})).status == 404
+    audit = (await (await srv.get("/admin/api/audit")).json())["audit"]
+    assert audit[0]["action"] == "club item" and audit[0]["target"] == cid and audit[0]["detail"]["delta"] == 30000
+
+
+@pytest.mark.requires_client_data
+async def test_set_units_grants_and_raises_units_of_a_live_player(srv, client):
+    game = srv.app[GAME]
+    csrf = await login(srv)
+    playable = (await (await srv.get("/admin/api/units")).json())["units"]
+    assert len(playable) >= 6 and all({"id", "name"} <= set(u) for u in playable)
+    p = game.player(client.public_id)
+    new = playable[0]["id"]  # a unit the player does not have (removed if the test account starts with it)
+    kept = [u for u in p.unit_inventory if u.definition_id != new]
+    del p.unit_inventory[:]
+    p.unit_inventory.extend(kept)
+    r = await post(srv, csrf, f"players/{client.public_id}/units", {"units": [new], "rarity": 3, "level": 35, "gear_tier": 3})
+    assert r.status == 200, await r.text()
+    u = next(x for x in game.player(client.public_id).unit_inventory if x.definition_id == new)
+    assert (u.rarity, u.level, u.gear_tier) == (3, 35, 3) and u.power_rating > 0
+    p = (await client.call("player", pb.PlayerRequest(), pb.PlayerResponse)).player  # the live session sees it
+    assert any(x.definition_id == new and x.rarity == 3 for x in p.unit_inventory)
+    assert (await post(srv, csrf, f"players/{client.public_id}/units", {"units": [1], "rarity": 3, "level": 35, "gear_tier": 3})).status == 400
+    assert (await post(srv, csrf, f"players/{client.public_id}/units", {"units": [new], "rarity": 99, "level": 35, "gear_tier": 3})).status == 400
+    audit = (await (await srv.get("/admin/api/audit")).json())["audit"]
+    assert audit[0]["action"] == "units" and audit[0]["detail"]["units"] == [new]
+
+
+async def test_a_redemption_code_is_used_only_once_its_items_are_granted(srv, client, monkeypatch):
+    """A grant that fails leaves the code unused and the player unchanged: redeeming again works."""
+    from arcane_server import redemption
+    from arcane_server.handlers import account
+
+    game = srv.app[GAME]
+    redemption.create(game.db, "SAFE", [(GOLD, 5), (GEMS_ID, 7)])
+    before = item_count(game.player(client.public_id), GOLD)
+    real = account.grant_item
+
+    def failing(player, item_id, count):
+        if item_id == GEMS_ID:
+            raise RuntimeError("grant failed")
+        return real(player, item_id, count)
+
+    monkeypatch.setattr(account, "grant_item", failing)
+    env = await client.call_raw("redeem_redemption_code", pb.RedeemRedemptionCodeRequest(code="SAFE"))
+    assert env.response_code == pb.ERROR
+    assert item_count(game.player(client.public_id), GOLD) == before  # the gold before the failure is not kept
+    assert [c.claims for c in redemption.codes(game.db) if c.code == "SAFE"] == [0]
+    monkeypatch.setattr(account, "grant_item", real)
+    res = await client.call("redeem_redemption_code", pb.RedeemRedemptionCodeRequest(code="SAFE"),
+                            pb.RedeemRedemptionCodeResponse)
+    assert {(d.id, d.count) for d in res.inventory_delta.items} == {(GOLD, 5), (GEMS_ID, 7)}

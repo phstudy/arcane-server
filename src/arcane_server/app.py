@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import asyncio
+import base64
 import hmac
 import json
 import logging
@@ -14,12 +15,12 @@ from aiohttp import WSMsgType, web
 from google.protobuf.internal import api_implementation
 
 from arcane_server import account_picker, admin, clock, handlers, remote_battles, time_basis  # noqa: F401  (handlers registers RPC handlers)
-from arcane_server import join, news, population, population_growth, startup  # noqa: F401  (registers its hook)
+from arcane_server import join, news, population, population_growth, remote_pve, startup  # noqa: F401  (registers its hook)
 from arcane_server.config import Settings, settings_problems
 from arcane_server.content import Content, ContentError
 from arcane_server.db import Database
 from arcane_server.game import Game
-from arcane_server.handlers import leaderboards, pvp, raids
+from arcane_server.handlers import friends, leaderboards, pvp, raids
 from arcane_server.proto import serverproto_pb2 as pb
 from arcane_server.public_url import client_host, public_base_url
 from arcane_server.rpc import Session, dispatch, registry_problems
@@ -94,6 +95,14 @@ async def http_auth_token(request: web.Request) -> web.Response:
     return _envelope_response(pb.ResponseEnvelope(payload=res.SerializeToString(), correlation_id=req.correlation_id))
 
 
+def _stars(header: str) -> tuple[int, ...]:
+    """remote_battles.STARS_HEADER ("2,0") -> (2, 0); missing or malformed -> ()."""
+    try:
+        return tuple(int(x) for x in header.split(",")) if header else ()
+    except ValueError:
+        return ()
+
+
 async def internal_battle_end(request: web.Request) -> web.Response:
     """Battle server -> game server: a remote battle's winner (body: MultiplayerBattleEndRequest; the auth token is
     the battle's report token). Needs the shared secret."""
@@ -103,9 +112,13 @@ async def internal_battle_end(request: web.Request) -> web.Response:
         raise web.HTTPForbidden()
     req = pb.MultiplayerBattleEndRequest.FromString(await request.read())
     survivors = {t.team_id: int(t.star_count) for t in req.team_results}  # surviving characters per team (ours)
+    activities = pvp.reported_activities(req)
+    units = remote_battles.decode_units(request.headers.get(remote_battles.UNITS_HEADER, ""))
     if not pvp.report_battle_outcome(game, req.battle_id, req.winning_team_id, req.end_battle_auth_token,
                                      [survivors[t] for t in sorted(survivors)] if survivors else None,
-                                     activities=pvp.reported_activities(req)):  # contest trackers per player
+                                     activities=activities, units=units) and not remote_pve.report(
+            game, req.battle_id, req.winning_team_id, req.end_battle_auth_token,
+            _stars(request.headers.get(remote_battles.STARS_HEADER, "")), activities, units):  # a browser's PvE battle
         log.warning("battle end for unknown battle %s", req.battle_id)
         raise web.HTTPNotFound()
     log.info("battle %s: team %d won (battle server)", req.battle_id, req.winning_team_id)
@@ -135,6 +148,59 @@ async def http_rpc(request: web.Request) -> web.Response:
                                                       response_code=pb.INVALID_AUTH_TOKEN))
     session = Session(acc.public_id, game, client_host=client_host(request, request.app[SETTINGS]))
     return _envelope_response(await dispatch(session, req))
+
+
+async def web_remote_battle(request: web.Request) -> web.Response:
+    """A browser's battle start (POST /web/remote/<rpc>, one of remote_pve.REMOTE_STARTS; body: RequestEnvelope as
+    http_rpc): the normal handler, with the battle run on the battle server. JSON: the ResponseEnvelope (base64) and
+    the ticket the browser joins the battle with (empty when the start failed)."""
+    game = request.app[GAME]
+    rpc_name = request.match_info["rpc"]
+    if rpc_name not in remote_pve.REMOTE_STARTS:
+        raise web.HTTPNotFound()
+    req = pb.RequestEnvelope.FromString(await request.read())
+    if req.rpc_name and req.rpc_name != rpc_name:
+        raise web.HTTPBadRequest(text=f"envelope is for {req.rpc_name}, not {rpc_name}")
+    req.rpc_name = rpc_name
+    ticket = None
+    if (res := _check_client_version(game, req)) is None:
+        await ready(request.app)
+        acc = game.account_for_token(req.auth_token)
+        if acc is None:
+            res = pb.ResponseEnvelope(correlation_id=req.correlation_id, response_code=pb.INVALID_AUTH_TOKEN)
+        else:
+            session = Session(acc.public_id, game, client_host=client_host(request, request.app[SETTINGS]))
+            remote_pve.want(session)
+            res = await dispatch(session, req)
+            ticket = remote_pve.ticket(session) if res.response_code == pb.OK else None
+    return web.json_response({"envelope": base64.b64encode(res.SerializeToString()).decode(),
+                              "battle_server": ticket.battle_server if ticket else "",
+                              "battle_id": ticket.battle_id if ticket else "",
+                              "player_token": ticket.player_token if ticket else ""})
+
+
+async def web_client_root(request: web.Request) -> web.Response:
+    raise web.HTTPPermanentRedirect("/play/")
+
+
+async def web_client_file(request: web.Request) -> web.StreamResponse:
+    """The built web client (Settings.web_client_dir): its files, and index.html for the single-page app's own
+    pages (a path without an extension). index.html is never cached; the other files have hashed names."""
+    root = request.app[SETTINGS].web_client_dir
+    if root is None:
+        raise web.HTTPNotFound()
+    root = root.resolve()
+    rel = request.match_info["path"]
+    target = (root / rel).resolve() if rel else root / "index.html"
+    if not target.is_relative_to(root):
+        raise web.HTTPNotFound()
+    if not target.is_file():
+        if "." in rel.rsplit("/", 1)[-1]:
+            raise web.HTTPNotFound()
+        target = root / "index.html"
+    immutable = target.name != "index.html"
+    return web.FileResponse(target, headers={
+        "Cache-Control": "public, max-age=31536000, immutable" if immutable else "no-cache"})
 
 
 # --- WebSocket RPCs ---------------------------------------------------------------------
@@ -181,6 +247,7 @@ async def websocket(request: web.Request) -> web.StreamResponse:
     await ws.prepare(request)
     session = Session(acc.public_id, game, client_host=client_host(request, request.app[SETTINGS]))
     log.info("ws connected player=%s query=%s", acc.public_id, dict(request.query))
+    was_online = game.is_online(acc.public_id)
     game.connect(acc.public_id, ws.send_bytes, request.remote)  # unsolicited pushes (game.push)
     held: set[asyncio.Task] = set()
 
@@ -191,6 +258,11 @@ async def websocket(request: web.Request) -> web.StreamResponse:
             await ws.send_bytes(res.SerializeToString())
 
     try:
+        if not was_online:
+            try:
+                await friends.announce_online(game, acc.public_id)
+            except Exception:  # friends not told: no reason to refuse the session
+                log.exception("announcing %s online failed", acc.public_id)
         async for msg in ws:
             if msg.type == WSMsgType.BINARY:
                 req = pb.RequestEnvelope.FromString(msg.data)
@@ -355,6 +427,9 @@ def create_app(settings: Settings, phases: startup.Phases | None = None) -> web.
     app.router.add_get("/_debug/status", debug_status)
     app.router.add_post("/internal/multiplayer_battle_end", internal_battle_end)
     app.router.add_get("/", websocket)
+    app.router.add_post("/web/remote/{rpc}", web_remote_battle)
+    app.router.add_get("/play", web_client_root)
+    app.router.add_get("/play/{path:.*}", web_client_file)
     app.router.add_post("/{rpc}", http_rpc)  # after every other POST route
     join.setup(app, settings)  # /join: the server's address as a QR code for the Multiplayer app (multiplayer)
     news.setup(app)  # the in-game News page (/news/<language>; constants.newsletterUrls point at it)

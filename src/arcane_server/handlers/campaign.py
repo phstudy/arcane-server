@@ -35,7 +35,7 @@ from arcane_server import battle_bootstrap as bb
 from arcane_server import bonus_loot, energy, script_minions, tutorial
 from arcane_server import tutorial as g_tutorial  # (`tutorial` is a local name in pve_battle_start)
 from arcane_server import game as g
-from arcane_server import content_data, loot, video_waves
+from arcane_server import content_data, loot, remote_pve, video_waves
 from arcane_server.battle_restrictions import restriction_problem, unsatisfiable
 from arcane_server.gamedata import Gamedata
 from arcane_server.handlers import club_quests, leaderboards, passport
@@ -541,6 +541,7 @@ def grant_player_xp(gd: Gamedata, player: pb.Player, xp: int, delta: Delta, now:
 class PendingBattle:
     ident: Ident
     tutorial: bool
+    remote_battle_id: str = ""  # run on the battle server (remote_pve): its report decides the result
 
 
 # public_id -> battle started but not yet ended (persisted: survives a server restart mid-battle)
@@ -772,16 +773,20 @@ async def pve_battle_start(session: Session, req: pb.PveBattleStartRequest) -> p
         leaderboards.add_trackers(session, bootstrap, leaderboards.campaign_mode(campaign_def(gd, ident[0])))
     res = pb.PveBattleStartResponse(bootstrap_bytes=bb.bootstrap_bytes(bootstrap), player_id=1)
     cost_id, cost = int(bdef.get("entryCostId", 0)), int(bdef.get("entryCostCount", 0))
+    before = player.SerializeToString()
     if cost_id and cost:
         if energy.is_energy(gd, cost_id):
             energy.spend(gd, player, cost_id, cost, now)
         else:
             consume_item(player, cost_id, cost)
         res.inventory_delta.items.add(id=cost_id, count=-cost)
-        if not tutorial:
-            leaderboards.energy_spent(session, res.inventory_delta, cost_id, cost)
+    # a browser's battle runs on the battle server: registered once the cost is paid (too little energy never
+    # reaches it), the last step that can fail; a battle server that is down gives the cost back
+    remote_id = "" if tutorial else await remote_pve.begin(session, "pve_battle_start", bootstrap, before)
+    if cost_id and cost and not tutorial:
+        leaderboards.energy_spent(session, res.inventory_delta, cost_id, cost)
     _save_squad(player, req)
-    _PENDING.put(session.game, session.public_id, PendingBattle(ident, tutorial))
+    _PENDING.put(session.game, session.public_id, PendingBattle(ident, tutorial, remote_id))
     session.save()
     return res
 
@@ -794,6 +799,8 @@ async def pve_battle_end(session: Session, req: pb.PveBattleEndRequest) -> pb.Pv
         pending = PendingBattle((req.tutorial_campaign_id, 0, 0, 0), True)
     if pending is None:
         raise RpcError(pb.BAD_REQUEST, "no pve battle in progress")
+    # a remote battle: the battle server's report decides, not what the client claims
+    remote_pve.settle(session, pending.remote_battle_id, req, lambda: _PENDING.put(session.game, session.public_id, pending))
     ident = pending.ident
     res = pb.PveBattleEndResponse()
     lc_delta = pb.InventoryDelta()
@@ -883,9 +890,10 @@ async def buy_pve_refresh(session: Session, req: pb.BuyPveRefreshRequest) -> pb.
     cost_item = int(const.get("hardRefreshCostItem", GEM_ITEM))
     res = pb.BuyPveRefreshResponse()
     if not req.use_free_club_support:
-        if prog.limited_attempt_refresh_count >= len(costs):
-            raise RpcError(pb.BAD_REQUEST, "no refreshes left today")
-        cost = costs[prog.limited_attempt_refresh_count]
+        if not costs:  # content without a price list: nothing to sell refreshes at
+            raise RpcError(pb.BAD_REQUEST, "constants.hardRefreshCosts is empty")
+        # No daily cap: past the end of hardRefreshCosts every refresh costs the last price (what the client shows).
+        cost = costs[min(prog.limited_attempt_refresh_count, len(costs) - 1)]
         consume_item(player, cost_item, cost)
         res.inventory_delta.items.add(id=cost_item, count=-cost)
     prog.limited_attempt_count = 0

@@ -217,3 +217,64 @@ async def test_gift_day_is_pacific_for_everyone_in_multiplayer(server):
         assert friends._gift_day(game, 1794916800) == (1794902400, 1794988800)  # 2026-11-17 PST day
     finally:
         await a.ws.close()
+
+
+async def test_friends_with_online_popups_are_told_when_a_friend_comes_online(server):
+    import time
+
+    import time_machine
+
+    a, b = await _login(server), await _login(server)
+    try:
+        await b.call("friends_list_modify", pb.FriendsListModifyRequest(action=pb.FRIENDS_LIST_ADD, id=a.public_id),
+                     pb.FriendsListModifyResponse)
+        await a.call("friends_list_modify", pb.FriendsListModifyRequest(action=pb.FRIENDS_LIST_ACCEPT_FRIEND_REQUEST,
+                                                                        id=b.public_id), pb.FriendsListModifyResponse)
+        anon_b = b.anon_id
+        await b.ws.close()
+        await _until_offline(server, b.public_id)
+        later = time.time() + friends.ONLINE_ANNOUNCE_GAP_S
+        with time_machine.travel(later, tick=False):
+            b = await GameClient(server, anon_b).login()  # popups are on by default
+            dm = await a.next_push()
+            assert dm.type == pb.PLAYER_ONLINE_DYNAMIC_MESSAGE
+            assert pb.PlayerOnlineDynamicMessage.FromString(dm.payload).player.id == b.public_id
+            # a dropped socket back at once (flaky network) is not a new session: no second popup
+            await b.ws.close()
+            await _until_offline(server, b.public_id)
+            b = await GameClient(server, anon_b).login()
+            await a.call("friends_list", pb.FriendsListRequest(), pb.FriendsListResponse)
+            assert not a.pushes
+            await a.call("update_receive_player_online_popups_status",
+                         pb.UpdateReceivePlayerOnlinePopupsStatusRequest(status=pb.RECEIVE_DISABLED),
+                         pb.UpdateReceivePlayerOnlinePopupsStatusResponse)
+            await b.ws.close()
+            await _until_offline(server, b.public_id)
+        with time_machine.travel(later + 2 * friends.ONLINE_ANNOUNCE_GAP_S, tick=False):
+            b = await GameClient(server, anon_b).login()
+            await a.call("friends_list", pb.FriendsListRequest(), pb.FriendsListResponse)
+            assert not a.pushes  # popups turned off
+    finally:
+        await a.ws.close()
+        await b.ws.close()
+
+
+async def _until_offline(server, public_id: str) -> None:
+    import asyncio
+
+    for _ in range(1000):
+        if not _game(server).is_online(public_id):
+            return
+        await asyncio.sleep(0.005)
+    raise AssertionError(f"{public_id} still online")
+
+
+async def test_a_failing_online_announcement_leaves_no_ghost_session(server, monkeypatch):
+    async def boom(game, pid):
+        raise RuntimeError("profile broken")
+
+    monkeypatch.setattr(friends, "announce_online", boom)
+    a = await _login(server)
+    await _list(a)  # the session works
+    await a.ws.close()
+    await _until_offline(server, a.public_id)

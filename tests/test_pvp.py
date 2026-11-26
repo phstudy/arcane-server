@@ -8,7 +8,8 @@ from __future__ import annotations
 import uuid
 
 import pytest
-from conftest import LADDER_SIZE, GameClient, client_text, ladder_id, report_token
+from conftest import (LADDER_SIZE, GameClient, assert_result_pending, battle_server_reports, client_text, ladder_id,
+                      report_token)
 
 from arcane_server import opponents
 from arcane_server.app import GAME
@@ -127,6 +128,32 @@ async def test_koth_win_takes_the_opponents_rank(client):
     assert [e.current_score for e in board.entries] == list(range(1, 52))
 
 
+async def test_koth_attack_on_a_human_shows_in_their_defense_history(client, server, monkeypatch):
+    defender = await GameClient(server, "test-" + uuid.uuid4().hex).login()
+    try:
+        g = game(client)
+        assert not (await defender.call("koth_battle_history", pb.KothBattleHistoryRequest(),
+                                        pb.KothBattleHistoryResponse)).defense_history
+        g.player(defender.public_id).koth_rank = 1
+        monkeypatch.setattr(pvp, "koth_ladder", lambda session: [g.player(defender.public_id)])
+        lobby = await client.call("koth_lobby", pb.KothLobbyRequest(), pb.KothLobbyResponse)
+        assert [o.profile.id for o in lobby.opponents] == [defender.public_id]
+        res = await koth_start(client, lobby)
+        assert pvp.report_battle_outcome(g, res.battle_id, 0, report_token(g, res.battle_id))  # the attacker won
+        await client.call("koth_battle_result", pb.KothBattleResultRequest(battle_id=res.battle_id),
+                          pb.KothBattleResultResponse)
+        hist = (await defender.call("koth_battle_history", pb.KothBattleHistoryRequest(),
+                                    pb.KothBattleHistoryResponse)).defense_history
+        assert len(hist) == 1
+        h = hist[0]
+        units, spells = squad(player(client))
+        assert (h.opponent.profile.id, h.opponent.rank, h.player_won, h.player_rank) == (client.public_id, 2, False, 1)
+        assert [u.definition_id for u in h.opponent.units] == units and h.opponent.leader_unit_id == units[0]
+        assert [sp.definition_id for sp in h.opponent.spells] == spells and h.battle_end_time > 0
+    finally:
+        await defender.ws.close()
+
+
 async def test_koth_loss_then_attack_again_without_cooldown(client):
     lobby = await client.call("koth_lobby", pb.KothLobbyRequest(), pb.KothLobbyResponse)
     res = await koth_start(client, lobby)
@@ -146,7 +173,27 @@ async def test_koth_loss_then_attack_again_without_cooldown(client):
 async def test_koth_rank_must_be_offered(client):
     units, _ = squad(player(client))
     res = await client.call_raw("koth_battle_start", pb.KothBattleStartRequest(opponent_id="x", units=units, opponent_rank=1))
-    assert res.response_code == pb.BAD_REQUEST
+    assert res.response_code == pb.KOTH_PLAYER_RANK_HAS_CHANGED  # "ranks have changed, select a new opponent"
+
+
+async def test_koth_start_tells_a_changed_opponent_or_squad(client):
+    lobby = await client.call("koth_lobby", pb.KothLobbyRequest(), pb.KothLobbyResponse)
+    units, spells = squad(player(client))
+    opp = lobby.opponents[0]
+    req = pb.KothBattleStartRequest(opponent_id="someone-else", units=units, spells=spells, leader_unit=units[0],
+                                    opponent_rank=opp.rank, opponent_squad_units=[u.definition_id for u in opp.units])
+    res = await client.call_raw("koth_battle_start", req)
+    assert res.response_code == pb.KOTH_PLAYER_RANK_HAS_CHANGED
+    req.opponent_id = opp.profile.id
+    del req.opponent_squad_units[0]
+    res = await client.call_raw("koth_battle_start", req)
+    assert res.response_code == pb.KOTH_OPPONENT_SQUAD_CHANGED
+    req.opponent_squad_units[:] = [u.definition_id for u in opp.units]
+    req.opponent_squad_spells[:] = [opp.spells[1].definition_id, opp.spells[0].definition_id]  # spells changed
+    res = await client.call_raw("koth_battle_start", req)
+    assert res.response_code == pb.KOTH_OPPONENT_SQUAD_CHANGED
+    req.opponent_squad_spells[:] = [s.definition_id for s in opp.spells]  # as the lobby showed it: starts
+    await client.call("koth_battle_start", req, pb.KothBattleStartResponse)
 
 
 async def test_koth_challenge_is_a_local_battle(client):
@@ -541,3 +588,66 @@ async def test_reaching_grand_champion_mails_its_trophy_once(local_battles, clie
     (mail,) = await _trophy_mail(client, pvp.PVP_TROPHY)
     assert (mail.subject_key, mail.body_key) == pvp.TROPHY_MAIL[pvp.PVP_TROPHY]
     assert client_text(game(client), mail.subject_key) == "PvP Grand Champion TROPHY!"
+
+
+# --- a browser's tournament battles (through /web/remote) -------------------------------------------------------------
+
+
+def koth_req(client, lobby: pb.KothLobbyResponse, i: int = 0) -> pb.KothBattleStartRequest:
+    units, spells = squad(player(client))
+    opp = lobby.opponents[i]
+    return pb.KothBattleStartRequest(opponent_id=opp.profile.id, units=units, spells=spells, leader_unit=units[0],
+                                     opponent_rank=opp.rank)
+
+
+async def test_browser_koth_battle_waits_for_the_battle_servers_report(battle_server, client):
+    lobby = await client.call("koth_lobby", pb.KothLobbyRequest(), pb.KothLobbyResponse)
+    res, battle_id = await client.web_start("koth_battle_start", koth_req(client, lobby), pb.KothBattleStartResponse)
+    assert battle_id == res.battle_id and battle_server[-1]["kind"] == "koth"
+    await assert_result_pending(client, "koth_battle_result", pb.KothBattleResultRequest(battle_id=res.battle_id))
+    await battle_server_reports(client, battle_id, winning_team=0)
+    # the loss id of a patched client counts for nothing: the report decides
+    out = await client.call("koth_battle_result", pb.KothBattleResultRequest(battle_id=res.match_id),
+                            pb.KothBattleResultResponse)
+    assert (out.new_rank, out.rank_delta) == (45, 6)
+
+
+async def test_browser_koth_battle_without_a_battle_server_is_refused(local_battles, client):
+    lobby = await client.call("koth_lobby", pb.KothLobbyRequest(), pb.KothLobbyResponse)
+    res, body = await client.web_start_raw("koth_battle_start", koth_req(client, lobby))
+    assert res.response_code == pb.ERROR and body["battle_id"] == ""
+    lobby = await client.call("koth_lobby", pb.KothLobbyRequest(), pb.KothLobbyResponse)
+    assert lobby.attempts_remaining == 5
+
+
+async def test_android_koth_battle_without_a_report_is_lost_at_once(battle_server, client):
+    """Android in remote mode: as before, a result asked for before any report is a loss (never RESULT_PENDING)."""
+    lobby = await client.call("koth_lobby", pb.KothLobbyRequest(), pb.KothLobbyResponse)
+    res = await koth_start(client, lobby)
+    out = await client.call("koth_battle_result", pb.KothBattleResultRequest(battle_id=res.battle_id),
+                            pb.KothBattleResultResponse)
+    assert out.rank_delta == 0
+
+
+async def test_browser_koth_challenge_runs_on_the_battle_server(battle_server, client):
+    target = opponents.population_players()[3]
+    units, spells = squad(player(client))
+    req = pb.KothChallengeBattleStartRequest(enemy_player_id=target.id, units=units, spells=spells, leader_unit=units[0])
+    res, battle_id = await client.web_start("koth_challenge_battle_start", req, pb.KothChallengeBattleStartResponse)
+    assert battle_server[-1]["kind"] == "koth_challenge" and battle_server[-1]["battle_id"] == battle_id
+    assert battle_server[-1]["players"][0].player_id == res.player_id == 0
+    battle_server.clear()
+    await client.call("koth_challenge_battle_start", req, pb.KothChallengeBattleStartResponse)  # Android: local
+    assert not battle_server
+
+
+async def test_browser_arena_battle_waits_for_the_battle_servers_report(battle_server, client):
+    units, spells = squad(player(client))
+    req = pb.PvpFindMatchRequest(units=units, spells=spells, leader_unit=units[0])
+    res, battle_id = await client.web_start("pvp_find_match", req, pb.PvpFindMatchResponse)
+    assert battle_id == res.battle_id and battle_server[-1]["kind"] == "pvp"
+    result = pb.MultiplayerBattleResultRequest(battle_id=res.battle_id)
+    await assert_result_pending(client, "multiplayer_battle_result", result)
+    await battle_server_reports(client, battle_id, winning_team=1)
+    out = await client.call("multiplayer_battle_result", result, pb.MultiplayerBattleResultResponse)
+    assert not out.is_winner  # as reported, not the (winning) id the client sent

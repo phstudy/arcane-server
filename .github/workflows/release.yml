@@ -1,6 +1,8 @@
-# The server release on a version tag (v<version>, the version in pyproject.toml): the zip the patcher's offline
-# variant embeds (tools/android_package.py: src/arcane_server, content, proto; reproducible) and its sha256, attached
-# to the tag's GitHub release. The patcher pins one release in its emulator.lock.
+# The server release on a version tag (v<version>, the version in pyproject.toml), attached to the tag's GitHub release:
+# - the zip the patcher's offline variant embeds (tools/android_package.py: src/arcane_server, content, proto;
+#   reproducible) and its sha256; the patcher pins one release in its emulator.lock;
+# - the battle host's cas_host helper (native/cas_host/build.sh, Android NDK) and its sha256: tools/battle_host.py
+#   setup downloads this version's helper when there is no local build (battle_host/host.py helper_asset).
 name: release
 on:
   push:
@@ -10,7 +12,35 @@ permissions:
   contents: write
 
 jobs:
+  cas-host:
+    runs-on: ubuntu-latest
+    env:
+      # Google's Android repository (repository2-3.xml) lists this archive with its sha1
+      NDK: android-ndk-r27d
+      NDK_SHA1: 22105e410cf29afcf163760cc95522b9fb981121
+    steps:
+      - uses: actions/checkout@v4
+      - name: Android NDK
+        run: |
+          curl -fsSL -o "$RUNNER_TEMP/$NDK.zip" "https://dl.google.com/android/repository/$NDK-linux.zip"
+          echo "$NDK_SHA1  $RUNNER_TEMP/$NDK.zip" | sha1sum -c -
+          unzip -q "$RUNNER_TEMP/$NDK.zip" -d "$RUNNER_TEMP"
+          echo "ANDROID_NDK=$RUNNER_TEMP/$NDK" >> "$GITHUB_ENV"
+      - run: native/cas_host/build.sh
+      - name: "The helper as a release asset, with its sha256"
+        run: |
+          name="cas_host-android-arm64-${GITHUB_REF_NAME#v}"
+          mkdir -p dist
+          cp native/cas_host/out/cas_host "dist/$name"
+          (cd dist && sha256sum "$name" > "$name.sha256")
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cas-host
+          path: dist/
+          if-no-files-found: error
+
   server-zip:
+    needs: cas-host
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -24,7 +54,15 @@ jobs:
         run: uv run pytest -q
       - run: uv run python tools/public_text.py
       - run: uv run python tools/android_package.py --out dist
+      - uses: actions/download-artifact@v4
+        with:
+          name: cas-host
+          path: dist/
       - name: GitHub release
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create "$GITHUB_REF_NAME" dist/arcane-server-android-*.zip dist/arcane-server-android-*.zip.sha256 --title "$GITHUB_REF_NAME" --notes "Server zip for the patcher's offline variant (with its sha256)."
+        run: >-
+          gh release create "$GITHUB_REF_NAME"
+          dist/arcane-server-android-*.zip dist/arcane-server-android-*.zip.sha256
+          dist/cas_host-android-arm64-* --title "$GITHUB_REF_NAME"
+          --notes "Server zip for the patcher's offline variant, and the battle host's cas_host helper (each with its sha256)."

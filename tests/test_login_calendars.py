@@ -161,9 +161,8 @@ async def test_sold_calendar_costs_gems(clock, client, game):
 async def test_previews_get_new_badges(clock, client, game):
     """SpecialOfferDynamicMessage.available_daily_reward_ids lists the calendars on offer (the client badges them)."""
     _level_up(game, client)
-    await _player(client)
-    await client.call("store", pb.StoreRequest(), pb.StoreResponse)
-    msgs = [pb.SpecialOfferDynamicMessage.FromString(d.payload) for d in client.last_envelope.dynamic_messages
+    env = await client.call_raw("player", pb.PlayerRequest())  # a connection's first response carries the offers
+    msgs = [pb.SpecialOfferDynamicMessage.FromString(d.payload) for d in env.dynamic_messages
             if d.type == pb.SPECIAL_OFFER_UPDATED_DYNAMIC_MESSAGE]
     assert msgs and HAUNTED.reward_id in msgs[-1].available_daily_reward_ids
 

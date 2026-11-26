@@ -18,7 +18,9 @@ from __future__ import annotations
 
 import io
 import logging
+import os
 import re
+import tempfile
 import threading
 from dataclasses import dataclass
 from pathlib import Path
@@ -177,11 +179,24 @@ def image(game: "Game", image_id: str) -> bytes | None:
                 _MISSING.add((game.settings.client, image_id))
                 log.warning("news art: no texture %s", image_id)
                 return None
-            p.parent.mkdir(parents=True, exist_ok=True)
-            tmp = p.with_suffix(".tmp")
-            tmp.write_bytes(data)
-            tmp.replace(p)
+            store(p, data)
     return p.read_bytes()
+
+
+def store(p: Path, data: bytes) -> None:
+    """Write a cache file whole (readers never see part of it). Several processes may extract the same image at once
+    (servers and test workers share the cache; _LOCK only covers this process): each writes its own temporary file and
+    the last rename wins."""
+    p.parent.mkdir(parents=True, exist_ok=True)
+    fd, tmp = tempfile.mkstemp(prefix=f".{p.name}.", suffix=".tmp", dir=p.parent)
+    try:
+        with os.fdopen(fd, "wb") as f:
+            f.write(data)
+        os.chmod(tmp, 0o644)
+        os.replace(tmp, p)
+    except BaseException:
+        Path(tmp).unlink(missing_ok=True)
+        raise
 
 
 def extract(bundle: Path | None, texture: str, aspect: float) -> bytes | None:

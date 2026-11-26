@@ -59,7 +59,7 @@ from typing import TYPE_CHECKING, Any
 from google.protobuf import json_format
 
 from arcane_server import battle_bootstrap as bb
-from arcane_server import content_data, clock, energy, tutorial, video_waves
+from arcane_server import content_data, clock, energy, remote_pve, tutorial, video_waves
 from arcane_server.battle_restrictions import restriction_problem
 from arcane_server.clock import current_timezone, day_end, zone
 from arcane_server.gamedata import Gamedata
@@ -1249,6 +1249,7 @@ class _Pending:
     kind: str  # "event" | "tower"
     event_id: tuple[int, int] = (0, 0)  # (content id, tier)
     tower: tuple[int, int, int] = (0, 0, 0)  # (tower id, map id, node index)
+    remote_battle_id: str = ""  # run on the battle server (remote_pve): its report decides the result
 
 
 # public_id -> battle started but not yet ended (persisted: survives a server restart mid-battle)
@@ -1683,6 +1684,7 @@ async def event_battle_start(session: Session, req: pb.EventBattleStartRequest) 
         raise RpcError(pb.BAD_REQUEST, f"no attempts left for event {cid}")
     units, spells = _owned_squad(gd, player, list(req.units), list(req.spells))
     check_restriction(gd, player, tier.battle_node.battle_restriction, list(req.units), list(req.spells))
+    before = player.SerializeToString()
     cost_id, cost = _spend_entry(gd, player, tier.battle_node, 1, now)
     plan = event_enemy_plan(gd, cat, e, tier)
     bs = event_bootstrap(gd, player, plan, tier.ruleset, units, spells, req.leader_unit, seed=cid * 131 + tier_index,
@@ -1693,8 +1695,10 @@ async def event_battle_start(session: Session, req: pb.EventBattleStartRequest) 
         apply_battle_env(bs, env)
     passport.add_battle_trackers(session, bs)
     leaderboards.add_trackers(session, bs, _lc_mode(cid))
+    remote_id = await remote_pve.begin(session, "event_battle_start", bs, before)
     _save_squad(player, req)
-    _PENDING.put(session.game, session.public_id, _Pending("event", event_id=(cid, tier_index)))
+    _PENDING.put(session.game, session.public_id, _Pending("event", event_id=(cid, tier_index),
+                                                           remote_battle_id=remote_id))
     session.save()
     res = pb.EventBattleStartResponse(bootstrap_bytes=bb.bootstrap_bytes(bs), player_id=1)
     if cost_id and cost:
@@ -1735,6 +1739,8 @@ async def event_battle_end(session: Session, req: pb.EventBattleEndRequest) -> p
     if pending is None or pending.kind != "event":
         raise RpcError(pb.BAD_REQUEST, "no event battle in progress")
     _PENDING.pop(session.game, session.public_id)
+    # a remote battle: the battle server's report decides, not what the client claims
+    remote_pve.settle(session, pending.remote_battle_id, req, lambda: _PENDING.put(session.game, session.public_id, pending))
     cat = cat_of(session)
     cid, tier_index = pending.event_id
     e = event_definition(cat, cid, now)
@@ -2324,9 +2330,11 @@ def _tower_template_bytes() -> bytes:
     return bb.original_bootstrap("tower/rapunzel_a").SerializeToString()
 
 
-def _tower_battle_start(session: Session, req: Any, standard: bool) -> tuple[bytes, int, int]:
-    """Start a battle on the current node of `req.id` (Tower[Event]BattleStartRequest, same fields).
+async def _tower_battle_start(session: Session, req: Any, rpc_name: str) -> tuple[bytes, int, int]:
+    """Start a battle on the current node of `req.id` (Tower[Event]BattleStartRequest, same fields; `rpc_name`:
+    tower_battle_start = the standard tower, tower_event_battle_start = a tower event).
     Returns (bootstrap bytes, entry cost item, entry cost count)."""
+    standard = rpc_name == "tower_battle_start"
     gd, player, now = session.game.gamedata, session.player, _now()
     if (req.id.tower_id == STANDARD_TOWER_ID) != standard:
         raise RpcError(pb.BAD_REQUEST, f"tower {req.id.tower_id} is not a {'standard' if standard else 'event'} tower")
@@ -2334,7 +2342,7 @@ def _tower_battle_start(session: Session, req: Any, standard: bool) -> tuple[byt
     st = load_tower_status(session, run, req.id.map_id)
     node_index = int(st.current_node)
     if node_index >= len(m.nodes):
-        raise RpcError(pb.BAD_REQUEST, f"tower map {req.id.tower_id}/{req.id.map_id} is complete")
+        raise RpcError(pb.TOWER_TIER_INDEX_OUT_OF_RANGE_ERROR, f"tower map {req.id.tower_id}/{req.id.map_id} is complete")
     if st.auto_win_used:
         raise RpcError(pb.BAD_REQUEST, "tower auto won: restart it to continue")
     node = m.nodes[node_index].battle_data
@@ -2356,6 +2364,7 @@ def _tower_battle_start(session: Session, req: Any, standard: bool) -> tuple[byt
             hero_pid[u.definition_id] = len(st.unit_states)
     enemy_pids = [i + 1 for i, s in enumerate(st.unit_states) if s.is_enemy and s.definition_id]
 
+    before = player.SerializeToString()
     cost_id, cost = _spend_entry(gd, player, node, 1, now)
 
     bs = pb.BattleLib_Bootstrap.FromString(_tower_template_bytes())
@@ -2411,11 +2420,13 @@ def _tower_battle_start(session: Session, req: Any, standard: bool) -> tuple[byt
         u.health_percent = s.health_percent
         asq.units.append(u)
 
-    _save_tower_status(session, run, st)
-    _save_squad(player, req)
-    _PENDING.put(session.game, session.public_id, _Pending("tower", tower=(req.id.tower_id, req.id.map_id, node_index)))
     passport.add_battle_trackers(session, bs)
     leaderboards.add_trackers(session, bs, "tower")
+    remote_id = await remote_pve.begin(session, rpc_name, bs, before)
+    _save_tower_status(session, run, st)
+    _save_squad(player, req)
+    _PENDING.put(session.game, session.public_id, _Pending("tower", tower=(req.id.tower_id, req.id.map_id, node_index),
+                                                           remote_battle_id=remote_id))
     session.save()
     return bb.bootstrap_bytes(bs), cost_id, cost
 
@@ -2427,6 +2438,8 @@ def _tower_battle_end(session: Session, req: Any) -> pb.InventoryDelta:
     if pending is None or pending.kind != "tower":
         raise RpcError(pb.BAD_REQUEST, "no tower battle in progress")
     _PENDING.pop(session.game, session.public_id)
+    # a remote battle: the battle server's report (the win, every unit's health) decides, not the client
+    remote_pve.settle(session, pending.remote_battle_id, req, lambda: _PENDING.put(session.game, session.public_id, pending))
     tower_id, map_id, node_index = pending.tower
     run = tower_run(session, tower_id, now)
     m = run.map(map_id)
@@ -2469,7 +2482,7 @@ def _tower_battle_end(session: Session, req: Any) -> pb.InventoryDelta:
 
 @rpc("tower_battle_start", pb.TowerBattleStartRequest)
 async def tower_battle_start(session: Session, req: pb.TowerBattleStartRequest) -> pb.TowerBattleStartResponse:
-    bootstrap, _, _ = _tower_battle_start(session, req, standard=True)  # no entry cost in the standard tower
+    bootstrap, _, _ = await _tower_battle_start(session, req, "tower_battle_start")  # no entry cost in the standard tower
     return pb.TowerBattleStartResponse(bootstrap_bytes=bootstrap, player_id=1)
 
 
@@ -2517,7 +2530,7 @@ async def tower_auto_win(session: Session, req: pb.TowerAutoWinRequest) -> pb.To
 
 @rpc("tower_event_battle_start", pb.TowerEventBattleStartRequest)
 async def tower_event_battle_start(session: Session, req: pb.TowerEventBattleStartRequest) -> pb.TowerEventBattleStartResponse:
-    bootstrap, cost_id, cost = _tower_battle_start(session, req, standard=False)
+    bootstrap, cost_id, cost = await _tower_battle_start(session, req, "tower_event_battle_start")
     res = pb.TowerEventBattleStartResponse(bootstrap_bytes=bootstrap, player_id=1)
     if cost_id and cost:
         res.inventory_delta.items.add(id=cost_id, count=-cost)
