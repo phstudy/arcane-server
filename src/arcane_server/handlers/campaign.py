@@ -796,7 +796,7 @@ async def pve_battle_start(session: Session, req: pb.PveBattleStartRequest) -> p
         res.inventory_delta.items.add(id=cost_id, count=-cost)
     # a browser's battle runs on the battle server: registered once the cost is paid (too little energy never
     # reaches it), the last step that can fail; a battle server that is down gives the cost back
-    remote_id = "" if tutorial else await remote_pve.begin(session, "pve_battle_start", bootstrap, before)
+    remote_id = await remote_pve.begin(session, "pve_battle_start", bootstrap, before)  # "" for a local engine
     if cost_id and cost and not tutorial:
         leaderboards.energy_spent(session, res.inventory_delta, cost_id, cost)
     _save_squad(player, req)

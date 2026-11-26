@@ -341,3 +341,31 @@ def test_every_remote_start_has_a_browser_test():
     text = "\n".join(p.read_text() for p in Path(__file__).parent.glob("test_*.py"))
     tested = set(re.findall(r'web_start(?:_raw)?\(\s*"(\w+)"', text)) | {"pve_battle_start"}
     assert set(remote_pve.REMOTE_STARTS) - tested == set()
+
+
+async def test_a_browsers_tutorial_battle_runs_on_the_battle_server(client, registered):
+    """A browser has no local engine: the tutorial battle is registered like any campaign battle (an Android
+    session gets no ticket from remote_pve.begin, so its tutorial stays local)."""
+    from arcane_server.handlers import campaign
+
+    session = remote_session(client)
+    req = start_req(client)
+    req.campaign_identifier.campaign_id = campaign._tutorial_campaign(session.game.gamedata)
+    await campaign.pve_battle_start(session, req)
+    t = remote_pve.ticket(session)
+    assert t is not None and registered[-1]["battle_id"] == t.battle_id
+
+
+async def test_an_android_sessions_tutorial_battle_stays_local(client, registered):
+    """An Android session (no remote_pve.want) plays the tutorial battle on its own engine: no battle server
+    registration, no ticket, and the battle ends with what the client reports."""
+    from arcane_server.handlers import campaign
+
+    remote_session(client)  # the account's first node not played yet
+    session = Session(client.public_id, game(client))
+    req = start_req(client)
+    req.campaign_identifier.campaign_id = campaign._tutorial_campaign(session.game.gamedata)
+    before = len(registered)
+    await campaign.pve_battle_start(session, req)
+    assert remote_pve.ticket(session) is None
+    assert len(registered) == before
